@@ -1,0 +1,795 @@
+cat > /tmp/fix-gcam-cloudflare-universal.sh <<'PATCH'
+#!/usr/bin/env bash
+
+set -u
+
+SERVICE="cloudflared.service"
+SERVICE_FILE="/etc/systemd/system/cloudflared.service"
+
+TOKEN_DIR="/etc/gcam"
+TOKEN_FILE="/etc/gcam/cloudflared.token"
+
+CLOUDFLARED="/usr/bin/cloudflared"
+
+METRICS_ADDR="127.0.0.1:20241"
+READY_URL="http://127.0.0.1:20241/ready"
+
+CONFIG_FILE="/opt/gcam/data/config.json"
+LOCAL_HEALTH_URL="http://127.0.0.1:8080/api/state"
+
+echo
+echo "============================================================"
+echo " G-Cam Universal Cloudflare Tunnel Repair"
+echo "============================================================"
+echo
+
+# ============================================================
+# 1. ROOT CHECK
+# ============================================================
+
+if [[ "$(id -u)" -ne 0 ]]; then
+    echo "[ERROR] Please run as root."
+    echo
+    echo "Use:"
+    echo "  sudo bash /tmp/fix-gcam-cloudflare-universal.sh"
+    exit 1
+fi
+
+
+# ============================================================
+# 2. DETECT DEVICE / HOSTNAME
+# ============================================================
+
+echo "[1/11] Detecting G-Cam Cloudflare hostname..."
+
+DEVICE_ID=""
+SUBDOMAIN=""
+BASE_DOMAIN=""
+PUBLIC_BASE_URL=""
+
+if [[ -f "$CONFIG_FILE" ]] && command -v jq >/dev/null 2>&1; then
+
+    DEVICE_ID="$(
+        jq -r '.device_id // empty' "$CONFIG_FILE" 2>/dev/null || true
+    )"
+
+    SUBDOMAIN="$(
+        jq -r '.subdomain_name // empty' "$CONFIG_FILE" 2>/dev/null || true
+    )"
+
+    BASE_DOMAIN="$(
+        jq -r '.base_domain // empty' "$CONFIG_FILE" 2>/dev/null || true
+    )"
+
+    PUBLIC_BASE_URL="$(
+        jq -r '.permanent_live_base_url // empty' "$CONFIG_FILE" 2>/dev/null || true
+    )"
+
+fi
+
+
+# Build URL from subdomain + base domain if needed
+if [[ -z "$PUBLIC_BASE_URL" ]] \
+   && [[ -n "$SUBDOMAIN" ]] \
+   && [[ -n "$BASE_DOMAIN" ]]; then
+
+    PUBLIC_BASE_URL="https://${SUBDOMAIN}.${BASE_DOMAIN}"
+
+fi
+
+
+# Remove trailing /
+PUBLIC_BASE_URL="${PUBLIC_BASE_URL%/}"
+
+
+if [[ -n "$DEVICE_ID" ]]; then
+    echo "[INFO] Device ID:"
+    echo "  $DEVICE_ID"
+fi
+
+
+if [[ -n "$PUBLIC_BASE_URL" ]]; then
+
+    echo "[OK] Detected permanent URL:"
+    echo "  $PUBLIC_BASE_URL"
+
+else
+
+    echo
+    echo "[WARNING] Could not automatically detect permanent hostname."
+    echo
+
+    read -rp "Enter permanent hostname (example: rtgcam5.ifill.in): " MANUAL_HOST
+
+    MANUAL_HOST="$(
+        echo "$MANUAL_HOST" |
+        sed -E \
+            -e 's|^[[:space:]]+||' \
+            -e 's|[[:space:]]+$||' \
+            -e 's|^https?://||' \
+            -e 's|/.*$||'
+    )"
+
+    if [[ -z "$MANUAL_HOST" ]]; then
+        echo "[ERROR] Hostname cannot be empty."
+        exit 1
+    fi
+
+    PUBLIC_BASE_URL="https://${MANUAL_HOST}"
+
+    echo
+    echo "[INFO] Using:"
+    echo "  $PUBLIC_BASE_URL"
+
+fi
+
+
+PUBLIC_HEALTH_URL="${PUBLIC_BASE_URL}/api/state"
+
+
+# ============================================================
+# 3. CHECK CLOUDFLARED
+# ============================================================
+
+echo
+echo "[2/11] Checking cloudflared installation..."
+
+if [[ ! -x "$CLOUDFLARED" ]]; then
+
+    FOUND_CLOUDFLARED="$(
+        command -v cloudflared 2>/dev/null || true
+    )"
+
+    if [[ -n "$FOUND_CLOUDFLARED" ]] \
+       && [[ -x "$FOUND_CLOUDFLARED" ]]; then
+
+        CLOUDFLARED="$FOUND_CLOUDFLARED"
+
+    else
+
+        echo "[ERROR] cloudflared is not installed."
+        exit 1
+
+    fi
+fi
+
+
+echo "[OK] cloudflared:"
+echo "  $CLOUDFLARED"
+
+"$CLOUDFLARED" --version || true
+
+
+# ============================================================
+# 4. TOKEN CHECK
+# ============================================================
+
+echo
+echo "[3/11] Checking Cloudflare token..."
+
+mkdir -p "$TOKEN_DIR"
+chmod 700 "$TOKEN_DIR"
+chown root:root "$TOKEN_DIR"
+
+
+if [[ ! -s "$TOKEN_FILE" ]]; then
+
+    echo
+    echo "[ERROR] Cloudflare token missing:"
+    echo
+    echo "  $TOKEN_FILE"
+    echo
+    echo "Create it using:"
+    echo
+    echo "  sudo nano $TOKEN_FILE"
+    echo
+    echo "Paste ONLY the Cloudflare Tunnel token."
+    echo
+
+    exit 1
+
+fi
+
+
+chown root:root "$TOKEN_FILE"
+chmod 600 "$TOKEN_FILE"
+
+
+TOKEN_CONTENT="$(
+    tr -d '\r\n' < "$TOKEN_FILE"
+)"
+
+
+if [[ -z "$TOKEN_CONTENT" ]]; then
+
+    echo "[ERROR] Token file is empty."
+    exit 1
+
+fi
+
+
+# Detect accidentally pasted cloudflared command
+if echo "$TOKEN_CONTENT" |
+   grep -qiE 'cloudflared|service[[:space:]]+install'; then
+
+    echo
+    echo "[ERROR] Token file appears to contain the complete"
+    echo "        cloudflared installation command."
+    echo
+    echo "The file must contain ONLY the tunnel token."
+    echo
+    echo "Edit:"
+    echo "  sudo nano $TOKEN_FILE"
+    echo
+
+    exit 1
+
+fi
+
+
+if [[ "$TOKEN_CONTENT" =~ [[:space:]] ]]; then
+
+    echo "[ERROR] Cloudflare token contains whitespace."
+    echo
+    echo "Edit:"
+    echo "  sudo nano $TOKEN_FILE"
+    echo
+    echo "Paste only the raw token."
+
+    exit 1
+
+fi
+
+
+# normalize token file
+printf '%s\n' "$TOKEN_CONTENT" > "$TOKEN_FILE"
+
+chown root:root "$TOKEN_FILE"
+chmod 600 "$TOKEN_FILE"
+
+
+TOKEN_SIZE="$(
+    wc -c < "$TOKEN_FILE" |
+    tr -d ' '
+)"
+
+
+echo "[OK] Token file:"
+echo "  $TOKEN_FILE"
+
+echo "[INFO] Token size:"
+echo "  ${TOKEN_SIZE} bytes"
+
+echo "[INFO] Token contents are hidden."
+
+
+# ============================================================
+# 5. STOP OLD SERVICE
+# ============================================================
+
+echo
+echo "[4/11] Stopping existing Cloudflare service..."
+
+systemctl stop "$SERVICE" 2>/dev/null || true
+
+sleep 1
+
+
+if pgrep -x cloudflared >/dev/null 2>&1; then
+
+    echo "[INFO] Stopping old cloudflared process..."
+
+    pkill -TERM -x cloudflared 2>/dev/null || true
+
+    sleep 2
+
+fi
+
+
+if pgrep -x cloudflared >/dev/null 2>&1; then
+
+    echo "[INFO] Force killing stale cloudflared process..."
+
+    pkill -KILL -x cloudflared 2>/dev/null || true
+
+fi
+
+
+# ============================================================
+# 6. BACKUP CURRENT SERVICE
+# ============================================================
+
+echo
+echo "[5/11] Backing up current systemd service..."
+
+STAMP="$(date '+%Y%m%d-%H%M%S')"
+
+
+if [[ -f "$SERVICE_FILE" ]]; then
+
+    BACKUP_FILE="${SERVICE_FILE}.backup-${STAMP}"
+
+    cp -a "$SERVICE_FILE" "$BACKUP_FILE"
+
+    echo "[OK] Backup:"
+    echo "  $BACKUP_FILE"
+
+else
+
+    echo "[INFO] No existing custom unit found."
+
+fi
+
+
+# ============================================================
+# 7. WRITE UNIVERSAL CLOUDFLARED SERVICE
+# ============================================================
+
+echo
+echo "[6/11] Writing corrected cloudflared.service..."
+
+
+cat > "$SERVICE_FILE" <<EOF
+[Unit]
+Description=G-Cam Permanent Cloudflare Tunnel
+Documentation=https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+
+TimeoutStartSec=60
+TimeoutStopSec=15
+
+ExecStartPre=/usr/bin/test -s ${TOKEN_FILE}
+
+ExecStart=${CLOUDFLARED} tunnel \
+ --no-autoupdate \
+ --protocol auto \
+ --loglevel info \
+ --metrics ${METRICS_ADDR} \
+ run \
+ --token-file ${TOKEN_FILE}
+
+Restart=always
+RestartSec=5
+
+KillSignal=SIGTERM
+KillMode=control-group
+SendSIGKILL=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+
+chmod 644 "$SERVICE_FILE"
+chown root:root "$SERVICE_FILE"
+
+
+echo "[OK] cloudflared.service written."
+
+
+# ============================================================
+# 8. RELOAD SYSTEMD
+# ============================================================
+
+echo
+echo "[7/11] Reloading systemd..."
+
+systemctl daemon-reload
+
+systemctl reset-failed "$SERVICE" 2>/dev/null || true
+
+systemctl enable "$SERVICE" >/dev/null
+
+
+# ============================================================
+# 9. VERIFY SYSTEMD IS USING CORRECT TOKEN
+# ============================================================
+
+echo
+echo "[8/11] Verifying service configuration..."
+
+
+CURRENT_UNIT="$(
+    systemctl cat "$SERVICE" 2>/dev/null || true
+)"
+
+
+if ! echo "$CURRENT_UNIT" |
+     grep -q -- "--token-file ${TOKEN_FILE}"; then
+
+    echo
+    echo "[ERROR] systemd is NOT using:"
+    echo "  $TOKEN_FILE"
+    echo
+
+    systemctl cat "$SERVICE"
+
+    exit 1
+
+fi
+
+
+echo "[OK] Correct token path:"
+echo "  $TOKEN_FILE"
+
+
+# Detect bad legacy path
+if echo "$CURRENT_UNIT" |
+   grep -q -- '--token-file /etc/cloudflared/token'; then
+
+    echo
+    echo "[ERROR] Legacy token path still exists:"
+    echo "  /etc/cloudflared/token"
+    echo
+
+    systemctl cat "$SERVICE"
+
+    exit 1
+
+fi
+
+
+# ============================================================
+# 10. START CLOUDFLARED
+# ============================================================
+
+echo
+echo "[9/11] Starting Cloudflare Tunnel..."
+
+systemctl restart "$SERVICE"
+
+echo "[INFO] Waiting for connector initialization..."
+
+sleep 10
+
+
+# ============================================================
+# 11. TEST EVERYTHING
+# ============================================================
+
+echo
+echo "[10/11] Running connector checks..."
+
+
+READY_CODE="$(
+    curl \
+        --silent \
+        --output /dev/null \
+        --write-out '%{http_code}' \
+        --connect-timeout 3 \
+        --max-time 5 \
+        "$READY_URL" \
+        2>/dev/null ||
+    true
+)"
+
+
+LOCAL_CODE="$(
+    curl \
+        --silent \
+        --output /dev/null \
+        --write-out '%{http_code}' \
+        --connect-timeout 3 \
+        --max-time 8 \
+        "$LOCAL_HEALTH_URL" \
+        2>/dev/null ||
+    true
+)"
+
+
+PUBLIC_CODE="$(
+    curl \
+        --silent \
+        --output /dev/null \
+        --write-out '%{http_code}' \
+        --connect-timeout 5 \
+        --max-time 15 \
+        "$PUBLIC_HEALTH_URL" \
+        2>/dev/null ||
+    true
+)"
+
+
+echo
+echo "============================================================"
+echo " G-CAM CLOUDFLARE STATUS"
+echo "============================================================"
+
+echo
+echo "Device:"
+echo "  ${DEVICE_ID:-Unknown}"
+
+echo
+echo "Public URL:"
+echo "  $PUBLIC_BASE_URL"
+
+echo
+echo "Local API:"
+echo "  $LOCAL_HEALTH_URL"
+
+echo
+echo "Token:"
+echo "  $TOKEN_FILE"
+
+echo
+echo "------------------------------------------------------------"
+
+printf "%-25s : %s\n" \
+    "Cloudflare Connector" \
+    "${READY_CODE:-000}"
+
+printf "%-25s : %s\n" \
+    "Local G-Cam API" \
+    "${LOCAL_CODE:-000}"
+
+printf "%-25s : %s\n" \
+    "Public G-Cam API" \
+    "${PUBLIC_CODE:-000}"
+
+echo "------------------------------------------------------------"
+echo
+
+
+echo "[11/11] Recent Cloudflare logs..."
+
+echo
+echo "================ CLOUDFLARED LOGS ==========================="
+
+journalctl \
+    -u "$SERVICE" \
+    -n 50 \
+    --no-pager \
+    2>/dev/null ||
+true
+
+echo "============================================================"
+echo
+
+
+RECENT_LOGS="$(
+    journalctl \
+        -u "$SERVICE" \
+        -n 150 \
+        --no-pager \
+        2>/dev/null ||
+    true
+)"
+
+
+# ============================================================
+# SUCCESS
+# ============================================================
+
+if [[ "$READY_CODE" == "200" ]]; then
+
+    echo
+    echo "============================================================"
+    echo " CLOUDFLARE CONNECTOR READY"
+    echo "============================================================"
+    echo
+
+    echo "[OK] Tunnel connector is connected."
+
+    if [[ "$LOCAL_CODE" =~ ^2[0-9][0-9]$ ]]; then
+
+        echo "[OK] Local G-Cam application is healthy."
+
+    else
+
+        echo
+        echo "[WARNING] G-Cam local application returned:"
+        echo "  HTTP ${LOCAL_CODE:-000}"
+        echo
+        echo "Check:"
+        echo "  sudo systemctl status gcam.service --no-pager"
+        echo "  sudo journalctl -u gcam.service -n 100 --no-pager"
+
+    fi
+
+
+    case "$PUBLIC_CODE" in
+
+        2??|3??|4??)
+
+            echo "[OK] Public Cloudflare hostname is responding."
+
+            echo
+            echo "Permanent URL:"
+            echo "  $PUBLIC_BASE_URL"
+
+            echo
+            echo "Health URL:"
+            echo "  $PUBLIC_HEALTH_URL"
+
+            ;;
+
+        *)
+
+            echo
+            echo "[WARNING]"
+            echo "Connector is ready but public hostname is unavailable."
+            echo
+            echo "Detected hostname:"
+            echo "  $PUBLIC_BASE_URL"
+            echo
+            echo "Check the Cloudflare Tunnel Published Application."
+            echo
+            echo "Hostname should be:"
+            echo "  ${PUBLIC_BASE_URL#https://}"
+            echo
+            echo "Service should be:"
+            echo "  http://localhost:8080"
+
+            ;;
+
+    esac
+
+
+    echo
+    echo "============================================================"
+    echo " PATCH COMPLETED"
+    echo "============================================================"
+
+    exit 0
+
+fi
+
+
+# ============================================================
+# TOKEN INVALID / TUNNEL DELETED
+# ============================================================
+
+if echo "$RECENT_LOGS" |
+   grep -qiE \
+   'Unauthorized.*Tunnel not found|Tunnel not found'; then
+
+    echo
+    echo "============================================================"
+    echo " TOKEN / TUNNEL ERROR"
+    echo "============================================================"
+    echo
+
+    echo "Cloudflare says:"
+    echo
+    echo "  Unauthorized: Tunnel not found"
+    echo
+
+    echo "The Raspberry Pi service configuration is now correct."
+    echo
+    echo "But the token belongs to an invalid/deleted tunnel."
+    echo
+
+    echo "Detected hostname:"
+    echo
+    echo "  ${PUBLIC_BASE_URL#https://}"
+    echo
+
+    echo "Go to Cloudflare:"
+    echo
+    echo "  Networking"
+    echo "    -> Tunnels"
+    echo "    -> correct G-Cam tunnel"
+    echo "    -> Add a replica / connector"
+    echo
+
+    echo "Copy the CURRENT tunnel token."
+    echo
+
+    echo "Then run:"
+    echo
+    echo "  sudo nano $TOKEN_FILE"
+    echo
+
+    echo "Replace the old token with ONLY the new token."
+    echo
+
+    echo "Then:"
+    echo
+    echo "  sudo chmod 600 $TOKEN_FILE"
+    echo "  sudo chown root:root $TOKEN_FILE"
+    echo "  sudo systemctl restart cloudflared.service"
+    echo "  sleep 10"
+    echo "  curl -i $READY_URL"
+    echo
+
+    exit 2
+
+fi
+
+
+# ============================================================
+# TOKEN FILE ERROR
+# ============================================================
+
+if echo "$RECENT_LOGS" |
+   grep -qi 'Failed to read token file'; then
+
+    echo
+    echo "============================================================"
+    echo " TOKEN FILE ERROR"
+    echo "============================================================"
+    echo
+
+    echo "cloudflared cannot read:"
+    echo
+    echo "  $TOKEN_FILE"
+    echo
+
+    echo "Run:"
+    echo
+    echo "  sudo ls -la $TOKEN_FILE"
+    echo "  sudo systemctl cat cloudflared.service"
+    echo
+
+    exit 3
+
+fi
+
+
+# ============================================================
+# NETWORK ERROR
+# ============================================================
+
+if echo "$RECENT_LOGS" |
+   grep -qiE \
+   'network is unreachable|no route to host|dial.*7844|i/o timeout|connection timed out'; then
+
+    echo
+    echo "============================================================"
+    echo " NETWORK / CLOUDFLARE CONNECTIVITY ERROR"
+    echo "============================================================"
+    echo
+
+    echo "Possible causes:"
+    echo
+    echo "  - Internet unavailable"
+    echo "  - DNS problem"
+    echo "  - Firewall blocking Cloudflare"
+    echo "  - TCP/UDP 7844 unavailable"
+    echo
+
+    echo "Test:"
+    echo
+    echo "  ping -c 3 1.1.1.1"
+    echo "  ping -c 3 cloudflare.com"
+    echo
+
+    exit 4
+
+fi
+
+
+# ============================================================
+# UNKNOWN ERROR
+# ============================================================
+
+echo
+echo "============================================================"
+echo " CONNECTOR NOT READY"
+echo "============================================================"
+echo
+
+echo "Automatic diagnosis could not identify the exact cause."
+echo
+
+echo "Run:"
+echo
+echo "  sudo systemctl status cloudflared.service --no-pager -l"
+echo
+echo "  sudo journalctl -u cloudflared.service -n 100 --no-pager"
+echo
+echo "  curl -i $READY_URL"
+echo
+
+exit 5
+
+PATCH
+
+chmod +x /tmp/fix-gcam-cloudflare-universal.sh
+
+sudo /tmp/fix-gcam-cloudflare-universal.sh

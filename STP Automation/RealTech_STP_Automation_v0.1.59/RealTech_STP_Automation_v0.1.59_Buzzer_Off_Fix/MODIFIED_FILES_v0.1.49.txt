@@ -1,0 +1,10 @@
+src/RfidVehicleAccess.App/Services/VehicleImportService.cs
+src/RfidVehicleAccess.App/RfidVehicleAccess.App.csproj
+README.md
+SERVER_INTERFACE.md
+sample-data/rfid_api_exact_format_sample.csv
+sample-data/Rfid_Test_Paid_Valid.csv
+CHANGES_v0.1.49.md
+TESTING_v0.1.49_RFID_CSV_API_FORMAT.md
+MODIFIED_FILES_v0.1.49.txt
+VALIDATION_RESULT_v0.1.49.txt

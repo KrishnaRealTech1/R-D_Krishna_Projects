@@ -1,0 +1,6 @@
+| DIP 1 | DIP 2 | Mode              | Relay behavior                      |
+| ----- | ----- | ----------------- | ----------------------------------- |
+| OFF   | OFF   | `RESET_MODE_TEST` | ON 10 PM to 4 AM                     |
+| ON    | OFF   | `RESET_MODE_1`    | 3-second pulse at 7 AM, 3 PM, 11 PM |
+| OFF   | ON    | `RESET_MODE_2`    | 3-second pulse at 10 AM, 10 PM      |
+| ON    | ON    | `RESET_MODE_3`    | 3-second pulse at 10 AM             |

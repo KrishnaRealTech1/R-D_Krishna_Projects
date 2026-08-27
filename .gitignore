@@ -1,0 +1,59 @@
+# Archives
+*.7z
+*.zip
+*.rar
+*.tar
+*.gz
+
+# Executables
+*.exe
+*.dll
+*.msi
+
+# Videos
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# AI Models
+*.onnx
+*.caffemodel
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.h5
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+
+# Builds
+Publish/
+publish/
+build/
+dist/
+bin/
+obj/
+
+# IDE / Temp
+.vscode/
+.idea/
+*.tmp
+*.log
+.cache/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Large PDF
+Dima Development/dima1.pdf

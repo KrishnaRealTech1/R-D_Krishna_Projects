@@ -1,0 +1,11 @@
+src/RfidVehicleAccess.App/RfidVehicleAccess.App.csproj
+src/RfidVehicleAccess.App/App.xaml.cs
+src/RfidVehicleAccess.App/appsettings.json
+src/RfidVehicleAccess.App/Services/ServerSyncWorker.cs
+SERVER_INTERFACE.md
+SERVER_SYNC.md
+README.md
+CHANGES_v0.1.39.md
+TESTING_v0.1.39_MQTT_DEVICE_ROOT_AND_JSON_CLEANUP.md
+MODIFIED_FILES_v0.1.39.txt
+VALIDATION_RESULT_v0.1.39.txt

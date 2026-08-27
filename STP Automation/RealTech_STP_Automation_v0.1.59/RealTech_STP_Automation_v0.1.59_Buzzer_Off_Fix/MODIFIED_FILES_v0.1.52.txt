@@ -1,0 +1,11 @@
+src/RfidVehicleAccess.App/Services/AppOptions.cs
+src/RfidVehicleAccess.App/Services/HardwareGateway.cs
+src/RfidVehicleAccess.App/ViewModels/MainViewModel.cs
+src/RfidVehicleAccess.App/MainWindow.xaml
+src/RfidVehicleAccess.App/HardwareSettingsWindow.xaml
+src/RfidVehicleAccess.App/HardwareSettingsWindow.xaml.cs
+src/RfidVehicleAccess.App/appsettings.json
+src/RfidVehicleAccess.App/RfidVehicleAccess.App.csproj
+CHANGES_v0.1.52.md
+TESTING_v0.1.52_BLUETOOTH_FAILOVER.md
+MODIFIED_FILES_v0.1.52.txt

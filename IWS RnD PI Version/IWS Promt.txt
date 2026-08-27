@@ -1,0 +1,138 @@
+IWS - PVT AWS
+
+Materials List:
+01). Raspberry PI 5 4GB RAM		        	- 1
+02). 32GB SD Card   						- 1
+03). Power Supply for each and every thing  - 1
+04). RFID Reader							- 2
+05). Boom Barrier 							- 2
+06). Photo Electric Sensor 					- 1
+07). Audio System with speakers				- 1
+08). Weight Bridge with RS232 				- 1
+09). Signal Light (Red/Green/Yellow)        - 2
+10). Instruction Display(DOT Matrix-RBG)    - 2
+11). ANPR Camera 							- 1
+12). Printer for Print Slip					- 1
+13). Camera 								- 4
+14). Router 								- 1
+15). RS232 to USB Cable						- 3
+16). 15.4Inch Monitor						- 1
+17). Other Materials for Assembly of Device - 1
+
+
+
+Variables:
+01). Universal Weight Bridge Data.
+02). Audio System (Language).
+03). Red/Green/Yellow - Signal Display.
+04). Boom Barrier.
+05). Instruction Display Unit.
+06). Photo Electric Sensor.
+07). RFID - Single/Double.
+08). ANPR Interface.
+09). Print Slip.
+10). Camera Interface with UI.
+
+Functions as Module:
+UI Interface:
+01). We Use 15.4Inch Monitor with HDMI.
+02). UI Should shows Camera Live Feed, Time+Date, Weight, Vehicle Number, Console, Server Log, Processed & Pending Trips, Online/Offline Status, Indicator Status(Red/Green/Yellow).
+03). Menu at Top Corner contains. About, Exit, Import Vehicle List(Excel).
+
+Weight Bridge Interface:
+01). We May Use Different types of weight bridge data with differnt formats. So, We need to make support of Universal Weight Data.
+02). Sample one is given below - 
+							wn000000 kg
+							wn000000 kg
+							wn009853 kg
+							wn009853 kg
+							wn009853 kg
+							wn000000 kg
+							wn000000 kg
+							wn000000 kg
+							
+Audio System Interface:
+01). Instructions like "STOP, GO, PLEASE WEIGHT, PLEASE CHECK THE VEHICLE NUMBER & WEIGHT" will be mp3 file which we want to Import as Audio File.
+
+Red/Green/Yellow Signal Display Interface:
+01). RED should shows when RFID and Weight Bright reach minimum weight what we set as user.
+02). GREEN Should shows when data packet was uploaded and RFID not detected & Weight Data = 0.
+03). YELLOW Should shows when the process completed.
+
+Boom Barrier Interface:
+01). We have 2 Boom Barrier - IN & OUT.
+02). When the RFID continuously Detected for 5 to 10secs, IN Boom Barrier will be open. Then Close after 15secs when Weight data stables without ossulations + or - 100KG for 15secs.
+03). After All Process Completed, OUT Boom Barrier will be Open. Then Close After 15secs when Weight data stables without ossulations + or - 50KG for 10Secs.
+
+Instruction Display Unit:
+01). Display Should shows "READY" when Weight Data stables without ossulations + or - 50KG and Boom Barrier IN and OUT was Close state.
+02). Display should shows "STOP" when RFID datected and IN Boom Barrier is Opened.
+03). Display should shows "PLEASE CHECK VEHICLE NUMBER & WEIGHT", after 10secs of Weight data stables without ossulations + or - 100KG for 10secs and also Weight data reached to minimum weight seted.
+04). Display should shows "GO", after completed all Process.
+
+Photo Electric Sensor Interface:
+01). Photo Electric Sensor is Used to find and confirm the vehicle detected and stable in the weight bridge.
+
+RFID Reader Interface:
+01). We use two RFID readers - IN RFID & OUT RFID Reader.
+02). IN RFID Reader will be used for In of Weight Bridge.
+03). OUT RFID Reader will be used for OUT of Weight Bridge.
+04). If we want single RFID Reader based of our requirements. we will select or enable/disable the another RFID Reader.
+
+ANPR Cam Interface:
+01). ANPR is used for detect the Number Plate of the vehicles. when RFID Readers Fails.
+
+Print Slip Interface:
+01). After all process completed. before the OUT boom Barrier opens. the Print slip will be print the datas.
+
+
+Camera Interface:
+01). Camera feed will be taken through RTSP.
+
+
+
+Operation Flow:
+01). Ready State -  Signal        = GREEN
+					Weight Bridge = + or - 50KG
+					Boom Barrier  = Close
+					Display       = READY
+					
+02). When RFID detects for 10secs Continuously,
+					Signal          = RED
+				    Boom Barrier IN = Open
+					Display 	    = Enter the Vehicle to the Weight Bridge.
+					Audio System    = Enter the Vehicle to the Weight Bridge.
+
+03). After Photo Electric Sensor detects LOW, wait for 25secs for minimum weight settling set by user.
+
+04). After 25secs,  Boom Barrier IN = Close
+					Display 		= Please Verify Vehicle Number & Weight.
+					Audio System  	= Please Verify Vehicle Number & Weight.
+
+05). Device Capture 4Cameras Image from live feed(RTSP) and Collect data and make data packet and send to FTP.
+                    Display 		= Processing
+					Audio System    = Please Wait, Processing
+					
+06). After Completed the Process, Printer will print the data in print slip.
+
+07). After 10Secs,  Display   		= Go
+					Signal 		   	= Yellow
+					Boom Barrier OUT = Open
+					
+08). After Weight Reach reach + or - 50KG, wait for 15secs.
+					Boom Barrier OUT = Close
+					Display 		= READY
+					Signal			= GREEN
+					
+09). Monitor will always updated each and everything and also Live Stream in UI 
+
+
+Data Packet:
+01). Image from 4 camera.
+02). Weight Data.
+03). Vehicle Number.
+04). RFID Tag Number.
+05). Date and Time.
+06). Site Name.
+07). Image Prifix.
+					

@@ -1,0 +1,319 @@
+cat > /tmp/fix_camera_config_temp_url_now.sh <<'EOF'
+#!/usr/bin/env bash
+set +H 2>/dev/null || true
+set -euo pipefail
+
+APP_PY="/opt/gcam/app.py"
+CONTROLLER_PY="/opt/gcam/controller.py"
+STAMP="$(date +%Y%m%d_%H%M%S)"
+
+if [[ ! -f "$APP_PY" ]]; then
+  echo "ERROR: $APP_PY not found. Install G-Cam first."
+  exit 1
+fi
+
+sudo cp "$APP_PY" "${APP_PY}.bak_camera_config_temp_url_${STAMP}"
+if [[ -f "$CONTROLLER_PY" ]]; then
+  sudo cp "$CONTROLLER_PY" "${CONTROLLER_PY}.bak_camera_config_temp_url_${STAMP}"
+fi
+
+sudo python3 - <<'PY'
+from pathlib import Path
+import re
+
+APP_PY = Path("/opt/gcam/app.py")
+CONTROLLER_PY = Path("/opt/gcam/controller.py")
+
+START_MARKER = "# GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX_START"
+END_MARKER = "# GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX_END"
+
+APP_PATCH = r'''
+
+# GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX_START
+# Camera Temp URL creates a temporary Cloudflare URL for the camera config page.
+# Target: https://192.168.22.225:443
+# Output: https://xxxxx.trycloudflare.com/camera
+
+_GCAM_CAMERA_CONFIG_TEMP_URL_ALIASES = {
+    "camera temp url",
+    "camera temporary url",
+    "temporary camera url",
+    "temp camera url",
+    "camera config temp url",
+    "camera config temporary url",
+    "temporary camera config url",
+    "temp camera config url",
+}
+
+
+def _gcam_camera_config_temp_target_url() -> str:
+    try:
+        cfg = globals().get("CONFIG", {}) or {}
+        target = str(cfg.get("camera_config_url") or "").strip().rstrip("/")
+        if target:
+            return target
+    except Exception:
+        pass
+
+    try:
+        target = str(globals().get("CAMERA_CONFIG_URL") or "").strip().rstrip("/")
+        if target:
+            return target
+    except Exception:
+        pass
+
+    try:
+        cam_ip = str(globals().get("CAMERA_IP") or "192.168.22.225").strip()
+        if cam_ip:
+            return f"https://{cam_ip}:443"
+    except Exception:
+        pass
+
+    return "https://192.168.22.225:443"
+
+
+def _gcam_start_or_refresh_cloudflare_temp_url() -> str:
+    try:
+        duration = int(globals().get("LIVE_LINK_DURATION_SEC", 3600) or 3600)
+    except Exception:
+        duration = 3600
+
+    try:
+        return str(start_live_tunnel(duration)).strip().rstrip("/")
+    except TypeError:
+        return str(start_live_tunnel()).strip().rstrip("/")
+
+
+def _gcam_build_camera_config_temp_payload() -> dict:
+    target_url = _gcam_camera_config_temp_target_url()
+
+    try:
+        if "is_power_saving_active" in globals() and is_power_saving_active():
+            return {
+                "camera_config_url_temp": None,
+                "camera_temp_url": None,
+                "url": None,
+                "dashboard_url_temp": None,
+                "camera_config_target_url": target_url,
+                "camera_config_local_url": target_url,
+                "camera_temp_status": "blocked_power_saving",
+                "message": "Temporary camera URL blocked because power saving is active",
+                "error": None,
+            }
+    except Exception:
+        pass
+
+    base_url = None
+    error = None
+
+    try:
+        base_url = _gcam_start_or_refresh_cloudflare_temp_url()
+    except Exception as exc:
+        error = str(exc)
+        base_url = None
+
+    camera_url = f"{base_url}/camera" if base_url else None
+
+    try:
+        expires_ts = float(globals().get("cloudflare_expiry_ts", 0.0) or 0.0)
+    except Exception:
+        expires_ts = 0.0
+
+    try:
+        import datetime as _dt
+        import time as _time
+        expires_at = _dt.datetime.fromtimestamp(expires_ts).isoformat() if expires_ts > 0 else None
+        expires_in = int(max(expires_ts - _time.time(), 0)) if base_url else 0
+    except Exception:
+        expires_at = None
+        expires_in = 0
+
+    return {
+        "camera_config_url_temp": camera_url,
+        "camera_temp_url": camera_url,
+        "url": camera_url,
+        "dashboard_url_temp": base_url,
+        "camera_config_target_url": target_url,
+        "camera_config_local_url": target_url,
+        "live_expires_in_sec": expires_in,
+        "live_expires_at": expires_at,
+        "camera_temp_status": "created" if camera_url else "failed",
+        "message": "Temporary camera configuration URL is ready" if camera_url else "Failed to create temporary camera configuration URL",
+        "error": error,
+    }
+
+
+try:
+    _gcam_camera_config_original_handle_command = handle_command
+
+    def handle_command(payload):
+        import re as _re
+
+        raw_cmd = str((payload or {}).get("command", "")).strip()
+        cmd = _re.sub(r"\s+", " ", raw_cmd.lower())
+
+        if cmd in _GCAM_CAMERA_CONFIG_TEMP_URL_ALIASES:
+            try:
+                if "validate_command" in globals() and not validate_command(payload):
+                    mqtt_publish(MQTT_RESPONSE_TOPIC, {
+                        "device_id": DEVICE_ID,
+                        "event": "command_rejected",
+                        "message": "Invalid token",
+                    })
+                    return
+            except Exception:
+                pass
+
+            data = _gcam_build_camera_config_temp_payload()
+            event_name = "camera_temp_url_created" if data.get("camera_config_url_temp") else "camera_temp_url_failed"
+
+            response = {
+                "device_id": DEVICE_ID,
+                "event": event_name,
+                **data,
+            }
+
+            mqtt_publish(MQTT_RESPONSE_TOPIC, response)
+
+            try:
+                add_event(event_name, data)
+            except Exception:
+                pass
+
+            return
+
+        return _gcam_camera_config_original_handle_command(payload)
+
+except Exception:
+    pass
+# GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX_END
+'''
+
+CONTROLLER_PATCH = r'''
+
+# GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX_START
+# Main app owns temporary Cloudflare camera config URL creation.
+# Controller must not reply unknown_command for Camera Temp URL.
+
+_GCAM_CONTROLLER_CAMERA_CONFIG_TEMP_URL_ALIASES = {
+    "camera temp url",
+    "camera temporary url",
+    "temporary camera url",
+    "temp camera url",
+    "camera config temp url",
+    "camera config temporary url",
+    "temporary camera config url",
+    "temp camera config url",
+}
+
+try:
+    _gcam_controller_camera_config_original_handle_command = handle_command
+
+    def handle_command(payload):
+        import re as _re
+
+        cmd = _re.sub(
+            r"\s+",
+            " ",
+            str((payload or {}).get("command", "")).strip().lower()
+        )
+
+        if cmd in _GCAM_CONTROLLER_CAMERA_CONFIG_TEMP_URL_ALIASES:
+            return
+
+        return _gcam_controller_camera_config_original_handle_command(payload)
+
+except Exception:
+    pass
+# GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX_END
+'''
+
+
+def remove_existing_block(text: str) -> str:
+    pattern = re.compile(
+        r"\n?# GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX_START.*?# GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX_END\n?",
+        re.DOTALL,
+    )
+    return pattern.sub("\n", text)
+
+
+def insert_before_main(path: Path, patch: str) -> None:
+    text = path.read_text()
+    text = remove_existing_block(text)
+
+    main_marker = 'if __name__ == "__main__":'
+    idx = text.rfind(main_marker)
+
+    if idx == -1:
+        text = text.rstrip() + patch + "\n"
+    else:
+        text = text[:idx].rstrip() + patch + "\n\n" + text[idx:]
+
+    path.write_text(text)
+    print(f"Patched: {path}")
+
+
+insert_before_main(APP_PY, APP_PATCH)
+
+if CONTROLLER_PY.exists():
+    insert_before_main(CONTROLLER_PY, CONTROLLER_PATCH)
+PY
+
+sudo python3 -m py_compile "$APP_PY"
+
+if [[ -f "$CONTROLLER_PY" ]]; then
+  sudo python3 -m py_compile "$CONTROLLER_PY"
+fi
+
+sudo systemctl restart gcam.service 2>/dev/null || true
+sudo systemctl restart gcam-controller.service 2>/dev/null || true
+
+sleep 2
+
+echo
+echo "Device config:"
+sudo python3 - <<'PY'
+import json
+from pathlib import Path
+
+cfg = json.loads(Path("/opt/gcam/data/config.json").read_text())
+
+print(json.dumps({
+    "device_id": cfg.get("device_id"),
+    "camera_config_url": cfg.get("camera_config_url"),
+    "command_topic": cfg.get("mqtt", {}).get("command_topic"),
+    "response_topic": cfg.get("mqtt", {}).get("response_topic"),
+}, indent=2))
+PY
+
+echo
+echo "Patch check:"
+sudo grep -n "GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX\|camera_config_url_temp\|camera temp url" "$APP_PY" | head -40 || true
+
+if [[ -f "$CONTROLLER_PY" ]]; then
+  sudo grep -n "GCAM_CAMERA_CONFIG_TEMP_URL_HOTFIX\|camera temp url" "$CONTROLLER_PY" | head -40 || true
+fi
+
+echo
+echo "Services:"
+sudo systemctl is-active gcam.service 2>/dev/null || true
+sudo systemctl is-active gcam-controller.service 2>/dev/null || true
+
+echo
+echo "DONE."
+echo "Now publish:"
+echo '{"command":"Camera Temp URL","token":"GCAM_SECRET_123"}'
+echo
+echo "Expected event:"
+echo "camera_temp_url_created"
+echo
+echo "Expected target:"
+echo "https://192.168.22.225:443"
+echo
+echo "Expected temporary URL:"
+echo "https://xxxxx.trycloudflare.com/camera"
+EOF
+
+bash -n /tmp/fix_camera_config_temp_url_now.sh
+chmod +x /tmp/fix_camera_config_temp_url_now.sh
+bash /tmp/fix_camera_config_temp_url_now.sh

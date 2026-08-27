@@ -1,0 +1,80 @@
+cd C:\Users\RealTech\PycharmProjects\Kousicandco
+copy "C:\Users\RealTech\Downloads\Material AI Logo.png" ".\MaterialAI_Logo.png"
+
+***************************************************************************************
+
+.\.venv\Scripts\Activate.ps1
+pip install pillow
+
+***************************************************************************************
+
+python -c "from PIL import Image; img=Image.open(r'MaterialAI_Logo.png').convert('RGBA'); img.save(r'MaterialAI.ico', sizes=[(256,256),(128,128),(64,64),(48,48),(32,32),(16,16)])"
+
+*******************************************************************************************
+
+cd C:\Users\RealTech\PycharmProjects\Kousicandco
+.\.venv\Scripts\Activate.ps1
+Remove-Item -Recurse -Force build, dist -ErrorAction SilentlyContinue
+Remove-Item -Force MaterialAI.spec -ErrorAction SilentlyContinue
+pyinstaller --noconfirm --clean --onefile --windowed --icon ".\MaterialAI.ico" --name "MaterialAI" .\material_ai_standalone.py
+
+
+*********************************************************************************************************
+
+
+New UPdated:
+
+
+__________________________
+
+cd C:\Users\RealTech\PycharmProjects\Kousicandco
+
+copy "C:\Users\RealTech\Downloads\Material AI Logo.png" ".\MaterialAI_Logo.png"
+
+.\.venv\Scripts\Activate.ps1
+
+pip install --upgrade pillow pyinstaller
+
+@'
+from PIL import Image, ImageOps
+from pathlib import Path
+
+SOURCE = Path("MaterialAI_Logo.png")
+OUTPUT = Path("MaterialAI.ico")
+
+sizes = [(256, 256), (128, 128), (64, 64), (48, 48), (32, 32), (16, 16)]
+
+img = Image.open(SOURCE).convert("RGBA")
+
+# Put the logo into a clean square transparent canvas.
+# This avoids stretched or cropped EXE icons.
+canvas_size = 1024
+canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
+
+img.thumbnail((canvas_size, canvas_size), Image.Resampling.LANCZOS)
+
+x = (canvas_size - img.width) // 2
+y = (canvas_size - img.height) // 2
+canvas.paste(img, (x, y), img)
+
+canvas.save(OUTPUT, format="ICO", sizes=sizes)
+
+print(f"Created {OUTPUT.resolve()}")
+print("ICO sizes:", sizes)
+'@ | python
+
+Remove-Item -Recurse -Force build, dist -ErrorAction SilentlyContinue
+Remove-Item -Force MaterialAI.spec -ErrorAction SilentlyContinue
+
+pyinstaller `
+  --noconfirm `
+  --clean `
+  --onefile `
+  --windowed `
+  --icon ".\MaterialAI.ico" `
+  --add-data ".\MaterialAI.ico;." `
+  --name "MaterialAI" `
+  ".\material_ai_standalone.py"
+
+
+**************************************************************************************************************
