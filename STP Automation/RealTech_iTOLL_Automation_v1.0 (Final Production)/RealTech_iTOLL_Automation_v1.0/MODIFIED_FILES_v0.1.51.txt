@@ -1,8 +1,0 @@
-src/RfidVehicleAccess.App/Services/LaneProcessor.cs
-src/RfidVehicleAccess.App/RfidVehicleAccess.App.csproj
-README.md
-SERVER_INTERFACE.md
-CHANGES_v0.1.51.md
-TESTING_v0.1.51_OUT_AFTER_IN_FIX.md
-MODIFIED_FILES_v0.1.51.txt
-VALIDATION_RESULT_v0.1.51.txt
