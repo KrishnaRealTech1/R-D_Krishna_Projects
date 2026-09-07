@@ -1,0 +1,11 @@
+v0.1.58 static validation
+PASS - appsettings JSON parses successfully
+PASS - Server Panel exposes BOTH / RFID / CONTRACTOR
+PASS - BOTH is default for fresh configuration
+PASS - BOTH selects CONTRACTOR for contractor-linked vehicles
+PASS - BOTH selects RFID for legacy vehicles without ContractorCode
+PASS - online authorization publishes the selected effective balance type
+PASS - existing atomic RFID balance debit path retained
+PASS - atomic Contractor balance debit path retained
+PASS - one-negative-trip guard retained on both local debit paths
+NOTE - .NET SDK is not installed in this execution environment, so a Windows WPF compile/runtime test could not be executed here.

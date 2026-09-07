@@ -1,0 +1,173 @@
+Hii... I Just Start a another new Project
+Named as "IoT Based Valve Control"
+
+The Project Concept is control the Motorized Valve (Electronic water gateValve).
+
+Materials List:
+  1). PIC18F25K22 Microcontroller
+  2). OLED Display
+  3). Bluetooth Module (HC-05)
+  4). BC547 Transister 
+  5). Relay
+  6). Step-UP Module
+  7). Step-Down Module
+  8). LED Lights
+  9). Limit Switch
+ 10). Resister & Capactors & Diodes
+ 11). Switch 
+ 12). Connecting Wires
+ 13). Battery
+ 14). TP5100 Charging Module
+ 
+ 
+Materials Purpuse:
+  1). PIC18F25K22 						- For Control the Circuit.
+  2). OLED Display 						- For Print the Status and other CMD & Details of the device.
+  3). Bluetooth Module (HC-05)			- For Provide CMD for the Device.
+  4). BC547 Transister   				- For Control Relays.
+  5). Relays 							- For Control Motor.
+  6). Step-UP Module					- For Step-UP the Voltage.
+  7). Step-Down Module					- For Step-Down the Voltage.
+  8). LED Lights 						- For Indications.
+  9). Limit Switch						- For Providing(Generate) Pulse/Trigger.
+ 10). Resister & Capactors & Diodes		- For Connections and filters.
+ 11). Switch							- For ON/OFF.
+ 12). Connecting Wires					- For Make Connections.
+ 13). Battery							- For Power Backup.
+ 14). TP5100 Charging Module 			- For Charging the Battery.
+ 
+ 
+I/Os For PIC18F25K22:
+  1). Power Detect						- For Select Auto Mode And Manual Mode.
+  2). Trigger 							- I Give Trigger from Another Device to this I/O.
+  3). Limit Switch						- For Count the Pulse.
+  4). ON/OFF Relay						- For Open the Valve.
+  5). Close Relay						- For Close the Valve.
+  6). Open Status						- For Give feedback to another device for Open Status.
+  7). Close Status						- For Give feedback to another device for Close Status.
+  8). SCL (Bluetooth & OLED)			- For Bluetooth and OLED.
+  9). SDA (Bluetooth & OLED)			- For Bluetooth and OLED.
+ 10). Manual Trigger					- I Give Trigger voltage to this I/O manually.
+ 11). Open FeedBack 					- For Turn ON the Close Relay when this I/O is HIGH.
+ 12). Close FeedBack					- For Turn ON the Open Relay when this I/O is HIGH.
+ 
+ 
+Process/Operations:
+  1). Device Have 2 Modes "Auto Mode" & "Manual Mode".
+  2). Auto Mode is Consider as Function 1 & Manual Mode is Consider as Function 2.
+  3). For Selecting Function 1(Auto Mode) & Function 2(Manual Mode): 1st Check the Power Detect I/O. If it is HIGH Proceed to Next Step. If it is LOW Consider as Manual Mode.
+ 
+  4). In Function 1(Auto Mode), When I give HIGH to the Trigger I/O, Turn ON the ON/OFF Relay.
+  5). Parallelly, Limit Switch give trigger(Pulse) to the Limit Switch I/O. When it reach 15 Count of pulse(Trigger), Turn OFF the ON/OFF Relay.
+  6). Now, Turn ON the Open sts Relay.
+  7). That Limit Switch Pulse is default as 15 Count. If want to change that, Send the CMD through Bluetooth : "PULSE25" - Count will set to 25.
+  8). Save the Count to EEPROM without erasing safely.
+  9). When I Cut OFF(LOW) the Trigger I/O, the Close Relay and ON/OFF Relay will be Turn ON at the same time.
+ 10). Count the Limit Switch Pulse in Limit Switch I/O, Turn OFF the ON/OFF Relay & Close Relay, when the Count will reach. the count was stored previously in EEPROM which should be taken for Close Cycle Pulse Count.
+ 11). Now, Turn ON the Close sts Relay.
+ 
+ 12). Function 2(Manual Mode), When the Power Detect is LOW. Turn ON the Close Relay & ON/OFF Relay.
+ 13). I Give Trigger to the Manual Trigger I/O. Then Check the Open FeedBack & Close FeedBack.
+ 14). If the Open FeedBack is HIGH, Turn ON the Close Relay & ON/OFF Relay.
+ 15). And the Count/Pulse of the Limit Switch is taken in EEPROM stored.
+ 16). If the Count/Pulse is reach, Turn OFF the Close Relay & ON/OFF Relay.
+ 17). Now, Turn ON the Close Sts Relay.
+ 18). If the Close FeedBack is HIGH, Turn ON the ON/OFF Relay.
+ 19). And the Count/Pulse of the Limit Switch is taken in EEPROM stored.
+ 20). If the Count/Pulse is reach, Turn OFF the ON/OFF Relay.
+ 21). Now, Turn ON the Open Sts Relay.
+ 22) All relay should be in OFF State at Booting.
+ 
+ 
+Bluetooth Interface:
+  1). When I Send Cmd Through Bluetooth, it will stored in EERPOM.
+  2). CMD What I Send is Given Below with details:
+        PULSE25     - It means the Limit Switch Count/Pulse is Set to 25.
+		STS         - It Means the Bluetooth should respond, LOG like Status of Relay like Open Relay ON/OFF, Close Relay ON/OFF, Open Sts and Close Sts - Status, Count/Pulse set for Limit Switch.
+        RESETMEM    - It means the EEPROM Should Reset and Goes to default Mode.
+		
+		
+
+OLED Interface:
+  1). OLED must Display this "RealTech Systems" at the Booting.
+  2). After this OLED Must Print Auto/Manual Mode. it was find by Power Detect I/O. if it is High - Auto Mode. If it is LOW - Manual Mode.
+  3). And OLED Must Print Open/Close Status. if the Open Status I/O is High - Print "STS-OPEN". If the Close Status I/O is High - Print "STS-CLOSE".
+  4). OLED Should Print Limit Switch Count when the Open/Close Relay is ON.
+		For Example - The Count/Pulse of Limit Switch is 25. the OLED Will print that count/pulse num 25.
+					  If the Close State(Close Sts) the OLED Should Print Zero(0).
+					  If the ON/OFF Relay is ON, the Limit Switch pulse/count is detected that print gratually like 1 then 2 then 3...,.
+					  If the Close Relay is ON, the Limit Switch Pulse/count is detected that print in decenting order like 25 the 24 then 23...,.
+					  
+
+
+PIN Mapping:
+
+RA0 – PowerDetect (Auto/Manual select)
+
+RA1 – Trigger (Auto mode command)
+
+RA2 – ManualTrigger (manual control)
+
+RA3 – OpenFeedback (manual mode → close)
+
+RA4 – CloseFeedback (manual mode → open)
+
+RB0 – LimitSwitch (pulses, INT0)
+
+RB1 – ON/OFF Relay control
+
+RB2 – CloseRelay control
+
+RB3 – OpenStatus output
+
+RB4 – CloseStatus output
+
+RB5 – Heartbeat LED
+
+RC3 – I²C SCK (OLED)
+
+RC4 – I²C SDA (OLED)
+
+RC6 (TX) Bluetooth
+
+RC7 (RX) Bluetooth
+ 
+ 
+When I Give Power to the Device,
+RA0 is Power Detect I/O. If RA0 is High Device should be Auto Mode. If RA0 is LOW device should be Manual Mode.
+
+In Auto Mode, When RA1 (Trigger From Other Device) is HIGH, The ON/OFF Relay(RB1) should be ON For Open the Valve.
+Limit Switch I/O is RB0. This I/O always Low. Device should be taken the count when this I/O reach HIGH. And The Default Count Target is 15.
+Turn OFF the ON/OFF Relay(RB1) When the Limit Switch(RB0) Reach the Target Count/Pulse.
+Now, Open Sts Relay(RB3) should be Trigger for Identify the Valve status Open.
+
+When RA1 (Trigger From Other Device) is Low, The ON/OFF Relay(RB1) & Close Relay(RB2) should be ON for Close the Valve.
+Limit Switch I/O is RB0. This I/O always Low. Device should be taken the count when this I/O reach HIGH. And The Default Count Target is 15.
+Turn OFF the ON/OFF Relay(RB1) & Close Relay(RB2) when the Limit Switch(RB0) Reach the Target Count/Pulse.
+Now, Close Sts Relay(RB4) Should be Trigger for identify the Valve Status Close.
+
+
+In Manual Mode, RA3 is Open FeedBack I/O. RA4 is Close FeedBack I/O. 
+If RA3(Open FeedBack) is High, The ON/OFF Relay(RB1) & Close Relay(RB2) should be ON for Close the Valve.
+Limit Switch I/O is RB0. This I/O always Low. Device should be taken the count when this I/O reach HIGH. And The Default Count Target is 15.
+Turn OFF the ON/OFF Relay(RB1) & Close Relay(RB2) when the Limit Switch(RB0) Reach the Target Count/Pulse.
+Now, Close Sts Relay(RB4) Should be Trigger for identify the Valve Status Close.
+
+If RA4(Close FeedBack) is High, The ON/OFF Relay(RB1) should be ON For Open the Valve.
+Limit Switch I/O is RB0. This I/O always Low. Device should be taken the count when this I/O reach HIGH. And The Default Count Target is 15.
+Turn OFF the ON/OFF Relay(RB1) When the Limit Switch(RB0) Reach the Target Count/Pulse.
+Now, Open Sts Relay(RB3) should be Trigger for Identify the Valve status Open.
+
+All the Status should be same as old for OLED Interface. Don't Change UI Of OLED.
+
+Bluetooth Interface, When I Give Cmd through Bluetooth terminal, 
+"LOG" - Device Should be respond the Status of Device like Open/Close, Auto/Manual and Target Count/Pulse and Reach Count/Pulse.
+"PULSE20" - The Limit Switch Tagert Count/Pulse should be set to 20.
+"DFLT" - The Limit Switch Tagert Count/Pulse should be set to Default 15.
+
+
+EEPROM Should be stored the Limit Switch Target Count/Pulse & Last Status like Open/Close Status and Must Store LOG.
+It Should be stored and can't erase in powerloss.
+
+
+
