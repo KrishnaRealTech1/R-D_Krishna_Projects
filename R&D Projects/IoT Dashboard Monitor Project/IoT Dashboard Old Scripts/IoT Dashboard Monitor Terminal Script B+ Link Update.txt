@@ -1,0 +1,268 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# ============================================================================
+# Universal Raspberry Pi Console Kiosk (Future-proof)
+# - Console autologin -> X -> Chromium kiosk (itank.io)
+# - Auto-login with last-used credentials (+ Reset link)
+# - Ctrl+Alt+W -> Wi-Fi (nmtui) in fullscreen xterm; kiosk restarts after exit
+# - NetworkManager preferred; dhcpcd disabled if conflicting
+# - ZRAM via systemd-zram-generator if present, else zram-tools (/etc/ztab)
+# - Safe gpu_mem config for /boot/config.txt and /boot/firmware/config.txt
+# - Works on Bullseye/Bookworm/Trixie and future releases
+# ============================================================================
+
+# ---------- Tunables ----------
+KIOSK_URL="${KIOSK_URL:-https://web.itank.io/login/}"
+KIOSK_REFRESH_SECS="${KIOSK_REFRESH_SECS:-300}"    # 0 = off; 300s = 5 minutes
+NET_WAIT_SECS="${NET_WAIT_SECS:-45}"
+GPU_SPLIT_MB="${GPU_SPLIT_MB:-96}"               # Good for 1GB models
+USER_NAME="$(whoami)"
+
+echo "[i] Installing console kiosk for ${USER_NAME} (URL=${KIOSK_URL})"
+
+# ---------- Detect OS info ----------
+OS_CODENAME="$(. /etc/os-release && echo "${VERSION_CODENAME:-}")"
+BOOT_CFG1="/boot/config.txt"
+BOOT_CFG2="/boot/firmware/config.txt"
+
+# ---------- 1) Console autologin + screen + gpu_mem ----------
+sudo raspi-config nonint do_boot_behaviour B2 || true
+sudo raspi-config nonint do_blanking 0 || true
+
+for CFG in "$BOOT_CFG1" "$BOOT_CFG2"; do
+  if [ -f "$CFG" ]; then
+    sudo sed -i '/^gpu_mem=/d' "$CFG"
+    echo "gpu_mem=${GPU_SPLIT_MB}" | sudo tee -a "$CFG" >/dev/null
+    echo "[i] Set gpu_mem=${GPU_SPLIT_MB} in $CFG"
+  fi
+done
+
+# ---------- 2) Base packages ----------
+sudo apt update -y
+sudo apt install -y --no-install-recommends \
+  xserver-xorg xinit openbox unclutter xdotool wmctrl xbindkeys xterm \
+  network-manager systemd-zram-generator xserver-xorg-legacy || true
+
+# Chromium: try modern name first, fallback if needed
+if ! command -v chromium >/dev/null 2>&1; then
+  sudo apt install -y chromium || true
+fi
+if ! command -v chromium >/dev/null 2>&1; then
+  # legacy name on some old images
+  sudo apt install -y chromium-browser || true
+fi
+if ! command -v chromium >/dev/null 2>&1 && ! command -v chromium-browser >/dev/null 2>&1; then
+  echo "[!] Chromium not found. Try: sudo apt search chromium"
+  exit 1
+fi
+
+# Allow non-root to start X on TTY (prevents /dev/tty0 permission error)
+echo "allowed_users=anybody" | sudo tee /etc/Xwrapper.config >/dev/null
+
+# ---------- 3) Networking preference: NetworkManager ----------
+if systemctl list-unit-files | grep -q '^dhcpcd.service'; then
+  sudo systemctl disable --now dhcpcd || true
+  echo "[i] Disabled dhcpcd to avoid conflicts"
+else
+  echo "[i] dhcpcd not present (OK)"
+fi
+sudo systemctl enable --now NetworkManager || true
+nmcli networking on || true
+
+# ---------- 4) ZRAM: generator if present, else zram-tools ----------
+if [ -x /lib/systemd/system-generators/systemd-zram-generator ]; then
+  echo "[i] Using systemd-zram-generator"
+  sudo tee /etc/systemd/zram-generator.conf >/dev/null <<'CFG'
+[zram0]
+zram-size = ram / 3
+compression-algorithm = lz4
+swap-priority = 100
+fs-type = swap
+CFG
+else
+  echo "[i] systemd-zram-generator not found; using zram-tools fallback"
+  sudo apt install -y zram-tools
+  if [ -f /etc/ztab ]; then sudo cp /etc/ztab /etc/ztab.bak.$(date +%s); fi
+  sudo tee /etc/ztab >/dev/null <<'ZTAB'
+# mode  swap  pri  disksize  mem_limit  lz_algo  stream  mountpoint  fs   options
+swap   swap  100  ram/3      0         lz4     1
+tmp    zram  0    150M       0         lz4     1        /tmp         ext4 rw,noatime,mode=1777
+ZTAB
+  sudo systemctl enable --now zram-config || sudo systemctl restart zram-config || true
+fi
+
+# ---------- 5) Minimal Openbox + Wi-Fi hotkey ----------
+mkdir -p "$HOME/.config/openbox"
+cat > "$HOME/.config/openbox/autostart" <<'OB'
+unclutter -idle 1 -root &
+OB
+
+# Wi-Fi helper opens nmtui in fullscreen xterm, then restarts kiosk by killing X
+sudo tee /usr/local/bin/kiosk-wifi.sh >/dev/null <<'BASH'
+#!/usr/bin/env bash
+set -euo pipefail
+export DISPLAY=:0
+exec xterm -fa Monospace -fs 12 -fullscreen -title "Wi-Fi Setup (nmtui) — close to return" \
+  -e bash -lc 'sudo -E TERM=xterm-256color nmtui; sleep 1; sudo pkill -f "Xorg.*:0" || sudo pkill X || true'
+BASH
+sudo chmod +x /usr/local/bin/kiosk-wifi.sh
+
+cat > "$HOME/.xbindkeysrc" <<'KEYS'
+# Ctrl+Alt+W → Wi-Fi setup (fullscreen xterm)
+"/usr/local/bin/kiosk-wifi.sh"
+  control+alt + w
+KEYS
+
+# ---------- 6) Chrome extension: remember last creds + Reset ----------
+mkdir -p "$HOME/kiosk-ext"
+cat > "$HOME/kiosk-ext/manifest.json" <<'JSON'
+{
+  "manifest_version": 3,
+  "name": "Kiosk Auto Login (itank.io)",
+  "version": "1.2.0",
+  "description": "Auto-fills the last used credentials on itank.io and adds a Reset button.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://web.itank.io/login/*"],
+  "content_scripts": [
+    { "matches": ["https://web.itank.io/login/*"], "js": ["content.js"], "run_at": "document_idle" }
+  ]
+}
+JSON
+
+cat > "$HOME/kiosk-ext/content.js" <<'JS'
+(function(){
+  const KEY="itankLastCreds", DELAY=1200, RESCAN=1500;
+  let cancel=false, attached=false, timer=null;
+
+  const load=()=>new Promise(r=>chrome.storage.local.get(KEY,d=>r(d[KEY]||null)));
+  const save=(u,p)=>new Promise(r=>{const x={};x[KEY]={username:u,password:p,ts:Date.now()};
+    chrome.storage.local.set(x,()=>r());});
+  const clear=()=>new Promise(r=>chrome.storage.local.remove(KEY,()=>r()));
+
+  function setVal(el,v){ if(!el) return;
+    const d=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(el),'value');
+    if(d&&d.set) d.set.call(el,v); else el.value=v;
+    el.dispatchEvent(new Event('input',{bubbles:true}));
+    el.dispatchEvent(new Event('change',{bubbles:true}));
+  }
+  function looksUser(el){
+    const n=(el.name||'').toLowerCase(), i=(el.id||'').toLowerCase(),
+          p=(el.placeholder||'').toLowerCase(), t=(el.type||'').toLowerCase();
+    return t==='text'||t==='email'||n.includes('user')||n.includes('email')||n.includes('login')||
+           i.includes('user')||i.includes('email')||i.includes('login')||
+           p.includes('user')||p.includes('email')||p.includes('login');
+  }
+  function find(){
+    const pass=document.querySelector('input[type="password"]'); if(!pass) return null;
+    const form=pass.closest('form')||pass.closest('[role="form"]')||pass.closest('div');
+    const inputs=(form||document).querySelectorAll('input');
+    let user=null; for(const el of inputs){ if(el!==pass && looksUser(el)){ user=el; break; } }
+    const submit=(form&&form.querySelector('button[type="submit"],input[type="submit"]'))||
+                 document.querySelector('button[type="submit"],input[type="submit"]');
+    return {form,user,pass,submit};
+  }
+  function banner(has){
+    const b=document.createElement('div');
+    b.innerHTML=has?'Auto-login in 1.2 s — press <b>Esc</b> to cancel | <b id="resetCreds">Reset</b>'
+                  :'No saved credentials';
+    Object.assign(b.style,{position:'fixed',right:'8px',bottom:'8px',background:'rgba(0,0,0,0.75)',
+      color:'#fff',padding:'6px 10px',borderRadius:'6px',font:'12px/1.2 sans-serif',zIndex:2147483647});
+    document.body.appendChild(b);
+    const r=b.querySelector('#resetCreds');
+    if(r){ r.style.cursor='pointer'; r.onclick=()=>{ clear().then(()=>{ b.textContent='Credentials cleared'; setTimeout(()=>b.remove(),1200); }); }; }
+    window.addEventListener('keydown',e=>{ if(e.key==='Escape'){ cancel=true; clearTimeout(timer); b.textContent='Auto-login canceled'; setTimeout(()=>b.remove(),1200); } }, {once:true});
+    setTimeout(()=>b.remove(),DELAY+2000);
+  }
+  function doSubmit(n){
+    const {form,submit,pass}=n;
+    if(form&&form.requestSubmit) form.requestSubmit();
+    else if(submit&&submit.click) submit.click();
+    else if(form&&form.submit) form.submit();
+    else { pass.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}));
+           pass.dispatchEvent(new KeyboardEvent('keyup',{key:'Enter',bubbles:true})); }
+  }
+  function wire(n){
+    if(attached) return;
+    const {form,user,pass}=n;
+    const h=()=>{ const u=user?user.value:'', p=pass?pass.value:''; if(u&&p) save(u,p); };
+    if(form) form.addEventListener('submit',h,{capture:true});
+    attached=true;
+  }
+  async function once(){
+    const n=find(); if(!n||!n.pass) return;
+    const {user,pass}=n; const creds=await load();
+    if(creds&&creds.username&&creds.password){
+      setVal(user,creds.username); setVal(pass,creds.password);
+      wire(n); banner(true); timer=setTimeout(()=>{ if(!cancel) doSubmit(n); },DELAY); return;
+    }
+    wire(n); banner(false);
+  }
+  once(); const iv=setInterval(()=>{ once().catch(()=>{}) }, RESCAN);
+  setTimeout(()=>clearInterval(iv), 60000);
+})();
+JS
+
+# ---------- 7) X launcher that starts Chromium ----------
+sudo tee /usr/local/bin/kiosk-xinit.sh >/dev/null <<'BASH'
+#!/usr/bin/env bash
+set -euo pipefail
+URL="${KIOSK_URL:-https://web.itank.io/login/}"
+REFRESH_SECS="${KIOSK_REFRESH_SECS:-0}"
+NET_WAIT_SECS="${NET_WAIT_SECS:-45}"
+
+# Wait for network
+for i in $(seq 1 "$NET_WAIT_SECS"); do
+  if ping -c1 -W1 1.1.1.1 >/dev/null 2>&1 || ping -c1 -W1 google.com >/dev/null 2>&1; then break; fi
+  sleep 1
+done
+
+xset s off; xset -dpms; xset s noblank
+unclutter -idle 1 -root &
+openbox-session &
+
+# Wi-Fi hotkey
+xbindkeys -f "$HOME/.xbindkeysrc" &
+
+# Optional refresh
+if [[ "$REFRESH_SECS" != "0" ]]; then
+  ( while true; do sleep "$REFRESH_SECS"; command -v xdotool >/dev/null 2>&1 && xdotool key Ctrl+R; done ) &
+fi
+
+CHROMIUM_BIN="$(command -v chromium || command -v chromium-browser || true)"
+[[ -z "$CHROMIUM_BIN" ]] && { echo "Chromium not found"; exit 1; }
+
+exec "$CHROMIUM_BIN" \
+  --kiosk --start-fullscreen --no-first-run --no-default-browser-check \
+  --noerrdialogs --disable-session-crashed-bubble --disable-infobars \
+  --disable-translate --disable-background-networking \
+  --disable-backgrounding-occluded-windows --disable-component-update \
+  --disable-domain-reliability \
+  --disable-features=RendererCodeIntegrity,AutofillServerCommunication \
+  --process-per-site --renderer-process-limit=2 \
+  --password-store=basic --aggressive-cache-discard \
+  --disk-cache-size=15728640 --media-cache-size=10485760 \
+  --overscroll-history-navigation=0 --autoplay-policy=no-user-gesture-required \
+  --user-data-dir="$HOME/.kiosk-chrome" --load-extension="$HOME/kiosk-ext" \
+  "$URL"
+BASH
+sudo chmod +x /usr/local/bin/kiosk-xinit.sh
+
+# ---------- 8) Autostart from tty1 login shell (rock-solid) ----------
+# This avoids service start-order issues: it runs exactly like your manual test.
+cat > "$HOME/.bash_profile" <<'EOF'
+# Auto-start kiosk when autologin lands on tty1 and X is not running
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  sleep 2
+  exec startx /usr/local/bin/kiosk-xinit.sh -- :0 vt1
+fi
+EOF
+
+# ---------- 9) Done ----------
+echo
+echo "✅ Install complete."
+echo "Now run: sudo reboot"
+echo
+echo "After reboot:"
+echo " • Console autologin → X → Chromium kiosk"
+echo " • Last credentials auto-fill + auto-login (Reset link available)"
+echo " • Wi-Fi: press Ctrl+Alt+W → nmtui (fullscreen) → exit → kiosk restarts"

@@ -1,0 +1,744 @@
+cat > install-kiosk-watchdog.sh <<'KIOSK_INSTALLER_SCRIPT'
+#!/usr/bin/env bash
+set -euo pipefail
+# ============================================================================
+# Universal Raspberry Pi Console Kiosk (Future-proof + Watchdog)
+# - Console autologin -> X -> Chromium kiosk (itank.io)
+# - Chromium opens immediately, even if network/internet is not connected
+# - Auto-login with last-used credentials (+ Reset link)
+# - Ctrl+Alt+W -> Wi-Fi (nmtui) in fullscreen xterm; kiosk restarts after exit
+# - NetworkManager preferred; dhcpcd disabled if conflicting
+# - ZRAM via systemd-zram-generator if present, else zram-tools (/etc/ztab)
+# - Safe gpu_mem config for /boot/config.txt and /boot/firmware/config.txt
+# - Keepalive ping every 15s with NetworkManager recovery
+# - Optional systemd hardware watchdog
+# - Scheduled reboot every 5 hours using systemd timer
+# ============================================================================
+
+# ---------- Tunables ----------
+KIOSK_URL="${KIOSK_URL:-https://web.itank.io/login/}"
+KIOSK_REFRESH_SECS="${KIOSK_REFRESH_SECS:-300}"    # 0 = off; 300s = 5 minutes
+
+# Chromium now opens immediately without waiting for network.
+# Kept only for compatibility if you later add network-wait behavior again.
+NET_WAIT_SECS="${NET_WAIT_SECS:-0}"
+
+GPU_SPLIT_MB="${GPU_SPLIT_MB:-96}"                 # Good for 1GB models
+
+# Reliability tunables
+ENABLE_KEEPALIVE="${ENABLE_KEEPALIVE:-1}"          # 1 = ping keepalive enabled
+KEEPALIVE_HOST="${KEEPALIVE_HOST:-google.com}"
+KEEPALIVE_FALLBACK_HOST="${KEEPALIVE_FALLBACK_HOST:-1.1.1.1}"
+KEEPALIVE_INTERVAL_SECS="${KEEPALIVE_INTERVAL_SECS:-15}"
+KEEPALIVE_FAIL_THRESHOLD="${KEEPALIVE_FAIL_THRESHOLD:-8}"   # 8*15s ~= 2 min before recovery action
+KEEPALIVE_ACTION_COOLDOWN_SECS="${KEEPALIVE_ACTION_COOLDOWN_SECS:-300}"
+
+# Important update:
+# Default is 0 so Chromium is NOT killed/restarted when internet/network is unavailable.
+KEEPALIVE_RESTART_KIOSK_ON_FAILURE="${KEEPALIVE_RESTART_KIOSK_ON_FAILURE:-0}"
+
+ENABLE_SOFTWARE_WATCHDOG="${ENABLE_SOFTWARE_WATCHDOG:-1}"  # systemd watches kiosk-guard itself
+SOFTWARE_WATCHDOG_SECS="${SOFTWARE_WATCHDOG_SECS:-60}"
+
+ENABLE_HW_WATCHDOG="${ENABLE_HW_WATCHDOG:-1}"      # systemd RuntimeWatchdog for kernel/system lockups
+HW_WATCHDOG_RUNTIME="${HW_WATCHDOG_RUNTIME:-30s}"
+HW_WATCHDOG_REBOOT="${HW_WATCHDOG_REBOOT:-10min}"
+
+ENABLE_AUTO_REBOOT="${ENABLE_AUTO_REBOOT:-1}"
+AUTO_REBOOT_HOURS="${AUTO_REBOOT_HOURS:-5}"
+
+# Install target user. If run with sudo, install for the original sudo user.
+TARGET_USER="${KIOSK_USER:-${SUDO_USER:-$(id -un)}}"
+if ! USER_ENTRY="$(getent passwd "$TARGET_USER")"; then
+  echo "[!] User '$TARGET_USER' does not exist. Set KIOSK_USER=your_user and retry."
+  exit 1
+fi
+TARGET_HOME="$(printf '%s' "$USER_ENTRY" | cut -d: -f6)"
+TARGET_GROUP="$(id -gn "$TARGET_USER")"
+
+if [[ ! -d "$TARGET_HOME" ]]; then
+  echo "[!] Home directory '$TARGET_HOME' for '$TARGET_USER' does not exist."
+  exit 1
+fi
+
+SUDO=()
+if [[ "${EUID}" -ne 0 ]]; then
+  if ! command -v sudo >/dev/null 2>&1; then
+    echo "[!] sudo is required when not running as root."
+    exit 1
+  fi
+  SUDO=(sudo)
+fi
+
+run_root() {
+  if [[ ${#SUDO[@]} -gt 0 ]]; then
+    "${SUDO[@]}" "$@"
+  else
+    "$@"
+  fi
+}
+
+write_root_file() {
+  local path="$1"
+  local mode="${2:-0644}"
+  local tmp
+  tmp="$(mktemp)"
+  cat >"$tmp"
+  run_root install -D -m "$mode" "$tmp" "$path"
+  rm -f "$tmp"
+}
+
+write_user_file() {
+  local path="$1"
+  local mode="${2:-0644}"
+  local tmp
+  tmp="$(mktemp)"
+  cat >"$tmp"
+  run_root install -D -o "$TARGET_USER" -g "$TARGET_GROUP" -m "$mode" "$tmp" "$path"
+  rm -f "$tmp"
+}
+
+apt_install_required() {
+  run_root apt-get install -y --no-install-recommends "$@"
+}
+
+apt_install_optional() {
+  run_root apt-get install -y --no-install-recommends "$@" || true
+}
+
+shell_bool() {
+  case "${1:-}" in
+    1|true|TRUE|yes|YES|on|ON) printf '1' ;;
+    *) printf '0' ;;
+  esac
+}
+
+ENABLE_KEEPALIVE="$(shell_bool "$ENABLE_KEEPALIVE")"
+ENABLE_SOFTWARE_WATCHDOG="$(shell_bool "$ENABLE_SOFTWARE_WATCHDOG")"
+ENABLE_HW_WATCHDOG="$(shell_bool "$ENABLE_HW_WATCHDOG")"
+ENABLE_AUTO_REBOOT="$(shell_bool "$ENABLE_AUTO_REBOOT")"
+KEEPALIVE_RESTART_KIOSK_ON_FAILURE="$(shell_bool "$KEEPALIVE_RESTART_KIOSK_ON_FAILURE")"
+
+# Accept SOFTWARE_WATCHDOG_SECS as either "60" or "60s".
+SOFTWARE_WATCHDOG_DURATION="$SOFTWARE_WATCHDOG_SECS"
+if [[ ! "$SOFTWARE_WATCHDOG_DURATION" =~ [[:alpha:]]$ ]]; then
+  SOFTWARE_WATCHDOG_DURATION="${SOFTWARE_WATCHDOG_DURATION}s"
+fi
+
+OS_CODENAME="$(. /etc/os-release && echo "${VERSION_CODENAME:-unknown}")"
+BOOT_CFG1="/boot/config.txt"
+BOOT_CFG2="/boot/firmware/config.txt"
+
+cat <<INFO
+[i] Installing console kiosk
+    user:             ${TARGET_USER}
+    home:             ${TARGET_HOME}
+    OS codename:      ${OS_CODENAME}
+    URL:              ${KIOSK_URL}
+    chromium launch:  immediate, no network wait
+    keepalive:        ${ENABLE_KEEPALIVE} (${KEEPALIVE_HOST} every ${KEEPALIVE_INTERVAL_SECS}s)
+    restart browser:  ${KEEPALIVE_RESTART_KIOSK_ON_FAILURE}
+    auto reboot:      ${ENABLE_AUTO_REBOOT} (every ${AUTO_REBOOT_HOURS}h)
+    hw watchdog:      ${ENABLE_HW_WATCHDOG} (${HW_WATCHDOG_RUNTIME})
+INFO
+
+# ---------- 1) Console autologin + screen + gpu_mem ----------
+if command -v raspi-config >/dev/null 2>&1; then
+  run_root raspi-config nonint do_boot_behaviour B2 || true
+  run_root raspi-config nonint do_blanking 0 || true
+else
+  echo "[!] raspi-config not found; skipping console autologin/screen blanking setup."
+fi
+
+for CFG in "$BOOT_CFG1" "$BOOT_CFG2"; do
+  if [[ -f "$CFG" ]]; then
+    run_root sed -i '/^gpu_mem=/d' "$CFG"
+    printf 'gpu_mem=%s\n' "$GPU_SPLIT_MB" | run_root tee -a "$CFG" >/dev/null
+    echo "[i] Set gpu_mem=${GPU_SPLIT_MB} in $CFG"
+  fi
+done
+
+# ---------- 2) Base packages ----------
+run_root apt-get update
+apt_install_required \
+  xserver-xorg xinit openbox unclutter xdotool wmctrl xbindkeys xterm \
+  network-manager iputils-ping procps dbus-x11 x11-xserver-utils
+
+# This package is useful on some Raspberry Pi OS images, but not always available.
+apt_install_optional xserver-xorg-legacy
+
+# Chromium: try modern name first, fallback if needed.
+if ! command -v chromium >/dev/null 2>&1 && ! command -v chromium-browser >/dev/null 2>&1; then
+  apt_install_optional chromium
+fi
+if ! command -v chromium >/dev/null 2>&1 && ! command -v chromium-browser >/dev/null 2>&1; then
+  apt_install_optional chromium-browser
+fi
+if ! command -v chromium >/dev/null 2>&1 && ! command -v chromium-browser >/dev/null 2>&1; then
+  echo "[!] Chromium not found. Try: sudo apt search chromium"
+  exit 1
+fi
+
+# Allow non-root to start X on TTY.
+printf 'allowed_users=anybody\n' | run_root tee /etc/Xwrapper.config >/dev/null
+
+# ---------- 3) Shared kiosk environment ----------
+{
+  printf 'KIOSK_USER=%q\n' "$TARGET_USER"
+  printf 'KIOSK_HOME=%q\n' "$TARGET_HOME"
+  printf 'KIOSK_URL=%q\n' "$KIOSK_URL"
+  printf 'KIOSK_REFRESH_SECS=%q\n' "$KIOSK_REFRESH_SECS"
+  printf 'NET_WAIT_SECS=%q\n' "$NET_WAIT_SECS"
+  printf 'ENABLE_KEEPALIVE=%q\n' "$ENABLE_KEEPALIVE"
+  printf 'KEEPALIVE_HOST=%q\n' "$KEEPALIVE_HOST"
+  printf 'KEEPALIVE_FALLBACK_HOST=%q\n' "$KEEPALIVE_FALLBACK_HOST"
+  printf 'KEEPALIVE_INTERVAL_SECS=%q\n' "$KEEPALIVE_INTERVAL_SECS"
+  printf 'KEEPALIVE_FAIL_THRESHOLD=%q\n' "$KEEPALIVE_FAIL_THRESHOLD"
+  printf 'KEEPALIVE_ACTION_COOLDOWN_SECS=%q\n' "$KEEPALIVE_ACTION_COOLDOWN_SECS"
+  printf 'KEEPALIVE_RESTART_KIOSK_ON_FAILURE=%q\n' "$KEEPALIVE_RESTART_KIOSK_ON_FAILURE"
+  printf 'ENABLE_SOFTWARE_WATCHDOG=%q\n' "$ENABLE_SOFTWARE_WATCHDOG"
+  printf 'SOFTWARE_WATCHDOG_SECS=%q\n' "$SOFTWARE_WATCHDOG_SECS"
+  printf 'SOFTWARE_WATCHDOG_DURATION=%q\n' "$SOFTWARE_WATCHDOG_DURATION"
+  printf 'ENABLE_HW_WATCHDOG=%q\n' "$ENABLE_HW_WATCHDOG"
+  printf 'HW_WATCHDOG_RUNTIME=%q\n' "$HW_WATCHDOG_RUNTIME"
+  printf 'HW_WATCHDOG_REBOOT=%q\n' "$HW_WATCHDOG_REBOOT"
+  printf 'ENABLE_AUTO_REBOOT=%q\n' "$ENABLE_AUTO_REBOOT"
+  printf 'AUTO_REBOOT_HOURS=%q\n' "$AUTO_REBOOT_HOURS"
+} | run_root tee /etc/default/kiosk >/dev/null
+
+# ---------- 4) Networking preference: NetworkManager ----------
+if systemctl list-unit-files | grep -q '^dhcpcd.service'; then
+  run_root systemctl disable --now dhcpcd || true
+  echo "[i] Disabled dhcpcd to avoid conflicts"
+else
+  echo "[i] dhcpcd not present (OK)"
+fi
+run_root systemctl enable --now NetworkManager || true
+run_root nmcli networking on || true
+
+# ---------- 5) ZRAM: generator if present, else zram-tools ----------
+apt_install_optional systemd-zram-generator
+if [[ -x /lib/systemd/system-generators/systemd-zram-generator || -x /usr/lib/systemd/system-generators/systemd-zram-generator ]]; then
+  echo "[i] Using systemd-zram-generator"
+  write_root_file /etc/systemd/zram-generator.conf 0644 <<'CFG'
+[zram0]
+zram-size = ram / 3
+compression-algorithm = lz4
+swap-priority = 100
+fs-type = swap
+CFG
+  run_root systemctl daemon-reload || true
+else
+  echo "[i] systemd-zram-generator not found; using zram-tools fallback"
+  apt_install_optional zram-tools
+  if [[ -f /etc/ztab ]]; then run_root cp /etc/ztab "/etc/ztab.bak.$(date +%s)"; fi
+  write_root_file /etc/ztab 0644 <<'ZTAB'
+# mode  swap  pri  disksize  mem_limit  lz_algo  stream  mountpoint  fs   options
+swap   swap  100  ram/3      0          lz4      1
+ZTAB
+  run_root systemctl enable --now zram-config || run_root systemctl restart zram-config || true
+fi
+
+# ---------- 6) Minimal Openbox + Wi-Fi hotkey ----------
+run_root install -d -o "$TARGET_USER" -g "$TARGET_GROUP" "$TARGET_HOME/.config/openbox"
+write_user_file "$TARGET_HOME/.config/openbox/autostart" 0644 <<'OB'
+unclutter -idle 1 -root &
+OB
+
+# Wi-Fi helper opens nmtui in fullscreen xterm, then restarts kiosk cleanly.
+write_root_file /usr/local/bin/kiosk-wifi.sh 0755 <<'BASH'
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ -f /etc/default/kiosk ]]; then
+  # shellcheck disable=SC1091
+  . /etc/default/kiosk
+fi
+
+export DISPLAY="${DISPLAY:-:0}"
+export KIOSK_USER="${KIOSK_USER:-}"
+
+exec xterm -fa Monospace -fs 12 -fullscreen -title "Wi-Fi Setup (nmtui) — close to return" \
+  -e bash -lc '
+    sudo -E TERM=xterm-256color nmtui || true
+    sleep 1
+
+    # Chromium is the foreground xinit process.
+    # Killing it lets startx exit and tty autologin restart the kiosk.
+    if [[ -n "${KIOSK_USER:-}" ]]; then
+      sudo pkill -TERM -u "$KIOSK_USER" -x chromium || true
+      sudo pkill -TERM -u "$KIOSK_USER" -x chromium-browser || true
+      sleep 2
+      sudo pkill -KILL -u "$KIOSK_USER" -x chromium || true
+      sudo pkill -KILL -u "$KIOSK_USER" -x chromium-browser || true
+    else
+      sudo pkill -TERM -x chromium || true
+      sudo pkill -TERM -x chromium-browser || true
+    fi
+  '
+BASH
+
+write_user_file "$TARGET_HOME/.xbindkeysrc" 0644 <<'KEYS'
+# Ctrl+Alt+W → Wi-Fi setup (fullscreen xterm)
+"/usr/local/bin/kiosk-wifi.sh"
+  control+alt + w
+KEYS
+
+# ---------- 7) Chrome extension: remember last creds + Reset ----------
+run_root install -d -o "$TARGET_USER" -g "$TARGET_GROUP" "$TARGET_HOME/kiosk-ext"
+write_user_file "$TARGET_HOME/kiosk-ext/manifest.json" 0644 <<'JSON'
+{
+  "manifest_version": 3,
+  "name": "Kiosk Auto Login (itank.io)",
+  "version": "1.3.1",
+  "description": "Auto-fills the last used credentials on itank.io and adds a Reset button.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://web.itank.io/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.itank.io/login*", "https://web.itank.io/login/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+JSON
+
+write_user_file "$TARGET_HOME/kiosk-ext/content.js" 0644 <<'JS'
+(function () {
+  const KEY = "itankLastCreds";
+  const DELAY = 1200;
+  const RESCAN = 1500;
+  let cancel = false;
+  let attachedForm = null;
+  let timer = null;
+  let autoAttempted = false;
+  let bannerVisible = false;
+
+  const load = () => new Promise((resolve) => chrome.storage.local.get(KEY, (data) => resolve(data[KEY] || null)));
+  const save = (username, password) => new Promise((resolve) => {
+    const data = {};
+    data[KEY] = { username, password, ts: Date.now() };
+    chrome.storage.local.set(data, () => resolve());
+  });
+  const clear = () => new Promise((resolve) => chrome.storage.local.remove(KEY, () => resolve()));
+
+  function setVal(el, value) {
+    if (!el) return;
+    const descriptor = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(el), "value");
+    if (descriptor && descriptor.set) descriptor.set.call(el, value);
+    else el.value = value;
+    el.dispatchEvent(new Event("input", { bubbles: true }));
+    el.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  function looksUser(el) {
+    const name = (el.name || "").toLowerCase();
+    const id = (el.id || "").toLowerCase();
+    const placeholder = (el.placeholder || "").toLowerCase();
+    const type = (el.type || "").toLowerCase();
+    return type === "text" || type === "email" ||
+      name.includes("user") || name.includes("email") || name.includes("login") ||
+      id.includes("user") || id.includes("email") || id.includes("login") ||
+      placeholder.includes("user") || placeholder.includes("email") || placeholder.includes("login");
+  }
+
+  function findLoginFields() {
+    const pass = document.querySelector('input[type="password"]');
+    if (!pass) return null;
+    const form = pass.closest("form") || pass.closest('[role="form"]') || pass.closest("div");
+    const inputs = Array.from((form || document).querySelectorAll("input"));
+    const user = inputs.find((el) => el !== pass && looksUser(el)) || null;
+    const submit = (form && form.querySelector('button[type="submit"],input[type="submit"]')) ||
+      document.querySelector('button[type="submit"],input[type="submit"]');
+    return { form, user, pass, submit };
+  }
+
+  function showBanner(hasCreds) {
+    if (bannerVisible || !document.body) return;
+    bannerVisible = true;
+    const b = document.createElement("div");
+    b.innerHTML = hasCreds
+      ? 'Auto-login in 1.2s — press <b>Esc</b> to cancel | <b id="resetCreds">Reset</b>'
+      : 'No saved credentials';
+    Object.assign(b.style, {
+      position: "fixed",
+      right: "8px",
+      bottom: "8px",
+      background: "rgba(0,0,0,0.75)",
+      color: "#fff",
+      padding: "6px 10px",
+      borderRadius: "6px",
+      font: "12px/1.2 sans-serif",
+      zIndex: 2147483647
+    });
+    document.body.appendChild(b);
+
+    const reset = b.querySelector("#resetCreds");
+    if (reset) {
+      reset.style.cursor = "pointer";
+      reset.onclick = () => {
+        clear().then(() => {
+          cancel = true;
+          clearTimeout(timer);
+          b.textContent = "Credentials cleared";
+          setTimeout(() => b.remove(), 1200);
+        });
+      };
+    }
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        cancel = true;
+        clearTimeout(timer);
+        b.textContent = "Auto-login canceled";
+        setTimeout(() => b.remove(), 1200);
+      }
+    }, { once: true });
+
+    setTimeout(() => {
+      b.remove();
+      bannerVisible = false;
+    }, DELAY + 2000);
+  }
+
+  function doSubmit(nodes) {
+    const { form, submit, pass } = nodes;
+    if (form && form.requestSubmit) form.requestSubmit();
+    else if (submit && submit.click) submit.click();
+    else if (form && form.submit) form.submit();
+    else {
+      pass.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
+      pass.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", bubbles: true }));
+    }
+  }
+
+  function wire(nodes) {
+    const { form, user, pass, submit } = nodes;
+    if (attachedForm === form) return;
+
+    const persist = () => {
+      const username = user ? user.value.trim() : "";
+      const password = pass ? pass.value : "";
+      if (username && password) save(username, password).catch(() => {});
+    };
+
+    if (form) form.addEventListener("submit", persist, { capture: true });
+    if (submit) submit.addEventListener("click", persist, { capture: true });
+    if (pass) pass.addEventListener("change", persist, { capture: true });
+    attachedForm = form;
+  }
+
+  async function once() {
+    const nodes = findLoginFields();
+    if (!nodes || !nodes.pass) return;
+    const { user, pass } = nodes;
+    wire(nodes);
+
+    if (autoAttempted) return;
+    const creds = await load();
+    if (creds && creds.username && creds.password) {
+      autoAttempted = true;
+      setVal(user, creds.username);
+      setVal(pass, creds.password);
+      showBanner(true);
+      timer = setTimeout(() => {
+        if (!cancel) doSubmit(nodes);
+      }, DELAY);
+      return;
+    }
+    showBanner(false);
+  }
+
+  once().catch(() => {});
+  const iv = setInterval(() => once().catch(() => {}), RESCAN);
+  setTimeout(() => clearInterval(iv), 60000);
+})();
+JS
+
+# ---------- 8) X launcher that starts Chromium ----------
+write_root_file /usr/local/bin/kiosk-xinit.sh 0755 <<'BASH'
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ -f /etc/default/kiosk ]]; then
+  # shellcheck disable=SC1091
+  . /etc/default/kiosk
+fi
+
+URL="${KIOSK_URL:-https://web.itank.io/login/}"
+REFRESH_SECS="${KIOSK_REFRESH_SECS:-0}"
+USER_HOME="${KIOSK_HOME:-$HOME}"
+
+xset s off || true
+xset -dpms || true
+xset s noblank || true
+
+openbox-session &
+xbindkeys -f "$USER_HOME/.xbindkeysrc" &
+
+# Important update:
+# Do NOT wait for Wi-Fi, NetworkManager, ping, DNS, or internet.
+# Chromium must open immediately so the kiosk never stays on black/loading screen.
+echo "[kiosk] Starting Chromium immediately without network wait"
+
+# Optional browser refresh.
+if [[ "$REFRESH_SECS" != "0" ]]; then
+  (
+    while true; do
+      sleep "$REFRESH_SECS"
+      command -v xdotool >/dev/null 2>&1 && xdotool key Ctrl+R || true
+    done
+  ) &
+fi
+
+CHROMIUM_BIN="$(command -v chromium || command -v chromium-browser || true)"
+[[ -z "$CHROMIUM_BIN" ]] && { echo "Chromium not found"; exit 1; }
+
+exec "$CHROMIUM_BIN" \
+  --kiosk --start-fullscreen --no-first-run --no-default-browser-check \
+  --noerrdialogs --disable-session-crashed-bubble --disable-infobars \
+  --disable-translate --disable-background-networking \
+  --disable-backgrounding-occluded-windows --disable-component-update \
+  --disable-domain-reliability \
+  --disable-features=AutofillServerCommunication \
+  --process-per-site --renderer-process-limit=2 \
+  --password-store=basic --aggressive-cache-discard \
+  --disk-cache-size=15728640 --media-cache-size=10485760 \
+  --overscroll-history-navigation=0 --autoplay-policy=no-user-gesture-required \
+  --user-data-dir="$USER_HOME/.kiosk-chrome" --load-extension="$USER_HOME/kiosk-ext" \
+  "$URL"
+BASH
+
+# ---------- 9) Keepalive + software watchdog service ----------
+write_root_file /usr/local/bin/kiosk-guard.sh 0755 <<'BASH'
+#!/usr/bin/env bash
+set -u -o pipefail
+if [[ -f /etc/default/kiosk ]]; then
+  # shellcheck disable=SC1091
+  . /etc/default/kiosk
+fi
+
+KIOSK_USER="${KIOSK_USER:-pi}"
+ENABLE_KEEPALIVE="${ENABLE_KEEPALIVE:-1}"
+KEEPALIVE_HOST="${KEEPALIVE_HOST:-google.com}"
+KEEPALIVE_FALLBACK_HOST="${KEEPALIVE_FALLBACK_HOST:-1.1.1.1}"
+KEEPALIVE_INTERVAL_SECS="${KEEPALIVE_INTERVAL_SECS:-15}"
+KEEPALIVE_FAIL_THRESHOLD="${KEEPALIVE_FAIL_THRESHOLD:-8}"
+KEEPALIVE_ACTION_COOLDOWN_SECS="${KEEPALIVE_ACTION_COOLDOWN_SECS:-300}"
+KEEPALIVE_RESTART_KIOSK_ON_FAILURE="${KEEPALIVE_RESTART_KIOSK_ON_FAILURE:-0}"
+
+log() {
+  echo "[$(date -Is)] $*"
+}
+
+notify_systemd() {
+  if command -v systemd-notify >/dev/null 2>&1; then
+    systemd-notify "$@" || true
+  fi
+}
+
+restart_kiosk_session() {
+  [[ "$KEEPALIVE_RESTART_KIOSK_ON_FAILURE" == "1" ]] || return 0
+  log "Restarting kiosk browser session"
+  pkill -TERM -u "$KIOSK_USER" -x chromium || true
+  pkill -TERM -u "$KIOSK_USER" -x chromium-browser || true
+  sleep 5
+  pkill -KILL -u "$KIOSK_USER" -x chromium || true
+  pkill -KILL -u "$KIOSK_USER" -x chromium-browser || true
+}
+
+recover_network() {
+  log "Recovering network via NetworkManager"
+  systemctl restart NetworkManager.service || true
+  nmcli networking off || true
+  sleep 2
+  nmcli networking on || true
+}
+
+ping_ok() {
+  ping -c1 -W2 "$KEEPALIVE_HOST" >/dev/null 2>&1 || ping -c1 -W2 "$KEEPALIVE_FALLBACK_HOST" >/dev/null 2>&1
+}
+
+notify_systemd --ready --status="kiosk guard running"
+log "kiosk guard started: keepalive=${ENABLE_KEEPALIVE}, host=${KEEPALIVE_HOST}, interval=${KEEPALIVE_INTERVAL_SECS}s, restart_browser=${KEEPALIVE_RESTART_KIOSK_ON_FAILURE}"
+
+fail_count=0
+last_action=0
+
+while true; do
+  now="$(date +%s)"
+
+  if [[ "$ENABLE_KEEPALIVE" != "1" ]]; then
+    notify_systemd WATCHDOG=1 STATUS="keepalive disabled; watchdog alive"
+    sleep "$KEEPALIVE_INTERVAL_SECS"
+    continue
+  fi
+
+  if ping_ok; then
+    if [[ "$fail_count" -gt 0 ]]; then
+      log "keepalive restored after ${fail_count} failed check(s)"
+    fi
+    fail_count=0
+    notify_systemd WATCHDOG=1 STATUS="keepalive ok: ${KEEPALIVE_HOST}"
+  else
+    fail_count=$((fail_count + 1))
+    log "keepalive failed ${fail_count}/${KEEPALIVE_FAIL_THRESHOLD}: ${KEEPALIVE_HOST}"
+    notify_systemd WATCHDOG=1 STATUS="keepalive failed ${fail_count}/${KEEPALIVE_FAIL_THRESHOLD}"
+
+    if [[ "$fail_count" -ge "$KEEPALIVE_FAIL_THRESHOLD" ]]; then
+      if [[ $((now - last_action)) -ge "$KEEPALIVE_ACTION_COOLDOWN_SECS" ]]; then
+        last_action="$now"
+        recover_network
+        restart_kiosk_session
+      else
+        log "Recovery skipped due to cooldown"
+      fi
+      fail_count=0
+    fi
+  fi
+
+  sleep "$KEEPALIVE_INTERVAL_SECS"
+done
+BASH
+
+if [[ "$ENABLE_SOFTWARE_WATCHDOG" == "1" ]]; then
+  WATCHDOG_LINE="WatchdogSec=${SOFTWARE_WATCHDOG_DURATION}"
+else
+  WATCHDOG_LINE=""
+fi
+
+write_root_file /etc/systemd/system/kiosk-guard.service 0644 <<EOF
+[Unit]
+Description=Kiosk keepalive and software watchdog
+After=NetworkManager.service multi-user.target
+Wants=NetworkManager.service
+StartLimitIntervalSec=300
+StartLimitBurst=20
+
+[Service]
+Type=notify
+NotifyAccess=all
+ExecStart=/usr/local/bin/kiosk-guard.sh
+Restart=always
+RestartSec=5s
+${WATCHDOG_LINE}
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# ---------- 10) Hardware watchdog option ----------
+if [[ "$ENABLE_HW_WATCHDOG" == "1" ]]; then
+  write_root_file /etc/modules-load.d/kiosk-watchdog.conf 0644 <<'EOF'
+bcm2835_wdt
+EOF
+  run_root modprobe bcm2835_wdt || true
+  write_root_file /etc/systemd/system.conf.d/10-kiosk-watchdog.conf 0644 <<EOF
+[Manager]
+RuntimeWatchdogSec=${HW_WATCHDOG_RUNTIME}
+RebootWatchdogSec=${HW_WATCHDOG_REBOOT}
+EOF
+  echo "[i] Hardware watchdog config enabled. Takes full effect after reboot."
+else
+  run_root rm -f /etc/modules-load.d/kiosk-watchdog.conf /etc/systemd/system.conf.d/10-kiosk-watchdog.conf || true
+  echo "[i] Hardware watchdog config disabled."
+fi
+
+# ---------- 11) Scheduled auto reboot every N hours ----------
+SHUTDOWN_BIN="$(command -v shutdown || true)"
+if [[ -z "$SHUTDOWN_BIN" ]]; then
+  SHUTDOWN_BIN="/usr/sbin/shutdown"
+fi
+
+write_root_file /etc/systemd/system/kiosk-auto-reboot.service 0644 <<EOF
+[Unit]
+Description=Scheduled kiosk reboot
+
+[Service]
+Type=oneshot
+ExecStart=${SHUTDOWN_BIN} -r now "Scheduled kiosk reboot every ${AUTO_REBOOT_HOURS} hour(s)"
+EOF
+
+write_root_file /etc/systemd/system/kiosk-auto-reboot.timer 0644 <<EOF
+[Unit]
+Description=Run scheduled kiosk reboot every ${AUTO_REBOOT_HOURS} hour(s)
+
+[Timer]
+OnActiveSec=${AUTO_REBOOT_HOURS}h
+OnUnitActiveSec=${AUTO_REBOOT_HOURS}h
+AccuracySec=1min
+Persistent=false
+Unit=kiosk-auto-reboot.service
+
+[Install]
+WantedBy=timers.target
+EOF
+
+# ---------- 12) Autostart from tty1 login shell ----------
+PROFILE="$TARGET_HOME/.bash_profile"
+if [[ -f "$PROFILE" ]]; then
+  run_root cp "$PROFILE" "$PROFILE.bak.$(date +%s)"
+else
+  write_user_file "$PROFILE" 0644 <<'EOF'
+EOF
+fi
+
+TMP_PROFILE="$(mktemp)"
+run_root sed '/# BEGIN KIOSK AUTOSTART/,/# END KIOSK AUTOSTART/d' "$PROFILE" >"$TMP_PROFILE"
+cat >>"$TMP_PROFILE" <<'EOF'
+
+# BEGIN KIOSK AUTOSTART
+# Auto-start kiosk when autologin lands on tty1 and X is not running.
+if [ -z "${DISPLAY:-}" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  sleep 2
+  exec startx /usr/local/bin/kiosk-xinit.sh -- :0 vt1
+fi
+# END KIOSK AUTOSTART
+EOF
+run_root install -o "$TARGET_USER" -g "$TARGET_GROUP" -m 0644 "$TMP_PROFILE" "$PROFILE"
+rm -f "$TMP_PROFILE"
+
+# ---------- 13) Enable services/timers ----------
+run_root systemctl daemon-reload
+
+if [[ "$ENABLE_KEEPALIVE" == "1" || "$ENABLE_SOFTWARE_WATCHDOG" == "1" ]]; then
+  run_root systemctl enable --now kiosk-guard.service
+else
+  run_root systemctl disable --now kiosk-guard.service || true
+fi
+
+if [[ "$ENABLE_AUTO_REBOOT" == "1" ]]; then
+  run_root systemctl enable --now kiosk-auto-reboot.timer
+else
+  run_root systemctl disable --now kiosk-auto-reboot.timer || true
+fi
+
+run_root systemctl daemon-reexec || true
+
+# ---------- 14) Done ----------
+cat <<DONE
+
+✅ Install complete.
+Now run: sudo reboot
+
+After reboot:
+ • Console autologin → X → Chromium kiosk
+ • Chromium opens immediately even if network/internet is not connected
+ • Last credentials auto-fill + auto-login, when the login page is reachable
+ • Wi-Fi: press Ctrl+Alt+W → nmtui → exit → kiosk restarts
+ • Keepalive: ping ${KEEPALIVE_HOST} every ${KEEPALIVE_INTERVAL_SECS}s
+ • Network recovery after ${KEEPALIVE_FAIL_THRESHOLD} failed keepalive checks
+ • Browser restart on keepalive failure: ${KEEPALIVE_RESTART_KIOSK_ON_FAILURE}
+ • Auto reboot timer: every ${AUTO_REBOOT_HOURS} hour(s)
+ • Hardware watchdog: ${ENABLE_HW_WATCHDOG}
+
+Useful checks:
+ • systemctl status kiosk-guard.service
+ • journalctl -u kiosk-guard.service -f
+ • systemctl list-timers kiosk-auto-reboot.timer
+DONE
+KIOSK_INSTALLER_SCRIPT
+
+sed -i 's/\r$//' install-kiosk-watchdog.sh
+chmod +x install-kiosk-watchdog.sh
+bash -n install-kiosk-watchdog.sh
+./install-kiosk-watchdog.sh
