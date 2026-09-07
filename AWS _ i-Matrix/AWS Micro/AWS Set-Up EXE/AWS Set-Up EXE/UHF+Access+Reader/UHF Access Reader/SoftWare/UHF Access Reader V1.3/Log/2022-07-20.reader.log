@@ -1,0 +1,39 @@
+[2022-07-20 11:08:20,426]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-07-20 11:08:20,437]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-07-20 11:08:24,487]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：COM6
+[2022-07-20 11:08:26,544]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-07-20 11:08:26,600]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-07-20 11:08:26,602]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-07-20 11:08:28,251]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-07-20 11:08:30,241]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：COM6
+[2022-07-20 11:08:32,285]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-07-20 11:08:32,341]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-07-20 11:08:32,343]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-07-20 11:08:35,003]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：COM6
+[2022-07-20 11:08:37,049]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-07-20 11:08:37,105]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-07-20 11:08:37,107]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-07-20 11:08:40,292]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：COM6
+[2022-07-20 11:08:42,340]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-07-20 11:08:42,397]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-07-20 11:08:42,399]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-07-20 11:08:49,860]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-07-20 11:08:51,927]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：COM6
+[2022-07-20 11:08:52,181]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-07-20 11:08:52,236]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-07-20 11:08:55,609]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-07-20 11:08:55,757]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 设置参数成功:
+[2022-07-20 11:08:58,578]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-07-20 11:08:59,061]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：COM6
+[2022-07-20 11:08:59,145]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-07-20 11:08:59,152]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-07-20 11:08:59,932]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-07-20 11:08:59,938]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-07-20 11:09:00,079]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-07-20 11:09:00,085]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-07-20 11:09:00,237]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-07-20 11:09:00,243]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-07-20 11:09:00,374]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-07-20 11:09:00,380]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-07-20 11:09:02,627]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-07-20 11:09:02,627]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....

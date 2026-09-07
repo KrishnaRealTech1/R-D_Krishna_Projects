@@ -1,0 +1,17 @@
+[2023-10-20 09:54:17,639]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2023-10-20 09:54:17,667]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2023-10-20 09:54:29,684]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2023-10-20 09:54:29,855]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2023-10-20 09:54:29,915]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2023-10-20 09:54:33,314]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2023-10-20 09:54:33,423]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 设置参数成功:
+[2023-10-20 09:54:41,198]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 设置参数成功:
+[2023-10-20 09:54:41,214]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始执行盘点
+[2023-10-20 09:54:41,294]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 显示标签时发生错误：
+[2023-10-20 09:54:45,683]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 显示标签时发生错误：
+[2023-10-20 09:54:45,685]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 盘点完毕
+[2023-10-20 09:54:47,367]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 设置参数成功:
+[2023-10-20 09:54:47,379]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始执行盘点
+[2023-10-20 09:54:47,462]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 显示标签时发生错误：
+[2023-10-20 09:54:53,875]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 显示标签时发生错误：
+[2023-10-20 09:54:53,878]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 盘点完毕

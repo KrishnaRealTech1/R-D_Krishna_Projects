@@ -1,0 +1,71 @@
+[2022-10-31 10:40:46,047]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-31 10:40:46,063]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-31 10:40:51,805]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-31 10:42:03,839]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-31 10:42:03,850]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-31 10:42:08,838]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-31 10:42:08,932]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-31 10:42:08,963]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-10-31 10:42:08,964]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-10-31 10:42:11,732]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-31 10:42:27,063]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-31 10:42:27,096]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-10-31 10:42:27,097]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-10-31 10:42:57,123]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-31 10:43:40,627]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-31 10:43:40,658]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-10-31 10:43:40,660]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-10-31 10:45:20,823]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-31 10:45:21,527]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-31 10:45:22,089]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-31 10:45:22,796]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-31 10:45:23,153]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-31 10:45:23,614]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-31 10:45:23,729]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-31 10:45:24,954]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-31 10:45:25,393]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-31 10:47:43,404]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-31 10:47:43,415]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-31 10:47:47,834]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-31 10:47:47,930]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-31 10:47:47,961]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-10-31 10:47:47,962]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-10-31 10:47:49,974]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-31 10:47:50,233]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-31 10:47:50,791]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-31 10:47:51,296]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-31 10:47:51,345]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-31 10:47:56,226]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:56,305]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:56,742]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:56,881]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:56,916]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:57,457]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:57,462]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:57,489]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:57,493]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:57,521]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:57,525]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:57,553]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:57,606]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:58,128]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:58,132]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:58,160]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:58,164]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:58,192]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:58,196]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:58,224]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:58,274]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:58,769]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:58,773]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:58,801]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 10:47:58,805]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-10-31 10:47:58,833]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-10-31 11:09:09,192]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-31 11:09:09,205]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-31 11:09:11,790]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-10-31 11:09:11,791]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....
+[2022-10-31 14:44:00,164]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-31 14:44:00,181]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-31 14:44:03,039]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-10-31 14:44:03,039]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....

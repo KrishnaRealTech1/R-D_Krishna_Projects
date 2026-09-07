@@ -1,0 +1,170 @@
+[2022-10-27 09:56:28,681]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 09:56:28,814]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 10:04:56,557]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 10:04:56,567]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 10:05:03,762]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-10-27 10:05:03,765]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....
+[2022-10-27 10:46:21,856]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 10:46:21,880]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 10:46:26,797]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-10-27 10:46:26,797]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....
+[2022-10-27 10:46:58,533]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 10:46:58,549]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 10:56:31,234]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 10:56:31,249]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 10:56:33,984]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-10-27 10:56:33,984]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....
+[2022-10-27 11:01:28,258]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 11:01:28,275]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 11:01:33,664]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-10-27 11:01:33,665]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....
+[2022-10-27 11:03:00,682]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 11:03:00,698]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 11:03:11,294]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-10-27 11:03:11,294]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....
+[2022-10-27 11:03:32,208]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 11:03:32,224]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 11:04:26,857]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:04:27,160]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:04:27,694]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:04:29,895]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读卡器恢复默认设置成功
+[2022-10-27 11:04:32,901]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:04:32,954]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:04:36,688]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:04:36,741]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:05:09,409]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:05:35,498]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:05:36,193]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:05:36,744]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:05:38,801]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读卡器恢复默认设置成功
+[2022-10-27 11:05:41,816]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:05:41,875]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:07:53,509]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:07:53,568]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:07:57,704]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:08:00,703]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:08:01,362]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:08:01,826]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:08:03,287]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:08:04,033]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:08:04,636]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:08:05,090]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:08:06,799]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:08:07,235]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:08:07,740]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:08:08,323]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:08:18,760]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:08:18,822]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:08:23,742]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:08:25,354]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:08:26,047]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:08:26,501]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:08:27,887]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:08:28,101]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:11:15,338]-[1]-[INFO]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Info....
+[2022-10-27 11:11:15,338]-[1]-[ERROR]-[YYF100.Program+StartService]-[Stop] -> Stopping log.Error....
+[2022-10-27 11:15:36,740]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 11:15:36,759]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 11:15:42,752]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:15:43,244]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:15:43,742]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:21:00,519]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:21:01,448]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:21:01,894]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:21:02,345]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:21:03,976]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读卡器恢复默认设置成功
+[2022-10-27 11:21:06,983]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:21:07,041]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:21:15,943]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:21:19,760]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:21:19,866]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:21:19,904]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 断开阅读器连接
+[2022-10-27 11:21:19,909]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取协议失败：
+[2022-10-27 11:22:22,873]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:22:23,407]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:22:23,858]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:22:34,422]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:22:34,899]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:22:35,352]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:22:35,443]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:22:36,495]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:22:37,044]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:22:37,048]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:22:37,588]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:22:37,592]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:22:38,132]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:22:38,136]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:22:38,676]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:22:55,166]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:22:55,414]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:23:40,643]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:23:40,924]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:23:45,182]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读卡器恢复默认设置成功
+[2022-10-27 11:23:48,192]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:23:48,250]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:29:56,377]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:29:56,448]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:29:57,842]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:29:58,379]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:29:58,884]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:29:59,341]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:29:59,785]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:29:59,885]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:30:00,671]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:30:00,973]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:30:02,607]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读卡器恢复默认设置成功
+[2022-10-27 11:30:05,623]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:30:05,681]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:34:03,112]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:34:04,339]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:34:04,927]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:34:05,389]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:34:06,511]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读卡器恢复默认设置成功
+[2022-10-27 11:34:09,516]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:34:09,574]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:35:32,235]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:35:33,796]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:35:34,159]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:35:34,616]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:35:35,364]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:35:35,705]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:35:36,954]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读卡器恢复默认设置成功
+[2022-10-27 11:35:39,965]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:35:40,023]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:35:44,462]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:35:44,527]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:35:46,119]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:35:46,179]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:38:43,846]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:38:46,033]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:38:46,437]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:38:46,897]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:38:47,246]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:38:47,442]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:38:49,694]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:38:50,098]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:38:51,220]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读卡器恢复默认设置成功
+[2022-10-27 11:38:54,230]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:38:54,289]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 获取阅读器参数失败：
+[2022-10-27 11:38:56,191]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 关闭阅读器
+[2022-10-27 11:40:55,771]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:40:56,515]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:40:57,058]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:40:57,316]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:40:57,603]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:40:59,139]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:40:59,747]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:41:02,818]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:41:02,915]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:42:36,541]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> Set device Close_Realy
+[2022-10-27 11:42:42,995]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> Set device Close_Realy
+[2022-10-27 11:43:48,340]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-10-27 11:43:48,357]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-10-27 11:43:52,784]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-10-27 11:43:53,352]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:43:53,848]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:43:55,087]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:43:55,418]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-10-27 11:43:55,758]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> Set device Close_Realy
+[2022-10-27 11:44:13,204]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-10-27 11:44:13,692]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功

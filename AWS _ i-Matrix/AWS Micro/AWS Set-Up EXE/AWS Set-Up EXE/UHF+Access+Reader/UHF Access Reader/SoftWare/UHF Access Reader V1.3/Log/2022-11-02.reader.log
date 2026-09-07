@@ -1,0 +1,16 @@
+[2022-11-02 17:25:17,835]-[1]-[INFO]-[YYF100.Program+StartService]-[Start] -> Starting log.Info....
+[2022-11-02 17:25:17,854]-[1]-[ERROR]-[YYF100.Program+StartService]-[Start] -> Starting log.Error....
+[2022-11-02 17:25:34,991]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器打开成功，串口号：
+[2022-11-02 17:25:35,259]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 获取设备参数
+[2022-11-02 17:25:35,364]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 读取参数成功
+[2022-11-02 17:25:37,838]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 配置频率成功
+[2022-11-02 17:25:40,814]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 测试回波损耗成功
+[2022-11-02 17:25:41,998]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 测试回波损耗成功
+[2022-11-02 17:25:44,474]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取阅读器温度信息
+[2022-11-02 17:25:44,558]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 阅读器温度信息获取成功
+[2022-11-02 17:25:46,014]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取天线功率
+[2022-11-02 17:25:46,084]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 温度信息设置失败：
+[2022-11-02 17:25:53,812]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始获取天线功率
+[2022-11-02 17:25:53,876]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 温度信息设置失败：
+[2022-11-02 17:25:57,676]-[1]-[INFO]-[YYF100.FrmMain]-[WriteLog] -> 开始设置功率补偿
+[2022-11-02 17:25:57,734]-[1]-[ERROR]-[YYF100.FrmMain]-[WriteLog] -> 温度信息设置失败：
