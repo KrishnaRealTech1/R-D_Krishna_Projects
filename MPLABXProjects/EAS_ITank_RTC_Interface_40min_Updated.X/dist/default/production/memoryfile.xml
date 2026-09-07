@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\EAS_ITank_RTC_Interface_40min_Updated.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>2048</length>
+      <used>1476</used>
+      <free>572</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>128</length>
+      <used>45</used>
+      <free>83</free>
+    </memory>
+  </executable>
+</project>

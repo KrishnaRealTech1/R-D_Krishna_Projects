@@ -1,0 +1,530 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"1276 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1276: extern volatile unsigned char OSCCON __attribute__((address(0x08F)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@143 ]
+"1393
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1393: extern volatile unsigned char ANSEL __attribute__((address(0x091)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@145 ]
+"796
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 796: extern volatile unsigned char CMCON0 __attribute__((address(0x019)));
+[v _CMCON0 `Vuc ~T0 @X0 0 e@25 ]
+"1065
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1065:     struct {
+[s S45 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S45 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
+"1064
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1064: typedef union {
+[u S44 `S45 1 ]
+[n S44 . . ]
+"1074
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1074: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x085)));
+[v _TRISAbits `VS44 ~T0 @X0 0 e@133 ]
+"1115
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1115:     struct {
+[s S47 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S47 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 ]
+"1114
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1114: typedef union {
+[u S46 `S47 1 ]
+[n S46 . . ]
+"1124
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1124: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS46 ~T0 @X0 0 e@135 ]
+"989
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 989: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"1455
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1455: extern volatile unsigned char WPUA __attribute__((address(0x095)));
+[v _WPUA `Vuc ~T0 @X0 0 e@149 ]
+"222
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 222:     struct {
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . RC0 RC1 RC2 RC3 RC4 RC5 ]
+"221
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 221: typedef union {
+[u S7 `S8 1 ]
+[n S7 . . ]
+"231
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 231: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[v _PORTCbits `VS7 ~T0 @X0 0 e@7 ]
+"461
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 461:     struct {
+[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S18 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS TMR1GE T1GINV ]
+"470
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 470:     struct {
+[s S19 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . . T1CKPS0 T1CKPS1 ]
+"460
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 460: typedef union {
+[u S17 `S18 1 `S19 1 ]
+[n S17 . . . ]
+"476
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 476: extern volatile T1CONbits_t T1CONbits __attribute__((address(0x010)));
+[v _T1CONbits `VS17 ~T0 @X0 0 e@16 ]
+"448
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 448: extern volatile unsigned char TMR1H __attribute__((address(0x00F)));
+[v _TMR1H `Vuc ~T0 @X0 0 e@15 ]
+"441
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 441: extern volatile unsigned char TMR1L __attribute__((address(0x00E)));
+[v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
+"1059
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1059: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"166
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+[v F36 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h
+[v __delay `JF36 ~T0 @X0 0 e ]
+[p i __delay ]
+[p mainexit ]
+"54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 218: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"268
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 268: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"288
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 288: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"366
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 366: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"436
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 436: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"443
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 443: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"450
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 450: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"457
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 457: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"528
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 528: __asm("BAUDCTL equ 011h");
+[; <" BAUDCTL equ 011h ;# ">
+"580
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 580: __asm("SPBRGH equ 012h");
+[; <" SPBRGH equ 012h ;# ">
+"600
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 600: __asm("SPBRG equ 013h");
+[; <" SPBRG equ 013h ;# ">
+"607
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 607: __asm("RCREG equ 014h");
+[; <" RCREG equ 014h ;# ">
+"614
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 614: __asm("TXREG equ 015h");
+[; <" TXREG equ 015h ;# ">
+"621
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 621: __asm("TXSTA equ 016h");
+[; <" TXSTA equ 016h ;# ">
+"683
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 683: __asm("RCSTA equ 017h");
+[; <" RCSTA equ 017h ;# ">
+"745
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 745: __asm("WDTCON equ 018h");
+[; <" WDTCON equ 018h ;# ">
+"798
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 798: __asm("CMCON0 equ 019h");
+[; <" CMCON0 equ 019h ;# ">
+"868
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 868: __asm("CMCON1 equ 01Ah");
+[; <" CMCON1 equ 01Ah ;# ">
+"894
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 894: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"901
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 901: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"991
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 991: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1061
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1061: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1111
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1111: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1161
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1161: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1231
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1231: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1278
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1278: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1343
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1343: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1395
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1395: __asm("ANSEL equ 091h");
+[; <" ANSEL equ 091h ;# ">
+"1457
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1457: __asm("WPUA equ 095h");
+[; <" WPUA equ 095h ;# ">
+"1462
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1462: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"1611
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1611: __asm("IOCA equ 096h");
+[; <" IOCA equ 096h ;# ">
+"1616
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1616: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"1785
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1785: __asm("EEDATH equ 097h");
+[; <" EEDATH equ 097h ;# ">
+"1792
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1792: __asm("EEADRH equ 098h");
+[; <" EEADRH equ 098h ;# ">
+"1799
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1799: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1859
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1859: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1864
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1864: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1897
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1897: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1904
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1904: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1949
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1949: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+"1956
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1956: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"1963
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h: 1963: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"24 DIMA_Touch_Sensor.c
+[p x FOSC  =  INTOSCIO ]
+"25
+[p x WDTE  =  OFF ]
+"26
+[p x PWRTE  =  OFF ]
+"27
+[p x MCLRE  =  OFF ]
+"28
+[p x BOREN  =  OFF ]
+"29
+[p x CP  =  OFF ]
+"30
+[p x CPD  =  OFF ]
+"63
+[; ;DIMA_Touch_Sensor.c: 63: static void init_pic(void)
+[v _init_pic `(v ~T0 @X0 1 sf ]
+"64
+[; ;DIMA_Touch_Sensor.c: 64: {
+{
+[e :U _init_pic ]
+[f ]
+"66
+[; ;DIMA_Touch_Sensor.c: 66:     OSCCON = 0b01100001;
+[e = _OSCCON -> -> 97 `i `uc ]
+"69
+[; ;DIMA_Touch_Sensor.c: 69:     ANSEL = 0x00;
+[e = _ANSEL -> -> 0 `i `uc ]
+"70
+[; ;DIMA_Touch_Sensor.c: 70:     CMCON0 = 0x07;
+[e = _CMCON0 -> -> 7 `i `uc ]
+"73
+[; ;DIMA_Touch_Sensor.c: 73:     TRISAbits.TRISA0 = 1;
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+"74
+[; ;DIMA_Touch_Sensor.c: 74:     TRISAbits.TRISA1 = 1;
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+"76
+[; ;DIMA_Touch_Sensor.c: 76:     TRISCbits.TRISC4 = 0;
+[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
+"77
+[; ;DIMA_Touch_Sensor.c: 77:     TRISCbits.TRISC5 = 0;
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+"80
+[; ;DIMA_Touch_Sensor.c: 80:     OPTION_REG |= 0x80;
+[e =| _OPTION_REG -> -> 128 `i `Vuc ]
+"81
+[; ;DIMA_Touch_Sensor.c: 81:     WPUA = 0x00;
+[e = _WPUA -> -> 0 `i `uc ]
+"84
+[; ;DIMA_Touch_Sensor.c: 84:     PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"85
+[; ;DIMA_Touch_Sensor.c: 85:     PORTCbits.RC5 = 0;
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+"89
+[; ;DIMA_Touch_Sensor.c: 89:     T1CONbits.TMR1ON = 0;
+[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+"90
+[; ;DIMA_Touch_Sensor.c: 90:     T1CONbits.TMR1CS = 0;
+[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
+"91
+[; ;DIMA_Touch_Sensor.c: 91:     T1CONbits.T1CKPS0 = 0;
+[e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
+"92
+[; ;DIMA_Touch_Sensor.c: 92:     T1CONbits.T1CKPS1 = 0;
+[e = . . _T1CONbits 1 2 -> -> 0 `i `uc ]
+"93
+[; ;DIMA_Touch_Sensor.c: 93:     TMR1H = 0;
+[e = _TMR1H -> -> 0 `i `uc ]
+"94
+[; ;DIMA_Touch_Sensor.c: 94:     TMR1L = 0;
+[e = _TMR1L -> -> 0 `i `uc ]
+"95
+[; ;DIMA_Touch_Sensor.c: 95: }
+[e :UE 86 ]
+}
+"97
+[; ;DIMA_Touch_Sensor.c: 97: static uint16_t touch_measure_ticks_mask(uint8_t mask)
+[v _touch_measure_ticks_mask `(ui ~T0 @X0 1 sf1`uc ]
+"98
+[; ;DIMA_Touch_Sensor.c: 98: {
+{
+[e :U _touch_measure_ticks_mask ]
+"97
+[; ;DIMA_Touch_Sensor.c: 97: static uint16_t touch_measure_ticks_mask(uint8_t mask)
+[v _mask `uc ~T0 @X0 1 r1 ]
+"98
+[; ;DIMA_Touch_Sensor.c: 98: {
+[f ]
+"101
+[; ;DIMA_Touch_Sensor.c: 101:     TRISA &= (uint8_t)~mask;
+[e =& _TRISA -> -> ~ -> _mask `i `uc `Vuc ]
+"102
+[; ;DIMA_Touch_Sensor.c: 102:     PORTA |= mask;
+[e =| _PORTA -> _mask `Vuc ]
+"103
+[; ;DIMA_Touch_Sensor.c: 103:     _delay((unsigned long)((10)*(4000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `ul `d .4000000.0 `ul ]
+"106
+[; ;DIMA_Touch_Sensor.c: 106:     TRISA |= mask;
+[e =| _TRISA -> _mask `Vuc ]
+"107
+[; ;DIMA_Touch_Sensor.c: 107:     PORTA &= (uint8_t)~mask;
+[e =& _PORTA -> -> ~ -> _mask `i `uc `Vuc ]
+"110
+[; ;DIMA_Touch_Sensor.c: 110:     TMR1H = 0;
+[e = _TMR1H -> -> 0 `i `uc ]
+"111
+[; ;DIMA_Touch_Sensor.c: 111:     TMR1L = 0;
+[e = _TMR1L -> -> 0 `i `uc ]
+"112
+[; ;DIMA_Touch_Sensor.c: 112:     T1CONbits.TMR1ON = 1;
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+"114
+[; ;DIMA_Touch_Sensor.c: 114:     while (PORTA & mask)
+[e $U 88  ]
+[e :U 89 ]
+"115
+[; ;DIMA_Touch_Sensor.c: 115:     {
+{
+"116
+[; ;DIMA_Touch_Sensor.c: 116:         uint16_t t = ((uint16_t)TMR1H << 8) | (uint16_t)TMR1L;
+[v _t `ui ~T0 @X0 1 a ]
+[e = _t | << -> _TMR1H `ui -> 8 `i -> _TMR1L `ui ]
+"117
+[; ;DIMA_Touch_Sensor.c: 117:         if (t >= 60000)
+[e $ ! >= -> _t `l -> 60000 `l 91  ]
+"118
+[; ;DIMA_Touch_Sensor.c: 118:             break;
+[e $U 90  ]
+[e :U 91 ]
+"119
+[; ;DIMA_Touch_Sensor.c: 119:     }
+}
+[e :U 88 ]
+"114
+[; ;DIMA_Touch_Sensor.c: 114:     while (PORTA & mask)
+[e $ != & -> _PORTA `i -> _mask `i -> 0 `i 89  ]
+[e :U 90 ]
+"121
+[; ;DIMA_Touch_Sensor.c: 121:     T1CONbits.TMR1ON = 0;
+[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+"124
+[; ;DIMA_Touch_Sensor.c: 124:     _delay((unsigned long)((50)*(4000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000000.0 `ul ]
+"126
+[; ;DIMA_Touch_Sensor.c: 126:     return ((uint16_t)TMR1H << 8) | (uint16_t)TMR1L;
+[e ) | << -> _TMR1H `ui -> 8 `i -> _TMR1L `ui ]
+[e $UE 87  ]
+"127
+[; ;DIMA_Touch_Sensor.c: 127: }
+[e :UE 87 ]
+}
+"129
+[; ;DIMA_Touch_Sensor.c: 129: static uint16_t avg_samples(uint8_t n, uint8_t mask)
+[v _avg_samples `(ui ~T0 @X0 1 sf2`uc`uc ]
+"130
+[; ;DIMA_Touch_Sensor.c: 130: {
+{
+[e :U _avg_samples ]
+"129
+[; ;DIMA_Touch_Sensor.c: 129: static uint16_t avg_samples(uint8_t n, uint8_t mask)
+[v _n `uc ~T0 @X0 1 r1 ]
+[v _mask `uc ~T0 @X0 1 r2 ]
+"130
+[; ;DIMA_Touch_Sensor.c: 130: {
+[f ]
+"131
+[; ;DIMA_Touch_Sensor.c: 131:     uint32_t sum = 0;
+[v _sum `ul ~T0 @X0 1 a ]
+[e = _sum -> -> -> 0 `i `l `ul ]
+"132
+[; ;DIMA_Touch_Sensor.c: 132:     for (uint8_t i = 0; i < n; i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 96  ]
+[e :U 93 ]
+"133
+[; ;DIMA_Touch_Sensor.c: 133:     {
+{
+"134
+[; ;DIMA_Touch_Sensor.c: 134:         sum += (uint32_t)touch_measure_ticks_mask(mask);
+[e =+ _sum -> ( _touch_measure_ticks_mask (1 _mask `ul ]
+"135
+[; ;DIMA_Touch_Sensor.c: 135:         _delay((unsigned long)((2)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"136
+[; ;DIMA_Touch_Sensor.c: 136:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 96 ]
+[e $ < -> _i `i -> _n `i 93  ]
+[e :U 94 ]
+}
+"137
+[; ;DIMA_Touch_Sensor.c: 137:     return (uint16_t)(sum / n);
+[e ) -> / _sum -> _n `ul `ui ]
+[e $UE 92  ]
+"138
+[; ;DIMA_Touch_Sensor.c: 138: }
+[e :UE 92 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"140
+[; ;DIMA_Touch_Sensor.c: 140: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"141
+[; ;DIMA_Touch_Sensor.c: 141: {
+{
+[e :U _main ]
+[f ]
+"142
+[; ;DIMA_Touch_Sensor.c: 142:     init_pic();
+[e ( _init_pic ..  ]
+"145
+[; ;DIMA_Touch_Sensor.c: 145:     uint16_t baseline0 = avg_samples(32, (1u << 0));
+[v _baseline0 `ui ~T0 @X0 1 a ]
+[e = _baseline0 ( _avg_samples (2 , -> -> 32 `i `uc -> << -> 1 `ui -> 0 `i `uc ]
+"146
+[; ;DIMA_Touch_Sensor.c: 146:     uint16_t filtered0 = baseline0;
+[v _filtered0 `ui ~T0 @X0 1 a ]
+[e = _filtered0 _baseline0 ]
+"148
+[; ;DIMA_Touch_Sensor.c: 148:     uint16_t baseline1 = avg_samples(32, (1u << 1));
+[v _baseline1 `ui ~T0 @X0 1 a ]
+[e = _baseline1 ( _avg_samples (2 , -> -> 32 `i `uc -> << -> 1 `ui -> 1 `i `uc ]
+"149
+[; ;DIMA_Touch_Sensor.c: 149:     uint16_t filtered1 = baseline1;
+[v _filtered1 `ui ~T0 @X0 1 a ]
+[e = _filtered1 _baseline1 ]
+"151
+[; ;DIMA_Touch_Sensor.c: 151:     while (1)
+[e :U 99 ]
+"152
+[; ;DIMA_Touch_Sensor.c: 152:     {
+{
+"153
+[; ;DIMA_Touch_Sensor.c: 153:         uint16_t sample0 = touch_measure_ticks_mask((1u << 0));
+[v _sample0 `ui ~T0 @X0 1 a ]
+[e = _sample0 ( _touch_measure_ticks_mask (1 -> << -> 1 `ui -> 0 `i `uc ]
+"154
+[; ;DIMA_Touch_Sensor.c: 154:         uint16_t sample1 = touch_measure_ticks_mask((1u << 1));
+[v _sample1 `ui ~T0 @X0 1 a ]
+[e = _sample1 ( _touch_measure_ticks_mask (1 -> << -> 1 `ui -> 1 `i `uc ]
+"157
+[; ;DIMA_Touch_Sensor.c: 157:         filtered0 = (uint16_t)(
+[e = _filtered0 -> >> + * -> _filtered0 `ul -> - << -> 1 `ui -> 2 `i -> 1 `ui `ul -> _sample0 `ul -> 2 `i `ui ]
+"162
+[; ;DIMA_Touch_Sensor.c: 162:         filtered1 = (uint16_t)(
+[e = _filtered1 -> >> + * -> _filtered1 `ul -> - << -> 1 `ui -> 2 `i -> 1 `ui `ul -> _sample1 `ul -> 2 `i `ui ]
+"168
+[; ;DIMA_Touch_Sensor.c: 168:         _Bool touched0 = (filtered0 > (uint16_t)(baseline0 + 25));
+[v _touched0 `a ~T0 @X0 1 a ]
+[e = _touched0 -> -> > _filtered0 + _baseline0 -> -> 25 `i `ui `i `a ]
+"169
+[; ;DIMA_Touch_Sensor.c: 169:         _Bool touched1 = (filtered1 > (uint16_t)(baseline1 + 25));
+[v _touched1 `a ~T0 @X0 1 a ]
+[e = _touched1 -> -> > _filtered1 + _baseline1 -> -> 25 `i `ui `i `a ]
+"172
+[; ;DIMA_Touch_Sensor.c: 172:         PORTCbits.RC4 = touched0 ? 1 : 0;
+[e = . . _PORTCbits 0 4 -> ? != -> _touched0 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"173
+[; ;DIMA_Touch_Sensor.c: 173:         PORTCbits.RC5 = touched1 ? 1 : 0;
+[e = . . _PORTCbits 0 5 -> ? != -> _touched1 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"176
+[; ;DIMA_Touch_Sensor.c: 176:         if (!touched0)
+[e $ ! ! != -> _touched0 `i -> 0 `i 101  ]
+"177
+[; ;DIMA_Touch_Sensor.c: 177:         {
+{
+"178
+[; ;DIMA_Touch_Sensor.c: 178:             baseline0 = (uint16_t)(
+[e = _baseline0 -> >> + * -> _baseline0 `ul -> - << -> 1 `ui -> 4 `i -> 1 `ui `ul -> _filtered0 `ul -> 4 `i `ui ]
+"182
+[; ;DIMA_Touch_Sensor.c: 182:         }
+}
+[e :U 101 ]
+"184
+[; ;DIMA_Touch_Sensor.c: 184:         if (!touched1)
+[e $ ! ! != -> _touched1 `i -> 0 `i 102  ]
+"185
+[; ;DIMA_Touch_Sensor.c: 185:         {
+{
+"186
+[; ;DIMA_Touch_Sensor.c: 186:             baseline1 = (uint16_t)(
+[e = _baseline1 -> >> + * -> _baseline1 `ul -> - << -> 1 `ui -> 4 `i -> 1 `ui `ul -> _filtered1 `ul -> 4 `i `ui ]
+"190
+[; ;DIMA_Touch_Sensor.c: 190:         }
+}
+[e :U 102 ]
+"192
+[; ;DIMA_Touch_Sensor.c: 192:         _delay((unsigned long)((5)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"193
+[; ;DIMA_Touch_Sensor.c: 193:     }
+}
+[e :U 98 ]
+[e $U 99  ]
+[e :U 100 ]
+"194
+[; ;DIMA_Touch_Sensor.c: 194: }
+[e :UE 97 ]
+}

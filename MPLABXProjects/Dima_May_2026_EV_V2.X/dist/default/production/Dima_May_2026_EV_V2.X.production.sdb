@@ -1,0 +1,1070 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F25K22 ]
+[d frameptr 4065 ]
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"223 C:\Users\RealTech\MPLABXProjects\Dima_May_2026_EV_V2.X\Dima_May_2026_EV_V2.c
+[v _delay_us_soft delay_us_soft `(v  1 e 1 0 ]
+"234
+[v _delay_ms_soft delay_ms_soft `(v  1 e 1 0 ]
+"243
+[v _system_init system_init `(v  1 e 1 0 ]
+"252
+[v _osc_init osc_init `(v  1 e 1 0 ]
+"257
+[v _io_init io_init `(v  1 e 1 0 ]
+"282
+[v _timer0_init timer0_init `(v  1 e 1 0 ]
+"296
+[v _isr isr `IIH(v  1 e 1 0 ]
+"325
+[v _read_brush_sw_raw read_brush_sw_raw `(a  1 e 1 0 ]
+"337
+[v _read_vac_sw_raw read_vac_sw_raw `(a  1 e 1 0 ]
+"350
+[v _debounce_inputs_10ms debounce_inputs_10ms `(v  1 e 1 0 ]
+"407
+[v _handle_brush_switch_10ms handle_brush_switch_10ms `(v  1 e 1 0 ]
+"472
+[v _handle_vac_switch_10ms handle_vac_switch_10ms `(v  1 e 1 0 ]
+"505
+[v _update_outputs update_outputs `(v  1 e 1 0 ]
+"513
+[v _update_logic_10ms update_logic_10ms `(v  1 e 1 0 ]
+"579
+[v _update_logic_1s update_logic_1s `(v  1 e 1 0 ]
+"636
+[v _i2c_delay i2c_delay `(v  1 s 1 i2c_delay ]
+"641
+[v _i2c_init i2c_init `(v  1 e 1 0 ]
+"649
+[v _i2c_start i2c_start `(v  1 e 1 0 ]
+"661
+[v _i2c_stop i2c_stop `(v  1 e 1 0 ]
+"674
+[v _i2c_write_byte i2c_write_byte `(a  1 e 1 0 ]
+"704
+[v _oled_send_command oled_send_command `(v  1 e 1 0 ]
+"713
+[v _oled_send_data_start oled_send_data_start `(v  1 e 1 0 ]
+"720
+[v _oled_send_data_stop oled_send_data_stop `(v  1 e 1 0 ]
+"725
+[v _oled_send_data_byte oled_send_data_byte `(v  1 e 1 0 ]
+"730
+[v _oled_init oled_init `(v  1 e 1 0 ]
+"767
+[v _oled_set_cursor oled_set_cursor `(v  1 e 1 0 ]
+"774
+[v _oled_clear oled_clear `(v  1 e 1 0 ]
+"792
+[v _font_get_pattern font_get_pattern `(*.25Cuc  1 e 2 0 ]
+"848
+[v _oled_draw_char oled_draw_char `(v  1 e 1 0 ]
+"860
+[v _oled_draw_text oled_draw_text `(v  1 e 1 0 ]
+"871
+[v _oled_draw_text_centered oled_draw_text_centered `(v  1 e 1 0 ]
+"890
+[v _format_hourmeter_string format_hourmeter_string `(v  1 e 1 0 ]
+"911
+[v _format_runtime_string format_runtime_string `(v  1 e 1 0 ]
+"934
+[v _scale4x_vertical scale4x_vertical `(v  1 e 1 0 ]
+"960
+[v _oled_draw_char_huge oled_draw_char_huge `(v  1 e 1 0 ]
+"989
+[v _oled_draw_text_huge oled_draw_text_huge `(v  1 e 1 0 ]
+"1019
+[v _oled_draw_underline_animated oled_draw_underline_animated `(v  1 e 1 0 ]
+"1047
+[v _oled_clear_5x8 oled_clear_5x8 `(v  1 e 1 0 ]
+"1070
+[v _oled_draw_rectangle oled_draw_rectangle `(v  1 e 1 0 ]
+"1108
+[v _oled_draw_brush_bristles oled_draw_brush_bristles `(v  1 e 1 0 ]
+"1141
+[v _oled_draw_down_arrow_5x8 oled_draw_down_arrow_5x8 `(v  1 e 1 0 ]
+"1165
+[v _oled_draw_old_runtime_screen oled_draw_old_runtime_screen `(v  1 e 1 0 ]
+"1266
+[v _oled_draw_graphic_base oled_draw_graphic_base `(v  1 e 1 0 ]
+"1281
+[v _oled_draw_graphic_screen oled_draw_graphic_screen `(v  1 e 1 0 ]
+"1299
+[v _oled_update_screen oled_update_screen `(v  1 e 1 0 ]
+"1327
+[v _oled_show_boot_screen oled_show_boot_screen `(v  1 e 1 0 ]
+"1368
+[v _eeprom_write_byte eeprom_write_byte `(v  1 e 1 0 ]
+"1394
+[v _eeprom_read_byte eeprom_read_byte `(uc  1 e 1 0 ]
+"1409
+[v _hourmeter_save_to_eeprom hourmeter_save_to_eeprom `(v  1 e 1 0 ]
+"1421
+[v _hourmeter_load_from_eeprom hourmeter_load_from_eeprom `(v  1 e 1 0 ]
+"1447
+[v _main main `(i  1 e 2 0 ]
+"52 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h
+[v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
+"97
+[v _ANSELB ANSELB `VEuc  1 e 1 @3897 ]
+"147
+[v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
+[s S57 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"6260
+[s S375 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+]
+[s S382 . 1 `uc 1 C12IN0M 1 0 :1:0 
+`uc 1 C12IN1M 1 0 :1:1 
+`uc 1 C2INP 1 0 :1:2 
+`uc 1 C1INP 1 0 :1:3 
+`uc 1 C1OUT 1 0 :1:4 
+`uc 1 C2OUT 1 0 :1:5 
+]
+[s S389 . 1 `uc 1 C12IN0N 1 0 :1:0 
+`uc 1 C12IN1N 1 0 :1:1 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 SS 1 0 :1:5 
+]
+[s S396 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_SS 1 0 :1:5 
+]
+[s S399 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFN 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SRQ 1 0 :1:4 
+`uc 1 nSS 1 0 :1:5 
+]
+[s S405 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CVREF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CCP5 1 0 :1:4 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S411 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 DACOUT 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S416 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SS1 1 0 :1:5 
+]
+[s S419 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_SS1 1 0 :1:5 
+]
+[s S422 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 nSS1 1 0 :1:5 
+]
+[s S425 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRNQ 1 0 :1:5 
+]
+[s S428 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 RJPU 1 0 :1:7 
+]
+[u S432 . 1 `S57 1 . 1 0 `S375 1 . 1 0 `S382 1 . 1 0 `S389 1 . 1 0 `S396 1 . 1 0 `S399 1 . 1 0 `S405 1 . 1 0 `S411 1 . 1 0 `S416 1 . 1 0 `S419 1 . 1 0 `S422 1 . 1 0 `S425 1 . 1 0 `S428 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES432  1 e 1 @3968 ]
+[s S97 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"6919
+[s S526 . 1 `uc 1 T1OSO 1 0 :1:0 
+`uc 1 T1OSI 1 0 :1:1 
+`uc 1 T5CKI 1 0 :1:2 
+`uc 1 SCK 1 0 :1:3 
+`uc 1 SDI 1 0 :1:4 
+`uc 1 SDO 1 0 :1:5 
+`uc 1 TX 1 0 :1:6 
+`uc 1 RX 1 0 :1:7 
+]
+[s S535 . 1 `uc 1 P2B 1 0 :1:0 
+`uc 1 P2A 1 0 :1:1 
+`uc 1 P1A 1 0 :1:2 
+`uc 1 SCL 1 0 :1:3 
+`uc 1 SDA 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CK 1 0 :1:6 
+`uc 1 DT 1 0 :1:7 
+]
+[s S544 . 1 `uc 1 T1CKI 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 CCP1 1 0 :1:2 
+`uc 1 SCK1 1 0 :1:3 
+`uc 1 SDI1 1 0 :1:4 
+`uc 1 SDO1 1 0 :1:5 
+`uc 1 TX1 1 0 :1:6 
+`uc 1 RX1 1 0 :1:7 
+]
+[s S553 . 1 `uc 1 T3CKI 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 CTPLS 1 0 :1:2 
+`uc 1 SCL1 1 0 :1:3 
+`uc 1 SDA1 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CK1 1 0 :1:6 
+`uc 1 DT1 1 0 :1:7 
+]
+[s S562 . 1 `uc 1 T3G 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 AN14 1 0 :1:2 
+`uc 1 AN15 1 0 :1:3 
+`uc 1 AN16 1 0 :1:4 
+`uc 1 AN17 1 0 :1:5 
+`uc 1 AN18 1 0 :1:6 
+`uc 1 AN19 1 0 :1:7 
+]
+[s S571 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CCP3 1 0 :1:6 
+`uc 1 P3B 1 0 :1:7 
+]
+[s S575 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 P3A 1 0 :1:6 
+]
+[s S578 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+`uc 1 PA1 1 0 :1:2 
+]
+[u S582 . 1 `S97 1 . 1 0 `S526 1 . 1 0 `S535 1 . 1 0 `S544 1 . 1 0 `S553 1 . 1 0 `S562 1 . 1 0 `S571 1 . 1 0 `S575 1 . 1 0 `S578 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES582  1 e 1 @3970 ]
+[s S208 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"7271
+[s S217 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+`uc 1 LA7 1 0 :1:7 
+]
+[u S226 . 1 `S208 1 . 1 0 `S217 1 . 1 0 ]
+[v _LATAbits LATAbits `VES226  1 e 1 @3977 ]
+[s S248 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"7383
+[s S257 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S266 . 1 `S248 1 . 1 0 `S257 1 . 1 0 ]
+[v _LATBbits LATBbits `VES266  1 e 1 @3978 ]
+[s S168 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"7495
+[s S177 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 LC3 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S186 . 1 `S168 1 . 1 0 `S177 1 . 1 0 ]
+[v _LATCbits LATCbits `VES186  1 e 1 @3979 ]
+[s S48 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"7612
+[u S66 . 1 `S48 1 . 1 0 `S57 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES66  1 e 1 @3986 ]
+[s S128 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"7834
+[s S137 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+[u S146 . 1 `S128 1 . 1 0 `S137 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES146  1 e 1 @3987 ]
+[s S88 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"8056
+[u S106 . 1 `S88 1 . 1 0 `S97 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES106  1 e 1 @3988 ]
+[s S658 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"9393
+[s S667 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 EEFS 1 0 :1:6 
+]
+[u S670 . 1 `S658 1 . 1 0 `S667 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES670  1 e 1 @4006 ]
+"9438
+[v _EECON2 EECON2 `VEuc  1 e 1 @4007 ]
+"9458
+[v _EEDATA EEDATA `VEuc  1 e 1 @4008 ]
+"9478
+[v _EEADR EEADR `VEuc  1 e 1 @4009 ]
+"15215
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"15298
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+[s S340 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"15318
+[s S347 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S351 . 1 `S340 1 . 1 0 `S347 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES351  1 e 1 @4053 ]
+"15375
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"15395
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S291 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"16127
+[s S300 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S309 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S313 . 1 `S291 1 . 1 0 `S300 1 . 1 0 `S309 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES313  1 e 1 @4082 ]
+"113 C:\Users\RealTech\MPLABXProjects\Dima_May_2026_EV_V2.X\Dima_May_2026_EV_V2.c
+[v _g_overall_seconds g_overall_seconds `VEul  1 e 4 0 ]
+"114
+[v _g_brush_seconds g_brush_seconds `VEul  1 e 4 0 ]
+"115
+[v _g_vacuum_seconds g_vacuum_seconds `VEul  1 e 4 0 ]
+"117
+[v _g_ms_counter g_ms_counter `VEus  1 e 2 0 ]
+"118
+[v _g_10ms_flag g_10ms_flag `VEuc  1 e 1 0 ]
+"119
+[v _g_1s_flag g_1s_flag `VEuc  1 e 1 0 ]
+"120
+[v _g_boot_ms g_boot_ms `VEus  1 e 2 0 ]
+"122
+[v _g_brush_sw_state g_brush_sw_state `VEa  1 e 1 0 ]
+"123
+[v _g_vac_sw_state g_vac_sw_state `VEa  1 e 1 0 ]
+"125
+[v _g_brush_sw_prev_state g_brush_sw_prev_state `VEa  1 e 1 0 ]
+"126
+[v _g_vac_sw_prev_state g_vac_sw_prev_state `VEa  1 e 1 0 ]
+"128
+[v _brush_sw_integrator brush_sw_integrator `uc  1 s 1 brush_sw_integrator ]
+"129
+[v _vac_sw_integrator vac_sw_integrator `uc  1 s 1 vac_sw_integrator ]
+"131
+[v _g_brush_on g_brush_on `VEa  1 e 1 0 ]
+"132
+[v _g_vacuum_on g_vacuum_on `VEa  1 e 1 0 ]
+"134
+[v _g_vacuum_off_delay g_vacuum_off_delay `VEuc  1 e 1 0 ]
+"135
+[v _g_vacuum_delay_active g_vacuum_delay_active `VEa  1 e 1 0 ]
+"137
+[v _g_brush_tracking_press g_brush_tracking_press `VEa  1 e 1 0 ]
+"138
+[v _g_brush_hold_ticks g_brush_hold_ticks `VEus  1 e 2 0 ]
+"139
+[v _g_brush_long_press_done g_brush_long_press_done `VEa  1 e 1 0 ]
+"141
+[v _g_brush_release_on g_brush_release_on `VEa  1 e 1 0 ]
+"142
+[v _g_brush_release_ticks_left g_brush_release_ticks_left `VEus  1 e 2 0 ]
+"144
+[v _g_logo_blink_state g_logo_blink_state `VEa  1 e 1 0 ]
+"145
+[v _g_display_refresh_request g_display_refresh_request `VEa  1 e 1 0 ]
+"148
+[v _g_graphic_arrow_blink_state g_graphic_arrow_blink_state `VEa  1 e 1 0 ]
+"214
+[v _down_arrow down_arrow `C[5]uc  1 s 5 down_arrow ]
+"1447
+[v _main main `(i  1 e 2 0 ]
+{
+"1480
+} 0
+"579
+[v _update_logic_1s update_logic_1s `(v  1 e 1 0 ]
+{
+"581
+[v update_logic_1s@logo_phase logo_phase `a  1 s 1 logo_phase ]
+"582
+[v update_logic_1s@eeprom_save_counter eeprom_save_counter `uc  1 s 1 eeprom_save_counter ]
+"633
+} 0
+"1409
+[v _hourmeter_save_to_eeprom hourmeter_save_to_eeprom `(v  1 e 1 0 ]
+{
+"1411
+[v hourmeter_save_to_eeprom@val val `ul  1 a 4 3 ]
+"1419
+} 0
+"1368
+[v _eeprom_write_byte eeprom_write_byte `(v  1 e 1 0 ]
+{
+[v eeprom_write_byte@addr addr `us  1 p 2 0 ]
+[v eeprom_write_byte@value value `uc  1 p 1 2 ]
+"1392
+} 0
+"513
+[v _update_logic_10ms update_logic_10ms `(v  1 e 1 0 ]
+{
+"515
+[v update_logic_10ms@blink_10ms blink_10ms `uc  1 s 1 blink_10ms ]
+"516
+[v update_logic_10ms@last_delay_active last_delay_active `a  1 s 1 last_delay_active ]
+"517
+[v update_logic_10ms@graphic_arrow_blink_counter graphic_arrow_blink_counter `uc  1 s 1 graphic_arrow_blink_counter ]
+"518
+[v update_logic_10ms@prev_graphic_mode prev_graphic_mode `a  1 s 1 prev_graphic_mode ]
+"577
+} 0
+"505
+[v _update_outputs update_outputs `(v  1 e 1 0 ]
+{
+"510
+} 0
+"472
+[v _handle_vac_switch_10ms handle_vac_switch_10ms `(v  1 e 1 0 ]
+{
+"474
+[v handle_vac_switch_10ms@vac_falling_edge vac_falling_edge `a  1 a 1 0 ]
+"502
+} 0
+"407
+[v _handle_brush_switch_10ms handle_brush_switch_10ms `(v  1 e 1 0 ]
+{
+"410
+[v handle_brush_switch_10ms@brush_falling_edge brush_falling_edge `a  1 a 1 1 ]
+"409
+[v handle_brush_switch_10ms@brush_rising_edge brush_rising_edge `a  1 a 1 0 ]
+"470
+} 0
+"350
+[v _debounce_inputs_10ms debounce_inputs_10ms `(v  1 e 1 0 ]
+{
+"353
+[v debounce_inputs_10ms@raw_vac raw_vac `a  1 a 1 1 ]
+"352
+[v debounce_inputs_10ms@raw_brush raw_brush `a  1 a 1 0 ]
+"404
+} 0
+"337
+[v _read_vac_sw_raw read_vac_sw_raw `(a  1 e 1 0 ]
+{
+"347
+} 0
+"325
+[v _read_brush_sw_raw read_brush_sw_raw `(a  1 e 1 0 ]
+{
+"335
+} 0
+"243
+[v _system_init system_init `(v  1 e 1 0 ]
+{
+"250
+} 0
+"282
+[v _timer0_init timer0_init `(v  1 e 1 0 ]
+{
+"293
+} 0
+"252
+[v _osc_init osc_init `(v  1 e 1 0 ]
+{
+"255
+} 0
+"730
+[v _oled_init oled_init `(v  1 e 1 0 ]
+{
+"765
+} 0
+"257
+[v _io_init io_init `(v  1 e 1 0 ]
+{
+"280
+} 0
+"641
+[v _i2c_init i2c_init `(v  1 e 1 0 ]
+{
+"647
+} 0
+"1299
+[v _oled_update_screen oled_update_screen `(v  1 e 1 0 ]
+{
+"1302
+[v oled_update_screen@graphic_mode graphic_mode `a  1 a 1 87 ]
+"1301
+[v oled_update_screen@prev_graphic_mode prev_graphic_mode `a  1 s 1 prev_graphic_mode ]
+"1324
+} 0
+"1165
+[v _oled_draw_old_runtime_screen oled_draw_old_runtime_screen `(v  1 e 1 0 ]
+{
+"1168
+[v oled_draw_old_runtime_screen@linebuf linebuf `[24]uc  1 a 24 53 ]
+"1167
+[v oled_draw_old_runtime_screen@timebuf timebuf `[9]uc  1 a 9 44 ]
+"1170
+[v oled_draw_old_runtime_screen@p p `*.39Cuc  1 a 2 81 ]
+"1177
+[v oled_draw_old_runtime_screen@i i `uc  1 a 1 86 ]
+"1169
+[v oled_draw_old_runtime_screen@len len `uc  1 a 1 85 ]
+"1174
+[v oled_draw_old_runtime_screen@start_col start_col `uc  1 a 1 84 ]
+"1172
+[v oled_draw_old_runtime_screen@icon_width icon_width `Cuc  1 a 1 83 ]
+"1176
+[v oled_draw_old_runtime_screen@text_col text_col `uc  1 a 1 80 ]
+"1175
+[v oled_draw_old_runtime_screen@icon_col icon_col `uc  1 a 1 79 ]
+"1173
+[v oled_draw_old_runtime_screen@total_width total_width `uc  1 a 1 78 ]
+"1171
+[v oled_draw_old_runtime_screen@text_width text_width `uc  1 a 1 77 ]
+"1179
+[v oled_draw_old_runtime_screen@icon_brush_on icon_brush_on `C[8]uc  1 s 8 icon_brush_on ]
+"1180
+[v oled_draw_old_runtime_screen@icon_brush_off icon_brush_off `C[8]uc  1 s 8 icon_brush_off ]
+"1181
+[v oled_draw_old_runtime_screen@icon_vac_on icon_vac_on `C[8]uc  1 s 8 icon_vac_on ]
+"1182
+[v oled_draw_old_runtime_screen@icon_vac_off icon_vac_off `C[8]uc  1 s 8 icon_vac_off ]
+"1264
+} 0
+"911
+[v _format_runtime_string format_runtime_string `(v  1 e 1 0 ]
+{
+"913
+[v format_runtime_string@hh hh `ul  1 a 4 36 ]
+"915
+[v format_runtime_string@ss ss `ul  1 a 4 32 ]
+"914
+[v format_runtime_string@mm mm `ul  1 a 4 28 ]
+"911
+[v format_runtime_string@buf buf `*.39uc  1 p 2 22 ]
+[v format_runtime_string@seconds seconds `ul  1 p 4 24 ]
+"931
+} 0
+"890
+[v _format_hourmeter_string format_hourmeter_string `(v  1 e 1 0 ]
+{
+"892
+[v format_hourmeter_string@hh hh `ul  1 a 4 32 ]
+"893
+[v format_hourmeter_string@mm mm `ul  1 a 4 28 ]
+"890
+[v format_hourmeter_string@buf buf `*.39uc  1 p 2 22 ]
+[v format_hourmeter_string@seconds seconds `ul  1 p 4 24 ]
+"909
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"7
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"25
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 17 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 21 ]
+"7
+[v ___lldiv@dividend dividend `ul  1 p 4 9 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 13 ]
+"30
+} 0
+"1281 C:\Users\RealTech\MPLABXProjects\Dima_May_2026_EV_V2.X\Dima_May_2026_EV_V2.c
+[v _oled_draw_graphic_screen oled_draw_graphic_screen `(v  1 e 1 0 ]
+{
+"1285
+[v oled_draw_graphic_screen@right_arrow_x right_arrow_x `uc  1 a 1 12 ]
+"1297
+} 0
+"1141
+[v _oled_draw_down_arrow_5x8 oled_draw_down_arrow_5x8 `(v  1 e 1 0 ]
+{
+[v oled_draw_down_arrow_5x8@x x `uc  1 a 1 wreg ]
+"1143
+[v oled_draw_down_arrow_5x8@i i `uc  1 a 1 10 ]
+"1141
+[v oled_draw_down_arrow_5x8@x x `uc  1 a 1 wreg ]
+[v oled_draw_down_arrow_5x8@page page `uc  1 p 1 8 ]
+"1145
+[v oled_draw_down_arrow_5x8@x x `uc  1 a 1 9 ]
+"1162
+} 0
+"1047
+[v _oled_clear_5x8 oled_clear_5x8 `(v  1 e 1 0 ]
+{
+[v oled_clear_5x8@x x `uc  1 a 1 wreg ]
+"1049
+[v oled_clear_5x8@i i `uc  1 a 1 10 ]
+"1047
+[v oled_clear_5x8@x x `uc  1 a 1 wreg ]
+[v oled_clear_5x8@page page `uc  1 p 1 8 ]
+"1051
+[v oled_clear_5x8@x x `uc  1 a 1 9 ]
+"1068
+} 0
+"1266
+[v _oled_draw_graphic_base oled_draw_graphic_base `(v  1 e 1 0 ]
+{
+"1279
+} 0
+"871
+[v _oled_draw_text_centered oled_draw_text_centered `(v  1 e 1 0 ]
+{
+[v oled_draw_text_centered@page page `uc  1 a 1 wreg ]
+"884
+[v oled_draw_text_centered@start_col start_col `uc  1 a 1 26 ]
+"883
+[v oled_draw_text_centered@width width `uc  1 a 1 25 ]
+"874
+[v oled_draw_text_centered@p p `*.35Cuc  1 a 2 23 ]
+"873
+[v oled_draw_text_centered@len len `uc  1 a 1 27 ]
+"871
+[v oled_draw_text_centered@page page `uc  1 a 1 wreg ]
+[v oled_draw_text_centered@text text `*.35Cuc  1 p 2 16 ]
+"873
+[v oled_draw_text_centered@page page `uc  1 a 1 22 ]
+"887
+} 0
+"860
+[v _oled_draw_text oled_draw_text `(v  1 e 1 0 ]
+{
+[v oled_draw_text@col col `uc  1 a 1 wreg ]
+[v oled_draw_text@col col `uc  1 a 1 wreg ]
+[v oled_draw_text@page page `uc  1 p 1 12 ]
+[v oled_draw_text@text text `*.35Cuc  1 p 2 13 ]
+"862
+[v oled_draw_text@col col `uc  1 a 1 15 ]
+"869
+} 0
+"848
+[v _oled_draw_char oled_draw_char `(v  1 e 1 0 ]
+{
+[v oled_draw_char@c c `uc  1 a 1 wreg ]
+"850
+[v oled_draw_char@pattern pattern `*.25Cuc  1 a 2 10 ]
+"848
+[v oled_draw_char@c c `uc  1 a 1 wreg ]
+"850
+[v oled_draw_char@c c `uc  1 a 1 9 ]
+"858
+} 0
+"1070
+[v _oled_draw_rectangle oled_draw_rectangle `(v  1 e 1 0 ]
+{
+[v oled_draw_rectangle@x x `uc  1 a 1 wreg ]
+"1072
+[v oled_draw_rectangle@i i `uc  1 a 1 14 ]
+"1070
+[v oled_draw_rectangle@x x `uc  1 a 1 wreg ]
+[v oled_draw_rectangle@y_page y_page `uc  1 p 1 8 ]
+[v oled_draw_rectangle@width width `uc  1 p 1 9 ]
+[v oled_draw_rectangle@height_page height_page `uc  1 p 1 10 ]
+"1074
+[v oled_draw_rectangle@x x `uc  1 a 1 13 ]
+"1106
+} 0
+"1108
+[v _oled_draw_brush_bristles oled_draw_brush_bristles `(v  1 e 1 0 ]
+{
+[v oled_draw_brush_bristles@rect_x rect_x `uc  1 a 1 wreg ]
+"1112
+[v oled_draw_brush_bristles@x x `uc  1 a 1 14 ]
+"1111
+[v oled_draw_brush_bristles@inner_end_x inner_end_x `uc  1 a 1 12 ]
+"1110
+[v oled_draw_brush_bristles@inner_start_x inner_start_x `uc  1 a 1 11 ]
+"1108
+[v oled_draw_brush_bristles@rect_x rect_x `uc  1 a 1 wreg ]
+[v oled_draw_brush_bristles@rect_width rect_width `uc  1 p 1 8 ]
+[v oled_draw_brush_bristles@bristle_page bristle_page `uc  1 p 1 9 ]
+"1114
+[v oled_draw_brush_bristles@rect_x rect_x `uc  1 a 1 13 ]
+"1139
+} 0
+"1327
+[v _oled_show_boot_screen oled_show_boot_screen `(v  1 e 1 0 ]
+{
+"1331
+[v oled_show_boot_screen@text_width text_width `Cuc  1 a 1 52 ]
+"1332
+[v oled_show_boot_screen@start_col start_col `Cuc  1 a 1 51 ]
+"1335
+[v oled_show_boot_screen@i i `uc  1 a 1 50 ]
+"1334
+[v oled_show_boot_screen@underline_page underline_page `Cuc  1 a 1 49 ]
+"1330
+[v oled_show_boot_screen@char_advance char_advance `Cuc  1 a 1 47 ]
+"1365
+} 0
+"1019
+[v _oled_draw_underline_animated oled_draw_underline_animated `(v  1 e 1 0 ]
+{
+[v oled_draw_underline_animated@col col `uc  1 a 1 wreg ]
+"1027
+[v oled_draw_underline_animated@n n `uc  1 a 1 16 ]
+"1022
+[v oled_draw_underline_animated@drawn drawn `uc  1 a 1 17 ]
+"1023
+[v oled_draw_underline_animated@i i `uc  1 a 1 15 ]
+"1019
+[v oled_draw_underline_animated@col col `uc  1 a 1 wreg ]
+[v oled_draw_underline_animated@page page `uc  1 p 1 8 ]
+[v oled_draw_underline_animated@width width `uc  1 p 1 9 ]
+"1020
+[v oled_draw_underline_animated@pattern pattern `uc  1 p 1 10 ]
+[v oled_draw_underline_animated@chunk chunk `uc  1 p 1 11 ]
+[v oled_draw_underline_animated@chunk_delay_ms chunk_delay_ms `us  1 p 2 12 ]
+"1022
+[v oled_draw_underline_animated@col col `uc  1 a 1 14 ]
+"1044
+} 0
+"234
+[v _delay_ms_soft delay_ms_soft `(v  1 e 1 0 ]
+{
+[v delay_ms_soft@ms ms `us  1 p 2 3 ]
+"240
+} 0
+"989
+[v _oled_draw_text_huge oled_draw_text_huge `(v  1 e 1 0 ]
+{
+[v oled_draw_text_huge@col col `uc  1 a 1 wreg ]
+"991
+[v oled_draw_text_huge@x x `uc  1 a 1 45 ]
+"992
+[v oled_draw_text_huge@p p `uc  1 a 1 44 ]
+"989
+[v oled_draw_text_huge@col col `uc  1 a 1 wreg ]
+[v oled_draw_text_huge@page page `uc  1 p 1 40 ]
+[v oled_draw_text_huge@text text `*.25Cuc  1 p 2 41 ]
+"991
+[v oled_draw_text_huge@col col `uc  1 a 1 43 ]
+"1017
+} 0
+"960
+[v _oled_draw_char_huge oled_draw_char_huge `(v  1 e 1 0 ]
+{
+[v oled_draw_char_huge@col col `uc  1 a 1 wreg ]
+"963
+[v oled_draw_char_huge@scaled scaled `[5][4]uc  1 a 20 15 ]
+"962
+[v oled_draw_char_huge@pattern pattern `*.25Cuc  1 a 2 35 ]
+"964
+[v oled_draw_char_huge@i i `uc  1 a 1 39 ]
+"965
+[v oled_draw_char_huge@p p `uc  1 a 1 38 ]
+"960
+[v oled_draw_char_huge@col col `uc  1 a 1 wreg ]
+[v oled_draw_char_huge@page page `uc  1 p 1 11 ]
+[v oled_draw_char_huge@c c `uc  1 p 1 12 ]
+"962
+[v oled_draw_char_huge@col col `uc  1 a 1 37 ]
+"987
+} 0
+"934
+[v _scale4x_vertical scale4x_vertical `(v  1 e 1 0 ]
+{
+[v scale4x_vertical@in in `uc  1 a 1 wreg ]
+"951
+[v scale4x_vertical@pos pos `uc  1 a 1 8 ]
+"953
+[v scale4x_vertical@bit bit `uc  1 a 1 7 ]
+"952
+[v scale4x_vertical@byte byte `uc  1 a 1 6 ]
+"948
+[v scale4x_vertical@base base `uc  1 a 1 5 ]
+"936
+[v scale4x_vertical@r r `uc  1 a 1 10 ]
+"937
+[v scale4x_vertical@k k `uc  1 a 1 9 ]
+"934
+[v scale4x_vertical@in in `uc  1 a 1 wreg ]
+[v scale4x_vertical@out out `*.39uc  1 p 2 0 ]
+"939
+[v scale4x_vertical@in in `uc  1 a 1 4 ]
+"958
+} 0
+"792
+[v _font_get_pattern font_get_pattern `(*.25Cuc  1 e 2 0 ]
+{
+[v font_get_pattern@c c `uc  1 a 1 wreg ]
+[v font_get_pattern@c c `uc  1 a 1 wreg ]
+"794
+[v font_get_pattern@digits digits `C[10][5]uc  1 s 50 digits ]
+"807
+[v font_get_pattern@letter_T letter_T `C[5]uc  1 s 5 letter_T ]
+"808
+[v font_get_pattern@letter_O letter_O `C[5]uc  1 s 5 letter_O ]
+"809
+[v font_get_pattern@letter_V letter_V `C[5]uc  1 s 5 letter_V ]
+"810
+[v font_get_pattern@letter_A letter_A `C[5]uc  1 s 5 letter_A ]
+"811
+[v font_get_pattern@letter_C letter_C `C[5]uc  1 s 5 letter_C ]
+"812
+[v font_get_pattern@letter_B letter_B `C[5]uc  1 s 5 letter_B ]
+"813
+[v font_get_pattern@letter_R letter_R `C[5]uc  1 s 5 letter_R ]
+"814
+[v font_get_pattern@letter_U letter_U `C[5]uc  1 s 5 letter_U ]
+"815
+[v font_get_pattern@letter_D letter_D `C[5]uc  1 s 5 letter_D ]
+"816
+[v font_get_pattern@letter_I letter_I `C[5]uc  1 s 5 letter_I ]
+"817
+[v font_get_pattern@letter_M letter_M `C[5]uc  1 s 5 letter_M ]
+"818
+[v font_get_pattern@letter_H letter_H `C[5]uc  1 s 5 letter_H ]
+"819
+[v font_get_pattern@letter_E letter_E `C[5]uc  1 s 5 letter_E ]
+"820
+[v font_get_pattern@letter_space letter_space `C[5]uc  1 s 5 letter_space ]
+"821
+[v font_get_pattern@colon_char colon_char `C[5]uc  1 s 5 colon_char ]
+"823
+[v font_get_pattern@c c `uc  1 a 1 6 ]
+"846
+} 0
+"774
+[v _oled_clear oled_clear `(v  1 e 1 0 ]
+{
+"776
+[v oled_clear@page page `uc  1 a 1 9 ]
+"777
+[v oled_clear@col col `uc  1 a 1 8 ]
+"789
+} 0
+"767
+[v _oled_set_cursor oled_set_cursor `(v  1 e 1 0 ]
+{
+[v oled_set_cursor@col col `uc  1 a 1 wreg ]
+[v oled_set_cursor@col col `uc  1 a 1 wreg ]
+[v oled_set_cursor@page page `uc  1 p 1 6 ]
+"769
+[v oled_set_cursor@col col `uc  1 a 1 7 ]
+"772
+} 0
+"704
+[v _oled_send_command oled_send_command `(v  1 e 1 0 ]
+{
+[v oled_send_command@cmd cmd `uc  1 a 1 wreg ]
+[v oled_send_command@cmd cmd `uc  1 a 1 wreg ]
+"706
+[v oled_send_command@cmd cmd `uc  1 a 1 5 ]
+"711
+} 0
+"720
+[v _oled_send_data_stop oled_send_data_stop `(v  1 e 1 0 ]
+{
+"723
+} 0
+"661
+[v _i2c_stop i2c_stop `(v  1 e 1 0 ]
+{
+"672
+} 0
+"713
+[v _oled_send_data_start oled_send_data_start `(v  1 e 1 0 ]
+{
+"718
+} 0
+"649
+[v _i2c_start i2c_start `(v  1 e 1 0 ]
+{
+"659
+} 0
+"725
+[v _oled_send_data_byte oled_send_data_byte `(v  1 e 1 0 ]
+{
+[v oled_send_data_byte@data data `uc  1 a 1 wreg ]
+[v oled_send_data_byte@data data `uc  1 a 1 wreg ]
+"727
+[v oled_send_data_byte@data data `uc  1 a 1 5 ]
+"728
+} 0
+"674
+[v _i2c_write_byte i2c_write_byte `(a  1 e 1 0 ]
+{
+[v i2c_write_byte@data data `uc  1 a 1 wreg ]
+"676
+[v i2c_write_byte@i i `uc  1 a 1 4 ]
+"674
+[v i2c_write_byte@data data `uc  1 a 1 wreg ]
+"678
+[v i2c_write_byte@data data `uc  1 a 1 3 ]
+"701
+} 0
+"636
+[v _i2c_delay i2c_delay `(v  1 s 1 i2c_delay ]
+{
+"639
+} 0
+"223
+[v _delay_us_soft delay_us_soft `(v  1 e 1 0 ]
+{
+"227
+[v delay_us_soft@i i `VEuc  1 a 1 2 ]
+"223
+[v delay_us_soft@us us `us  1 p 2 0 ]
+"232
+} 0
+"1421
+[v _hourmeter_load_from_eeprom hourmeter_load_from_eeprom `(v  1 e 1 0 ]
+{
+"1434
+[v hourmeter_load_from_eeprom@val val `ul  1 a 4 8 ]
+"1423
+[v hourmeter_load_from_eeprom@magic magic `uc  1 a 1 7 ]
+"1444
+} 0
+"1394
+[v _eeprom_read_byte eeprom_read_byte `(uc  1 e 1 0 ]
+{
+[v eeprom_read_byte@addr addr `us  1 p 2 0 ]
+"1407
+} 0
+"296
+[v _isr isr `IIH(v  1 e 1 0 ]
+{
+"300
+[v isr@ms_for_1s ms_for_1s `us  1 s 2 ms_for_1s ]
+"322
+} 0

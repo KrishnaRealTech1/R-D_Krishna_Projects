@@ -1,0 +1,2554 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"172 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 172:     struct {
+[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S6 . GP0 GP1 GP2 GP3 GP4 GP5 ]
+"171
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 171: typedef union {
+[u S5 `S6 1 ]
+[n S5 . . ]
+"181
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 181: extern volatile GPIObits_t GPIObits __attribute__((address(0x005)));
+[v _GPIObits `VS5 ~T0 @X0 0 e@5 ]
+"150 EAS_Lift_Timer_V3.c
+[; ;EAS_Lift_Timer_V3.c: 150: static void Delay_Seconds(uint8_t seconds);
+[v _Delay_Seconds `(v ~T0 @X0 0 sf1`uc ]
+"887 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 887:     struct {
+[s S38 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . PS PSA T0SE T0CS INTEDG nGPPU ]
+"895
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 895:     struct {
+[s S39 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S39 . PS0 PS1 PS2 ]
+"886
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 886: typedef union {
+[u S37 `S38 1 `S39 1 ]
+[n S37 . . . ]
+"901
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 901: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x081)));
+[v _OPTION_REGbits `VS37 ~T0 @X0 0 e@129 ]
+"242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 242:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . GPIF INTF T0IF GPIE INTE T0IE PEIE GIE ]
+"252
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 252:     struct {
+[s S11 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S11 . . TMR0IF . TMR0IE ]
+"241
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 241: typedef union {
+[u S9 `S10 1 `S11 1 ]
+[n S9 . . . ]
+"259
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 259: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS9 ~T0 @X0 0 e@11 ]
+"59
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"167 EAS_Lift_Timer_V3.c
+[; ;EAS_Lift_Timer_V3.c: 167: static void I2C_Init(void);
+[v _I2C_Init `(v ~T0 @X0 0 sf ]
+"957 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 957:     struct {
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . TRISIO0 TRISIO1 TRISIO2 TRISIO3 TRISIO4 TRISIO5 ]
+"956
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 956: typedef union {
+[u S40 `S41 1 ]
+[n S40 . . ]
+"966
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 966: extern volatile TRISIObits_t TRISIObits __attribute__((address(0x085)));
+[v _TRISIObits `VS40 ~T0 @X0 0 e@133 ]
+"1674
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1674:     struct {
+[s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S73 . RD WR WREN WRERR ]
+"1673
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1673: typedef union {
+[u S72 `S73 1 ]
+[n S72 . . ]
+"1681
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1681: extern volatile EECON1bits_t EECON1bits __attribute__((address(0x09C)));
+[v _EECON1bits `VS72 ~T0 @X0 0 e@156 ]
+"1661
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1661: extern volatile unsigned char EEADR __attribute__((address(0x09B)));
+[v _EEADR `Vuc ~T0 @X0 0 e@155 ]
+"1623
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1623: extern volatile unsigned char EEDAT __attribute__((address(0x09A)));
+[v _EEDAT `Vuc ~T0 @X0 0 e@154 ]
+"1706
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1706: extern volatile unsigned char EECON2 __attribute__((address(0x09D)));
+[v _EECON2 `Vuc ~T0 @X0 0 e@157 ]
+"123 EAS_Lift_Timer_V3.c
+[; ;EAS_Lift_Timer_V3.c: 123: {
+[s S77 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S77 . second minute hour day_of_week date month year ]
+"877
+[; ;EAS_Lift_Timer_V3.c: 877: static Reset_Mode Read_Selected_Mode(void)
+[c E663 0 1 2 3 .. ]
+[n E663 . RESET_MODE_TEST RESET_MODE_1 RESET_MODE_2 RESET_MODE_3  ]
+"1720 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1720: extern volatile unsigned char ANSEL __attribute__((address(0x09F)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@159 ]
+"791
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 791: extern volatile unsigned char ADCON0 __attribute__((address(0x01F)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+"699
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 699: extern volatile unsigned char CMCON0 __attribute__((address(0x019)));
+[v _CMCON0 `Vuc ~T0 @X0 0 e@25 ]
+"1117
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1117:     struct {
+[s S48 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S48 . SCS LTS HTS OSTS IRCF ]
+"1124
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1124:     struct {
+[s S49 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S49 . . IRCF0 IRCF1 IRCF2 ]
+"1116
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1116: typedef union {
+[u S47 `S48 1 `S49 1 ]
+[n S47 . . . ]
+"1131
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1131: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
+[v _OSCCONbits `VS47 ~T0 @X0 0 e@143 ]
+"166
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 166: extern volatile unsigned char GPIO __attribute__((address(0x005)));
+[v _GPIO `Vuc ~T0 @X0 0 e@5 ]
+[p mainexit ]
+"4 EAS_Lift_Timer_V3.c
+[p x FOSC    =  INTOSCIO   ]
+"5
+[p x WDTE    =  OFF        ]
+"6
+[p x PWRTE  =  ON         ]
+"7
+[p x MCLRE  =  OFF        ]
+"8
+[p x CP        =  OFF        ]
+"9
+[p x CPD      =  OFF        ]
+"10
+[p x BOREN  =  ON         ]
+"54 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 168: __asm("GPIO equ 05h");
+[; <" GPIO equ 05h ;# ">
+"218
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 218: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"238
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 238: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"316
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 316: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"387
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 387: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"394
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 394: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"401
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 401: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"408
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 408: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"485
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 485: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"492
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 492: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"563
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 563: __asm("CCPR1 equ 013h");
+[; <" CCPR1 equ 013h ;# ">
+"570
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 570: __asm("CCPR1L equ 013h");
+[; <" CCPR1L equ 013h ;# ">
+"577
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 577: __asm("CCPR1H equ 014h");
+[; <" CCPR1H equ 014h ;# ">
+"584
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 584: __asm("CCP1CON equ 015h");
+[; <" CCP1CON equ 015h ;# ">
+"648
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 648: __asm("WDTCON equ 018h");
+[; <" WDTCON equ 018h ;# ">
+"701
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 701: __asm("CMCON0 equ 019h");
+[; <" CMCON0 equ 019h ;# ">
+"760
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 760: __asm("CMCON1 equ 01Ah");
+[; <" CMCON1 equ 01Ah ;# ">
+"786
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 786: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"793
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 793: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"883
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 883: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"953
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 953: __asm("TRISIO equ 085h");
+[; <" TRISIO equ 085h ;# ">
+"1003
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1003: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1074
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1074: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1113
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1113: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1178
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1178: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1230
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1230: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1237
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1237: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"1242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1242: __asm("WPUA equ 095h");
+[; <" WPUA equ 095h ;# ">
+"1391
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1391: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"1396
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1396: __asm("IOCA equ 096h");
+[; <" IOCA equ 096h ;# ">
+"1565
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1565: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1625
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1625: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1630
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1630: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1663
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1663: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1670
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1670: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1708
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1708: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+"1715
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1715: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"1722
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1722: __asm("ANSEL equ 09Fh");
+[; <" ANSEL equ 09Fh ;# ">
+"223 EAS_Lift_Timer_V3.c
+[; ;EAS_Lift_Timer_V3.c: 223: static void Relay_On(void)
+[v _Relay_On `(v ~T0 @X0 1 sf ]
+"224
+[; ;EAS_Lift_Timer_V3.c: 224: {
+{
+[e :U _Relay_On ]
+[f ]
+"225
+[; ;EAS_Lift_Timer_V3.c: 225:     GPIObits.GP0 = 1;
+[e = . . _GPIObits 0 0 -> -> 1 `i `uc ]
+"226
+[; ;EAS_Lift_Timer_V3.c: 226: }
+[e :UE 78 ]
+}
+"228
+[; ;EAS_Lift_Timer_V3.c: 228: static void Relay_Off(void)
+[v _Relay_Off `(v ~T0 @X0 1 sf ]
+"229
+[; ;EAS_Lift_Timer_V3.c: 229: {
+{
+[e :U _Relay_Off ]
+[f ]
+"230
+[; ;EAS_Lift_Timer_V3.c: 230:     GPIObits.GP0 = 0;
+[e = . . _GPIObits 0 0 -> -> 0 `i `uc ]
+"231
+[; ;EAS_Lift_Timer_V3.c: 231: }
+[e :UE 79 ]
+}
+"233
+[; ;EAS_Lift_Timer_V3.c: 233: static void Relay_Reset_Pulse(void)
+[v _Relay_Reset_Pulse `(v ~T0 @X0 1 sf ]
+"234
+[; ;EAS_Lift_Timer_V3.c: 234: {
+{
+[e :U _Relay_Reset_Pulse ]
+[f ]
+"235
+[; ;EAS_Lift_Timer_V3.c: 235:     Relay_On();
+[e ( _Relay_On ..  ]
+"236
+[; ;EAS_Lift_Timer_V3.c: 236:     Delay_Seconds(3);
+[e ( _Delay_Seconds (1 -> -> 3 `i `uc ]
+"237
+[; ;EAS_Lift_Timer_V3.c: 237:     Relay_Off();
+[e ( _Relay_Off ..  ]
+"238
+[; ;EAS_Lift_Timer_V3.c: 238: }
+[e :UE 80 ]
+}
+"243
+[; ;EAS_Lift_Timer_V3.c: 243: static void Timer0_Init_For_Delay(void)
+[v _Timer0_Init_For_Delay `(v ~T0 @X0 1 sf ]
+"244
+[; ;EAS_Lift_Timer_V3.c: 244: {
+{
+[e :U _Timer0_Init_For_Delay ]
+[f ]
+"245
+[; ;EAS_Lift_Timer_V3.c: 245:     OPTION_REGbits.T0CS = 0;
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+"246
+[; ;EAS_Lift_Timer_V3.c: 246:     OPTION_REGbits.PSA = 0;
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+"248
+[; ;EAS_Lift_Timer_V3.c: 248:     OPTION_REGbits.PS2 = 1;
+[e = . . _OPTION_REGbits 1 2 -> -> 1 `i `uc ]
+"249
+[; ;EAS_Lift_Timer_V3.c: 249:     OPTION_REGbits.PS1 = 1;
+[e = . . _OPTION_REGbits 1 1 -> -> 1 `i `uc ]
+"250
+[; ;EAS_Lift_Timer_V3.c: 250:     OPTION_REGbits.PS0 = 1;
+[e = . . _OPTION_REGbits 1 0 -> -> 1 `i `uc ]
+"252
+[; ;EAS_Lift_Timer_V3.c: 252:     INTCONbits.T0IE = 0;
+[e = . . _INTCONbits 0 5 -> -> 0 `i `uc ]
+"253
+[; ;EAS_Lift_Timer_V3.c: 253:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"254
+[; ;EAS_Lift_Timer_V3.c: 254: }
+[e :UE 81 ]
+}
+"256
+[; ;EAS_Lift_Timer_V3.c: 256: static void Delay_Approx_65ms(void)
+[v _Delay_Approx_65ms `(v ~T0 @X0 1 sf ]
+"257
+[; ;EAS_Lift_Timer_V3.c: 257: {
+{
+[e :U _Delay_Approx_65ms ]
+[f ]
+"258
+[; ;EAS_Lift_Timer_V3.c: 258:     TMR0 = 0;
+[e = _TMR0 -> -> 0 `i `uc ]
+"259
+[; ;EAS_Lift_Timer_V3.c: 259:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"261
+[; ;EAS_Lift_Timer_V3.c: 261:     while (INTCONbits.T0IF == 0)
+[e $U 83  ]
+[e :U 84 ]
+"262
+[; ;EAS_Lift_Timer_V3.c: 262:     {
+{
+"264
+[; ;EAS_Lift_Timer_V3.c: 264:     }
+}
+[e :U 83 ]
+"261
+[; ;EAS_Lift_Timer_V3.c: 261:     while (INTCONbits.T0IF == 0)
+[e $ == -> . . _INTCONbits 0 2 `i -> 0 `i 84  ]
+[e :U 85 ]
+"265
+[; ;EAS_Lift_Timer_V3.c: 265: }
+[e :UE 82 ]
+}
+"267
+[; ;EAS_Lift_Timer_V3.c: 267: static void Delay_Approx_250ms(void)
+[v _Delay_Approx_250ms `(v ~T0 @X0 1 sf ]
+"268
+[; ;EAS_Lift_Timer_V3.c: 268: {
+{
+[e :U _Delay_Approx_250ms ]
+[f ]
+"269
+[; ;EAS_Lift_Timer_V3.c: 269:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"271
+[; ;EAS_Lift_Timer_V3.c: 271:     for (i = 0; i < 4; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 4 `i 87  ]
+[e $U 88  ]
+[e :U 87 ]
+"272
+[; ;EAS_Lift_Timer_V3.c: 272:     {
+{
+"273
+[; ;EAS_Lift_Timer_V3.c: 273:         Delay_Approx_65ms();
+[e ( _Delay_Approx_65ms ..  ]
+"274
+[; ;EAS_Lift_Timer_V3.c: 274:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 87  ]
+[e :U 88 ]
+}
+"275
+[; ;EAS_Lift_Timer_V3.c: 275: }
+[e :UE 86 ]
+}
+"277
+[; ;EAS_Lift_Timer_V3.c: 277: static void Delay_Approx_1s(void)
+[v _Delay_Approx_1s `(v ~T0 @X0 1 sf ]
+"278
+[; ;EAS_Lift_Timer_V3.c: 278: {
+{
+[e :U _Delay_Approx_1s ]
+[f ]
+"279
+[; ;EAS_Lift_Timer_V3.c: 279:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"281
+[; ;EAS_Lift_Timer_V3.c: 281:     for (i = 0; i < 16; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 16 `i 91  ]
+[e $U 92  ]
+[e :U 91 ]
+"282
+[; ;EAS_Lift_Timer_V3.c: 282:     {
+{
+"283
+[; ;EAS_Lift_Timer_V3.c: 283:         Delay_Approx_65ms();
+[e ( _Delay_Approx_65ms ..  ]
+"284
+[; ;EAS_Lift_Timer_V3.c: 284:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 16 `i 91  ]
+[e :U 92 ]
+}
+"285
+[; ;EAS_Lift_Timer_V3.c: 285: }
+[e :UE 90 ]
+}
+"287
+[; ;EAS_Lift_Timer_V3.c: 287: static void Delay_Seconds(uint8_t seconds)
+[v _Delay_Seconds `(v ~T0 @X0 1 sf1`uc ]
+"288
+[; ;EAS_Lift_Timer_V3.c: 288: {
+{
+[e :U _Delay_Seconds ]
+"287
+[; ;EAS_Lift_Timer_V3.c: 287: static void Delay_Seconds(uint8_t seconds)
+[v _seconds `uc ~T0 @X0 1 r1 ]
+"288
+[; ;EAS_Lift_Timer_V3.c: 288: {
+[f ]
+"289
+[; ;EAS_Lift_Timer_V3.c: 289:     while (seconds > 0)
+[e $U 95  ]
+[e :U 96 ]
+"290
+[; ;EAS_Lift_Timer_V3.c: 290:     {
+{
+"291
+[; ;EAS_Lift_Timer_V3.c: 291:         Delay_Approx_1s();
+[e ( _Delay_Approx_1s ..  ]
+"292
+[; ;EAS_Lift_Timer_V3.c: 292:         seconds--;
+[e -- _seconds -> -> 1 `i `uc ]
+"293
+[; ;EAS_Lift_Timer_V3.c: 293:     }
+}
+[e :U 95 ]
+"289
+[; ;EAS_Lift_Timer_V3.c: 289:     while (seconds > 0)
+[e $ > -> _seconds `i -> 0 `i 96  ]
+[e :U 97 ]
+"294
+[; ;EAS_Lift_Timer_V3.c: 294: }
+[e :UE 94 ]
+}
+"299
+[; ;EAS_Lift_Timer_V3.c: 299: static void Safe_Fault_Idle_Forever(void)
+[v _Safe_Fault_Idle_Forever `(v ~T0 @X0 1 sf ]
+"300
+[; ;EAS_Lift_Timer_V3.c: 300: {
+{
+[e :U _Safe_Fault_Idle_Forever ]
+[f ]
+"301
+[; ;EAS_Lift_Timer_V3.c: 301:     while (1)
+[e :U 100 ]
+"302
+[; ;EAS_Lift_Timer_V3.c: 302:     {
+{
+"303
+[; ;EAS_Lift_Timer_V3.c: 303:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"304
+[; ;EAS_Lift_Timer_V3.c: 304:         I2C_Init();
+[e ( _I2C_Init ..  ]
+"305
+[; ;EAS_Lift_Timer_V3.c: 305:         Delay_Seconds(1);
+[e ( _Delay_Seconds (1 -> -> 1 `i `uc ]
+"306
+[; ;EAS_Lift_Timer_V3.c: 306:     }
+}
+[e :U 99 ]
+[e $U 100  ]
+[e :U 101 ]
+"307
+[; ;EAS_Lift_Timer_V3.c: 307: }
+[e :UE 98 ]
+}
+"312
+[; ;EAS_Lift_Timer_V3.c: 312: static void I2C_Delay(void)
+[v _I2C_Delay `(v ~T0 @X0 1 sf ]
+"313
+[; ;EAS_Lift_Timer_V3.c: 313: {
+{
+[e :U _I2C_Delay ]
+[f ]
+"314
+[; ;EAS_Lift_Timer_V3.c: 314:     volatile uint8_t i;
+[v _i `Vuc ~T0 @X0 1 a ]
+"316
+[; ;EAS_Lift_Timer_V3.c: 316:     for (i = 0; i < 50; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 50 `i 103  ]
+[e $U 104  ]
+[e :U 103 ]
+"317
+[; ;EAS_Lift_Timer_V3.c: 317:     {
+{
+"319
+[; ;EAS_Lift_Timer_V3.c: 319:     }
+}
+[e ++ _i -> -> 1 `i `Vuc ]
+[e $ < -> _i `i -> 50 `i 103  ]
+[e :U 104 ]
+}
+"320
+[; ;EAS_Lift_Timer_V3.c: 320: }
+[e :UE 102 ]
+}
+"325
+[; ;EAS_Lift_Timer_V3.c: 325: static void SDA_Low(void)
+[v _SDA_Low `(v ~T0 @X0 1 sf ]
+"326
+[; ;EAS_Lift_Timer_V3.c: 326: {
+{
+[e :U _SDA_Low ]
+[f ]
+"327
+[; ;EAS_Lift_Timer_V3.c: 327:     GPIObits.GP1 = 0;
+[e = . . _GPIObits 0 1 -> -> 0 `i `uc ]
+"328
+[; ;EAS_Lift_Timer_V3.c: 328:     TRISIObits.TRISIO1 = 0;
+[e = . . _TRISIObits 0 1 -> -> 0 `i `uc ]
+"329
+[; ;EAS_Lift_Timer_V3.c: 329: }
+[e :UE 106 ]
+}
+"331
+[; ;EAS_Lift_Timer_V3.c: 331: static void SDA_Release(void)
+[v _SDA_Release `(v ~T0 @X0 1 sf ]
+"332
+[; ;EAS_Lift_Timer_V3.c: 332: {
+{
+[e :U _SDA_Release ]
+[f ]
+"333
+[; ;EAS_Lift_Timer_V3.c: 333:     TRISIObits.TRISIO1 = 1;
+[e = . . _TRISIObits 0 1 -> -> 1 `i `uc ]
+"334
+[; ;EAS_Lift_Timer_V3.c: 334: }
+[e :UE 107 ]
+}
+"336
+[; ;EAS_Lift_Timer_V3.c: 336: static void SCL_Low(void)
+[v _SCL_Low `(v ~T0 @X0 1 sf ]
+"337
+[; ;EAS_Lift_Timer_V3.c: 337: {
+{
+[e :U _SCL_Low ]
+[f ]
+"338
+[; ;EAS_Lift_Timer_V3.c: 338:     GPIObits.GP2 = 0;
+[e = . . _GPIObits 0 2 -> -> 0 `i `uc ]
+"339
+[; ;EAS_Lift_Timer_V3.c: 339:     TRISIObits.TRISIO2 = 0;
+[e = . . _TRISIObits 0 2 -> -> 0 `i `uc ]
+"340
+[; ;EAS_Lift_Timer_V3.c: 340: }
+[e :UE 108 ]
+}
+"342
+[; ;EAS_Lift_Timer_V3.c: 342: static void SCL_Release(void)
+[v _SCL_Release `(v ~T0 @X0 1 sf ]
+"343
+[; ;EAS_Lift_Timer_V3.c: 343: {
+{
+[e :U _SCL_Release ]
+[f ]
+"344
+[; ;EAS_Lift_Timer_V3.c: 344:     TRISIObits.TRISIO2 = 1;
+[e = . . _TRISIObits 0 2 -> -> 1 `i `uc ]
+"345
+[; ;EAS_Lift_Timer_V3.c: 345: }
+[e :UE 109 ]
+}
+"347
+[; ;EAS_Lift_Timer_V3.c: 347: static uint8_t SDA_Read(void)
+[v _SDA_Read `(uc ~T0 @X0 1 sf ]
+"348
+[; ;EAS_Lift_Timer_V3.c: 348: {
+{
+[e :U _SDA_Read ]
+[f ]
+"349
+[; ;EAS_Lift_Timer_V3.c: 349:     return GPIObits.GP1;
+[e ) . . _GPIObits 0 1 ]
+[e $UE 110  ]
+"350
+[; ;EAS_Lift_Timer_V3.c: 350: }
+[e :UE 110 ]
+}
+"358
+[; ;EAS_Lift_Timer_V3.c: 358: static void I2C_Init(void)
+[v _I2C_Init `(v ~T0 @X0 1 sf ]
+"359
+[; ;EAS_Lift_Timer_V3.c: 359: {
+{
+[e :U _I2C_Init ]
+[f ]
+"360
+[; ;EAS_Lift_Timer_V3.c: 360:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"361
+[; ;EAS_Lift_Timer_V3.c: 361:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"362
+[; ;EAS_Lift_Timer_V3.c: 362:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"363
+[; ;EAS_Lift_Timer_V3.c: 363: }
+[e :UE 111 ]
+}
+"365
+[; ;EAS_Lift_Timer_V3.c: 365: static void I2C_Start(void)
+[v _I2C_Start `(v ~T0 @X0 1 sf ]
+"366
+[; ;EAS_Lift_Timer_V3.c: 366: {
+{
+[e :U _I2C_Start ]
+[f ]
+"367
+[; ;EAS_Lift_Timer_V3.c: 367:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"368
+[; ;EAS_Lift_Timer_V3.c: 368:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"369
+[; ;EAS_Lift_Timer_V3.c: 369:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"371
+[; ;EAS_Lift_Timer_V3.c: 371:     SDA_Low();
+[e ( _SDA_Low ..  ]
+"372
+[; ;EAS_Lift_Timer_V3.c: 372:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"374
+[; ;EAS_Lift_Timer_V3.c: 374:     SCL_Low();
+[e ( _SCL_Low ..  ]
+"375
+[; ;EAS_Lift_Timer_V3.c: 375:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"376
+[; ;EAS_Lift_Timer_V3.c: 376: }
+[e :UE 112 ]
+}
+"378
+[; ;EAS_Lift_Timer_V3.c: 378: static void I2C_Stop(void)
+[v _I2C_Stop `(v ~T0 @X0 1 sf ]
+"379
+[; ;EAS_Lift_Timer_V3.c: 379: {
+{
+[e :U _I2C_Stop ]
+[f ]
+"380
+[; ;EAS_Lift_Timer_V3.c: 380:     SDA_Low();
+[e ( _SDA_Low ..  ]
+"381
+[; ;EAS_Lift_Timer_V3.c: 381:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"383
+[; ;EAS_Lift_Timer_V3.c: 383:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"384
+[; ;EAS_Lift_Timer_V3.c: 384:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"386
+[; ;EAS_Lift_Timer_V3.c: 386:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"387
+[; ;EAS_Lift_Timer_V3.c: 387:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"388
+[; ;EAS_Lift_Timer_V3.c: 388: }
+[e :UE 113 ]
+}
+"390
+[; ;EAS_Lift_Timer_V3.c: 390: static _Bool I2C_WriteByte(uint8_t data)
+[v _I2C_WriteByte `(a ~T0 @X0 1 sf1`uc ]
+"391
+[; ;EAS_Lift_Timer_V3.c: 391: {
+{
+[e :U _I2C_WriteByte ]
+"390
+[; ;EAS_Lift_Timer_V3.c: 390: static _Bool I2C_WriteByte(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"391
+[; ;EAS_Lift_Timer_V3.c: 391: {
+[f ]
+"392
+[; ;EAS_Lift_Timer_V3.c: 392:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"393
+[; ;EAS_Lift_Timer_V3.c: 393:     _Bool ack;
+[v _ack `a ~T0 @X0 1 a ]
+"395
+[; ;EAS_Lift_Timer_V3.c: 395:     for (i = 0; i < 8; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 115  ]
+[e $U 116  ]
+[e :U 115 ]
+"396
+[; ;EAS_Lift_Timer_V3.c: 396:     {
+{
+"397
+[; ;EAS_Lift_Timer_V3.c: 397:         if ((data & 0x80) != 0)
+[e $ ! != & -> _data `i -> 128 `i -> 0 `i 118  ]
+"398
+[; ;EAS_Lift_Timer_V3.c: 398:         {
+{
+"399
+[; ;EAS_Lift_Timer_V3.c: 399:             SDA_Release();
+[e ( _SDA_Release ..  ]
+"400
+[; ;EAS_Lift_Timer_V3.c: 400:         }
+}
+[e $U 119  ]
+"401
+[; ;EAS_Lift_Timer_V3.c: 401:         else
+[e :U 118 ]
+"402
+[; ;EAS_Lift_Timer_V3.c: 402:         {
+{
+"403
+[; ;EAS_Lift_Timer_V3.c: 403:             SDA_Low();
+[e ( _SDA_Low ..  ]
+"404
+[; ;EAS_Lift_Timer_V3.c: 404:         }
+}
+[e :U 119 ]
+"406
+[; ;EAS_Lift_Timer_V3.c: 406:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"408
+[; ;EAS_Lift_Timer_V3.c: 408:         SCL_Release();
+[e ( _SCL_Release ..  ]
+"409
+[; ;EAS_Lift_Timer_V3.c: 409:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"411
+[; ;EAS_Lift_Timer_V3.c: 411:         SCL_Low();
+[e ( _SCL_Low ..  ]
+"412
+[; ;EAS_Lift_Timer_V3.c: 412:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"414
+[; ;EAS_Lift_Timer_V3.c: 414:         data <<= 1;
+[e =<< _data -> -> 1 `i `uc ]
+"415
+[; ;EAS_Lift_Timer_V3.c: 415:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 115  ]
+[e :U 116 ]
+}
+"417
+[; ;EAS_Lift_Timer_V3.c: 417:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"418
+[; ;EAS_Lift_Timer_V3.c: 418:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"420
+[; ;EAS_Lift_Timer_V3.c: 420:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"421
+[; ;EAS_Lift_Timer_V3.c: 421:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"423
+[; ;EAS_Lift_Timer_V3.c: 423:     ack = (SDA_Read() == 0);
+[e = _ack -> -> == -> ( _SDA_Read ..  `i -> 0 `i `i `a ]
+"425
+[; ;EAS_Lift_Timer_V3.c: 425:     SCL_Low();
+[e ( _SCL_Low ..  ]
+"426
+[; ;EAS_Lift_Timer_V3.c: 426:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"428
+[; ;EAS_Lift_Timer_V3.c: 428:     return ack;
+[e ) _ack ]
+[e $UE 114  ]
+"429
+[; ;EAS_Lift_Timer_V3.c: 429: }
+[e :UE 114 ]
+}
+"431
+[; ;EAS_Lift_Timer_V3.c: 431: static uint8_t I2C_ReadByte(_Bool send_ack)
+[v _I2C_ReadByte `(uc ~T0 @X0 1 sf1`a ]
+"432
+[; ;EAS_Lift_Timer_V3.c: 432: {
+{
+[e :U _I2C_ReadByte ]
+"431
+[; ;EAS_Lift_Timer_V3.c: 431: static uint8_t I2C_ReadByte(_Bool send_ack)
+[v _send_ack `a ~T0 @X0 1 r1 ]
+"432
+[; ;EAS_Lift_Timer_V3.c: 432: {
+[f ]
+"433
+[; ;EAS_Lift_Timer_V3.c: 433:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"434
+[; ;EAS_Lift_Timer_V3.c: 434:     uint8_t data = 0;
+[v _data `uc ~T0 @X0 1 a ]
+[e = _data -> -> 0 `i `uc ]
+"436
+[; ;EAS_Lift_Timer_V3.c: 436:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"438
+[; ;EAS_Lift_Timer_V3.c: 438:     for (i = 0; i < 8; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 121  ]
+[e $U 122  ]
+[e :U 121 ]
+"439
+[; ;EAS_Lift_Timer_V3.c: 439:     {
+{
+"440
+[; ;EAS_Lift_Timer_V3.c: 440:         data <<= 1;
+[e =<< _data -> -> 1 `i `uc ]
+"442
+[; ;EAS_Lift_Timer_V3.c: 442:         SCL_Release();
+[e ( _SCL_Release ..  ]
+"443
+[; ;EAS_Lift_Timer_V3.c: 443:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"445
+[; ;EAS_Lift_Timer_V3.c: 445:         if (SDA_Read() != 0)
+[e $ ! != -> ( _SDA_Read ..  `i -> 0 `i 124  ]
+"446
+[; ;EAS_Lift_Timer_V3.c: 446:         {
+{
+"447
+[; ;EAS_Lift_Timer_V3.c: 447:             data |= 1;
+[e =| _data -> -> 1 `i `uc ]
+"448
+[; ;EAS_Lift_Timer_V3.c: 448:         }
+}
+[e :U 124 ]
+"450
+[; ;EAS_Lift_Timer_V3.c: 450:         SCL_Low();
+[e ( _SCL_Low ..  ]
+"451
+[; ;EAS_Lift_Timer_V3.c: 451:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"452
+[; ;EAS_Lift_Timer_V3.c: 452:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 121  ]
+[e :U 122 ]
+}
+"454
+[; ;EAS_Lift_Timer_V3.c: 454:     if (send_ack)
+[e $ ! != -> _send_ack `i -> 0 `i 125  ]
+"455
+[; ;EAS_Lift_Timer_V3.c: 455:     {
+{
+"456
+[; ;EAS_Lift_Timer_V3.c: 456:         SDA_Low();
+[e ( _SDA_Low ..  ]
+"457
+[; ;EAS_Lift_Timer_V3.c: 457:     }
+}
+[e $U 126  ]
+"458
+[; ;EAS_Lift_Timer_V3.c: 458:     else
+[e :U 125 ]
+"459
+[; ;EAS_Lift_Timer_V3.c: 459:     {
+{
+"460
+[; ;EAS_Lift_Timer_V3.c: 460:         SDA_Release();
+[e ( _SDA_Release ..  ]
+"461
+[; ;EAS_Lift_Timer_V3.c: 461:     }
+}
+[e :U 126 ]
+"463
+[; ;EAS_Lift_Timer_V3.c: 463:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"465
+[; ;EAS_Lift_Timer_V3.c: 465:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"466
+[; ;EAS_Lift_Timer_V3.c: 466:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"468
+[; ;EAS_Lift_Timer_V3.c: 468:     SCL_Low();
+[e ( _SCL_Low ..  ]
+"469
+[; ;EAS_Lift_Timer_V3.c: 469:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"471
+[; ;EAS_Lift_Timer_V3.c: 471:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"473
+[; ;EAS_Lift_Timer_V3.c: 473:     return data;
+[e ) _data ]
+[e $UE 120  ]
+"474
+[; ;EAS_Lift_Timer_V3.c: 474: }
+[e :UE 120 ]
+}
+"479
+[; ;EAS_Lift_Timer_V3.c: 479: static uint8_t BCD_To_Dec(uint8_t bcd)
+[v _BCD_To_Dec `(uc ~T0 @X0 1 sf1`uc ]
+"480
+[; ;EAS_Lift_Timer_V3.c: 480: {
+{
+[e :U _BCD_To_Dec ]
+"479
+[; ;EAS_Lift_Timer_V3.c: 479: static uint8_t BCD_To_Dec(uint8_t bcd)
+[v _bcd `uc ~T0 @X0 1 r1 ]
+"480
+[; ;EAS_Lift_Timer_V3.c: 480: {
+[f ]
+"481
+[; ;EAS_Lift_Timer_V3.c: 481:     uint8_t tens;
+[v _tens `uc ~T0 @X0 1 a ]
+"482
+[; ;EAS_Lift_Timer_V3.c: 482:     uint8_t ones;
+[v _ones `uc ~T0 @X0 1 a ]
+"484
+[; ;EAS_Lift_Timer_V3.c: 484:     tens = (uint8_t)((bcd >> 4) & 0x0F);
+[e = _tens -> & >> -> _bcd `i -> 4 `i -> 15 `i `uc ]
+"485
+[; ;EAS_Lift_Timer_V3.c: 485:     ones = (uint8_t)(bcd & 0x0F);
+[e = _ones -> & -> _bcd `i -> 15 `i `uc ]
+"487
+[; ;EAS_Lift_Timer_V3.c: 487:     return (uint8_t)((tens * 10) + ones);
+[e ) -> + * -> _tens `i -> 10 `i -> _ones `i `uc ]
+[e $UE 127  ]
+"488
+[; ;EAS_Lift_Timer_V3.c: 488: }
+[e :UE 127 ]
+}
+"506
+[; ;EAS_Lift_Timer_V3.c: 506: static uint8_t EEPROM_ReadByte(uint8_t address)
+[v _EEPROM_ReadByte `(uc ~T0 @X0 1 sf1`uc ]
+"507
+[; ;EAS_Lift_Timer_V3.c: 507: {
+{
+[e :U _EEPROM_ReadByte ]
+"506
+[; ;EAS_Lift_Timer_V3.c: 506: static uint8_t EEPROM_ReadByte(uint8_t address)
+[v _address `uc ~T0 @X0 1 r1 ]
+"507
+[; ;EAS_Lift_Timer_V3.c: 507: {
+[f ]
+"508
+[; ;EAS_Lift_Timer_V3.c: 508:     while (EECON1bits.WR != 0)
+[e $U 129  ]
+[e :U 130 ]
+"509
+[; ;EAS_Lift_Timer_V3.c: 509:     {
+{
+"511
+[; ;EAS_Lift_Timer_V3.c: 511:     }
+}
+[e :U 129 ]
+"508
+[; ;EAS_Lift_Timer_V3.c: 508:     while (EECON1bits.WR != 0)
+[e $ != -> . . _EECON1bits 0 1 `i -> 0 `i 130  ]
+[e :U 131 ]
+"513
+[; ;EAS_Lift_Timer_V3.c: 513:     EEADR = address;
+[e = _EEADR _address ]
+"514
+[; ;EAS_Lift_Timer_V3.c: 514:     EECON1bits.RD = 1;
+[e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
+"516
+[; ;EAS_Lift_Timer_V3.c: 516:     return EEDAT;
+[e ) _EEDAT ]
+[e $UE 128  ]
+"517
+[; ;EAS_Lift_Timer_V3.c: 517: }
+[e :UE 128 ]
+}
+"519
+[; ;EAS_Lift_Timer_V3.c: 519: static void EEPROM_WriteByte(uint8_t address, uint8_t value)
+[v _EEPROM_WriteByte `(v ~T0 @X0 1 sf2`uc`uc ]
+"520
+[; ;EAS_Lift_Timer_V3.c: 520: {
+{
+[e :U _EEPROM_WriteByte ]
+"519
+[; ;EAS_Lift_Timer_V3.c: 519: static void EEPROM_WriteByte(uint8_t address, uint8_t value)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _value `uc ~T0 @X0 1 r2 ]
+"520
+[; ;EAS_Lift_Timer_V3.c: 520: {
+[f ]
+"521
+[; ;EAS_Lift_Timer_V3.c: 521:     _Bool gie_was_enabled;
+[v _gie_was_enabled `a ~T0 @X0 1 a ]
+"523
+[; ;EAS_Lift_Timer_V3.c: 523:     if (EEPROM_ReadByte(address) == value)
+[e $ ! == -> ( _EEPROM_ReadByte (1 _address `i -> _value `i 133  ]
+"524
+[; ;EAS_Lift_Timer_V3.c: 524:     {
+{
+"525
+[; ;EAS_Lift_Timer_V3.c: 525:         return;
+[e $UE 132  ]
+"526
+[; ;EAS_Lift_Timer_V3.c: 526:     }
+}
+[e :U 133 ]
+"528
+[; ;EAS_Lift_Timer_V3.c: 528:     while (EECON1bits.WR != 0)
+[e $U 134  ]
+[e :U 135 ]
+"529
+[; ;EAS_Lift_Timer_V3.c: 529:     {
+{
+"531
+[; ;EAS_Lift_Timer_V3.c: 531:     }
+}
+[e :U 134 ]
+"528
+[; ;EAS_Lift_Timer_V3.c: 528:     while (EECON1bits.WR != 0)
+[e $ != -> . . _EECON1bits 0 1 `i -> 0 `i 135  ]
+[e :U 136 ]
+"533
+[; ;EAS_Lift_Timer_V3.c: 533:     EEADR = address;
+[e = _EEADR _address ]
+"534
+[; ;EAS_Lift_Timer_V3.c: 534:     EEDAT = value;
+[e = _EEDAT _value ]
+"536
+[; ;EAS_Lift_Timer_V3.c: 536:     EECON1bits.WREN = 1;
+[e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
+"538
+[; ;EAS_Lift_Timer_V3.c: 538:     gie_was_enabled = (INTCONbits.GIE != 0);
+[e = _gie_was_enabled -> -> != -> . . _INTCONbits 0 7 `i -> 0 `i `i `a ]
+"539
+[; ;EAS_Lift_Timer_V3.c: 539:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"541
+[; ;EAS_Lift_Timer_V3.c: 541:     EECON2 = 0x55;
+[e = _EECON2 -> -> 85 `i `uc ]
+"542
+[; ;EAS_Lift_Timer_V3.c: 542:     EECON2 = 0xAA;
+[e = _EECON2 -> -> 170 `i `uc ]
+"543
+[; ;EAS_Lift_Timer_V3.c: 543:     EECON1bits.WR = 1;
+[e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
+"545
+[; ;EAS_Lift_Timer_V3.c: 545:     while (EECON1bits.WR != 0)
+[e $U 137  ]
+[e :U 138 ]
+"546
+[; ;EAS_Lift_Timer_V3.c: 546:     {
+{
+"548
+[; ;EAS_Lift_Timer_V3.c: 548:     }
+}
+[e :U 137 ]
+"545
+[; ;EAS_Lift_Timer_V3.c: 545:     while (EECON1bits.WR != 0)
+[e $ != -> . . _EECON1bits 0 1 `i -> 0 `i 138  ]
+[e :U 139 ]
+"550
+[; ;EAS_Lift_Timer_V3.c: 550:     EECON1bits.WREN = 0;
+[e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
+"552
+[; ;EAS_Lift_Timer_V3.c: 552:     if (gie_was_enabled)
+[e $ ! != -> _gie_was_enabled `i -> 0 `i 140  ]
+"553
+[; ;EAS_Lift_Timer_V3.c: 553:     {
+{
+"554
+[; ;EAS_Lift_Timer_V3.c: 554:         INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"555
+[; ;EAS_Lift_Timer_V3.c: 555:     }
+}
+[e :U 140 ]
+"556
+[; ;EAS_Lift_Timer_V3.c: 556: }
+[e :UE 132 ]
+}
+"558
+[; ;EAS_Lift_Timer_V3.c: 558: static uint8_t Trigger_Checksum(uint8_t hour,
+[v _Trigger_Checksum `(uc ~T0 @X0 1 sf5`uc`uc`uc`uc`uc ]
+"563
+[; ;EAS_Lift_Timer_V3.c: 563: {
+{
+[e :U _Trigger_Checksum ]
+"558
+[; ;EAS_Lift_Timer_V3.c: 558: static uint8_t Trigger_Checksum(uint8_t hour,
+[v _hour `uc ~T0 @X0 1 r1 ]
+"559
+[; ;EAS_Lift_Timer_V3.c: 559:                                 uint8_t minute,
+[v _minute `uc ~T0 @X0 1 r2 ]
+"560
+[; ;EAS_Lift_Timer_V3.c: 560:                                 uint8_t date,
+[v _date `uc ~T0 @X0 1 r3 ]
+"561
+[; ;EAS_Lift_Timer_V3.c: 561:                                 uint8_t month,
+[v _month `uc ~T0 @X0 1 r4 ]
+"562
+[; ;EAS_Lift_Timer_V3.c: 562:                                 uint8_t year)
+[v _year `uc ~T0 @X0 1 r5 ]
+"563
+[; ;EAS_Lift_Timer_V3.c: 563: {
+[f ]
+"564
+[; ;EAS_Lift_Timer_V3.c: 564:     return (uint8_t)(hour ^ minute ^ date ^ month ^ year ^ 0x5A);
+[e ) -> ^ ^ ^ ^ ^ -> _hour `i -> _minute `i -> _date `i -> _month `i -> _year `i -> 90 `i `uc ]
+[e $UE 141  ]
+"565
+[; ;EAS_Lift_Timer_V3.c: 565: }
+[e :UE 141 ]
+}
+"567
+[; ;EAS_Lift_Timer_V3.c: 567: static _Bool EEPROM_Load_Last_Trigger(uint8_t *last_hour,
+[v _EEPROM_Load_Last_Trigger `(a ~T0 @X0 1 sf5`*uc`*uc`*uc`*uc`*uc ]
+"572
+[; ;EAS_Lift_Timer_V3.c: 572: {
+{
+[e :U _EEPROM_Load_Last_Trigger ]
+"567
+[; ;EAS_Lift_Timer_V3.c: 567: static _Bool EEPROM_Load_Last_Trigger(uint8_t *last_hour,
+[v _last_hour `*uc ~T0 @X0 1 r1 ]
+"568
+[; ;EAS_Lift_Timer_V3.c: 568:                                       uint8_t *last_minute,
+[v _last_minute `*uc ~T0 @X0 1 r2 ]
+"569
+[; ;EAS_Lift_Timer_V3.c: 569:                                       uint8_t *last_date,
+[v _last_date `*uc ~T0 @X0 1 r3 ]
+"570
+[; ;EAS_Lift_Timer_V3.c: 570:                                       uint8_t *last_month,
+[v _last_month `*uc ~T0 @X0 1 r4 ]
+"571
+[; ;EAS_Lift_Timer_V3.c: 571:                                       uint8_t *last_year)
+[v _last_year `*uc ~T0 @X0 1 r5 ]
+"572
+[; ;EAS_Lift_Timer_V3.c: 572: {
+[f ]
+"573
+[; ;EAS_Lift_Timer_V3.c: 573:     uint8_t hour;
+[v _hour `uc ~T0 @X0 1 a ]
+"574
+[; ;EAS_Lift_Timer_V3.c: 574:     uint8_t minute;
+[v _minute `uc ~T0 @X0 1 a ]
+"575
+[; ;EAS_Lift_Timer_V3.c: 575:     uint8_t date;
+[v _date `uc ~T0 @X0 1 a ]
+"576
+[; ;EAS_Lift_Timer_V3.c: 576:     uint8_t month;
+[v _month `uc ~T0 @X0 1 a ]
+"577
+[; ;EAS_Lift_Timer_V3.c: 577:     uint8_t year;
+[v _year `uc ~T0 @X0 1 a ]
+"578
+[; ;EAS_Lift_Timer_V3.c: 578:     uint8_t checksum;
+[v _checksum `uc ~T0 @X0 1 a ]
+"580
+[; ;EAS_Lift_Timer_V3.c: 580:     if (EEPROM_ReadByte(0) != 0xA5)
+[e $ ! != -> ( _EEPROM_ReadByte (1 -> -> 0 `i `uc `i -> 165 `i 143  ]
+"581
+[; ;EAS_Lift_Timer_V3.c: 581:     {
+{
+"582
+[; ;EAS_Lift_Timer_V3.c: 582:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 142  ]
+"583
+[; ;EAS_Lift_Timer_V3.c: 583:     }
+}
+[e :U 143 ]
+"585
+[; ;EAS_Lift_Timer_V3.c: 585:     hour = EEPROM_ReadByte(1);
+[e = _hour ( _EEPROM_ReadByte (1 -> -> 1 `i `uc ]
+"586
+[; ;EAS_Lift_Timer_V3.c: 586:     minute = EEPROM_ReadByte(2);
+[e = _minute ( _EEPROM_ReadByte (1 -> -> 2 `i `uc ]
+"587
+[; ;EAS_Lift_Timer_V3.c: 587:     date = EEPROM_ReadByte(3);
+[e = _date ( _EEPROM_ReadByte (1 -> -> 3 `i `uc ]
+"588
+[; ;EAS_Lift_Timer_V3.c: 588:     month = EEPROM_ReadByte(4);
+[e = _month ( _EEPROM_ReadByte (1 -> -> 4 `i `uc ]
+"589
+[; ;EAS_Lift_Timer_V3.c: 589:     year = EEPROM_ReadByte(5);
+[e = _year ( _EEPROM_ReadByte (1 -> -> 5 `i `uc ]
+"590
+[; ;EAS_Lift_Timer_V3.c: 590:     checksum = EEPROM_ReadByte(6);
+[e = _checksum ( _EEPROM_ReadByte (1 -> -> 6 `i `uc ]
+"592
+[; ;EAS_Lift_Timer_V3.c: 592:     if (checksum != Trigger_Checksum(hour, minute, date, month, year))
+[e $ ! != -> _checksum `i -> ( _Trigger_Checksum (4 , , , , _hour _minute _date _month _year `i 144  ]
+"593
+[; ;EAS_Lift_Timer_V3.c: 593:     {
+{
+"594
+[; ;EAS_Lift_Timer_V3.c: 594:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 142  ]
+"595
+[; ;EAS_Lift_Timer_V3.c: 595:     }
+}
+[e :U 144 ]
+"597
+[; ;EAS_Lift_Timer_V3.c: 597:     if (hour > 23)
+[e $ ! > -> _hour `i -> 23 `i 145  ]
+"598
+[; ;EAS_Lift_Timer_V3.c: 598:     {
+{
+"599
+[; ;EAS_Lift_Timer_V3.c: 599:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 142  ]
+"600
+[; ;EAS_Lift_Timer_V3.c: 600:     }
+}
+[e :U 145 ]
+"602
+[; ;EAS_Lift_Timer_V3.c: 602:     if (minute > 59)
+[e $ ! > -> _minute `i -> 59 `i 146  ]
+"603
+[; ;EAS_Lift_Timer_V3.c: 603:     {
+{
+"604
+[; ;EAS_Lift_Timer_V3.c: 604:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 142  ]
+"605
+[; ;EAS_Lift_Timer_V3.c: 605:     }
+}
+[e :U 146 ]
+"607
+[; ;EAS_Lift_Timer_V3.c: 607:     if ((date < 1) || (date > 31))
+[e $ ! || < -> _date `i -> 1 `i > -> _date `i -> 31 `i 147  ]
+"608
+[; ;EAS_Lift_Timer_V3.c: 608:     {
+{
+"609
+[; ;EAS_Lift_Timer_V3.c: 609:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 142  ]
+"610
+[; ;EAS_Lift_Timer_V3.c: 610:     }
+}
+[e :U 147 ]
+"612
+[; ;EAS_Lift_Timer_V3.c: 612:     if ((month < 1) || (month > 12))
+[e $ ! || < -> _month `i -> 1 `i > -> _month `i -> 12 `i 148  ]
+"613
+[; ;EAS_Lift_Timer_V3.c: 613:     {
+{
+"614
+[; ;EAS_Lift_Timer_V3.c: 614:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 142  ]
+"615
+[; ;EAS_Lift_Timer_V3.c: 615:     }
+}
+[e :U 148 ]
+"617
+[; ;EAS_Lift_Timer_V3.c: 617:     if (year > 99)
+[e $ ! > -> _year `i -> 99 `i 149  ]
+"618
+[; ;EAS_Lift_Timer_V3.c: 618:     {
+{
+"619
+[; ;EAS_Lift_Timer_V3.c: 619:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 142  ]
+"620
+[; ;EAS_Lift_Timer_V3.c: 620:     }
+}
+[e :U 149 ]
+"622
+[; ;EAS_Lift_Timer_V3.c: 622:     *last_hour = hour;
+[e = *U _last_hour _hour ]
+"623
+[; ;EAS_Lift_Timer_V3.c: 623:     *last_minute = minute;
+[e = *U _last_minute _minute ]
+"624
+[; ;EAS_Lift_Timer_V3.c: 624:     *last_date = date;
+[e = *U _last_date _date ]
+"625
+[; ;EAS_Lift_Timer_V3.c: 625:     *last_month = month;
+[e = *U _last_month _month ]
+"626
+[; ;EAS_Lift_Timer_V3.c: 626:     *last_year = year;
+[e = *U _last_year _year ]
+"628
+[; ;EAS_Lift_Timer_V3.c: 628:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 142  ]
+"629
+[; ;EAS_Lift_Timer_V3.c: 629: }
+[e :UE 142 ]
+}
+"631
+[; ;EAS_Lift_Timer_V3.c: 631: static void EEPROM_Save_Last_Trigger(uint8_t hour,
+[v _EEPROM_Save_Last_Trigger `(v ~T0 @X0 1 sf5`uc`uc`uc`uc`uc ]
+"636
+[; ;EAS_Lift_Timer_V3.c: 636: {
+{
+[e :U _EEPROM_Save_Last_Trigger ]
+"631
+[; ;EAS_Lift_Timer_V3.c: 631: static void EEPROM_Save_Last_Trigger(uint8_t hour,
+[v _hour `uc ~T0 @X0 1 r1 ]
+"632
+[; ;EAS_Lift_Timer_V3.c: 632:                                       uint8_t minute,
+[v _minute `uc ~T0 @X0 1 r2 ]
+"633
+[; ;EAS_Lift_Timer_V3.c: 633:                                       uint8_t date,
+[v _date `uc ~T0 @X0 1 r3 ]
+"634
+[; ;EAS_Lift_Timer_V3.c: 634:                                       uint8_t month,
+[v _month `uc ~T0 @X0 1 r4 ]
+"635
+[; ;EAS_Lift_Timer_V3.c: 635:                                       uint8_t year)
+[v _year `uc ~T0 @X0 1 r5 ]
+"636
+[; ;EAS_Lift_Timer_V3.c: 636: {
+[f ]
+"637
+[; ;EAS_Lift_Timer_V3.c: 637:     uint8_t checksum;
+[v _checksum `uc ~T0 @X0 1 a ]
+"639
+[; ;EAS_Lift_Timer_V3.c: 639:     checksum = Trigger_Checksum(hour, minute, date, month, year);
+[e = _checksum ( _Trigger_Checksum (4 , , , , _hour _minute _date _month _year ]
+"643
+[; ;EAS_Lift_Timer_V3.c: 643:     EEPROM_WriteByte(0, 0x00);
+[e ( _EEPROM_WriteByte (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"645
+[; ;EAS_Lift_Timer_V3.c: 645:     EEPROM_WriteByte(1, hour);
+[e ( _EEPROM_WriteByte (2 , -> -> 1 `i `uc _hour ]
+"646
+[; ;EAS_Lift_Timer_V3.c: 646:     EEPROM_WriteByte(2, minute);
+[e ( _EEPROM_WriteByte (2 , -> -> 2 `i `uc _minute ]
+"647
+[; ;EAS_Lift_Timer_V3.c: 647:     EEPROM_WriteByte(3, date);
+[e ( _EEPROM_WriteByte (2 , -> -> 3 `i `uc _date ]
+"648
+[; ;EAS_Lift_Timer_V3.c: 648:     EEPROM_WriteByte(4, month);
+[e ( _EEPROM_WriteByte (2 , -> -> 4 `i `uc _month ]
+"649
+[; ;EAS_Lift_Timer_V3.c: 649:     EEPROM_WriteByte(5, year);
+[e ( _EEPROM_WriteByte (2 , -> -> 5 `i `uc _year ]
+"650
+[; ;EAS_Lift_Timer_V3.c: 650:     EEPROM_WriteByte(6, checksum);
+[e ( _EEPROM_WriteByte (2 , -> -> 6 `i `uc _checksum ]
+"653
+[; ;EAS_Lift_Timer_V3.c: 653:     EEPROM_WriteByte(0, 0xA5);
+[e ( _EEPROM_WriteByte (2 , -> -> 0 `i `uc -> -> 165 `i `uc ]
+"654
+[; ;EAS_Lift_Timer_V3.c: 654: }
+[e :UE 150 ]
+}
+"659
+[; ;EAS_Lift_Timer_V3.c: 659: static _Bool DS3231_ReadTime(RTC_Time *time)
+[v _DS3231_ReadTime `(a ~T0 @X0 1 sf1`*S77 ]
+"660
+[; ;EAS_Lift_Timer_V3.c: 660: {
+{
+[e :U _DS3231_ReadTime ]
+"659
+[; ;EAS_Lift_Timer_V3.c: 659: static _Bool DS3231_ReadTime(RTC_Time *time)
+[v _time `*S77 ~T0 @X0 1 r1 ]
+"660
+[; ;EAS_Lift_Timer_V3.c: 660: {
+[f ]
+"661
+[; ;EAS_Lift_Timer_V3.c: 661:     uint8_t raw_second;
+[v _raw_second `uc ~T0 @X0 1 a ]
+"662
+[; ;EAS_Lift_Timer_V3.c: 662:     uint8_t raw_minute;
+[v _raw_minute `uc ~T0 @X0 1 a ]
+"663
+[; ;EAS_Lift_Timer_V3.c: 663:     uint8_t raw_hour;
+[v _raw_hour `uc ~T0 @X0 1 a ]
+"664
+[; ;EAS_Lift_Timer_V3.c: 664:     uint8_t raw_day;
+[v _raw_day `uc ~T0 @X0 1 a ]
+"665
+[; ;EAS_Lift_Timer_V3.c: 665:     uint8_t raw_date;
+[v _raw_date `uc ~T0 @X0 1 a ]
+"666
+[; ;EAS_Lift_Timer_V3.c: 666:     uint8_t raw_month;
+[v _raw_month `uc ~T0 @X0 1 a ]
+"667
+[; ;EAS_Lift_Timer_V3.c: 667:     uint8_t raw_year;
+[v _raw_year `uc ~T0 @X0 1 a ]
+"669
+[; ;EAS_Lift_Timer_V3.c: 669:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"671
+[; ;EAS_Lift_Timer_V3.c: 671:     if (!I2C_WriteByte(((0x68 << 1) | 0)))
+[e $ ! ! != -> ( _I2C_WriteByte (1 -> | << -> 104 `i -> 1 `i -> 0 `i `uc `i -> 0 `i 152  ]
+"672
+[; ;EAS_Lift_Timer_V3.c: 672:     {
+{
+"673
+[; ;EAS_Lift_Timer_V3.c: 673:         I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"674
+[; ;EAS_Lift_Timer_V3.c: 674:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 151  ]
+"675
+[; ;EAS_Lift_Timer_V3.c: 675:     }
+}
+[e :U 152 ]
+"677
+[; ;EAS_Lift_Timer_V3.c: 677:     if (!I2C_WriteByte(0x00))
+[e $ ! ! != -> ( _I2C_WriteByte (1 -> -> 0 `i `uc `i -> 0 `i 153  ]
+"678
+[; ;EAS_Lift_Timer_V3.c: 678:     {
+{
+"679
+[; ;EAS_Lift_Timer_V3.c: 679:         I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"680
+[; ;EAS_Lift_Timer_V3.c: 680:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 151  ]
+"681
+[; ;EAS_Lift_Timer_V3.c: 681:     }
+}
+[e :U 153 ]
+"683
+[; ;EAS_Lift_Timer_V3.c: 683:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"685
+[; ;EAS_Lift_Timer_V3.c: 685:     if (!I2C_WriteByte(((0x68 << 1) | 1)))
+[e $ ! ! != -> ( _I2C_WriteByte (1 -> | << -> 104 `i -> 1 `i -> 1 `i `uc `i -> 0 `i 154  ]
+"686
+[; ;EAS_Lift_Timer_V3.c: 686:     {
+{
+"687
+[; ;EAS_Lift_Timer_V3.c: 687:         I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"688
+[; ;EAS_Lift_Timer_V3.c: 688:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 151  ]
+"689
+[; ;EAS_Lift_Timer_V3.c: 689:     }
+}
+[e :U 154 ]
+"691
+[; ;EAS_Lift_Timer_V3.c: 691:     raw_second = I2C_ReadByte(1);
+[e = _raw_second ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"692
+[; ;EAS_Lift_Timer_V3.c: 692:     raw_minute = I2C_ReadByte(1);
+[e = _raw_minute ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"693
+[; ;EAS_Lift_Timer_V3.c: 693:     raw_hour = I2C_ReadByte(1);
+[e = _raw_hour ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"694
+[; ;EAS_Lift_Timer_V3.c: 694:     raw_day = I2C_ReadByte(1);
+[e = _raw_day ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"695
+[; ;EAS_Lift_Timer_V3.c: 695:     raw_date = I2C_ReadByte(1);
+[e = _raw_date ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"696
+[; ;EAS_Lift_Timer_V3.c: 696:     raw_month = I2C_ReadByte(1);
+[e = _raw_month ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"697
+[; ;EAS_Lift_Timer_V3.c: 697:     raw_year = I2C_ReadByte(0);
+[e = _raw_year ( _I2C_ReadByte (1 -> -> 0 `i `a ]
+"699
+[; ;EAS_Lift_Timer_V3.c: 699:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"701
+[; ;EAS_Lift_Timer_V3.c: 701:     time->second = BCD_To_Dec((uint8_t)(raw_second & 0x7F));
+[e = . *U _time 0 ( _BCD_To_Dec (1 -> & -> _raw_second `i -> 127 `i `uc ]
+"702
+[; ;EAS_Lift_Timer_V3.c: 702:     time->minute = BCD_To_Dec((uint8_t)(raw_minute & 0x7F));
+[e = . *U _time 1 ( _BCD_To_Dec (1 -> & -> _raw_minute `i -> 127 `i `uc ]
+"704
+[; ;EAS_Lift_Timer_V3.c: 704:     if ((raw_hour & 0x40) != 0)
+[e $ ! != & -> _raw_hour `i -> 64 `i -> 0 `i 155  ]
+"705
+[; ;EAS_Lift_Timer_V3.c: 705:     {
+{
+"706
+[; ;EAS_Lift_Timer_V3.c: 706:         uint8_t hour_12;
+[v _hour_12 `uc ~T0 @X0 1 a ]
+"707
+[; ;EAS_Lift_Timer_V3.c: 707:         _Bool is_pm;
+[v _is_pm `a ~T0 @X0 1 a ]
+"709
+[; ;EAS_Lift_Timer_V3.c: 709:         hour_12 = BCD_To_Dec((uint8_t)(raw_hour & 0x1F));
+[e = _hour_12 ( _BCD_To_Dec (1 -> & -> _raw_hour `i -> 31 `i `uc ]
+"710
+[; ;EAS_Lift_Timer_V3.c: 710:         is_pm = ((raw_hour & 0x20) != 0);
+[e = _is_pm -> -> != & -> _raw_hour `i -> 32 `i -> 0 `i `i `a ]
+"712
+[; ;EAS_Lift_Timer_V3.c: 712:         if (is_pm)
+[e $ ! != -> _is_pm `i -> 0 `i 156  ]
+"713
+[; ;EAS_Lift_Timer_V3.c: 713:         {
+{
+"714
+[; ;EAS_Lift_Timer_V3.c: 714:             if (hour_12 != 12)
+[e $ ! != -> _hour_12 `i -> 12 `i 157  ]
+"715
+[; ;EAS_Lift_Timer_V3.c: 715:             {
+{
+"716
+[; ;EAS_Lift_Timer_V3.c: 716:                 hour_12 = (uint8_t)(hour_12 + 12);
+[e = _hour_12 -> + -> _hour_12 `i -> 12 `i `uc ]
+"717
+[; ;EAS_Lift_Timer_V3.c: 717:             }
+}
+[e :U 157 ]
+"718
+[; ;EAS_Lift_Timer_V3.c: 718:         }
+}
+[e $U 158  ]
+"719
+[; ;EAS_Lift_Timer_V3.c: 719:         else
+[e :U 156 ]
+"720
+[; ;EAS_Lift_Timer_V3.c: 720:         {
+{
+"721
+[; ;EAS_Lift_Timer_V3.c: 721:             if (hour_12 == 12)
+[e $ ! == -> _hour_12 `i -> 12 `i 159  ]
+"722
+[; ;EAS_Lift_Timer_V3.c: 722:             {
+{
+"723
+[; ;EAS_Lift_Timer_V3.c: 723:                 hour_12 = 0;
+[e = _hour_12 -> -> 0 `i `uc ]
+"724
+[; ;EAS_Lift_Timer_V3.c: 724:             }
+}
+[e :U 159 ]
+"725
+[; ;EAS_Lift_Timer_V3.c: 725:         }
+}
+[e :U 158 ]
+"727
+[; ;EAS_Lift_Timer_V3.c: 727:         time->hour = hour_12;
+[e = . *U _time 2 _hour_12 ]
+"728
+[; ;EAS_Lift_Timer_V3.c: 728:     }
+}
+[e $U 160  ]
+"729
+[; ;EAS_Lift_Timer_V3.c: 729:     else
+[e :U 155 ]
+"730
+[; ;EAS_Lift_Timer_V3.c: 730:     {
+{
+"731
+[; ;EAS_Lift_Timer_V3.c: 731:         time->hour = BCD_To_Dec((uint8_t)(raw_hour & 0x3F));
+[e = . *U _time 2 ( _BCD_To_Dec (1 -> & -> _raw_hour `i -> 63 `i `uc ]
+"732
+[; ;EAS_Lift_Timer_V3.c: 732:     }
+}
+[e :U 160 ]
+"734
+[; ;EAS_Lift_Timer_V3.c: 734:     time->day_of_week = BCD_To_Dec((uint8_t)(raw_day & 0x07));
+[e = . *U _time 3 ( _BCD_To_Dec (1 -> & -> _raw_day `i -> 7 `i `uc ]
+"735
+[; ;EAS_Lift_Timer_V3.c: 735:     time->date = BCD_To_Dec((uint8_t)(raw_date & 0x3F));
+[e = . *U _time 4 ( _BCD_To_Dec (1 -> & -> _raw_date `i -> 63 `i `uc ]
+"736
+[; ;EAS_Lift_Timer_V3.c: 736:     time->month = BCD_To_Dec((uint8_t)(raw_month & 0x1F));
+[e = . *U _time 5 ( _BCD_To_Dec (1 -> & -> _raw_month `i -> 31 `i `uc ]
+"737
+[; ;EAS_Lift_Timer_V3.c: 737:     time->year = BCD_To_Dec(raw_year);
+[e = . *U _time 6 ( _BCD_To_Dec (1 _raw_year ]
+"739
+[; ;EAS_Lift_Timer_V3.c: 739:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 151  ]
+"740
+[; ;EAS_Lift_Timer_V3.c: 740: }
+[e :UE 151 ]
+}
+"742
+[; ;EAS_Lift_Timer_V3.c: 742: static _Bool RTC_Time_Is_Valid(const RTC_Time *time)
+[v _RTC_Time_Is_Valid `(a ~T0 @X0 1 sf1`*CS77 ]
+"743
+[; ;EAS_Lift_Timer_V3.c: 743: {
+{
+[e :U _RTC_Time_Is_Valid ]
+"742
+[; ;EAS_Lift_Timer_V3.c: 742: static _Bool RTC_Time_Is_Valid(const RTC_Time *time)
+[v _time `*CS77 ~T0 @X0 1 r1 ]
+"743
+[; ;EAS_Lift_Timer_V3.c: 743: {
+[f ]
+"744
+[; ;EAS_Lift_Timer_V3.c: 744:     if (time->second > 59)
+[e $ ! > -> . *U _time 0 `i -> 59 `i 162  ]
+"745
+[; ;EAS_Lift_Timer_V3.c: 745:     {
+{
+"746
+[; ;EAS_Lift_Timer_V3.c: 746:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"747
+[; ;EAS_Lift_Timer_V3.c: 747:     }
+}
+[e :U 162 ]
+"749
+[; ;EAS_Lift_Timer_V3.c: 749:     if (time->minute > 59)
+[e $ ! > -> . *U _time 1 `i -> 59 `i 163  ]
+"750
+[; ;EAS_Lift_Timer_V3.c: 750:     {
+{
+"751
+[; ;EAS_Lift_Timer_V3.c: 751:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"752
+[; ;EAS_Lift_Timer_V3.c: 752:     }
+}
+[e :U 163 ]
+"754
+[; ;EAS_Lift_Timer_V3.c: 754:     if (time->hour > 23)
+[e $ ! > -> . *U _time 2 `i -> 23 `i 164  ]
+"755
+[; ;EAS_Lift_Timer_V3.c: 755:     {
+{
+"756
+[; ;EAS_Lift_Timer_V3.c: 756:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"757
+[; ;EAS_Lift_Timer_V3.c: 757:     }
+}
+[e :U 164 ]
+"759
+[; ;EAS_Lift_Timer_V3.c: 759:     if ((time->day_of_week < 1) || (time->day_of_week > 7))
+[e $ ! || < -> . *U _time 3 `i -> 1 `i > -> . *U _time 3 `i -> 7 `i 165  ]
+"760
+[; ;EAS_Lift_Timer_V3.c: 760:     {
+{
+"761
+[; ;EAS_Lift_Timer_V3.c: 761:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"762
+[; ;EAS_Lift_Timer_V3.c: 762:     }
+}
+[e :U 165 ]
+"764
+[; ;EAS_Lift_Timer_V3.c: 764:     if ((time->date < 1) || (time->date > 31))
+[e $ ! || < -> . *U _time 4 `i -> 1 `i > -> . *U _time 4 `i -> 31 `i 166  ]
+"765
+[; ;EAS_Lift_Timer_V3.c: 765:     {
+{
+"766
+[; ;EAS_Lift_Timer_V3.c: 766:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"767
+[; ;EAS_Lift_Timer_V3.c: 767:     }
+}
+[e :U 166 ]
+"769
+[; ;EAS_Lift_Timer_V3.c: 769:     if ((time->month < 1) || (time->month > 12))
+[e $ ! || < -> . *U _time 5 `i -> 1 `i > -> . *U _time 5 `i -> 12 `i 167  ]
+"770
+[; ;EAS_Lift_Timer_V3.c: 770:     {
+{
+"771
+[; ;EAS_Lift_Timer_V3.c: 771:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"772
+[; ;EAS_Lift_Timer_V3.c: 772:     }
+}
+[e :U 167 ]
+"774
+[; ;EAS_Lift_Timer_V3.c: 774:     if (time->year > 99)
+[e $ ! > -> . *U _time 6 `i -> 99 `i 168  ]
+"775
+[; ;EAS_Lift_Timer_V3.c: 775:     {
+{
+"776
+[; ;EAS_Lift_Timer_V3.c: 776:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"777
+[; ;EAS_Lift_Timer_V3.c: 777:     }
+}
+[e :U 168 ]
+"779
+[; ;EAS_Lift_Timer_V3.c: 779:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 161  ]
+"780
+[; ;EAS_Lift_Timer_V3.c: 780: }
+[e :UE 161 ]
+}
+"782
+[; ;EAS_Lift_Timer_V3.c: 782: static _Bool DS3231_ReadTime_With_Retry(RTC_Time *time)
+[v _DS3231_ReadTime_With_Retry `(a ~T0 @X0 1 sf1`*S77 ]
+"783
+[; ;EAS_Lift_Timer_V3.c: 783: {
+{
+[e :U _DS3231_ReadTime_With_Retry ]
+"782
+[; ;EAS_Lift_Timer_V3.c: 782: static _Bool DS3231_ReadTime_With_Retry(RTC_Time *time)
+[v _time `*S77 ~T0 @X0 1 r1 ]
+"783
+[; ;EAS_Lift_Timer_V3.c: 783: {
+[f ]
+"784
+[; ;EAS_Lift_Timer_V3.c: 784:     uint8_t attempt;
+[v _attempt `uc ~T0 @X0 1 a ]
+"786
+[; ;EAS_Lift_Timer_V3.c: 786:     for (attempt = 0; attempt < 3; attempt++)
+{
+[e = _attempt -> -> 0 `i `uc ]
+[e $ < -> _attempt `i -> 3 `i 170  ]
+[e $U 171  ]
+[e :U 170 ]
+"787
+[; ;EAS_Lift_Timer_V3.c: 787:     {
+{
+"788
+[; ;EAS_Lift_Timer_V3.c: 788:         I2C_Init();
+[e ( _I2C_Init ..  ]
+"790
+[; ;EAS_Lift_Timer_V3.c: 790:         if (DS3231_ReadTime(time))
+[e $ ! != -> ( _DS3231_ReadTime (1 _time `i -> 0 `i 173  ]
+"791
+[; ;EAS_Lift_Timer_V3.c: 791:         {
+{
+"792
+[; ;EAS_Lift_Timer_V3.c: 792:             if (RTC_Time_Is_Valid(time))
+[e $ ! != -> ( _RTC_Time_Is_Valid (1 -> _time `*CS77 `i -> 0 `i 174  ]
+"793
+[; ;EAS_Lift_Timer_V3.c: 793:             {
+{
+"794
+[; ;EAS_Lift_Timer_V3.c: 794:                 return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 169  ]
+"795
+[; ;EAS_Lift_Timer_V3.c: 795:             }
+}
+[e :U 174 ]
+"796
+[; ;EAS_Lift_Timer_V3.c: 796:         }
+}
+[e :U 173 ]
+"798
+[; ;EAS_Lift_Timer_V3.c: 798:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"799
+[; ;EAS_Lift_Timer_V3.c: 799:         I2C_Init();
+[e ( _I2C_Init ..  ]
+"800
+[; ;EAS_Lift_Timer_V3.c: 800:         Delay_Approx_250ms();
+[e ( _Delay_Approx_250ms ..  ]
+"801
+[; ;EAS_Lift_Timer_V3.c: 801:     }
+}
+[e ++ _attempt -> -> 1 `i `uc ]
+[e $ < -> _attempt `i -> 3 `i 170  ]
+[e :U 171 ]
+}
+"803
+[; ;EAS_Lift_Timer_V3.c: 803:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 169  ]
+"804
+[; ;EAS_Lift_Timer_V3.c: 804: }
+[e :UE 169 ]
+}
+"877
+[; ;EAS_Lift_Timer_V3.c: 877: static Reset_Mode Read_Selected_Mode(void)
+[v _Read_Selected_Mode `(E663 ~T0 @X0 1 sf ]
+"878
+[; ;EAS_Lift_Timer_V3.c: 878: {
+{
+[e :U _Read_Selected_Mode ]
+[f ]
+"879
+[; ;EAS_Lift_Timer_V3.c: 879:     _Bool dip1_high;
+[v _dip1_high `a ~T0 @X0 1 a ]
+"880
+[; ;EAS_Lift_Timer_V3.c: 880:     _Bool dip2_high;
+[v _dip2_high `a ~T0 @X0 1 a ]
+"882
+[; ;EAS_Lift_Timer_V3.c: 882:     dip1_high = (GPIObits.GP4 == 1);
+[e = _dip1_high -> -> == -> . . _GPIObits 0 4 `i -> 1 `i `i `a ]
+"883
+[; ;EAS_Lift_Timer_V3.c: 883:     dip2_high = (GPIObits.GP5 == 1);
+[e = _dip2_high -> -> == -> . . _GPIObits 0 5 `i -> 1 `i `i `a ]
+"885
+[; ;EAS_Lift_Timer_V3.c: 885:     if ((dip1_high == 1) && (dip2_high == 0))
+[e $ ! && == -> _dip1_high `i -> 1 `i == -> _dip2_high `i -> 0 `i 176  ]
+"886
+[; ;EAS_Lift_Timer_V3.c: 886:     {
+{
+"887
+[; ;EAS_Lift_Timer_V3.c: 887:         return RESET_MODE_1;
+[e ) . `E663 1 ]
+[e $UE 175  ]
+"888
+[; ;EAS_Lift_Timer_V3.c: 888:     }
+}
+[e :U 176 ]
+"890
+[; ;EAS_Lift_Timer_V3.c: 890:     if ((dip1_high == 0) && (dip2_high == 1))
+[e $ ! && == -> _dip1_high `i -> 0 `i == -> _dip2_high `i -> 1 `i 177  ]
+"891
+[; ;EAS_Lift_Timer_V3.c: 891:     {
+{
+"892
+[; ;EAS_Lift_Timer_V3.c: 892:         return RESET_MODE_2;
+[e ) . `E663 2 ]
+[e $UE 175  ]
+"893
+[; ;EAS_Lift_Timer_V3.c: 893:     }
+}
+[e :U 177 ]
+"895
+[; ;EAS_Lift_Timer_V3.c: 895:     if ((dip1_high == 1) && (dip2_high == 1))
+[e $ ! && == -> _dip1_high `i -> 1 `i == -> _dip2_high `i -> 1 `i 178  ]
+"896
+[; ;EAS_Lift_Timer_V3.c: 896:     {
+{
+"897
+[; ;EAS_Lift_Timer_V3.c: 897:         return RESET_MODE_3;
+[e ) . `E663 3 ]
+[e $UE 175  ]
+"898
+[; ;EAS_Lift_Timer_V3.c: 898:     }
+}
+[e :U 178 ]
+"900
+[; ;EAS_Lift_Timer_V3.c: 900:     return RESET_MODE_TEST;
+[e ) . `E663 0 ]
+[e $UE 175  ]
+"901
+[; ;EAS_Lift_Timer_V3.c: 901: }
+[e :UE 175 ]
+}
+"906
+[; ;EAS_Lift_Timer_V3.c: 906: static _Bool Is_Mode1_Hour(uint8_t hour)
+[v _Is_Mode1_Hour `(a ~T0 @X0 1 sf1`uc ]
+"907
+[; ;EAS_Lift_Timer_V3.c: 907: {
+{
+[e :U _Is_Mode1_Hour ]
+"906
+[; ;EAS_Lift_Timer_V3.c: 906: static _Bool Is_Mode1_Hour(uint8_t hour)
+[v _hour `uc ~T0 @X0 1 r1 ]
+"907
+[; ;EAS_Lift_Timer_V3.c: 907: {
+[f ]
+"910
+[; ;EAS_Lift_Timer_V3.c: 910:     if (hour == 7)
+[e $ ! == -> _hour `i -> 7 `i 180  ]
+"911
+[; ;EAS_Lift_Timer_V3.c: 911:     {
+{
+"912
+[; ;EAS_Lift_Timer_V3.c: 912:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 179  ]
+"913
+[; ;EAS_Lift_Timer_V3.c: 913:     }
+}
+[e :U 180 ]
+"915
+[; ;EAS_Lift_Timer_V3.c: 915:     if (hour == 15)
+[e $ ! == -> _hour `i -> 15 `i 181  ]
+"916
+[; ;EAS_Lift_Timer_V3.c: 916:     {
+{
+"917
+[; ;EAS_Lift_Timer_V3.c: 917:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 179  ]
+"918
+[; ;EAS_Lift_Timer_V3.c: 918:     }
+}
+[e :U 181 ]
+"920
+[; ;EAS_Lift_Timer_V3.c: 920:     if (hour == 23)
+[e $ ! == -> _hour `i -> 23 `i 182  ]
+"921
+[; ;EAS_Lift_Timer_V3.c: 921:     {
+{
+"922
+[; ;EAS_Lift_Timer_V3.c: 922:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 179  ]
+"923
+[; ;EAS_Lift_Timer_V3.c: 923:     }
+}
+[e :U 182 ]
+"925
+[; ;EAS_Lift_Timer_V3.c: 925:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 179  ]
+"926
+[; ;EAS_Lift_Timer_V3.c: 926: }
+[e :UE 179 ]
+}
+"928
+[; ;EAS_Lift_Timer_V3.c: 928: static _Bool Is_Mode2_Hour(uint8_t hour)
+[v _Is_Mode2_Hour `(a ~T0 @X0 1 sf1`uc ]
+"929
+[; ;EAS_Lift_Timer_V3.c: 929: {
+{
+[e :U _Is_Mode2_Hour ]
+"928
+[; ;EAS_Lift_Timer_V3.c: 928: static _Bool Is_Mode2_Hour(uint8_t hour)
+[v _hour `uc ~T0 @X0 1 r1 ]
+"929
+[; ;EAS_Lift_Timer_V3.c: 929: {
+[f ]
+"932
+[; ;EAS_Lift_Timer_V3.c: 932:     if (hour == 10)
+[e $ ! == -> _hour `i -> 10 `i 184  ]
+"933
+[; ;EAS_Lift_Timer_V3.c: 933:     {
+{
+"934
+[; ;EAS_Lift_Timer_V3.c: 934:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 183  ]
+"935
+[; ;EAS_Lift_Timer_V3.c: 935:     }
+}
+[e :U 184 ]
+"937
+[; ;EAS_Lift_Timer_V3.c: 937:     if (hour == 22)
+[e $ ! == -> _hour `i -> 22 `i 185  ]
+"938
+[; ;EAS_Lift_Timer_V3.c: 938:     {
+{
+"939
+[; ;EAS_Lift_Timer_V3.c: 939:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 183  ]
+"940
+[; ;EAS_Lift_Timer_V3.c: 940:     }
+}
+[e :U 185 ]
+"942
+[; ;EAS_Lift_Timer_V3.c: 942:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 183  ]
+"943
+[; ;EAS_Lift_Timer_V3.c: 943: }
+[e :UE 183 ]
+}
+"945
+[; ;EAS_Lift_Timer_V3.c: 945: static _Bool Is_Mode3_Hour(uint8_t hour)
+[v _Is_Mode3_Hour `(a ~T0 @X0 1 sf1`uc ]
+"946
+[; ;EAS_Lift_Timer_V3.c: 946: {
+{
+[e :U _Is_Mode3_Hour ]
+"945
+[; ;EAS_Lift_Timer_V3.c: 945: static _Bool Is_Mode3_Hour(uint8_t hour)
+[v _hour `uc ~T0 @X0 1 r1 ]
+"946
+[; ;EAS_Lift_Timer_V3.c: 946: {
+[f ]
+"949
+[; ;EAS_Lift_Timer_V3.c: 949:     if (hour == 10)
+[e $ ! == -> _hour `i -> 10 `i 187  ]
+"950
+[; ;EAS_Lift_Timer_V3.c: 950:     {
+{
+"951
+[; ;EAS_Lift_Timer_V3.c: 951:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 186  ]
+"952
+[; ;EAS_Lift_Timer_V3.c: 952:     }
+}
+[e :U 187 ]
+"954
+[; ;EAS_Lift_Timer_V3.c: 954:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 186  ]
+"955
+[; ;EAS_Lift_Timer_V3.c: 955: }
+[e :UE 186 ]
+}
+"957
+[; ;EAS_Lift_Timer_V3.c: 957: static _Bool Is_Test_Mode_10_Minute(uint8_t minute)
+[v _Is_Test_Mode_10_Minute `(a ~T0 @X0 1 sf1`uc ]
+"958
+[; ;EAS_Lift_Timer_V3.c: 958: {
+{
+[e :U _Is_Test_Mode_10_Minute ]
+"957
+[; ;EAS_Lift_Timer_V3.c: 957: static _Bool Is_Test_Mode_10_Minute(uint8_t minute)
+[v _minute `uc ~T0 @X0 1 r1 ]
+"958
+[; ;EAS_Lift_Timer_V3.c: 958: {
+[f ]
+"959
+[; ;EAS_Lift_Timer_V3.c: 959:     if ((minute % 10) == 0)
+[e $ ! == % -> _minute `i -> 10 `i -> 0 `i 189  ]
+"960
+[; ;EAS_Lift_Timer_V3.c: 960:     {
+{
+"961
+[; ;EAS_Lift_Timer_V3.c: 961:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 188  ]
+"962
+[; ;EAS_Lift_Timer_V3.c: 962:     }
+}
+[e :U 189 ]
+"964
+[; ;EAS_Lift_Timer_V3.c: 964:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 188  ]
+"965
+[; ;EAS_Lift_Timer_V3.c: 965: }
+[e :UE 188 ]
+}
+"970
+[; ;EAS_Lift_Timer_V3.c: 970: static _Bool Is_Scheduled_Restart_Time(Reset_Mode mode, const RTC_Time *now)
+[v _Is_Scheduled_Restart_Time `(a ~T0 @X0 1 sf2`E663`*CS77 ]
+"971
+[; ;EAS_Lift_Timer_V3.c: 971: {
+{
+[e :U _Is_Scheduled_Restart_Time ]
+"970
+[; ;EAS_Lift_Timer_V3.c: 970: static _Bool Is_Scheduled_Restart_Time(Reset_Mode mode, const RTC_Time *now)
+[v _mode `E663 ~T0 @X0 1 r1 ]
+[v _now `*CS77 ~T0 @X0 1 r2 ]
+"971
+[; ;EAS_Lift_Timer_V3.c: 971: {
+[f ]
+"998
+[; ;EAS_Lift_Timer_V3.c: 998:     switch (mode)
+[e $U 192  ]
+"999
+[; ;EAS_Lift_Timer_V3.c: 999:     {
+{
+"1000
+[; ;EAS_Lift_Timer_V3.c: 1000:         case RESET_MODE_1:
+[e :U 193 ]
+"1001
+[; ;EAS_Lift_Timer_V3.c: 1001:             if (now->minute != 0)
+[e $ ! != -> . *U _now 1 `i -> 0 `i 194  ]
+"1002
+[; ;EAS_Lift_Timer_V3.c: 1002:             {
+{
+"1003
+[; ;EAS_Lift_Timer_V3.c: 1003:                 return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 190  ]
+"1004
+[; ;EAS_Lift_Timer_V3.c: 1004:             }
+}
+[e :U 194 ]
+"1006
+[; ;EAS_Lift_Timer_V3.c: 1006:             return Is_Mode1_Hour(now->hour);
+[e ) ( _Is_Mode1_Hour (1 . *U _now 2 ]
+[e $UE 190  ]
+"1008
+[; ;EAS_Lift_Timer_V3.c: 1008:         case RESET_MODE_2:
+[e :U 195 ]
+"1009
+[; ;EAS_Lift_Timer_V3.c: 1009:             if (now->minute != 0)
+[e $ ! != -> . *U _now 1 `i -> 0 `i 196  ]
+"1010
+[; ;EAS_Lift_Timer_V3.c: 1010:             {
+{
+"1011
+[; ;EAS_Lift_Timer_V3.c: 1011:                 return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 190  ]
+"1012
+[; ;EAS_Lift_Timer_V3.c: 1012:             }
+}
+[e :U 196 ]
+"1014
+[; ;EAS_Lift_Timer_V3.c: 1014:             return Is_Mode2_Hour(now->hour);
+[e ) ( _Is_Mode2_Hour (1 . *U _now 2 ]
+[e $UE 190  ]
+"1016
+[; ;EAS_Lift_Timer_V3.c: 1016:         case RESET_MODE_3:
+[e :U 197 ]
+"1017
+[; ;EAS_Lift_Timer_V3.c: 1017:             if (now->minute != 0)
+[e $ ! != -> . *U _now 1 `i -> 0 `i 198  ]
+"1018
+[; ;EAS_Lift_Timer_V3.c: 1018:             {
+{
+"1019
+[; ;EAS_Lift_Timer_V3.c: 1019:                 return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 190  ]
+"1020
+[; ;EAS_Lift_Timer_V3.c: 1020:             }
+}
+[e :U 198 ]
+"1022
+[; ;EAS_Lift_Timer_V3.c: 1022:             return Is_Mode3_Hour(now->hour);
+[e ) ( _Is_Mode3_Hour (1 . *U _now 2 ]
+[e $UE 190  ]
+"1024
+[; ;EAS_Lift_Timer_V3.c: 1024:         case RESET_MODE_TEST:
+[e :U 199 ]
+"1028
+[; ;EAS_Lift_Timer_V3.c: 1028:             return Is_Test_Mode_10_Minute(now->minute);
+[e ) ( _Is_Test_Mode_10_Minute (1 . *U _now 1 ]
+[e $UE 190  ]
+"1030
+[; ;EAS_Lift_Timer_V3.c: 1030:         default:
+[e :U 200 ]
+"1031
+[; ;EAS_Lift_Timer_V3.c: 1031:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 190  ]
+"1032
+[; ;EAS_Lift_Timer_V3.c: 1032:     }
+}
+[e $U 191  ]
+[e :U 192 ]
+[e [\ -> _mode `ui , $ -> . `E663 1 `ui 193
+ , $ -> . `E663 2 `ui 195
+ , $ -> . `E663 3 `ui 197
+ , $ -> . `E663 0 `ui 199
+ 200 ]
+[e :U 191 ]
+"1034
+[; ;EAS_Lift_Timer_V3.c: 1034: }
+[e :UE 190 ]
+}
+"1036
+[; ;EAS_Lift_Timer_V3.c: 1036: static _Bool Already_Triggered_This_Minute(const RTC_Time *now,
+[v _Already_Triggered_This_Minute `(a ~T0 @X0 1 sf6`*CS77`uc`uc`uc`uc`uc ]
+"1042
+[; ;EAS_Lift_Timer_V3.c: 1042: {
+{
+[e :U _Already_Triggered_This_Minute ]
+"1036
+[; ;EAS_Lift_Timer_V3.c: 1036: static _Bool Already_Triggered_This_Minute(const RTC_Time *now,
+[v _now `*CS77 ~T0 @X0 1 r1 ]
+"1037
+[; ;EAS_Lift_Timer_V3.c: 1037:                                           uint8_t last_hour,
+[v _last_hour `uc ~T0 @X0 1 r2 ]
+"1038
+[; ;EAS_Lift_Timer_V3.c: 1038:                                           uint8_t last_minute,
+[v _last_minute `uc ~T0 @X0 1 r3 ]
+"1039
+[; ;EAS_Lift_Timer_V3.c: 1039:                                           uint8_t last_date,
+[v _last_date `uc ~T0 @X0 1 r4 ]
+"1040
+[; ;EAS_Lift_Timer_V3.c: 1040:                                           uint8_t last_month,
+[v _last_month `uc ~T0 @X0 1 r5 ]
+"1041
+[; ;EAS_Lift_Timer_V3.c: 1041:                                           uint8_t last_year)
+[v _last_year `uc ~T0 @X0 1 r6 ]
+"1042
+[; ;EAS_Lift_Timer_V3.c: 1042: {
+[f ]
+"1043
+[; ;EAS_Lift_Timer_V3.c: 1043:     if (now->hour != last_hour)
+[e $ ! != -> . *U _now 2 `i -> _last_hour `i 202  ]
+"1044
+[; ;EAS_Lift_Timer_V3.c: 1044:     {
+{
+"1045
+[; ;EAS_Lift_Timer_V3.c: 1045:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 201  ]
+"1046
+[; ;EAS_Lift_Timer_V3.c: 1046:     }
+}
+[e :U 202 ]
+"1048
+[; ;EAS_Lift_Timer_V3.c: 1048:     if (now->minute != last_minute)
+[e $ ! != -> . *U _now 1 `i -> _last_minute `i 203  ]
+"1049
+[; ;EAS_Lift_Timer_V3.c: 1049:     {
+{
+"1050
+[; ;EAS_Lift_Timer_V3.c: 1050:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 201  ]
+"1051
+[; ;EAS_Lift_Timer_V3.c: 1051:     }
+}
+[e :U 203 ]
+"1053
+[; ;EAS_Lift_Timer_V3.c: 1053:     if (now->date != last_date)
+[e $ ! != -> . *U _now 4 `i -> _last_date `i 204  ]
+"1054
+[; ;EAS_Lift_Timer_V3.c: 1054:     {
+{
+"1055
+[; ;EAS_Lift_Timer_V3.c: 1055:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 201  ]
+"1056
+[; ;EAS_Lift_Timer_V3.c: 1056:     }
+}
+[e :U 204 ]
+"1058
+[; ;EAS_Lift_Timer_V3.c: 1058:     if (now->month != last_month)
+[e $ ! != -> . *U _now 5 `i -> _last_month `i 205  ]
+"1059
+[; ;EAS_Lift_Timer_V3.c: 1059:     {
+{
+"1060
+[; ;EAS_Lift_Timer_V3.c: 1060:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 201  ]
+"1061
+[; ;EAS_Lift_Timer_V3.c: 1061:     }
+}
+[e :U 205 ]
+"1063
+[; ;EAS_Lift_Timer_V3.c: 1063:     if (now->year != last_year)
+[e $ ! != -> . *U _now 6 `i -> _last_year `i 206  ]
+"1064
+[; ;EAS_Lift_Timer_V3.c: 1064:     {
+{
+"1065
+[; ;EAS_Lift_Timer_V3.c: 1065:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 201  ]
+"1066
+[; ;EAS_Lift_Timer_V3.c: 1066:     }
+}
+[e :U 206 ]
+"1068
+[; ;EAS_Lift_Timer_V3.c: 1068:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 201  ]
+"1069
+[; ;EAS_Lift_Timer_V3.c: 1069: }
+[e :UE 201 ]
+}
+"1074
+[; ;EAS_Lift_Timer_V3.c: 1074: static void Init_Device(void)
+[v _Init_Device `(v ~T0 @X0 1 sf ]
+"1075
+[; ;EAS_Lift_Timer_V3.c: 1075: {
+{
+[e :U _Init_Device ]
+[f ]
+"1076
+[; ;EAS_Lift_Timer_V3.c: 1076:     ANSEL = 0x00;
+[e = _ANSEL -> -> 0 `i `uc ]
+"1077
+[; ;EAS_Lift_Timer_V3.c: 1077:     ADCON0 = 0x00;
+[e = _ADCON0 -> -> 0 `i `uc ]
+"1078
+[; ;EAS_Lift_Timer_V3.c: 1078:     CMCON0 = 0x07;
+[e = _CMCON0 -> -> 7 `i `uc ]
+"1080
+[; ;EAS_Lift_Timer_V3.c: 1080:     OSCCONbits.IRCF = 0b110;
+[e = . . _OSCCONbits 0 4 -> -> 6 `i `uc ]
+"1081
+[; ;EAS_Lift_Timer_V3.c: 1081:     OSCCONbits.SCS = 1;
+[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
+"1083
+[; ;EAS_Lift_Timer_V3.c: 1083:     GPIO = 0x00;
+[e = _GPIO -> -> 0 `i `uc ]
+"1086
+[; ;EAS_Lift_Timer_V3.c: 1086:     TRISIObits.TRISIO0 = 0;
+[e = . . _TRISIObits 0 0 -> -> 0 `i `uc ]
+"1087
+[; ;EAS_Lift_Timer_V3.c: 1087:     Relay_Off();
+[e ( _Relay_Off ..  ]
+"1090
+[; ;EAS_Lift_Timer_V3.c: 1090:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"1093
+[; ;EAS_Lift_Timer_V3.c: 1093:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"1097
+[; ;EAS_Lift_Timer_V3.c: 1097:     TRISIObits.TRISIO4 = 1;
+[e = . . _TRISIObits 0 4 -> -> 1 `i `uc ]
+"1100
+[; ;EAS_Lift_Timer_V3.c: 1100:     TRISIObits.TRISIO5 = 1;
+[e = . . _TRISIObits 0 5 -> -> 1 `i `uc ]
+"1102
+[; ;EAS_Lift_Timer_V3.c: 1102:     Timer0_Init_For_Delay();
+[e ( _Timer0_Init_For_Delay ..  ]
+"1103
+[; ;EAS_Lift_Timer_V3.c: 1103: }
+[e :UE 207 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"1108
+[; ;EAS_Lift_Timer_V3.c: 1108: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"1109
+[; ;EAS_Lift_Timer_V3.c: 1109: {
+{
+[e :U _main ]
+[f ]
+"1110
+[; ;EAS_Lift_Timer_V3.c: 1110:     RTC_Time now;
+[v _now `S77 ~T0 @X0 1 a ]
+"1111
+[; ;EAS_Lift_Timer_V3.c: 1111:     RTC_Time after_trigger_time;
+[v _after_trigger_time `S77 ~T0 @X0 1 a ]
+"1112
+[; ;EAS_Lift_Timer_V3.c: 1112:     Reset_Mode selected_mode;
+[v _selected_mode `E663 ~T0 @X0 1 a ]
+"1114
+[; ;EAS_Lift_Timer_V3.c: 1114:     uint8_t last_trigger_hour = 0xFF;
+[v _last_trigger_hour `uc ~T0 @X0 1 a ]
+[e = _last_trigger_hour -> -> 255 `i `uc ]
+"1115
+[; ;EAS_Lift_Timer_V3.c: 1115:     uint8_t last_trigger_minute = 0xFF;
+[v _last_trigger_minute `uc ~T0 @X0 1 a ]
+[e = _last_trigger_minute -> -> 255 `i `uc ]
+"1116
+[; ;EAS_Lift_Timer_V3.c: 1116:     uint8_t last_trigger_date = 0xFF;
+[v _last_trigger_date `uc ~T0 @X0 1 a ]
+[e = _last_trigger_date -> -> 255 `i `uc ]
+"1117
+[; ;EAS_Lift_Timer_V3.c: 1117:     uint8_t last_trigger_month = 0xFF;
+[v _last_trigger_month `uc ~T0 @X0 1 a ]
+[e = _last_trigger_month -> -> 255 `i `uc ]
+"1118
+[; ;EAS_Lift_Timer_V3.c: 1118:     uint8_t last_trigger_year = 0xFF;
+[v _last_trigger_year `uc ~T0 @X0 1 a ]
+[e = _last_trigger_year -> -> 255 `i `uc ]
+"1120
+[; ;EAS_Lift_Timer_V3.c: 1120:     Init_Device();
+[e ( _Init_Device ..  ]
+"1121
+[; ;EAS_Lift_Timer_V3.c: 1121:     I2C_Init();
+[e ( _I2C_Init ..  ]
+"1125
+[; ;EAS_Lift_Timer_V3.c: 1125:     (void)EEPROM_Load_Last_Trigger(&last_trigger_hour,
+[e ( _EEPROM_Load_Last_Trigger (4 , , , , &U _last_trigger_hour &U _last_trigger_minute &U _last_trigger_date &U _last_trigger_month &U _last_trigger_year ]
+"1153
+[; ;EAS_Lift_Timer_V3.c: 1153:     Delay_Seconds(1);
+[e ( _Delay_Seconds (1 -> -> 1 `i `uc ]
+"1157
+[; ;EAS_Lift_Timer_V3.c: 1157:     while (!DS3231_ReadTime_With_Retry(&now))
+[e $U 209  ]
+[e :U 210 ]
+"1158
+[; ;EAS_Lift_Timer_V3.c: 1158:     {
+{
+"1159
+[; ;EAS_Lift_Timer_V3.c: 1159:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"1160
+[; ;EAS_Lift_Timer_V3.c: 1160:         I2C_Init();
+[e ( _I2C_Init ..  ]
+"1161
+[; ;EAS_Lift_Timer_V3.c: 1161:         Delay_Seconds(1);
+[e ( _Delay_Seconds (1 -> -> 1 `i `uc ]
+"1162
+[; ;EAS_Lift_Timer_V3.c: 1162:     }
+}
+[e :U 209 ]
+"1157
+[; ;EAS_Lift_Timer_V3.c: 1157:     while (!DS3231_ReadTime_With_Retry(&now))
+[e $ ! != -> ( _DS3231_ReadTime_With_Retry (1 &U _now `i -> 0 `i 210  ]
+[e :U 211 ]
+"1164
+[; ;EAS_Lift_Timer_V3.c: 1164:     while (1)
+[e :U 213 ]
+"1165
+[; ;EAS_Lift_Timer_V3.c: 1165:     {
+{
+"1166
+[; ;EAS_Lift_Timer_V3.c: 1166:         selected_mode = Read_Selected_Mode();
+[e = _selected_mode ( _Read_Selected_Mode ..  ]
+"1168
+[; ;EAS_Lift_Timer_V3.c: 1168:         if (DS3231_ReadTime_With_Retry(&now))
+[e $ ! != -> ( _DS3231_ReadTime_With_Retry (1 &U _now `i -> 0 `i 215  ]
+"1169
+[; ;EAS_Lift_Timer_V3.c: 1169:         {
+{
+"1170
+[; ;EAS_Lift_Timer_V3.c: 1170:             if (Is_Scheduled_Restart_Time(selected_mode, &now))
+[e $ ! != -> ( _Is_Scheduled_Restart_Time (2 , _selected_mode -> &U _now `*CS77 `i -> 0 `i 216  ]
+"1171
+[; ;EAS_Lift_Timer_V3.c: 1171:             {
+{
+"1172
+[; ;EAS_Lift_Timer_V3.c: 1172:                 _Bool already_triggered;
+[v _already_triggered `a ~T0 @X0 1 a ]
+"1174
+[; ;EAS_Lift_Timer_V3.c: 1174:                 already_triggered = Already_Triggered_This_Minute(&now,
+[e = _already_triggered ( _Already_Triggered_This_Minute (4 , , , , , -> &U _now `*CS77 _last_trigger_hour _last_trigger_minute _last_trigger_date _last_trigger_month _last_trigger_year ]
+"1181
+[; ;EAS_Lift_Timer_V3.c: 1181:                 if (!already_triggered)
+[e $ ! ! != -> _already_triggered `i -> 0 `i 217  ]
+"1182
+[; ;EAS_Lift_Timer_V3.c: 1182:                 {
+{
+"1186
+[; ;EAS_Lift_Timer_V3.c: 1186:                     EEPROM_Save_Last_Trigger(now.hour,
+[e ( _EEPROM_Save_Last_Trigger (4 , , , , . _now 2 . _now 1 . _now 4 . _now 5 . _now 6 ]
+"1192
+[; ;EAS_Lift_Timer_V3.c: 1192:                     last_trigger_hour = now.hour;
+[e = _last_trigger_hour . _now 2 ]
+"1193
+[; ;EAS_Lift_Timer_V3.c: 1193:                     last_trigger_minute = now.minute;
+[e = _last_trigger_minute . _now 1 ]
+"1194
+[; ;EAS_Lift_Timer_V3.c: 1194:                     last_trigger_date = now.date;
+[e = _last_trigger_date . _now 4 ]
+"1195
+[; ;EAS_Lift_Timer_V3.c: 1195:                     last_trigger_month = now.month;
+[e = _last_trigger_month . _now 5 ]
+"1196
+[; ;EAS_Lift_Timer_V3.c: 1196:                     last_trigger_year = now.year;
+[e = _last_trigger_year . _now 6 ]
+"1198
+[; ;EAS_Lift_Timer_V3.c: 1198:                     Relay_Reset_Pulse();
+[e ( _Relay_Reset_Pulse ..  ]
+"1202
+[; ;EAS_Lift_Timer_V3.c: 1202:                     while (1)
+[e :U 219 ]
+"1203
+[; ;EAS_Lift_Timer_V3.c: 1203:                     {
+{
+"1204
+[; ;EAS_Lift_Timer_V3.c: 1204:                         if (DS3231_ReadTime_With_Retry(&after_trigger_time))
+[e $ ! != -> ( _DS3231_ReadTime_With_Retry (1 &U _after_trigger_time `i -> 0 `i 221  ]
+"1205
+[; ;EAS_Lift_Timer_V3.c: 1205:                         {
+{
+"1206
+[; ;EAS_Lift_Timer_V3.c: 1206:                             if (!Already_Triggered_This_Minute(&after_trigger_time,
+[e $ ! ! != -> ( _Already_Triggered_This_Minute (4 , , , , , -> &U _after_trigger_time `*CS77 _last_trigger_hour _last_trigger_minute _last_trigger_date _last_trigger_month _last_trigger_year `i -> 0 `i 222  ]
+"1212
+[; ;EAS_Lift_Timer_V3.c: 1212:                             {
+{
+"1213
+[; ;EAS_Lift_Timer_V3.c: 1213:                                 break;
+[e $U 220  ]
+"1214
+[; ;EAS_Lift_Timer_V3.c: 1214:                             }
+}
+[e :U 222 ]
+"1215
+[; ;EAS_Lift_Timer_V3.c: 1215:                         }
+}
+[e :U 221 ]
+"1217
+[; ;EAS_Lift_Timer_V3.c: 1217:                         Relay_Off();
+[e ( _Relay_Off ..  ]
+"1218
+[; ;EAS_Lift_Timer_V3.c: 1218:                         Delay_Approx_250ms();
+[e ( _Delay_Approx_250ms ..  ]
+"1219
+[; ;EAS_Lift_Timer_V3.c: 1219:                     }
+}
+[e :U 218 ]
+[e $U 219  ]
+[e :U 220 ]
+"1220
+[; ;EAS_Lift_Timer_V3.c: 1220:                 }
+}
+[e :U 217 ]
+"1221
+[; ;EAS_Lift_Timer_V3.c: 1221:             }
+}
+[e :U 216 ]
+"1222
+[; ;EAS_Lift_Timer_V3.c: 1222:         }
+}
+[e $U 223  ]
+"1223
+[; ;EAS_Lift_Timer_V3.c: 1223:         else
+[e :U 215 ]
+"1224
+[; ;EAS_Lift_Timer_V3.c: 1224:         {
+{
+"1228
+[; ;EAS_Lift_Timer_V3.c: 1228:             Relay_Off();
+[e ( _Relay_Off ..  ]
+"1229
+[; ;EAS_Lift_Timer_V3.c: 1229:             I2C_Init();
+[e ( _I2C_Init ..  ]
+"1230
+[; ;EAS_Lift_Timer_V3.c: 1230:             Delay_Approx_1s();
+[e ( _Delay_Approx_1s ..  ]
+"1231
+[; ;EAS_Lift_Timer_V3.c: 1231:         }
+}
+[e :U 223 ]
+"1233
+[; ;EAS_Lift_Timer_V3.c: 1233:         Delay_Approx_250ms();
+[e ( _Delay_Approx_250ms ..  ]
+"1234
+[; ;EAS_Lift_Timer_V3.c: 1234:     }
+}
+[e :U 212 ]
+[e $U 213  ]
+[e :U 214 ]
+"1235
+[; ;EAS_Lift_Timer_V3.c: 1235: }
+[e :UE 208 ]
+}

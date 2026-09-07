@@ -1,0 +1,1805 @@
+
+
+Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
+                                                                                               Fri Jan 02 15:28:37 2026
+
+Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
+     1                           	processor	16F688
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2
+    10                           	psect	text3,local,class=CODE,merge=1,delta=2
+    11                           	psect	text4,local,class=CODE,merge=1,delta=2,group=1
+    12                           	psect	text5,local,class=CODE,merge=1,delta=2,group=1
+    13                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    14                           	dabs	1,0x7E,2
+    15  0000                     
+    16                           ; Generated 22/03/2023 GMT
+    17                           ; 
+    18                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    19                           ; All rights reserved.
+    20                           ; 
+    21                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    22                           ; 
+    23                           ; Redistribution and use in source and binary forms, with or without modification, are
+    24                           ; permitted provided that the following conditions are met:
+    25                           ; 
+    26                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    27                           ;        conditions and the following disclaimer.
+    28                           ; 
+    29                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    30                           ;        of conditions and the following disclaimer in the documentation and/or other
+    31                           ;        materials provided with the distribution. Publication is not required when
+    32                           ;        this file is used in an embedded application.
+    33                           ; 
+    34                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    35                           ;        software without specific prior written permission.
+    36                           ; 
+    37                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    38                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    39                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    40                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    41                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    42                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    43                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    44                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    45                           ; 
+    46                           ; 
+    47                           ; Code-generator required, PIC16F688 Definitions
+    48                           ; 
+    49                           ; SFR Addresses
+    50  0000                     	;# 
+    51  0001                     	;# 
+    52  0002                     	;# 
+    53  0003                     	;# 
+    54  0004                     	;# 
+    55  0005                     	;# 
+    56  0007                     	;# 
+    57  000A                     	;# 
+    58  000B                     	;# 
+    59  000C                     	;# 
+    60  000E                     	;# 
+    61  000E                     	;# 
+    62  000F                     	;# 
+    63  0010                     	;# 
+    64  0011                     	;# 
+    65  0012                     	;# 
+    66  0013                     	;# 
+    67  0014                     	;# 
+    68  0015                     	;# 
+    69  0016                     	;# 
+    70  0017                     	;# 
+    71  0018                     	;# 
+    72  0019                     	;# 
+    73  001A                     	;# 
+    74  001E                     	;# 
+    75  001F                     	;# 
+    76  0081                     	;# 
+    77  0085                     	;# 
+    78  0087                     	;# 
+    79  008C                     	;# 
+    80  008E                     	;# 
+    81  008F                     	;# 
+    82  0090                     	;# 
+    83  0091                     	;# 
+    84  0095                     	;# 
+    85  0095                     	;# 
+    86  0096                     	;# 
+    87  0096                     	;# 
+    88  0097                     	;# 
+    89  0098                     	;# 
+    90  0099                     	;# 
+    91  009A                     	;# 
+    92  009A                     	;# 
+    93  009B                     	;# 
+    94  009C                     	;# 
+    95  009D                     	;# 
+    96  009E                     	;# 
+    97  009F                     	;# 
+    98  0000                     	;# 
+    99  0001                     	;# 
+   100  0002                     	;# 
+   101  0003                     	;# 
+   102  0004                     	;# 
+   103  0005                     	;# 
+   104  0007                     	;# 
+   105  000A                     	;# 
+   106  000B                     	;# 
+   107  000C                     	;# 
+   108  000E                     	;# 
+   109  000E                     	;# 
+   110  000F                     	;# 
+   111  0010                     	;# 
+   112  0011                     	;# 
+   113  0012                     	;# 
+   114  0013                     	;# 
+   115  0014                     	;# 
+   116  0015                     	;# 
+   117  0016                     	;# 
+   118  0017                     	;# 
+   119  0018                     	;# 
+   120  0019                     	;# 
+   121  001A                     	;# 
+   122  001E                     	;# 
+   123  001F                     	;# 
+   124  0081                     	;# 
+   125  0085                     	;# 
+   126  0087                     	;# 
+   127  008C                     	;# 
+   128  008E                     	;# 
+   129  008F                     	;# 
+   130  0090                     	;# 
+   131  0091                     	;# 
+   132  0095                     	;# 
+   133  0095                     	;# 
+   134  0096                     	;# 
+   135  0096                     	;# 
+   136  0097                     	;# 
+   137  0098                     	;# 
+   138  0099                     	;# 
+   139  009A                     	;# 
+   140  009A                     	;# 
+   141  009B                     	;# 
+   142  009C                     	;# 
+   143  009D                     	;# 
+   144  009E                     	;# 
+   145  009F                     	;# 
+   146  0005                     _PORTA	set	5
+   147  000E                     _TMR1L	set	14
+   148  000F                     _TMR1H	set	15
+   149  0010                     _T1CONbits	set	16
+   150  0007                     _PORTCbits	set	7
+   151  0019                     _CMCON0	set	25
+   152  0085                     _TRISA	set	133
+   153  0095                     _WPUA	set	149
+   154  0081                     _OPTION_REG	set	129
+   155  0087                     _TRISCbits	set	135
+   156  0085                     _TRISAbits	set	133
+   157  0091                     _ANSEL	set	145
+   158  008F                     _OSCCON	set	143
+   159                           
+   160                           	psect	cinit
+   161  0006                     start_initialization:	
+   162                           ; #config settings
+   163                           
+   164  0006                     __initialization:
+   165  0006                     end_of_initialization:	
+   166                           ;End of C runtime variable initialization code
+   167                           
+   168  0006                     __end_of__initialization:
+   169  0006  0183               	clrf	3
+   170  0007  118A  2809         	ljmp	_main	;jump to C main() function
+   171                           
+   172                           	psect	cstackCOMMON
+   173  0070                     __pcstackCOMMON:
+   174  0070                     ?_init_pic:
+   175  0070                     ??_init_pic:	
+   176                           ; 1 bytes @ 0x0
+   177                           
+   178  0070                     ?_main:	
+   179                           ; 1 bytes @ 0x0
+   180                           
+   181  0070                     ?_touch_measure_ticks_mask:	
+   182                           ; 1 bytes @ 0x0
+   183                           
+   184  0070                     ?___lmul:	
+   185                           ; 2 bytes @ 0x0
+   186                           
+   187  0070                     ?___lldiv:	
+   188                           ; 4 bytes @ 0x0
+   189                           
+   190  0070                     ___lmul@multiplier:	
+   191                           ; 4 bytes @ 0x0
+   192                           
+   193  0070                     ___lldiv@divisor:	
+   194                           ; 4 bytes @ 0x0
+   195                           
+   196                           
+   197                           ; 4 bytes @ 0x0
+   198  0070                     	ds	2
+   199  0072                     ??_touch_measure_ticks_mask:
+   200                           
+   201                           ; 1 bytes @ 0x2
+   202  0072                     	ds	1
+   203  0073                     touch_measure_ticks_mask@t:
+   204                           
+   205                           ; 2 bytes @ 0x3
+   206  0073                     	ds	1
+   207  0074                     ___lmul@multiplicand:
+   208  0074                     ___lldiv@dividend:	
+   209                           ; 4 bytes @ 0x4
+   210                           
+   211                           
+   212                           ; 4 bytes @ 0x4
+   213  0074                     	ds	1
+   214  0075                     touch_measure_ticks_mask@mask:
+   215                           
+   216                           ; 1 bytes @ 0x5
+   217  0075                     	ds	3
+   218  0078                     ??___lmul:
+   219  0078                     ??___lldiv:	
+   220                           ; 1 bytes @ 0x8
+   221                           
+   222                           
+   223                           ; 1 bytes @ 0x8
+   224  0078                     	ds	1
+   225  0079                     ___lmul@product:
+   226  0079                     ___lldiv@quotient:	
+   227                           ; 4 bytes @ 0x9
+   228                           
+   229                           
+   230                           ; 4 bytes @ 0x9
+   231  0079                     	ds	4
+   232  007D                     ___lldiv@counter:
+   233                           
+   234                           ; 1 bytes @ 0xD
+   235  007D                     	ds	1
+   236                           
+   237                           	psect	cstackBANK0
+   238  0020                     __pcstackBANK0:
+   239  0020                     ?_avg_samples:
+   240  0020                     avg_samples@mask:	
+   241                           ; 2 bytes @ 0x0
+   242                           
+   243                           
+   244                           ; 1 bytes @ 0x0
+   245  0020                     	ds	2
+   246  0022                     ??_avg_samples:
+   247                           
+   248                           ; 1 bytes @ 0x2
+   249  0022                     	ds	4
+   250  0026                     avg_samples@sum:
+   251                           
+   252                           ; 4 bytes @ 0x6
+   253  0026                     	ds	4
+   254  002A                     avg_samples@i:
+   255                           
+   256                           ; 1 bytes @ 0xA
+   257  002A                     	ds	1
+   258  002B                     avg_samples@n:
+   259                           
+   260                           ; 1 bytes @ 0xB
+   261  002B                     	ds	1
+   262  002C                     ??_main:
+   263                           
+   264                           ; 1 bytes @ 0xC
+   265  002C                     	ds	4
+   266  0030                     main@sample0:
+   267                           
+   268                           ; 2 bytes @ 0x10
+   269  0030                     	ds	2
+   270  0032                     main@sample1:
+   271                           
+   272                           ; 2 bytes @ 0x12
+   273  0032                     	ds	2
+   274  0034                     main@touched0:
+   275                           
+   276                           ; 1 bytes @ 0x14
+   277  0034                     	ds	1
+   278  0035                     main@touched1:
+   279                           
+   280                           ; 1 bytes @ 0x15
+   281  0035                     	ds	1
+   282  0036                     main@baseline0:
+   283                           
+   284                           ; 2 bytes @ 0x16
+   285  0036                     	ds	2
+   286  0038                     main@filtered0:
+   287                           
+   288                           ; 2 bytes @ 0x18
+   289  0038                     	ds	2
+   290  003A                     main@baseline1:
+   291                           
+   292                           ; 2 bytes @ 0x1A
+   293  003A                     	ds	2
+   294  003C                     main@filtered1:
+   295                           
+   296                           ; 2 bytes @ 0x1C
+   297  003C                     	ds	2
+   298                           
+   299                           	psect	maintext
+   300  0009                     __pmaintext:	
+   301 ;;
+   302 ;;Main: autosize = 0, tempsize = 4, incstack = 0, save=0
+   303 ;;
+   304 ;; *************** function _main *****************
+   305 ;; Defined at:
+   306 ;;		line 140 in file "DIMA_Touch_Sensor.c"
+   307 ;; Parameters:    Size  Location     Type
+   308 ;;		None
+   309 ;; Auto vars:     Size  Location     Type
+   310 ;;  sample1         2   18[BANK0 ] unsigned int 
+   311 ;;  sample0         2   16[BANK0 ] unsigned int 
+   312 ;;  touched1        1   21[BANK0 ] _Bool 
+   313 ;;  touched0        1   20[BANK0 ] _Bool 
+   314 ;;  filtered1       2   28[BANK0 ] unsigned int 
+   315 ;;  baseline1       2   26[BANK0 ] unsigned int 
+   316 ;;  filtered0       2   24[BANK0 ] unsigned int 
+   317 ;;  baseline0       2   22[BANK0 ] unsigned int 
+   318 ;; Return value:  Size  Location     Type
+   319 ;;                  1    wreg      void 
+   320 ;; Registers used:
+   321 ;;		wreg, status,2, status,0, pclath, cstack
+   322 ;; Tracked objects:
+   323 ;;		On entry : B00/0
+   324 ;;		On exit  : 0/0
+   325 ;;		Unchanged: 0/0
+   326 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   327 ;;      Params:         0       0       0       0
+   328 ;;      Locals:         0      14       0       0
+   329 ;;      Temps:          0       4       0       0
+   330 ;;      Totals:         0      18       0       0
+   331 ;;Total ram usage:       18 bytes
+   332 ;; Hardware stack levels required when called:    2
+   333 ;; This function calls:
+   334 ;;		___lmul
+   335 ;;		_avg_samples
+   336 ;;		_init_pic
+   337 ;;		_touch_measure_ticks_mask
+   338 ;; This function is called by:
+   339 ;;		Startup code after reset
+   340 ;; This function uses a non-reentrant model
+   341 ;;
+   342                           
+   343                           
+   344                           ;psect for function _main
+   345  0009                     _main:
+   346  0009                     l890:	
+   347                           ;incstack = 0
+   348                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   349                           
+   350                           
+   351                           ;DIMA_Touch_Sensor.c: 142:     init_pic();
+   352  0009  118A  22D4  118A   	fcall	_init_pic
+   353                           
+   354                           ;DIMA_Touch_Sensor.c: 145:     uint16_t baseline0 = avg_samples(32, (1u << 0));
+   355  000C  1283               	bcf	3,5	;RP0=0, select bank0
+   356  000D  1303               	bcf	3,6	;RP1=0, select bank0
+   357  000E  01A0               	clrf	avg_samples@mask
+   358  000F  0AA0               	incf	avg_samples@mask,f
+   359  0010  3020               	movlw	32
+   360  0011  118A  2180  118A   	fcall	_avg_samples
+   361  0014  1283               	bcf	3,5	;RP0=0, select bank0
+   362  0015  1303               	bcf	3,6	;RP1=0, select bank0
+   363  0016  0821               	movf	?_avg_samples+1,w
+   364  0017  00B7               	movwf	main@baseline0+1
+   365  0018  0820               	movf	?_avg_samples,w
+   366  0019  00B6               	movwf	main@baseline0
+   367  001A                     l892:
+   368                           
+   369                           ;DIMA_Touch_Sensor.c: 146:     uint16_t filtered0 = baseline0;
+   370  001A  0837               	movf	main@baseline0+1,w
+   371  001B  00B9               	movwf	main@filtered0+1
+   372  001C  0836               	movf	main@baseline0,w
+   373  001D  00B8               	movwf	main@filtered0
+   374  001E                     l894:
+   375                           
+   376                           ;DIMA_Touch_Sensor.c: 148:     uint16_t baseline1 = avg_samples(32, (1u << 1));
+   377  001E  3002               	movlw	2
+   378  001F  00AC               	movwf	??_main
+   379  0020  082C               	movf	??_main,w
+   380  0021  00A0               	movwf	avg_samples@mask
+   381  0022  3020               	movlw	32
+   382  0023  118A  2180  118A   	fcall	_avg_samples
+   383  0026  1283               	bcf	3,5	;RP0=0, select bank0
+   384  0027  1303               	bcf	3,6	;RP1=0, select bank0
+   385  0028  0821               	movf	?_avg_samples+1,w
+   386  0029  00BB               	movwf	main@baseline1+1
+   387  002A  0820               	movf	?_avg_samples,w
+   388  002B  00BA               	movwf	main@baseline1
+   389                           
+   390                           ;DIMA_Touch_Sensor.c: 149:     uint16_t filtered1 = baseline1;
+   391  002C  083B               	movf	main@baseline1+1,w
+   392  002D  00BD               	movwf	main@filtered1+1
+   393  002E  083A               	movf	main@baseline1,w
+   394  002F  00BC               	movwf	main@filtered1
+   395  0030                     l896:
+   396                           
+   397                           ;DIMA_Touch_Sensor.c: 152:     {;DIMA_Touch_Sensor.c: 153:         uint16_t sample0 = to
+      +                          uch_measure_ticks_mask((1u << 0));
+   398  0030  3001               	movlw	1
+   399  0031  118A  2292  118A   	fcall	_touch_measure_ticks_mask
+   400  0034  0871               	movf	?_touch_measure_ticks_mask+1,w
+   401  0035  1283               	bcf	3,5	;RP0=0, select bank0
+   402  0036  1303               	bcf	3,6	;RP1=0, select bank0
+   403  0037  00B1               	movwf	main@sample0+1
+   404  0038  0870               	movf	?_touch_measure_ticks_mask,w
+   405  0039  00B0               	movwf	main@sample0
+   406  003A                     l898:
+   407                           
+   408                           ;DIMA_Touch_Sensor.c: 154:         uint16_t sample1 = touch_measure_ticks_mask((1u << 1)
+      +                          );
+   409  003A  3002               	movlw	2
+   410  003B  118A  2292  118A   	fcall	_touch_measure_ticks_mask
+   411  003E  0871               	movf	?_touch_measure_ticks_mask+1,w
+   412  003F  1283               	bcf	3,5	;RP0=0, select bank0
+   413  0040  1303               	bcf	3,6	;RP1=0, select bank0
+   414  0041  00B3               	movwf	main@sample1+1
+   415  0042  0870               	movf	?_touch_measure_ticks_mask,w
+   416  0043  00B2               	movwf	main@sample1
+   417  0044                     l900:
+   418                           
+   419                           ;DIMA_Touch_Sensor.c: 157:         filtered0 = (uint16_t)(
+   420  0044  0830               	movf	main@sample0,w
+   421  0045  00AC               	movwf	??_main
+   422  0046  0831               	movf	main@sample0+1,w
+   423  0047  00AD               	movwf	??_main+1
+   424  0048  01AE               	clrf	??_main+2
+   425  0049  01AF               	clrf	??_main+3
+   426  004A  0838               	movf	main@filtered0,w
+   427  004B  00F0               	movwf	___lmul@multiplier
+   428  004C  0839               	movf	main@filtered0+1,w
+   429  004D  00F1               	movwf	___lmul@multiplier+1
+   430  004E  01F2               	clrf	___lmul@multiplier+2
+   431  004F  01F3               	clrf	___lmul@multiplier+3
+   432  0050  3000               	movlw	0
+   433  0051  00F7               	movwf	___lmul@multiplicand+3
+   434  0052  3000               	movlw	0
+   435  0053  00F6               	movwf	___lmul@multiplicand+2
+   436  0054  3000               	movlw	0
+   437  0055  00F5               	movwf	___lmul@multiplicand+1
+   438  0056  3003               	movlw	3
+   439  0057  00F4               	movwf	___lmul@multiplicand
+   440  0058  118A  224C  118A   	fcall	___lmul
+   441  005B  0870               	movf	?___lmul,w
+   442  005C  1283               	bcf	3,5	;RP0=0, select bank0
+   443  005D  1303               	bcf	3,6	;RP1=0, select bank0
+   444  005E  07AC               	addwf	??_main,f
+   445  005F  0871               	movf	?___lmul+1,w
+   446  0060  1803               	skipnc
+   447  0061  0F71               	incfsz	?___lmul+1,w
+   448  0062  2864               	goto	u510
+   449  0063  2865               	goto	u511
+   450  0064                     u510:
+   451  0064  07AD               	addwf	??_main+1,f
+   452  0065                     u511:
+   453  0065  0872               	movf	?___lmul+2,w
+   454  0066  1803               	skipnc
+   455  0067  0F72               	incfsz	?___lmul+2,w
+   456  0068  286A               	goto	u512
+   457  0069  286B               	goto	u513
+   458  006A                     u512:
+   459  006A  07AE               	addwf	??_main+2,f
+   460  006B                     u513:
+   461  006B  0873               	movf	?___lmul+3,w
+   462  006C  1803               	skipnc
+   463  006D  0A73               	incf	?___lmul+3,w
+   464  006E  07AF               	addwf	??_main+3,f
+   465  006F  3002               	movlw	2
+   466  0070                     u525:
+   467  0070  1003               	clrc
+   468  0071  0CAF               	rrf	??_main+3,f
+   469  0072  0CAE               	rrf	??_main+2,f
+   470  0073  0CAD               	rrf	??_main+1,f
+   471  0074  0CAC               	rrf	??_main,f
+   472  0075                     u520:
+   473  0075  3EFF               	addlw	-1
+   474  0076  1D03               	skipz
+   475  0077  2870               	goto	u525
+   476  0078  082D               	movf	??_main+1,w
+   477  0079  00B9               	movwf	main@filtered0+1
+   478  007A  082C               	movf	??_main,w
+   479  007B  00B8               	movwf	main@filtered0
+   480  007C                     l902:
+   481                           
+   482                           ;DIMA_Touch_Sensor.c: 162:         filtered1 = (uint16_t)(
+   483  007C  0832               	movf	main@sample1,w
+   484  007D  00AC               	movwf	??_main
+   485  007E  0833               	movf	main@sample1+1,w
+   486  007F  00AD               	movwf	??_main+1
+   487  0080  01AE               	clrf	??_main+2
+   488  0081  01AF               	clrf	??_main+3
+   489  0082  083C               	movf	main@filtered1,w
+   490  0083  00F0               	movwf	___lmul@multiplier
+   491  0084  083D               	movf	main@filtered1+1,w
+   492  0085  00F1               	movwf	___lmul@multiplier+1
+   493  0086  01F2               	clrf	___lmul@multiplier+2
+   494  0087  01F3               	clrf	___lmul@multiplier+3
+   495  0088  3000               	movlw	0
+   496  0089  00F7               	movwf	___lmul@multiplicand+3
+   497  008A  3000               	movlw	0
+   498  008B  00F6               	movwf	___lmul@multiplicand+2
+   499  008C  3000               	movlw	0
+   500  008D  00F5               	movwf	___lmul@multiplicand+1
+   501  008E  3003               	movlw	3
+   502  008F  00F4               	movwf	___lmul@multiplicand
+   503  0090  118A  224C  118A   	fcall	___lmul
+   504  0093  0870               	movf	?___lmul,w
+   505  0094  1283               	bcf	3,5	;RP0=0, select bank0
+   506  0095  1303               	bcf	3,6	;RP1=0, select bank0
+   507  0096  07AC               	addwf	??_main,f
+   508  0097  0871               	movf	?___lmul+1,w
+   509  0098  1803               	skipnc
+   510  0099  0F71               	incfsz	?___lmul+1,w
+   511  009A  289C               	goto	u530
+   512  009B  289D               	goto	u531
+   513  009C                     u530:
+   514  009C  07AD               	addwf	??_main+1,f
+   515  009D                     u531:
+   516  009D  0872               	movf	?___lmul+2,w
+   517  009E  1803               	skipnc
+   518  009F  0F72               	incfsz	?___lmul+2,w
+   519  00A0  28A2               	goto	u532
+   520  00A1  28A3               	goto	u533
+   521  00A2                     u532:
+   522  00A2  07AE               	addwf	??_main+2,f
+   523  00A3                     u533:
+   524  00A3  0873               	movf	?___lmul+3,w
+   525  00A4  1803               	skipnc
+   526  00A5  0A73               	incf	?___lmul+3,w
+   527  00A6  07AF               	addwf	??_main+3,f
+   528  00A7  3002               	movlw	2
+   529  00A8                     u545:
+   530  00A8  1003               	clrc
+   531  00A9  0CAF               	rrf	??_main+3,f
+   532  00AA  0CAE               	rrf	??_main+2,f
+   533  00AB  0CAD               	rrf	??_main+1,f
+   534  00AC  0CAC               	rrf	??_main,f
+   535  00AD                     u540:
+   536  00AD  3EFF               	addlw	-1
+   537  00AE  1D03               	skipz
+   538  00AF  28A8               	goto	u545
+   539  00B0  082D               	movf	??_main+1,w
+   540  00B1  00BD               	movwf	main@filtered1+1
+   541  00B2  082C               	movf	??_main,w
+   542  00B3  00BC               	movwf	main@filtered1
+   543  00B4                     l904:
+   544                           
+   545                           ;DIMA_Touch_Sensor.c: 168:         _Bool touched0 = (filtered0 > (uint16_t)(baseline0 + 
+      +                          25));
+   546  00B4  0836               	movf	main@baseline0,w
+   547  00B5  3E19               	addlw	25
+   548  00B6  00AC               	movwf	??_main
+   549  00B7  0837               	movf	main@baseline0+1,w
+   550  00B8  1803               	skipnc
+   551  00B9  3E01               	addlw	1
+   552  00BA  3E00               	addlw	0
+   553  00BB  00AD               	movwf	??_main+1
+   554  00BC  0839               	movf	main@filtered0+1,w
+   555  00BD  022D               	subwf	??_main+1,w
+   556  00BE  1D03               	skipz
+   557  00BF  28C2               	goto	u555
+   558  00C0  0838               	movf	main@filtered0,w
+   559  00C1  022C               	subwf	??_main,w
+   560  00C2                     u555:
+   561  00C2  1C03               	skipc
+   562  00C3  28C5               	goto	u551
+   563  00C4  28C7               	goto	u550
+   564  00C5                     u551:
+   565  00C5  3001               	movlw	1
+   566  00C6  28C8               	goto	u560
+   567  00C7                     u550:
+   568  00C7  3000               	movlw	0
+   569  00C8                     u560:
+   570  00C8  00AE               	movwf	??_main+2
+   571  00C9  082E               	movf	??_main+2,w
+   572  00CA  00B4               	movwf	main@touched0
+   573  00CB                     l906:
+   574                           
+   575                           ;DIMA_Touch_Sensor.c: 169:         _Bool touched1 = (filtered1 > (uint16_t)(baseline1 + 
+      +                          25));
+   576  00CB  083A               	movf	main@baseline1,w
+   577  00CC  3E19               	addlw	25
+   578  00CD  00AC               	movwf	??_main
+   579  00CE  083B               	movf	main@baseline1+1,w
+   580  00CF  1803               	skipnc
+   581  00D0  3E01               	addlw	1
+   582  00D1  3E00               	addlw	0
+   583  00D2  00AD               	movwf	??_main+1
+   584  00D3  083D               	movf	main@filtered1+1,w
+   585  00D4  022D               	subwf	??_main+1,w
+   586  00D5  1D03               	skipz
+   587  00D6  28D9               	goto	u575
+   588  00D7  083C               	movf	main@filtered1,w
+   589  00D8  022C               	subwf	??_main,w
+   590  00D9                     u575:
+   591  00D9  1C03               	skipc
+   592  00DA  28DC               	goto	u571
+   593  00DB  28DE               	goto	u570
+   594  00DC                     u571:
+   595  00DC  3001               	movlw	1
+   596  00DD  28DF               	goto	u580
+   597  00DE                     u570:
+   598  00DE  3000               	movlw	0
+   599  00DF                     u580:
+   600  00DF  00AE               	movwf	??_main+2
+   601  00E0  082E               	movf	??_main+2,w
+   602  00E1  00B5               	movwf	main@touched1
+   603  00E2                     l908:
+   604                           
+   605                           ;DIMA_Touch_Sensor.c: 172:         PORTCbits.RC4 = touched0 ? 1 : 0;
+   606  00E2  0834               	movf	main@touched0,w
+   607  00E3  1D03               	btfss	3,2
+   608  00E4  28E6               	goto	u591
+   609  00E5  28EA               	goto	u590
+   610  00E6                     u591:
+   611  00E6  1283               	bcf	3,5	;RP0=0, select bank0
+   612  00E7  1303               	bcf	3,6	;RP1=0, select bank0
+   613  00E8  1607               	bsf	7,4	;volatile
+   614  00E9  28ED               	goto	u604
+   615  00EA                     u590:
+   616  00EA  1283               	bcf	3,5	;RP0=0, select bank0
+   617  00EB  1303               	bcf	3,6	;RP1=0, select bank0
+   618  00EC  1207               	bcf	7,4	;volatile
+   619  00ED                     u604:
+   620  00ED                     l910:
+   621                           
+   622                           ;DIMA_Touch_Sensor.c: 173:         PORTCbits.RC5 = touched1 ? 1 : 0;
+   623  00ED  0835               	movf	main@touched1,w
+   624  00EE  1D03               	btfss	3,2
+   625  00EF  28F1               	goto	u611
+   626  00F0  28F5               	goto	u610
+   627  00F1                     u611:
+   628  00F1  1283               	bcf	3,5	;RP0=0, select bank0
+   629  00F2  1303               	bcf	3,6	;RP1=0, select bank0
+   630  00F3  1687               	bsf	7,5	;volatile
+   631  00F4  28F8               	goto	u624
+   632  00F5                     u610:
+   633  00F5  1283               	bcf	3,5	;RP0=0, select bank0
+   634  00F6  1303               	bcf	3,6	;RP1=0, select bank0
+   635  00F7  1287               	bcf	7,5	;volatile
+   636  00F8                     u624:
+   637  00F8                     l912:
+   638                           
+   639                           ;DIMA_Touch_Sensor.c: 176:         if (!touched0)
+   640  00F8  0834               	movf	main@touched0,w
+   641  00F9  1D03               	btfss	3,2
+   642  00FA  28FC               	goto	u631
+   643  00FB  28FD               	goto	u630
+   644  00FC                     u631:
+   645  00FC  2935               	goto	l916
+   646  00FD                     u630:
+   647  00FD                     l914:
+   648                           
+   649                           ;DIMA_Touch_Sensor.c: 177:         {;DIMA_Touch_Sensor.c: 178:             baseline0 = (
+      +                          uint16_t)(
+   650  00FD  0838               	movf	main@filtered0,w
+   651  00FE  00AC               	movwf	??_main
+   652  00FF  0839               	movf	main@filtered0+1,w
+   653  0100  00AD               	movwf	??_main+1
+   654  0101  01AE               	clrf	??_main+2
+   655  0102  01AF               	clrf	??_main+3
+   656  0103  0836               	movf	main@baseline0,w
+   657  0104  00F0               	movwf	___lmul@multiplier
+   658  0105  0837               	movf	main@baseline0+1,w
+   659  0106  00F1               	movwf	___lmul@multiplier+1
+   660  0107  01F2               	clrf	___lmul@multiplier+2
+   661  0108  01F3               	clrf	___lmul@multiplier+3
+   662  0109  3000               	movlw	0
+   663  010A  00F7               	movwf	___lmul@multiplicand+3
+   664  010B  3000               	movlw	0
+   665  010C  00F6               	movwf	___lmul@multiplicand+2
+   666  010D  3000               	movlw	0
+   667  010E  00F5               	movwf	___lmul@multiplicand+1
+   668  010F  300F               	movlw	15
+   669  0110  00F4               	movwf	___lmul@multiplicand
+   670  0111  118A  224C  118A   	fcall	___lmul
+   671  0114  0870               	movf	?___lmul,w
+   672  0115  1283               	bcf	3,5	;RP0=0, select bank0
+   673  0116  1303               	bcf	3,6	;RP1=0, select bank0
+   674  0117  07AC               	addwf	??_main,f
+   675  0118  0871               	movf	?___lmul+1,w
+   676  0119  1803               	skipnc
+   677  011A  0F71               	incfsz	?___lmul+1,w
+   678  011B  291D               	goto	u640
+   679  011C  291E               	goto	u641
+   680  011D                     u640:
+   681  011D  07AD               	addwf	??_main+1,f
+   682  011E                     u641:
+   683  011E  0872               	movf	?___lmul+2,w
+   684  011F  1803               	skipnc
+   685  0120  0F72               	incfsz	?___lmul+2,w
+   686  0121  2923               	goto	u642
+   687  0122  2924               	goto	u643
+   688  0123                     u642:
+   689  0123  07AE               	addwf	??_main+2,f
+   690  0124                     u643:
+   691  0124  0873               	movf	?___lmul+3,w
+   692  0125  1803               	skipnc
+   693  0126  0A73               	incf	?___lmul+3,w
+   694  0127  07AF               	addwf	??_main+3,f
+   695  0128  3004               	movlw	4
+   696  0129                     u655:
+   697  0129  1003               	clrc
+   698  012A  0CAF               	rrf	??_main+3,f
+   699  012B  0CAE               	rrf	??_main+2,f
+   700  012C  0CAD               	rrf	??_main+1,f
+   701  012D  0CAC               	rrf	??_main,f
+   702  012E                     u650:
+   703  012E  3EFF               	addlw	-1
+   704  012F  1D03               	skipz
+   705  0130  2929               	goto	u655
+   706  0131  082D               	movf	??_main+1,w
+   707  0132  00B7               	movwf	main@baseline0+1
+   708  0133  082C               	movf	??_main,w
+   709  0134  00B6               	movwf	main@baseline0
+   710  0135                     l916:
+   711                           
+   712                           ;DIMA_Touch_Sensor.c: 184:         if (!touched1)
+   713  0135  0835               	movf	main@touched1,w
+   714  0136  1D03               	btfss	3,2
+   715  0137  2939               	goto	u661
+   716  0138  293A               	goto	u660
+   717  0139                     u661:
+   718  0139  2972               	goto	l920
+   719  013A                     u660:
+   720  013A                     l918:
+   721                           
+   722                           ;DIMA_Touch_Sensor.c: 185:         {;DIMA_Touch_Sensor.c: 186:             baseline1 = (
+      +                          uint16_t)(
+   723  013A  083C               	movf	main@filtered1,w
+   724  013B  00AC               	movwf	??_main
+   725  013C  083D               	movf	main@filtered1+1,w
+   726  013D  00AD               	movwf	??_main+1
+   727  013E  01AE               	clrf	??_main+2
+   728  013F  01AF               	clrf	??_main+3
+   729  0140  083A               	movf	main@baseline1,w
+   730  0141  00F0               	movwf	___lmul@multiplier
+   731  0142  083B               	movf	main@baseline1+1,w
+   732  0143  00F1               	movwf	___lmul@multiplier+1
+   733  0144  01F2               	clrf	___lmul@multiplier+2
+   734  0145  01F3               	clrf	___lmul@multiplier+3
+   735  0146  3000               	movlw	0
+   736  0147  00F7               	movwf	___lmul@multiplicand+3
+   737  0148  3000               	movlw	0
+   738  0149  00F6               	movwf	___lmul@multiplicand+2
+   739  014A  3000               	movlw	0
+   740  014B  00F5               	movwf	___lmul@multiplicand+1
+   741  014C  300F               	movlw	15
+   742  014D  00F4               	movwf	___lmul@multiplicand
+   743  014E  118A  224C  118A   	fcall	___lmul
+   744  0151  0870               	movf	?___lmul,w
+   745  0152  1283               	bcf	3,5	;RP0=0, select bank0
+   746  0153  1303               	bcf	3,6	;RP1=0, select bank0
+   747  0154  07AC               	addwf	??_main,f
+   748  0155  0871               	movf	?___lmul+1,w
+   749  0156  1803               	skipnc
+   750  0157  0F71               	incfsz	?___lmul+1,w
+   751  0158  295A               	goto	u670
+   752  0159  295B               	goto	u671
+   753  015A                     u670:
+   754  015A  07AD               	addwf	??_main+1,f
+   755  015B                     u671:
+   756  015B  0872               	movf	?___lmul+2,w
+   757  015C  1803               	skipnc
+   758  015D  0F72               	incfsz	?___lmul+2,w
+   759  015E  2960               	goto	u672
+   760  015F  2961               	goto	u673
+   761  0160                     u672:
+   762  0160  07AE               	addwf	??_main+2,f
+   763  0161                     u673:
+   764  0161  0873               	movf	?___lmul+3,w
+   765  0162  1803               	skipnc
+   766  0163  0A73               	incf	?___lmul+3,w
+   767  0164  07AF               	addwf	??_main+3,f
+   768  0165  3004               	movlw	4
+   769  0166                     u685:
+   770  0166  1003               	clrc
+   771  0167  0CAF               	rrf	??_main+3,f
+   772  0168  0CAE               	rrf	??_main+2,f
+   773  0169  0CAD               	rrf	??_main+1,f
+   774  016A  0CAC               	rrf	??_main,f
+   775  016B                     u680:
+   776  016B  3EFF               	addlw	-1
+   777  016C  1D03               	skipz
+   778  016D  2966               	goto	u685
+   779  016E  082D               	movf	??_main+1,w
+   780  016F  00BB               	movwf	main@baseline1+1
+   781  0170  082C               	movf	??_main,w
+   782  0171  00BA               	movwf	main@baseline1
+   783  0172                     l920:
+   784                           
+   785                           ;DIMA_Touch_Sensor.c: 192:         _delay((unsigned long)((5)*(4000000UL/4000.0)));
+   786  0172  3007               	movlw	7
+   787  0173  1283               	bcf	3,5	;RP0=0, select bank0
+   788  0174  1303               	bcf	3,6	;RP1=0, select bank0
+   789  0175  00AD               	movwf	??_main+1
+   790  0176  307C               	movlw	124
+   791  0177  00AC               	movwf	??_main
+   792  0178                     u697:
+   793  0178  0BAC               	decfsz	??_main,f
+   794  0179  2978               	goto	u697
+   795  017A  0BAD               	decfsz	??_main+1,f
+   796  017B  2978               	goto	u697
+   797  017C  297D               	nop2
+   798  017D  2830               	goto	l896
+   799  017E  118A  2804         	ljmp	start
+   800  0180                     __end_of_main:
+   801                           
+   802                           	psect	text1
+   803  02D4                     __ptext1:	
+   804 ;; *************** function _init_pic *****************
+   805 ;; Defined at:
+   806 ;;		line 63 in file "DIMA_Touch_Sensor.c"
+   807 ;; Parameters:    Size  Location     Type
+   808 ;;		None
+   809 ;; Auto vars:     Size  Location     Type
+   810 ;;		None
+   811 ;; Return value:  Size  Location     Type
+   812 ;;                  1    wreg      void 
+   813 ;; Registers used:
+   814 ;;		wreg, status,2
+   815 ;; Tracked objects:
+   816 ;;		On entry : 0/0
+   817 ;;		On exit  : 0/0
+   818 ;;		Unchanged: 0/0
+   819 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   820 ;;      Params:         0       0       0       0
+   821 ;;      Locals:         0       0       0       0
+   822 ;;      Temps:          0       0       0       0
+   823 ;;      Totals:         0       0       0       0
+   824 ;;Total ram usage:        0 bytes
+   825 ;; Hardware stack levels used:    1
+   826 ;; This function calls:
+   827 ;;		Nothing
+   828 ;; This function is called by:
+   829 ;;		_main
+   830 ;; This function uses a non-reentrant model
+   831 ;;
+   832                           
+   833                           
+   834                           ;psect for function _init_pic
+   835  02D4                     _init_pic:
+   836  02D4                     l832:	
+   837                           ;incstack = 0
+   838                           ; Regs used in _init_pic: [wreg+status,2]
+   839                           
+   840                           
+   841                           ;DIMA_Touch_Sensor.c: 66:     OSCCON = 0b01100001;
+   842  02D4  3061               	movlw	97
+   843  02D5  1683               	bsf	3,5	;RP0=1, select bank1
+   844  02D6  1303               	bcf	3,6	;RP1=0, select bank1
+   845  02D7  008F               	movwf	15	;volatile
+   846  02D8                     l834:
+   847                           
+   848                           ;DIMA_Touch_Sensor.c: 69:     ANSEL = 0x00;
+   849  02D8  0191               	clrf	17	;volatile
+   850  02D9                     l836:
+   851                           
+   852                           ;DIMA_Touch_Sensor.c: 70:     CMCON0 = 0x07;
+   853  02D9  3007               	movlw	7
+   854  02DA  1283               	bcf	3,5	;RP0=0, select bank0
+   855  02DB  1303               	bcf	3,6	;RP1=0, select bank0
+   856  02DC  0099               	movwf	25	;volatile
+   857  02DD                     l838:
+   858                           
+   859                           ;DIMA_Touch_Sensor.c: 73:     TRISAbits.TRISA0 = 1;
+   860  02DD  1683               	bsf	3,5	;RP0=1, select bank1
+   861  02DE  1303               	bcf	3,6	;RP1=0, select bank1
+   862  02DF  1405               	bsf	5,0	;volatile
+   863  02E0                     l840:
+   864                           
+   865                           ;DIMA_Touch_Sensor.c: 74:     TRISAbits.TRISA1 = 1;
+   866  02E0  1485               	bsf	5,1	;volatile
+   867  02E1                     l842:
+   868                           
+   869                           ;DIMA_Touch_Sensor.c: 76:     TRISCbits.TRISC4 = 0;
+   870  02E1  1207               	bcf	7,4	;volatile
+   871  02E2                     l844:
+   872                           
+   873                           ;DIMA_Touch_Sensor.c: 77:     TRISCbits.TRISC5 = 0;
+   874  02E2  1287               	bcf	7,5	;volatile
+   875  02E3                     l846:
+   876                           
+   877                           ;DIMA_Touch_Sensor.c: 80:     OPTION_REG |= 0x80;
+   878  02E3  1781               	bsf	1,7	;volatile
+   879                           
+   880                           ;DIMA_Touch_Sensor.c: 81:     WPUA = 0x00;
+   881  02E4  0195               	clrf	21	;volatile
+   882  02E5                     l848:
+   883                           
+   884                           ;DIMA_Touch_Sensor.c: 84:     PORTCbits.RC4 = 0;
+   885  02E5  1283               	bcf	3,5	;RP0=0, select bank0
+   886  02E6  1303               	bcf	3,6	;RP1=0, select bank0
+   887  02E7  1207               	bcf	7,4	;volatile
+   888  02E8                     l850:
+   889                           
+   890                           ;DIMA_Touch_Sensor.c: 85:     PORTCbits.RC5 = 0;
+   891  02E8  1287               	bcf	7,5	;volatile
+   892  02E9                     l852:
+   893                           
+   894                           ;DIMA_Touch_Sensor.c: 89:     T1CONbits.TMR1ON = 0;
+   895  02E9  1010               	bcf	16,0	;volatile
+   896  02EA                     l854:
+   897                           
+   898                           ;DIMA_Touch_Sensor.c: 90:     T1CONbits.TMR1CS = 0;
+   899  02EA  1090               	bcf	16,1	;volatile
+   900  02EB                     l856:
+   901                           
+   902                           ;DIMA_Touch_Sensor.c: 91:     T1CONbits.T1CKPS0 = 0;
+   903  02EB  1210               	bcf	16,4	;volatile
+   904  02EC                     l858:
+   905                           
+   906                           ;DIMA_Touch_Sensor.c: 92:     T1CONbits.T1CKPS1 = 0;
+   907  02EC  1290               	bcf	16,5	;volatile
+   908                           
+   909                           ;DIMA_Touch_Sensor.c: 93:     TMR1H = 0;
+   910  02ED  018F               	clrf	15	;volatile
+   911                           
+   912                           ;DIMA_Touch_Sensor.c: 94:     TMR1L = 0;
+   913  02EE  018E               	clrf	14	;volatile
+   914  02EF                     l31:
+   915  02EF  0008               	return
+   916  02F0                     __end_of_init_pic:
+   917                           
+   918                           	psect	text2
+   919  0180                     __ptext2:	
+   920 ;; *************** function _avg_samples *****************
+   921 ;; Defined at:
+   922 ;;		line 129 in file "DIMA_Touch_Sensor.c"
+   923 ;; Parameters:    Size  Location     Type
+   924 ;;  n               1    wreg     unsigned char 
+   925 ;;  mask            1    0[BANK0 ] unsigned char 
+   926 ;; Auto vars:     Size  Location     Type
+   927 ;;  n               1   11[BANK0 ] unsigned char 
+   928 ;;  i               1   10[BANK0 ] unsigned char 
+   929 ;;  sum             4    6[BANK0 ] unsigned long 
+   930 ;; Return value:  Size  Location     Type
+   931 ;;                  2    0[BANK0 ] unsigned int 
+   932 ;; Registers used:
+   933 ;;		wreg, status,2, status,0, pclath, cstack
+   934 ;; Tracked objects:
+   935 ;;		On entry : 0/0
+   936 ;;		On exit  : 0/0
+   937 ;;		Unchanged: 0/0
+   938 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   939 ;;      Params:         0       2       0       0
+   940 ;;      Locals:         0       6       0       0
+   941 ;;      Temps:          0       4       0       0
+   942 ;;      Totals:         0      12       0       0
+   943 ;;Total ram usage:       12 bytes
+   944 ;; Hardware stack levels used:    1
+   945 ;; Hardware stack levels required when called:    1
+   946 ;; This function calls:
+   947 ;;		___lldiv
+   948 ;;		_touch_measure_ticks_mask
+   949 ;; This function is called by:
+   950 ;;		_main
+   951 ;; This function uses a non-reentrant model
+   952 ;;
+   953                           
+   954                           
+   955                           ;psect for function _avg_samples
+   956  0180                     _avg_samples:
+   957                           
+   958                           ;incstack = 0
+   959                           ; Regs used in _avg_samples: [wreg+status,2+status,0+pclath+cstack]
+   960                           ;avg_samples@n stored from wreg
+   961  0180  1283               	bcf	3,5	;RP0=0, select bank0
+   962  0181  1303               	bcf	3,6	;RP1=0, select bank0
+   963  0182  00AB               	movwf	avg_samples@n
+   964  0183                     l860:
+   965                           
+   966                           ;DIMA_Touch_Sensor.c: 129: static uint16_t avg_samples(uint8_t n, uint8_t mask);DIMA_Tou
+      +                          ch_Sensor.c: 130: {;DIMA_Touch_Sensor.c: 131:     uint32_t sum = 0;
+   967  0183  3000               	movlw	0
+   968  0184  00A9               	movwf	avg_samples@sum+3
+   969  0185  3000               	movlw	0
+   970  0186  00A8               	movwf	avg_samples@sum+2
+   971  0187  3000               	movlw	0
+   972  0188  00A7               	movwf	avg_samples@sum+1
+   973  0189  3000               	movlw	0
+   974  018A  00A6               	movwf	avg_samples@sum
+   975  018B                     l862:
+   976                           
+   977                           ;DIMA_Touch_Sensor.c: 132:     for (uint8_t i = 0; i < n; i++)
+   978  018B  01AA               	clrf	avg_samples@i
+   979  018C  29C1               	goto	l870
+   980  018D                     l864:
+   981                           
+   982                           ;DIMA_Touch_Sensor.c: 133:     {;DIMA_Touch_Sensor.c: 134:         sum += (uint32_t)touc
+      +                          h_measure_ticks_mask(mask);
+   983  018D  0820               	movf	avg_samples@mask,w
+   984  018E  118A  2292  118A   	fcall	_touch_measure_ticks_mask
+   985  0191  0870               	movf	?_touch_measure_ticks_mask,w
+   986  0192  1283               	bcf	3,5	;RP0=0, select bank0
+   987  0193  1303               	bcf	3,6	;RP1=0, select bank0
+   988  0194  00A2               	movwf	??_avg_samples
+   989  0195  0871               	movf	?_touch_measure_ticks_mask+1,w
+   990  0196  00A3               	movwf	??_avg_samples+1
+   991  0197  01A4               	clrf	??_avg_samples+2
+   992  0198  01A5               	clrf	??_avg_samples+3
+   993  0199  0822               	movf	??_avg_samples,w
+   994  019A  07A6               	addwf	avg_samples@sum,f
+   995  019B  0823               	movf	??_avg_samples+1,w
+   996  019C  1103               	clrz
+   997  019D  1803               	skipnc
+   998  019E  3E01               	addlw	1
+   999  019F  1903               	skipnz
+  1000  01A0  29A2               	goto	u441
+  1001  01A1  07A7               	addwf	avg_samples@sum+1,f
+  1002  01A2                     u441:
+  1003  01A2  0824               	movf	??_avg_samples+2,w
+  1004  01A3  1103               	clrz
+  1005  01A4  1803               	skipnc
+  1006  01A5  3E01               	addlw	1
+  1007  01A6  1903               	skipnz
+  1008  01A7  29A9               	goto	u442
+  1009  01A8  07A8               	addwf	avg_samples@sum+2,f
+  1010  01A9                     u442:
+  1011  01A9  0825               	movf	??_avg_samples+3,w
+  1012  01AA  1103               	clrz
+  1013  01AB  1803               	skipnc
+  1014  01AC  3E01               	addlw	1
+  1015  01AD  1903               	skipnz
+  1016  01AE  29B0               	goto	u443
+  1017  01AF  07A9               	addwf	avg_samples@sum+3,f
+  1018  01B0                     u443:
+  1019  01B0                     l866:
+  1020                           
+  1021                           ;DIMA_Touch_Sensor.c: 135:         _delay((unsigned long)((2)*(4000000UL/4000.0)));
+  1022  01B0  3003               	movlw	3
+  1023  01B1  1283               	bcf	3,5	;RP0=0, select bank0
+  1024  01B2  1303               	bcf	3,6	;RP1=0, select bank0
+  1025  01B3  00A3               	movwf	??_avg_samples+1
+  1026  01B4  3097               	movlw	151
+  1027  01B5  00A2               	movwf	??_avg_samples
+  1028  01B6                     u707:
+  1029  01B6  0BA2               	decfsz	??_avg_samples,f
+  1030  01B7  29B6               	goto	u707
+  1031  01B8  0BA3               	decfsz	??_avg_samples+1,f
+  1032  01B9  29B6               	goto	u707
+  1033  01BA  0000               	nop
+  1034  01BB                     l868:
+  1035                           
+  1036                           ;DIMA_Touch_Sensor.c: 136:     }
+  1037  01BB  3001               	movlw	1
+  1038  01BC  1283               	bcf	3,5	;RP0=0, select bank0
+  1039  01BD  1303               	bcf	3,6	;RP1=0, select bank0
+  1040  01BE  00A2               	movwf	??_avg_samples
+  1041  01BF  0822               	movf	??_avg_samples,w
+  1042  01C0  07AA               	addwf	avg_samples@i,f
+  1043  01C1                     l870:
+  1044  01C1  082B               	movf	avg_samples@n,w
+  1045  01C2  022A               	subwf	avg_samples@i,w
+  1046  01C3  1C03               	skipc
+  1047  01C4  29C6               	goto	u451
+  1048  01C5  29C7               	goto	u450
+  1049  01C6                     u451:
+  1050  01C6  298D               	goto	l864
+  1051  01C7                     u450:
+  1052  01C7                     l872:
+  1053                           
+  1054                           ;DIMA_Touch_Sensor.c: 137:     return (uint16_t)(sum / n);
+  1055  01C7  082B               	movf	avg_samples@n,w
+  1056  01C8  00A2               	movwf	??_avg_samples
+  1057  01C9  01A3               	clrf	??_avg_samples+1
+  1058  01CA  01A4               	clrf	??_avg_samples+2
+  1059  01CB  01A5               	clrf	??_avg_samples+3
+  1060  01CC  0825               	movf	??_avg_samples+3,w
+  1061  01CD  00F3               	movwf	___lldiv@divisor+3
+  1062  01CE  0824               	movf	??_avg_samples+2,w
+  1063  01CF  00F2               	movwf	___lldiv@divisor+2
+  1064  01D0  0823               	movf	??_avg_samples+1,w
+  1065  01D1  00F1               	movwf	___lldiv@divisor+1
+  1066  01D2  0822               	movf	??_avg_samples,w
+  1067  01D3  00F0               	movwf	___lldiv@divisor
+  1068  01D4  0829               	movf	avg_samples@sum+3,w
+  1069  01D5  00F7               	movwf	___lldiv@dividend+3
+  1070  01D6  0828               	movf	avg_samples@sum+2,w
+  1071  01D7  00F6               	movwf	___lldiv@dividend+2
+  1072  01D8  0827               	movf	avg_samples@sum+1,w
+  1073  01D9  00F5               	movwf	___lldiv@dividend+1
+  1074  01DA  0826               	movf	avg_samples@sum,w
+  1075  01DB  00F4               	movwf	___lldiv@dividend
+  1076  01DC  118A  21E6  118A   	fcall	___lldiv
+  1077  01DF  0871               	movf	?___lldiv+1,w
+  1078  01E0  1283               	bcf	3,5	;RP0=0, select bank0
+  1079  01E1  1303               	bcf	3,6	;RP1=0, select bank0
+  1080  01E2  00A1               	movwf	?_avg_samples+1
+  1081  01E3  0870               	movf	?___lldiv,w
+  1082  01E4  00A0               	movwf	?_avg_samples
+  1083  01E5                     l44:
+  1084  01E5  0008               	return
+  1085  01E6                     __end_of_avg_samples:
+  1086                           
+  1087                           	psect	text3
+  1088  0292                     __ptext3:	
+  1089 ;; *************** function _touch_measure_ticks_mask *****************
+  1090 ;; Defined at:
+  1091 ;;		line 97 in file "DIMA_Touch_Sensor.c"
+  1092 ;; Parameters:    Size  Location     Type
+  1093 ;;  mask            1    wreg     unsigned char 
+  1094 ;; Auto vars:     Size  Location     Type
+  1095 ;;  mask            1    5[COMMON] unsigned char 
+  1096 ;;  t               2    3[COMMON] unsigned int 
+  1097 ;; Return value:  Size  Location     Type
+  1098 ;;                  2    0[COMMON] unsigned int 
+  1099 ;; Registers used:
+  1100 ;;		wreg, status,2, status,0
+  1101 ;; Tracked objects:
+  1102 ;;		On entry : 0/0
+  1103 ;;		On exit  : 0/0
+  1104 ;;		Unchanged: 0/0
+  1105 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1106 ;;      Params:         2       0       0       0
+  1107 ;;      Locals:         3       0       0       0
+  1108 ;;      Temps:          1       0       0       0
+  1109 ;;      Totals:         6       0       0       0
+  1110 ;;Total ram usage:        6 bytes
+  1111 ;; Hardware stack levels used:    1
+  1112 ;; This function calls:
+  1113 ;;		Nothing
+  1114 ;; This function is called by:
+  1115 ;;		_avg_samples
+  1116 ;;		_main
+  1117 ;; This function uses a non-reentrant model
+  1118 ;;
+  1119                           
+  1120                           
+  1121                           ;psect for function _touch_measure_ticks_mask
+  1122  0292                     _touch_measure_ticks_mask:
+  1123                           
+  1124                           ;incstack = 0
+  1125                           ; Regs used in _touch_measure_ticks_mask: [wreg+status,2+status,0]
+  1126                           ;touch_measure_ticks_mask@mask stored from wreg
+  1127  0292  00F5               	movwf	touch_measure_ticks_mask@mask
+  1128  0293                     l784:
+  1129                           
+  1130                           ;DIMA_Touch_Sensor.c: 97: static uint16_t touch_measure_ticks_mask(uint8_t mask);DIMA_To
+      +                          uch_Sensor.c: 98: {;DIMA_Touch_Sensor.c: 101:     TRISA &= (uint8_t)~mask;
+  1131  0293  0975               	comf	touch_measure_ticks_mask@mask,w
+  1132  0294  00F2               	movwf	??_touch_measure_ticks_mask
+  1133  0295  0872               	movf	??_touch_measure_ticks_mask,w
+  1134  0296  1683               	bsf	3,5	;RP0=1, select bank1
+  1135  0297  1303               	bcf	3,6	;RP1=0, select bank1
+  1136  0298  0585               	andwf	5,f	;volatile
+  1137                           
+  1138                           ;DIMA_Touch_Sensor.c: 102:     PORTA |= mask;
+  1139  0299  0875               	movf	touch_measure_ticks_mask@mask,w	;volatile
+  1140  029A  00F2               	movwf	??_touch_measure_ticks_mask
+  1141  029B  0872               	movf	??_touch_measure_ticks_mask,w
+  1142  029C  1283               	bcf	3,5	;RP0=0, select bank0
+  1143  029D  1303               	bcf	3,6	;RP1=0, select bank0
+  1144  029E  0485               	iorwf	5,f	;volatile
+  1145  029F                     l786:
+  1146                           
+  1147                           ;DIMA_Touch_Sensor.c: 103:     _delay((unsigned long)((10)*(4000000UL/4000000.0)));
+  1148  029F  3003               	movlw	3
+  1149  02A0  00F2               	movwf	??_touch_measure_ticks_mask
+  1150  02A1                     u717:
+  1151  02A1  0BF2               	decfsz	??_touch_measure_ticks_mask,f
+  1152  02A2  2AA1               	goto	u717
+  1153  02A3                     l788:
+  1154                           
+  1155                           ;DIMA_Touch_Sensor.c: 106:     TRISA |= mask;
+  1156  02A3  0875               	movf	touch_measure_ticks_mask@mask,w	;volatile
+  1157  02A4  00F2               	movwf	??_touch_measure_ticks_mask
+  1158  02A5  0872               	movf	??_touch_measure_ticks_mask,w
+  1159  02A6  1683               	bsf	3,5	;RP0=1, select bank1
+  1160  02A7  1303               	bcf	3,6	;RP1=0, select bank1
+  1161  02A8  0485               	iorwf	5,f	;volatile
+  1162  02A9                     l790:
+  1163                           
+  1164                           ;DIMA_Touch_Sensor.c: 107:     PORTA &= (uint8_t)~mask;
+  1165  02A9  0975               	comf	touch_measure_ticks_mask@mask,w
+  1166  02AA  00F2               	movwf	??_touch_measure_ticks_mask
+  1167  02AB  0872               	movf	??_touch_measure_ticks_mask,w
+  1168  02AC  1283               	bcf	3,5	;RP0=0, select bank0
+  1169  02AD  1303               	bcf	3,6	;RP1=0, select bank0
+  1170  02AE  0585               	andwf	5,f	;volatile
+  1171  02AF                     l792:
+  1172                           
+  1173                           ;DIMA_Touch_Sensor.c: 110:     TMR1H = 0;
+  1174  02AF  018F               	clrf	15	;volatile
+  1175  02B0                     l794:
+  1176                           
+  1177                           ;DIMA_Touch_Sensor.c: 111:     TMR1L = 0;
+  1178  02B0  018E               	clrf	14	;volatile
+  1179  02B1                     l796:
+  1180                           
+  1181                           ;DIMA_Touch_Sensor.c: 112:     T1CONbits.TMR1ON = 1;
+  1182  02B1  1410               	bsf	16,0	;volatile
+  1183                           
+  1184                           ;DIMA_Touch_Sensor.c: 114:     while (PORTA & mask)
+  1185  02B2  2AC1               	goto	l802
+  1186  02B3                     l798:
+  1187                           
+  1188                           ;DIMA_Touch_Sensor.c: 115:     {;DIMA_Touch_Sensor.c: 116:         uint16_t t = ((uint16
+      +                          _t)TMR1H << 8) | (uint16_t)TMR1L;
+  1189  02B3  080F               	movf	15,w	;volatile
+  1190  02B4  00F4               	movwf	touch_measure_ticks_mask@t+1
+  1191  02B5  080E               	movf	14,w	;volatile
+  1192  02B6  00F3               	movwf	touch_measure_ticks_mask@t
+  1193                           
+  1194                           ;DIMA_Touch_Sensor.c: 117:         if (t >= 60000)
+  1195  02B7  30EA               	movlw	234
+  1196  02B8  0274               	subwf	touch_measure_ticks_mask@t+1,w
+  1197  02B9  3060               	movlw	96
+  1198  02BA  1903               	skipnz
+  1199  02BB  0273               	subwf	touch_measure_ticks_mask@t,w
+  1200  02BC  1C03               	skipc
+  1201  02BD  2ABF               	goto	u351
+  1202  02BE  2AC0               	goto	u350
+  1203  02BF                     u351:
+  1204  02BF  2AC1               	goto	l802
+  1205  02C0                     u350:
+  1206  02C0  2AC7               	goto	l37
+  1207  02C1                     l802:
+  1208                           
+  1209                           ;DIMA_Touch_Sensor.c: 114:     while (PORTA & mask)
+  1210  02C1  0805               	movf	5,w	;volatile
+  1211  02C2  0575               	andwf	touch_measure_ticks_mask@mask,w
+  1212  02C3  1D03               	btfss	3,2
+  1213  02C4  2AC6               	goto	u361
+  1214  02C5  2AC7               	goto	u360
+  1215  02C6                     u361:
+  1216  02C6  2AB3               	goto	l798
+  1217  02C7                     u360:
+  1218  02C7                     l37:
+  1219                           
+  1220                           ;DIMA_Touch_Sensor.c: 121:     T1CONbits.TMR1ON = 0;
+  1221  02C7  1010               	bcf	16,0	;volatile
+  1222  02C8                     l804:
+  1223                           
+  1224                           ;DIMA_Touch_Sensor.c: 124:     _delay((unsigned long)((50)*(4000000UL/4000000.0)));
+  1225  02C8  3010               	movlw	16
+  1226  02C9  00F2               	movwf	??_touch_measure_ticks_mask
+  1227  02CA                     u727:
+  1228  02CA  0BF2               	decfsz	??_touch_measure_ticks_mask,f
+  1229  02CB  2ACA               	goto	u727
+  1230  02CC  0000               	nop
+  1231                           
+  1232                           ;DIMA_Touch_Sensor.c: 126:     return ((uint16_t)TMR1H << 8) | (uint16_t)TMR1L;
+  1233  02CD  1283               	bcf	3,5	;RP0=0, select bank0
+  1234  02CE  1303               	bcf	3,6	;RP1=0, select bank0
+  1235  02CF  080F               	movf	15,w	;volatile
+  1236  02D0  00F1               	movwf	?_touch_measure_ticks_mask+1
+  1237  02D1  080E               	movf	14,w	;volatile
+  1238  02D2  00F0               	movwf	?_touch_measure_ticks_mask
+  1239  02D3                     l38:
+  1240  02D3  0008               	return
+  1241  02D4                     __end_of_touch_measure_ticks_mask:
+  1242                           
+  1243                           	psect	text4
+  1244  01E6                     __ptext4:	
+  1245 ;; *************** function ___lldiv *****************
+  1246 ;; Defined at:
+  1247 ;;		line 5 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c"
+  1248 ;; Parameters:    Size  Location     Type
+  1249 ;;  divisor         4    0[COMMON] unsigned long 
+  1250 ;;  dividend        4    4[COMMON] unsigned long 
+  1251 ;; Auto vars:     Size  Location     Type
+  1252 ;;  quotient        4    9[COMMON] unsigned long 
+  1253 ;;  counter         1   13[COMMON] unsigned char 
+  1254 ;; Return value:  Size  Location     Type
+  1255 ;;                  4    0[COMMON] unsigned long 
+  1256 ;; Registers used:
+  1257 ;;		wreg, status,2, status,0
+  1258 ;; Tracked objects:
+  1259 ;;		On entry : 0/0
+  1260 ;;		On exit  : 0/0
+  1261 ;;		Unchanged: 0/0
+  1262 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1263 ;;      Params:         8       0       0       0
+  1264 ;;      Locals:         5       0       0       0
+  1265 ;;      Temps:          1       0       0       0
+  1266 ;;      Totals:        14       0       0       0
+  1267 ;;Total ram usage:       14 bytes
+  1268 ;; Hardware stack levels used:    1
+  1269 ;; This function calls:
+  1270 ;;		Nothing
+  1271 ;; This function is called by:
+  1272 ;;		_avg_samples
+  1273 ;; This function uses a non-reentrant model
+  1274 ;;
+  1275                           
+  1276                           
+  1277                           ;psect for function ___lldiv
+  1278  01E6                     ___lldiv:
+  1279  01E6                     l808:	
+  1280                           ;incstack = 0
+  1281                           ; Regs used in ___lldiv: [wreg+status,2+status,0]
+  1282                           
+  1283  01E6  3000               	movlw	0
+  1284  01E7  00FC               	movwf	___lldiv@quotient+3
+  1285  01E8  3000               	movlw	0
+  1286  01E9  00FB               	movwf	___lldiv@quotient+2
+  1287  01EA  3000               	movlw	0
+  1288  01EB  00FA               	movwf	___lldiv@quotient+1
+  1289  01EC  3000               	movlw	0
+  1290  01ED  00F9               	movwf	___lldiv@quotient
+  1291  01EE  0873               	movf	___lldiv@divisor+3,w
+  1292  01EF  0472               	iorwf	___lldiv@divisor+2,w
+  1293  01F0  0471               	iorwf	___lldiv@divisor+1,w
+  1294  01F1  0470               	iorwf	___lldiv@divisor,w
+  1295  01F2  1903               	skipnz
+  1296  01F3  29F5               	goto	u371
+  1297  01F4  29F6               	goto	u370
+  1298  01F5                     u371:
+  1299  01F5  2A43               	goto	l828
+  1300  01F6                     u370:
+  1301  01F6                     l810:
+  1302  01F6  01FD               	clrf	___lldiv@counter
+  1303  01F7  0AFD               	incf	___lldiv@counter,f
+  1304  01F8  2A06               	goto	l814
+  1305  01F9                     l812:
+  1306  01F9  3001               	movlw	1
+  1307  01FA  00F8               	movwf	??___lldiv
+  1308  01FB                     u385:
+  1309  01FB  1003               	clrc
+  1310  01FC  0DF0               	rlf	___lldiv@divisor,f
+  1311  01FD  0DF1               	rlf	___lldiv@divisor+1,f
+  1312  01FE  0DF2               	rlf	___lldiv@divisor+2,f
+  1313  01FF  0DF3               	rlf	___lldiv@divisor+3,f
+  1314  0200  0BF8               	decfsz	??___lldiv,f
+  1315  0201  29FB               	goto	u385
+  1316  0202  3001               	movlw	1
+  1317  0203  00F8               	movwf	??___lldiv
+  1318  0204  0878               	movf	??___lldiv,w
+  1319  0205  07FD               	addwf	___lldiv@counter,f
+  1320  0206                     l814:
+  1321  0206  1FF3               	btfss	___lldiv@divisor+3,7
+  1322  0207  2A09               	goto	u391
+  1323  0208  2A0A               	goto	u390
+  1324  0209                     u391:
+  1325  0209  29F9               	goto	l812
+  1326  020A                     u390:
+  1327  020A                     l816:
+  1328  020A  3001               	movlw	1
+  1329  020B  00F8               	movwf	??___lldiv
+  1330  020C                     u405:
+  1331  020C  1003               	clrc
+  1332  020D  0DF9               	rlf	___lldiv@quotient,f
+  1333  020E  0DFA               	rlf	___lldiv@quotient+1,f
+  1334  020F  0DFB               	rlf	___lldiv@quotient+2,f
+  1335  0210  0DFC               	rlf	___lldiv@quotient+3,f
+  1336  0211  0BF8               	decfsz	??___lldiv,f
+  1337  0212  2A0C               	goto	u405
+  1338  0213                     l818:
+  1339  0213  0873               	movf	___lldiv@divisor+3,w
+  1340  0214  0277               	subwf	___lldiv@dividend+3,w
+  1341  0215  1D03               	skipz
+  1342  0216  2A21               	goto	u415
+  1343  0217  0872               	movf	___lldiv@divisor+2,w
+  1344  0218  0276               	subwf	___lldiv@dividend+2,w
+  1345  0219  1D03               	skipz
+  1346  021A  2A21               	goto	u415
+  1347  021B  0871               	movf	___lldiv@divisor+1,w
+  1348  021C  0275               	subwf	___lldiv@dividend+1,w
+  1349  021D  1D03               	skipz
+  1350  021E  2A21               	goto	u415
+  1351  021F  0870               	movf	___lldiv@divisor,w
+  1352  0220  0274               	subwf	___lldiv@dividend,w
+  1353  0221                     u415:
+  1354  0221  1C03               	skipc
+  1355  0222  2A24               	goto	u411
+  1356  0223  2A25               	goto	u410
+  1357  0224                     u411:
+  1358  0224  2A34               	goto	l824
+  1359  0225                     u410:
+  1360  0225                     l820:
+  1361  0225  0870               	movf	___lldiv@divisor,w
+  1362  0226  02F4               	subwf	___lldiv@dividend,f
+  1363  0227  0871               	movf	___lldiv@divisor+1,w
+  1364  0228  1C03               	skipc
+  1365  0229  0F71               	incfsz	___lldiv@divisor+1,w
+  1366  022A  02F5               	subwf	___lldiv@dividend+1,f
+  1367  022B  0872               	movf	___lldiv@divisor+2,w
+  1368  022C  1C03               	skipc
+  1369  022D  0F72               	incfsz	___lldiv@divisor+2,w
+  1370  022E  02F6               	subwf	___lldiv@dividend+2,f
+  1371  022F  0873               	movf	___lldiv@divisor+3,w
+  1372  0230  1C03               	skipc
+  1373  0231  0F73               	incfsz	___lldiv@divisor+3,w
+  1374  0232  02F7               	subwf	___lldiv@dividend+3,f
+  1375  0233                     l822:
+  1376  0233  1479               	bsf	___lldiv@quotient,0
+  1377  0234                     l824:
+  1378  0234  3001               	movlw	1
+  1379  0235                     u425:
+  1380  0235  1003               	clrc
+  1381  0236  0CF3               	rrf	___lldiv@divisor+3,f
+  1382  0237  0CF2               	rrf	___lldiv@divisor+2,f
+  1383  0238  0CF1               	rrf	___lldiv@divisor+1,f
+  1384  0239  0CF0               	rrf	___lldiv@divisor,f
+  1385  023A  3EFF               	addlw	-1
+  1386  023B  1D03               	skipz
+  1387  023C  2A35               	goto	u425
+  1388  023D                     l826:
+  1389  023D  3001               	movlw	1
+  1390  023E  02FD               	subwf	___lldiv@counter,f
+  1391  023F  1D03               	btfss	3,2
+  1392  0240  2A42               	goto	u431
+  1393  0241  2A43               	goto	u430
+  1394  0242                     u431:
+  1395  0242  2A0A               	goto	l816
+  1396  0243                     u430:
+  1397  0243                     l828:
+  1398  0243  087C               	movf	___lldiv@quotient+3,w
+  1399  0244  00F3               	movwf	?___lldiv+3
+  1400  0245  087B               	movf	___lldiv@quotient+2,w
+  1401  0246  00F2               	movwf	?___lldiv+2
+  1402  0247  087A               	movf	___lldiv@quotient+1,w
+  1403  0248  00F1               	movwf	?___lldiv+1
+  1404  0249  0879               	movf	___lldiv@quotient,w
+  1405  024A  00F0               	movwf	?___lldiv
+  1406  024B                     l176:
+  1407  024B  0008               	return
+  1408  024C                     __end_of___lldiv:
+  1409                           
+  1410                           	psect	text5
+  1411  024C                     __ptext5:	
+  1412 ;; *************** function ___lmul *****************
+  1413 ;; Defined at:
+  1414 ;;		line 15 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul32.c"
+  1415 ;; Parameters:    Size  Location     Type
+  1416 ;;  multiplier      4    0[COMMON] unsigned long 
+  1417 ;;  multiplicand    4    4[COMMON] unsigned long 
+  1418 ;; Auto vars:     Size  Location     Type
+  1419 ;;  product         4    9[COMMON] unsigned long 
+  1420 ;; Return value:  Size  Location     Type
+  1421 ;;                  4    0[COMMON] unsigned long 
+  1422 ;; Registers used:
+  1423 ;;		wreg, status,2, status,0
+  1424 ;; Tracked objects:
+  1425 ;;		On entry : 0/0
+  1426 ;;		On exit  : 0/0
+  1427 ;;		Unchanged: 0/0
+  1428 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1429 ;;      Params:         8       0       0       0
+  1430 ;;      Locals:         4       0       0       0
+  1431 ;;      Temps:          1       0       0       0
+  1432 ;;      Totals:        13       0       0       0
+  1433 ;;Total ram usage:       13 bytes
+  1434 ;; Hardware stack levels used:    1
+  1435 ;; This function calls:
+  1436 ;;		Nothing
+  1437 ;; This function is called by:
+  1438 ;;		_main
+  1439 ;; This function uses a non-reentrant model
+  1440 ;;
+  1441                           
+  1442                           
+  1443                           ;psect for function ___lmul
+  1444  024C                     ___lmul:
+  1445  024C                     l876:	
+  1446                           ;incstack = 0
+  1447                           ; Regs used in ___lmul: [wreg+status,2+status,0]
+  1448                           
+  1449  024C  3000               	movlw	0
+  1450  024D  00FC               	movwf	___lmul@product+3
+  1451  024E  3000               	movlw	0
+  1452  024F  00FB               	movwf	___lmul@product+2
+  1453  0250  3000               	movlw	0
+  1454  0251  00FA               	movwf	___lmul@product+1
+  1455  0252  3000               	movlw	0
+  1456  0253  00F9               	movwf	___lmul@product
+  1457  0254                     l878:
+  1458  0254  1C70               	btfss	___lmul@multiplier,0
+  1459  0255  2A57               	goto	u461
+  1460  0256  2A58               	goto	u460
+  1461  0257                     u461:
+  1462  0257  2A6F               	goto	l882
+  1463  0258                     u460:
+  1464  0258                     l880:
+  1465  0258  0874               	movf	___lmul@multiplicand,w
+  1466  0259  07F9               	addwf	___lmul@product,f
+  1467  025A  0875               	movf	___lmul@multiplicand+1,w
+  1468  025B  1103               	clrz
+  1469  025C  1803               	skipnc
+  1470  025D  3E01               	addlw	1
+  1471  025E  1903               	skipnz
+  1472  025F  2A61               	goto	u471
+  1473  0260  07FA               	addwf	___lmul@product+1,f
+  1474  0261                     u471:
+  1475  0261  0876               	movf	___lmul@multiplicand+2,w
+  1476  0262  1103               	clrz
+  1477  0263  1803               	skipnc
+  1478  0264  3E01               	addlw	1
+  1479  0265  1903               	skipnz
+  1480  0266  2A68               	goto	u472
+  1481  0267  07FB               	addwf	___lmul@product+2,f
+  1482  0268                     u472:
+  1483  0268  0877               	movf	___lmul@multiplicand+3,w
+  1484  0269  1103               	clrz
+  1485  026A  1803               	skipnc
+  1486  026B  3E01               	addlw	1
+  1487  026C  1903               	skipnz
+  1488  026D  2A6F               	goto	u473
+  1489  026E  07FC               	addwf	___lmul@product+3,f
+  1490  026F                     u473:
+  1491  026F                     l882:
+  1492  026F  3001               	movlw	1
+  1493  0270  00F8               	movwf	??___lmul
+  1494  0271                     u485:
+  1495  0271  1003               	clrc
+  1496  0272  0DF4               	rlf	___lmul@multiplicand,f
+  1497  0273  0DF5               	rlf	___lmul@multiplicand+1,f
+  1498  0274  0DF6               	rlf	___lmul@multiplicand+2,f
+  1499  0275  0DF7               	rlf	___lmul@multiplicand+3,f
+  1500  0276  0BF8               	decfsz	??___lmul,f
+  1501  0277  2A71               	goto	u485
+  1502  0278                     l884:
+  1503  0278  3001               	movlw	1
+  1504  0279                     u495:
+  1505  0279  1003               	clrc
+  1506  027A  0CF3               	rrf	___lmul@multiplier+3,f
+  1507  027B  0CF2               	rrf	___lmul@multiplier+2,f
+  1508  027C  0CF1               	rrf	___lmul@multiplier+1,f
+  1509  027D  0CF0               	rrf	___lmul@multiplier,f
+  1510  027E  3EFF               	addlw	-1
+  1511  027F  1D03               	skipz
+  1512  0280  2A79               	goto	u495
+  1513  0281  0873               	movf	___lmul@multiplier+3,w
+  1514  0282  0472               	iorwf	___lmul@multiplier+2,w
+  1515  0283  0471               	iorwf	___lmul@multiplier+1,w
+  1516  0284  0470               	iorwf	___lmul@multiplier,w
+  1517  0285  1D03               	skipz
+  1518  0286  2A88               	goto	u501
+  1519  0287  2A89               	goto	u500
+  1520  0288                     u501:
+  1521  0288  2A54               	goto	l878
+  1522  0289                     u500:
+  1523  0289                     l886:
+  1524  0289  087C               	movf	___lmul@product+3,w
+  1525  028A  00F3               	movwf	?___lmul+3
+  1526  028B  087B               	movf	___lmul@product+2,w
+  1527  028C  00F2               	movwf	?___lmul+2
+  1528  028D  087A               	movf	___lmul@product+1,w
+  1529  028E  00F1               	movwf	?___lmul+1
+  1530  028F  0879               	movf	___lmul@product,w
+  1531  0290  00F0               	movwf	?___lmul
+  1532  0291                     l154:
+  1533  0291  0008               	return
+  1534  0292                     __end_of___lmul:
+  1535  007E                     btemp	set	126	;btemp
+  1536  007E                     wtemp0	set	126
+  1537                           
+  1538                           	psect	config
+  1539                           
+  1540                           ;Config register CONFIG @ 0x2007
+  1541                           ;	Oscillator Selection bits
+  1542                           ;	FOSC = INTOSCIO, INTOSCIO oscillator: I/O function on RA4/OSC2/CLKOUT pin, I/O functio
+      +                          n on RA5/OSC1/CLKIN
+  1543                           ;	Watchdog Timer Enable bit
+  1544                           ;	WDTE = OFF, WDT disabled
+  1545                           ;	Power-up Timer Enable bit
+  1546                           ;	PWRTE = OFF, PWRT disabled
+  1547                           ;	MCLR Pin Function Select bit
+  1548                           ;	MCLRE = OFF, MCLR pin function is digital input, MCLR internally tied to VDD
+  1549                           ;	Code Protection bit
+  1550                           ;	CP = OFF, Program memory code protection is disabled
+  1551                           ;	Data Code Protection bit
+  1552                           ;	CPD = OFF, Data memory code protection is disabled
+  1553                           ;	Brown Out Detect
+  1554                           ;	BOREN = OFF, BOR disabled
+  1555                           ;	Internal External Switchover bit
+  1556                           ;	IESO = 0x1, unprogrammed default
+  1557                           ;	Fail-Safe Clock Monitor Enabled bit
+  1558                           ;	FCMEN = 0x1, unprogrammed default
+  1559  2007                     	org	8199
+  1560  2007  3CD4               	dw	15572
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     14      14
+    BANK0            80     30      30
+    BANK1            80      0       0
+    BANK2            80      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _avg_samples->___lldiv
+
+Critical Paths under _main in BANK0
+
+    _main->_avg_samples
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                18    18      0    1954
+                                             12 BANK0     18    18      0
+                             ___lmul
+                        _avg_samples
+                           _init_pic
+           _touch_measure_ticks_mask
+ ---------------------------------------------------------------------------------
+ (1) _init_pic                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _avg_samples                                         12    10      2     713
+                                              0 BANK0     12    10      2
+                            ___lldiv
+           _touch_measure_ticks_mask
+ ---------------------------------------------------------------------------------
+ (1) _touch_measure_ticks_mask                             6     4      2     133
+                                              0 COMMON     6     4      2
+ ---------------------------------------------------------------------------------
+ (2) ___lldiv                                             14     6      8     314
+                                              0 COMMON    14     6      8
+ ---------------------------------------------------------------------------------
+ (1) ___lmul                                              13     5      8     700
+                                              0 COMMON    13     5      8
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   ___lmul
+   _avg_samples
+     ___lldiv
+     _touch_measure_ticks_mask
+   _init_pic
+   _touch_measure_ticks_mask
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      E       E       1      100.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               50     1E      1E       3       37.5%
+BITBANK1            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK1               50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK2            50      0       0       6        0.0%
+BANK2               50      0       0       7        0.0%
+ABS                  0      0       0       8        0.0%
+BITBANK0            50      0       0       9        0.0%
+DATA                 0      0       0      10        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
+Symbol Table                                                                                   Fri Jan 02 15:28:37 2026
+
+                               l31 02EF                                 l44 01E5  
+                               l37 02C7                                 l38 02D3  
+__size_of_touch_measure_ticks_mask 0042                                l154 0291  
+                              l176 024B                                l810 01F6  
+                              l802 02C1                                l820 0225  
+                              l812 01F9                                l804 02C8  
+                              l900 0044                                l822 0233  
+                              l814 0206                                l910 00ED  
+                              l902 007C                                l824 0234  
+                              l816 020A                                l808 01E6  
+                              l840 02E0                                l832 02D4  
+                              l920 0172                                l912 00F8  
+                              l904 00B4                                l826 023D  
+                              l818 0213                                l850 02E8  
+                              l842 02E1                                l834 02D8  
+                              l914 00FD                                l906 00CB  
+                              l828 0243                                l860 0183  
+                              l852 02E9                                l844 02E2  
+                              l836 02D9                                l916 0135  
+                              l908 00E2                                l790 02A9  
+                              l870 01C1                                l862 018B  
+                              l854 02EA                                l846 02E3  
+                              l838 02DD                                l918 013A  
+                              l880 0258                                l792 02AF  
+                              l784 0293                                l872 01C7  
+                              l864 018D                                l856 02EB  
+                              l848 02E5                                l882 026F  
+                              l794 02B0                                l786 029F  
+                              l866 01B0                                l858 02EC  
+                              l890 0009                                l884 0278  
+                              l876 024C                                l796 02B1  
+                              l788 02A3                                l868 01BB  
+                              l892 001A                                l886 0289  
+                              l878 0254                                l798 02B3  
+                              l894 001E                                l896 0030  
+        ?_touch_measure_ticks_mask 0070                                l898 003A  
+                              u410 0225                                u411 0224  
+                              u500 0289                                u501 0288  
+                              u405 020C                                u430 0243  
+                              u350 02C0                                u510 0064  
+                              u431 0242                                u415 0221  
+                              u351 02BF                                u511 0065  
+                              u360 02C7                                u520 0075  
+                              u512 006A                                u425 0235  
+                              u361 02C6                                u441 01A2  
+                              u513 006B                                u370 01F6  
+                              u450 01C7                                u442 01A9  
+                              u610 00F5                                u530 009C  
+                              u371 01F5                                u451 01C6  
+                              u443 01B0                                u611 00F1  
+                              u531 009D                                u460 0258  
+                              u604 00ED                                u540 00AD  
+                              u532 00A2                                u461 0257  
+                              u533 00A3                                u525 0070  
+                              u390 020A                                u630 00FD  
+                              u550 00C7                                u471 0261  
+                              u391 0209                                u631 00FC  
+                              u551 00C5                                u472 0268  
+                              u640 011D                                u624 00F8  
+                              u560 00C8                                u473 026F  
+                              u385 01FB                                u641 011E  
+                              u545 00A8                                u650 012E  
+                              u642 0123                                u570 00DE  
+                              u707 01B6                                u643 0124  
+                              u571 00DC                                u555 00C2  
+                              u660 013A                                u580 00DF  
+                              u485 0271                                u717 02A1  
+                              u661 0139                                u670 015A  
+                              u590 00EA                                u495 0279  
+                              u727 02CA                                u671 015B  
+                              u655 0129                                u591 00E6  
+                              u575 00D9                                u680 016B  
+                              u672 0160                                u673 0161  
+                              u685 0166                                u697 0178  
+                     avg_samples@i 002A                       avg_samples@n 002B  
+                             _WPUA 0095                        main@sample0 0030  
+                      main@sample1 0032                               _main 0009  
+                             btemp 007E                               start 0004  
+                            ?_main 0070                              _ANSEL 0091  
+                  __end_of___lldiv 024C                              _TMR1H 000F  
+                            _TMR1L 000E                              _PORTA 0005  
+                            _TRISA 0085                ___lmul@multiplicand 0074  
+                            status 0003                              wtemp0 007E  
+                     main@touched0 0034                       main@touched1 0035  
+                   avg_samples@sum 0026                    __initialization 0006  
+                    main@baseline0 0036                      main@baseline1 003A  
+                     __end_of_main 0180                             ??_main 002C  
+                    main@filtered0 0038                      main@filtered1 003C  
+                           _CMCON0 0019                             _OSCCON 008F  
+             __size_of_avg_samples 0066                             ___lmul 024C  
+                        ??___lldiv 0078                   __end_of_init_pic 02F0  
+          __end_of__initialization 0006                    avg_samples@mask 0020  
+                   __pcstackCOMMON 0070                         __pmaintext 0009  
+                          ?___lmul 0070                     ___lmul@product 0079  
+                        ?_init_pic 0070       touch_measure_ticks_mask@mask 0075  
+                  __size_of___lmul 0046                            ___lldiv 01E6  
+         _touch_measure_ticks_mask 0292                            __ptext1 02D4  
+                          __ptext2 0180                            __ptext3 0292  
+                          __ptext4 01E6                            __ptext5 024C  
+                        _T1CONbits 0010               end_of_initialization 0006  
+                       ??_init_pic 0070                    ___lldiv@divisor 0070  
+                  ___lldiv@counter 007D          touch_measure_ticks_mask@t 0073  
+                        _PORTCbits 0007                          _TRISAbits 0085  
+                        _TRISCbits 0087                      ??_avg_samples 0022  
+                   __end_of___lmul 0292                start_initialization 0006  
+                         ??___lmul 0078                __end_of_avg_samples 01E6  
+                        ___latbits 0001                      __pcstackBANK0 0020  
+       ??_touch_measure_ticks_mask 0072                  __size_of_init_pic 001C  
+                         ?___lldiv 0070                        _avg_samples 0180  
+                ___lmul@multiplier 0070                   __size_of___lldiv 0066  
+ __end_of_touch_measure_ticks_mask 02D4                      __size_of_main 0177  
+                         _init_pic 02D4                   ___lldiv@dividend 0074  
+                       _OPTION_REG 0081                   ___lldiv@quotient 0079  
+                     ?_avg_samples 0020  

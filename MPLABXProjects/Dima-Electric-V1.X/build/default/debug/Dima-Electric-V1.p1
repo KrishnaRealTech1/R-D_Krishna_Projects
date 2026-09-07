@@ -1,0 +1,942 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"167 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 167: extern volatile unsigned char GPIO __attribute__((address(0x005)));
+[v _GPIO `Vuc ~T0 @X0 0 e@5 ]
+"77 Dima-Electric-V1.c
+[; ;Dima-Electric-V1.c: 77: typedef struct {
+[s S87 `uc 1 `uc 1 `ui 1 ]
+[n S87 . stable last cnt ]
+"407 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 407: extern volatile unsigned char T1CON __attribute__((address(0x010)));
+[v _T1CON `Vuc ~T0 @X0 0 e@16 ]
+"413
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 413:     struct {
+[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S16 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS TMR1GE T1GINV ]
+"422
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 422:     struct {
+[s S17 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S17 . . T1CKPS0 T1CKPS1 T1GE ]
+"412
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 412: typedef union {
+[u S15 `S16 1 `S17 1 ]
+[n S15 . . . ]
+"429
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 429: extern volatile T1CONbits_t T1CONbits __attribute__((address(0x010)));
+[v _T1CONbits `VS15 ~T0 @X0 0 e@16 ]
+"400
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 400: extern volatile unsigned char TMR1H __attribute__((address(0x00F)));
+[v _TMR1H `Vuc ~T0 @X0 0 e@15 ]
+"393
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 393: extern volatile unsigned char TMR1L __attribute__((address(0x00E)));
+[v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
+"321
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 321:     struct {
+[s S13 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S13 . TMR1IF TMR2IF OSFIF CMIF . CCP1IF ADIF EEIF ]
+"331
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 331:     struct {
+[s S14 :1 `uc 1 :1 `uc 1 ]
+[n S14 . T1IF T2IF ]
+"320
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 320: typedef union {
+[u S12 `S13 1 `S14 1 ]
+[n S12 . . . ]
+"336
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 336: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS12 ~T0 @X0 0 e@12 ]
+"1008
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1008:     struct {
+[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S43 . TMR1IE TMR2IE OSFIE CMIE . CCP1IE ADIE EEIE ]
+"1018
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1018:     struct {
+[s S44 :1 `uc 1 :1 `uc 1 ]
+[n S44 . T1IE T2IE ]
+"1007
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1007: typedef union {
+[u S42 `S43 1 `S44 1 ]
+[n S42 . . . ]
+"1023
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1023: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
+[v _PIE1bits `VS42 ~T0 @X0 0 e@140 ]
+"243
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 243:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . GPIF INTF T0IF GPIE INTE T0IE PEIE GIE ]
+"253
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 253:     struct {
+[s S11 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S11 . . TMR0IF . TMR0IE ]
+"242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 242: typedef union {
+[u S9 `S10 1 `S11 1 ]
+[n S9 . . . ]
+"260
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 260: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS9 ~T0 @X0 0 e@11 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"1118
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1118:     struct {
+[s S48 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S48 . SCS LTS HTS OSTS IRCF ]
+"1125
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1125:     struct {
+[s S49 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S49 . . IRCF0 IRCF1 IRCF2 ]
+"1117
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1117: typedef union {
+[u S47 `S48 1 `S49 1 ]
+[n S47 . . . ]
+"1132
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1132: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
+[v _OSCCONbits `VS47 ~T0 @X0 0 e@143 ]
+"1721
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1721: extern volatile unsigned char ANSEL __attribute__((address(0x09F)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@159 ]
+"700
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 700: extern volatile unsigned char CMCON0 __attribute__((address(0x019)));
+[v _CMCON0 `Vuc ~T0 @X0 0 e@25 ]
+"952
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 952: extern volatile unsigned char TRISIO __attribute__((address(0x085)));
+[v _TRISIO `Vuc ~T0 @X0 0 e@133 ]
+"958
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 958:     struct {
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . TRISIO0 TRISIO1 TRISIO2 TRISIO3 TRISIO4 TRISIO5 ]
+"957
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 957: typedef union {
+[u S40 `S41 1 ]
+[n S40 . . ]
+"967
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 967: extern volatile TRISIObits_t TRISIObits __attribute__((address(0x085)));
+[v _TRISIObits `VS40 ~T0 @X0 0 e@133 ]
+"888
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 888:     struct {
+[s S38 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . PS PSA T0SE T0CS INTEDG nGPPU ]
+"896
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 896:     struct {
+[s S39 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S39 . PS0 PS1 PS2 ]
+"887
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 887: typedef union {
+[u S37 `S38 1 `S39 1 ]
+[n S37 . . . ]
+"902
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 902: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x081)));
+[v _OPTION_REGbits `VS37 ~T0 @X0 0 e@129 ]
+"1236
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1236: extern volatile unsigned char WPU __attribute__((address(0x095)));
+[v _WPU `Vuc ~T0 @X0 0 e@149 ]
+"178 Dima-Electric-V1.c
+[; ;Dima-Electric-V1.c: 178: typedef struct {
+[s S99 `a 1 `a 1 `a 1 `ul 1 `a 1 `ul 1 `a 1 `ul 1 ]
+[n S99 . brush_on vacuum_on vac_off_pending vac_off_deadline_ms brush_off_pending brush_off_deadline_ms led_state led_next_toggle_ms ]
+[p mainexit ]
+"55 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 55: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"62
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 62: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"69
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 69: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"76
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 76: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"162
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 162: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"169
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 169: __asm("GPIO equ 05h");
+[; <" GPIO equ 05h ;# ">
+"219
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 219: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"239
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 239: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"317
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 317: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"388
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 388: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"395
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 395: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"402
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 402: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"409
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 409: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"486
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 486: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"493
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 493: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"564
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 564: __asm("CCPR1 equ 013h");
+[; <" CCPR1 equ 013h ;# ">
+"571
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 571: __asm("CCPR1L equ 013h");
+[; <" CCPR1L equ 013h ;# ">
+"578
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 578: __asm("CCPR1H equ 014h");
+[; <" CCPR1H equ 014h ;# ">
+"585
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 585: __asm("CCP1CON equ 015h");
+[; <" CCP1CON equ 015h ;# ">
+"649
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 649: __asm("WDTCON equ 018h");
+[; <" WDTCON equ 018h ;# ">
+"702
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 702: __asm("CMCON0 equ 019h");
+[; <" CMCON0 equ 019h ;# ">
+"761
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 761: __asm("CMCON1 equ 01Ah");
+[; <" CMCON1 equ 01Ah ;# ">
+"787
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 787: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"794
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 794: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"884
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 884: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"954
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 954: __asm("TRISIO equ 085h");
+[; <" TRISIO equ 085h ;# ">
+"1004
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1004: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1075
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1075: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1114
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1114: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1179
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1179: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1231
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1231: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1238
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1238: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"1243
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1243: __asm("WPUA equ 095h");
+[; <" WPUA equ 095h ;# ">
+"1392
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1392: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"1397
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1397: __asm("IOCA equ 096h");
+[; <" IOCA equ 096h ;# ">
+"1566
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1566: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1626
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1626: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1631
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1631: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1664
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1664: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1671
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1671: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1709
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1709: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+"1716
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1716: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"1723
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f683.h: 1723: __asm("ANSEL equ 09Fh");
+[; <" ANSEL equ 09Fh ;# ">
+"32 Dima-Electric-V1.c
+[p x FOSC    =  INTOSCIO    ]
+"33
+[p x WDTE    =  ON          ]
+"34
+[p x PWRTE  =  ON ]
+"35
+[p x MCLRE  =  OFF         ]
+"36
+[p x CP        =  OFF ]
+"37
+[p x CPD      =  OFF ]
+"38
+[p x BOREN  =  ON ]
+"39
+[p x IESO    =  OFF ]
+"40
+[p x FCMEN  =  OFF ]
+"62
+[; ;Dima-Electric-V1.c: 62: static uint8_t out_shadow = 0;
+[v _out_shadow `uc ~T0 @X0 1 s ]
+[i _out_shadow
+-> -> 0 `i `uc
+]
+[v F656 `(v ~T0 @X0 1 tf1`a ]
+"64
+[; ;Dima-Electric-V1.c: 64: static __attribute__((inline)) void set_brush_pin(_Bool on) { if (on) out_shadow |= (1u<<5); else out_shadow &= ~(1u<<5); }
+[v _set_brush_pin `TF656 ~T0 @X0 1 s ]
+{
+[e :U _set_brush_pin ]
+[v _on `a ~T0 @X0 1 r1 ]
+[f ]
+[e $ ! != -> _on `i -> 0 `i 78  ]
+[e =| _out_shadow -> << -> 1 `ui -> 5 `i `uc ]
+[e $U 79  ]
+[e :U 78 ]
+[e =& _out_shadow -> ~ << -> 1 `ui -> 5 `i `uc ]
+[e :U 79 ]
+[e :UE 77 ]
+}
+[v F659 `(v ~T0 @X0 1 tf1`a ]
+"65
+[; ;Dima-Electric-V1.c: 65: static __attribute__((inline)) void set_vac_pin (_Bool on) { if (on) out_shadow |= (1u<<0); else out_shadow &= ~(1u<<0); }
+[v _set_vac_pin `TF659 ~T0 @X0 1 s ]
+{
+[e :U _set_vac_pin ]
+[v _on `a ~T0 @X0 1 r1 ]
+[f ]
+[e $ ! != -> _on `i -> 0 `i 81  ]
+[e =| _out_shadow -> << -> 1 `ui -> 0 `i `uc ]
+[e $U 82  ]
+[e :U 81 ]
+[e =& _out_shadow -> ~ << -> 1 `ui -> 0 `i `uc ]
+[e :U 82 ]
+[e :UE 80 ]
+}
+[v F662 `(v ~T0 @X0 1 tf1`a ]
+"66
+[; ;Dima-Electric-V1.c: 66: static __attribute__((inline)) void set_led_pin (_Bool on) { if (on) out_shadow |= (1u<<2); else out_shadow &= ~(1u<<2); }
+[v _set_led_pin `TF662 ~T0 @X0 1 s ]
+{
+[e :U _set_led_pin ]
+[v _on `a ~T0 @X0 1 r1 ]
+[f ]
+[e $ ! != -> _on `i -> 0 `i 84  ]
+[e =| _out_shadow -> << -> 1 `ui -> 2 `i `uc ]
+[e $U 85  ]
+[e :U 84 ]
+[e =& _out_shadow -> ~ << -> 1 `ui -> 2 `i `uc ]
+[e :U 85 ]
+[e :UE 83 ]
+}
+[v F665 `(v ~T0 @X0 1 tf ]
+"67
+[; ;Dima-Electric-V1.c: 67: static __attribute__((inline)) void push_outputs(void) { GPIO = out_shadow; }
+[v _push_outputs `TF665 ~T0 @X0 1 s ]
+{
+[e :U _push_outputs ]
+[f ]
+[e = _GPIO _out_shadow ]
+[e :UE 86 ]
+}
+"72
+[; ;Dima-Electric-V1.c: 72: volatile uint32_t g_ms = 0;
+[v _g_ms `Vul ~T0 @X0 1 e ]
+[i _g_ms
+-> -> -> 0 `i `l `ul
+]
+"83
+[; ;Dima-Electric-V1.c: 83: static debounce_t db_handle1 = {0,0,0};
+[v _db_handle1 `S87 ~T0 @X0 1 s ]
+[i _db_handle1
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `ui
+..
+..
+]
+"84
+[; ;Dima-Electric-V1.c: 84: static debounce_t db_handle2 = {0,0,0};
+[v _db_handle2 `S87 ~T0 @X0 1 s ]
+[i _db_handle2
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `ui
+..
+..
+]
+"85
+[; ;Dima-Electric-V1.c: 85: static debounce_t db_lever = {0,0,0};
+[v _db_lever `S87 ~T0 @X0 1 s ]
+[i _db_lever
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `ui
+..
+..
+]
+[v F676 `(v ~T0 @X0 1 tf2`*S87`uc ]
+"87
+[; ;Dima-Electric-V1.c: 87: static __attribute__((inline)) void debounce_update_1ms(debounce_t* db, uint8_t raw)
+[v _debounce_update_1ms `TF676 ~T0 @X0 1 s ]
+"88
+[; ;Dima-Electric-V1.c: 88: {
+{
+[e :U _debounce_update_1ms ]
+"87
+[; ;Dima-Electric-V1.c: 87: static __attribute__((inline)) void debounce_update_1ms(debounce_t* db, uint8_t raw)
+[v _db `*S87 ~T0 @X0 1 r1 ]
+[v _raw `uc ~T0 @X0 1 r2 ]
+"88
+[; ;Dima-Electric-V1.c: 88: {
+[f ]
+"89
+[; ;Dima-Electric-V1.c: 89:     if (raw != db->last) {
+[e $ ! != -> _raw `i -> . *U _db 1 `i 89  ]
+{
+"90
+[; ;Dima-Electric-V1.c: 90:         db->last = raw;
+[e = . *U _db 1 _raw ]
+"91
+[; ;Dima-Electric-V1.c: 91:         db->cnt = 0;
+[e = . *U _db 2 -> -> 0 `i `ui ]
+"92
+[; ;Dima-Electric-V1.c: 92:     } else if (db->cnt < 20u) {
+}
+[e $U 90  ]
+[e :U 89 ]
+[e $ ! < . *U _db 2 -> 20 `ui 91  ]
+{
+"93
+[; ;Dima-Electric-V1.c: 93:         db->cnt++;
+[e ++ . *U _db 2 -> -> 1 `i `ui ]
+"94
+[; ;Dima-Electric-V1.c: 94:         if (db->cnt >= 20u) {
+[e $ ! >= . *U _db 2 -> 20 `ui 92  ]
+{
+"95
+[; ;Dima-Electric-V1.c: 95:             db->stable = db->last;
+[e = . *U _db 0 . *U _db 1 ]
+"96
+[; ;Dima-Electric-V1.c: 96:         }
+}
+[e :U 92 ]
+"97
+[; ;Dima-Electric-V1.c: 97:     }
+}
+[e :U 91 ]
+[e :U 90 ]
+"98
+[; ;Dima-Electric-V1.c: 98: }
+[e :UE 88 ]
+}
+"110
+[; ;Dima-Electric-V1.c: 110: static void tmr1_init(void)
+[v _tmr1_init `(v ~T0 @X0 1 sf ]
+"111
+[; ;Dima-Electric-V1.c: 111: {
+{
+[e :U _tmr1_init ]
+[f ]
+"112
+[; ;Dima-Electric-V1.c: 112:     T1CON = 0;
+[e = _T1CON -> -> 0 `i `uc ]
+"113
+[; ;Dima-Electric-V1.c: 113:     T1CONbits.TMR1CS = 0;
+[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
+"114
+[; ;Dima-Electric-V1.c: 114:     T1CONbits.T1CKPS = 0b11;
+[e = . . _T1CONbits 0 4 -> -> 3 `i `uc ]
+"115
+[; ;Dima-Electric-V1.c: 115:     TMR1H = (uint8_t)((uint16_t)(65536u - 250u) >> 8);
+[e = _TMR1H -> >> -> - -> 65536 `ul -> -> 250 `ui `ul `ui -> 8 `i `uc ]
+"116
+[; ;Dima-Electric-V1.c: 116:     TMR1L = (uint8_t)((uint16_t)(65536u - 250u) & 0xFF);
+[e = _TMR1L -> & -> - -> 65536 `ul -> -> 250 `ui `ul `ui -> -> 255 `i `ui `uc ]
+"117
+[; ;Dima-Electric-V1.c: 117:     PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"118
+[; ;Dima-Electric-V1.c: 118:     PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"119
+[; ;Dima-Electric-V1.c: 119:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"120
+[; ;Dima-Electric-V1.c: 120:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"121
+[; ;Dima-Electric-V1.c: 121:     T1CONbits.TMR1ON = 1;
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+"122
+[; ;Dima-Electric-V1.c: 122: }
+[e :UE 93 ]
+}
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"124
+[; ;Dima-Electric-V1.c: 124: void __attribute__((picinterrupt(("")))) isr(void)
+[v _isr `(v ~T1 @X0 1 ef ]
+"125
+[; ;Dima-Electric-V1.c: 125: {
+{
+[e :U _isr ]
+[f ]
+"126
+[; ;Dima-Electric-V1.c: 126:     if (PIR1bits.TMR1IF) {
+[e $ ! != -> . . _PIR1bits 0 0 `i -> 0 `i 95  ]
+{
+"127
+[; ;Dima-Electric-V1.c: 127:         TMR1H = (uint8_t)((uint16_t)(65536u - 250u) >> 8);
+[e = _TMR1H -> >> -> - -> 65536 `ul -> -> 250 `ui `ul `ui -> 8 `i `uc ]
+"128
+[; ;Dima-Electric-V1.c: 128:         TMR1L = (uint8_t)((uint16_t)(65536u - 250u) & 0xFF);
+[e = _TMR1L -> & -> - -> 65536 `ul -> -> 250 `ui `ul `ui -> -> 255 `i `ui `uc ]
+"129
+[; ;Dima-Electric-V1.c: 129:         PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"130
+[; ;Dima-Electric-V1.c: 130:         g_ms++;
+[e ++ _g_ms -> -> 1 `i `Vul ]
+"131
+[; ;Dima-Electric-V1.c: 131:     }
+}
+[e :U 95 ]
+"132
+[; ;Dima-Electric-V1.c: 132: }
+[e :UE 94 ]
+}
+[v F682 `(ul ~T0 @X0 1 tf ]
+"135
+[; ;Dima-Electric-V1.c: 135: static __attribute__((inline)) uint32_t millis(void)
+[v _millis `TF682 ~T0 @X0 1 s ]
+"136
+[; ;Dima-Electric-V1.c: 136: {
+{
+[e :U _millis ]
+[f ]
+"137
+[; ;Dima-Electric-V1.c: 137:     uint32_t t;
+[v _t `ul ~T0 @X0 1 a ]
+"138
+[; ;Dima-Electric-V1.c: 138:     uint8_t gie = INTCONbits.GIE;
+[v _gie `uc ~T0 @X0 1 a ]
+[e = _gie . . _INTCONbits 0 7 ]
+"139
+[; ;Dima-Electric-V1.c: 139:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"140
+[; ;Dima-Electric-V1.c: 140:     t = g_ms;
+[e = _t _g_ms ]
+"141
+[; ;Dima-Electric-V1.c: 141:     INTCONbits.GIE = gie;
+[e = . . _INTCONbits 0 7 _gie ]
+"142
+[; ;Dima-Electric-V1.c: 142:     return t;
+[e ) _t ]
+[e $UE 96  ]
+"143
+[; ;Dima-Electric-V1.c: 143: }
+[e :UE 96 ]
+}
+[v F686 `(a ~T0 @X0 1 tf2`ul`ul ]
+"145
+[; ;Dima-Electric-V1.c: 145: static __attribute__((inline)) _Bool time_reached(uint32_t now, uint32_t deadline)
+[v _time_reached `TF686 ~T0 @X0 1 s ]
+"146
+[; ;Dima-Electric-V1.c: 146: {
+{
+[e :U _time_reached ]
+"145
+[; ;Dima-Electric-V1.c: 145: static __attribute__((inline)) _Bool time_reached(uint32_t now, uint32_t deadline)
+[v _now `ul ~T0 @X0 1 r1 ]
+[v _deadline `ul ~T0 @X0 1 r2 ]
+"146
+[; ;Dima-Electric-V1.c: 146: {
+[f ]
+"147
+[; ;Dima-Electric-V1.c: 147:     return (int32_t)(now - deadline) >= 0;
+[e ) -> -> >= -> - _now _deadline `l -> -> 0 `i `l `i `a ]
+[e $UE 97  ]
+"148
+[; ;Dima-Electric-V1.c: 148: }
+[e :UE 97 ]
+}
+"153
+[; ;Dima-Electric-V1.c: 153: static void io_clock_init(void)
+[v _io_clock_init `(v ~T0 @X0 1 sf ]
+"154
+[; ;Dima-Electric-V1.c: 154: {
+{
+[e :U _io_clock_init ]
+[f ]
+"155
+[; ;Dima-Electric-V1.c: 155:     OSCCONbits.IRCF = 0b111;
+[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
+"156
+[; ;Dima-Electric-V1.c: 156:     ANSEL = 0x00;
+[e = _ANSEL -> -> 0 `i `uc ]
+"157
+[; ;Dima-Electric-V1.c: 157:     CMCON0 = 0x07;
+[e = _CMCON0 -> -> 7 `i `uc ]
+"159
+[; ;Dima-Electric-V1.c: 159:     TRISIO = 0;
+[e = _TRISIO -> -> 0 `i `uc ]
+"160
+[; ;Dima-Electric-V1.c: 160:     TRISIObits.TRISIO5 = 0;
+[e = . . _TRISIObits 0 5 -> -> 0 `i `uc ]
+"161
+[; ;Dima-Electric-V1.c: 161:     TRISIObits.TRISIO0 = 0;
+[e = . . _TRISIObits 0 0 -> -> 0 `i `uc ]
+"162
+[; ;Dima-Electric-V1.c: 162:     TRISIObits.TRISIO2 = 0;
+[e = . . _TRISIObits 0 2 -> -> 0 `i `uc ]
+"163
+[; ;Dima-Electric-V1.c: 163:     TRISIObits.TRISIO1 = 1;
+[e = . . _TRISIObits 0 1 -> -> 1 `i `uc ]
+"164
+[; ;Dima-Electric-V1.c: 164:     TRISIObits.TRISIO4 = 1;
+[e = . . _TRISIObits 0 4 -> -> 1 `i `uc ]
+"167
+[; ;Dima-Electric-V1.c: 167:     OPTION_REGbits.nGPPU = 1;
+[e = . . _OPTION_REGbits 0 5 -> -> 1 `i `uc ]
+"168
+[; ;Dima-Electric-V1.c: 168:     WPU = 0x00;
+[e = _WPU -> -> 0 `i `uc ]
+"171
+[; ;Dima-Electric-V1.c: 171:     out_shadow &= ~((1u<<5) | (1u<<0) | (1u<<2));
+[e =& _out_shadow -> ~ | | << -> 1 `ui -> 5 `i << -> 1 `ui -> 0 `i << -> 1 `ui -> 2 `i `uc ]
+"172
+[; ;Dima-Electric-V1.c: 172:     push_outputs();
+[e ( _push_outputs ..  ]
+"173
+[; ;Dima-Electric-V1.c: 173: }
+[e :UE 98 ]
+}
+"195
+[; ;Dima-Electric-V1.c: 195: static app_state_t app = { 0, 0, 0, 0, 0, 0, 0, 0 };
+[v _app `S99 ~T0 @X0 1 s ]
+[i _app
+:U ..
+:U ..
+-> -> 0 `i `a
+-> -> 0 `i `a
+-> -> 0 `i `a
+-> -> -> 0 `i `l `ul
+-> -> 0 `i `a
+-> -> -> 0 `i `l `ul
+-> -> 0 `i `a
+-> -> -> 0 `i `l `ul
+..
+..
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"200
+[; ;Dima-Electric-V1.c: 200: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"201
+[; ;Dima-Electric-V1.c: 201: {
+{
+[e :U _main ]
+[f ]
+"202
+[; ;Dima-Electric-V1.c: 202:     io_clock_init();
+[e ( _io_clock_init ..  ]
+"203
+[; ;Dima-Electric-V1.c: 203:     tmr1_init();
+[e ( _tmr1_init ..  ]
+"205
+[; ;Dima-Electric-V1.c: 205:     app.brush_on = 0;
+[e = . _app 0 -> -> 0 `i `a ]
+"206
+[; ;Dima-Electric-V1.c: 206:     app.vacuum_on = 0;
+[e = . _app 1 -> -> 0 `i `a ]
+"207
+[; ;Dima-Electric-V1.c: 207:     app.vac_off_pending = 0;
+[e = . _app 2 -> -> 0 `i `a ]
+"208
+[; ;Dima-Electric-V1.c: 208:     app.brush_off_pending = 0;
+[e = . _app 4 -> -> 0 `i `a ]
+"209
+[; ;Dima-Electric-V1.c: 209:     app.led_state = 0;
+[e = . _app 6 -> -> 0 `i `a ]
+"210
+[; ;Dima-Electric-V1.c: 210:     app.led_next_toggle_ms= 0;
+[e = . _app 7 -> -> -> 0 `i `l `ul ]
+"212
+[; ;Dima-Electric-V1.c: 212:     uint32_t last_tick = millis();
+[v _last_tick `ul ~T0 @X0 1 a ]
+[e = _last_tick ( _millis ..  ]
+"214
+[; ;Dima-Electric-V1.c: 214:     for (;;) {
+{
+[e :U 101 ]
+{
+"215
+[; ;Dima-Electric-V1.c: 215:         uint32_t now = millis();
+[v _now `ul ~T0 @X0 1 a ]
+[e = _now ( _millis ..  ]
+"218
+[; ;Dima-Electric-V1.c: 218:         if (now != last_tick) {
+[e $ ! != _now _last_tick 104  ]
+{
+"219
+[; ;Dima-Electric-V1.c: 219:             last_tick = now;
+[e = _last_tick _now ]
+"221
+[; ;Dima-Electric-V1.c: 221:             uint8_t raw_h1 = ((GPIO >> 1) & 0x1) ? 1u : 0u;
+[v _raw_h1 `uc ~T0 @X0 1 a ]
+[e = _raw_h1 -> ? != & >> -> _GPIO `i -> 1 `i -> 1 `i -> 0 `i : -> 1 `ui -> 0 `ui `uc ]
+"222
+[; ;Dima-Electric-V1.c: 222:             uint8_t raw_h2 = ((GPIO >> 4) & 0x1) ? 1u : 0u;
+[v _raw_h2 `uc ~T0 @X0 1 a ]
+[e = _raw_h2 -> ? != & >> -> _GPIO `i -> 4 `i -> 1 `i -> 0 `i : -> 1 `ui -> 0 `ui `uc ]
+"223
+[; ;Dima-Electric-V1.c: 223:             uint8_t raw_lev = ((GPIO >> 3) & 0x1) ? 1u : 0u;
+[v _raw_lev `uc ~T0 @X0 1 a ]
+[e = _raw_lev -> ? != & >> -> _GPIO `i -> 3 `i -> 1 `i -> 0 `i : -> 1 `ui -> 0 `ui `uc ]
+"225
+[; ;Dima-Electric-V1.c: 225:             debounce_update_1ms(&db_handle1, raw_h1);
+[e ( _debounce_update_1ms (2 , &U _db_handle1 _raw_h1 ]
+"226
+[; ;Dima-Electric-V1.c: 226:             debounce_update_1ms(&db_handle2, raw_h2);
+[e ( _debounce_update_1ms (2 , &U _db_handle2 _raw_h2 ]
+"227
+[; ;Dima-Electric-V1.c: 227:             debounce_update_1ms(&db_lever, raw_lev);
+[e ( _debounce_update_1ms (2 , &U _db_lever _raw_lev ]
+"228
+[; ;Dima-Electric-V1.c: 228:         }
+}
+[e :U 104 ]
+"230
+[; ;Dima-Electric-V1.c: 230:         uint8_t h1 = db_handle1.stable;
+[v _h1 `uc ~T0 @X0 1 a ]
+[e = _h1 . _db_handle1 0 ]
+"231
+[; ;Dima-Electric-V1.c: 231:         uint8_t h2 = db_handle2.stable;
+[v _h2 `uc ~T0 @X0 1 a ]
+[e = _h2 . _db_handle2 0 ]
+"232
+[; ;Dima-Electric-V1.c: 232:         uint8_t lev = db_lever.stable;
+[v _lev `uc ~T0 @X0 1 a ]
+[e = _lev . _db_lever 0 ]
+"234
+[; ;Dima-Electric-V1.c: 234:         _Bool both_high = (h1 && h2);
+[v _both_high `a ~T0 @X0 1 a ]
+[e = _both_high -> -> && != -> _h1 `i -> 0 `i != -> _h2 `i -> 0 `i `i `a ]
+"235
+[; ;Dima-Electric-V1.c: 235:         _Bool both_low = (!h1 && !h2);
+[v _both_low `a ~T0 @X0 1 a ]
+[e = _both_low -> -> && ! != -> _h1 `i -> 0 `i ! != -> _h2 `i -> 0 `i `i `a ]
+"236
+[; ;Dima-Electric-V1.c: 236:         _Bool either_low = (!h1 || !h2);
+[v _either_low `a ~T0 @X0 1 a ]
+[e = _either_low -> -> || ! != -> _h1 `i -> 0 `i ! != -> _h2 `i -> 0 `i `i `a ]
+"239
+[; ;Dima-Electric-V1.c: 239:         if (both_high) {
+[e $ ! != -> _both_high `i -> 0 `i 105  ]
+{
+"240
+[; ;Dima-Electric-V1.c: 240:             app.brush_on = 1;
+[e = . _app 0 -> -> 1 `i `a ]
+"241
+[; ;Dima-Electric-V1.c: 241:             app.brush_off_pending = 0;
+[e = . _app 4 -> -> 0 `i `a ]
+"242
+[; ;Dima-Electric-V1.c: 242:         }
+}
+[e $U 106  ]
+"243
+[; ;Dima-Electric-V1.c: 243:         else if (both_low) {
+[e :U 105 ]
+[e $ ! != -> _both_low `i -> 0 `i 107  ]
+{
+"244
+[; ;Dima-Electric-V1.c: 244:             app.brush_on = 0;
+[e = . _app 0 -> -> 0 `i `a ]
+"245
+[; ;Dima-Electric-V1.c: 245:             app.brush_off_pending = 0;
+[e = . _app 4 -> -> 0 `i `a ]
+"246
+[; ;Dima-Electric-V1.c: 246:         }
+}
+[e $U 108  ]
+"247
+[; ;Dima-Electric-V1.c: 247:         else {
+[e :U 107 ]
+{
+"248
+[; ;Dima-Electric-V1.c: 248:             if (app.brush_on) {
+[e $ ! != -> . _app 0 `i -> 0 `i 109  ]
+{
+"250
+[; ;Dima-Electric-V1.c: 250:                 if (!app.brush_off_pending) {
+[e $ ! ! != -> . _app 4 `i -> 0 `i 110  ]
+{
+"251
+[; ;Dima-Electric-V1.c: 251:                     app.brush_off_pending = 1;
+[e = . _app 4 -> -> 1 `i `a ]
+"252
+[; ;Dima-Electric-V1.c: 252:                     app.brush_off_deadline_ms = now + 3000u;
+[e = . _app 5 + _now -> -> 3000 `ui `ul ]
+"253
+[; ;Dima-Electric-V1.c: 253:                 }
+}
+[e :U 110 ]
+"254
+[; ;Dima-Electric-V1.c: 254:                 if (app.brush_off_pending && time_reached(now, app.brush_off_deadline_ms) && !both_high) {
+[e $ ! && && != -> . _app 4 `i -> 0 `i != -> ( _time_reached (2 , _now . _app 5 `i -> 0 `i ! != -> _both_high `i -> 0 `i 111  ]
+{
+"255
+[; ;Dima-Electric-V1.c: 255:                     app.brush_on = 0;
+[e = . _app 0 -> -> 0 `i `a ]
+"256
+[; ;Dima-Electric-V1.c: 256:                     app.brush_off_pending = 0;
+[e = . _app 4 -> -> 0 `i `a ]
+"257
+[; ;Dima-Electric-V1.c: 257:                 }
+}
+[e :U 111 ]
+"258
+[; ;Dima-Electric-V1.c: 258:             } else {
+}
+[e $U 112  ]
+[e :U 109 ]
+{
+"259
+[; ;Dima-Electric-V1.c: 259:                 app.brush_off_pending = 0;
+[e = . _app 4 -> -> 0 `i `a ]
+"260
+[; ;Dima-Electric-V1.c: 260:             }
+}
+[e :U 112 ]
+"261
+[; ;Dima-Electric-V1.c: 261:         }
+}
+[e :U 108 ]
+[e :U 106 ]
+"264
+[; ;Dima-Electric-V1.c: 264:         if (lev) {
+[e $ ! != -> _lev `i -> 0 `i 113  ]
+{
+"265
+[; ;Dima-Electric-V1.c: 265:             app.vacuum_on = 1;
+[e = . _app 1 -> -> 1 `i `a ]
+"266
+[; ;Dima-Electric-V1.c: 266:             app.vac_off_pending = 0;
+[e = . _app 2 -> -> 0 `i `a ]
+"267
+[; ;Dima-Electric-V1.c: 267:         } else {
+}
+[e $U 114  ]
+[e :U 113 ]
+{
+"268
+[; ;Dima-Electric-V1.c: 268:             if (app.vacuum_on && !app.vac_off_pending) {
+[e $ ! && != -> . _app 1 `i -> 0 `i ! != -> . _app 2 `i -> 0 `i 115  ]
+{
+"269
+[; ;Dima-Electric-V1.c: 269:                 app.vac_off_pending = 1;
+[e = . _app 2 -> -> 1 `i `a ]
+"270
+[; ;Dima-Electric-V1.c: 270:                 app.vac_off_deadline_ms = now + 10000u;
+[e = . _app 3 + _now -> -> 10000 `ui `ul ]
+"272
+[; ;Dima-Electric-V1.c: 272:                 app.led_state = 1;
+[e = . _app 6 -> -> 1 `i `a ]
+"273
+[; ;Dima-Electric-V1.c: 273:                 app.led_next_toggle_ms = now + 250u;
+[e = . _app 7 + _now -> -> 250 `ui `ul ]
+"274
+[; ;Dima-Electric-V1.c: 274:             }
+}
+[e :U 115 ]
+"275
+[; ;Dima-Electric-V1.c: 275:             if (app.vac_off_pending && !lev && time_reached(now, app.vac_off_deadline_ms)) {
+[e $ ! && && != -> . _app 2 `i -> 0 `i ! != -> _lev `i -> 0 `i != -> ( _time_reached (2 , _now . _app 3 `i -> 0 `i 116  ]
+{
+"276
+[; ;Dima-Electric-V1.c: 276:                 app.vacuum_on = 0;
+[e = . _app 1 -> -> 0 `i `a ]
+"277
+[; ;Dima-Electric-V1.c: 277:                 app.vac_off_pending = 0;
+[e = . _app 2 -> -> 0 `i `a ]
+"279
+[; ;Dima-Electric-V1.c: 279:                 app.led_state = 0;
+[e = . _app 6 -> -> 0 `i `a ]
+"280
+[; ;Dima-Electric-V1.c: 280:             }
+}
+[e :U 116 ]
+"281
+[; ;Dima-Electric-V1.c: 281:         }
+}
+[e :U 114 ]
+"285
+[; ;Dima-Electric-V1.c: 285:         if (app.vac_off_pending) {
+[e $ ! != -> . _app 2 `i -> 0 `i 117  ]
+{
+"286
+[; ;Dima-Electric-V1.c: 286:             if (time_reached(now, app.led_next_toggle_ms)) {
+[e $ ! != -> ( _time_reached (2 , _now . _app 7 `i -> 0 `i 118  ]
+{
+"287
+[; ;Dima-Electric-V1.c: 287:                 app.led_state = !app.led_state;
+[e = . _app 6 -> -> ! != -> . _app 6 `i -> 0 `i `i `a ]
+"288
+[; ;Dima-Electric-V1.c: 288:                 app.led_next_toggle_ms = now + 250u;
+[e = . _app 7 + _now -> -> 250 `ui `ul ]
+"289
+[; ;Dima-Electric-V1.c: 289:             }
+}
+[e :U 118 ]
+"290
+[; ;Dima-Electric-V1.c: 290:         } else {
+}
+[e $U 119  ]
+[e :U 117 ]
+{
+"291
+[; ;Dima-Electric-V1.c: 291:             app.led_state = 0;
+[e = . _app 6 -> -> 0 `i `a ]
+"292
+[; ;Dima-Electric-V1.c: 292:         }
+}
+[e :U 119 ]
+"295
+[; ;Dima-Electric-V1.c: 295:         set_brush_pin(app.brush_on);
+[e ( _set_brush_pin (1 . _app 0 ]
+"296
+[; ;Dima-Electric-V1.c: 296:         set_vac_pin(app.vacuum_on);
+[e ( _set_vac_pin (1 . _app 1 ]
+"297
+[; ;Dima-Electric-V1.c: 297:         set_led_pin(app.led_state);
+[e ( _set_led_pin (1 . _app 6 ]
+"298
+[; ;Dima-Electric-V1.c: 298:         push_outputs();
+[e ( _push_outputs ..  ]
+"301
+[; ;Dima-Electric-V1.c: 301:         __asm("clrwdt");
+[; <" clrwdt ;# ">
+"302
+[; ;Dima-Electric-V1.c: 302:     }
+}
+[e $U 101  ]
+[e :U 102 ]
+}
+"303
+[; ;Dima-Electric-V1.c: 303: }
+[e :UE 100 ]
+}

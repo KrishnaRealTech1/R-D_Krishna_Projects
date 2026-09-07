@@ -1,0 +1,1809 @@
+Microchip MPLAB XC8 Compiler V2.31
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
+  -h+dist/default/production\EAS_Lift_Timer_V2.X.production.sym \
+  --cmf=dist/default/production\EAS_Lift_Timer_V2.X.production.cmf -z \
+  -Q12F683 -oC:\Users\RealTech\AppData\Local\Temp\sg08.2 \
+  --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/EAS_Lift_Timer_V2.X.production.map -E1 \
+  -ver=XC8 Compiler --acfsm=1493 -ASTACK=045h-06Fh -pstack=STACK \
+  -ACODE=00h-07FFh -ASTRCODE=00h-07FFh -ASTRING=00h-0FFhx8 \
+  -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 -ACOMMON=070h-07Fh \
+  -ABANK0=020h-06Fh -ABANK1=0A0h-0BFh -ARAM=020h-06Fh,0A0h-0BFh \
+  -AABS1=020h-07Fh,0A0h-0BFh -ASFR0=00h-01Fh -ASFR1=080h-09Fh \
+  -ACONFIG=02007h-02007h -DCONFIG=2 -AIDLOC=02000h-02003h -DIDLOC=2 \
+  -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
+  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -k C:\Users\RealTech\AppData\Local\Temp\sg08.o \
+  dist/default/production\EAS_Lift_Timer_V2.X.production.o 
+
+Object code version is 3.11
+
+Machine type is 12F683
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\RealTech\AppData\Local\Temp\sg08.o
+                end_init                              4        4        1        8       0
+                reset_vec                             0        0        1        0       0
+                config                             2007     2007        1        0       4
+dist/default/production\EAS_Lift_Timer_V2.X.production.o
+                cinit                                 5        5        2        8       0
+                config                             2007     2007        1        0       4
+                text36                              2F9      2F9       36        8       0
+                text35                              44F      44F       15        8       0
+                text34                              401      401       1B        8       0
+                text33                              476      476        E        8       0
+                text32                              4F1      4F1        5        8       0
+                text31                              507      507        3        8       0
+                text30                              4EC      4EC        5        8       0
+                text29                              4FA      4FA        4        8       0
+                text28                              504      504        3        8       0
+                text27                              38B      38B       2B        8       0
+                text26                              4D8      4D8        8        8       0
+                text25                              4E0      4E0        7        8       0
+                text24                              35E      35E       2D        8       0
+                text23                                7        7       CB        8       0
+                text22                              4D0      4D0        8        8       0
+                text21                              491      491        D        8       0
+                text20                              4F6      4F6        4        8       0
+                text19                              224      224       57        8       0
+                text18                              501      501        3        8       0
+                text17                              3DF      3DF       22        8       0
+                text16                              4B4      4B4        B        8       0
+                text15                              4C8      4C8        8        8       0
+                text14                              197      197       8D        8       0
+                text13                              3B6      3B6       29        8       0
+                text12                              27B      27B       48        8       0
+                text11                              4BF      4BF        9        8       0
+                text10                              41C      41C       1A        8       0
+                text9                               436      436       19        8       0
+                text8                               464      464       12        8       0
+                text7                               4A9      4A9        B        8       0
+                text6                               2C3      2C3       36        8       0
+                text5                               32F      32F       2F        8       0
+                text4                               484      484        D        8       0
+                text3                               49E      49E        B        8       0
+                text2                               4FE      4FE        3        8       0
+                text1                               4E7      4E7        5        8       0
+                maintext                             D2       D2       C5        8       0
+                cstackBANK0                          20       20       25       20       1
+                cstackCOMMON                         70       70        E       70       1
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              4        4        1         0
+                cinit                                 5        5        2         0
+                reset_vec                             0        0        1         0
+                text36                              2F9      2F9       36         0
+                text35                              44F      44F       15         0
+                text34                              401      401       1B         0
+                text33                              476      476        E         0
+                text32                              4F1      4F1        5         0
+                text31                              507      507        3         0
+                text30                              4EC      4EC        5         0
+                text29                              4FA      4FA        4         0
+                text28                              504      504        3         0
+                text27                              38B      38B       2B         0
+                text26                              4D8      4D8        8         0
+                text25                              4E0      4E0        7         0
+                text24                              35E      35E       2D         0
+                text23                                7        7       CB         0
+                text22                              4D0      4D0        8         0
+                text21                              491      491        D         0
+                text20                              4F6      4F6        4         0
+                text19                              224      224       57         0
+                text18                              501      501        3         0
+                text17                              3DF      3DF       22         0
+                text16                              4B4      4B4        B         0
+                text15                              4C8      4C8        8         0
+                text14                              197      197       8D         0
+                text13                              3B6      3B6       29         0
+                text12                              27B      27B       48         0
+                text11                              4BF      4BF        9         0
+                text10                              41C      41C       1A         0
+                text9                               436      436       19         0
+                text8                               464      464       12         0
+                text7                               4A9      4A9        B         0
+                text6                               2C3      2C3       36         0
+                text5                               32F      32F       2F         0
+                text4                               484      484        D         0
+                text3                               49E      49E        B         0
+                text2                               4FE      4FE        3         0
+                text1                               4E7      4E7        5         0
+                maintext                             D2       D2       C5         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        E         1
+
+        CLASS   BANK0          
+                cstackBANK0                          20       20       25         1
+
+        CLASS   BANK1          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   CONFIG         
+                config                             2007     2007        1         4
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000001  000001         0       0  CODE        2
+                intentry                       000004  000506  00050A         8       0  CODE        2
+                cstackBANK0                    000020  000025  000045        20       1  BANK0       1
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0045-006F             2B           1
+        BANK1            00A0-00BF             20           1
+        CODE             0001-0003              3           2
+                         050A-07FF            2F6
+        CONST            0001-0003              3           2
+                         050A-07FF            100
+        EEDATA           2100-21FF            100           2
+        ENTRY            0001-0003              3           2
+                         050A-07FF            100
+        IDLOC            2000-2003              4           2
+        RAM              0045-006F             2B           1
+                         00A0-00BF             20
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        STACK            0045-006F             2B           1
+        STRCODE          0001-0003              3           2
+                         050A-07FF            2F6
+        STRING           0001-0003              3           2
+                         050A-07FF            100
+
+                                  Symbol Table
+
+Already_Triggered_This_Minute@last_date   cstackCOMMON 0072
+Already_Triggered_This_Minute@last_hour   cstackCOMMON 0070
+Already_Triggered_This_Minute@last_minute cstackCOMMON 0071
+Already_Triggered_This_Minute@last_month  cstackCOMMON 0073
+Already_Triggered_This_Minute@last_year   cstackCOMMON 0074
+Already_Triggered_This_Minute@now         cstackCOMMON 0075
+BCD_To_Dec@bcd                            cstackCOMMON 0078
+BCD_To_Dec@ones                           cstackCOMMON 0077
+BCD_To_Dec@tens                           cstackCOMMON 0076
+DS3231_ReadTime@hour_12                   cstackBANK0  0028
+DS3231_ReadTime@is_pm                     cstackBANK0  0026
+DS3231_ReadTime@raw_date                  cstackBANK0  0023
+DS3231_ReadTime@raw_day                   cstackBANK0  0022
+DS3231_ReadTime@raw_hour                  cstackBANK0  0027
+DS3231_ReadTime@raw_minute                cstackBANK0  0021
+DS3231_ReadTime@raw_month                 cstackBANK0  0024
+DS3231_ReadTime@raw_second                cstackBANK0  0020
+DS3231_ReadTime@raw_year                  cstackBANK0  0025
+DS3231_ReadTime@time                      cstackBANK0  0029
+DS3231_ReadTime_With_Retry@attempt        cstackCOMMON 007B
+DS3231_ReadTime_With_Retry@time           cstackCOMMON 007C
+Delay_Approx_1s@i                         cstackCOMMON 0071
+Delay_Approx_250ms@i                      cstackCOMMON 0071
+Delay_Seconds@seconds                     cstackCOMMON 0072
+EEPROM_Load_Last_Trigger@checksum         cstackBANK0  0020
+EEPROM_Load_Last_Trigger@date             cstackBANK0  0025
+EEPROM_Load_Last_Trigger@hour             cstackBANK0  0023
+EEPROM_Load_Last_Trigger@last_date        cstackCOMMON 0076
+EEPROM_Load_Last_Trigger@last_hour        cstackBANK0  0021
+EEPROM_Load_Last_Trigger@last_minute      cstackCOMMON 0075
+EEPROM_Load_Last_Trigger@last_month       cstackCOMMON 0077
+EEPROM_Load_Last_Trigger@last_year        cstackCOMMON 0078
+EEPROM_Load_Last_Trigger@minute           cstackBANK0  0024
+EEPROM_Load_Last_Trigger@month            cstackBANK0  0026
+EEPROM_Load_Last_Trigger@year             cstackBANK0  0022
+EEPROM_ReadByte@address                   cstackCOMMON 0070
+EEPROM_Save_Last_Trigger@checksum         cstackBANK0  0020
+EEPROM_Save_Last_Trigger@date             cstackCOMMON 0076
+EEPROM_Save_Last_Trigger@hour             cstackBANK0  0021
+EEPROM_Save_Last_Trigger@minute           cstackCOMMON 0075
+EEPROM_Save_Last_Trigger@month            cstackCOMMON 0077
+EEPROM_Save_Last_Trigger@year             cstackCOMMON 0078
+EEPROM_WriteByte@address                  cstackCOMMON 0073
+EEPROM_WriteByte@gie_was_enabled          cstackCOMMON 0072
+EEPROM_WriteByte@value                    cstackCOMMON 0071
+I2C_Delay@i                               cstackCOMMON 0071
+I2C_ReadByte@data                         cstackCOMMON 0074
+I2C_ReadByte@i                            cstackCOMMON 0075
+I2C_ReadByte@send_ack                     cstackCOMMON 0073
+I2C_WriteByte@ack                         cstackCOMMON 0074
+I2C_WriteByte@data                        cstackCOMMON 0073
+I2C_WriteByte@i                           cstackCOMMON 0075
+Is_Mode1_Hour@hour                        cstackCOMMON 0070
+Is_Mode2_Hour@hour                        cstackCOMMON 0070
+Is_Mode3_Hour@hour                        cstackCOMMON 0070
+Is_Scheduled_Restart_Time@mode            cstackCOMMON 0074
+Is_Scheduled_Restart_Time@now             cstackCOMMON 0071
+RTC_Time_Is_Valid@time                    cstackCOMMON 0070
+Read_Selected_Mode@dip1_high              cstackCOMMON 0070
+Read_Selected_Mode@dip2_high              cstackCOMMON 0071
+Trigger_Checksum@date                     cstackCOMMON 0071
+Trigger_Checksum@hour                     cstackCOMMON 0074
+Trigger_Checksum@minute                   cstackCOMMON 0070
+Trigger_Checksum@month                    cstackCOMMON 0072
+Trigger_Checksum@year                     cstackCOMMON 0073
+_ADCON0                                   (abs)        001F
+_ANSEL                                    (abs)        009F
+_Already_Triggered_This_Minute            text36       02F9
+_BCD_To_Dec                               text34       0401
+_CMCON0                                   (abs)        0019
+_DS3231_ReadTime                          text23       0007
+_DS3231_ReadTime_With_Retry               text17       03DF
+_Delay_Approx_1s                          text4        0484
+_Delay_Approx_250ms                       text21       0491
+_Delay_Approx_65ms                        text22       04D0
+_Delay_Seconds                            text3        049E
+_EEADR                                    (abs)        009B
+_EECON1bits                               (abs)        009C
+_EECON2                                   (abs)        009D
+_EEDAT                                    (abs)        009A
+_EEPROM_Load_Last_Trigger                 text14       0197
+_EEPROM_ReadByte                          text16       04B4
+_EEPROM_Save_Last_Trigger                 text12       027B
+_EEPROM_WriteByte                         text13       03B6
+_GPIO                                     (abs)        0005
+_GPIObits                                 (abs)        0005
+_I2C_Delay                                text33       0476
+_I2C_Init                                 text20       04F6
+_I2C_ReadByte                             text27       038B
+_I2C_Start                                text26       04D8
+_I2C_Stop                                 text25       04E0
+_I2C_WriteByte                            text24       035E
+_INTCONbits                               (abs)        000B
+_Init_Device                              text10       041C
+_Is_Mode1_Hour                            text9        0436
+_Is_Mode2_Hour                            text8        0464
+_Is_Mode3_Hour                            text7        04A9
+_Is_Scheduled_Restart_Time                text6        02C3
+_OPTION_REGbits                           (abs)        0081
+_OSCCONbits                               (abs)        008F
+_RTC_Time_Is_Valid                        text19       0224
+_Read_Selected_Mode                       text5        032F
+_Relay_Off                                text18       0501
+_Relay_On                                 text2        04FE
+_Relay_Reset_Pulse                        text1        04E7
+_SCL_Low                                  text32       04F1
+_SCL_Release                              text31       0507
+_SDA_Low                                  text30       04EC
+_SDA_Read                                 text29       04FA
+_SDA_Release                              text28       0504
+_TMR0                                     (abs)        0001
+_TRISIO                                   (abs)        0085
+_TRISIObits                               (abs)        0085
+_Timer0_Init_For_Delay                    text11       04BF
+_Trigger_Checksum                         text15       04C8
+__Habs1                                   abs1         0000
+__Hbank0                                  bank0        0000
+__Hbank1                                  bank1        0000
+__Hcinit                                  cinit        0007
+__Hclrtext                                clrtext      0000
+__Hcode                                   code         0000
+__Hcommon                                 common       0000
+__Hconfig                                 config       2008
+__HcstackBANK0                            cstackBANK0  0000
+__HcstackCOMMON                           cstackCOMMON 0000
+__Heeprom_data                            eeprom_data  0000
+__Hend_init                               end_init     0005
+__Hfunctab                                functab      0000
+__Hinit                                   init         0004
+__Hintentry                               intentry     0004
+__Hmaintext                               maintext     0000
+__Hpowerup                                powerup      0000
+__Hram                                    ram          0000
+__Hreset_vec                              reset_vec    0001
+__Hsfr0                                   sfr0         0000
+__Hsfr1                                   sfr1         0000
+__Hspace_0                                (abs)        050A
+__Hspace_1                                (abs)        007E
+__Hspace_2                                (abs)        0000
+__Hspace_3                                (abs)        0000
+__Hspace_4                                (abs)        400F
+__Hstack                                  stack        0000
+__Hstrings                                strings      0000
+__Htext                                   text         0000
+__Labs1                                   abs1         0000
+__Lbank0                                  bank0        0000
+__Lbank1                                  bank1        0000
+__Lcinit                                  cinit        0005
+__Lclrtext                                clrtext      0000
+__Lcode                                   code         0000
+__Lcommon                                 common       0000
+__Lconfig                                 config       0000
+__LcstackBANK0                            cstackBANK0  0000
+__LcstackCOMMON                           cstackCOMMON 0000
+__Leeprom_data                            eeprom_data  0000
+__Lend_init                               end_init     0004
+__Lfunctab                                functab      0000
+__Linit                                   init         0004
+__Lintentry                               intentry     0004
+__Lmaintext                               maintext     0000
+__Lpowerup                                powerup      0000
+__Lram                                    ram          0000
+__Lreset_vec                              reset_vec    0000
+__Lsfr0                                   sfr0         0000
+__Lsfr1                                   sfr1         0000
+__Lspace_0                                (abs)        0000
+__Lspace_1                                (abs)        0000
+__Lspace_2                                (abs)        0000
+__Lspace_3                                (abs)        0000
+__Lspace_4                                (abs)        0000
+__Lstack                                  stack        0000
+__Lstrings                                strings      0000
+__Ltext                                   text         0000
+__S0                                      (abs)        050A
+__S1                                      (abs)        007E
+__S2                                      (abs)        0000
+__S3                                      (abs)        0000
+___bmul                                   text35       044F
+___bmul@multiplicand                      cstackCOMMON 0070
+___bmul@multiplier                        cstackCOMMON 0073
+___bmul@product                           cstackCOMMON 0072
+___int_sp                                 stack        0000
+___latbits                                (abs)        0000
+___sp                                     stack        0000
+___stackhi                                (abs)        0000
+___stacklo                                (abs)        0000
+__end_of_Already_Triggered_This_Minute    text36       032F
+__end_of_BCD_To_Dec                       text34       041C
+__end_of_DS3231_ReadTime                  text23       00D2
+__end_of_DS3231_ReadTime_With_Retry       text17       0401
+__end_of_Delay_Approx_1s                  text4        0491
+__end_of_Delay_Approx_250ms               text21       049E
+__end_of_Delay_Approx_65ms                text22       04D8
+__end_of_Delay_Seconds                    text3        04A9
+__end_of_EEPROM_Load_Last_Trigger         text14       0224
+__end_of_EEPROM_ReadByte                  text16       04BF
+__end_of_EEPROM_Save_Last_Trigger         text12       02C3
+__end_of_EEPROM_WriteByte                 text13       03DF
+__end_of_I2C_Delay                        text33       0484
+__end_of_I2C_Init                         text20       04FA
+__end_of_I2C_ReadByte                     text27       03B6
+__end_of_I2C_Start                        text26       04E0
+__end_of_I2C_Stop                         text25       04E7
+__end_of_I2C_WriteByte                    text24       038B
+__end_of_Init_Device                      text10       0436
+__end_of_Is_Mode1_Hour                    text9        044F
+__end_of_Is_Mode2_Hour                    text8        0476
+__end_of_Is_Mode3_Hour                    text7        04B4
+__end_of_Is_Scheduled_Restart_Time        text6        02F9
+__end_of_RTC_Time_Is_Valid                text19       027B
+__end_of_Read_Selected_Mode               text5        035E
+__end_of_Relay_Off                        text18       0504
+__end_of_Relay_On                         text2        0501
+__end_of_Relay_Reset_Pulse                text1        04EC
+__end_of_SCL_Low                          text32       04F6
+__end_of_SCL_Release                      text31       050A
+__end_of_SDA_Low                          text30       04F1
+__end_of_SDA_Read                         text29       04FE
+__end_of_SDA_Release                      text28       0507
+__end_of_Timer0_Init_For_Delay            text11       04C8
+__end_of_Trigger_Checksum                 text15       04D0
+__end_of___bmul                           text35       0464
+__end_of__initialization                  cinit        0005
+__end_of_main                             maintext     0197
+__initialization                          cinit        0005
+__pcstackBANK0                            cstackBANK0  0020
+__pcstackCOMMON                           cstackCOMMON 0070
+__pmaintext                               maintext     00D2
+__ptext1                                  text1        04E7
+__ptext10                                 text10       041C
+__ptext11                                 text11       04BF
+__ptext12                                 text12       027B
+__ptext13                                 text13       03B6
+__ptext14                                 text14       0197
+__ptext15                                 text15       04C8
+__ptext16                                 text16       04B4
+__ptext17                                 text17       03DF
+__ptext18                                 text18       0501
+__ptext19                                 text19       0224
+__ptext2                                  text2        04FE
+__ptext20                                 text20       04F6
+__ptext21                                 text21       0491
+__ptext22                                 text22       04D0
+__ptext23                                 text23       0007
+__ptext24                                 text24       035E
+__ptext25                                 text25       04E0
+__ptext26                                 text26       04D8
+__ptext27                                 text27       038B
+__ptext28                                 text28       0504
+__ptext29                                 text29       04FA
+__ptext3                                  text3        049E
+__ptext30                                 text30       04EC
+__ptext31                                 text31       0507
+__ptext32                                 text32       04F1
+__ptext33                                 text33       0476
+__ptext34                                 text34       0401
+__ptext35                                 text35       044F
+__ptext36                                 text36       02F9
+__ptext4                                  text4        0484
+__ptext5                                  text5        032F
+__ptext6                                  text6        02C3
+__ptext7                                  text7        04A9
+__ptext8                                  text8        0464
+__ptext9                                  text9        0436
+__size_of_Already_Triggered_This_Minute   (abs)        0000
+__size_of_BCD_To_Dec                      (abs)        0000
+__size_of_DS3231_ReadTime                 (abs)        0000
+__size_of_DS3231_ReadTime_With_Retry      (abs)        0000
+__size_of_Delay_Approx_1s                 (abs)        0000
+__size_of_Delay_Approx_250ms              (abs)        0000
+__size_of_Delay_Approx_65ms               (abs)        0000
+__size_of_Delay_Seconds                   (abs)        0000
+__size_of_EEPROM_Load_Last_Trigger        (abs)        0000
+__size_of_EEPROM_ReadByte                 (abs)        0000
+__size_of_EEPROM_Save_Last_Trigger        (abs)        0000
+__size_of_EEPROM_WriteByte                (abs)        0000
+__size_of_I2C_Delay                       (abs)        0000
+__size_of_I2C_Init                        (abs)        0000
+__size_of_I2C_ReadByte                    (abs)        0000
+__size_of_I2C_Start                       (abs)        0000
+__size_of_I2C_Stop                        (abs)        0000
+__size_of_I2C_WriteByte                   (abs)        0000
+__size_of_Init_Device                     (abs)        0000
+__size_of_Is_Mode1_Hour                   (abs)        0000
+__size_of_Is_Mode2_Hour                   (abs)        0000
+__size_of_Is_Mode3_Hour                   (abs)        0000
+__size_of_Is_Scheduled_Restart_Time       (abs)        0000
+__size_of_RTC_Time_Is_Valid               (abs)        0000
+__size_of_Read_Selected_Mode              (abs)        0000
+__size_of_Relay_Off                       (abs)        0000
+__size_of_Relay_On                        (abs)        0000
+__size_of_Relay_Reset_Pulse               (abs)        0000
+__size_of_SCL_Low                         (abs)        0000
+__size_of_SCL_Release                     (abs)        0000
+__size_of_SDA_Low                         (abs)        0000
+__size_of_SDA_Read                        (abs)        0000
+__size_of_SDA_Release                     (abs)        0000
+__size_of_Timer0_Init_For_Delay           (abs)        0000
+__size_of_Trigger_Checksum                (abs)        0000
+__size_of___bmul                          (abs)        0000
+__size_of_main                            (abs)        0000
+_main                                     maintext     00D2
+btemp                                     (abs)        007E
+end_of_initialization                     cinit        0005
+intlevel0                                 functab      0000
+intlevel1                                 functab      0000
+intlevel2                                 functab      0000
+intlevel3                                 functab      0000
+intlevel4                                 functab      0000
+intlevel5                                 functab      0000
+main@after_trigger_time                   cstackBANK0  0037
+main@already_triggered                    cstackBANK0  0031
+main@last_trigger_date                    cstackBANK0  0034
+main@last_trigger_hour                    cstackBANK0  0032
+main@last_trigger_minute                  cstackBANK0  0033
+main@last_trigger_month                   cstackBANK0  0035
+main@last_trigger_year                    cstackBANK0  0036
+main@now                                  cstackBANK0  003E
+main@selected_mode                        cstackBANK0  0030
+reset_vec                                 reset_vec    0000
+start                                     init         0004
+start_initialization                      cinit        0005
+wtemp0                                    (abs)        007E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 1080 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  already_trig    1   17[BANK0 ] _Bool 
+  now             7   30[BANK0 ] struct .
+  after_trigge    7   23[BANK0 ] struct .
+  last_trigger    1   22[BANK0 ] unsigned char 
+  last_trigger    1   21[BANK0 ] unsigned char 
+  last_trigger    1   20[BANK0 ] unsigned char 
+  last_trigger    1   19[BANK0 ] unsigned char 
+  last_trigger    1   18[BANK0 ] unsigned char 
+  selected_mod    1   16[BANK0 ] enum E663
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0      21       0
+      Temps:          0       6       0
+      Totals:         0      27       0
+Total ram usage:       27 bytes
+ Hardware stack levels required when called:    4
+ This function calls:
+		_Already_Triggered_This_Minute
+		_DS3231_ReadTime_With_Retry
+		_Delay_Approx_1s
+		_Delay_Approx_250ms
+		_Delay_Seconds
+		_EEPROM_Load_Last_Trigger
+		_EEPROM_Save_Last_Trigger
+		_I2C_Init
+		_Init_Device
+		_Is_Scheduled_Restart_Time
+		_Read_Selected_Mode
+		_Relay_Off
+		_Relay_Reset_Pulse
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _Relay_Reset_Pulse *****************
+ Defined at:
+		line 228 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_Delay_Seconds
+		_Relay_Off
+		_Relay_On
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Relay_On *****************
+ Defined at:
+		line 218 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Relay_Reset_Pulse
+ This function uses a non-reentrant model
+
+
+ *************** function _Delay_Seconds *****************
+ Defined at:
+		line 282 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  seconds         1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  seconds         1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_Delay_Approx_1s
+ This function is called by:
+		_Relay_Reset_Pulse
+		_main
+		_Safe_Fault_Idle_Forever
+ This function uses a non-reentrant model
+
+
+ *************** function _Delay_Approx_1s *****************
+ Defined at:
+		line 272 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1    1[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          1       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_Delay_Approx_65ms
+ This function is called by:
+		_Delay_Seconds
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Read_Selected_Mode *****************
+ Defined at:
+		line 863 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  dip2_high       1    1[COMMON] _Bool 
+  dip1_high       1    0[COMMON] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      enum E663
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         2       0       0
+      Temps:          0       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Is_Scheduled_Restart_Time *****************
+ Defined at:
+		line 946 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  mode            1    wreg     enum E663
+  now             1    1[COMMON] PTR const struct .
+		 -> main@now(7), 
+ Auto vars:     Size  Location     Type
+  mode            1    4[COMMON] enum E663
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         1       0       0
+      Locals:         1       0       0
+      Temps:          2       0       0
+      Totals:         4       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_Is_Mode1_Hour
+		_Is_Mode2_Hour
+		_Is_Mode3_Hour
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Is_Mode3_Hour *****************
+ Defined at:
+		line 931 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  hour            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  hour            1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Is_Scheduled_Restart_Time
+ This function uses a non-reentrant model
+
+
+ *************** function _Is_Mode2_Hour *****************
+ Defined at:
+		line 914 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  hour            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  hour            1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Is_Scheduled_Restart_Time
+ This function uses a non-reentrant model
+
+
+ *************** function _Is_Mode1_Hour *****************
+ Defined at:
+		line 892 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  hour            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  hour            1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Is_Scheduled_Restart_Time
+ This function uses a non-reentrant model
+
+
+ *************** function _Init_Device *****************
+ Defined at:
+		line 1046 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_Relay_Off
+		_SCL_Release
+		_SDA_Release
+		_Timer0_Init_For_Delay
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Timer0_Init_For_Delay *****************
+ Defined at:
+		line 238 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Init_Device
+ This function uses a non-reentrant model
+
+
+ *************** function _EEPROM_Save_Last_Trigger *****************
+ Defined at:
+		line 622 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  hour            1    wreg     unsigned char 
+  minute          1    5[COMMON] unsigned char 
+  date            1    6[COMMON] unsigned char 
+  month           1    7[COMMON] unsigned char 
+  year            1    8[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  hour            1    1[BANK0 ] unsigned char 
+  checksum        1    0[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         4       0       0
+      Locals:         0       2       0
+      Temps:          5       0       0
+      Totals:         9       2       0
+Total ram usage:       11 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_EEPROM_WriteByte
+		_Trigger_Checksum
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _EEPROM_WriteByte *****************
+ Defined at:
+		line 515 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  address         1    wreg     unsigned char 
+  value           1    1[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  address         1    3[COMMON] unsigned char 
+  gie_was_enab    1    2[COMMON] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         1       0       0
+      Locals:         2       0       0
+      Temps:          0       0       0
+      Totals:         3       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_EEPROM_ReadByte
+ This function is called by:
+		_EEPROM_Save_Last_Trigger
+ This function uses a non-reentrant model
+
+
+ *************** function _EEPROM_Load_Last_Trigger *****************
+ Defined at:
+		line 563 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  last_hour       1    wreg     PTR unsigned char 
+		 -> main@last_trigger_hour(1), 
+  last_minute     1    5[COMMON] PTR unsigned char 
+		 -> main@last_trigger_minute(1), 
+  last_date       1    6[COMMON] PTR unsigned char 
+		 -> main@last_trigger_date(1), 
+  last_month      1    7[COMMON] PTR unsigned char 
+		 -> main@last_trigger_month(1), 
+  last_year       1    8[COMMON] PTR unsigned char 
+		 -> main@last_trigger_year(1), 
+ Auto vars:     Size  Location     Type
+  last_hour       1    1[BANK0 ] PTR unsigned char 
+		 -> main@last_trigger_hour(1), 
+  month           1    6[BANK0 ] unsigned char 
+  date            1    5[BANK0 ] unsigned char 
+  minute          1    4[BANK0 ] unsigned char 
+  hour            1    3[BANK0 ] unsigned char 
+  year            1    2[BANK0 ] unsigned char 
+  checksum        1    0[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         4       0       0
+      Locals:         0       7       0
+      Temps:          4       0       0
+      Totals:         8       7       0
+Total ram usage:       15 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_EEPROM_ReadByte
+		_Trigger_Checksum
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Trigger_Checksum *****************
+ Defined at:
+		line 554 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  hour            1    wreg     unsigned char 
+  minute          1    0[COMMON] unsigned char 
+  date            1    1[COMMON] unsigned char 
+  month           1    2[COMMON] unsigned char 
+  year            1    3[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  hour            1    4[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         4       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         5       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_EEPROM_Load_Last_Trigger
+		_EEPROM_Save_Last_Trigger
+ This function uses a non-reentrant model
+
+
+ *************** function _EEPROM_ReadByte *****************
+ Defined at:
+		line 501 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  address         1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  address         1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_EEPROM_WriteByte
+		_EEPROM_Load_Last_Trigger
+ This function uses a non-reentrant model
+
+
+ *************** function _DS3231_ReadTime_With_Retry *****************
+ Defined at:
+		line 768 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  time            1    wreg     PTR struct .
+		 -> main@after_trigger_time(7), main@now(7), 
+ Auto vars:     Size  Location     Type
+  time            1   12[COMMON] PTR struct .
+		 -> main@after_trigger_time(7), main@now(7), 
+  attempt         1   11[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         2       0       0
+      Temps:          1       0       0
+      Totals:         3       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_DS3231_ReadTime
+		_Delay_Approx_250ms
+		_I2C_Init
+		_RTC_Time_Is_Valid
+		_Relay_Off
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Relay_Off *****************
+ Defined at:
+		line 223 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Relay_Reset_Pulse
+		_DS3231_ReadTime_With_Retry
+		_Init_Device
+		_main
+		_Safe_Fault_Idle_Forever
+ This function uses a non-reentrant model
+
+
+ *************** function _RTC_Time_Is_Valid *****************
+ Defined at:
+		line 733 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  time            1    wreg     PTR const struct .
+		 -> main@after_trigger_time(7), main@now(7), 
+ Auto vars:     Size  Location     Type
+  time            1    0[COMMON] PTR const struct .
+		 -> main@after_trigger_time(7), main@now(7), 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_DS3231_ReadTime_With_Retry
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_Init *****************
+ Defined at:
+		line 353 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_I2C_Delay
+		_SCL_Release
+		_SDA_Release
+ This function is called by:
+		_DS3231_ReadTime_With_Retry
+		_main
+		_Safe_Fault_Idle_Forever
+ This function uses a non-reentrant model
+
+
+ *************** function _Delay_Approx_250ms *****************
+ Defined at:
+		line 262 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1    1[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          1       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_Delay_Approx_65ms
+ This function is called by:
+		_DS3231_ReadTime_With_Retry
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Delay_Approx_65ms *****************
+ Defined at:
+		line 251 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Delay_Approx_250ms
+		_Delay_Approx_1s
+ This function uses a non-reentrant model
+
+
+ *************** function _DS3231_ReadTime *****************
+ Defined at:
+		line 650 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  time            1    wreg     PTR struct .
+		 -> main@after_trigger_time(7), main@now(7), 
+ Auto vars:     Size  Location     Type
+  time            1    9[BANK0 ] PTR struct .
+		 -> main@after_trigger_time(7), main@now(7), 
+  hour_12         1    8[BANK0 ] unsigned char 
+  is_pm           1    6[BANK0 ] _Bool 
+  raw_hour        1    7[BANK0 ] unsigned char 
+  raw_year        1    5[BANK0 ] unsigned char 
+  raw_month       1    4[BANK0 ] unsigned char 
+  raw_date        1    3[BANK0 ] unsigned char 
+  raw_day         1    2[BANK0 ] unsigned char 
+  raw_minute      1    1[BANK0 ] unsigned char 
+  raw_second      1    0[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0      10       0
+      Temps:          1       0       0
+      Totals:         1      10       0
+Total ram usage:       11 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_BCD_To_Dec
+		_I2C_ReadByte
+		_I2C_Start
+		_I2C_Stop
+		_I2C_WriteByte
+ This function is called by:
+		_DS3231_ReadTime_With_Retry
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_WriteByte *****************
+ Defined at:
+		line 385 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  data            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  data            1    3[COMMON] unsigned char 
+  i               1    5[COMMON] unsigned char 
+  ack             1    4[COMMON] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         3       0       0
+      Temps:          1       0       0
+      Totals:         4       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_I2C_Delay
+		_SCL_Low
+		_SCL_Release
+		_SDA_Low
+		_SDA_Read
+		_SDA_Release
+ This function is called by:
+		_DS3231_ReadTime
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_Stop *****************
+ Defined at:
+		line 373 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_I2C_Delay
+		_SCL_Release
+		_SDA_Low
+		_SDA_Release
+ This function is called by:
+		_DS3231_ReadTime
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_Start *****************
+ Defined at:
+		line 360 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_I2C_Delay
+		_SCL_Low
+		_SCL_Release
+		_SDA_Low
+		_SDA_Release
+ This function is called by:
+		_DS3231_ReadTime
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_ReadByte *****************
+ Defined at:
+		line 426 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  send_ack        1    wreg     _Bool 
+ Auto vars:     Size  Location     Type
+  send_ack        1    3[COMMON] _Bool 
+  i               1    5[COMMON] unsigned char 
+  data            1    4[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         3       0       0
+      Temps:          1       0       0
+      Totals:         4       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_I2C_Delay
+		_SCL_Low
+		_SCL_Release
+		_SDA_Low
+		_SDA_Read
+		_SDA_Release
+ This function is called by:
+		_DS3231_ReadTime
+ This function uses a non-reentrant model
+
+
+ *************** function _SDA_Release *****************
+ Defined at:
+		line 329 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Init
+		_I2C_Start
+		_I2C_Stop
+		_I2C_WriteByte
+		_I2C_ReadByte
+		_Init_Device
+ This function uses a non-reentrant model
+
+
+ *************** function _SDA_Read *****************
+ Defined at:
+		line 345 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_WriteByte
+		_I2C_ReadByte
+ This function uses a non-reentrant model
+
+
+ *************** function _SDA_Low *****************
+ Defined at:
+		line 323 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Start
+		_I2C_Stop
+		_I2C_WriteByte
+		_I2C_ReadByte
+ This function uses a non-reentrant model
+
+
+ *************** function _SCL_Release *****************
+ Defined at:
+		line 340 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Init
+		_I2C_Start
+		_I2C_Stop
+		_I2C_WriteByte
+		_I2C_ReadByte
+		_Init_Device
+ This function uses a non-reentrant model
+
+
+ *************** function _SCL_Low *****************
+ Defined at:
+		line 334 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Start
+		_I2C_WriteByte
+		_I2C_ReadByte
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_Delay *****************
+ Defined at:
+		line 310 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1    1[COMMON] volatile unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          1       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Init
+		_I2C_Start
+		_I2C_Stop
+		_I2C_WriteByte
+		_I2C_ReadByte
+ This function uses a non-reentrant model
+
+
+ *************** function _BCD_To_Dec *****************
+ Defined at:
+		line 474 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  bcd             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  bcd             1    8[COMMON] unsigned char 
+  ones            1    7[COMMON] unsigned char 
+  tens            1    6[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         3       0       0
+      Temps:          2       0       0
+      Totals:         5       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		___bmul
+ This function is called by:
+		_DS3231_ReadTime
+ This function uses a non-reentrant model
+
+
+ *************** function ___bmul *****************
+ Defined at:
+		line 4 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c"
+ Parameters:    Size  Location     Type
+  multiplier      1    wreg     unsigned char 
+  multiplicand    1    0[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  multiplier      1    3[COMMON] unsigned char 
+  product         1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         1       0       0
+      Locals:         2       0       0
+      Temps:          1       0       0
+      Totals:         4       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_BCD_To_Dec
+ This function uses a non-reentrant model
+
+
+ *************** function _Already_Triggered_This_Minute *****************
+ Defined at:
+		line 1008 in file "EAS_Lift_Timer_V2.c"
+ Parameters:    Size  Location     Type
+  now             1    wreg     PTR const struct .
+		 -> main@after_trigger_time(7), main@now(7), 
+  last_hour       1    0[COMMON] unsigned char 
+  last_minute     1    1[COMMON] unsigned char 
+  last_date       1    2[COMMON] unsigned char 
+  last_month      1    3[COMMON] unsigned char 
+  last_year       1    4[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  now             1    5[COMMON] PTR const struct .
+		 -> main@after_trigger_time(7), main@now(7), 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         5       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         6       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+EAS_Lift_Timer_V2.c
+		_SCL_Release   		CODE           	0507	0000	3
+		_Is_Mode1_Hour 		CODE           	0436	0000	25
+		_Is_Mode2_Hour 		CODE           	0464	0000	18
+		_Is_Mode3_Hour 		CODE           	04A9	0000	11
+		_Relay_Reset_Pulse		CODE           	04E7	0000	5
+		_DS3231_ReadTime_With_Retry		CODE           	03DF	0000	34
+		_main          		CODE           	00D2	0000	197
+		_BCD_To_Dec    		CODE           	0401	0000	27
+		_Delay_Approx_65ms		CODE           	04D0	0000	8
+		_EEPROM_WriteByte		CODE           	03B6	0000	41
+		_Delay_Approx_250ms		CODE           	0491	0000	13
+		_SDA_Low       		CODE           	04EC	0000	5
+		_I2C_Stop      		CODE           	04E0	0000	7
+		_I2C_WriteByte 		CODE           	035E	0000	45
+		_RTC_Time_Is_Valid		CODE           	0224	0000	87
+		_SDA_Release   		CODE           	0504	0000	3
+		_Read_Selected_Mode		CODE           	032F	0000	47
+		_DS3231_ReadTime		CODE           	0007	0000	203
+		_I2C_Init      		CODE           	04F6	0000	4
+		_I2C_ReadByte  		CODE           	038B	0000	43
+		_Is_Scheduled_Restart_Time		CODE           	02C3	0000	54
+		_Delay_Approx_1s		CODE           	0484	0000	13
+		_Delay_Seconds 		CODE           	049E	0000	11
+		_I2C_Delay     		CODE           	0476	0000	14
+		_EEPROM_ReadByte		CODE           	04B4	0000	11
+		_EEPROM_Load_Last_Trigger		CODE           	0197	0000	141
+		_EEPROM_Save_Last_Trigger		CODE           	027B	0000	72
+		_Timer0_Init_For_Delay		CODE           	04BF	0000	9
+		_Trigger_Checksum		CODE           	04C8	0000	8
+		_I2C_Start     		CODE           	04D8	0000	8
+		_Already_Triggered_This_Minute		CODE           	02F9	0000	54
+		_Relay_On      		CODE           	04FE	0000	3
+		_Relay_Off     		CODE           	0501	0000	3
+		_Init_Device   		CODE           	041C	0000	26
+		_SCL_Low       		CODE           	04F1	0000	5
+		_SDA_Read      		CODE           	04FA	0000	4
+
+EAS_Lift_Timer_V2.c estimated size: 1262
+
+shared
+		__initialization		CODE           	0005	0000	1
+
+shared estimated size: 1
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+		___bmul        		CODE           	044F	0000	21
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c estimated size: 21
+

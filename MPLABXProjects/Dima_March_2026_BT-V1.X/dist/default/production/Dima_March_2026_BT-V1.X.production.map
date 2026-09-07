@@ -1,0 +1,2853 @@
+Microchip MPLAB XC8 Compiler V2.31
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
+  -h+dist/default/production\Dima_March_2026_BT-V1.X.production.sym \
+  --cmf=dist/default/production\Dima_March_2026_BT-V1.X.production.cmf -z \
+  -Q18F25K22 -oC:\Users\RealTech\AppData\Local\Temp\sb40.2 \
+  --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/Dima_March_2026_BT-V1.X.production.map -E1 \
+  -ver=XC8 Compiler --acfsm=1493 -ASTACK=089h-05FFh -pstack=STACK \
+  -ACODE=00h-07FFFh -ACONST=00h-07FFFh -ASMALLCONST=0600h-06FFhx122 \
+  -AMEDIUMCONST=0600h-07FFFh -ACOMRAM=01h-05Fh -AABS1=00h-05FFh \
+  -ABIGRAM=01h-05FFh -ARAM=060h-0FFh,0100h-01FFhx5 -ABANK0=060h-0FFh \
+  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
+  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ASFR=0F38h-0F5Fh,0F60h-0FFFh \
+  -ACONFIG=0300000h-030000Dh -AIDLOC=0200000h-0200007h \
+  -AEEDATA=0F00000h-0F000FFh -peeprom_data=EEDATA \
+  -preset_vec=00h,intcode=08h,intcodelo,powerup,init -pramtop=0600h \
+  -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
+  -AFARRAM=00h-00h \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
+  C:\Users\RealTech\AppData\Local\Temp\sb40.o \
+  dist/default/production\Dima_March_2026_BT-V1.X.production.o 
+
+Object code version is 3.11
+
+Machine type is 18F25K22
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\RealTech\AppData\Local\Temp\sb40.o
+                config                           300000   300000        E        0       4
+                init                                 78       78        4        4       0
+                reset_vec                             0        0        4        0       0
+dist/default/production\Dima_March_2026_BT-V1.X.production.o
+                intcode                               8        8       70        4       0
+                config                           300000   300000        E        0       4
+                temp                                 5F       5F        1        1       1
+                smallconst                          600      600       AA      300       0
+                text51                             2680     2680       1C      355       0
+                text50                             1388     1388      13E      355       0
+                text49                             2466     2466       4A      355       0
+                text48                             2732     2732        E      355       0
+                text47                             23BC     23BC       58      355       0
+                text46                             274A     274A        A      355       0
+                text45                             26E2     26E2       16      355       0
+                text44                             2720     2720       12      355       0
+                text43                             269C     269C       1A      355       0
+                text42                             275A     275A        6      355       0
+                text41                             2662     2662       1E      355       0
+                text40                             2640     2640       22      355       0
+                text39                             24B0     24B0       46      355       0
+                text38                             11F2     11F2      196      355       0
+                text37                             192E     192E       E4      355       0
+                text36                             1602     1602      12C      355       0
+                text35                             1C7A     1C7A       B4      355       0
+                text34                             2614     2614       2C      355       0
+                text33                             20D0     20D0       82      355       0
+                text32                             1D2E     1D2E       AE      355       0
+                text31                             1AF4     1AF4       C4      355       0
+                text30                             14C6     14C6      13C      355       0
+                text29                             1F1E     1F1E       98      355       0
+                text28                             2152     2152       72      355       0
+                text27                             1FB6     1FB6       92      355       0
+                text26                             25B4     25B4       34      355       0
+                text25                             2362     2362       5A      355       0
+                text24                             2298     2298       68      355       0
+                text23                             24F6     24F6       44      355       0
+                text22                             1DDC     1DDC       A4      355       0
+                text21                             2048     2048       88      355       0
+                text20                              A68      A68      306      355       0
+                text19                              D6E      D6E      2C8      355       0
+                text18                              6AA      6AA      3BE      355       0
+                text17                             2414     2414       52      355       0
+                text16                             2740     2740        A      355       0
+                text15                             25E8     25E8       2C      355       0
+                text14                             1BB8     1BB8       C2      355       0
+                text13                             2754     2754        6      355       0
+                text12                             26CC     26CC       16      355       0
+                text11                             26B6     26B6       16      355       0
+                text10                             270C     270C       14      355       0
+                text9                              26F8     26F8       14      355       0
+                text8                              1A12     1A12       E2      355       0
+                text7                              1036     1036      1BC      355       0
+                text6                              1E80     1E80       9E      355       0
+                text5                              2230     2230       68      355       0
+                text4                              1844     1844       EA      355       0
+                text3                              2578     2578       3C      355       0
+                text2                              2300     2300       62      355       0
+                text1                              172E     172E      116      355       0
+                text0                              21C4     21C4       6C      355       0
+                cstackCOMRAM                          1        1       58        1       1
+                dataBANK0                            87       87        2       60       1
+                bssBANK0                             60       60       27       60       1
+                bssCOMRAM                            59       59        6        1       1
+                cinit                              253A     253A       3E      355       0
+                idataBANK0                         2760     2760        2      355       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                intcode                               8        8       70         0
+                init                                 78       78        4         0
+                reset_vec                             0        0        4         0
+                text51                             2680     2680       1C         0
+                text50                             1388     1388      13E         0
+                text49                             2466     2466       4A         0
+                text48                             2732     2732        E         0
+                text47                             23BC     23BC       58         0
+                text46                             274A     274A        A         0
+                text45                             26E2     26E2       16         0
+                text44                             2720     2720       12         0
+                text43                             269C     269C       1A         0
+                text42                             275A     275A        6         0
+                text41                             2662     2662       1E         0
+                text40                             2640     2640       22         0
+                text39                             24B0     24B0       46         0
+                text38                             11F2     11F2      196         0
+                text37                             192E     192E       E4         0
+                text36                             1602     1602      12C         0
+                text35                             1C7A     1C7A       B4         0
+                text34                             2614     2614       2C         0
+                text33                             20D0     20D0       82         0
+                text32                             1D2E     1D2E       AE         0
+                text31                             1AF4     1AF4       C4         0
+                text30                             14C6     14C6      13C         0
+                text29                             1F1E     1F1E       98         0
+                text28                             2152     2152       72         0
+                text27                             1FB6     1FB6       92         0
+                text26                             25B4     25B4       34         0
+                text25                             2362     2362       5A         0
+                text24                             2298     2298       68         0
+                text23                             24F6     24F6       44         0
+                text22                             1DDC     1DDC       A4         0
+                text21                             2048     2048       88         0
+                text20                              A68      A68      306         0
+                text19                              D6E      D6E      2C8         0
+                text18                              6AA      6AA      3BE         0
+                text17                             2414     2414       52         0
+                text16                             2740     2740        A         0
+                text15                             25E8     25E8       2C         0
+                text14                             1BB8     1BB8       C2         0
+                text13                             2754     2754        6         0
+                text12                             26CC     26CC       16         0
+                text11                             26B6     26B6       16         0
+                text10                             270C     270C       14         0
+                text9                              26F8     26F8       14         0
+                text8                              1A12     1A12       E2         0
+                text7                              1036     1036      1BC         0
+                text6                              1E80     1E80       9E         0
+                text5                              2230     2230       68         0
+                text4                              1844     1844       EA         0
+                text3                              2578     2578       3C         0
+                text2                              2300     2300       62         0
+                text1                              172E     172E      116         0
+                text0                              21C4     21C4       6C         0
+                cinit                              253A     253A       3E         0
+                idataBANK0                         2760     2760        2         0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+                smallconst                          600      600       AA         0
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   COMRAM         
+                temp                                 5F       5F        1         1
+                cstackCOMRAM                          1        1       58         1
+                bssCOMRAM                            59       59        6         1
+
+        CLASS   ABS1           
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   BANK0          
+                dataBANK0                            87       87        2         1
+                bssBANK0                             60       60       27         1
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+
+        CLASS   BANK5          
+
+        CLASS   SFR            
+
+        CLASS   CONFIG         
+                config                           300000   300000        E         4
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+        CLASS   FARRAM         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
+
+                reset_vec                      000000  000004  000004         0       0  CODE    
+                cstackCOMRAM                   000001  00005F  000060         1       1  COMRAM  
+                intcode                        000008  000074  00007C         4       0  CODE    
+                bssBANK0                       000060  000029  000089        60       1  BANK0   
+                smallconst                     000600  0000AA  0006AA       300       0  SMALLCON
+                text18                         0006AA  0020B8  002762       355       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            000089-0000FF               77
+        BANK1            000100-0001FF              100
+        BANK2            000200-0002FF              100
+        BANK3            000300-0003FF              100
+        BANK4            000400-0004FF              100
+        BANK5            000500-0005FF              100
+        BIGRAM           000089-0005FF              577
+        CODE             000004-000007                4
+                         00007C-0005FF              584
+                         002762-007FFF             589E
+        CONST            000004-000007                4
+                         00007C-0005FF              584
+                         002762-007FFF             589E
+        EEDATA           F00000-F000FF              100
+        IDLOC            200000-200007                8
+        MEDIUMCONST      002762-007FFF             589E
+        RAM              000089-0005FF              100
+        SFR              000F38-000FFF               28
+        SMALLCONST       002762-007FFF              100
+        STACK            000089-0005FF              577
+
+                                  Symbol Table
+
+?___lldiv                                           cstackCOMRAM 00000A
+?___llmod                                           cstackCOMRAM 000001
+?_font_get_pattern                                  cstackCOMRAM 000001
+_ANSELA                                             (abs)        000F38
+_ANSELB                                             (abs)        000F39
+_ANSELC                                             (abs)        000F3A
+_EEADR                                              (abs)        000FA9
+_EECON1bits                                         (abs)        000FA6
+_EECON2                                             (abs)        000FA7
+_EEDATA                                             (abs)        000FA8
+_INTCONbits                                         (abs)        000FF2
+_LATAbits                                           (abs)        000F89
+_LATBbits                                           (abs)        000F8A
+_LATCbits                                           (abs)        000F8B
+_OSCCON                                             (abs)        000FD3
+_PORTAbits                                          (abs)        000F80
+_PORTCbits                                          (abs)        000F82
+_T0CON                                              (abs)        000FD5
+_T0CONbits                                          (abs)        000FD5
+_TMR0H                                              (abs)        000FD7
+_TMR0L                                              (abs)        000FD6
+_TRISAbits                                          (abs)        000F92
+_TRISBbits                                          (abs)        000F93
+_TRISCbits                                          (abs)        000F94
+__HRAM                                              (abs)        000000
+__Habs1                                             abs1         000000
+__Hbank0                                            bank0        000000
+__Hbank1                                            bank1        000000
+__Hbank2                                            bank2        000000
+__Hbank3                                            bank3        000000
+__Hbank4                                            bank4        000000
+__Hbank5                                            bank5        000000
+__Hbigbss                                           bigbss       000000
+__Hbigdata                                          bigdata      000000
+__Hbigram                                           bigram       000000
+__Hbss                                              bss          000000
+__HbssBANK0                                         bssBANK0     000000
+__HbssCOMRAM                                        bssCOMRAM    000000
+__Hcinit                                            cinit        000000
+__Hclrtext                                          clrtext      000000
+__Hcomram                                           comram       000000
+__Hconfig                                           config       30000E
+__Hconst                                            const        000000
+__HcstackCOMRAM                                     cstackCOMRAM 000000
+__Hdata                                             data         000000
+__HdataBANK0                                        dataBANK0    000000
+__Heeprom_data                                      eeprom_data  000000
+__Hfarbss                                           farbss       000000
+__Hfardata                                          fardata      000000
+__Hibigdata                                         ibigdata     000000
+__Hidata                                            idata        000000
+__HidataBANK0                                       idataBANK0   000000
+__Hidloc                                            idloc        000000
+__Hifardata                                         ifardata     000000
+__Hinit                                             init         00007C
+__Hintcode                                          intcode      000078
+__Hintcode_body                                     intcode_body 000000
+__Hintcodelo                                        intcodelo    000078
+__Hintentry                                         intentry     000000
+__Hintret                                           intret       000000
+__Hintsave_regs                                     intsave_regs 000000
+__Hirdata                                           irdata       000000
+__Hmediumconst                                      mediumconst  000000
+__HnvFARRAM                                         nvFARRAM     000000
+__Hnvbit                                            nvbit        000000
+__Hnvrram                                           nvrram       000000
+__Hparam                                            rparam       000000
+__Hpowerup                                          powerup      000078
+__Hram                                              ram          000000
+__Hramtop                                           ramtop       000600
+__Hrbit                                             rbit         000000
+__Hrbss                                             rbss         000000
+__Hrdata                                            rdata        000000
+__Hreset_vec                                        reset_vec    000004
+__Hrparam                                           rparam       000000
+__Hsfr                                              sfr          000000
+__Hsmallconst                                       smallconst   0006AA
+__Hspace_0                                          (abs)        002762
+__Hspace_1                                          (abs)        000089
+__Hspace_2                                          (abs)        000000
+__Hspace_4                                          (abs)        60000E
+__Hstack                                            stack        000000
+__Hstruct                                           struct       000000
+__Htemp                                             temp         000060
+__Htext                                             text         000000
+__Htext0                                            text0        000000
+__Htext1                                            text1        000000
+__Htext10                                           text10       000000
+__Htext11                                           text11       000000
+__Htext12                                           text12       000000
+__Htext13                                           text13       000000
+__Htext14                                           text14       000000
+__Htext15                                           text15       000000
+__Htext16                                           text16       000000
+__Htext17                                           text17       000000
+__Htext18                                           text18       000000
+__Htext19                                           text19       000000
+__Htext2                                            text2        000000
+__Htext20                                           text20       000000
+__Htext21                                           text21       000000
+__Htext22                                           text22       000000
+__Htext23                                           text23       000000
+__Htext24                                           text24       000000
+__Htext25                                           text25       000000
+__Htext26                                           text26       000000
+__Htext27                                           text27       000000
+__Htext28                                           text28       000000
+__Htext29                                           text29       000000
+__Htext3                                            text3        000000
+__Htext30                                           text30       000000
+__Htext31                                           text31       000000
+__Htext32                                           text32       000000
+__Htext33                                           text33       000000
+__Htext34                                           text34       000000
+__Htext35                                           text35       000000
+__Htext36                                           text36       000000
+__Htext37                                           text37       000000
+__Htext38                                           text38       000000
+__Htext39                                           text39       000000
+__Htext4                                            text4        000000
+__Htext40                                           text40       000000
+__Htext41                                           text41       000000
+__Htext42                                           text42       000000
+__Htext43                                           text43       000000
+__Htext44                                           text44       000000
+__Htext45                                           text45       000000
+__Htext46                                           text46       000000
+__Htext47                                           text47       000000
+__Htext48                                           text48       000000
+__Htext49                                           text49       000000
+__Htext5                                            text5        000000
+__Htext50                                           text50       000000
+__Htext51                                           text51       000000
+__Htext6                                            text6        000000
+__Htext7                                            text7        000000
+__Htext8                                            text8        000000
+__Htext9                                            text9        000000
+__LRAM                                              (abs)        000001
+__Labs1                                             abs1         000000
+__Lbank0                                            bank0        000000
+__Lbank1                                            bank1        000000
+__Lbank2                                            bank2        000000
+__Lbank3                                            bank3        000000
+__Lbank4                                            bank4        000000
+__Lbank5                                            bank5        000000
+__Lbigbss                                           bigbss       000000
+__Lbigdata                                          bigdata      000000
+__Lbigram                                           bigram       000000
+__Lbss                                              bss          000000
+__LbssBANK0                                         bssBANK0     000000
+__LbssCOMRAM                                        bssCOMRAM    000000
+__Lcinit                                            cinit        000000
+__Lclrtext                                          clrtext      000000
+__Lcomram                                           comram       000000
+__Lconfig                                           config       000000
+__Lconst                                            const        000000
+__LcstackCOMRAM                                     cstackCOMRAM 000000
+__Ldata                                             data         000000
+__LdataBANK0                                        dataBANK0    000000
+__Leeprom_data                                      eeprom_data  000000
+__Lfarbss                                           farbss       000000
+__Lfardata                                          fardata      000000
+__Libigdata                                         ibigdata     000000
+__Lidata                                            idata        000000
+__LidataBANK0                                       idataBANK0   000000
+__Lidloc                                            idloc        000000
+__Lifardata                                         ifardata     000000
+__Linit                                             init         000078
+__Lintcode                                          intcode      000008
+__Lintcode_body                                     intcode_body 000000
+__Lintcodelo                                        intcodelo    000078
+__Lintentry                                         intentry     000000
+__Lintret                                           intret       000000
+__Lintsave_regs                                     intsave_regs 000000
+__Lirdata                                           irdata       000000
+__Lmediumconst                                      mediumconst  000000
+__LnvFARRAM                                         nvFARRAM     000000
+__Lnvbit                                            nvbit        000000
+__Lnvrram                                           nvrram       000000
+__Lparam                                            rparam       000000
+__Lpowerup                                          powerup      000078
+__Lram                                              ram          000000
+__Lramtop                                           ramtop       000600
+__Lrbit                                             rbit         000000
+__Lrbss                                             rbss         000000
+__Lrdata                                            rdata        000000
+__Lreset_vec                                        reset_vec    000000
+__Lrparam                                           rparam       000000
+__Lsfr                                              sfr          000000
+__Lsmallconst                                       smallconst   000600
+__Lspace_0                                          (abs)        000000
+__Lspace_1                                          (abs)        000000
+__Lspace_2                                          (abs)        000000
+__Lspace_4                                          (abs)        000000
+__Lstack                                            stack        000000
+__Lstruct                                           struct       000000
+__Ltemp                                             temp         00005F
+__Ltext                                             text         000000
+__Ltext0                                            text0        000000
+__Ltext1                                            text1        000000
+__Ltext10                                           text10       000000
+__Ltext11                                           text11       000000
+__Ltext12                                           text12       000000
+__Ltext13                                           text13       000000
+__Ltext14                                           text14       000000
+__Ltext15                                           text15       000000
+__Ltext16                                           text16       000000
+__Ltext17                                           text17       000000
+__Ltext18                                           text18       000000
+__Ltext19                                           text19       000000
+__Ltext2                                            text2        000000
+__Ltext20                                           text20       000000
+__Ltext21                                           text21       000000
+__Ltext22                                           text22       000000
+__Ltext23                                           text23       000000
+__Ltext24                                           text24       000000
+__Ltext25                                           text25       000000
+__Ltext26                                           text26       000000
+__Ltext27                                           text27       000000
+__Ltext28                                           text28       000000
+__Ltext29                                           text29       000000
+__Ltext3                                            text3        000000
+__Ltext30                                           text30       000000
+__Ltext31                                           text31       000000
+__Ltext32                                           text32       000000
+__Ltext33                                           text33       000000
+__Ltext34                                           text34       000000
+__Ltext35                                           text35       000000
+__Ltext36                                           text36       000000
+__Ltext37                                           text37       000000
+__Ltext38                                           text38       000000
+__Ltext39                                           text39       000000
+__Ltext4                                            text4        000000
+__Ltext40                                           text40       000000
+__Ltext41                                           text41       000000
+__Ltext42                                           text42       000000
+__Ltext43                                           text43       000000
+__Ltext44                                           text44       000000
+__Ltext45                                           text45       000000
+__Ltext46                                           text46       000000
+__Ltext47                                           text47       000000
+__Ltext48                                           text48       000000
+__Ltext49                                           text49       000000
+__Ltext5                                            text5        000000
+__Ltext50                                           text50       000000
+__Ltext51                                           text51       000000
+__Ltext6                                            text6        000000
+__Ltext7                                            text7        000000
+__Ltext8                                            text8        000000
+__Ltext9                                            text9        000000
+__S0                                                (abs)        002762
+__S1                                                (abs)        000089
+__S2                                                (abs)        000000
+__S4                                                (abs)        000000
+__S5                                                (abs)        000000
+___inthi_sp                                         stack        000000
+___intlo_sp                                         stack        000000
+___lldiv                                            text22       001DDC
+___lldiv@counter                                    cstackCOMRAM 000016
+___lldiv@dividend                                   cstackCOMRAM 00000A
+___lldiv@divisor                                    cstackCOMRAM 00000E
+___lldiv@quotient                                   cstackCOMRAM 000012
+___llmod                                            text21       002048
+___llmod@counter                                    cstackCOMRAM 000009
+___llmod@dividend                                   cstackCOMRAM 000001
+___llmod@divisor                                    cstackCOMRAM 000005
+___param_bank                                       (abs)        000000
+___rparam_used                                      (abs)        000001
+___sp                                               stack        000000
+__accesstop                                         (abs)        000060
+__activetblptr                                      (abs)        000002
+__end_of___lldiv                                    text22       001E80
+__end_of___llmod                                    text21       0020D0
+__end_of__initialization                            cinit        00256A
+__end_of_debounce_inputs_10ms                       text8        001AF4
+__end_of_delay_ms_soft                              text34       002640
+__end_of_delay_us_soft                              text49       0024B0
+__end_of_down_arrow                                 smallconst   000626
+__end_of_eeprom_read_byte                           text51       00269C
+__end_of_eeprom_write_byte                          text3        0025B4
+__end_of_font_get_pattern                           text38       001388
+__end_of_format_hourmeter_string                    text20       000D6E
+__end_of_format_runtime_string                      text19       001036
+__end_of_handle_brush_switch_10ms                   text7        0011F2
+__end_of_handle_vac_switch_10ms                     text6        001F1E
+__end_of_hourmeter_load_from_eeprom                 text50       0014C6
+__end_of_hourmeter_save_to_eeprom                   text2        002362
+__end_of_i2c_delay                                  text48       002740
+__end_of_i2c_init                                   text16       00274A
+__end_of_i2c_start                                  text45       0026F8
+__end_of_i2c_stop                                   text43       0026B6
+__end_of_i2c_write_byte                             text47       002414
+__end_of_io_init                                    text15       002614
+__end_of_isr                                        intcode      000078
+__end_of_main                                       text0        002230
+__end_of_oled_clear                                 text39       0024F6
+__end_of_oled_clear_5x8                             text25       0023BC
+__end_of_oled_draw_brush_bristles                   text31       001BB8
+__end_of_oled_draw_char                             text29       001FB6
+__end_of_oled_draw_char_huge                        text36       00172E
+__end_of_oled_draw_down_arrow_5x8                   text24       002300
+__end_of_oled_draw_graphic_base                     text26       0025E8
+__end_of_oled_draw_graphic_screen                   text23       00253A
+__end_of_oled_draw_old_runtime_screen               text18       000A68
+__end_of_oled_draw_rectangle                        text30       001602
+__end_of_oled_draw_text                             text28       0021C4
+__end_of_oled_draw_text_centered                    text27       002048
+__end_of_oled_draw_text_huge                        text35       001D2E
+__end_of_oled_draw_underline_animated               text33       002152
+__end_of_oled_init                                  text14       001C7A
+__end_of_oled_send_command                          text41       002680
+__end_of_oled_send_data_byte                        text46       002754
+__end_of_oled_send_data_start                       text44       002732
+__end_of_oled_send_data_stop                        text42       002760
+__end_of_oled_set_cursor                            text40       002662
+__end_of_oled_show_boot_screen                      text32       001DDC
+__end_of_oled_update_screen                         text17       002466
+__end_of_osc_init                                   text13       00275A
+__end_of_read_brush_sw_raw                          text10       002720
+__end_of_read_vac_sw_raw                            text9        00270C
+__end_of_scale4x_vertical                           text37       001A12
+__end_of_system_init                                text11       0026CC
+__end_of_timer0_init                                text12       0026E2
+__end_of_update_logic_10ms                          text4        00192E
+__end_of_update_logic_1s                            text1        001844
+__end_of_update_outputs                             text5        002298
+__end_offont_get_pattern@colon_char                 smallconst   00065D
+__end_offont_get_pattern@digits                     smallconst   000658
+__end_offont_get_pattern@letter_A                   smallconst   000694
+__end_offont_get_pattern@letter_B                   smallconst   00068A
+__end_offont_get_pattern@letter_C                   smallconst   00068F
+__end_offont_get_pattern@letter_D                   smallconst   00067B
+__end_offont_get_pattern@letter_E                   smallconst   000667
+__end_offont_get_pattern@letter_H                   smallconst   00066C
+__end_offont_get_pattern@letter_I                   smallconst   000676
+__end_offont_get_pattern@letter_M                   smallconst   000671
+__end_offont_get_pattern@letter_O                   smallconst   00069E
+__end_offont_get_pattern@letter_R                   smallconst   000685
+__end_offont_get_pattern@letter_T                   smallconst   0006A3
+__end_offont_get_pattern@letter_U                   smallconst   000680
+__end_offont_get_pattern@letter_V                   smallconst   000699
+__end_offont_get_pattern@letter_space               smallconst   000662
+__end_ofoled_draw_old_runtime_screen@icon_brush_off smallconst   000619
+__end_ofoled_draw_old_runtime_screen@icon_brush_on  smallconst   000621
+__end_ofoled_draw_old_runtime_screen@icon_vac_off   smallconst   000609
+__end_ofoled_draw_old_runtime_screen@icon_vac_on    smallconst   000611
+__initialization                                    cinit        00253A
+__mediumconst                                       mediumconst  000000
+__pbssBANK0                                         bssBANK0     000060
+__pbssCOMRAM                                        bssCOMRAM    000059
+__pcinit                                            cinit        00253A
+__pcstackCOMRAM                                     cstackCOMRAM 000001
+__pdataBANK0                                        dataBANK0    000087
+__pidataBANK0                                       idataBANK0   002760
+__pintcode                                          intcode      000008
+__psmallconst                                       smallconst   000600
+__ptext0                                            text0        0021C4
+__ptext1                                            text1        00172E
+__ptext10                                           text10       00270C
+__ptext11                                           text11       0026B6
+__ptext12                                           text12       0026CC
+__ptext13                                           text13       002754
+__ptext14                                           text14       001BB8
+__ptext15                                           text15       0025E8
+__ptext16                                           text16       002740
+__ptext17                                           text17       002414
+__ptext18                                           text18       0006AA
+__ptext19                                           text19       000D6E
+__ptext2                                            text2        002300
+__ptext20                                           text20       000A68
+__ptext21                                           text21       002048
+__ptext22                                           text22       001DDC
+__ptext23                                           text23       0024F6
+__ptext24                                           text24       002298
+__ptext25                                           text25       002362
+__ptext26                                           text26       0025B4
+__ptext27                                           text27       001FB6
+__ptext28                                           text28       002152
+__ptext29                                           text29       001F1E
+__ptext3                                            text3        002578
+__ptext30                                           text30       0014C6
+__ptext31                                           text31       001AF4
+__ptext32                                           text32       001D2E
+__ptext33                                           text33       0020D0
+__ptext34                                           text34       002614
+__ptext35                                           text35       001C7A
+__ptext36                                           text36       001602
+__ptext37                                           text37       00192E
+__ptext38                                           text38       0011F2
+__ptext39                                           text39       0024B0
+__ptext4                                            text4        001844
+__ptext40                                           text40       002640
+__ptext41                                           text41       002662
+__ptext42                                           text42       00275A
+__ptext43                                           text43       00269C
+__ptext44                                           text44       002720
+__ptext45                                           text45       0026E2
+__ptext46                                           text46       00274A
+__ptext47                                           text47       0023BC
+__ptext48                                           text48       002732
+__ptext49                                           text49       002466
+__ptext5                                            text5        002230
+__ptext50                                           text50       001388
+__ptext51                                           text51       002680
+__ptext6                                            text6        001E80
+__ptext7                                            text7        001036
+__ptext8                                            text8        001A12
+__ptext9                                            text9        0026F8
+__ramtop                                            ramtop       000600
+__size_of___lldiv                                   (abs)        000000
+__size_of___llmod                                   (abs)        000000
+__size_of_debounce_inputs_10ms                      (abs)        000000
+__size_of_delay_ms_soft                             (abs)        000000
+__size_of_delay_us_soft                             (abs)        000000
+__size_of_eeprom_read_byte                          (abs)        000000
+__size_of_eeprom_write_byte                         (abs)        000000
+__size_of_font_get_pattern                          (abs)        000000
+__size_of_format_hourmeter_string                   (abs)        000000
+__size_of_format_runtime_string                     (abs)        000000
+__size_of_handle_brush_switch_10ms                  (abs)        000000
+__size_of_handle_vac_switch_10ms                    (abs)        000000
+__size_of_hourmeter_load_from_eeprom                (abs)        000000
+__size_of_hourmeter_save_to_eeprom                  (abs)        000000
+__size_of_i2c_delay                                 (abs)        000000
+__size_of_i2c_init                                  (abs)        000000
+__size_of_i2c_start                                 (abs)        000000
+__size_of_i2c_stop                                  (abs)        000000
+__size_of_i2c_write_byte                            (abs)        000000
+__size_of_io_init                                   (abs)        000000
+__size_of_isr                                       (abs)        000000
+__size_of_main                                      (abs)        000000
+__size_of_oled_clear                                (abs)        000000
+__size_of_oled_clear_5x8                            (abs)        000000
+__size_of_oled_draw_brush_bristles                  (abs)        000000
+__size_of_oled_draw_char                            (abs)        000000
+__size_of_oled_draw_char_huge                       (abs)        000000
+__size_of_oled_draw_down_arrow_5x8                  (abs)        000000
+__size_of_oled_draw_graphic_base                    (abs)        000000
+__size_of_oled_draw_graphic_screen                  (abs)        000000
+__size_of_oled_draw_old_runtime_screen              (abs)        000000
+__size_of_oled_draw_rectangle                       (abs)        000000
+__size_of_oled_draw_text                            (abs)        000000
+__size_of_oled_draw_text_centered                   (abs)        000000
+__size_of_oled_draw_text_huge                       (abs)        000000
+__size_of_oled_draw_underline_animated              (abs)        000000
+__size_of_oled_init                                 (abs)        000000
+__size_of_oled_send_command                         (abs)        000000
+__size_of_oled_send_data_byte                       (abs)        000000
+__size_of_oled_send_data_start                      (abs)        000000
+__size_of_oled_send_data_stop                       (abs)        000000
+__size_of_oled_set_cursor                           (abs)        000000
+__size_of_oled_show_boot_screen                     (abs)        000000
+__size_of_oled_update_screen                        (abs)        000000
+__size_of_osc_init                                  (abs)        000000
+__size_of_read_brush_sw_raw                         (abs)        000000
+__size_of_read_vac_sw_raw                           (abs)        000000
+__size_of_scale4x_vertical                          (abs)        000000
+__size_of_system_init                               (abs)        000000
+__size_of_timer0_init                               (abs)        000000
+__size_of_update_logic_10ms                         (abs)        000000
+__size_of_update_logic_1s                           (abs)        000000
+__size_of_update_outputs                            (abs)        000000
+__smallconst                                        smallconst   000600
+_brush_sw_integrator                                bssBANK0     000082
+_debounce_inputs_10ms                               text8        001A12
+_delay_ms_soft                                      text34       002614
+_delay_us_soft                                      text49       002466
+_down_arrow                                         smallconst   000621
+_eeprom_read_byte                                   text51       002680
+_eeprom_write_byte                                  text3        002578
+_font_get_pattern                                   text38       0011F2
+_format_hourmeter_string                            text20       000A68
+_format_runtime_string                              text19       000D6E
+_g_10ms_flag                                        bssBANK0     000086
+_g_1s_flag                                          bssBANK0     000085
+_g_boot_ms                                          bssBANK0     000072
+_g_brush_hold_ticks                                 bssBANK0     000070
+_g_brush_long_press_done                            bssBANK0     00007E
+_g_brush_on                                         bssCOMRAM    00005C
+_g_brush_release_on                                 bssCOMRAM    000059
+_g_brush_release_ticks_left                         bssBANK0     00006E
+_g_brush_seconds                                    bssBANK0     000064
+_g_brush_sw_prev_state                              bssBANK0     000084
+_g_brush_sw_state                                   bssCOMRAM    00005E
+_g_brush_tracking_press                             bssBANK0     00007F
+_g_display_refresh_request                          dataBANK0    000088
+_g_graphic_arrow_blink_state                        dataBANK0    000087
+_g_logo_blink_state                                 bssBANK0     00007D
+_g_ms_counter                                       bssBANK0     000074
+_g_overall_seconds                                  bssBANK0     000068
+_g_vac_sw_prev_state                                bssBANK0     000083
+_g_vac_sw_state                                     bssCOMRAM    00005D
+_g_vacuum_delay_active                              bssCOMRAM    00005A
+_g_vacuum_off_delay                                 bssBANK0     000080
+_g_vacuum_on                                        bssCOMRAM    00005B
+_g_vacuum_seconds                                   bssBANK0     000060
+_handle_brush_switch_10ms                           text7        001036
+_handle_brush_switch_10ms$818                       cstackCOMRAM 000003
+_handle_brush_switch_10ms$820                       cstackCOMRAM 000004
+_handle_vac_switch_10ms                             text6        001E80
+_handle_vac_switch_10ms$823                         cstackCOMRAM 000002
+_hourmeter_load_from_eeprom                         text50       001388
+_hourmeter_save_to_eeprom                           text2        002300
+_i2c_delay                                          text48       002732
+_i2c_init                                           text16       002740
+_i2c_start                                          text45       0026E2
+_i2c_stop                                           text43       00269C
+_i2c_write_byte                                     text47       0023BC
+_io_init                                            text15       0025E8
+_isr                                                intcode      000008
+_main                                               text0        0021C4
+_oled_clear                                         text39       0024B0
+_oled_clear_5x8                                     text25       002362
+_oled_draw_brush_bristles                           text31       001AF4
+_oled_draw_char                                     text29       001F1E
+_oled_draw_char_huge                                text36       001602
+_oled_draw_down_arrow_5x8                           text24       002298
+_oled_draw_graphic_base                             text26       0025B4
+_oled_draw_graphic_screen                           text23       0024F6
+_oled_draw_old_runtime_screen                       text18       0006AA
+_oled_draw_rectangle                                text30       0014C6
+_oled_draw_text                                     text28       002152
+_oled_draw_text_centered                            text27       001FB6
+_oled_draw_text_huge                                text35       001C7A
+_oled_draw_underline_animated                       text33       0020D0
+_oled_init                                          text14       001BB8
+_oled_send_command                                  text41       002662
+_oled_send_data_byte                                text46       00274A
+_oled_send_data_start                               text44       002720
+_oled_send_data_stop                                text42       00275A
+_oled_set_cursor                                    text40       002640
+_oled_show_boot_screen                              text32       001D2E
+_oled_update_screen                                 text17       002414
+_osc_init                                           text13       002754
+_read_brush_sw_raw                                  text10       00270C
+_read_vac_sw_raw                                    text9        0026F8
+_scale4x_vertical                                   text37       00192E
+_system_init                                        text11       0026B6
+_timer0_init                                        text12       0026CC
+_update_logic_10ms                                  text4        001844
+_update_logic_1s                                    text1        00172E
+_update_outputs                                     text5        002230
+_vac_sw_integrator                                  bssBANK0     000081
+btemp                                               temp         00005F
+debounce_inputs_10ms@raw_brush                      cstackCOMRAM 000001
+debounce_inputs_10ms@raw_vac                        cstackCOMRAM 000002
+delay_ms_soft@ms                                    cstackCOMRAM 000004
+delay_us_soft@i                                     cstackCOMRAM 000003
+delay_us_soft@us                                    cstackCOMRAM 000001
+eeprom_read_byte@addr                               cstackCOMRAM 000001
+eeprom_write_byte@addr                              cstackCOMRAM 000001
+eeprom_write_byte@value                             cstackCOMRAM 000003
+end_of_initialization                               cinit        00256A
+font_get_pattern@c                                  cstackCOMRAM 000007
+font_get_pattern@colon_char                         smallconst   000658
+font_get_pattern@digits                             smallconst   000626
+font_get_pattern@letter_A                           smallconst   00068F
+font_get_pattern@letter_B                           smallconst   000685
+font_get_pattern@letter_C                           smallconst   00068A
+font_get_pattern@letter_D                           smallconst   000676
+font_get_pattern@letter_E                           smallconst   000662
+font_get_pattern@letter_H                           smallconst   000667
+font_get_pattern@letter_I                           smallconst   000671
+font_get_pattern@letter_M                           smallconst   00066C
+font_get_pattern@letter_O                           smallconst   000699
+font_get_pattern@letter_R                           smallconst   000680
+font_get_pattern@letter_T                           smallconst   00069E
+font_get_pattern@letter_U                           smallconst   00067B
+font_get_pattern@letter_V                           smallconst   000694
+font_get_pattern@letter_space                       smallconst   00065D
+format_hourmeter_string@buf                         cstackCOMRAM 000017
+format_hourmeter_string@hh                          cstackCOMRAM 000021
+format_hourmeter_string@mm                          cstackCOMRAM 00001D
+format_hourmeter_string@seconds                     cstackCOMRAM 000019
+format_runtime_string@buf                           cstackCOMRAM 000017
+format_runtime_string@hh                            cstackCOMRAM 000025
+format_runtime_string@mm                            cstackCOMRAM 00001D
+format_runtime_string@seconds                       cstackCOMRAM 000019
+format_runtime_string@ss                            cstackCOMRAM 000021
+handle_brush_switch_10ms@brush_falling_edge         cstackCOMRAM 000002
+handle_brush_switch_10ms@brush_rising_edge          cstackCOMRAM 000001
+handle_vac_switch_10ms@vac_falling_edge             cstackCOMRAM 000001
+hourmeter_load_from_eeprom@magic                    cstackCOMRAM 000008
+hourmeter_load_from_eeprom@val                      cstackCOMRAM 000009
+hourmeter_save_to_eeprom@val                        cstackCOMRAM 000004
+i2c_write_byte@data                                 cstackCOMRAM 000004
+i2c_write_byte@i                                    cstackCOMRAM 000005
+int$flags                                           temp         00005F
+intlevel0                                           text         000000
+intlevel1                                           text         000000
+intlevel2                                           text         000000
+intlevel3                                           text         000000
+isr@ms_for_1s                                       bssBANK0     00006C
+oled_clear@col                                      cstackCOMRAM 000009
+oled_clear@page                                     cstackCOMRAM 00000A
+oled_clear_5x8@i                                    cstackCOMRAM 00000B
+oled_clear_5x8@page                                 cstackCOMRAM 000009
+oled_clear_5x8@x                                    cstackCOMRAM 00000A
+oled_draw_brush_bristles@bristle_page               cstackCOMRAM 00000A
+oled_draw_brush_bristles@inner_end_x                cstackCOMRAM 00000D
+oled_draw_brush_bristles@inner_start_x              cstackCOMRAM 00000C
+oled_draw_brush_bristles@rect_width                 cstackCOMRAM 000009
+oled_draw_brush_bristles@rect_x                     cstackCOMRAM 00000E
+oled_draw_brush_bristles@x                          cstackCOMRAM 00000F
+oled_draw_char@c                                    cstackCOMRAM 00000A
+oled_draw_char@pattern                              cstackCOMRAM 00000B
+oled_draw_char_huge@c                               cstackCOMRAM 00000D
+oled_draw_char_huge@col                             cstackCOMRAM 000026
+oled_draw_char_huge@i                               cstackCOMRAM 000028
+oled_draw_char_huge@p                               cstackCOMRAM 000027
+oled_draw_char_huge@page                            cstackCOMRAM 00000C
+oled_draw_char_huge@pattern                         cstackCOMRAM 000024
+oled_draw_char_huge@scaled                          cstackCOMRAM 000010
+oled_draw_down_arrow_5x8@i                          cstackCOMRAM 00000B
+oled_draw_down_arrow_5x8@page                       cstackCOMRAM 000009
+oled_draw_down_arrow_5x8@x                          cstackCOMRAM 00000A
+oled_draw_graphic_screen@right_arrow_x              cstackCOMRAM 00000D
+oled_draw_old_runtime_screen@i                      cstackCOMRAM 000057
+oled_draw_old_runtime_screen@icon_brush_off         smallconst   000611
+oled_draw_old_runtime_screen@icon_brush_on          smallconst   000619
+oled_draw_old_runtime_screen@icon_col               cstackCOMRAM 000050
+oled_draw_old_runtime_screen@icon_vac_off           smallconst   000601
+oled_draw_old_runtime_screen@icon_vac_on            smallconst   000609
+oled_draw_old_runtime_screen@icon_width             cstackCOMRAM 000054
+oled_draw_old_runtime_screen@len                    cstackCOMRAM 000056
+oled_draw_old_runtime_screen@linebuf                cstackCOMRAM 000036
+oled_draw_old_runtime_screen@p                      cstackCOMRAM 000052
+oled_draw_old_runtime_screen@start_col              cstackCOMRAM 000055
+oled_draw_old_runtime_screen@text_col               cstackCOMRAM 000051
+oled_draw_old_runtime_screen@text_width             cstackCOMRAM 00004E
+oled_draw_old_runtime_screen@timebuf                cstackCOMRAM 00002D
+oled_draw_old_runtime_screen@total_width            cstackCOMRAM 00004F
+oled_draw_rectangle@height_page                     cstackCOMRAM 00000B
+oled_draw_rectangle@i                               cstackCOMRAM 00000F
+oled_draw_rectangle@width                           cstackCOMRAM 00000A
+oled_draw_rectangle@x                               cstackCOMRAM 00000E
+oled_draw_rectangle@y_page                          cstackCOMRAM 000009
+oled_draw_text@col                                  cstackCOMRAM 000010
+oled_draw_text@page                                 cstackCOMRAM 00000D
+oled_draw_text@text                                 cstackCOMRAM 00000E
+oled_draw_text_centered@len                         cstackCOMRAM 00001C
+oled_draw_text_centered@p                           cstackCOMRAM 000018
+oled_draw_text_centered@page                        cstackCOMRAM 000017
+oled_draw_text_centered@start_col                   cstackCOMRAM 00001B
+oled_draw_text_centered@text                        cstackCOMRAM 000011
+oled_draw_text_centered@width                       cstackCOMRAM 00001A
+oled_draw_text_huge@col                             cstackCOMRAM 00002C
+oled_draw_text_huge@p                               cstackCOMRAM 00002D
+oled_draw_text_huge@page                            cstackCOMRAM 000029
+oled_draw_text_huge@text                            cstackCOMRAM 00002A
+oled_draw_text_huge@x                               cstackCOMRAM 00002E
+oled_draw_underline_animated@chunk                  cstackCOMRAM 00000C
+oled_draw_underline_animated@chunk_delay_ms         cstackCOMRAM 00000D
+oled_draw_underline_animated@col                    cstackCOMRAM 00000F
+oled_draw_underline_animated@drawn                  cstackCOMRAM 000012
+oled_draw_underline_animated@i                      cstackCOMRAM 000010
+oled_draw_underline_animated@n                      cstackCOMRAM 000011
+oled_draw_underline_animated@page                   cstackCOMRAM 000009
+oled_draw_underline_animated@pattern                cstackCOMRAM 00000B
+oled_draw_underline_animated@width                  cstackCOMRAM 00000A
+oled_send_command@cmd                               cstackCOMRAM 000006
+oled_send_data_byte@data                            cstackCOMRAM 000006
+oled_set_cursor@col                                 cstackCOMRAM 000008
+oled_set_cursor@page                                cstackCOMRAM 000007
+oled_show_boot_screen@char_advance                  cstackCOMRAM 000030
+oled_show_boot_screen@i                             cstackCOMRAM 000033
+oled_show_boot_screen@start_col                     cstackCOMRAM 000034
+oled_show_boot_screen@text_width                    cstackCOMRAM 000035
+oled_show_boot_screen@underline_page                cstackCOMRAM 000032
+oled_update_screen@graphic_mode                     cstackCOMRAM 000058
+oled_update_screen@prev_graphic_mode                bssBANK0     000076
+scale4x_vertical@base                               cstackCOMRAM 000006
+scale4x_vertical@bit                                cstackCOMRAM 000008
+scale4x_vertical@byte                               cstackCOMRAM 000007
+scale4x_vertical@in                                 cstackCOMRAM 000005
+scale4x_vertical@k                                  cstackCOMRAM 00000A
+scale4x_vertical@out                                cstackCOMRAM 000001
+scale4x_vertical@pos                                cstackCOMRAM 000009
+scale4x_vertical@r                                  cstackCOMRAM 00000B
+stackhi                                             (abs)        0005FF
+stacklo                                             (abs)        000089
+start                                               init         000078
+start_initialization                                cinit        00253A
+ttemp5                                              temp         000060
+ttemp6                                              temp         000063
+ttemp7                                              temp         000067
+update_logic_10ms@blink_10ms                        bssBANK0     00007C
+update_logic_10ms@graphic_arrow_blink_counter       bssBANK0     00007A
+update_logic_10ms@last_delay_active                 bssBANK0     00007B
+update_logic_10ms@prev_graphic_mode                 bssBANK0     000079
+update_logic_1s@eeprom_save_counter                 bssBANK0     000077
+update_logic_1s@logo_phase                          bssBANK0     000078
+wtemp8                                              temp         000060
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 1447 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2  527[None  ] int 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels required when called:   10
+ This function calls:
+		_hourmeter_load_from_eeprom
+		_oled_send_command
+		_oled_show_boot_screen
+		_oled_update_screen
+		_system_init
+		_update_logic_10ms
+		_update_logic_1s
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _update_logic_1s *****************
+ Defined at:
+		line 579 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_hourmeter_save_to_eeprom
+		_update_outputs
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _hourmeter_save_to_eeprom *****************
+ Defined at:
+		line 1409 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  val             4    3[COMRAM] unsigned long 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         4       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         4       0       0       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_eeprom_write_byte
+ This function is called by:
+		_update_logic_1s
+ This function uses a non-reentrant model
+
+
+ *************** function _eeprom_write_byte *****************
+ Defined at:
+		line 1368 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  addr            2    0[COMRAM] unsigned short 
+  value           1    2[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         3       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_hourmeter_save_to_eeprom
+ This function uses a non-reentrant model
+
+
+ *************** function _update_logic_10ms *****************
+ Defined at:
+		line 513 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_debounce_inputs_10ms
+		_handle_brush_switch_10ms
+		_handle_vac_switch_10ms
+		_update_outputs
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _update_outputs *****************
+ Defined at:
+		line 505 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_update_logic_10ms
+		_update_logic_1s
+ This function uses a non-reentrant model
+
+
+ *************** function _handle_vac_switch_10ms *****************
+ Defined at:
+		line 472 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  vac_falling_    1    0[COMRAM] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_update_logic_10ms
+ This function uses a non-reentrant model
+
+
+ *************** function _handle_brush_switch_10ms *****************
+ Defined at:
+		line 407 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  brush_fallin    1    1[COMRAM] _Bool 
+  brush_rising    1    0[COMRAM] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         4       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         4       0       0       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_update_logic_10ms
+ This function uses a non-reentrant model
+
+
+ *************** function _debounce_inputs_10ms *****************
+ Defined at:
+		line 350 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  raw_vac         1    1[COMRAM] _Bool 
+  raw_brush       1    0[COMRAM] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_read_brush_sw_raw
+		_read_vac_sw_raw
+ This function is called by:
+		_update_logic_10ms
+ This function uses a non-reentrant model
+
+
+ *************** function _read_vac_sw_raw *****************
+ Defined at:
+		line 337 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_debounce_inputs_10ms
+ This function uses a non-reentrant model
+
+
+ *************** function _read_brush_sw_raw *****************
+ Defined at:
+		line 325 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_debounce_inputs_10ms
+ This function uses a non-reentrant model
+
+
+ *************** function _system_init *****************
+ Defined at:
+		line 243 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_i2c_init
+		_io_init
+		_oled_init
+		_osc_init
+		_timer0_init
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _timer0_init *****************
+ Defined at:
+		line 282 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_system_init
+ This function uses a non-reentrant model
+
+
+ *************** function _osc_init *****************
+ Defined at:
+		line 252 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_system_init
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_init *****************
+ Defined at:
+		line 730 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_delay_ms_soft
+		_oled_send_command
+ This function is called by:
+		_system_init
+ This function uses a non-reentrant model
+
+
+ *************** function _io_init *****************
+ Defined at:
+		line 257 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_system_init
+ This function uses a non-reentrant model
+
+
+ *************** function _i2c_init *****************
+ Defined at:
+		line 641 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_system_init
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_update_screen *****************
+ Defined at:
+		line 1299 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  graphic_mode    1   87[COMRAM] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    9
+ This function calls:
+		_oled_clear
+		_oled_draw_graphic_base
+		_oled_draw_graphic_screen
+		_oled_draw_old_runtime_screen
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_old_runtime_screen *****************
+ Defined at:
+		line 1165 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  linebuf        24   53[COMRAM] unsigned char [24]
+  timebuf         9   44[COMRAM] unsigned char [9]
+  p               2   81[COMRAM] PTR const unsigned char 
+		 -> oled_draw_old_runtime_screen@linebuf(24), 
+  i               1   86[COMRAM] unsigned char 
+  len             1   85[COMRAM] unsigned char 
+  start_col       1   84[COMRAM] unsigned char 
+  icon_width      1   83[COMRAM] const unsigned char 
+  text_col        1   80[COMRAM] unsigned char 
+  icon_col        1   79[COMRAM] unsigned char 
+  total_width     1   78[COMRAM] unsigned char 
+  text_width      1   77[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:        43       0       0       0       0       0       0
+      Temps:          4       0       0       0       0       0       0
+      Totals:        47       0       0       0       0       0       0
+Total ram usage:       47 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_format_hourmeter_string
+		_format_runtime_string
+		_oled_draw_text
+		_oled_draw_text_centered
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_update_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _format_runtime_string *****************
+ Defined at:
+		line 911 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  buf             2   22[COMRAM] PTR unsigned char 
+		 -> oled_draw_old_runtime_screen@timebuf(9), 
+  seconds         4   24[COMRAM] unsigned long 
+ Auto vars:     Size  Location     Type
+  hh              4   36[COMRAM] unsigned long 
+  ss              4   32[COMRAM] unsigned long 
+  mm              4   28[COMRAM] unsigned long 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         6       0       0       0       0       0       0
+      Locals:        12       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:        18       0       0       0       0       0       0
+Total ram usage:       18 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___lldiv
+		___llmod
+ This function is called by:
+		_oled_draw_old_runtime_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _format_hourmeter_string *****************
+ Defined at:
+		line 890 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  buf             2   22[COMRAM] PTR unsigned char 
+		 -> oled_draw_old_runtime_screen@timebuf(9), 
+  seconds         4   24[COMRAM] unsigned long 
+ Auto vars:     Size  Location     Type
+  hh              4   32[COMRAM] unsigned long 
+  mm              4   28[COMRAM] unsigned long 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         6       0       0       0       0       0       0
+      Locals:         8       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:        14       0       0       0       0       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___lldiv
+		___llmod
+ This function is called by:
+		_oled_draw_old_runtime_screen
+ This function uses a non-reentrant model
+
+
+ *************** function ___llmod *****************
+ Defined at:
+		line 7 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c"
+ Parameters:    Size  Location     Type
+  dividend        4    0[COMRAM] unsigned long 
+  divisor         4    4[COMRAM] unsigned long 
+ Auto vars:     Size  Location     Type
+  counter         1    8[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  4    0[COMRAM] unsigned long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         8       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         9       0       0       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_format_hourmeter_string
+		_format_runtime_string
+ This function uses a non-reentrant model
+
+
+ *************** function ___lldiv *****************
+ Defined at:
+		line 7 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c"
+ Parameters:    Size  Location     Type
+  dividend        4    9[COMRAM] unsigned long 
+  divisor         4   13[COMRAM] unsigned long 
+ Auto vars:     Size  Location     Type
+  quotient        4   17[COMRAM] unsigned long 
+  counter         1   21[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  4    9[COMRAM] unsigned long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         8       0       0       0       0       0       0
+      Locals:         5       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:        13       0       0       0       0       0       0
+Total ram usage:       13 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_format_hourmeter_string
+		_format_runtime_string
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_graphic_screen *****************
+ Defined at:
+		line 1281 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  right_arrow_    1   12[COMRAM] unsigned char 
+  left_arrow_x    1    0        unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_oled_clear_5x8
+		_oled_draw_down_arrow_5x8
+ This function is called by:
+		_oled_update_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_down_arrow_5x8 *****************
+ Defined at:
+		line 1141 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  x               1    wreg     unsigned char 
+  page            1    8[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  x               1    9[COMRAM] unsigned char 
+  i               1   10[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         1       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_draw_graphic_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_clear_5x8 *****************
+ Defined at:
+		line 1047 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  x               1    wreg     unsigned char 
+  page            1    8[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  x               1    9[COMRAM] unsigned char 
+  i               1   10[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         1       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_draw_graphic_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_graphic_base *****************
+ Defined at:
+		line 1266 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_oled_clear
+		_oled_draw_brush_bristles
+		_oled_draw_rectangle
+		_oled_draw_text_centered
+ This function is called by:
+		_oled_update_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_text_centered *****************
+ Defined at:
+		line 871 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  page            1    wreg     unsigned char 
+  text            2   16[COMRAM] PTR const unsigned char 
+		 -> STR_2(5), oled_draw_old_runtime_screen@linebuf(24), STR_1(5), 
+ Auto vars:     Size  Location     Type
+  page            1   22[COMRAM] unsigned char 
+  start_col       1   26[COMRAM] unsigned char 
+  width           1   25[COMRAM] unsigned char 
+  p               2   23[COMRAM] PTR const unsigned char 
+		 -> STR_2(5), oled_draw_old_runtime_screen@linebuf(24), STR_1(5), 
+  len             1   27[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         2       0       0       0       0       0       0
+      Locals:         6       0       0       0       0       0       0
+      Temps:          4       0       0       0       0       0       0
+      Totals:        12       0       0       0       0       0       0
+Total ram usage:       12 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_oled_draw_text
+ This function is called by:
+		_oled_draw_old_runtime_screen
+		_oled_draw_graphic_base
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_text *****************
+ Defined at:
+		line 860 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  col             1    wreg     unsigned char 
+  page            1   12[COMRAM] unsigned char 
+  text            2   13[COMRAM] PTR const unsigned char 
+		 -> STR_2(5), oled_draw_old_runtime_screen@linebuf(24), STR_1(5), 
+ Auto vars:     Size  Location     Type
+  col             1   15[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         3       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         4       0       0       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_oled_draw_char
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_draw_text_centered
+		_oled_draw_old_runtime_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_char *****************
+ Defined at:
+		line 848 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  c               1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  c               1    9[COMRAM] unsigned char 
+  pattern         2   10[COMRAM] PTR const unsigned char 
+		 -> font_get_pattern@letter_space(5), font_get_pattern@colon_char(5), font_get_pattern@letter_E(5), font_get_pattern@letter_H(5), 
+		 -> font_get_pattern@letter_M(5), font_get_pattern@letter_I(5), font_get_pattern@letter_D(5), font_get_pattern@letter_U(5), 
+		 -> font_get_pattern@letter_R(5), font_get_pattern@letter_B(5), font_get_pattern@letter_C(5), font_get_pattern@letter_A(5), 
+		 -> font_get_pattern@letter_V(5), font_get_pattern@letter_O(5), font_get_pattern@letter_T(5), font_get_pattern@digits(50), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         3       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0
+      Totals:         5       0       0       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_font_get_pattern
+		_oled_send_data_byte
+ This function is called by:
+		_oled_draw_text
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_rectangle *****************
+ Defined at:
+		line 1070 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  x               1    wreg     unsigned char 
+  y_page          1    8[COMRAM] unsigned char 
+  width           1    9[COMRAM] unsigned char 
+  height_page     1   10[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  x               1   13[COMRAM] unsigned char 
+  i               1   14[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         3       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0
+      Totals:         7       0       0       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_draw_graphic_base
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_brush_bristles *****************
+ Defined at:
+		line 1108 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  rect_x          1    wreg     unsigned char 
+  rect_width      1    8[COMRAM] unsigned char 
+  bristle_page    1    9[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  rect_x          1   13[COMRAM] unsigned char 
+  x               1   14[COMRAM] unsigned char 
+  inner_end_x     1   12[COMRAM] unsigned char 
+  inner_start_    1   11[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         2       0       0       0       0       0       0
+      Locals:         4       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0
+      Totals:         7       0       0       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_draw_graphic_base
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_show_boot_screen *****************
+ Defined at:
+		line 1327 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  text_width      1   52[COMRAM] const unsigned char 
+  start_col       1   51[COMRAM] const unsigned char 
+  i               1   50[COMRAM] unsigned char 
+  underline_pa    1   49[COMRAM] const unsigned char 
+  top_page        1    0        const unsigned char 
+  char_advance    1   47[COMRAM] const unsigned char 
+  num_chars       1    0        const unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         7       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         7       0       0       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_oled_clear
+		_oled_draw_text_huge
+		_oled_draw_underline_animated
+		_oled_send_command
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_underline_animated *****************
+ Defined at:
+		line 1019 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  col             1    wreg     unsigned char 
+  page            1    8[COMRAM] unsigned char 
+  width           1    9[COMRAM] unsigned char 
+  pattern         1   10[COMRAM] unsigned char 
+  chunk           1   11[COMRAM] unsigned char 
+  chunk_delay_    2   12[COMRAM] unsigned short 
+ Auto vars:     Size  Location     Type
+  col             1   14[COMRAM] unsigned char 
+  n               1   16[COMRAM] unsigned char 
+  drawn           1   17[COMRAM] unsigned char 
+  i               1   15[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         6       0       0       0       0       0       0
+      Locals:         4       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:        10       0       0       0       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_delay_ms_soft
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_show_boot_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _delay_ms_soft *****************
+ Defined at:
+		line 234 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  ms              2    3[COMRAM] unsigned short 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         2       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_delay_us_soft
+ This function is called by:
+		_oled_init
+		_oled_draw_underline_animated
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_text_huge *****************
+ Defined at:
+		line 989 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  col             1    wreg     unsigned char 
+  page            1   40[COMRAM] unsigned char 
+  text            2   41[COMRAM] PTR const unsigned char 
+		 -> STR_3(5), 
+ Auto vars:     Size  Location     Type
+  col             1   43[COMRAM] unsigned char 
+  x               1   45[COMRAM] unsigned char 
+  p               1   44[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         3       0       0       0       0       0       0
+      Locals:         3       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_oled_draw_char_huge
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_show_boot_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_draw_char_huge *****************
+ Defined at:
+		line 960 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  col             1    wreg     unsigned char 
+  page            1   11[COMRAM] unsigned char 
+  c               1   12[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  col             1   37[COMRAM] unsigned char 
+  scaled         20   15[COMRAM] unsigned char [4][5]
+  pattern         2   35[COMRAM] PTR const unsigned char 
+		 -> font_get_pattern@letter_space(5), font_get_pattern@colon_char(5), font_get_pattern@letter_E(5), font_get_pattern@letter_H(5), 
+		 -> font_get_pattern@letter_M(5), font_get_pattern@letter_I(5), font_get_pattern@letter_D(5), font_get_pattern@letter_U(5), 
+		 -> font_get_pattern@letter_R(5), font_get_pattern@letter_B(5), font_get_pattern@letter_C(5), font_get_pattern@letter_A(5), 
+		 -> font_get_pattern@letter_V(5), font_get_pattern@letter_O(5), font_get_pattern@letter_T(5), font_get_pattern@digits(50), 
+  i               1   39[COMRAM] unsigned char 
+  p               1   38[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         2       0       0       0       0       0       0
+      Locals:        25       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0
+      Totals:        29       0       0       0       0       0       0
+Total ram usage:       29 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_font_get_pattern
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+		_scale4x_vertical
+ This function is called by:
+		_oled_draw_text_huge
+ This function uses a non-reentrant model
+
+
+ *************** function _scale4x_vertical *****************
+ Defined at:
+		line 934 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  in              1    wreg     unsigned char 
+  out             2    0[COMRAM] PTR unsigned char 
+		 -> oled_draw_char_huge@scaled(20), 
+ Auto vars:     Size  Location     Type
+  in              1    4[COMRAM] unsigned char 
+  pos             1    8[COMRAM] unsigned char 
+  bit             1    7[COMRAM] unsigned char 
+  byte            1    6[COMRAM] unsigned char 
+  base            1    5[COMRAM] unsigned char 
+  r               1   10[COMRAM] unsigned char 
+  k               1    9[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         2       0       0       0       0       0       0
+      Locals:         7       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0
+      Totals:        11       0       0       0       0       0       0
+Total ram usage:       11 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_oled_draw_char_huge
+ This function uses a non-reentrant model
+
+
+ *************** function _font_get_pattern *****************
+ Defined at:
+		line 792 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  c               1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  c               1    6[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  2    0[COMRAM] PTR const unsigned char 
+ Registers used:
+		wreg, status,2, status,0, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         2       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0
+      Temps:          4       0       0       0       0       0       0
+      Totals:         7       0       0       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_oled_draw_char
+		_oled_draw_char_huge
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_clear *****************
+ Defined at:
+		line 774 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  page            1    9[COMRAM] unsigned char 
+  col             1    8[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_oled_send_data_byte
+		_oled_send_data_start
+		_oled_send_data_stop
+		_oled_set_cursor
+ This function is called by:
+		_oled_draw_graphic_base
+		_oled_update_screen
+		_oled_show_boot_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_set_cursor *****************
+ Defined at:
+		line 767 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  col             1    wreg     unsigned char 
+  page            1    6[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  col             1    7[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         1       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_oled_send_command
+ This function is called by:
+		_oled_clear
+		_oled_draw_text
+		_oled_draw_char_huge
+		_oled_draw_text_huge
+		_oled_draw_underline_animated
+		_oled_clear_5x8
+		_oled_draw_rectangle
+		_oled_draw_brush_bristles
+		_oled_draw_down_arrow_5x8
+		_oled_draw_old_runtime_screen
+		_oled_show_boot_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_send_command *****************
+ Defined at:
+		line 704 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  cmd             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  cmd             1    5[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_i2c_start
+		_i2c_stop
+		_i2c_write_byte
+ This function is called by:
+		_oled_init
+		_oled_set_cursor
+		_oled_show_boot_screen
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_send_data_stop *****************
+ Defined at:
+		line 720 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_i2c_stop
+ This function is called by:
+		_oled_clear
+		_oled_draw_text
+		_oled_draw_char_huge
+		_oled_draw_text_huge
+		_oled_draw_underline_animated
+		_oled_clear_5x8
+		_oled_draw_rectangle
+		_oled_draw_brush_bristles
+		_oled_draw_down_arrow_5x8
+		_oled_draw_old_runtime_screen
+		_oled_show_boot_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _i2c_stop *****************
+ Defined at:
+		line 661 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_i2c_delay
+ This function is called by:
+		_oled_send_command
+		_oled_send_data_stop
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_send_data_start *****************
+ Defined at:
+		line 713 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_i2c_start
+		_i2c_write_byte
+ This function is called by:
+		_oled_clear
+		_oled_draw_text
+		_oled_draw_char_huge
+		_oled_draw_text_huge
+		_oled_draw_underline_animated
+		_oled_clear_5x8
+		_oled_draw_rectangle
+		_oled_draw_brush_bristles
+		_oled_draw_down_arrow_5x8
+		_oled_draw_old_runtime_screen
+		_oled_show_boot_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _i2c_start *****************
+ Defined at:
+		line 649 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_i2c_delay
+ This function is called by:
+		_oled_send_command
+		_oled_send_data_start
+ This function uses a non-reentrant model
+
+
+ *************** function _oled_send_data_byte *****************
+ Defined at:
+		line 725 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  data            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  data            1    5[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_i2c_write_byte
+ This function is called by:
+		_oled_clear
+		_oled_draw_char
+		_oled_draw_char_huge
+		_oled_draw_text_huge
+		_oled_draw_underline_animated
+		_oled_clear_5x8
+		_oled_draw_rectangle
+		_oled_draw_brush_bristles
+		_oled_draw_down_arrow_5x8
+		_oled_draw_old_runtime_screen
+		_oled_show_boot_screen
+ This function uses a non-reentrant model
+
+
+ *************** function _i2c_write_byte *****************
+ Defined at:
+		line 674 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  data            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  data            1    3[COMRAM] unsigned char 
+  i               1    4[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_i2c_delay
+ This function is called by:
+		_oled_send_command
+		_oled_send_data_start
+		_oled_send_data_byte
+ This function uses a non-reentrant model
+
+
+ *************** function _i2c_delay *****************
+ Defined at:
+		line 636 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_delay_us_soft
+ This function is called by:
+		_i2c_start
+		_i2c_stop
+		_i2c_write_byte
+ This function uses a non-reentrant model
+
+
+ *************** function _delay_us_soft *****************
+ Defined at:
+		line 223 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  us              2    0[COMRAM] unsigned short 
+ Auto vars:     Size  Location     Type
+  i               1    2[COMRAM] volatile unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         2       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_delay_ms_soft
+		_i2c_delay
+ This function uses a non-reentrant model
+
+
+ *************** function _hourmeter_load_from_eeprom *****************
+ Defined at:
+		line 1421 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  val             4    8[COMRAM] unsigned long 
+  magic           1    7[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         5       0       0       0       0       0       0
+      Temps:          5       0       0       0       0       0       0
+      Totals:        10       0       0       0       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_eeprom_read_byte
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _eeprom_read_byte *****************
+ Defined at:
+		line 1394 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+  addr            2    0[COMRAM] unsigned short 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         2       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_hourmeter_load_from_eeprom
+ This function uses a non-reentrant model
+
+
+ *************** function _isr *****************
+ Defined at:
+		line 296 in file "Dima_March_2026_BT-V1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		Interrupt level 2
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+Dima_March_2026_BT-V1.c
+		_oled_draw_graphic_base		CODE           	25B4	0000	52
+		_eeprom_read_byte		CODE           	2680	0000	28
+		_oled_draw_text_centered		CODE           	1FB6	0000	146
+		_system_init   		CODE           	26B6	0000	22
+		_read_brush_sw_raw		CODE           	270C	0000	20
+		_oled_send_data_byte		CODE           	274A	0000	10
+		_handle_vac_switch_10ms		CODE           	1E80	0000	158
+		_i2c_start     		CODE           	26E2	0000	22
+		_oled_send_command		CODE           	2662	0000	30
+		_eeprom_write_byte		CODE           	2578	0000	60
+		_oled_draw_graphic_screen		CODE           	24F6	0000	68
+		_oled_clear    		CODE           	24B0	0000	70
+		_oled_send_data_start		CODE           	2720	0000	18
+		_oled_draw_brush_bristles		CODE           	1AF4	0000	196
+		_main          		CODE           	21C4	0000	108
+		_osc_init      		CODE           	2754	0000	6
+		_format_runtime_string		CODE           	0D6E	0000	712
+		_handle_brush_switch_10ms		CODE           	1036	0000	444
+		_debounce_inputs_10ms		CODE           	1A12	0000	226
+		_oled_clear_5x8		CODE           	2362	0000	90
+		_hourmeter_load_from_eeprom		CODE           	1388	0000	318
+		_delay_us_soft 		CODE           	2466	0000	74
+		_timer0_init   		CODE           	26CC	0000	22
+		_read_vac_sw_raw		CODE           	26F8	0000	20
+		_oled_send_data_stop		CODE           	275A	0000	6
+		_oled_set_cursor		CODE           	2640	0000	34
+		_io_init       		CODE           	25E8	0000	44
+		_isr           		CODE           	0008	0000	112
+		_update_logic_10ms		CODE           	1844	0000	234
+		_oled_draw_down_arrow_5x8		CODE           	2298	0000	104
+		_oled_draw_char_huge		CODE           	1602	0000	300
+		_oled_draw_rectangle		CODE           	14C6	0000	316
+		_oled_show_boot_screen		CODE           	1D2E	0000	174
+		_oled_draw_text_huge		CODE           	1C7A	0000	180
+		_oled_init     		CODE           	1BB8	0000	194
+		_oled_draw_underline_animated		CODE           	20D0	0000	130
+		_font_get_pattern		CODE           	11F2	0000	406
+		_oled_draw_old_runtime_screen		CODE           	06AA	0000	958
+		_update_outputs		CODE           	2230	0000	104
+		_oled_update_screen		CODE           	2414	0000	82
+		_i2c_stop      		CODE           	269C	0000	26
+		_scale4x_vertical		CODE           	192E	0000	228
+		_i2c_init      		CODE           	2740	0000	10
+		_i2c_write_byte		CODE           	23BC	0000	88
+		_delay_ms_soft 		CODE           	2614	0000	44
+		_update_logic_1s		CODE           	172E	0000	278
+		_i2c_delay     		CODE           	2732	0000	14
+		_hourmeter_save_to_eeprom		CODE           	2300	0000	98
+		_oled_draw_char		CODE           	1F1E	0000	152
+		_format_hourmeter_string		CODE           	0A68	0000	774
+		_oled_draw_text		CODE           	2152	0000	114
+
+Dima_March_2026_BT-V1.c estimated size: 8124
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c
+		___llmod       		CODE           	2048	0000	136
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c estimated size: 136
+
+shared
+		_down_arrow    		SMALLCONST     	0621	0000	5
+		font_get_pattern@letter_A		SMALLCONST     	068F	0000	5
+		font_get_pattern@letter_B		SMALLCONST     	0685	0000	5
+		font_get_pattern@letter_C		SMALLCONST     	068A	0000	5
+		font_get_pattern@letter_D		SMALLCONST     	0676	0000	5
+		font_get_pattern@letter_E		SMALLCONST     	0662	0000	5
+		font_get_pattern@letter_H		SMALLCONST     	0667	0000	5
+		font_get_pattern@letter_I		SMALLCONST     	0671	0000	5
+		font_get_pattern@letter_M		SMALLCONST     	066C	0000	5
+		font_get_pattern@letter_O		SMALLCONST     	0699	0000	5
+		font_get_pattern@letter_R		SMALLCONST     	0680	0000	5
+		font_get_pattern@letter_T		SMALLCONST     	069E	0000	5
+		font_get_pattern@letter_U		SMALLCONST     	067B	0000	5
+		font_get_pattern@letter_V		SMALLCONST     	0694	0000	5
+		oled_draw_old_runtime_screen@icon_vac_off		SMALLCONST     	0601	0000	8
+		font_get_pattern@digits		SMALLCONST     	0626	0000	50
+		font_get_pattern@letter_space		SMALLCONST     	065D	0000	5
+		oled_draw_old_runtime_screen@icon_brush_on		SMALLCONST     	0619	0000	8
+		oled_draw_old_runtime_screen@icon_brush_off		SMALLCONST     	0611	0000	8
+		font_get_pattern@colon_char		SMALLCONST     	0658	0000	5
+		__initialization		CODE           	253A	0000	48
+		oled_draw_old_runtime_screen@icon_vac_on		SMALLCONST     	0609	0000	8
+
+shared estimated size: 210
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c
+		___lldiv       		CODE           	1DDC	0000	164
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c estimated size: 164
+

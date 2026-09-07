@@ -1,0 +1,163 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F688 ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"63 C:\Users\RealTech\MPLABXProjects\DIMA_Touch_Sensor.X\DIMA_Touch_Sensor.c
+[v _init_pic init_pic `(v  1 s 1 init_pic ]
+"97
+[v _touch_measure_ticks_mask touch_measure_ticks_mask `(ui  1 s 2 touch_measure_ticks_mask ]
+"129
+[v _avg_samples avg_samples `(ui  1 s 2 avg_samples ]
+"140
+[v _main main `(v  1 e 1 0 ]
+"166 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f688.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+[s S61 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+]
+"231
+[u S68 . 1 `S61 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES68  1 e 1 @7 ]
+"441
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
+"448
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+[s S78 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1GE 1 0 :1:6 
+`uc 1 T1GINV 1 0 :1:7 
+]
+"476
+[s S86 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[u S90 . 1 `S78 1 . 1 0 `S86 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES90  1 e 1 @16 ]
+"796
+[v _CMCON0 CMCON0 `VEuc  1 e 1 @25 ]
+"989
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1059
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+[s S25 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1074
+[u S32 . 1 `S25 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES32  1 e 1 @133 ]
+[s S42 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+]
+"1124
+[u S49 . 1 `S42 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES49  1 e 1 @135 ]
+"1276
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
+"1393
+[v _ANSEL ANSEL `VEuc  1 e 1 @145 ]
+"1455
+[v _WPUA WPUA `VEuc  1 e 1 @149 ]
+"140 C:\Users\RealTech\MPLABXProjects\DIMA_Touch_Sensor.X\DIMA_Touch_Sensor.c
+[v _main main `(v  1 e 1 0 ]
+{
+"154
+[v main@sample1 sample1 `ui  1 a 2 18 ]
+"153
+[v main@sample0 sample0 `ui  1 a 2 16 ]
+"169
+[v main@touched1 touched1 `a  1 a 1 21 ]
+"168
+[v main@touched0 touched0 `a  1 a 1 20 ]
+"149
+[v main@filtered1 filtered1 `ui  1 a 2 28 ]
+"148
+[v main@baseline1 baseline1 `ui  1 a 2 26 ]
+"146
+[v main@filtered0 filtered0 `ui  1 a 2 24 ]
+"145
+[v main@baseline0 baseline0 `ui  1 a 2 22 ]
+"194
+} 0
+"63
+[v _init_pic init_pic `(v  1 s 1 init_pic ]
+{
+"95
+} 0
+"129
+[v _avg_samples avg_samples `(ui  1 s 2 avg_samples ]
+{
+[v avg_samples@n n `uc  1 a 1 wreg ]
+"132
+[v avg_samples@i i `uc  1 a 1 10 ]
+"131
+[v avg_samples@sum sum `ul  1 a 4 6 ]
+"129
+[v avg_samples@n n `uc  1 a 1 wreg ]
+[v avg_samples@mask mask `uc  1 p 1 0 ]
+"131
+[v avg_samples@n n `uc  1 a 1 11 ]
+"138
+} 0
+"97
+[v _touch_measure_ticks_mask touch_measure_ticks_mask `(ui  1 s 2 touch_measure_ticks_mask ]
+{
+[v touch_measure_ticks_mask@mask mask `uc  1 a 1 wreg ]
+"116
+[v touch_measure_ticks_mask@t t `ui  1 a 2 3 ]
+"97
+[v touch_measure_ticks_mask@mask mask `uc  1 a 1 wreg ]
+"101
+[v touch_measure_ticks_mask@mask mask `uc  1 a 1 5 ]
+"127
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 9 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0

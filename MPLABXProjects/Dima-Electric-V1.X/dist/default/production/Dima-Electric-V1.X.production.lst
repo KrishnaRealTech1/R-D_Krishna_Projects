@@ -1,0 +1,2445 @@
+
+
+Microchip MPLAB XC8 Assembler V3.00 build 20241204225717 
+                                                                                               Sat Nov 15 13:54:35 2025
+
+Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1 
+     1                           	processor	12F683
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,space=0,merge=1,delta=2
+     5                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1,noexec
+     7                           	psect	clrtext,global,class=CODE,space=0,delta=2
+     8                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     9                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+    10                           	psect	maintext,global,class=CODE,space=0,split=1,delta=2
+    11                           	psect	text1,local,class=CODE,space=0,merge=1,delta=2
+    12                           	psect	text2,local,class=CODE,space=0,merge=1,inline,delta=2
+    13                           	psect	text3,local,class=CODE,space=0,merge=1,inline,delta=2
+    14                           	psect	text4,local,class=CODE,space=0,merge=1,inline,delta=2
+    15                           	psect	text5,local,class=CODE,space=0,merge=1,inline,delta=2
+    16                           	psect	text6,local,class=CODE,space=0,merge=1,inline,delta=2
+    17                           	psect	text7,local,class=CODE,space=0,merge=1,delta=2
+    18                           	psect	text8,local,class=CODE,space=0,merge=1,inline,delta=2
+    19                           	psect	text9,local,class=CODE,space=0,merge=1,inline,delta=2
+    20                           	psect	text10,local,class=CODE,space=0,merge=1,delta=2
+    21                           	psect	intentry,global,class=CODE,space=0,delta=2
+    22                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    23                           	dabs	1,0x7E,2
+    24     0000                     
+    25                           ; Version 2.32
+    26                           ; Generated 23/11/2020 GMT
+    27                           ; 
+    28                           ; Copyright © 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    29                           ; All rights reserved.
+    30                           ; 
+    31                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    32                           ; 
+    33                           ; Redistribution and use in source and binary forms, with or without modification, are
+    34                           ; permitted provided that the following conditions are met:
+    35                           ; 
+    36                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    37                           ;        conditions and the following disclaimer.
+    38                           ; 
+    39                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    40                           ;        of conditions and the following disclaimer in the documentation and/or other
+    41                           ;        materials provided with the distribution. Publication is not required when
+    42                           ;        this file is used in an embedded application.
+    43                           ; 
+    44                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    45                           ;        software without specific prior written permission.
+    46                           ; 
+    47                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    48                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    49                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    50                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    51                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    52                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    53                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    54                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    55                           ; 
+    56                           ; 
+    57                           ; Code-generator required, PIC12F683 Definitions
+    58                           ; 
+    59                           ; SFR Addresses
+    60     0004                     fsr             equ	4
+    61     0004                     fsr0            equ	4
+    62     0000                     indf            equ	0
+    63     0000                     indf0           equ	0
+    64     0002                     pc              equ	2
+    65     0002                     pcl             equ	2
+    66     000A                     pclath          equ	10
+    67     0003                     status          equ	3
+    68     0000                     INDF            equ	0	;# 
+    69     0001                     TMR0            equ	1	;# 
+    70     0002                     PCL             equ	2	;# 
+    71     0003                     STATUS          equ	3	;# 
+    72     0004                     FSR             equ	4	;# 
+    73     0005                     GPIO            equ	5	;# 
+    74     000A                     PCLATH          equ	10	;# 
+    75     000B                     INTCON          equ	11	;# 
+    76     000C                     PIR1            equ	12	;# 
+    77     000E                     TMR1            equ	14	;# 
+    78     000E                     TMR1L           equ	14	;# 
+    79     000F                     TMR1H           equ	15	;# 
+    80     0010                     T1CON           equ	16	;# 
+    81     0011                     TMR2            equ	17	;# 
+    82     0012                     T2CON           equ	18	;# 
+    83     0013                     CCPR1           equ	19	;# 
+    84     0013                     CCPR1L          equ	19	;# 
+    85     0014                     CCPR1H          equ	20	;# 
+    86     0015                     CCP1CON         equ	21	;# 
+    87     0018                     WDTCON          equ	24	;# 
+    88     0019                     CMCON0          equ	25	;# 
+    89     001A                     CMCON1          equ	26	;# 
+    90     001E                     ADRESH          equ	30	;# 
+    91     001F                     ADCON0          equ	31	;# 
+    92     0081                     OPTION_REG      equ	129	;# 
+    93     0085                     TRISIO          equ	133	;# 
+    94     008C                     PIE1            equ	140	;# 
+    95     008E                     PCON            equ	142	;# 
+    96     008F                     OSCCON          equ	143	;# 
+    97     0090                     OSCTUNE         equ	144	;# 
+    98     0092                     PR2             equ	146	;# 
+    99     0095                     WPU             equ	149	;# 
+   100     0095                     WPUA            equ	149	;# 
+   101     0096                     IOC             equ	150	;# 
+   102     0096                     IOCA            equ	150	;# 
+   103     0099                     VRCON           equ	153	;# 
+   104     009A                     EEDAT           equ	154	;# 
+   105     009A                     EEDATA          equ	154	;# 
+   106     009B                     EEADR           equ	155	;# 
+   107     009C                     EECON1          equ	156	;# 
+   108     009D                     EECON2          equ	157	;# 
+   109     009E                     ADRESL          equ	158	;# 
+   110     009F                     ANSEL           equ	159	;# 
+   111     0000                     INDF            equ	0	;# 
+   112     0001                     TMR0            equ	1	;# 
+   113     0002                     PCL             equ	2	;# 
+   114     0003                     STATUS          equ	3	;# 
+   115     0004                     FSR             equ	4	;# 
+   116     0005                     GPIO            equ	5	;# 
+   117     000A                     PCLATH          equ	10	;# 
+   118     000B                     INTCON          equ	11	;# 
+   119     000C                     PIR1            equ	12	;# 
+   120     000E                     TMR1            equ	14	;# 
+   121     000E                     TMR1L           equ	14	;# 
+   122     000F                     TMR1H           equ	15	;# 
+   123     0010                     T1CON           equ	16	;# 
+   124     0011                     TMR2            equ	17	;# 
+   125     0012                     T2CON           equ	18	;# 
+   126     0013                     CCPR1           equ	19	;# 
+   127     0013                     CCPR1L          equ	19	;# 
+   128     0014                     CCPR1H          equ	20	;# 
+   129     0015                     CCP1CON         equ	21	;# 
+   130     0018                     WDTCON          equ	24	;# 
+   131     0019                     CMCON0          equ	25	;# 
+   132     001A                     CMCON1          equ	26	;# 
+   133     001E                     ADRESH          equ	30	;# 
+   134     001F                     ADCON0          equ	31	;# 
+   135     0081                     OPTION_REG      equ	129	;# 
+   136     0085                     TRISIO          equ	133	;# 
+   137     008C                     PIE1            equ	140	;# 
+   138     008E                     PCON            equ	142	;# 
+   139     008F                     OSCCON          equ	143	;# 
+   140     0090                     OSCTUNE         equ	144	;# 
+   141     0092                     PR2             equ	146	;# 
+   142     0095                     WPU             equ	149	;# 
+   143     0095                     WPUA            equ	149	;# 
+   144     0096                     IOC             equ	150	;# 
+   145     0096                     IOCA            equ	150	;# 
+   146     0099                     VRCON           equ	153	;# 
+   147     009A                     EEDAT           equ	154	;# 
+   148     009A                     EEDATA          equ	154	;# 
+   149     009B                     EEADR           equ	155	;# 
+   150     009C                     EECON1          equ	156	;# 
+   151     009D                     EECON2          equ	157	;# 
+   152     009E                     ADRESL          equ	158	;# 
+   153     009F                     ANSEL           equ	159	;# 
+   154     0019                     _CMCON0         set	25
+   155     000B                     _INTCONbits     set	11
+   156     000C                     _PIR1bits       set	12
+   157     000E                     _TMR1L          set	14
+   158     000F                     _TMR1H          set	15
+   159     0010                     _T1CONbits      set	16
+   160     0010                     _T1CON          set	16
+   161     0005                     _GPIO           set	5
+   162     0095                     _WPU            set	149
+   163     0081                     _OPTION_REGbits set	129
+   164     0085                     _TRISIObits     set	133
+   165     0085                     _TRISIO         set	133
+   166     009F                     _ANSEL          set	159
+   167     008F                     _OSCCONbits     set	143
+   168     008C                     _PIE1bits       set	140
+   169                           
+   170                           	psect	cinit
+   171     000B                     start_initialization:	
+   172                           ; #config settings
+   173                           
+   174     000B                     __initialization:
+   175                           
+   176                           ; Clear objects allocated to COMMON
+   177     000B  01FB               	clrf	__pbssCOMMON& (0+127)
+   178                           
+   179                           ; Clear objects allocated to BANK0
+   180     000C  1383               	bcf	3,7	;select IRP bank0
+   181     000D  3020               	movlw	low __pbssBANK0
+   182     000E  0084               	movwf	4
+   183     000F  3041               	movlw	low (__pbssBANK0+33)
+   184     0010  2369               	fcall	clear_ram0
+   185     0011                     end_of_initialization:	
+   186                           ;End of C runtime variable initialization code
+   187                           
+   188     0011                     __end_of__initialization:
+   189     0011  0183               	clrf	3
+   190     0012  2813               	ljmp	_main	;jump to C main() function
+   191                           
+   192                           	psect	bssCOMMON
+   193     007B                     __pbssCOMMON:
+   194     007B                     _out_shadow:
+   195     007B                     	ds	1
+   196                           
+   197                           	psect	bssBANK0
+   198     0020                     __pbssBANK0:
+   199     0020                     _app:
+   200     0020                     	ds	17
+   201     0031                     _g_ms:
+   202     0031                     	ds	4
+   203     0035                     _db_lever:
+   204     0035                     	ds	4
+   205     0039                     _db_handle2:
+   206     0039                     	ds	4
+   207     003D                     _db_handle1:
+   208     003D                     	ds	4
+   209                           
+   210                           	psect	clrtext
+   211     0369                     clear_ram0:	
+   212                           ;	Called with FSR containing the base address, and
+   213                           ;	W with the last address+1
+   214                           
+   215     0369  0064               	clrwdt	;clear the watchdog before getting into this loop
+   216     036A                     clrloop0:
+   217     036A  0180               	clrf	0	;clear RAM location pointed to by FSR
+   218     036B  0A84               	incf	4,f	;increment pointer
+   219     036C  0604               	xorwf	4,w	;XOR with final address
+   220     036D  1903               	btfsc	3,2	;have we reached the end yet?
+   221     036E  3400               	retlw	0	;all done for this memory range, return
+   222     036F  0604               	xorwf	4,w	;XOR again to restore value
+   223     0370  2B6A               	goto	clrloop0	;do the next byte
+   224                           
+   225                           	psect	cstackCOMMON
+   226     0070                     __pcstackCOMMON:
+   227     0070                     ?_set_brush_pin:
+   228     0070                     ?_set_vac_pin:	
+   229                           ; 1 bytes @ 0x0
+   230                           
+   231     0070                     ?_set_led_pin:	
+   232                           ; 1 bytes @ 0x0
+   233                           
+   234     0070                     ?_push_outputs:	
+   235                           ; 1 bytes @ 0x0
+   236                           
+   237     0070                     ?_tmr1_init:	
+   238                           ; 1 bytes @ 0x0
+   239                           
+   240     0070                     ?_isr:	
+   241                           ; 1 bytes @ 0x0
+   242                           
+   243     0070                     ?_io_clock_init:	
+   244                           ; 1 bytes @ 0x0
+   245                           
+   246     0070                     ?_main:	
+   247                           ; 1 bytes @ 0x0
+   248                           
+   249     0070                     ??_isr:	
+   250                           ; 1 bytes @ 0x0
+   251                           
+   252                           
+   253                           ; 1 bytes @ 0x0
+   254     0070                     	ds	2
+   255     0072                     ?_debounce_update_1ms:
+   256     0072                     ?_time_reached:	
+   257                           ; 1 bytes @ 0x2
+   258                           
+   259     0072                     ?_millis:	
+   260                           ; 1 bytes @ 0x2
+   261                           
+   262     0072                     set_brush_pin@on:	
+   263                           ; 4 bytes @ 0x2
+   264                           
+   265     0072                     set_vac_pin@on:	
+   266                           ; 1 bytes @ 0x2
+   267                           
+   268     0072                     set_led_pin@on:	
+   269                           ; 1 bytes @ 0x2
+   270                           
+   271     0072                     debounce_update_1ms@db:	
+   272                           ; 1 bytes @ 0x2
+   273                           
+   274     0072                     time_reached@now:	
+   275                           ; 2 bytes @ 0x2
+   276                           
+   277     0072                     ??_set_brush_pin:	
+   278                           ; 4 bytes @ 0x2
+   279                           
+   280     0072                     ??_set_vac_pin:	
+   281                           ; 1 bytes @ 0x2
+   282                           
+   283     0072                     ??_set_led_pin:	
+   284                           ; 1 bytes @ 0x2
+   285                           
+   286     0072                     ??_push_outputs:	
+   287                           ; 1 bytes @ 0x2
+   288                           
+   289     0072                     ??_tmr1_init:	
+   290                           ; 1 bytes @ 0x2
+   291                           
+   292     0072                     ??_io_clock_init:	
+   293                           ; 1 bytes @ 0x2
+   294                           
+   295                           
+   296                           ; 1 bytes @ 0x2
+   297     0072                     	ds	2
+   298     0074                     debounce_update_1ms@raw:
+   299                           
+   300                           ; 1 bytes @ 0x4
+   301     0074                     	ds	1
+   302     0075                     ??_debounce_update_1ms:
+   303                           
+   304                           ; 1 bytes @ 0x5
+   305     0075                     	ds	1
+   306     0076                     millis@t:
+   307     0076                     time_reached@deadline:	
+   308                           ; 4 bytes @ 0x6
+   309                           
+   310     0076                     ??_millis:	
+   311                           ; 4 bytes @ 0x6
+   312                           
+   313                           
+   314                           ; 1 bytes @ 0x6
+   315     0076                     	ds	4
+   316     007A                     millis@gie:
+   317                           
+   318                           ; 1 bytes @ 0xA
+   319     007A                     	ds	1
+   320                           
+   321                           	psect	cstackBANK0
+   322     0041                     __pcstackBANK0:
+   323     0041                     ??_time_reached:
+   324                           
+   325                           ; 1 bytes @ 0x0
+   326     0041                     	ds	4
+   327     0045                     ??_main:
+   328                           
+   329                           ; 1 bytes @ 0x4
+   330     0045                     	ds	4
+   331     0049                     main@last_tick:
+   332                           
+   333                           ; 4 bytes @ 0x8
+   334     0049                     	ds	4
+   335     004D                     main@raw_h1:
+   336                           
+   337                           ; 1 bytes @ 0xC
+   338     004D                     	ds	1
+   339     004E                     main@raw_h2:
+   340                           
+   341                           ; 1 bytes @ 0xD
+   342     004E                     	ds	1
+   343     004F                     main@raw_lev:
+   344                           
+   345                           ; 1 bytes @ 0xE
+   346     004F                     	ds	1
+   347     0050                     main@both_low:
+   348                           
+   349                           ; 1 bytes @ 0xF
+   350     0050                     	ds	1
+   351     0051                     _main$353:
+   352                           
+   353                           ; 1 bytes @ 0x10
+   354     0051                     	ds	1
+   355     0052                     _main$355:
+   356                           
+   357                           ; 1 bytes @ 0x11
+   358     0052                     	ds	1
+   359     0053                     _main$357:
+   360                           
+   361                           ; 1 bytes @ 0x12
+   362     0053                     	ds	1
+   363     0054                     main@lev:
+   364                           
+   365                           ; 1 bytes @ 0x13
+   366     0054                     	ds	1
+   367     0055                     main@both_high:
+   368                           
+   369                           ; 1 bytes @ 0x14
+   370     0055                     	ds	1
+   371     0056                     main@h1:
+   372                           
+   373                           ; 1 bytes @ 0x15
+   374     0056                     	ds	1
+   375     0057                     main@h2:
+   376                           
+   377                           ; 1 bytes @ 0x16
+   378     0057                     	ds	1
+   379     0058                     main@now:
+   380                           
+   381                           ; 4 bytes @ 0x17
+   382     0058                     	ds	4
+   383                           
+   384                           	psect	maintext
+   385     0013                     __pmaintext:	
+   386 ;;
+   387 ;;Main: autosize = 0, tempsize = 4, incstack = 0, save=0
+   388 ;;
+   389 ;; *************** function _main *****************
+   390 ;; Defined at:
+   391 ;;		line 200 in file "Dima-Electric-V1.c"
+   392 ;; Parameters:    Size  Location     Type
+   393 ;;		None
+   394 ;; Auto vars:     Size  Location     Type
+   395 ;;  raw_lev         1   14[BANK0 ] unsigned char 
+   396 ;;  raw_h2          1   13[BANK0 ] unsigned char 
+   397 ;;  raw_h1          1   12[BANK0 ] unsigned char 
+   398 ;;  now             4   23[BANK0 ] unsigned long 
+   399 ;;  h2              1   22[BANK0 ] unsigned char 
+   400 ;;  h1              1   21[BANK0 ] unsigned char 
+   401 ;;  both_high       1   20[BANK0 ] _Bool 
+   402 ;;  lev             1   19[BANK0 ] unsigned char 
+   403 ;;  both_low        1   15[BANK0 ] _Bool 
+   404 ;;  either_low      1    0        _Bool 
+   405 ;;  last_tick       4    8[BANK0 ] unsigned long 
+   406 ;; Return value:  Size  Location     Type
+   407 ;;                  1    wreg      void 
+   408 ;; Registers used:
+   409 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   410 ;; Tracked objects:
+   411 ;;		On entry : B00/0
+   412 ;;		On exit  : 0/0
+   413 ;;		Unchanged: 0/0
+   414 ;; Data sizes:     COMMON   BANK0   BANK1
+   415 ;;      Params:         0       0       0
+   416 ;;      Locals:         0      19       0
+   417 ;;      Temps:          0       4       0
+   418 ;;      Totals:         0      23       0
+   419 ;;Total ram usage:       23 bytes
+   420 ;; Hardware stack levels required when called: 3
+   421 ;; This function calls:
+   422 ;;		_debounce_update_1ms
+   423 ;;		_io_clock_init
+   424 ;;		_millis
+   425 ;;		_push_outputs
+   426 ;;		_set_brush_pin
+   427 ;;		_set_led_pin
+   428 ;;		_set_vac_pin
+   429 ;;		_time_reached
+   430 ;;		_tmr1_init
+   431 ;; This function is called by:
+   432 ;;		Startup code after reset
+   433 ;; This function uses a non-reentrant model
+   434 ;;
+   435                           
+   436     0013                     _main:	
+   437                           ;psect for function _main
+   438                           
+   439     0013                     l994:	
+   440                           ;incstack = 0
+   441                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   442                           
+   443                           
+   444                           ;Dima-Electric-V1.c: 202:     io_clock_init();
+   445     0013  2323               	fcall	_io_clock_init
+   446                           
+   447                           ;Dima-Electric-V1.c: 203:     tmr1_init();
+   448     0014  2337               	fcall	_tmr1_init
+   449     0015                     l996:
+   450                           
+   451                           ;Dima-Electric-V1.c: 205:     app.brush_on = 0;
+   452     0015  1283               	bcf	3,5	;RP0=0, select bank0
+   453     0016  01A0               	clrf	_app
+   454     0017                     l998:
+   455                           
+   456                           ;Dima-Electric-V1.c: 206:     app.vacuum_on = 0;
+   457     0017  01A1               	clrf	_app+1
+   458     0018                     l1000:
+   459                           
+   460                           ;Dima-Electric-V1.c: 207:     app.vac_off_pending = 0;
+   461     0018  01A2               	clrf	_app+2
+   462     0019                     l1002:
+   463                           
+   464                           ;Dima-Electric-V1.c: 208:     app.brush_off_pending = 0;
+   465     0019  01A7               	clrf	_app+7
+   466     001A                     l1004:
+   467                           
+   468                           ;Dima-Electric-V1.c: 209:     app.led_state = 0;
+   469     001A  01AC               	clrf	_app+12
+   470     001B                     l1006:
+   471                           
+   472                           ;Dima-Electric-V1.c: 210:     app.led_next_toggle_ms= 0;
+   473     001B  302D               	movlw	low (_app+13)
+   474     001C  0084               	movwf	4
+   475     001D  1783               	bsf	3,7
+   476     001E  1C00               	btfss	high (_app+13),0
+   477     001F  1383               	bcf	3,7
+   478     0020  0180               	clrf	0
+   479     0021  0A84               	incf	4,f
+   480     0022  0180               	clrf	0
+   481     0023  0A84               	incf	4,f
+   482     0024  0180               	clrf	0
+   483     0025  0A84               	incf	4,f
+   484     0026  0180               	clrf	0
+   485     0027                     l1008:
+   486                           
+   487                           ;Dima-Electric-V1.c: 212:     uint32_t last_tick = millis();
+   488     0027  2307               	fcall	_millis
+   489     0028  0875               	movf	?_millis+3,w
+   490     0029  1283               	bcf	3,5	;RP0=0, select bank0
+   491     002A  00CC               	movwf	main@last_tick+3
+   492     002B  0874               	movf	?_millis+2,w
+   493     002C  00CB               	movwf	main@last_tick+2
+   494     002D  0873               	movf	?_millis+1,w
+   495     002E  00CA               	movwf	main@last_tick+1
+   496     002F  0872               	movf	?_millis,w
+   497     0030  00C9               	movwf	main@last_tick
+   498     0031                     l1010:
+   499                           
+   500                           ;Dima-Electric-V1.c: 215:         uint32_t now = millis();
+   501     0031  2307               	fcall	_millis
+   502     0032  0875               	movf	?_millis+3,w
+   503     0033  1283               	bcf	3,5	;RP0=0, select bank0
+   504     0034  00DB               	movwf	main@now+3
+   505     0035  0874               	movf	?_millis+2,w
+   506     0036  00DA               	movwf	main@now+2
+   507     0037  0873               	movf	?_millis+1,w
+   508     0038  00D9               	movwf	main@now+1
+   509     0039  0872               	movf	?_millis,w
+   510     003A  00D8               	movwf	main@now
+   511     003B                     l1012:
+   512                           
+   513                           ;Dima-Electric-V1.c: 218:         if (now != last_tick) {
+   514     003B  084C               	movf	main@last_tick+3,w
+   515     003C  065B               	xorwf	main@now+3,w
+   516     003D  1D03               	skipz
+   517     003E  2849               	goto	u625
+   518     003F  084B               	movf	main@last_tick+2,w
+   519     0040  065A               	xorwf	main@now+2,w
+   520     0041  1D03               	skipz
+   521     0042  2849               	goto	u625
+   522     0043  084A               	movf	main@last_tick+1,w
+   523     0044  0659               	xorwf	main@now+1,w
+   524     0045  1D03               	skipz
+   525     0046  2849               	goto	u625
+   526     0047  0849               	movf	main@last_tick,w
+   527     0048  0658               	xorwf	main@now,w
+   528     0049                     u625:
+   529     0049  1903               	skipnz
+   530     004A  284C               	goto	u621
+   531     004B  284D               	goto	u620
+   532     004C                     u621:
+   533     004C  2899               	goto	l1028
+   534     004D                     u620:
+   535     004D                     l1014:
+   536                           
+   537                           ;Dima-Electric-V1.c: 219:             last_tick = now;
+   538     004D  085B               	movf	main@now+3,w
+   539     004E  00CC               	movwf	main@last_tick+3
+   540     004F  085A               	movf	main@now+2,w
+   541     0050  00CB               	movwf	main@last_tick+2
+   542     0051  0859               	movf	main@now+1,w
+   543     0052  00CA               	movwf	main@last_tick+1
+   544     0053  0858               	movf	main@now,w
+   545     0054  00C9               	movwf	main@last_tick
+   546     0055                     l1016:
+   547                           
+   548                           ;Dima-Electric-V1.c: 221:             uint8_t raw_h1 = ((GPIO >> 1) & 0x1) ? 1u : 0u;
+   549     0055  0805               	movf	5,w	;volatile
+   550     0056  00C5               	movwf	??_main
+   551     0057  3001               	movlw	1
+   552     0058                     u635:
+   553     0058  1003               	clrc
+   554     0059  0CC5               	rrf	??_main,f
+   555     005A  3EFF               	addlw	-1
+   556     005B  1D03               	skipz
+   557     005C  2858               	goto	u635
+   558     005D  1845               	btfsc	??_main,0
+   559     005E  2860               	goto	u641
+   560     005F  2862               	goto	u640
+   561     0060                     u641:
+   562     0060  3001               	movlw	1
+   563     0061  2863               	goto	u650
+   564     0062                     u640:
+   565     0062  3000               	movlw	0
+   566     0063                     u650:
+   567     0063  00CD               	movwf	main@raw_h1
+   568     0064                     l1018:
+   569                           
+   570                           ;Dima-Electric-V1.c: 222:             uint8_t raw_h2 = ((GPIO >> 4) & 0x1) ? 1u : 0u;
+   571     0064  0805               	movf	5,w	;volatile
+   572     0065  00C5               	movwf	??_main
+   573     0066  3004               	movlw	4
+   574     0067                     u665:
+   575     0067  1003               	clrc
+   576     0068  0CC5               	rrf	??_main,f
+   577     0069  3EFF               	addlw	-1
+   578     006A  1D03               	skipz
+   579     006B  2867               	goto	u665
+   580     006C  1845               	btfsc	??_main,0
+   581     006D  286F               	goto	u671
+   582     006E  2871               	goto	u670
+   583     006F                     u671:
+   584     006F  3001               	movlw	1
+   585     0070  2872               	goto	u680
+   586     0071                     u670:
+   587     0071  3000               	movlw	0
+   588     0072                     u680:
+   589     0072  00CE               	movwf	main@raw_h2
+   590     0073                     l1020:
+   591                           
+   592                           ;Dima-Electric-V1.c: 223:             uint8_t raw_lev = ((GPIO >> 3) & 0x1) ? 1u : 0u;
+   593     0073  0805               	movf	5,w	;volatile
+   594     0074  00C5               	movwf	??_main
+   595     0075  3003               	movlw	3
+   596     0076                     u695:
+   597     0076  1003               	clrc
+   598     0077  0CC5               	rrf	??_main,f
+   599     0078  3EFF               	addlw	-1
+   600     0079  1D03               	skipz
+   601     007A  2876               	goto	u695
+   602     007B  1845               	btfsc	??_main,0
+   603     007C  287E               	goto	u701
+   604     007D  2880               	goto	u700
+   605     007E                     u701:
+   606     007E  3001               	movlw	1
+   607     007F  2881               	goto	u710
+   608     0080                     u700:
+   609     0080  3000               	movlw	0
+   610     0081                     u710:
+   611     0081  00CF               	movwf	main@raw_lev
+   612     0082                     l1022:
+   613                           
+   614                           ;Dima-Electric-V1.c: 225:             debounce_update_1ms(&db_handle1, raw_h1);
+   615     0082  303D               	movlw	low _db_handle1
+   616     0083  00F2               	movwf	debounce_update_1ms@db
+   617     0084  3000               	movlw	high _db_handle1
+   618     0085  00F3               	movwf	debounce_update_1ms@db+1
+   619     0086  084D               	movf	main@raw_h1,w
+   620     0087  00F4               	movwf	debounce_update_1ms@raw
+   621     0088  2232               	fcall	_debounce_update_1ms
+   622     0089                     l1024:
+   623                           
+   624                           ;Dima-Electric-V1.c: 226:             debounce_update_1ms(&db_handle2, raw_h2);
+   625     0089  3039               	movlw	low _db_handle2
+   626     008A  00F2               	movwf	debounce_update_1ms@db
+   627     008B  3000               	movlw	high _db_handle2
+   628     008C  00F3               	movwf	debounce_update_1ms@db+1
+   629     008D  1283               	bcf	3,5	;RP0=0, select bank0
+   630     008E  084E               	movf	main@raw_h2,w
+   631     008F  00F4               	movwf	debounce_update_1ms@raw
+   632     0090  2232               	fcall	_debounce_update_1ms
+   633     0091                     l1026:
+   634                           
+   635                           ;Dima-Electric-V1.c: 227:             debounce_update_1ms(&db_lever, raw_lev);
+   636     0091  3035               	movlw	low _db_lever
+   637     0092  00F2               	movwf	debounce_update_1ms@db
+   638     0093  3000               	movlw	high _db_lever
+   639     0094  00F3               	movwf	debounce_update_1ms@db+1
+   640     0095  1283               	bcf	3,5	;RP0=0, select bank0
+   641     0096  084F               	movf	main@raw_lev,w
+   642     0097  00F4               	movwf	debounce_update_1ms@raw
+   643     0098  2232               	fcall	_debounce_update_1ms
+   644     0099                     l1028:
+   645                           
+   646                           ;Dima-Electric-V1.c: 230:         uint8_t h1 = db_handle1.stable;
+   647     0099  1283               	bcf	3,5	;RP0=0, select bank0
+   648     009A  083D               	movf	_db_handle1,w
+   649     009B  00D6               	movwf	main@h1
+   650     009C                     l1030:
+   651                           
+   652                           ;Dima-Electric-V1.c: 231:         uint8_t h2 = db_handle2.stable;
+   653     009C  0839               	movf	_db_handle2,w
+   654     009D  00D7               	movwf	main@h2
+   655     009E                     l1032:
+   656                           
+   657                           ;Dima-Electric-V1.c: 232:         uint8_t lev = db_lever.stable;
+   658     009E  0835               	movf	_db_lever,w
+   659     009F  00D4               	movwf	main@lev
+   660     00A0                     l1034:
+   661                           
+   662                           ;Dima-Electric-V1.c: 234:         _Bool both_high = (h1 && h2);
+   663     00A0  01D1               	clrf	_main$353
+   664     00A1                     l1036:
+   665     00A1  0856               	movf	main@h1,w
+   666     00A2  1903               	btfsc	3,2
+   667     00A3  28A5               	goto	u721
+   668     00A4  28A6               	goto	u720
+   669     00A5                     u721:
+   670     00A5  28AD               	goto	l1042
+   671     00A6                     u720:
+   672     00A6                     l1038:
+   673     00A6  0857               	movf	main@h2,w
+   674     00A7  1903               	btfsc	3,2
+   675     00A8  28AA               	goto	u731
+   676     00A9  28AB               	goto	u730
+   677     00AA                     u731:
+   678     00AA  28AD               	goto	l1042
+   679     00AB                     u730:
+   680     00AB                     l1040:
+   681     00AB  3001               	movlw	1
+   682     00AC  00D1               	movwf	_main$353
+   683     00AD                     l1042:
+   684     00AD  0851               	movf	_main$353,w
+   685     00AE  1D03               	btfss	3,2
+   686     00AF  28B1               	goto	u741
+   687     00B0  28B3               	goto	u740
+   688     00B1                     u741:
+   689     00B1  3001               	movlw	1
+   690     00B2  28B4               	goto	u750
+   691     00B3                     u740:
+   692     00B3  3000               	movlw	0
+   693     00B4                     u750:
+   694     00B4  00D5               	movwf	main@both_high
+   695     00B5                     l1044:
+   696                           
+   697                           ;Dima-Electric-V1.c: 235:         _Bool both_low = (!h1 && !h2);
+   698     00B5  01D2               	clrf	_main$355
+   699     00B6                     l1046:
+   700     00B6  0856               	movf	main@h1,w
+   701     00B7  1D03               	btfss	3,2
+   702     00B8  28BA               	goto	u761
+   703     00B9  28BB               	goto	u760
+   704     00BA                     u761:
+   705     00BA  28C2               	goto	l1052
+   706     00BB                     u760:
+   707     00BB                     l1048:
+   708     00BB  0857               	movf	main@h2,w
+   709     00BC  1D03               	btfss	3,2
+   710     00BD  28BF               	goto	u771
+   711     00BE  28C0               	goto	u770
+   712     00BF                     u771:
+   713     00BF  28C2               	goto	l1052
+   714     00C0                     u770:
+   715     00C0                     l1050:
+   716     00C0  3001               	movlw	1
+   717     00C1  00D2               	movwf	_main$355
+   718     00C2                     l1052:
+   719     00C2  0852               	movf	_main$355,w
+   720     00C3  1D03               	btfss	3,2
+   721     00C4  28C6               	goto	u781
+   722     00C5  28C8               	goto	u780
+   723     00C6                     u781:
+   724     00C6  3001               	movlw	1
+   725     00C7  28C9               	goto	u790
+   726     00C8                     u780:
+   727     00C8  3000               	movlw	0
+   728     00C9                     u790:
+   729     00C9  00D0               	movwf	main@both_low
+   730     00CA                     l1054:
+   731                           
+   732                           ;Dima-Electric-V1.c: 236:         _Bool either_low = (!h1 || !h2);
+   733     00CA  3001               	movlw	1
+   734     00CB  00D3               	movwf	_main$357
+   735     00CC  0856               	movf	main@h1,w
+   736     00CD  1903               	btfsc	3,2
+   737     00CE  28D0               	goto	u801
+   738     00CF  28D1               	goto	u800
+   739     00D0                     u801:
+   740     00D0  28D7               	goto	l1060
+   741     00D1                     u800:
+   742     00D1                     l1056:
+   743     00D1  0857               	movf	main@h2,w
+   744     00D2  1903               	btfsc	3,2
+   745     00D3  28D5               	goto	u811
+   746     00D4  28D6               	goto	u810
+   747     00D5                     u811:
+   748     00D5  28D7               	goto	l1060
+   749     00D6                     u810:
+   750     00D6                     l1058:
+   751     00D6  01D3               	clrf	_main$357
+   752     00D7                     l1060:
+   753     00D7                     l1062:
+   754                           
+   755                           ;Dima-Electric-V1.c: 239:         if (both_high) {
+   756     00D7  0855               	movf	main@both_high,w
+   757     00D8  1903               	btfsc	3,2
+   758     00D9  28DB               	goto	u821
+   759     00DA  28DC               	goto	u820
+   760     00DB                     u821:
+   761     00DB  28E0               	goto	l1068
+   762     00DC                     u820:
+   763     00DC                     l1064:
+   764                           
+   765                           ;Dima-Electric-V1.c: 240:             app.brush_on = 1;
+   766     00DC  3001               	movlw	1
+   767     00DD  00A0               	movwf	_app
+   768     00DE                     l1066:
+   769                           
+   770                           ;Dima-Electric-V1.c: 241:             app.brush_off_pending = 0;
+   771     00DE  01A7               	clrf	_app+7
+   772                           
+   773                           ;Dima-Electric-V1.c: 242:         }
+   774     00DF  2944               	goto	l1090
+   775     00E0                     l1068:
+   776     00E0  0850               	movf	main@both_low,w
+   777     00E1  1903               	btfsc	3,2
+   778     00E2  28E4               	goto	u831
+   779     00E3  28E5               	goto	u830
+   780     00E4                     u831:
+   781     00E4  28E8               	goto	l1072
+   782     00E5                     u830:
+   783     00E5                     l1070:
+   784                           
+   785                           ;Dima-Electric-V1.c: 244:             app.brush_on = 0;
+   786     00E5  01A0               	clrf	_app
+   787                           
+   788                           ;Dima-Electric-V1.c: 245:             app.brush_off_pending = 0;
+   789     00E6  01A7               	clrf	_app+7
+   790                           
+   791                           ;Dima-Electric-V1.c: 246:         }
+   792     00E7  2944               	goto	l1090
+   793     00E8                     l1072:
+   794                           
+   795                           ;Dima-Electric-V1.c: 248:             if (app.brush_on) {
+   796     00E8  0820               	movf	_app,w
+   797     00E9  1903               	btfsc	3,2
+   798     00EA  28EC               	goto	u841
+   799     00EB  28ED               	goto	u840
+   800     00EC                     u841:
+   801     00EC  28DE               	goto	l1066
+   802     00ED                     u840:
+   803     00ED                     l1074:
+   804                           
+   805                           ;Dima-Electric-V1.c: 250:                 if (!app.brush_off_pending) {
+   806     00ED  0827               	movf	_app+7,w
+   807     00EE  1D03               	btfss	3,2
+   808     00EF  28F1               	goto	u851
+   809     00F0  28F2               	goto	u850
+   810     00F1                     u851:
+   811     00F1  2916               	goto	l1080
+   812     00F2                     u850:
+   813     00F2                     l1076:
+   814                           
+   815                           ;Dima-Electric-V1.c: 251:                     app.brush_off_pending = 1;
+   816     00F2  3001               	movlw	1
+   817     00F3  00A7               	movwf	_app+7
+   818     00F4                     l1078:
+   819                           
+   820                           ;Dima-Electric-V1.c: 252:                     app.brush_off_deadline_ms = now + 3000u;
+   821     00F4  30B8               	movlw	184
+   822     00F5  00C5               	movwf	??_main
+   823     00F6  300B               	movlw	11
+   824     00F7  00C6               	movwf	??_main+1
+   825     00F8  3000               	movlw	0
+   826     00F9  00C7               	movwf	??_main+2
+   827     00FA  3000               	movlw	0
+   828     00FB  00C8               	movwf	??_main+3
+   829     00FC  0858               	movf	main@now,w
+   830     00FD  07C5               	addwf	??_main,f
+   831     00FE  0859               	movf	main@now+1,w
+   832     00FF  1803               	skipnc
+   833     0100  0F59               	incfsz	main@now+1,w
+   834     0101  2903               	goto	u860
+   835     0102  2904               	goto	u861
+   836     0103                     u860:
+   837     0103  07C6               	addwf	??_main+1,f
+   838     0104                     u861:
+   839     0104  085A               	movf	main@now+2,w
+   840     0105  1803               	skipnc
+   841     0106  0F5A               	incfsz	main@now+2,w
+   842     0107  2909               	goto	u862
+   843     0108  290A               	goto	u863
+   844     0109                     u862:
+   845     0109  07C7               	addwf	??_main+2,f
+   846     010A                     u863:
+   847     010A  085B               	movf	main@now+3,w
+   848     010B  1803               	skipnc
+   849     010C  0A5B               	incf	main@now+3,w
+   850     010D  07C8               	addwf	??_main+3,f
+   851     010E  0848               	movf	??_main+3,w
+   852     010F  00AB               	movwf	_app+11
+   853     0110  0847               	movf	??_main+2,w
+   854     0111  00AA               	movwf	_app+10
+   855     0112  0846               	movf	??_main+1,w
+   856     0113  00A9               	movwf	_app+9
+   857     0114  0845               	movf	??_main,w
+   858     0115  00A8               	movwf	_app+8
+   859     0116                     l1080:
+   860                           
+   861                           ;Dima-Electric-V1.c: 254:                 if (app.brush_off_pending && time_reached(now,
+      +                           app.brush_off_deadline_ms) && !both_high) {
+   862     0116  0827               	movf	_app+7,w
+   863     0117  1903               	btfsc	3,2
+   864     0118  291A               	goto	u871
+   865     0119  291B               	goto	u870
+   866     011A                     u871:
+   867     011A  2944               	goto	l101
+   868     011B                     u870:
+   869     011B                     l1082:
+   870     011B  085B               	movf	main@now+3,w
+   871     011C  00F5               	movwf	time_reached@now+3
+   872     011D  085A               	movf	main@now+2,w
+   873     011E  00F4               	movwf	time_reached@now+2
+   874     011F  0859               	movf	main@now+1,w
+   875     0120  00F3               	movwf	time_reached@now+1
+   876     0121  0858               	movf	main@now,w
+   877     0122  00F2               	movwf	time_reached@now
+   878     0123  3028               	movlw	low (_app+8)
+   879     0124  00C5               	movwf	??_main
+   880     0125  3000               	movlw	high (_app+8)
+   881     0126  00C6               	movwf	??_main+1
+   882     0127  0845               	movf	??_main,w
+   883     0128  0084               	movwf	4
+   884     0129  1783               	bsf	3,7
+   885     012A  1C46               	btfss	??_main+1,0
+   886     012B  1383               	bcf	3,7
+   887     012C  0800               	movf	0,w
+   888     012D  00F6               	movwf	time_reached@deadline
+   889     012E  0A84               	incf	4,f
+   890     012F  0800               	movf	0,w
+   891     0130  00F7               	movwf	time_reached@deadline+1
+   892     0131  0A84               	incf	4,f
+   893     0132  0800               	movf	0,w
+   894     0133  00F8               	movwf	time_reached@deadline+2
+   895     0134  0A84               	incf	4,f
+   896     0135  0800               	movf	0,w
+   897     0136  00F9               	movwf	time_reached@deadline+3
+   898     0137  22C4               	fcall	_time_reached
+   899     0138  3A00               	xorlw	0
+   900     0139  1903               	skipnz
+   901     013A  293C               	goto	u881
+   902     013B  293D               	goto	u880
+   903     013C                     u881:
+   904     013C  2944               	goto	l101
+   905     013D                     u880:
+   906     013D                     l1084:
+   907     013D  1283               	bcf	3,5	;RP0=0, select bank0
+   908     013E  0855               	movf	main@both_high,w
+   909     013F  1D03               	btfss	3,2
+   910     0140  2942               	goto	u891
+   911     0141  2943               	goto	u890
+   912     0142                     u891:
+   913     0142  2944               	goto	l101
+   914     0143                     u890:
+   915     0143  28E5               	goto	l1070
+   916     0144                     l101:	
+   917                           ;Dima-Electric-V1.c: 261:         }
+   918                           
+   919     0144                     l1090:
+   920                           
+   921                           ;Dima-Electric-V1.c: 264:         if (lev) {
+   922     0144  1283               	bcf	3,5	;RP0=0, select bank0
+   923     0145  0854               	movf	main@lev,w
+   924     0146  1903               	btfsc	3,2
+   925     0147  2949               	goto	u901
+   926     0148  294A               	goto	u900
+   927     0149                     u901:
+   928     0149  294E               	goto	l1096
+   929     014A                     u900:
+   930     014A                     l1092:
+   931                           
+   932                           ;Dima-Electric-V1.c: 265:             app.vacuum_on = 1;
+   933     014A  3001               	movlw	1
+   934     014B  00A1               	movwf	_app+1
+   935     014C                     l1094:
+   936                           
+   937                           ;Dima-Electric-V1.c: 266:             app.vac_off_pending = 0;
+   938     014C  01A2               	clrf	_app+2
+   939                           
+   940                           ;Dima-Electric-V1.c: 267:         } else {
+   941     014D  29D0               	goto	l1114
+   942     014E                     l1096:
+   943                           
+   944                           ;Dima-Electric-V1.c: 268:             if (app.vacuum_on && !app.vac_off_pending) {
+   945     014E  0821               	movf	_app+1,w
+   946     014F  1903               	btfsc	3,2
+   947     0150  2952               	goto	u911
+   948     0151  2953               	goto	u910
+   949     0152                     u911:
+   950     0152  29A0               	goto	l1106
+   951     0153                     u910:
+   952     0153                     l1098:
+   953     0153  0822               	movf	_app+2,w
+   954     0154  1D03               	btfss	3,2
+   955     0155  2957               	goto	u921
+   956     0156  2958               	goto	u920
+   957     0157                     u921:
+   958     0157  29A0               	goto	l1106
+   959     0158                     u920:
+   960     0158                     l1100:
+   961                           
+   962                           ;Dima-Electric-V1.c: 269:                 app.vac_off_pending = 1;
+   963     0158  3001               	movlw	1
+   964     0159  00A2               	movwf	_app+2
+   965     015A                     l1102:
+   966                           
+   967                           ;Dima-Electric-V1.c: 270:                 app.vac_off_deadline_ms = now + 10000u;
+   968     015A  3010               	movlw	16
+   969     015B  00C5               	movwf	??_main
+   970     015C  3027               	movlw	39
+   971     015D  00C6               	movwf	??_main+1
+   972     015E  3000               	movlw	0
+   973     015F  00C7               	movwf	??_main+2
+   974     0160  3000               	movlw	0
+   975     0161  00C8               	movwf	??_main+3
+   976     0162  0858               	movf	main@now,w
+   977     0163  07C5               	addwf	??_main,f
+   978     0164  0859               	movf	main@now+1,w
+   979     0165  1803               	skipnc
+   980     0166  0F59               	incfsz	main@now+1,w
+   981     0167  2969               	goto	u930
+   982     0168  296A               	goto	u931
+   983     0169                     u930:
+   984     0169  07C6               	addwf	??_main+1,f
+   985     016A                     u931:
+   986     016A  085A               	movf	main@now+2,w
+   987     016B  1803               	skipnc
+   988     016C  0F5A               	incfsz	main@now+2,w
+   989     016D  296F               	goto	u932
+   990     016E  2970               	goto	u933
+   991     016F                     u932:
+   992     016F  07C7               	addwf	??_main+2,f
+   993     0170                     u933:
+   994     0170  085B               	movf	main@now+3,w
+   995     0171  1803               	skipnc
+   996     0172  0A5B               	incf	main@now+3,w
+   997     0173  07C8               	addwf	??_main+3,f
+   998     0174  0848               	movf	??_main+3,w
+   999     0175  00A6               	movwf	_app+6
+  1000     0176  0847               	movf	??_main+2,w
+  1001     0177  00A5               	movwf	_app+5
+  1002     0178  0846               	movf	??_main+1,w
+  1003     0179  00A4               	movwf	_app+4
+  1004     017A  0845               	movf	??_main,w
+  1005     017B  00A3               	movwf	_app+3
+  1006     017C                     l1104:
+  1007                           
+  1008                           ;Dima-Electric-V1.c: 272:                 app.led_state = 1;
+  1009     017C  3001               	movlw	1
+  1010     017D  00AC               	movwf	_app+12
+  1011                           
+  1012                           ;Dima-Electric-V1.c: 273:                 app.led_next_toggle_ms = now + 250u;
+  1013     017E  30FA               	movlw	250
+  1014     017F  00C5               	movwf	??_main
+  1015     0180  3000               	movlw	0
+  1016     0181  00C6               	movwf	??_main+1
+  1017     0182  3000               	movlw	0
+  1018     0183  00C7               	movwf	??_main+2
+  1019     0184  3000               	movlw	0
+  1020     0185  00C8               	movwf	??_main+3
+  1021     0186  0858               	movf	main@now,w
+  1022     0187  07C5               	addwf	??_main,f
+  1023     0188  0859               	movf	main@now+1,w
+  1024     0189  1803               	skipnc
+  1025     018A  0F59               	incfsz	main@now+1,w
+  1026     018B  298D               	goto	u940
+  1027     018C  298E               	goto	u941
+  1028     018D                     u940:
+  1029     018D  07C6               	addwf	??_main+1,f
+  1030     018E                     u941:
+  1031     018E  085A               	movf	main@now+2,w
+  1032     018F  1803               	skipnc
+  1033     0190  0F5A               	incfsz	main@now+2,w
+  1034     0191  2993               	goto	u942
+  1035     0192  2994               	goto	u943
+  1036     0193                     u942:
+  1037     0193  07C7               	addwf	??_main+2,f
+  1038     0194                     u943:
+  1039     0194  085B               	movf	main@now+3,w
+  1040     0195  1803               	skipnc
+  1041     0196  0A5B               	incf	main@now+3,w
+  1042     0197  07C8               	addwf	??_main+3,f
+  1043     0198  0848               	movf	??_main+3,w
+  1044     0199  00B0               	movwf	_app+16
+  1045     019A  0847               	movf	??_main+2,w
+  1046     019B  00AF               	movwf	_app+15
+  1047     019C  0846               	movf	??_main+1,w
+  1048     019D  00AE               	movwf	_app+14
+  1049     019E  0845               	movf	??_main,w
+  1050     019F  00AD               	movwf	_app+13
+  1051     01A0                     l1106:
+  1052                           
+  1053                           ;Dima-Electric-V1.c: 275:             if (app.vac_off_pending && !lev && time_reached(no
+      +                          w, app.vac_off_deadline_ms)) {
+  1054     01A0  0822               	movf	_app+2,w
+  1055     01A1  1903               	btfsc	3,2
+  1056     01A2  29A4               	goto	u951
+  1057     01A3  29A5               	goto	u950
+  1058     01A4                     u951:
+  1059     01A4  29D0               	goto	l1114
+  1060     01A5                     u950:
+  1061     01A5                     l1108:
+  1062     01A5  0854               	movf	main@lev,w
+  1063     01A6  1D03               	btfss	3,2
+  1064     01A7  29A9               	goto	u961
+  1065     01A8  29AA               	goto	u960
+  1066     01A9                     u961:
+  1067     01A9  29D0               	goto	l1114
+  1068     01AA                     u960:
+  1069     01AA                     l1110:
+  1070     01AA  085B               	movf	main@now+3,w
+  1071     01AB  00F5               	movwf	time_reached@now+3
+  1072     01AC  085A               	movf	main@now+2,w
+  1073     01AD  00F4               	movwf	time_reached@now+2
+  1074     01AE  0859               	movf	main@now+1,w
+  1075     01AF  00F3               	movwf	time_reached@now+1
+  1076     01B0  0858               	movf	main@now,w
+  1077     01B1  00F2               	movwf	time_reached@now
+  1078     01B2  3023               	movlw	low (_app+3)
+  1079     01B3  00C5               	movwf	??_main
+  1080     01B4  3000               	movlw	high (_app+3)
+  1081     01B5  00C6               	movwf	??_main+1
+  1082     01B6  0845               	movf	??_main,w
+  1083     01B7  0084               	movwf	4
+  1084     01B8  1783               	bsf	3,7
+  1085     01B9  1C46               	btfss	??_main+1,0
+  1086     01BA  1383               	bcf	3,7
+  1087     01BB  0800               	movf	0,w
+  1088     01BC  00F6               	movwf	time_reached@deadline
+  1089     01BD  0A84               	incf	4,f
+  1090     01BE  0800               	movf	0,w
+  1091     01BF  00F7               	movwf	time_reached@deadline+1
+  1092     01C0  0A84               	incf	4,f
+  1093     01C1  0800               	movf	0,w
+  1094     01C2  00F8               	movwf	time_reached@deadline+2
+  1095     01C3  0A84               	incf	4,f
+  1096     01C4  0800               	movf	0,w
+  1097     01C5  00F9               	movwf	time_reached@deadline+3
+  1098     01C6  22C4               	fcall	_time_reached
+  1099     01C7  3A00               	xorlw	0
+  1100     01C8  1903               	skipnz
+  1101     01C9  29CB               	goto	u971
+  1102     01CA  29CC               	goto	u970
+  1103     01CB                     u971:
+  1104     01CB  29D0               	goto	l1114
+  1105     01CC                     u970:
+  1106     01CC                     l1112:
+  1107                           
+  1108                           ;Dima-Electric-V1.c: 276:                 app.vacuum_on = 0;
+  1109     01CC  1283               	bcf	3,5	;RP0=0, select bank0
+  1110     01CD  01A1               	clrf	_app+1
+  1111                           
+  1112                           ;Dima-Electric-V1.c: 277:                 app.vac_off_pending = 0;
+  1113     01CE  01A2               	clrf	_app+2
+  1114                           
+  1115                           ;Dima-Electric-V1.c: 279:                 app.led_state = 0;
+  1116     01CF  01AC               	clrf	_app+12
+  1117     01D0                     l1114:
+  1118                           
+  1119                           ;Dima-Electric-V1.c: 285:         if (app.vac_off_pending) {
+  1120     01D0  1283               	bcf	3,5	;RP0=0, select bank0
+  1121     01D1  0822               	movf	_app+2,w
+  1122     01D2  1903               	btfsc	3,2
+  1123     01D3  29D5               	goto	u981
+  1124     01D4  29D6               	goto	u980
+  1125     01D5                     u981:
+  1126     01D5  2A24               	goto	l1122
+  1127     01D6                     u980:
+  1128     01D6                     l1116:
+  1129                           
+  1130                           ;Dima-Electric-V1.c: 286:             if (time_reached(now, app.led_next_toggle_ms)) {
+  1131     01D6  085B               	movf	main@now+3,w
+  1132     01D7  00F5               	movwf	time_reached@now+3
+  1133     01D8  085A               	movf	main@now+2,w
+  1134     01D9  00F4               	movwf	time_reached@now+2
+  1135     01DA  0859               	movf	main@now+1,w
+  1136     01DB  00F3               	movwf	time_reached@now+1
+  1137     01DC  0858               	movf	main@now,w
+  1138     01DD  00F2               	movwf	time_reached@now
+  1139     01DE  302D               	movlw	low (_app+13)
+  1140     01DF  00C5               	movwf	??_main
+  1141     01E0  3000               	movlw	high (_app+13)
+  1142     01E1  00C6               	movwf	??_main+1
+  1143     01E2  0845               	movf	??_main,w
+  1144     01E3  0084               	movwf	4
+  1145     01E4  1783               	bsf	3,7
+  1146     01E5  1C46               	btfss	??_main+1,0
+  1147     01E6  1383               	bcf	3,7
+  1148     01E7  0800               	movf	0,w
+  1149     01E8  00F6               	movwf	time_reached@deadline
+  1150     01E9  0A84               	incf	4,f
+  1151     01EA  0800               	movf	0,w
+  1152     01EB  00F7               	movwf	time_reached@deadline+1
+  1153     01EC  0A84               	incf	4,f
+  1154     01ED  0800               	movf	0,w
+  1155     01EE  00F8               	movwf	time_reached@deadline+2
+  1156     01EF  0A84               	incf	4,f
+  1157     01F0  0800               	movf	0,w
+  1158     01F1  00F9               	movwf	time_reached@deadline+3
+  1159     01F2  22C4               	fcall	_time_reached
+  1160     01F3  3A00               	xorlw	0
+  1161     01F4  1903               	skipnz
+  1162     01F5  29F7               	goto	u991
+  1163     01F6  29F8               	goto	u990
+  1164     01F7                     u991:
+  1165     01F7  2A25               	goto	l1124
+  1166     01F8                     u990:
+  1167     01F8                     l1118:
+  1168                           
+  1169                           ;Dima-Electric-V1.c: 287:                 app.led_state = !app.led_state;
+  1170     01F8  1283               	bcf	3,5	;RP0=0, select bank0
+  1171     01F9  082C               	movf	_app+12,w
+  1172     01FA  1903               	btfsc	3,2
+  1173     01FB  29FD               	goto	u1001
+  1174     01FC  29FF               	goto	u1000
+  1175     01FD                     u1001:
+  1176     01FD  3001               	movlw	1
+  1177     01FE  2A00               	goto	u1010
+  1178     01FF                     u1000:
+  1179     01FF  3000               	movlw	0
+  1180     0200                     u1010:
+  1181     0200  00AC               	movwf	_app+12
+  1182     0201                     l1120:
+  1183                           
+  1184                           ;Dima-Electric-V1.c: 288:                 app.led_next_toggle_ms = now + 250u;
+  1185     0201  30FA               	movlw	250
+  1186     0202  00C5               	movwf	??_main
+  1187     0203  3000               	movlw	0
+  1188     0204  00C6               	movwf	??_main+1
+  1189     0205  3000               	movlw	0
+  1190     0206  00C7               	movwf	??_main+2
+  1191     0207  3000               	movlw	0
+  1192     0208  00C8               	movwf	??_main+3
+  1193     0209  0858               	movf	main@now,w
+  1194     020A  07C5               	addwf	??_main,f
+  1195     020B  0859               	movf	main@now+1,w
+  1196     020C  1803               	skipnc
+  1197     020D  0F59               	incfsz	main@now+1,w
+  1198     020E  2A10               	goto	u1020
+  1199     020F  2A11               	goto	u1021
+  1200     0210                     u1020:
+  1201     0210  07C6               	addwf	??_main+1,f
+  1202     0211                     u1021:
+  1203     0211  085A               	movf	main@now+2,w
+  1204     0212  1803               	skipnc
+  1205     0213  0F5A               	incfsz	main@now+2,w
+  1206     0214  2A16               	goto	u1022
+  1207     0215  2A17               	goto	u1023
+  1208     0216                     u1022:
+  1209     0216  07C7               	addwf	??_main+2,f
+  1210     0217                     u1023:
+  1211     0217  085B               	movf	main@now+3,w
+  1212     0218  1803               	skipnc
+  1213     0219  0A5B               	incf	main@now+3,w
+  1214     021A  07C8               	addwf	??_main+3,f
+  1215     021B  0848               	movf	??_main+3,w
+  1216     021C  00B0               	movwf	_app+16
+  1217     021D  0847               	movf	??_main+2,w
+  1218     021E  00AF               	movwf	_app+15
+  1219     021F  0846               	movf	??_main+1,w
+  1220     0220  00AE               	movwf	_app+14
+  1221     0221  0845               	movf	??_main,w
+  1222     0222  00AD               	movwf	_app+13
+  1223     0223  2A25               	goto	l1124
+  1224     0224                     l1122:
+  1225                           
+  1226                           ;Dima-Electric-V1.c: 291:             app.led_state = 0;
+  1227     0224  01AC               	clrf	_app+12
+  1228     0225                     l1124:
+  1229                           
+  1230                           ;Dima-Electric-V1.c: 295:         set_brush_pin(app.brush_on);
+  1231     0225  1283               	bcf	3,5	;RP0=0, select bank0
+  1232     0226  0820               	movf	_app,w
+  1233     0227  235E               	fcall	_set_brush_pin
+  1234     0228                     l1126:
+  1235                           
+  1236                           ;Dima-Electric-V1.c: 296:         set_vac_pin(app.vacuum_on);
+  1237     0228  1283               	bcf	3,5	;RP0=0, select bank0
+  1238     0229  0821               	movf	_app+1,w
+  1239     022A  2348               	fcall	_set_vac_pin
+  1240     022B                     l1128:
+  1241                           
+  1242                           ;Dima-Electric-V1.c: 297:         set_led_pin(app.led_state);
+  1243     022B  1283               	bcf	3,5	;RP0=0, select bank0
+  1244     022C  082C               	movf	_app+12,w
+  1245     022D  2353               	fcall	_set_led_pin
+  1246     022E                     l1130:
+  1247                           
+  1248                           ;Dima-Electric-V1.c: 298:         push_outputs();
+  1249     022E  2371               	fcall	_push_outputs
+  1250     022F  0064               	clrwdt	;# 
+  1251                           
+  1252                           ;Dima-Electric-V1.c: 302:     }
+  1253     0230  2831               	goto	l1010
+  1254     0231  280A               	ljmp	start
+  1255     0232                     __end_of_main:
+  1256                           
+  1257                           	psect	text1
+  1258     0337                     __ptext1:	
+  1259 ;; *************** function _tmr1_init *****************
+  1260 ;; Defined at:
+  1261 ;;		line 110 in file "Dima-Electric-V1.c"
+  1262 ;; Parameters:    Size  Location     Type
+  1263 ;;		None
+  1264 ;; Auto vars:     Size  Location     Type
+  1265 ;;		None
+  1266 ;; Return value:  Size  Location     Type
+  1267 ;;                  1    wreg      void 
+  1268 ;; Registers used:
+  1269 ;;		wreg, status,2, status,0
+  1270 ;; Tracked objects:
+  1271 ;;		On entry : 0/0
+  1272 ;;		On exit  : 0/0
+  1273 ;;		Unchanged: 0/0
+  1274 ;; Data sizes:     COMMON   BANK0   BANK1
+  1275 ;;      Params:         0       0       0
+  1276 ;;      Locals:         0       0       0
+  1277 ;;      Temps:          0       0       0
+  1278 ;;      Totals:         0       0       0
+  1279 ;;Total ram usage:        0 bytes
+  1280 ;; Hardware stack levels used: 1
+  1281 ;; Hardware stack levels required when called: 1
+  1282 ;; This function calls:
+  1283 ;;		Nothing
+  1284 ;; This function is called by:
+  1285 ;;		_main
+  1286 ;; This function uses a non-reentrant model
+  1287 ;;
+  1288                           
+  1289     0337                     _tmr1_init:	
+  1290                           ;psect for function _tmr1_init
+  1291                           
+  1292     0337                     l926:	
+  1293                           ;incstack = 0
+  1294                           ; Regs used in _tmr1_init: [wreg+status,2+status,0]
+  1295                           
+  1296                           
+  1297                           ;Dima-Electric-V1.c: 112:     T1CON = 0;
+  1298     0337  1283               	bcf	3,5	;RP0=0, select bank0
+  1299     0338  0190               	clrf	16	;volatile
+  1300     0339                     l928:
+  1301                           
+  1302                           ;Dima-Electric-V1.c: 113:     T1CONbits.TMR1CS = 0;
+  1303     0339  1090               	bcf	16,1	;volatile
+  1304     033A                     l930:
+  1305                           
+  1306                           ;Dima-Electric-V1.c: 114:     T1CONbits.T1CKPS = 0b11;
+  1307     033A  3030               	movlw	48
+  1308     033B  0490               	iorwf	16,f	;volatile
+  1309     033C                     l932:
+  1310                           
+  1311                           ;Dima-Electric-V1.c: 115:     TMR1H = (uint8_t)((uint16_t)(65536u - 250u) >> 8);
+  1312     033C  30FF               	movlw	255
+  1313     033D  008F               	movwf	15	;volatile
+  1314     033E                     l934:
+  1315                           
+  1316                           ;Dima-Electric-V1.c: 116:     TMR1L = (uint8_t)((uint16_t)(65536u - 250u) & 0xFF);
+  1317     033E  3006               	movlw	6
+  1318     033F  008E               	movwf	14	;volatile
+  1319     0340                     l936:
+  1320                           
+  1321                           ;Dima-Electric-V1.c: 117:     PIR1bits.TMR1IF = 0;
+  1322     0340  100C               	bcf	12,0	;volatile
+  1323     0341                     l938:
+  1324                           
+  1325                           ;Dima-Electric-V1.c: 118:     PIE1bits.TMR1IE = 1;
+  1326     0341  1683               	bsf	3,5	;RP0=1, select bank1
+  1327     0342  140C               	bsf	12,0	;volatile
+  1328     0343                     l940:
+  1329                           
+  1330                           ;Dima-Electric-V1.c: 119:     INTCONbits.PEIE = 1;
+  1331     0343  170B               	bsf	11,6	;volatile
+  1332     0344                     l942:
+  1333                           
+  1334                           ;Dima-Electric-V1.c: 120:     INTCONbits.GIE = 1;
+  1335     0344  178B               	bsf	11,7	;volatile
+  1336     0345                     l944:
+  1337                           
+  1338                           ;Dima-Electric-V1.c: 121:     T1CONbits.TMR1ON = 1;
+  1339     0345  1283               	bcf	3,5	;RP0=0, select bank0
+  1340     0346  1410               	bsf	16,0	;volatile
+  1341     0347                     l68:
+  1342     0347  0008               	return
+  1343     0348                     __end_of_tmr1_init:
+  1344                           
+  1345                           	psect	text2
+  1346     02C4                     __ptext2:	
+  1347 ;; *************** function _time_reached *****************
+  1348 ;; Defined at:
+  1349 ;;		line 145 in file "Dima-Electric-V1.c"
+  1350 ;; Parameters:    Size  Location     Type
+  1351 ;;  now             4    2[COMMON] unsigned long 
+  1352 ;;  deadline        4    6[COMMON] unsigned long 
+  1353 ;; Auto vars:     Size  Location     Type
+  1354 ;;		None
+  1355 ;; Return value:  Size  Location     Type
+  1356 ;;                  1    wreg      _Bool 
+  1357 ;; Registers used:
+  1358 ;;		wreg
+  1359 ;; Tracked objects:
+  1360 ;;		On entry : 0/0
+  1361 ;;		On exit  : 0/0
+  1362 ;;		Unchanged: 0/0
+  1363 ;; Data sizes:     COMMON   BANK0   BANK1
+  1364 ;;      Params:         8       0       0
+  1365 ;;      Locals:         0       0       0
+  1366 ;;      Temps:          0       4       0
+  1367 ;;      Totals:         8       4       0
+  1368 ;;Total ram usage:       12 bytes
+  1369 ;; Hardware stack levels used: 1
+  1370 ;; Hardware stack levels required when called: 1
+  1371 ;; This function calls:
+  1372 ;;		Nothing
+  1373 ;; This function is called by:
+  1374 ;;		_main
+  1375 ;; This function uses a non-reentrant model
+  1376 ;;
+  1377                           
+  1378     02C4                     _time_reached:	
+  1379                           ;psect for function _time_reached
+  1380                           
+  1381     02C4                     l958:	
+  1382                           ;incstack = 0
+  1383                           ; Regs used in _time_reached: [wreg]
+  1384                           
+  1385                           
+  1386                           ;Dima-Electric-V1.c: 145: static __attribute__((inline)) _Bool time_reached(uint32_t now
+      +                          , uint32_t deadline);Dima-Electric-V1.c: 146: {;Dima-Electric-V1.c: 147:     return (int
+      +                          32_t)(now - deadline) >= 0;
+  1387     02C4  0872               	movf	time_reached@now,w
+  1388     02C5  1283               	bcf	3,5	;RP0=0, select bank0
+  1389     02C6  00C1               	movwf	??_time_reached
+  1390     02C7  0873               	movf	time_reached@now+1,w
+  1391     02C8  00C2               	movwf	??_time_reached+1
+  1392     02C9  0874               	movf	time_reached@now+2,w
+  1393     02CA  00C3               	movwf	??_time_reached+2
+  1394     02CB  0875               	movf	time_reached@now+3,w
+  1395     02CC  00C4               	movwf	??_time_reached+3
+  1396     02CD  0876               	movf	time_reached@deadline,w
+  1397     02CE  02C1               	subwf	??_time_reached,f
+  1398     02CF  0877               	movf	time_reached@deadline+1,w
+  1399     02D0  1C03               	skipc
+  1400     02D1  0F77               	incfsz	time_reached@deadline+1,w
+  1401     02D2  2AD4               	goto	u581
+  1402     02D3  2AD5               	goto	u582
+  1403     02D4                     u581:
+  1404     02D4  02C2               	subwf	??_time_reached+1,f
+  1405     02D5                     u582:
+  1406     02D5  0878               	movf	time_reached@deadline+2,w
+  1407     02D6  1C03               	skipc
+  1408     02D7  0F78               	incfsz	time_reached@deadline+2,w
+  1409     02D8  2ADA               	goto	u583
+  1410     02D9  2ADB               	goto	u584
+  1411     02DA                     u583:
+  1412     02DA  02C3               	subwf	??_time_reached+2,f
+  1413     02DB                     u584:
+  1414     02DB  0879               	movf	time_reached@deadline+3,w
+  1415     02DC  1C03               	skipc
+  1416     02DD  0F79               	incfsz	time_reached@deadline+3,w
+  1417     02DE  2AE0               	goto	u585
+  1418     02DF  2AE1               	goto	u586
+  1419     02E0                     u585:
+  1420     02E0  02C4               	subwf	??_time_reached+3,f
+  1421     02E1                     u586:
+  1422     02E1  1FC4               	btfss	??_time_reached+3,7
+  1423     02E2  2AE4               	goto	u591
+  1424     02E3  2AE6               	goto	u590
+  1425     02E4                     u591:
+  1426     02E4  3001               	movlw	1
+  1427     02E5  2AE7               	goto	u600
+  1428     02E6                     u590:
+  1429     02E6  3000               	movlw	0
+  1430     02E7                     u600:
+  1431     02E7                     l80:
+  1432     02E7  0008               	return
+  1433     02E8                     __end_of_time_reached:
+  1434                           
+  1435                           	psect	text3
+  1436     0348                     __ptext3:	
+  1437 ;; *************** function _set_vac_pin *****************
+  1438 ;; Defined at:
+  1439 ;;		line 65 in file "Dima-Electric-V1.c"
+  1440 ;; Parameters:    Size  Location     Type
+  1441 ;;  on              1    wreg     _Bool 
+  1442 ;; Auto vars:     Size  Location     Type
+  1443 ;;  on              1    2[COMMON] _Bool 
+  1444 ;; Return value:  Size  Location     Type
+  1445 ;;                  1    wreg      void 
+  1446 ;; Registers used:
+  1447 ;;		wreg, status,2, status,0
+  1448 ;; Tracked objects:
+  1449 ;;		On entry : 0/0
+  1450 ;;		On exit  : 0/0
+  1451 ;;		Unchanged: 0/0
+  1452 ;; Data sizes:     COMMON   BANK0   BANK1
+  1453 ;;      Params:         0       0       0
+  1454 ;;      Locals:         1       0       0
+  1455 ;;      Temps:          0       0       0
+  1456 ;;      Totals:         1       0       0
+  1457 ;;Total ram usage:        1 bytes
+  1458 ;; Hardware stack levels used: 1
+  1459 ;; Hardware stack levels required when called: 1
+  1460 ;; This function calls:
+  1461 ;;		Nothing
+  1462 ;; This function is called by:
+  1463 ;;		_main
+  1464 ;; This function uses a non-reentrant model
+  1465 ;;
+  1466                           
+  1467     0348                     _set_vac_pin:	
+  1468                           ;psect for function _set_vac_pin
+  1469                           
+  1470                           
+  1471                           ;incstack = 0
+  1472                           ; Regs used in _set_vac_pin: [wreg+status,2+status,0]
+  1473                           ;set_vac_pin@on stored from wreg
+  1474     0348  00F2               	movwf	set_vac_pin@on
+  1475     0349                     l904:
+  1476     0349  0872               	movf	set_vac_pin@on,w
+  1477     034A  1903               	btfsc	3,2
+  1478     034B  2B4D               	goto	u531
+  1479     034C  2B4E               	goto	u530
+  1480     034D                     u531:
+  1481     034D  2B50               	goto	l908
+  1482     034E                     u530:
+  1483     034E                     l906:
+  1484     034E  147B               	bsf	_out_shadow,0
+  1485     034F  2B52               	goto	l42
+  1486     0350                     l908:
+  1487     0350  30FE               	movlw	254
+  1488     0351  05FB               	andwf	_out_shadow,f
+  1489     0352                     l42:
+  1490     0352  0008               	return
+  1491     0353                     __end_of_set_vac_pin:
+  1492                           
+  1493                           	psect	text4
+  1494     0353                     __ptext4:	
+  1495 ;; *************** function _set_led_pin *****************
+  1496 ;; Defined at:
+  1497 ;;		line 66 in file "Dima-Electric-V1.c"
+  1498 ;; Parameters:    Size  Location     Type
+  1499 ;;  on              1    wreg     _Bool 
+  1500 ;; Auto vars:     Size  Location     Type
+  1501 ;;  on              1    2[COMMON] _Bool 
+  1502 ;; Return value:  Size  Location     Type
+  1503 ;;                  1    wreg      void 
+  1504 ;; Registers used:
+  1505 ;;		wreg, status,2, status,0
+  1506 ;; Tracked objects:
+  1507 ;;		On entry : 0/0
+  1508 ;;		On exit  : 0/0
+  1509 ;;		Unchanged: 0/0
+  1510 ;; Data sizes:     COMMON   BANK0   BANK1
+  1511 ;;      Params:         0       0       0
+  1512 ;;      Locals:         1       0       0
+  1513 ;;      Temps:          0       0       0
+  1514 ;;      Totals:         1       0       0
+  1515 ;;Total ram usage:        1 bytes
+  1516 ;; Hardware stack levels used: 1
+  1517 ;; Hardware stack levels required when called: 1
+  1518 ;; This function calls:
+  1519 ;;		Nothing
+  1520 ;; This function is called by:
+  1521 ;;		_main
+  1522 ;; This function uses a non-reentrant model
+  1523 ;;
+  1524                           
+  1525     0353                     _set_led_pin:	
+  1526                           ;psect for function _set_led_pin
+  1527                           
+  1528                           
+  1529                           ;incstack = 0
+  1530                           ; Regs used in _set_led_pin: [wreg+status,2+status,0]
+  1531                           ;set_led_pin@on stored from wreg
+  1532     0353  00F2               	movwf	set_led_pin@on
+  1533     0354                     l910:
+  1534     0354  0872               	movf	set_led_pin@on,w
+  1535     0355  1903               	btfsc	3,2
+  1536     0356  2B58               	goto	u541
+  1537     0357  2B59               	goto	u540
+  1538     0358                     u541:
+  1539     0358  2B5B               	goto	l914
+  1540     0359                     u540:
+  1541     0359                     l912:
+  1542     0359  157B               	bsf	_out_shadow,2
+  1543     035A  2B5D               	goto	l47
+  1544     035B                     l914:
+  1545     035B  30FB               	movlw	251
+  1546     035C  05FB               	andwf	_out_shadow,f
+  1547     035D                     l47:
+  1548     035D  0008               	return
+  1549     035E                     __end_of_set_led_pin:
+  1550                           
+  1551                           	psect	text5
+  1552     035E                     __ptext5:	
+  1553 ;; *************** function _set_brush_pin *****************
+  1554 ;; Defined at:
+  1555 ;;		line 64 in file "Dima-Electric-V1.c"
+  1556 ;; Parameters:    Size  Location     Type
+  1557 ;;  on              1    wreg     _Bool 
+  1558 ;; Auto vars:     Size  Location     Type
+  1559 ;;  on              1    2[COMMON] _Bool 
+  1560 ;; Return value:  Size  Location     Type
+  1561 ;;                  1    wreg      void 
+  1562 ;; Registers used:
+  1563 ;;		wreg, status,2, status,0
+  1564 ;; Tracked objects:
+  1565 ;;		On entry : 0/0
+  1566 ;;		On exit  : 0/0
+  1567 ;;		Unchanged: 0/0
+  1568 ;; Data sizes:     COMMON   BANK0   BANK1
+  1569 ;;      Params:         0       0       0
+  1570 ;;      Locals:         1       0       0
+  1571 ;;      Temps:          0       0       0
+  1572 ;;      Totals:         1       0       0
+  1573 ;;Total ram usage:        1 bytes
+  1574 ;; Hardware stack levels used: 1
+  1575 ;; Hardware stack levels required when called: 1
+  1576 ;; This function calls:
+  1577 ;;		Nothing
+  1578 ;; This function is called by:
+  1579 ;;		_main
+  1580 ;; This function uses a non-reentrant model
+  1581 ;;
+  1582                           
+  1583     035E                     _set_brush_pin:	
+  1584                           ;psect for function _set_brush_pin
+  1585                           
+  1586                           
+  1587                           ;incstack = 0
+  1588                           ; Regs used in _set_brush_pin: [wreg+status,2+status,0]
+  1589                           ;set_brush_pin@on stored from wreg
+  1590     035E  00F2               	movwf	set_brush_pin@on
+  1591     035F                     l898:
+  1592     035F  0872               	movf	set_brush_pin@on,w
+  1593     0360  1903               	btfsc	3,2
+  1594     0361  2B63               	goto	u521
+  1595     0362  2B64               	goto	u520
+  1596     0363                     u521:
+  1597     0363  2B66               	goto	l902
+  1598     0364                     u520:
+  1599     0364                     l900:
+  1600     0364  16FB               	bsf	_out_shadow,5
+  1601     0365  2B68               	goto	l37
+  1602     0366                     l902:
+  1603     0366  30DF               	movlw	223
+  1604     0367  05FB               	andwf	_out_shadow,f
+  1605     0368                     l37:
+  1606     0368  0008               	return
+  1607     0369                     __end_of_set_brush_pin:
+  1608                           
+  1609                           	psect	text6
+  1610     0307                     __ptext6:	
+  1611 ;; *************** function _millis *****************
+  1612 ;; Defined at:
+  1613 ;;		line 135 in file "Dima-Electric-V1.c"
+  1614 ;; Parameters:    Size  Location     Type
+  1615 ;;		None
+  1616 ;; Auto vars:     Size  Location     Type
+  1617 ;;  t               4    6[COMMON] unsigned long 
+  1618 ;;  gie             1   10[COMMON] unsigned char 
+  1619 ;; Return value:  Size  Location     Type
+  1620 ;;                  4    2[COMMON] unsigned long 
+  1621 ;; Registers used:
+  1622 ;;		wreg, status,2, status,0
+  1623 ;; Tracked objects:
+  1624 ;;		On entry : 0/0
+  1625 ;;		On exit  : 0/0
+  1626 ;;		Unchanged: 0/0
+  1627 ;; Data sizes:     COMMON   BANK0   BANK1
+  1628 ;;      Params:         4       0       0
+  1629 ;;      Locals:         5       0       0
+  1630 ;;      Temps:          0       0       0
+  1631 ;;      Totals:         9       0       0
+  1632 ;;Total ram usage:        9 bytes
+  1633 ;; Hardware stack levels used: 1
+  1634 ;; Hardware stack levels required when called: 1
+  1635 ;; This function calls:
+  1636 ;;		Nothing
+  1637 ;; This function is called by:
+  1638 ;;		_main
+  1639 ;; This function uses a non-reentrant model
+  1640 ;;
+  1641                           
+  1642     0307                     _millis:	
+  1643                           ;psect for function _millis
+  1644                           
+  1645     0307                     l946:	
+  1646                           ;incstack = 0
+  1647                           ; Regs used in _millis: [wreg+status,2+status,0]
+  1648                           
+  1649                           
+  1650                           ;Dima-Electric-V1.c: 137:     uint32_t t;;Dima-Electric-V1.c: 138:     uint8_t gie = INT
+      +                          CONbits.GIE;
+  1651     0307  0D0B               	rlf	11,w	;volatile
+  1652     0308  0D0B               	rlf	11,w	;volatile
+  1653     0309  3901               	andlw	1
+  1654     030A  00FA               	movwf	millis@gie
+  1655     030B                     l948:
+  1656                           
+  1657                           ;Dima-Electric-V1.c: 139:     INTCONbits.GIE = 0;
+  1658     030B  138B               	bcf	11,7	;volatile
+  1659     030C                     l950:
+  1660                           
+  1661                           ;Dima-Electric-V1.c: 140:     t = g_ms;
+  1662     030C  1283               	bcf	3,5	;RP0=0, select bank0
+  1663     030D  0834               	movf	_g_ms+3,w	;volatile
+  1664     030E  00F9               	movwf	millis@t+3
+  1665     030F  0833               	movf	_g_ms+2,w	;volatile
+  1666     0310  00F8               	movwf	millis@t+2
+  1667     0311  0832               	movf	_g_ms+1,w	;volatile
+  1668     0312  00F7               	movwf	millis@t+1
+  1669     0313  0831               	movf	_g_ms,w	;volatile
+  1670     0314  00F6               	movwf	millis@t
+  1671     0315                     l952:
+  1672                           
+  1673                           ;Dima-Electric-V1.c: 141:     INTCONbits.GIE = gie;
+  1674     0315  0C7A               	rrf	millis@gie,w
+  1675     0316  1C03               	skipc
+  1676     0317  138B               	bcf	11,7	;volatile
+  1677     0318  1803               	skipnc
+  1678     0319  178B               	bsf	11,7	;volatile
+  1679     031A                     l954:
+  1680                           
+  1681                           ;Dima-Electric-V1.c: 142:     return t;
+  1682     031A  0879               	movf	millis@t+3,w
+  1683     031B  00F5               	movwf	?_millis+3
+  1684     031C  0878               	movf	millis@t+2,w
+  1685     031D  00F4               	movwf	?_millis+2
+  1686     031E  0877               	movf	millis@t+1,w
+  1687     031F  00F3               	movwf	?_millis+1
+  1688     0320  0876               	movf	millis@t,w
+  1689     0321  00F2               	movwf	?_millis
+  1690     0322                     l77:
+  1691     0322  0008               	return
+  1692     0323                     __end_of_millis:
+  1693                           
+  1694                           	psect	text7
+  1695     0323                     __ptext7:	
+  1696 ;; *************** function _io_clock_init *****************
+  1697 ;; Defined at:
+  1698 ;;		line 153 in file "Dima-Electric-V1.c"
+  1699 ;; Parameters:    Size  Location     Type
+  1700 ;;		None
+  1701 ;; Auto vars:     Size  Location     Type
+  1702 ;;		None
+  1703 ;; Return value:  Size  Location     Type
+  1704 ;;                  1    wreg      void 
+  1705 ;; Registers used:
+  1706 ;;		wreg, status,2, status,0, pclath, cstack
+  1707 ;; Tracked objects:
+  1708 ;;		On entry : 0/0
+  1709 ;;		On exit  : 0/0
+  1710 ;;		Unchanged: 0/0
+  1711 ;; Data sizes:     COMMON   BANK0   BANK1
+  1712 ;;      Params:         0       0       0
+  1713 ;;      Locals:         0       0       0
+  1714 ;;      Temps:          0       0       0
+  1715 ;;      Totals:         0       0       0
+  1716 ;;Total ram usage:        0 bytes
+  1717 ;; Hardware stack levels used: 1
+  1718 ;; Hardware stack levels required when called: 2
+  1719 ;; This function calls:
+  1720 ;;		_push_outputs
+  1721 ;; This function is called by:
+  1722 ;;		_main
+  1723 ;; This function uses a non-reentrant model
+  1724 ;;
+  1725                           
+  1726     0323                     _io_clock_init:	
+  1727                           ;psect for function _io_clock_init
+  1728                           
+  1729     0323                     l962:	
+  1730                           ;incstack = 0
+  1731                           ; Regs used in _io_clock_init: [wreg+status,2+status,0+pclath+cstack]
+  1732                           
+  1733                           
+  1734                           ;Dima-Electric-V1.c: 155:     OSCCONbits.IRCF = 0b111;
+  1735     0323  3070               	movlw	112
+  1736     0324  1683               	bsf	3,5	;RP0=1, select bank1
+  1737     0325  048F               	iorwf	15,f	;volatile
+  1738     0326                     l964:
+  1739                           
+  1740                           ;Dima-Electric-V1.c: 156:     ANSEL = 0x00;
+  1741     0326  019F               	clrf	31	;volatile
+  1742     0327                     l966:
+  1743                           
+  1744                           ;Dima-Electric-V1.c: 157:     CMCON0 = 0x07;
+  1745     0327  3007               	movlw	7
+  1746     0328  1283               	bcf	3,5	;RP0=0, select bank0
+  1747     0329  0099               	movwf	25	;volatile
+  1748     032A                     l968:
+  1749                           
+  1750                           ;Dima-Electric-V1.c: 159:     TRISIO = 0;
+  1751     032A  1683               	bsf	3,5	;RP0=1, select bank1
+  1752     032B  0185               	clrf	5	;volatile
+  1753     032C                     l970:
+  1754                           
+  1755                           ;Dima-Electric-V1.c: 160:     TRISIObits.TRISIO5 = 0;
+  1756     032C  1285               	bcf	5,5	;volatile
+  1757     032D                     l972:
+  1758                           
+  1759                           ;Dima-Electric-V1.c: 161:     TRISIObits.TRISIO0 = 0;
+  1760     032D  1005               	bcf	5,0	;volatile
+  1761     032E                     l974:
+  1762                           
+  1763                           ;Dima-Electric-V1.c: 162:     TRISIObits.TRISIO2 = 0;
+  1764     032E  1105               	bcf	5,2	;volatile
+  1765     032F                     l976:
+  1766                           
+  1767                           ;Dima-Electric-V1.c: 163:     TRISIObits.TRISIO1 = 1;
+  1768     032F  1485               	bsf	5,1	;volatile
+  1769     0330                     l978:
+  1770                           
+  1771                           ;Dima-Electric-V1.c: 164:     TRISIObits.TRISIO4 = 1;
+  1772     0330  1605               	bsf	5,4	;volatile
+  1773     0331                     l980:
+  1774                           
+  1775                           ;Dima-Electric-V1.c: 167:     OPTION_REGbits.nGPPU = 1;
+  1776     0331  1781               	bsf	1,7	;volatile
+  1777     0332                     l982:
+  1778                           
+  1779                           ;Dima-Electric-V1.c: 168:     WPU = 0x00;
+  1780     0332  0195               	clrf	21	;volatile
+  1781     0333                     l984:
+  1782                           
+  1783                           ;Dima-Electric-V1.c: 171:     out_shadow &= ~((1u<<5) | (1u<<0) | (1u<<2));
+  1784     0333  30DA               	movlw	218
+  1785     0334  05FB               	andwf	_out_shadow,f
+  1786     0335                     l986:
+  1787                           
+  1788                           ;Dima-Electric-V1.c: 172:     push_outputs();
+  1789     0335  2371               	fcall	_push_outputs
+  1790     0336                     l83:
+  1791     0336  0008               	return
+  1792     0337                     __end_of_io_clock_init:
+  1793                           
+  1794                           	psect	text8
+  1795     0371                     __ptext8:	
+  1796 ;; *************** function _push_outputs *****************
+  1797 ;; Defined at:
+  1798 ;;		line 67 in file "Dima-Electric-V1.c"
+  1799 ;; Parameters:    Size  Location     Type
+  1800 ;;		None
+  1801 ;; Auto vars:     Size  Location     Type
+  1802 ;;		None
+  1803 ;; Return value:  Size  Location     Type
+  1804 ;;                  1    wreg      void 
+  1805 ;; Registers used:
+  1806 ;;		wreg
+  1807 ;; Tracked objects:
+  1808 ;;		On entry : 0/0
+  1809 ;;		On exit  : 0/0
+  1810 ;;		Unchanged: 0/0
+  1811 ;; Data sizes:     COMMON   BANK0   BANK1
+  1812 ;;      Params:         0       0       0
+  1813 ;;      Locals:         0       0       0
+  1814 ;;      Temps:          0       0       0
+  1815 ;;      Totals:         0       0       0
+  1816 ;;Total ram usage:        0 bytes
+  1817 ;; Hardware stack levels used: 1
+  1818 ;; Hardware stack levels required when called: 1
+  1819 ;; This function calls:
+  1820 ;;		Nothing
+  1821 ;; This function is called by:
+  1822 ;;		_io_clock_init
+  1823 ;;		_main
+  1824 ;; This function uses a non-reentrant model
+  1825 ;;
+  1826                           
+  1827     0371                     _push_outputs:	
+  1828                           ;psect for function _push_outputs
+  1829                           
+  1830     0371                     l896:	
+  1831                           ;incstack = 0
+  1832                           ; Regs used in _push_outputs: [wreg]
+  1833                           
+  1834     0371  087B               	movf	_out_shadow,w
+  1835     0372  1283               	bcf	3,5	;RP0=0, select bank0
+  1836     0373  0085               	movwf	5	;volatile
+  1837     0374                     l50:
+  1838     0374  0008               	return
+  1839     0375                     __end_of_push_outputs:
+  1840                           
+  1841                           	psect	text9
+  1842     0232                     __ptext9:	
+  1843 ;; *************** function _debounce_update_1ms *****************
+  1844 ;; Defined at:
+  1845 ;;		line 87 in file "Dima-Electric-V1.c"
+  1846 ;; Parameters:    Size  Location     Type
+  1847 ;;  db              2    2[COMMON] PTR struct .
+  1848 ;;		 -> db_lever(4), db_handle2(4), db_handle1(4), 
+  1849 ;;  raw             1    4[COMMON] unsigned char 
+  1850 ;; Auto vars:     Size  Location     Type
+  1851 ;;		None
+  1852 ;; Return value:  Size  Location     Type
+  1853 ;;                  1    wreg      void 
+  1854 ;; Registers used:
+  1855 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1
+  1856 ;; Tracked objects:
+  1857 ;;		On entry : 0/0
+  1858 ;;		On exit  : 0/0
+  1859 ;;		Unchanged: 0/0
+  1860 ;; Data sizes:     COMMON   BANK0   BANK1
+  1861 ;;      Params:         3       0       0
+  1862 ;;      Locals:         0       0       0
+  1863 ;;      Temps:          4       0       0
+  1864 ;;      Totals:         7       0       0
+  1865 ;;Total ram usage:        7 bytes
+  1866 ;; Hardware stack levels used: 1
+  1867 ;; Hardware stack levels required when called: 1
+  1868 ;; This function calls:
+  1869 ;;		Nothing
+  1870 ;; This function is called by:
+  1871 ;;		_main
+  1872 ;; This function uses a non-reentrant model
+  1873 ;;
+  1874                           
+  1875     0232                     _debounce_update_1ms:	
+  1876                           ;psect for function _debounce_update_1ms
+  1877                           
+  1878     0232                     l916:	
+  1879                           ;incstack = 0
+  1880                           ; Regs used in _debounce_update_1ms: [wreg-fsr0h+status,2+status,0+btemp+1]
+  1881                           
+  1882                           
+  1883                           ;Dima-Electric-V1.c: 87: static __attribute__((inline)) void debounce_update_1ms(debounc
+      +                          e_t* db, uint8_t raw);Dima-Electric-V1.c: 88: {;Dima-Electric-V1.c: 89:     if (raw != d
+      +                          b->last) {
+  1884     0232  0872               	movf	debounce_update_1ms@db,w
+  1885     0233  3E01               	addlw	1
+  1886     0234  00F5               	movwf	??_debounce_update_1ms
+  1887     0235  0873               	movf	debounce_update_1ms@db+1,w
+  1888     0236  1803               	skipnc
+  1889     0237  3E01               	addlw	1
+  1890     0238  3E00               	addlw	0
+  1891     0239  00F6               	movwf	??_debounce_update_1ms+1
+  1892     023A  0875               	movf	??_debounce_update_1ms,w
+  1893     023B  0084               	movwf	4
+  1894     023C  1783               	bsf	3,7
+  1895     023D  1C76               	btfss	??_debounce_update_1ms+1,0
+  1896     023E  1383               	bcf	3,7
+  1897     023F  0800               	movf	0,w
+  1898     0240  0674               	xorwf	debounce_update_1ms@raw,w
+  1899     0241  1903               	skipnz
+  1900     0242  2A44               	goto	u551
+  1901     0243  2A45               	goto	u550
+  1902     0244                     u551:
+  1903     0244  2A65               	goto	l920
+  1904     0245                     u550:
+  1905     0245                     l918:
+  1906                           
+  1907                           ;Dima-Electric-V1.c: 90:         db->last = raw;
+  1908     0245  0872               	movf	debounce_update_1ms@db,w
+  1909     0246  3E01               	addlw	1
+  1910     0247  00F5               	movwf	??_debounce_update_1ms
+  1911     0248  0873               	movf	debounce_update_1ms@db+1,w
+  1912     0249  1803               	skipnc
+  1913     024A  3E01               	addlw	1
+  1914     024B  3E00               	addlw	0
+  1915     024C  00F6               	movwf	??_debounce_update_1ms+1
+  1916     024D  0875               	movf	??_debounce_update_1ms,w
+  1917     024E  0084               	movwf	4
+  1918     024F  1783               	bsf	3,7
+  1919     0250  1C76               	btfss	??_debounce_update_1ms+1,0
+  1920     0251  1383               	bcf	3,7
+  1921     0252  0874               	movf	debounce_update_1ms@raw,w
+  1922     0253  0080               	movwf	0
+  1923                           
+  1924                           ;Dima-Electric-V1.c: 91:         db->cnt = 0;
+  1925     0254  0872               	movf	debounce_update_1ms@db,w
+  1926     0255  3E02               	addlw	2
+  1927     0256  00F5               	movwf	??_debounce_update_1ms
+  1928     0257  0873               	movf	debounce_update_1ms@db+1,w
+  1929     0258  1803               	skipnc
+  1930     0259  3E01               	addlw	1
+  1931     025A  3E00               	addlw	0
+  1932     025B  00F6               	movwf	??_debounce_update_1ms+1
+  1933     025C  0875               	movf	??_debounce_update_1ms,w
+  1934     025D  0084               	movwf	4
+  1935     025E  1783               	bsf	3,7
+  1936     025F  1C76               	btfss	??_debounce_update_1ms+1,0
+  1937     0260  1383               	bcf	3,7
+  1938     0261  0180               	clrf	0
+  1939     0262  0A84               	incf	4,f
+  1940     0263  0180               	clrf	0
+  1941                           
+  1942                           ;Dima-Electric-V1.c: 92:     } else if (db->cnt < 20u) {
+  1943     0264  2AC3               	goto	l65
+  1944     0265                     l920:
+  1945     0265  0872               	movf	debounce_update_1ms@db,w
+  1946     0266  3E02               	addlw	2
+  1947     0267  00F5               	movwf	??_debounce_update_1ms
+  1948     0268  0873               	movf	debounce_update_1ms@db+1,w
+  1949     0269  1803               	skipnc
+  1950     026A  3E01               	addlw	1
+  1951     026B  3E00               	addlw	0
+  1952     026C  00F6               	movwf	??_debounce_update_1ms+1
+  1953     026D  0875               	movf	??_debounce_update_1ms,w
+  1954     026E  0084               	movwf	4
+  1955     026F  1783               	bsf	3,7
+  1956     0270  1C76               	btfss	??_debounce_update_1ms+1,0
+  1957     0271  1383               	bcf	3,7
+  1958     0272  0800               	movf	0,w
+  1959     0273  00F7               	movwf	??_debounce_update_1ms+2
+  1960     0274  0A84               	incf	4,f
+  1961     0275  0800               	movf	0,w
+  1962     0276  00F8               	movwf	??_debounce_update_1ms+3
+  1963     0277  3000               	movlw	0
+  1964     0278  0278               	subwf	??_debounce_update_1ms+3,w
+  1965     0279  3014               	movlw	20
+  1966     027A  1903               	skipnz
+  1967     027B  0277               	subwf	??_debounce_update_1ms+2,w
+  1968     027C  1803               	skipnc
+  1969     027D  2A7F               	goto	u561
+  1970     027E  2A80               	goto	u560
+  1971     027F                     u561:
+  1972     027F  2AC3               	goto	l65
+  1973     0280                     u560:
+  1974     0280                     l922:
+  1975                           
+  1976                           ;Dima-Electric-V1.c: 93:         db->cnt++;
+  1977     0280  0872               	movf	debounce_update_1ms@db,w
+  1978     0281  3E02               	addlw	2
+  1979     0282  00F5               	movwf	??_debounce_update_1ms
+  1980     0283  0873               	movf	debounce_update_1ms@db+1,w
+  1981     0284  1803               	skipnc
+  1982     0285  3E01               	addlw	1
+  1983     0286  3E00               	addlw	0
+  1984     0287  00F6               	movwf	??_debounce_update_1ms+1
+  1985     0288  0875               	movf	??_debounce_update_1ms,w
+  1986     0289  0084               	movwf	4
+  1987     028A  1783               	bsf	3,7
+  1988     028B  1C76               	btfss	??_debounce_update_1ms+1,0
+  1989     028C  1383               	bcf	3,7
+  1990     028D  3001               	movlw	1
+  1991     028E  0780               	addwf	0,f
+  1992     028F  0A84               	incf	4,f
+  1993     0290  1803               	skipnc
+  1994     0291  0A80               	incf	0,f
+  1995                           
+  1996                           ;Dima-Electric-V1.c: 94:         if (db->cnt >= 20u) {
+  1997     0292  0872               	movf	debounce_update_1ms@db,w
+  1998     0293  3E02               	addlw	2
+  1999     0294  00F5               	movwf	??_debounce_update_1ms
+  2000     0295  0873               	movf	debounce_update_1ms@db+1,w
+  2001     0296  1803               	skipnc
+  2002     0297  3E01               	addlw	1
+  2003     0298  3E00               	addlw	0
+  2004     0299  00F6               	movwf	??_debounce_update_1ms+1
+  2005     029A  0875               	movf	??_debounce_update_1ms,w
+  2006     029B  0084               	movwf	4
+  2007     029C  1783               	bsf	3,7
+  2008     029D  1C76               	btfss	??_debounce_update_1ms+1,0
+  2009     029E  1383               	bcf	3,7
+  2010     029F  0800               	movf	0,w
+  2011     02A0  00F7               	movwf	??_debounce_update_1ms+2
+  2012     02A1  0A84               	incf	4,f
+  2013     02A2  0800               	movf	0,w
+  2014     02A3  00F8               	movwf	??_debounce_update_1ms+3
+  2015     02A4  3000               	movlw	0
+  2016     02A5  0278               	subwf	??_debounce_update_1ms+3,w
+  2017     02A6  3014               	movlw	20
+  2018     02A7  1903               	skipnz
+  2019     02A8  0277               	subwf	??_debounce_update_1ms+2,w
+  2020     02A9  1C03               	skipc
+  2021     02AA  2AAC               	goto	u571
+  2022     02AB  2AAD               	goto	u570
+  2023     02AC                     u571:
+  2024     02AC  2AC3               	goto	l65
+  2025     02AD                     u570:
+  2026     02AD                     l924:
+  2027                           
+  2028                           ;Dima-Electric-V1.c: 95:             db->stable = db->last;
+  2029     02AD  0872               	movf	debounce_update_1ms@db,w
+  2030     02AE  3E01               	addlw	1
+  2031     02AF  00F5               	movwf	??_debounce_update_1ms
+  2032     02B0  0873               	movf	debounce_update_1ms@db+1,w
+  2033     02B1  1803               	skipnc
+  2034     02B2  3E01               	addlw	1
+  2035     02B3  3E00               	addlw	0
+  2036     02B4  00F6               	movwf	??_debounce_update_1ms+1
+  2037     02B5  0875               	movf	??_debounce_update_1ms,w
+  2038     02B6  0084               	movwf	4
+  2039     02B7  1783               	bsf	3,7
+  2040     02B8  1C76               	btfss	??_debounce_update_1ms+1,0
+  2041     02B9  1383               	bcf	3,7
+  2042     02BA  0800               	movf	0,w
+  2043     02BB  00FF               	movwf	btemp+1
+  2044     02BC  0872               	movf	debounce_update_1ms@db,w
+  2045     02BD  0084               	movwf	4
+  2046     02BE  1783               	bsf	3,7
+  2047     02BF  1C73               	btfss	debounce_update_1ms@db+1,0
+  2048     02C0  1383               	bcf	3,7
+  2049     02C1  087F               	movf	btemp+1,w
+  2050     02C2  0080               	movwf	0
+  2051     02C3                     l65:
+  2052     02C3  0008               	return
+  2053     02C4                     __end_of_debounce_update_1ms:
+  2054                           
+  2055                           	psect	text10
+  2056     02E8                     __ptext10:	
+  2057 ;; *************** function _isr *****************
+  2058 ;; Defined at:
+  2059 ;;		line 124 in file "Dima-Electric-V1.c"
+  2060 ;; Parameters:    Size  Location     Type
+  2061 ;;		None
+  2062 ;; Auto vars:     Size  Location     Type
+  2063 ;;		None
+  2064 ;; Return value:  Size  Location     Type
+  2065 ;;                  1    wreg      void 
+  2066 ;; Registers used:
+  2067 ;;		wreg
+  2068 ;; Tracked objects:
+  2069 ;;		On entry : 0/0
+  2070 ;;		On exit  : 0/0
+  2071 ;;		Unchanged: 0/0
+  2072 ;; Data sizes:     COMMON   BANK0   BANK1
+  2073 ;;      Params:         0       0       0
+  2074 ;;      Locals:         0       0       0
+  2075 ;;      Temps:          2       0       0
+  2076 ;;      Totals:         2       0       0
+  2077 ;;Total ram usage:        2 bytes
+  2078 ;; Hardware stack levels used: 1
+  2079 ;; This function calls:
+  2080 ;;		Nothing
+  2081 ;; This function is called by:
+  2082 ;;		Interrupt level 1
+  2083 ;; This function uses a non-reentrant model
+  2084 ;;
+  2085                           
+  2086     02E8                     _isr:	
+  2087                           ;psect for function _isr
+  2088                           
+  2089     02E8                     i1l988:
+  2090                           
+  2091                           ;Dima-Electric-V1.c: 126:     if (PIR1bits.TMR1IF) {
+  2092     02E8  1283               	bcf	3,5	;RP0=0, select bank0
+  2093     02E9  1C0C               	btfss	12,0	;volatile
+  2094     02EA  2AEC               	goto	u61_21
+  2095     02EB  2AED               	goto	u61_20
+  2096     02EC                     u61_21:
+  2097     02EC  2B00               	goto	i1l74
+  2098     02ED                     u61_20:
+  2099     02ED                     i1l990:
+  2100                           
+  2101                           ;Dima-Electric-V1.c: 127:         TMR1H = (uint8_t)((uint16_t)(65536u - 250u) >> 8);
+  2102     02ED  30FF               	movlw	255
+  2103     02EE  008F               	movwf	15	;volatile
+  2104                           
+  2105                           ;Dima-Electric-V1.c: 128:         TMR1L = (uint8_t)((uint16_t)(65536u - 250u) & 0xFF);
+  2106     02EF  3006               	movlw	6
+  2107     02F0  008E               	movwf	14	;volatile
+  2108                           
+  2109                           ;Dima-Electric-V1.c: 129:         PIR1bits.TMR1IF = 0;
+  2110     02F1  100C               	bcf	12,0	;volatile
+  2111     02F2                     i1l992:
+  2112                           
+  2113                           ;Dima-Electric-V1.c: 130:         g_ms++;
+  2114     02F2  3001               	movlw	1
+  2115     02F3  07B1               	addwf	_g_ms,f	;volatile
+  2116     02F4  3000               	movlw	0
+  2117     02F5  1803               	skipnc
+  2118     02F6  3001               	movlw	1
+  2119     02F7  07B2               	addwf	_g_ms+1,f	;volatile
+  2120     02F8  3000               	movlw	0
+  2121     02F9  1803               	skipnc
+  2122     02FA  3001               	movlw	1
+  2123     02FB  07B3               	addwf	_g_ms+2,f	;volatile
+  2124     02FC  3000               	movlw	0
+  2125     02FD  1803               	skipnc
+  2126     02FE  3001               	movlw	1
+  2127     02FF  07B4               	addwf	_g_ms+3,f	;volatile
+  2128     0300                     i1l74:
+  2129     0300  0871               	movf	??_isr+1,w
+  2130     0301  008A               	movwf	10
+  2131     0302  0E70               	swapf	??_isr,w
+  2132     0303  0083               	movwf	3
+  2133     0304  0EFE               	swapf	btemp,f
+  2134     0305  0E7E               	swapf	btemp,w
+  2135     0306  0009               	retfie
+  2136     0307                     __end_of_isr:
+  2137     0000                     ___latbits      equ	0
+  2138     007E                     btemp           set	126	;btemp
+  2139     007E                     wtemp0          set	126
+  2140                           
+  2141                           	psect	intentry
+  2142     0004                     __pintentry:	
+  2143                           ;incstack = 0
+  2144                           ; Regs used in _isr: [wreg]
+  2145                           
+  2146     0004                     interrupt_function:
+  2147     007E                     saved_w         set	btemp
+  2148     0004  00FE               	movwf	btemp
+  2149     0005  0E03               	swapf	3,w
+  2150     0006  00F0               	movwf	??_isr
+  2151     0007  080A               	movf	10,w
+  2152     0008  00F1               	movwf	??_isr+1
+  2153     0009  2AE8               	ljmp	_isr
+  2154                           
+  2155                           	psect	config
+  2156                           
+  2157                           ;Config register CONFIG @ 0x2007
+  2158                           ;	Oscillator Selection bits
+  2159                           ;	FOSC = INTOSCIO, INTOSCIO oscillator: I/O function on RA4/OSC2/CLKOUT pin, I/O functio
+      +                          n on RA5/OSC1/CLKIN
+  2160                           ;	Watchdog Timer Enable bit
+  2161                           ;	WDTE = ON, WDT enabled
+  2162                           ;	Power-up Timer Enable bit
+  2163                           ;	PWRTE = ON, PWRT enabled
+  2164                           ;	MCLR Pin Function Select bit
+  2165                           ;	MCLRE = OFF, MCLR pin function is digital input, MCLR internally tied to VDD
+  2166                           ;	Code Protection bit
+  2167                           ;	CP = OFF, Program memory code protection is disabled
+  2168                           ;	Data Code Protection bit
+  2169                           ;	CPD = OFF, Data memory code protection is disabled
+  2170                           ;	Brown Out Detect
+  2171                           ;	BOREN = ON, BOR enabled
+  2172                           ;	Internal External Switchover bit
+  2173                           ;	IESO = OFF, Internal External Switchover mode is disabled
+  2174                           ;	Fail-Safe Clock Monitor Enabled bit
+  2175                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
+  2176     2007                     	org	8199
+  2177     2007  33CC               	dw	13260
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         34
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     11      12
+    BANK0            80     27      60
+    BANK1            32      0       0
+
+Pointer List with Targets:
+
+    debounce_update_1ms@db	PTR struct . size(2) Largest target is 4
+		 -> db_handle1(BANK0[4]), db_handle2(BANK0[4]), db_lever(BANK0[4]), 
+
+
+Critical Paths under _main in COMMON
+
+    _main->_millis
+
+Critical Paths under _isr in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_time_reached
+
+Critical Paths under _isr in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _isr in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                24    24      0    1021
+                                              4 BANK0     23    23      0
+                _debounce_update_1ms
+                      _io_clock_init
+                             _millis
+                       _push_outputs
+                      _set_brush_pin
+                        _set_led_pin
+                        _set_vac_pin
+                       _time_reached
+                          _tmr1_init
+ ---------------------------------------------------------------------------------
+ (1) _tmr1_init                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _time_reached                                        12     4      8      50
+                                              2 COMMON     8     0      8
+                                              0 BANK0      4     4      0
+ ---------------------------------------------------------------------------------
+ (1) _set_vac_pin                                          1     1      0      29
+                                              2 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _set_led_pin                                          1     1      0      29
+                                              2 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _set_brush_pin                                        1     1      0      29
+                                              2 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _millis                                               9     5      4      46
+                                              2 COMMON     9     5      4
+ ---------------------------------------------------------------------------------
+ (1) _io_clock_init                                        0     0      0       0
+                       _push_outputs
+ ---------------------------------------------------------------------------------
+ (1) _push_outputs                                         0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _debounce_update_1ms                                  7     4      3     226
+                                              2 COMMON     7     4      3
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (3) _isr                                                  2     2      0       0
+                                              0 COMMON     2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _debounce_update_1ms
+   _io_clock_init
+     _push_outputs
+   _millis
+   _push_outputs
+   _set_brush_pin
+   _set_led_pin
+   _set_vac_pin
+   _time_reached
+   _tmr1_init
+
+ _isr (ROOT)
+
+Address spaces:
+Name               Size   Autos  Total    Usage
+BITCOMMON           14      0       0      0.0%
+BITBANK0            80      0       0      0.0%
+BITBANK1            32      0       0      0.0%
+COMMON              14     11      12     85.7%
+BANK0               80     27      60     75.0%
+BANK1               32      0       0      0.0%
+STACK                0      0       0      0.0%
+DATA                 0      0      72      0.0%
+
+
+Microchip Technology PIC Macro Assembler V3.00 build 20241204225717 
+Symbol Table                                                                                   Sat Nov 15 13:54:35 2025
+
+                         l50 0374                           l42 0352                           l37 0368  
+                         l47 035D                           l80 02E7                           l65 02C3  
+                         l83 0336                           l68 0347                           l77 0322  
+                         fsr 0004                          l101 0144                          l900 0364  
+                        l902 0366                          l910 0354                          l920 0265  
+                        l912 0359                          l904 0349                          l922 0280  
+                        l914 035B                          l906 034E                          l930 033A  
+                        l924 02AD                          l916 0232                          l908 0350  
+                        l940 0343                          l932 033C                          l918 0245  
+                        l950 030C                          l942 0344                          l934 033E  
+                        l926 0337                          l952 0315                          l944 0345  
+                        l936 0340                          l928 0339                          l970 032C  
+                        l962 0323                          l954 031A                          l946 0307  
+                        l938 0341                          l980 0331                          l972 032D  
+                        l964 0326                          l948 030B                          l982 0332  
+                        l974 032E                          l966 0327                          l958 02C4  
+                        l896 0371                          l984 0333                          l976 032F  
+                        l968 032A                          l986 0335                          l978 0330  
+                        l898 035F                          l994 0013                          l996 0015  
+                        l998 0017                          u520 0364                          u600 02E7  
+                        u521 0363                          u530 034E                          u531 034D  
+                        u540 0359                          u700 0080                          u620 004D  
+                        u541 0358                          u701 007E                          u621 004C  
+                        u550 0245                          u710 0081                          u551 0244  
+                        u560 0280                          u800 00D1                          u720 00A6  
+                        u640 0062                          u561 027F                          u801 00D0  
+                        u721 00A5                          u641 0060                          u625 0049  
+                        u570 02AD                          u810 00D6                          u730 00AB  
+                        u650 0063                          u571 02AC                          u811 00D5  
+                        u731 00AA                          u635 0058                          u900 014A  
+                        u820 00DC                          u740 00B3                          u581 02D4  
+                        u901 0149                          u821 00DB                          u741 00B1  
+                        u590 02E6                          u582 02D5                          u910 0153  
+                        u830 00E5                          u750 00B4                          u670 0071  
+                        u591 02E4                          u583 02DA                          u911 0152  
+                        u831 00E4                          u671 006F                          u584 02DB  
+                        u920 0158                          u840 00ED                          u760 00BB  
+                        u680 0072                          u585 02E0                          u921 0157  
+                        u841 00EC                          u761 00BA                          u665 0067  
+                        u586 02E1                          u930 0169                          u850 00F2  
+                        u770 00C0                          u931 016A                          u851 00F1  
+                        u771 00BF                          u940 018D                          u932 016F  
+                        u860 0103                          u780 00C8                          u941 018E  
+                        u933 0170                          u861 0104                          u781 00C6  
+                        u950 01A5                          u942 0193                          u870 011B  
+                        u862 0109                          u790 00C9                          u951 01A4  
+                        u943 0194                          u871 011A                          u863 010A  
+                        u695 0076                          u960 01AA                          u880 013D  
+                        u961 01A9                          u881 013C                          u970 01CC  
+                        u890 0143                          u971 01CB                          u891 0142  
+                        u980 01D6                          u981 01D5                          u990 01F8  
+                        u991 01F7                          _WPU 0095                          _app 0020  
+                        _isr 02E8                          fsr0 0004                          indf 0000  
+                       l1000 0018                         l1010 0031                         l1002 0019  
+                       l1100 0158                         l1020 0073                         l1012 003B  
+                       l1004 001A                         l1110 01AA                         l1102 015A  
+                       l1030 009C                         l1022 0082                         l1014 004D  
+                       l1006 001B                         l1120 0201                         l1112 01CC  
+                       l1104 017C                         l1040 00AB                         l1032 009E  
+                       l1024 0089                         l1016 0055                         l1008 0027  
+                       l1130 022E                         l1122 0224                         l1106 01A0  
+                       l1114 01D0                         l1050 00C0                         l1042 00AD  
+                       l1034 00A0                         l1026 0091                         l1018 0064  
+                       l1124 0225                         l1116 01D6                         l1108 01A5  
+                       l1060 00D7                         l1052 00C2                         l1044 00B5  
+                       l1036 00A1                         l1028 0099                         l1126 0228  
+                       l1118 01F8                         l1070 00E5                         l1062 00D7  
+                       l1054 00CA                         l1046 00B6                         l1038 00A6  
+                       l1128 022B                         l1080 0116                         l1072 00E8  
+                       l1064 00DC                         l1056 00D1                         l1048 00BB  
+                       l1082 011B                         l1074 00ED                         l1090 0144  
+                       l1066 00DE                         l1058 00D6                         l1092 014A  
+                       l1084 013D                         l1076 00F2                         l1068 00E0  
+                       l1094 014C                         l1078 00F4                         l1096 014E  
+                       l1098 0153                         ?_isr 0070                         u1000 01FF  
+                       u1001 01FD                         u1010 0200          _debounce_update_1ms 0232  
+                       u1020 0210                         u1021 0211                         u1022 0216  
+                       u1023 0217                         _GPIO 0005                         i1l74 0300  
+                main@raw_lev 004F                         _g_ms 0031                         _main 0013  
+                       btemp 007E                 _push_outputs 0371                         start 000A  
+       ?_debounce_update_1ms 0072                        ??_isr 0070                 main@both_low 0050  
+              _io_clock_init 0323                        ?_main 0070                        _ANSEL 009F  
+                      _T1CON 0010                        i1l990 02ED                        i1l992 02F2  
+                      i1l988 02E8                        _TMR1H 000F                        _TMR1L 000E  
+                      u61_20 02ED                        u61_21 02EC                        pclath 000A  
+                      status 0003                        wtemp0 007E              __initialization 000B  
+               __end_of_main 0232        ??_debounce_update_1ms 0075               ?_io_clock_init 0070  
+                     ??_main 0045                main@both_high 0055                       _CMCON0 0019  
+              main@last_tick 0049                       _TRISIO 0085                 ?_set_led_pin 0070  
+               ?_set_vac_pin 0070                       _millis 0307                       main@h1 0056  
+                     main@h2 0057                       saved_w 007E      __end_of__initialization 0011  
+      __end_of_set_brush_pin 0369               __pcstackCOMMON 0070              ??_io_clock_init 0072  
+                 _db_handle1 003D                   _db_handle2 0039               _OPTION_REGbits 0081  
+                 __pbssBANK0 0020                   __pmaintext 0013                   __pintentry 0004  
+                    ?_millis 0072                      __ptext1 0337                      __ptext2 02C4  
+                    __ptext3 0348                      __ptext4 0353                      __ptext5 035E  
+                    __ptext6 0307                      __ptext7 0323                      __ptext8 0371  
+                    __ptext9 0232                    _T1CONbits 0010                      main@lev 0054  
+                    clrloop0 036A                      main@now 0058         end_of_initialization 0011  
+              ?_time_reached 0072            __end_of_tmr1_init 0348                      millis@t 0076  
+__end_of_debounce_update_1ms 02C4        debounce_update_1ms@db 0072                   _out_shadow 007B  
+             ??_time_reached 0041                   main@raw_h1 004D                   main@raw_h2 004E  
+             __end_of_millis 0323          start_initialization 000B                  __end_of_isr 0307  
+       time_reached@deadline 0076                ?_push_outputs 0070                     ??_millis 0076  
+      __end_of_io_clock_init 0337                  __pbssCOMMON 007B                    ___latbits 0000  
+              __pcstackBANK0 0041               ??_push_outputs 0072         __end_of_time_reached 02E8  
+            time_reached@now 0072                set_led_pin@on 0072            interrupt_function 0004  
+                  clear_ram0 0369                     _PIE1bits 008C                    _tmr1_init 0337  
+              ??_set_led_pin 0072                     _PIR1bits 000C                _set_brush_pin 035E  
+              ??_set_vac_pin 0072                set_vac_pin@on 0072                   ?_tmr1_init 0070  
+             ?_set_brush_pin 0070          __end_of_set_led_pin 035E                    millis@gie 007A  
+        __end_of_set_vac_pin 0353         __end_of_push_outputs 0375                     _db_lever 0035  
+                   _main$353 0051                     _main$355 0052                     _main$357 0053  
+                   __ptext10 02E8                   _INTCONbits 000B                     intlevel1 0000  
+               _time_reached 02C4              ??_set_brush_pin 0072                  ??_tmr1_init 0072  
+                 _OSCCONbits 008F                  _set_led_pin 0353                  _set_vac_pin 0348  
+            set_brush_pin@on 0072       debounce_update_1ms@raw 0074                   _TRISIObits 0085  
