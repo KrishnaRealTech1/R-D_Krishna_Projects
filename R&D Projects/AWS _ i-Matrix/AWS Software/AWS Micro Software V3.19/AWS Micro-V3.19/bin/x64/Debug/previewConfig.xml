@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<appSettings>
+		<add key="rfidBaudRate" value="9600"/>
+		<add key="wsBaudRate" value="9600"/>
+		<add key="rfidCOMport" value="COM1"/>
+		<add key="wsCOMport" value="COM2"/>
+		<add key="cam1IPAddr" value="192.168.1.221"/>
+		<add key="cam2IPAddr" value="192.168.1.222"/>
+		<add key="cam3IPAddr" value="192.168.1.223"/>
+		<add key="cam4IPAddr" value="192.168.1.224"/>
+	</appSettings>
+</configuration>

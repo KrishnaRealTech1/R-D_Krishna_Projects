@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<buttonSettings>
+		<add key="button1" value="Vegetable Waste"/>
+		<add key="button2" value="Mixed Waste"/>
+		<add key="button3" value="Food Waste"/>
+		<add key="button4" value="Plastic Waste"/>
+		<add key="button5" value="Napkin Waste"/>
+		<add key="button6" value="Cloth Waste"/>
+		<add key="button7" value="Rubber Waste"/>
+		<add key="button8" value="Glass Waste"/>
+		<add key="button9" value="E-Waste"/>
+		<add key="button10" value="Fruits Waste"/>
+		<add key="button11" value="Paper Waste"/>
+		<add key="button12" value="Leaf Waste"/>
+		<add key="button13" value="Lather Waste"/>
+		<add key="button14" value="Wood Waste"/>
+		<add key="button15" value="Bottle Waste"/>
+		<add key="button16" value="Iron Waste"/>
+		<add key="button17" value="Metal Waste"/>
+		<add key="button18" value="Wire Waste"/>
+		<add key="button19" value="Agriculture Waste"/>
+		<add key="button20" value="Chemical Waste"/>
+		<add key="button21" value="BACK"/>
+		<add key="button22" value="LASTCLEAR"/>
+		<add key="button23" value="ALLCLEAR"/>
+		<add key="button24" value="SUBMIT"/>
+		<add key="button25" value="NONAME"/>
+	</buttonSettings>
+</configuration>

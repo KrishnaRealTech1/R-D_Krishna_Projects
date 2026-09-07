@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<appSettings>
+		<add key="rfidInBaudRate" value="5"/>
+		<add key="wsBaudRate" value="9600"/>
+		<add key="btnBaudRate" value="9600"/>
+		<add key="rfidInCOMport" value="COM3"/>
+		<add key="wsCOMport" value="COM4"/>
+		<add key="btnCOMport" value="COM5"/>
+		<add key="FtpUrL" value="ftp://dev.igps.io"/>
+		<add key="FtpPath" value="/files/rts_testing_micro/"/>
+		<add key="dataUrl" value="https://gov.igps.io/aws_mini/api/fetchdata.php"/>
+		<add key="vehDataUrl" value="http://dev.igps.io/aws_madurai/api/rf_id_check.php"/>
+		<add key="imgPrefix" value="rts_testing_micro"/>
+		<add key="locationName" value="AWSMICRO_TEST"/>
+		<add key="myIPAddr" value="192.168.22.101"/>
+		<add key="myServerPort" value="6000"/>
+		<add key="bridgeWaitTime" value="10"/>
+		<add key="beepTimeAfterUnload" value="1"/>
+		<add key="mininumLoadingWeightTimeout" value="25"/>
+		<add key="minimumSettlingWeight" value="25"/>
+		<add key="minimumLoadingWeight" value="0"/>
+		<add key="cameraCount" value="4"/>
+		<add key="snapshotPath" value="C:\Users\RTS-MiniPC-11\Documents\Realtech\SmartWeighBridge\Snapshots"/>
+		<add key="snapsPath" value="C:\Users\RTS-MiniPC-11\Documents\Realtech\SmartWeighBridge\snaps"/>
+		<add key="backlogPath" value="C:\Users\RTS-MiniPC-11\Documents\Realtech\SmartWeighBridge\backlogs"/>
+	</appSettings>
+</configuration>
