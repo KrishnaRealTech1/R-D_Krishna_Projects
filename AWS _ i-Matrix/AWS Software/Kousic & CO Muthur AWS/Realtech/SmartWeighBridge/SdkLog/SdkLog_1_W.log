@@ -1,0 +1,79 @@
+[2026-01-14 10:21:30.932][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2026-01-14 10:21:30.932][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2026-01-14 10:21:30.932][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2026-01-14 10:21:30.933][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2026-01-14 10:21:30.933][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2026-01-14 10:21:30.933][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2026-01-14 10:21:30.933][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2026-01-14 10:21:30.933][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2026-01-14 10:21:30.933][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2026-01-14 10:21:30.933][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2026-01-14 10:21:30.933][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2026-01-14 10:21:30.933][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2026-01-14 10:21:31.760][INF] Login dev 192.168.22.221:8000.
+[2026-01-14 10:21:31.760][INF] dwTotalNum[2048]
+[2026-01-14 10:21:31.785][INF] Private connect 192.168.22.221:8000 sock=2252 this=0xa7245f34 cmd=0x10000 port=64162
+[2026-01-14 10:21:31.785][INF] LogonDev1 in[192.168.22.221:8000]
+[2026-01-14 10:21:31.788][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[C:/Users/RTS-MiniPC-119/Downloads/AWS Kousic & Co/bin/libcrypto-1_1-x64.dll], hHandleRet[-1400111104]
+[2026-01-14 10:21:31.788][DBG] Load [libcrypto-1_1-x64.dll] SUCC, Real Path[C:\Users\RTS-MiniPC-119\Downloads\AWS Kousic & Co\bin\libcrypto-1_1-x64.dll]
+[2026-01-14 10:21:31.789][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[C:/Users/RTS-MiniPC-119/Downloads/AWS Kousic & Co/bin/libssl-1_1-x64.dll], hHandleRet[-507707392]
+[2026-01-14 10:21:31.789][DBG] Load [libssl-1_1-x64.dll] SUCC, Real Path[C:\Users\RTS-MiniPC-119\Downloads\AWS Kousic & Co\bin\libssl-1_1-x64.dll]
+[2026-01-14 10:21:31.789][INF] SSLTRANSAPI::IsAllAPILoaded, SSL_library_init Unload
+[2026-01-14 10:21:31.789][INF] OpenSSL, Not All Function Loaded!
+[2026-01-14 10:21:31.789][INF] SSLTRANSAPI::PrintVersion, OpenSSL version info [OpenSSL 1.1.1u  30 May 2023]
+[2026-01-14 10:21:31.789][INF] CSSLTrans::SSLCtxInit, dwSSLVersion[6], m_fnTLSServerMethod
+[2026-01-14 10:21:31.792][ERR] CSSLTrans::SSLTrans_CTX_Load_CA, invalid path[C:/Users/RTS-MiniPC-119/Downloads/AWS Kousic & Co/bin/cert/\]
+[2026-01-14 10:21:32.595][INF] Login dev 192.168.22.222:8000.
+[2026-01-14 10:21:32.611][INF] Private connect 192.168.22.222:8000 sock=2328 this=0xa7245f34 cmd=0x10000 port=64163
+[2026-01-14 10:21:32.611][INF] LogonDev1 in[192.168.22.222:8000]
+[2026-01-14 10:21:33.171][INF] Login dev 192.168.22.223:8000.
+[2026-01-14 10:21:33.186][INF] Private connect 192.168.22.223:8000 sock=2364 this=0xa7245f34 cmd=0x10000 port=64164
+[2026-01-14 10:21:33.186][INF] LogonDev1 in[192.168.22.223:8000]
+[2026-01-14 10:21:33.746][INF] Login dev 192.168.22.224:8000.
+[2026-01-14 10:21:33.761][INF] Private connect 192.168.22.224:8000 sock=2376 this=0xa7245f34 cmd=0x10000 port=64165
+[2026-01-14 10:21:33.761][INF] LogonDev1 in[192.168.22.224:8000]
+[2026-01-14 10:21:34.462][DBG] CComBase::Load, Load szDllPath[C:/Users/RTS-MiniPC-119/Downloads/AWS Kousic & Co/bin/HCNetSDKCom/HCPreview.dll] SUCC
+[2026-01-14 10:21:34.462][INF] AbilityAnalyze---Init-- start
+[2026-01-14 10:21:34.472][INF] The COM:Preview ver is 6.1.9.48, 2023_04_10.
+[2026-01-14 10:21:34.472][INF] CCoreGlobalCtrl::LoadDSo, enumDllType[0], cTempPath[C:/Users/RTS-MiniPC-119/Downloads/AWS Kousic & Co/bin/]
+[2026-01-14 10:21:34.478][DBG] CCoreGlobalCtrl::LoadDSo, HPR_LoadDSo, hHandleRet[-1453981696], enumDllType[0], Path[PlayCtrl.dll], syserror[0]
+[2026-01-14 10:21:35.578][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.4.0.38]
+[2026-01-14 10:21:35.579][INF] Private connect 192.168.22.221:8000 sock=2496 this=0xa7245f34 cmd=0x30000 port=64166
+[2026-01-14 10:21:35.584][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-14 10:21:35.584][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-14 10:21:35.585][ERR] GetOverlayFontPath Failed
+[2026-01-14 10:21:35.587][INF] ID-IP-CHAN[0-192.168.22.221-1] [CPreviewPlayer::OpenPlayer] open player[a8d4b6a4] success
+[2026-01-14 10:21:35.588][DBG] ID-IP-CHAN[0-192.168.22.221-1] RTP Format
+[2026-01-14 10:21:36.090][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.4.0.38]
+[2026-01-14 10:21:36.100][INF] Private connect 192.168.22.222:8000 sock=2764 this=0xa72466a0 cmd=0x30000 port=64167
+[2026-01-14 10:21:36.103][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-14 10:21:36.103][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-14 10:21:36.106][ERR] GetOverlayFontPath Failed
+[2026-01-14 10:21:36.107][INF] ID-IP-CHAN[1-192.168.22.222-1] [CPreviewPlayer::OpenPlayer] open player[a8d4b6f8] success
+[2026-01-14 10:21:36.107][DBG] ID-IP-CHAN[1-192.168.22.222-1] RTP Format
+[2026-01-14 10:21:36.608][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.4.0.38]
+[2026-01-14 10:21:36.619][INF] Private connect 192.168.22.223:8000 sock=2384 this=0xa7246e0c cmd=0x30000 port=64168
+[2026-01-14 10:21:36.622][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-14 10:21:36.622][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-14 10:21:36.623][ERR] GetOverlayFontPath Failed
+[2026-01-14 10:21:36.625][INF] ID-IP-CHAN[2-192.168.22.223-1] [CPreviewPlayer::OpenPlayer] open player[a8d4b74c] success
+[2026-01-14 10:21:36.625][DBG] ID-IP-CHAN[2-192.168.22.223-1] RTP Format
+[2026-01-14 10:21:37.127][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.4.0.38]
+[2026-01-14 10:21:37.128][INF] Private connect 192.168.22.224:8000 sock=2784 this=0xa7247578 cmd=0x30000 port=64169
+[2026-01-14 10:21:37.132][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-14 10:21:37.132][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-14 10:21:37.133][ERR] GetOverlayFontPath Failed
+[2026-01-14 10:21:37.135][INF] ID-IP-CHAN[3-192.168.22.224-1] [CPreviewPlayer::OpenPlayer] open player[a8d4b7a0] success
+[2026-01-14 10:21:37.136][DBG] ID-IP-CHAN[3-192.168.22.224-1] RTP Format
+[2026-01-14 10:21:38.073][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2026-01-14 10:21:38.073][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2026-01-14 10:21:38.073][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2026-01-14 10:21:38.074][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2026-01-14 10:21:38.074][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2026-01-14 10:21:38.074][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2026-01-14 10:21:38.076][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2026-01-14 10:21:38.076][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2026-01-14 10:21:38.076][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2026-01-14 10:21:38.077][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2026-01-14 10:21:38.077][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2026-01-14 10:21:38.077][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.

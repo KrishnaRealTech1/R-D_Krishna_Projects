@@ -1,0 +1,388 @@
+[2026-01-01 06:16:26.427][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-01 06:16:26.429][ERR] Private connect 192.168.22.222:8000 sock=8264 this=0xeb950018 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-01 06:16:26.429][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-01 06:16:31.336][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:31.336][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:31.336][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:31.336][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:31.442][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-01 06:16:31.442][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-01 06:16:31.445][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-01 06:16:31.446][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-01 06:16:36.337][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:36.337][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:36.337][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:36.337][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:36.444][ERR] Private connect 192.168.22.221:8000 sock=6560 this=0xeb94e9d4 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-01 06:16:36.444][ERR] Private connect 192.168.22.224:8000 sock=8420 this=0xeb94f140 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-01 06:16:36.444][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-01 06:16:36.444][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-01 06:16:36.446][ERR] Private connect 192.168.22.223:8000 sock=8764 this=0xeb94f8ac cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-01 06:16:36.446][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-01 06:16:36.447][ERR] Private connect 192.168.22.222:8000 sock=7272 this=0xeb950018 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-01 06:16:36.447][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-01 06:16:41.338][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:41.338][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:41.338][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:41.338][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-01 06:16:41.459][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-01 06:16:41.459][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-01 06:16:41.461][INF] Private connect 192.168.22.224:8000 sock=7860 this=0xeb94e9d4 cmd=0x30000 port=63360
+[2026-01-01 06:16:41.462][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-01 06:16:41.462][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-01 06:16:41.464][INF] Private connect 192.168.22.221:8000 sock=7212 this=0xeb94f140 cmd=0x30000 port=63359
+[2026-01-01 06:16:41.470][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-01 06:16:41.472][INF] Private connect 192.168.22.222:8000 sock=8264 this=0xeb94f8ac cmd=0x30000 port=63361
+[2026-01-01 06:16:41.475][INF] Private connect 192.168.22.223:8000 sock=5648 this=0xeb950018 cmd=0x30000 port=63362
+[2026-01-01 06:16:41.477][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-01 06:16:41.478][INF] Private connect 192.168.22.224:8000 sock=7860 this=0xeb94e9d4 cmd=0x10000 port=63363
+[2026-01-01 06:16:41.478][INF] LogonDev1 in[192.168.22.224:8000]
+[2026-01-01 06:16:41.482][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-01 06:16:41.483][INF] Private connect 192.168.22.221:8000 sock=7212 this=0xeb94f140 cmd=0x10000 port=63364
+[2026-01-01 06:16:41.483][INF] LogonDev1 in[192.168.22.221:8000]
+[2026-01-01 06:16:41.484][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-01 06:16:41.486][INF] Private connect 192.168.22.223:8000 sock=5648 this=0xeb950018 cmd=0x10000 port=63365
+[2026-01-01 06:16:41.486][INF] LogonDev1 in[192.168.22.223:8000]
+[2026-01-01 06:16:41.496][INF] Private connect 192.168.22.222:8000 sock=8264 this=0xeb94f8ac cmd=0x10000 port=63366
+[2026-01-01 06:16:41.496][INF] LogonDev1 in[192.168.22.222:8000]
+[2026-01-01 06:16:41.549][INF] Private connect 192.168.22.221:8000 sock=7212 this=0xeb94f140 cmd=0x30000 port=63368
+[2026-01-01 06:16:41.556][INF] Private connect 192.168.22.224:8000 sock=7860 this=0xeb94e9d4 cmd=0x30000 port=63367
+[2026-01-01 06:16:41.559][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-01 06:16:41.559][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-01 06:16:41.559][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-01 06:16:41.559][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-01 06:16:41.559][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-01 06:16:41.567][INF] Private connect 192.168.22.223:8000 sock=5648 this=0xeb950018 cmd=0x30000 port=63369
+[2026-01-01 06:16:41.568][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-01 06:16:41.568][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-01 06:16:41.568][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-01 06:16:41.568][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-01 06:16:41.568][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-01 06:16:41.571][INF] Private connect 192.168.22.222:8000 sock=8264 this=0xeb94f8ac cmd=0x30000 port=63370
+[2026-01-01 06:16:41.578][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-01 06:16:41.578][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-01 06:16:41.578][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-01 06:16:41.578][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-01 06:16:41.578][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-01 06:16:41.578][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-01 06:16:41.578][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-01 06:16:41.579][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-01 06:16:41.579][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-01 06:16:41.579][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-01 06:17:32.180][INF] [0]RESUME EXCHANGE
+[2026-01-01 06:17:32.190][INF] [1]RESUME EXCHANGE
+[2026-01-01 06:17:32.192][INF] [2]RESUME EXCHANGE
+[2026-01-01 06:17:32.211][INF] [3]RESUME EXCHANGE
+[2026-01-02 04:49:39.154][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:39.154][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:39.154][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:39.154][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:44.154][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:44.154][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:44.154][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:44.154][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:49.155][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:49.155][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:49.155][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:49.155][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:49:53.332][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 04:49:53.332][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 04:49:53.332][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 04:49:53.332][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 04:49:53.332][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 04:49:53.332][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 04:49:53.347][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 04:49:53.347][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 04:49:54.155][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 04:49:54.155][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 04:49:54.155][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 04:49:54.155][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 04:49:54.155][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[0]
+[2026-01-02 04:49:54.155][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[2]
+[2026-01-02 04:49:54.155][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[1]
+[2026-01-02 04:49:54.155][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[3]
+[2026-01-02 04:49:54.156][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:49:54.157][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:49:54.157][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:49:54.158][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:49:59.156][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:49:59.156][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:49:59.156][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:49:59.156][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:49:59.158][ERR] Private connect 192.168.22.224:8000 sock=8036 this=0xeb94e9d4 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 04:49:59.158][ERR] Private connect 192.168.22.223:8000 sock=5648 this=0xeb94f140 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 04:49:59.158][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 04:49:59.158][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 04:49:59.159][ERR] Private connect 192.168.22.222:8000 sock=6504 this=0xeb94f8ac cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 04:49:59.159][ERR] Private connect 192.168.22.221:8000 sock=8032 this=0xeb950018 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 04:49:59.159][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 04:49:59.159][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 04:50:04.156][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:50:04.156][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:50:04.156][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:50:04.156][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:50:04.174][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:50:04.174][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:50:04.177][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:50:04.177][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:50:04.177][INF] Private connect 192.168.22.221:8000 sock=5788 this=0xeb94f140 cmd=0x30000 port=62994
+[2026-01-02 04:50:04.190][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 04:50:04.191][INF] Private connect 192.168.22.222:8000 sock=6504 this=0xeb950018 cmd=0x30000 port=62997
+[2026-01-02 04:50:04.191][INF] Private connect 192.168.22.224:8000 sock=6612 this=0xeb94f8ac cmd=0x30000 port=62996
+[2026-01-02 04:50:04.198][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 04:50:04.202][INF] Private connect 192.168.22.221:8000 sock=5788 this=0xeb94f140 cmd=0x10000 port=62998
+[2026-01-02 04:50:04.202][INF] LogonDev1 in[192.168.22.221:8000]
+[2026-01-02 04:50:04.210][INF] Private connect 192.168.22.224:8000 sock=6612 this=0xeb94f8ac cmd=0x10000 port=62999
+[2026-01-02 04:50:04.210][INF] LogonDev1 in[192.168.22.224:8000]
+[2026-01-02 04:50:04.299][INF] Private connect 192.168.22.221:8000 sock=5788 this=0xeb94f140 cmd=0x30000 port=63000
+[2026-01-02 04:50:04.315][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 04:50:04.315][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 04:50:04.315][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 04:50:04.315][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 04:50:04.315][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 04:50:04.316][INF] Private connect 192.168.22.224:8000 sock=6612 this=0xeb94f8ac cmd=0x30000 port=63001
+[2026-01-02 04:50:04.327][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 04:50:04.327][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 04:50:04.327][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 04:50:04.328][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 04:50:04.328][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 04:50:04.415][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 04:50:04.426][INF] Private connect 192.168.22.222:8000 sock=6504 this=0xeb950018 cmd=0x10000 port=63002
+[2026-01-02 04:50:04.426][INF] LogonDev1 in[192.168.22.222:8000]
+[2026-01-02 04:50:05.354][INF] Private connect 192.168.22.222:8000 sock=6504 this=0xeb950018 cmd=0x30000 port=63003
+[2026-01-02 04:50:05.674][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 04:50:05.674][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 04:50:05.674][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 04:50:05.674][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 04:50:05.674][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 04:50:05.738][INF] Private connect 192.168.22.223:8000 sock=8036 this=0xeb94e9d4 cmd=0x30000 port=62995
+[2026-01-02 04:50:05.744][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 04:50:05.756][INF] Private connect 192.168.22.223:8000 sock=8036 this=0xeb94e9d4 cmd=0x10000 port=63004
+[2026-01-02 04:50:05.756][INF] LogonDev1 in[192.168.22.223:8000]
+[2026-01-02 04:50:05.863][INF] Private connect 192.168.22.223:8000 sock=8036 this=0xeb94e9d4 cmd=0x30000 port=63005
+[2026-01-02 04:50:05.874][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 04:50:05.874][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 04:50:05.874][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 04:50:05.874][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 04:50:05.874][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 04:50:39.160][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:39.160][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:39.160][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:39.160][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:44.160][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:44.160][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:44.160][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:44.160][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:49.161][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:49.161][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:49.161][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:49.161][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 04:50:53.335][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 04:50:53.335][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 04:50:53.335][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 04:50:53.335][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 04:50:53.335][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 04:50:53.335][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 04:50:53.351][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 04:50:53.351][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 04:50:54.161][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 04:50:54.161][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 04:50:54.161][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 04:50:54.161][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 04:50:54.161][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[1]
+[2026-01-02 04:50:54.161][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[0]
+[2026-01-02 04:50:54.161][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[2]
+[2026-01-02 04:50:54.161][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[3]
+[2026-01-02 04:50:54.164][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:50:54.164][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:50:54.165][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:50:54.165][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:50:59.162][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:50:59.162][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:50:59.162][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:50:59.162][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:50:59.165][ERR] Private connect 192.168.22.221:8000 sock=9048 this=0xeb94f140 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 04:50:59.165][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 04:50:59.166][ERR] Private connect 192.168.22.223:8000 sock=8036 this=0xeb94e9d4 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 04:50:59.166][ERR] Private connect 192.168.22.222:8000 sock=6504 this=0xeb950018 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 04:50:59.166][ERR] Private connect 192.168.22.224:8000 sock=6612 this=0xeb94f8ac cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 04:50:59.166][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 04:50:59.166][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 04:50:59.166][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 04:51:04.162][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:51:04.162][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:51:04.162][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:51:04.162][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 04:51:04.182][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:51:04.183][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:51:04.183][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:51:04.183][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 04:51:04.196][INF] Private connect 192.168.22.224:8000 sock=9616 this=0xeb94f8ac cmd=0x30000 port=63015
+[2026-01-02 04:51:04.196][INF] Private connect 192.168.22.221:8000 sock=9516 this=0xeb94e9d4 cmd=0x30000 port=63014
+[2026-01-02 04:51:04.197][INF] Private connect 192.168.22.223:8000 sock=6612 this=0xeb950018 cmd=0x30000 port=63017
+[2026-01-02 04:51:04.204][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 04:51:04.204][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 04:51:04.205][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 04:51:04.206][INF] Private connect 192.168.22.224:8000 sock=9616 this=0xeb94f8ac cmd=0x10000 port=63019
+[2026-01-02 04:51:04.206][INF] LogonDev1 in[192.168.22.224:8000]
+[2026-01-02 04:51:04.216][INF] Private connect 192.168.22.221:8000 sock=9516 this=0xeb94e9d4 cmd=0x10000 port=63018
+[2026-01-02 04:51:04.216][INF] LogonDev1 in[192.168.22.221:8000]
+[2026-01-02 04:51:04.218][INF] Private connect 192.168.22.223:8000 sock=6612 this=0xeb950018 cmd=0x10000 port=63020
+[2026-01-02 04:51:04.218][INF] LogonDev1 in[192.168.22.223:8000]
+[2026-01-02 04:51:04.312][INF] Private connect 192.168.22.224:8000 sock=9616 this=0xeb94f8ac cmd=0x30000 port=63021
+[2026-01-02 04:51:04.324][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 04:51:04.324][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 04:51:04.324][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 04:51:04.324][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 04:51:04.324][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 04:51:04.329][INF] Private connect 192.168.22.221:8000 sock=9516 this=0xeb94e9d4 cmd=0x30000 port=63022
+[2026-01-02 04:51:04.333][INF] Private connect 192.168.22.223:8000 sock=6612 this=0xeb950018 cmd=0x30000 port=63023
+[2026-01-02 04:51:04.337][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 04:51:04.337][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 04:51:04.338][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 04:51:04.338][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 04:51:04.338][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 04:51:04.343][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 04:51:04.343][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 04:51:04.343][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 04:51:04.343][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 04:51:04.343][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 04:51:05.729][INF] Private connect 192.168.22.222:8000 sock=10104 this=0xeb94f140 cmd=0x30000 port=63016
+[2026-01-02 04:51:05.742][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 04:51:05.754][INF] Private connect 192.168.22.222:8000 sock=10104 this=0xeb94f140 cmd=0x10000 port=63024
+[2026-01-02 04:51:05.754][INF] LogonDev1 in[192.168.22.222:8000]
+[2026-01-02 04:51:05.867][INF] Private connect 192.168.22.222:8000 sock=10104 this=0xeb94f140 cmd=0x30000 port=63025
+[2026-01-02 04:51:05.878][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 04:51:05.878][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 04:51:05.878][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 04:51:05.878][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 04:51:05.878][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 06:10:14.653][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:14.653][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:14.653][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:14.653][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[2], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:19.653][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:19.653][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:19.653][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:19.653][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[3], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:24.654][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:24.654][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:24.654][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:24.654][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::DoExchange] recv timeout[4], m_bReConnecting[0], maxtimes[6]!
+[2026-01-02 06:10:27.958][ERR] Private connect 192.168.22.223:8000 sock=6236 this=0xeb95165c cmd=0x10200 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 06:10:27.958][ERR] Private connect 192.168.22.224:8000 sock=8104 this=0xeb951dc8 cmd=0x10200 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 06:10:27.958][ERR] Private connect 192.168.22.221:8000 sock=5524 this=0xeb950784 cmd=0x10200 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 06:10:27.958][ERR] Private connect 192.168.22.222:8000 sock=7588 this=0xeb950ef0 cmd=0x10200 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 06:10:27.958][DBG] [2]CUser::SendHeartWithExceptCB network error[7], times[1]
+[2026-01-02 06:10:27.958][DBG] [1]CUser::SendHeartWithExceptCB network error[7], times[1]
+[2026-01-02 06:10:27.958][ERR] [1]Exception changes 1
+[2026-01-02 06:10:27.958][ERR] [2]Exception changes 1
+[2026-01-02 06:10:27.958][DBG]  CUser::ProcessException[1]
+[2026-01-02 06:10:27.958][DBG]  CUser::ProcessException[2]
+[2026-01-02 06:10:27.958][DBG] [3]CUser::SendHeartWithExceptCB network error[7], times[1]
+[2026-01-02 06:10:27.958][ERR] [3]Exception changes 1
+[2026-01-02 06:10:27.958][DBG] [0]CUser::SendHeartWithExceptCB network error[7], times[1]
+[2026-01-02 06:10:27.958][DBG]  CUser::ProcessException[3]
+[2026-01-02 06:10:27.958][ERR] [0]Exception changes 1
+[2026-01-02 06:10:27.958][DBG]  CUser::ProcessException[0]
+[2026-01-02 06:10:28.826][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 06:10:28.826][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 06:10:28.841][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 06:10:28.841][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 06:10:28.841][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 06:10:28.841][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 06:10:28.841][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::GetStreamData] recv error[73], sysError[121]
+[2026-01-02 06:10:28.841][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::GetStreamData] recv status[73], length[0]
+[2026-01-02 06:10:29.654][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 06:10:29.654][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 06:10:29.654][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 06:10:29.654][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[0]
+[2026-01-02 06:10:29.654][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[1]
+[2026-01-02 06:10:29.654][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[2]
+[2026-01-02 06:10:29.654][DBG] CGetStreamBase::DoExchange, m_iRecvTimeOut[6] > m_iTimeOutLimit[6], call RelinkToDvr
+[2026-01-02 06:10:29.654][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkToDvr] Create Reconnect Thread, UserID[3]
+[2026-01-02 06:10:29.654][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 06:10:29.654][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 06:10:29.655][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 06:10:29.655][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 06:10:34.654][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 06:10:34.654][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 06:10:34.654][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 06:10:34.654][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 06:10:34.656][ERR] Private connect 192.168.22.221:8000 sock=9516 this=0xeb94e9d4 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 06:10:34.656][ERR] Private connect 192.168.22.224:8000 sock=9616 this=0xeb94f8ac cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 06:10:34.656][ERR] Private connect 192.168.22.222:8000 sock=10104 this=0xeb950018 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 06:10:34.656][ERR] Private connect 192.168.22.223:8000 sock=6612 this=0xeb94f140 cmd=0x30000 sys_err=10060, timeout= 5000 port=0
+[2026-01-02 06:10:34.656][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 06:10:34.656][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 06:10:34.656][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 06:10:34.656][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::LinkToDvr] CreateLink Error[7]
+[2026-01-02 06:10:39.655][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 06:10:39.655][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 06:10:39.655][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 06:10:39.655][DBG] CGetStreamBase::DoExchange, m_bReConnecting = TRUE
+[2026-01-02 06:10:39.668][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 06:10:39.668][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 06:10:39.668][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 06:10:39.668][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview start RelinkToDVR
+[2026-01-02 06:10:39.670][INF] Private connect 192.168.22.222:8000 sock=9872 this=0xeb94e9d4 cmd=0x30000 port=53298
+[2026-01-02 06:10:39.670][INF] Private connect 192.168.22.223:8000 sock=2172 this=0xeb94f140 cmd=0x30000 port=53299
+[2026-01-02 06:10:39.670][INF] Private connect 192.168.22.221:8000 sock=5908 this=0xeb94f8ac cmd=0x30000 port=53300
+[2026-01-02 06:10:39.680][ERR] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 06:10:39.681][INF] Private connect 192.168.22.224:8000 sock=7396 this=0xeb950018 cmd=0x30000 port=53301
+[2026-01-02 06:10:39.691][INF] Private connect 192.168.22.221:8000 sock=5908 this=0xeb94f8ac cmd=0x10000 port=53302
+[2026-01-02 06:10:39.691][INF] LogonDev1 in[192.168.22.221:8000]
+[2026-01-02 06:10:39.792][ERR] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 06:10:39.797][INF] Private connect 192.168.22.221:8000 sock=5908 this=0xeb94f8ac cmd=0x30000 port=53303
+[2026-01-02 06:10:39.804][INF] Private connect 192.168.22.224:8000 sock=7396 this=0xeb950018 cmd=0x10000 port=53304
+[2026-01-02 06:10:39.804][INF] LogonDev1 in[192.168.22.224:8000]
+[2026-01-02 06:10:39.805][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 06:10:39.805][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 06:10:39.805][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 06:10:39.805][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 06:10:39.805][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 06:10:39.865][ERR] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 06:10:39.877][INF] Private connect 192.168.22.222:8000 sock=9872 this=0xeb94e9d4 cmd=0x10000 port=53305
+[2026-01-02 06:10:39.877][INF] LogonDev1 in[192.168.22.222:8000]
+[2026-01-02 06:10:39.975][ERR] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::LinkToDvr] struOut.dwDevState[30] dwErrCode[0xffffffff] dwMErrDevSelfEx[0xffffffff] CommandThread callback exception
+[2026-01-02 06:10:39.986][INF] Private connect 192.168.22.223:8000 sock=2172 this=0xeb94f140 cmd=0x10000 port=53306
+[2026-01-02 06:10:39.986][INF] LogonDev1 in[192.168.22.223:8000]
+[2026-01-02 06:10:40.124][INF] Private connect 192.168.22.224:8000 sock=7396 this=0xeb950018 cmd=0x30000 port=53307
+[2026-01-02 06:10:40.136][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 06:10:40.136][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 06:10:40.136][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 06:10:40.136][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 06:10:40.136][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 06:10:40.189][INF] Private connect 192.168.22.222:8000 sock=9872 this=0xeb94e9d4 cmd=0x30000 port=53308
+[2026-01-02 06:10:40.464][INF] Private connect 192.168.22.223:8000 sock=2172 this=0xeb94f140 cmd=0x30000 port=53309
+[2026-01-02 06:10:40.654][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 06:10:40.654][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 06:10:40.654][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 06:10:40.654][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 06:10:40.654][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 06:10:41.052][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2026-01-02 06:10:41.052][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2026-01-02 06:10:41.052][DBG] CGetStreamBase::RegisterToHeartbeatProxy, m_bReConnecting = TRUE
+[2026-01-02 06:10:41.052][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] PREVIEW_RECONNECTSUCCESS trigger
+[2026-01-02 06:10:41.052][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetStreamBase::RelinkThread] ASYN preview HeartThread exit
+[2026-01-02 06:12:23.011][INF] [2]RESUME EXCHANGE
+[2026-01-02 06:12:23.018][INF] [0]RESUME EXCHANGE
+[2026-01-02 06:12:23.021][INF] [1]RESUME EXCHANGE
+[2026-01-02 06:12:23.024][INF] [3]RESUME EXCHANGE
+[2026-01-02 11:14:38.850][INF] COM_Logout[0][0]
+[2026-01-02 11:14:38.850][DBG] CUserMgr::UnRegisterHeartProxy[0]
+[2026-01-02 11:14:38.851][INF] Private connect 192.168.22.221:8000 sock=2444 this=0xeb94f8ac cmd=0x10100 port=61717
+[2026-01-02 11:14:38.868][INF] COM_Logout[1][0]
+[2026-01-02 11:14:38.868][DBG] CUserMgr::UnRegisterHeartProxy[1]
+[2026-01-02 11:14:38.869][INF] Private connect 192.168.22.222:8000 sock=2584 this=0xeb94e9d4 cmd=0x10100 port=61718
+[2026-01-02 11:14:38.883][INF] COM_Logout[2][0]
+[2026-01-02 11:14:38.884][DBG] CUserMgr::UnRegisterHeartProxy[2]
+[2026-01-02 11:14:38.884][INF] Private connect 192.168.22.223:8000 sock=2632 this=0xeb94e9d4 cmd=0x10100 port=61719
+[2026-01-02 11:14:38.924][INF] COM_Logout[3][0]
+[2026-01-02 11:14:38.935][DBG] CUserMgr::UnRegisterHeartProxy[3]
+[2026-01-02 11:14:38.947][INF] Private connect 192.168.22.224:8000 sock=2320 this=0xeb94e9d4 cmd=0x10100 port=61720
+[2026-01-02 11:14:43.488][INF] COM_Logout[0][0]
+[2026-01-02 11:14:43.488][INF] COM_Logout[1][0]
+[2026-01-02 11:14:43.488][INF] COM_Logout[2][0]
+[2026-01-02 11:14:43.488][INF] COM_Logout[3][0]
+[2026-01-02 11:14:43.488][INF] CTransUnitMgr::UnloadTransUnitLib

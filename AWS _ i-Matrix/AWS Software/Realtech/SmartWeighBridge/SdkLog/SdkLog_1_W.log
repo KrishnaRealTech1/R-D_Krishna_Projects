@@ -1,0 +1,119 @@
+[2024-09-17 06:43:06.765][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2024-09-17 06:43:06.765][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2024-09-17 06:43:06.765][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2024-09-17 06:43:06.765][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2024-09-17 06:43:06.765][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2024-09-17 06:43:06.765][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2024-09-17 06:43:06.765][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2024-09-17 06:43:06.765][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2024-09-17 06:43:06.765][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2024-09-17 06:43:06.765][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2024-09-17 06:43:06.765][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2024-09-17 06:43:06.765][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2024-09-17 06:43:08.046][INF] Login dev 192.168.22.221:8000.
+[2024-09-17 06:43:08.046][INF] dwTotalNum[2048]
+[2024-09-17 06:43:08.046][INF] Private connect 192.168.22.221:8000 sock=2140 this=0x1ffddf14 cmd=0x10000 port=49671
+[2024-09-17 06:43:08.046][INF] LogonDev1 in[192.168.22.221:8000]
+[2024-09-17 06:43:08.296][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[C:/Users/RTS-SKULL PC-3/Desktop/bin_v311/bin/libcrypto-1_1-x64.dll], hHandleRet[315228160]
+[2024-09-17 06:43:08.296][DBG] Load [libcrypto-1_1-x64.dll] SUCC, Real Path[C:\Users\RTS-SKULL PC-3\Desktop\bin_v311\bin\libcrypto-1_1-x64.dll]
+[2024-09-17 06:43:08.359][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[C:/Users/RTS-SKULL PC-3/Desktop/bin_v311/bin/libssl-1_1-x64.dll], hHandleRet[314310656]
+[2024-09-17 06:43:08.359][DBG] Load [libssl-1_1-x64.dll] SUCC, Real Path[C:\Users\RTS-SKULL PC-3\Desktop\bin_v311\bin\libssl-1_1-x64.dll]
+[2024-09-17 06:43:08.359][INF] SSLTRANSAPI::IsAllAPILoaded, SSL_library_init Unload
+[2024-09-17 06:43:08.359][INF] OpenSSL, Not All Function Loaded!
+[2024-09-17 06:43:08.359][INF] SSLTRANSAPI::PrintVersion, OpenSSL version info [OpenSSL 1.1.1u  30 May 2023]
+[2024-09-17 06:43:08.359][INF] CSSLTrans::SSLCtxInit, dwSSLVersion[6], m_fnTLSServerMethod
+[2024-09-17 06:43:08.375][ERR] CSSLTrans::SSLTrans_CTX_Load_CA, invalid path[C:/Users/RTS-SKULL PC-3/Desktop/bin_v311/bin/cert/\]
+[2024-09-17 06:43:09.671][INF] Login dev 192.168.22.222:8000.
+[2024-09-17 06:43:09.671][INF] Private connect 192.168.22.222:8000 sock=2272 this=0x1ffddf14 cmd=0x10000 port=49672
+[2024-09-17 06:43:09.671][INF] LogonDev1 in[192.168.22.222:8000]
+[2024-09-17 06:43:10.250][INF] Login dev 192.168.22.223:8000.
+[2024-09-17 06:43:10.250][INF] Private connect 192.168.22.223:8000 sock=2272 this=0x1ffddf14 cmd=0x10000 port=49673
+[2024-09-17 06:43:10.250][INF] LogonDev1 in[192.168.22.223:8000]
+[2024-09-17 06:43:10.828][INF] Login dev 192.168.22.224:8000.
+[2024-09-17 06:43:10.828][INF] Private connect 192.168.22.224:8000 sock=2256 this=0x1ffddf14 cmd=0x10000 port=49674
+[2024-09-17 06:43:10.828][INF] LogonDev1 in[192.168.22.224:8000]
+[2024-09-17 06:43:11.718][DBG] CComBase::Load, Load szDllPath[C:/Users/RTS-SKULL PC-3/Desktop/bin_v311/bin/HCNetSDKCom/HCPreview.dll] SUCC
+[2024-09-17 06:43:11.718][INF] AbilityAnalyze---Init-- start
+[2024-09-17 06:43:11.765][INF] The COM:Preview ver is 6.1.9.48, 2023_04_10.
+[2024-09-17 06:43:11.765][INF] CCoreGlobalCtrl::LoadDSo, enumDllType[0], cTempPath[C:/Users/RTS-SKULL PC-3/Desktop/bin_v311/bin/]
+[2024-09-17 06:43:11.968][DBG] CCoreGlobalCtrl::LoadDSo, HPR_LoadDSo, hHandleRet[583139328], enumDllType[0], Path[PlayCtrl.dll], syserror[0]
+[2024-09-17 06:43:14.112][DBG] ID-IP-CHAN[0-192.168.22.221-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.4.0.38]
+[2024-09-17 06:43:14.112][INF] Private connect 192.168.22.221:8000 sock=2556 this=0x1ffddf14 cmd=0x30000 port=49675
+[2024-09-17 06:43:14.112][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2024-09-17 06:43:14.112][INF] ID-IP-CHAN[0-192.168.22.221-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2024-09-17 06:43:14.128][ERR] GetOverlayFontPath Failed
+[2024-09-17 06:43:14.227][INF] ID-IP-CHAN[0-192.168.22.221-1] [CPreviewPlayer::OpenPlayer] open player[226371f4] success
+[2024-09-17 06:43:14.228][DBG] ID-IP-CHAN[0-192.168.22.221-1] RTP Format
+[2024-09-17 06:43:14.736][DBG] ID-IP-CHAN[1-192.168.22.222-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.4.0.38]
+[2024-09-17 06:43:14.736][INF] Private connect 192.168.22.222:8000 sock=2768 this=0x1ffde680 cmd=0x30000 port=49676
+[2024-09-17 06:43:14.747][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2024-09-17 06:43:14.747][INF] ID-IP-CHAN[1-192.168.22.222-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2024-09-17 06:43:14.748][ERR] GetOverlayFontPath Failed
+[2024-09-17 06:43:14.751][INF] ID-IP-CHAN[1-192.168.22.222-1] [CPreviewPlayer::OpenPlayer] open player[22637248] success
+[2024-09-17 06:43:14.751][DBG] ID-IP-CHAN[1-192.168.22.222-1] RTP Format
+[2024-09-17 06:43:15.253][DBG] ID-IP-CHAN[2-192.168.22.223-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.4.0.38]
+[2024-09-17 06:43:15.254][INF] Private connect 192.168.22.223:8000 sock=2888 this=0x1ffdedec cmd=0x30000 port=49677
+[2024-09-17 06:43:15.263][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2024-09-17 06:43:15.263][INF] ID-IP-CHAN[2-192.168.22.223-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2024-09-17 06:43:15.264][ERR] GetOverlayFontPath Failed
+[2024-09-17 06:43:15.267][INF] ID-IP-CHAN[2-192.168.22.223-1] [CPreviewPlayer::OpenPlayer] open player[2263729c] success
+[2024-09-17 06:43:15.267][DBG] ID-IP-CHAN[2-192.168.22.223-1] RTP Format
+[2024-09-17 06:43:15.774][DBG] ID-IP-CHAN[3-192.168.22.224-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.4.0.38]
+[2024-09-17 06:43:15.775][INF] Private connect 192.168.22.224:8000 sock=2400 this=0x1ffdf558 cmd=0x30000 port=49678
+[2024-09-17 06:43:15.785][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback Start
+[2024-09-17 06:43:15.785][INF] ID-IP-CHAN[3-192.168.22.224-1] [CGetTCPStream::Start] Stream Head Data Callback End
+[2024-09-17 06:43:15.786][ERR] GetOverlayFontPath Failed
+[2024-09-17 06:43:15.788][INF] ID-IP-CHAN[3-192.168.22.224-1] [CPreviewPlayer::OpenPlayer] open player[226372f0] success
+[2024-09-17 06:43:15.788][DBG] ID-IP-CHAN[3-192.168.22.224-1] RTP Format
+[2024-09-17 06:43:16.766][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2024-09-17 06:43:16.766][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2024-09-17 06:43:16.766][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2024-09-17 06:43:16.766][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2024-09-17 06:43:16.766][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2024-09-17 06:43:16.766][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2024-09-17 06:43:16.766][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2024-09-17 06:43:16.766][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2024-09-17 06:43:16.766][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2024-09-17 06:43:16.766][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2024-09-17 06:43:16.766][INF] The COM:Core ver is 6.1.9.48, 2023_04_10. Async:1.
+[2024-09-17 06:43:16.766][INF] This HCNetSDK ver is 6.1.9.48 Ver 2023_04_10.
+[2024-09-17 07:11:03.908][INF] Private connect 192.168.22.221:8000 sock=62316 this=0x1ffdfcc4 cmd=0x30009 port=49873
+[2024-09-17 07:11:04.050][INF] Private connect 192.168.22.222:8000 sock=62288 this=0x1ffdfcc4 cmd=0x30009 port=49874
+[2024-09-17 07:11:04.218][INF] Private connect 192.168.22.223:8000 sock=62344 this=0x1ffdfcc4 cmd=0x30009 port=49875
+[2024-09-17 07:11:04.373][INF] Private connect 192.168.22.224:8000 sock=60528 this=0x1ffdfcc4 cmd=0x30009 port=49876
+[2024-09-17 07:26:47.780][INF] Private connect 192.168.22.221:8000 sock=94288 this=0x1ffdfcc4 cmd=0x30009 port=49925
+[2024-09-17 07:26:47.988][INF] Private connect 192.168.22.222:8000 sock=94392 this=0x1ffdfcc4 cmd=0x30009 port=49926
+[2024-09-17 07:26:48.156][INF] Private connect 192.168.22.223:8000 sock=94276 this=0x1ffdfcc4 cmd=0x30009 port=49927
+[2024-09-17 07:26:48.317][INF] Private connect 192.168.22.224:8000 sock=94368 this=0x1ffdfcc4 cmd=0x30009 port=49928
+[2024-09-17 08:24:01.056][INF] Private connect 192.168.22.221:8000 sock=215316 this=0x1ffdfcc4 cmd=0x30009 port=50128
+[2024-09-17 08:24:01.255][INF] Private connect 192.168.22.222:8000 sock=215800 this=0x1ffdfcc4 cmd=0x30009 port=50129
+[2024-09-17 08:24:01.439][INF] Private connect 192.168.22.223:8000 sock=215920 this=0x1ffdfcc4 cmd=0x30009 port=50130
+[2024-09-17 08:24:01.667][INF] Private connect 192.168.22.224:8000 sock=215944 this=0x1ffdfcc4 cmd=0x30009 port=50131
+[2024-09-17 08:31:29.313][INF] Private connect 192.168.22.221:8000 sock=228680 this=0x1ffdfcc4 cmd=0x30009 port=50162
+[2024-09-17 08:31:29.502][INF] Private connect 192.168.22.222:8000 sock=228656 this=0x1ffdfcc4 cmd=0x30009 port=50163
+[2024-09-17 08:31:29.693][INF] Private connect 192.168.22.223:8000 sock=228440 this=0x1ffdfcc4 cmd=0x30009 port=50164
+[2024-09-17 08:31:29.925][INF] Private connect 192.168.22.224:8000 sock=228728 this=0x1ffdfcc4 cmd=0x30009 port=50165
+[2024-09-17 08:53:06.166][INF] Private connect 192.168.22.221:8000 sock=272884 this=0x1ffdfcc4 cmd=0x30009 port=50224
+[2024-09-17 08:53:06.386][INF] Private connect 192.168.22.222:8000 sock=273384 this=0x1ffdfcc4 cmd=0x30009 port=50225
+[2024-09-17 08:53:06.603][INF] Private connect 192.168.22.223:8000 sock=273380 this=0x1ffdfcc4 cmd=0x30009 port=50226
+[2024-09-17 08:53:06.814][INF] Private connect 192.168.22.224:8000 sock=269976 this=0x1ffdfcc4 cmd=0x30009 port=50227
+[2024-09-17 09:05:17.313][INF] Private connect 192.168.22.221:8000 sock=295352 this=0x1ffdfcc4 cmd=0x30009 port=50267
+[2024-09-17 09:05:17.569][INF] Private connect 192.168.22.222:8000 sock=295188 this=0x1ffdfcc4 cmd=0x30009 port=50268
+[2024-09-17 09:05:17.791][INF] Private connect 192.168.22.223:8000 sock=295280 this=0x1ffdfcc4 cmd=0x30009 port=50269
+[2024-09-17 09:05:18.112][INF] Private connect 192.168.22.224:8000 sock=292440 this=0x1ffdfcc4 cmd=0x30009 port=50270
+[2024-09-17 09:07:32.697][INF] Private connect 192.168.22.221:8000 sock=296544 this=0x1ffdfcc4 cmd=0x30009 port=50284
+[2024-09-17 09:07:32.939][INF] Private connect 192.168.22.222:8000 sock=295272 this=0x1ffdfcc4 cmd=0x30009 port=50285
+[2024-09-17 09:07:33.167][INF] Private connect 192.168.22.223:8000 sock=295348 this=0x1ffdfcc4 cmd=0x30009 port=50286
+[2024-09-17 09:07:33.396][INF] Private connect 192.168.22.224:8000 sock=296716 this=0x1ffdfcc4 cmd=0x30009 port=50287
+[2024-09-17 09:24:29.657][INF] Private connect 192.168.22.221:8000 sock=330676 this=0x1ffdfcc4 cmd=0x30009 port=50334
+[2024-09-17 09:24:29.925][INF] Private connect 192.168.22.222:8000 sock=324968 this=0x1ffdfcc4 cmd=0x30009 port=50335
+[2024-09-17 09:24:30.165][INF] Private connect 192.168.22.223:8000 sock=330724 this=0x1ffdfcc4 cmd=0x30009 port=50336
+[2024-09-17 09:24:30.460][INF] Private connect 192.168.22.224:8000 sock=330680 this=0x1ffdfcc4 cmd=0x30009 port=50337
+[2024-09-17 10:58:59.294][INF] Private connect 192.168.22.221:8000 sock=532020 this=0x1ffdfcc4 cmd=0x30009 port=50611
+[2024-09-17 10:58:59.589][INF] Private connect 192.168.22.222:8000 sock=532008 this=0x1ffdfcc4 cmd=0x30009 port=50612
+[2024-09-17 10:58:59.852][INF] Private connect 192.168.22.223:8000 sock=532036 this=0x1ffdfcc4 cmd=0x30009 port=50613
+[2024-09-17 10:59:00.121][INF] Private connect 192.168.22.224:8000 sock=531664 this=0x1ffdfcc4 cmd=0x30009 port=50614
+[2024-09-17 11:02:14.919][INF] Private connect 192.168.22.221:8000 sock=535408 this=0x1ffdfcc4 cmd=0x30009 port=50633
+[2024-09-17 11:02:15.190][INF] Private connect 192.168.22.222:8000 sock=498780 this=0x1ffdfcc4 cmd=0x30009 port=50634
+[2024-09-17 11:02:15.465][INF] Private connect 192.168.22.223:8000 sock=534808 this=0x1ffdfcc4 cmd=0x30009 port=50635
+[2024-09-17 11:02:15.752][INF] Private connect 192.168.22.224:8000 sock=533396 this=0x1ffdfcc4 cmd=0x30009 port=50636
