@@ -1,0 +1,23 @@
+RealTech iTOLL Automation v0.1.49 validation
+==========================================
+
+PASS - Exact CSV/API header sample contains 9 expected columns:
+       sno,username,vehicle_no,rf_id,empty_weight,capacity,balance,rfid_type,rf_status
+PASS - CSV importer maps rf_status as an active-status alias.
+PASS - Excel importer maps rf_status as an active-status alias.
+PASS - capacity remains mapped to vehicle category/capacity.
+PASS - MQTT schema 1.2 continues to publish vehicleCategory.
+PASS - Payment resolver continues numeric capacity matching.
+PASS - Multiple Vehicle CSV API sources remain configured.
+PASS - Vehicle API auto-sync default remains 30 seconds.
+PASS - Manual import detects XLSX/XLSM ZIP content even when renamed to .csv.
+PASS - Uploaded Rfid_Test_Paid.csv was verified as XLSX package content with a .csv name.
+PASS - Corrected plain-text CSV sample has 3 data rows and 9 columns per row.
+PASS - Project XML and appsettings JSON parsed successfully.
+PASS - Application version metadata is 0.1.49.
+
+Build status
+------------
+A complete .NET compilation was not executed because the .NET SDK is not installed in
+this environment. Use build-standalone-exe.bat on the Windows build machine to perform
+the final restore, compile and self-contained publish validation.
