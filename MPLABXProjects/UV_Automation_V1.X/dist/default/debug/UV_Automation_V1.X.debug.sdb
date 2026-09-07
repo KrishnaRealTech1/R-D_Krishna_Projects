@@ -1,0 +1,42 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F683 ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"18 C:\Users\IQC\MPLABXProjects\UV_Automation_V1.X\UV_Automation_V1.c
+[v _delay_seconds delay_seconds `(v  1 e 1 0 ]
+"24
+[v _main main `(v  1 e 1 0 ]
+"164 C:/Users/IQC/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.8.184/xc8\pic\include\proc/pic12f683.h
+[v _GPIO GPIO `VEuc  1 e 1 @5 ]
+"697
+[v _CMCON0 CMCON0 `VEuc  1 e 1 @25 ]
+"949
+[v _TRISIO TRISIO `VEuc  1 e 1 @133 ]
+"1718
+[v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
+"1915
+[v _GP0 GP0 `VEb  1 e 0 @40 ]
+"1921
+[v _GP2 GP2 `VEb  1 e 0 @42 ]
+"24 C:\Users\IQC\MPLABXProjects\UV_Automation_V1.X\UV_Automation_V1.c
+[v _main main `(v  1 e 1 0 ]
+{
+"46
+[v main@i i `ui  1 a 2 8 ]
+"50
+} 0
+"18
+[v _delay_seconds delay_seconds `(v  1 e 1 0 ]
+{
+[v delay_seconds@sec sec `ui  1 p 2 0 ]
+"22
+} 0
