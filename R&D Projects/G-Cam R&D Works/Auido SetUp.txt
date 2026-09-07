@@ -1,0 +1,13 @@
+******************************************************************************************
+
+cp /tmp/warning.wav /opt/gcam/assets/warning.wav
+aplay /opt/gcam/assets/warning.wav
+sudo systemctl restart gcam.service
+
+*****************************************************************************************
+
+aplay -l
+amixer -c 0 set Speaker 100% || amixer -c 0 set PCM 100%
+aplay /tmp/warning.wav
+
+******************************************************************************************
