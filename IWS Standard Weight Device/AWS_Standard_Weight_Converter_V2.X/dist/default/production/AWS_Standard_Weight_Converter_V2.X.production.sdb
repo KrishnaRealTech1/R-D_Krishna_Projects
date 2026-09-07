@@ -1,0 +1,997 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F25K22 ]
+[d frameptr 4065 ]
+"844 C:\Users\RealTech\MPLABXProjects\AWS_Standard_Weight_Converter_V2.X\AWS_Standard_Weight_Converter_V2.c
+[e E5736 . `uc
+UNIT_UNKNOWN 0
+UNIT_KG 1
+UNIT_G 2
+UNIT_LB 3
+UNIT_TON 4
+]
+"222
+[v _isr isr `IIH(v  1 e 1 0 ]
+"233
+[v _main main `(v  1 e 1 0 ]
+"287
+[v _oscillator_init oscillator_init `(v  1 s 1 oscillator_init ]
+"295
+[v _gpio_init gpio_init `(v  1 s 1 gpio_init ]
+"320
+[v _timer0_init timer0_init `(v  1 s 1 timer0_init ]
+"341
+[v _system_init system_init `(v  1 s 1 system_init ]
+"347
+[v _millis millis `(ul  1 s 4 millis ]
+"360
+[v _delay_ms_blocking delay_ms_blocking `(v  1 s 1 delay_ms_blocking ]
+"373
+[v _read_dip_baud read_dip_baud `(ul  1 s 4 read_dip_baud ]
+"406
+[v _calculate_brg_value calculate_brg_value `(us  1 s 2 calculate_brg_value ]
+"421
+[v _uart1_init uart1_init `(v  1 s 1 uart1_init ]
+"437
+[v _uart2_init uart2_init `(v  1 s 1 uart2_init ]
+"453
+[v _uart1_try_read uart1_try_read `(a  1 s 1 uart1_try_read ]
+"479
+[v _uart2_write_char uart2_write_char `(v  1 s 1 uart2_write_char ]
+"488
+[v _uart2_write_string uart2_write_string `(v  1 s 1 uart2_write_string ]
+"497
+[v _uart2_write_uint32 uart2_write_uint32 `(v  1 s 1 uart2_write_uint32 ]
+"522
+[v _uart2_write_uint32_padded uart2_write_uint32_padded `(v  1 s 1 uart2_write_uint32_padded ]
+"550
+[v _is_digit_ascii is_digit_ascii `(a  1 s 1 is_digit_ascii ]
+"555
+[v _is_alpha_ascii is_alpha_ascii `(a  1 s 1 is_alpha_ascii ]
+"561
+[v _upper_ascii upper_ascii `(uc  1 s 1 upper_ascii ]
+"570
+[v _contains_ci contains_ci `(a  1 s 1 contains_ci ]
+"603
+[v _contains_isolated_letter_ci contains_isolated_letter_ci `(a  1 s 1 contains_isolated_letter_ci ]
+"636
+[v _pow10_u32 pow10_u32 `(ul  1 s 4 pow10_u32 ]
+"168
+[s S1075 . 8 `a 1 valid 1 0 `l 1 native_milli_value 4 1 `a 1 has_decimal 1 5 `uc 1 digit_count 1 6 `uc 1 score 1 7 ]
+"647
+[v _parse_number_at parse_number_at `(S1075  1 s 8 parse_number_at ]
+"168
+[s S1075 . 8 `a 1 valid 1 0 `l 1 native_milli_value 4 1 `a 1 has_decimal 1 5 `uc 1 digit_count 1 6 `uc 1 score 1 7 ]
+"814
+[v _find_best_number find_best_number `(S1075  1 s 8 find_best_number ]
+"844
+[v _detect_unit detect_unit `(E5736  1 s 1 detect_unit ]
+"869
+[v _detect_status detect_status `(uc  1 s 1 detect_status ]
+"896
+[v _convert_native_milli_to_milli_kg convert_native_milli_to_milli_kg `(l  1 s 4 convert_native_milli_to_milli_kg ]
+"969
+[v _parse_weight_line parse_weight_line `(a  1 s 1 parse_weight_line ]
+"998
+[v _uart2_write_wn_weight uart2_write_wn_weight `(v  1 s 1 uart2_write_wn_weight ]
+"1041
+[v _uart2_write_error_frame uart2_write_error_frame `(v  1 s 1 uart2_write_error_frame ]
+"1046
+[v _process_scale_line process_scale_line `(v  1 s 1 process_scale_line ]
+"1070
+[v _handle_scale_byte handle_scale_byte `(v  1 s 1 handle_scale_byte ]
+"1111
+[v _startup_led_test startup_led_test `(v  1 s 1 startup_led_test ]
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lodiv.c
+[v ___lodiv __lodiv `(uo  1 e 8 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"156 C:\Users\RealTech\MPLABXProjects\AWS_Standard_Weight_Converter_V2.X\AWS_Standard_Weight_Converter_V2.c
+[v _g_millis g_millis `VEul  1 s 4 g_millis ]
+"52 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h
+[v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
+"97
+[v _ANSELB ANSELB `VEuc  1 e 1 @3897 ]
+"147
+[v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
+[s S679 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 CKTXP 1 0 :1:4 
+`uc 1 DTRXP 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"4224
+[s S688 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SCKP 1 0 :1:4 
+]
+[s S895 . 1 `uc 1 ABDEN2 1 0 :1:0 
+`uc 1 WUE2 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG162 1 0 :1:3 
+`uc 1 SCKP2 1 0 :1:4 
+`uc 1 DTRXP2 1 0 :1:5 
+`uc 1 RCIDL2 1 0 :1:6 
+`uc 1 ABDOVF2 1 0 :1:7 
+]
+[s S904 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXCKP2 1 0 :1:4 
+`uc 1 RXDTP2 1 0 :1:5 
+`uc 1 RCMT2 1 0 :1:6 
+]
+[u S909 . 1 `S679 1 . 1 0 `S688 1 . 1 0 `S895 1 . 1 0 `S904 1 . 1 0 ]
+[v _BAUDCON2bits BAUDCON2bits `VES909  1 e 1 @3952 ]
+[s S764 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4489
+[s S773 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S955 . 1 `uc 1 RX9D2 1 0 :1:0 
+`uc 1 OERR2 1 0 :1:1 
+`uc 1 FERR2 1 0 :1:2 
+`uc 1 ADDEN2 1 0 :1:3 
+`uc 1 CREN2 1 0 :1:4 
+`uc 1 SREN2 1 0 :1:5 
+`uc 1 RX92 1 0 :1:6 
+`uc 1 SPEN2 1 0 :1:7 
+]
+[s S964 . 1 `uc 1 RCD82 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC8_92 1 0 :1:6 
+]
+[s S968 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC92 1 0 :1:6 
+]
+[u S971 . 1 `S764 1 . 1 0 `S773 1 . 1 0 `S955 1 . 1 0 `S964 1 . 1 0 `S968 1 . 1 0 ]
+[v _RCSTA2bits RCSTA2bits `VES971  1 e 1 @3953 ]
+[s S630 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"4769
+[s S843 . 1 `uc 1 TX9D2 1 0 :1:0 
+`uc 1 TRMT2 1 0 :1:1 
+`uc 1 BRGH2 1 0 :1:2 
+`uc 1 SENDB2 1 0 :1:3 
+`uc 1 SYNC2 1 0 :1:4 
+`uc 1 TXEN2 1 0 :1:5 
+`uc 1 TX92 1 0 :1:6 
+`uc 1 CSRC2 1 0 :1:7 
+]
+[s S852 . 1 `uc 1 TXD82 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_92 1 0 :1:6 
+]
+[u S856 . 1 `S630 1 . 1 0 `S843 1 . 1 0 `S852 1 . 1 0 ]
+[v _TXSTA2bits TXSTA2bits `VES856  1 e 1 @3954 ]
+"4984
+[v _TXREG2 TXREG2 `VEuc  1 e 1 @3955 ]
+"5060
+[v _SPBRG2 SPBRG2 `VEuc  1 e 1 @3957 ]
+"5098
+[v _SPBRGH2 SPBRGH2 `VEuc  1 e 1 @3958 ]
+[s S272 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"6553
+[s S485 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 CCP2 1 0 :1:3 
+`uc 1 KBI0 1 0 :1:4 
+`uc 1 KBI1 1 0 :1:5 
+`uc 1 KBI2 1 0 :1:6 
+`uc 1 KBI3 1 0 :1:7 
+]
+[s S494 . 1 `uc 1 AN12 1 0 :1:0 
+`uc 1 AN10 1 0 :1:1 
+`uc 1 AN8 1 0 :1:2 
+`uc 1 AN9 1 0 :1:3 
+`uc 1 AN11 1 0 :1:4 
+`uc 1 AN13 1 0 :1:5 
+`uc 1 TX2 1 0 :1:6 
+`uc 1 RX2 1 0 :1:7 
+]
+[s S503 . 1 `uc 1 FLT0 1 0 :1:0 
+`uc 1 C12IN3M 1 0 :1:1 
+`uc 1 P1B 1 0 :1:2 
+`uc 1 C12IN2M 1 0 :1:3 
+`uc 1 T5G 1 0 :1:4 
+`uc 1 T1G 1 0 :1:5 
+`uc 1 CK2 1 0 :1:6 
+`uc 1 DT2 1 0 :1:7 
+]
+[s S512 . 1 `uc 1 SRI 1 0 :1:0 
+`uc 1 C12IN3N 1 0 :1:1 
+`uc 1 CTED1 1 0 :1:2 
+`uc 1 C12IN2N 1 0 :1:3 
+`uc 1 P1D 1 0 :1:4 
+`uc 1 CCP3 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S521 . 1 `uc 1 CCP4 1 0 :1:0 
+`uc 1 P1C 1 0 :1:1 
+`uc 1 SDA2 1 0 :1:2 
+`uc 1 CTED2 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T3CKI 1 0 :1:5 
+]
+[s S528 . 1 `uc 1 SS2 1 0 :1:0 
+`uc 1 SCL2 1 0 :1:1 
+`uc 1 SDI2 1 0 :1:2 
+`uc 1 P2A 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 P3A 1 0 :1:5 
+]
+[s S535 . 1 `uc 1 NOT_SS2 1 0 :1:0 
+]
+[s S537 . 1 `uc 1 nSS2 1 0 :1:0 
+`uc 1 SCK2 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 SDO2 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 P2B 1 0 :1:5 
+]
+[s S544 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S547 . 1 `S272 1 . 1 0 `S485 1 . 1 0 `S494 1 . 1 0 `S503 1 . 1 0 `S512 1 . 1 0 `S521 1 . 1 0 `S528 1 . 1 0 `S535 1 . 1 0 `S537 1 . 1 0 `S544 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES547  1 e 1 @3969 ]
+[s S303 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"7383
+[s S312 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S321 . 1 `S303 1 . 1 0 `S312 1 . 1 0 ]
+[v _LATBbits LATBbits `VES321  1 e 1 @3978 ]
+[s S343 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"7495
+[s S352 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 LC3 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S361 . 1 `S343 1 . 1 0 `S352 1 . 1 0 ]
+[v _LATCbits LATCbits `VES361  1 e 1 @3979 ]
+[s S263 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"7834
+[u S281 . 1 `S263 1 . 1 0 `S272 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES281  1 e 1 @3987 ]
+[s S223 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"8056
+[s S232 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S241 . 1 `S223 1 . 1 0 `S232 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES241  1 e 1 @3988 ]
+[s S159 . 1 `uc 1 TUN 1 0 :6:0 
+`uc 1 PLLEN 1 0 :1:6 
+`uc 1 INTSRC 1 0 :1:7 
+]
+"8287
+[s S163 . 1 `uc 1 TUN0 1 0 :1:0 
+`uc 1 TUN1 1 0 :1:1 
+`uc 1 TUN2 1 0 :1:2 
+`uc 1 TUN3 1 0 :1:3 
+`uc 1 TUN4 1 0 :1:4 
+`uc 1 TUN5 1 0 :1:5 
+]
+[u S170 . 1 `S159 1 . 1 0 `S163 1 . 1 0 ]
+[v _OSCTUNEbits OSCTUNEbits `VES170  1 e 1 @3995 ]
+[s S1006 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"8716
+[s S1014 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S1019 . 1 `S1006 1 . 1 0 `S1014 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES1019  1 e 1 @3998 ]
+[s S1037 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+`uc 1 TMR3GIF 1 0 :1:1 
+`uc 1 TMR5GIF 1 0 :1:2 
+`uc 1 CTMUIF 1 0 :1:3 
+`uc 1 TX2IF 1 0 :1:4 
+`uc 1 RC2IF 1 0 :1:5 
+`uc 1 BCL2IF 1 0 :1:6 
+`uc 1 SSP2IF 1 0 :1:7 
+]
+"9239
+[s S1046 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBNIF 1 0 :1:4 
+]
+[u S1051 . 1 `S1037 1 . 1 0 `S1046 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES1051  1 e 1 @4004 ]
+"9601
+[s S776 . 1 `uc 1 RX9D1 1 0 :1:0 
+`uc 1 OERR1 1 0 :1:1 
+`uc 1 FERR1 1 0 :1:2 
+`uc 1 ADDEN1 1 0 :1:3 
+`uc 1 CREN1 1 0 :1:4 
+`uc 1 SREN1 1 0 :1:5 
+`uc 1 RX91 1 0 :1:6 
+`uc 1 SPEN1 1 0 :1:7 
+]
+[s S785 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S789 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S792 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[u S795 . 1 `S764 1 . 1 0 `S773 1 . 1 0 `S776 1 . 1 0 `S785 1 . 1 0 `S789 1 . 1 0 `S792 1 . 1 0 ]
+[v _RCSTA1bits RCSTA1bits `VES795  1 e 1 @4011 ]
+"10045
+[s S639 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S648 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S652 . 1 `S630 1 . 1 0 `S639 1 . 1 0 `S648 1 . 1 0 ]
+[v _TXSTA1bits TXSTA1bits `VES652  1 e 1 @4012 ]
+"10457
+[v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
+"10535
+[v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4015 ]
+"10613
+[v _SPBRGH1 SPBRGH1 `VEuc  1 e 1 @4016 ]
+"11641
+[s S691 . 1 `uc 1 ABDEN1 1 0 :1:0 
+`uc 1 WUE1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG161 1 0 :1:3 
+`uc 1 SCKP1 1 0 :1:4 
+`uc 1 DTRXP1 1 0 :1:5 
+`uc 1 RCIDL1 1 0 :1:6 
+`uc 1 ABDOVF1 1 0 :1:7 
+]
+[s S700 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXCKP 1 0 :1:4 
+`uc 1 RXDTP 1 0 :1:5 
+`uc 1 RCMT 1 0 :1:6 
+]
+[s S705 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXCKP1 1 0 :1:4 
+`uc 1 RXDTP1 1 0 :1:5 
+`uc 1 RCMT1 1 0 :1:6 
+]
+[s S710 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RXCKP 1 0 :1:5 
+]
+[s S713 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 W4E 1 0 :1:1 
+]
+[u S716 . 1 `S679 1 . 1 0 `S688 1 . 1 0 `S691 1 . 1 0 `S700 1 . 1 0 `S705 1 . 1 0 `S710 1 . 1 0 `S713 1 . 1 0 ]
+[v _BAUDCON1bits BAUDCON1bits `VES716  1 e 1 @4024 ]
+[s S409 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"15040
+[s S411 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S414 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S417 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S420 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S423 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S432 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+]
+[u S438 . 1 `S409 1 . 1 0 `S411 1 . 1 0 `S414 1 . 1 0 `S417 1 . 1 0 `S420 1 . 1 0 `S423 1 . 1 0 `S432 1 . 1 0 ]
+[v _RCONbits RCONbits `VES438  1 e 1 @4048 ]
+[s S127 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 HFIOFS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+`uc 1 IDLEN 1 0 :1:7 
+]
+"15238
+[s S133 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 IOFS 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S141 . 1 `S127 1 . 1 0 `S133 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES141  1 e 1 @4051 ]
+[s S383 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"15318
+[s S390 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S394 . 1 `S383 1 . 1 0 `S390 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES394  1 e 1 @4053 ]
+"15375
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"15395
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S188 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"16050
+[s S191 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S200 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S203 . 1 `S188 1 . 1 0 `S191 1 . 1 0 `S200 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES203  1 e 1 @4081 ]
+[s S24 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"16127
+[s S33 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S42 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S46 . 1 `S24 1 . 1 0 `S33 1 . 1 0 `S42 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES46  1 e 1 @4082 ]
+"233 C:\Users\RealTech\MPLABXProjects\AWS_Standard_Weight_Converter_V2.X\AWS_Standard_Weight_Converter_V2.c
+[v _main main `(v  1 e 1 0 ]
+{
+"276
+[v main@now now `ul  1 a 4 141 ]
+"235
+[v main@scale_line scale_line `[96]uc  1 a 96 45 ]
+"240
+[v main@pc_baud pc_baud `ul  1 a 4 153 ]
+"239
+[v main@scale_baud scale_baud `ul  1 a 4 149 ]
+"238
+[v main@last_rx_time last_rx_time `ul  1 a 4 145 ]
+"236
+[v main@scale_line_index scale_line_index `uc  1 a 1 158 ]
+"237
+[v main@received_byte received_byte `uc  1 a 1 157 ]
+"285
+} 0
+"437
+[v _uart2_init uart2_init `(v  1 s 1 uart2_init ]
+{
+"439
+[v uart2_init@brg brg `us  1 a 2 29 ]
+"437
+[v uart2_init@baud baud `ul  1 p 4 25 ]
+"451
+} 0
+"453
+[v _uart1_try_read uart1_try_read `(a  1 s 1 uart1_try_read ]
+{
+[v uart1_try_read@byte byte `*.39uc  1 p 2 0 ]
+"477
+} 0
+"421
+[v _uart1_init uart1_init `(v  1 s 1 uart1_init ]
+{
+"423
+[v uart1_init@brg brg `us  1 a 2 29 ]
+"421
+[v uart1_init@baud baud `ul  1 p 4 25 ]
+"435
+} 0
+"406
+[v _calculate_brg_value calculate_brg_value `(us  1 s 2 calculate_brg_value ]
+{
+"408
+[v calculate_brg_value@brg brg `ul  1 a 4 21 ]
+"406
+[v calculate_brg_value@baud baud `ul  1 p 4 13 ]
+"419
+} 0
+"320
+[v _timer0_init timer0_init `(v  1 s 1 timer0_init ]
+{
+"339
+} 0
+"341
+[v _system_init system_init `(v  1 s 1 system_init ]
+{
+"345
+} 0
+"287
+[v _oscillator_init oscillator_init `(v  1 s 1 oscillator_init ]
+{
+"293
+} 0
+"295
+[v _gpio_init gpio_init `(v  1 s 1 gpio_init ]
+{
+"318
+} 0
+"1111
+[v _startup_led_test startup_led_test `(v  1 s 1 startup_led_test ]
+{
+"1122
+} 0
+"373
+[v _read_dip_baud read_dip_baud `(ul  1 s 4 read_dip_baud ]
+{
+"375
+[v read_dip_baud@code code `uc  1 a 1 10 ]
+"404
+} 0
+"360
+[v _delay_ms_blocking delay_ms_blocking `(v  1 s 1 delay_ms_blocking ]
+{
+"362
+[v delay_ms_blocking@i i `VEus  1 a 2 2 ]
+"360
+[v delay_ms_blocking@ms ms `us  1 p 2 0 ]
+"371
+} 0
+"347
+[v _millis millis `(ul  1 s 4 millis ]
+{
+"349
+[v millis@value value `ul  1 a 4 4 ]
+"350
+[v millis@gie_state gie_state `uc  1 a 1 8 ]
+"358
+} 0
+"1070
+[v _handle_scale_byte handle_scale_byte `(v  1 s 1 handle_scale_byte ]
+{
+[v handle_scale_byte@byte byte `uc  1 a 1 wreg ]
+[v handle_scale_byte@byte byte `uc  1 a 1 wreg ]
+[v handle_scale_byte@line_buffer line_buffer `*.39uc  1 p 2 37 ]
+[v handle_scale_byte@line_index line_index `*.39uc  1 p 2 39 ]
+"1073
+[v handle_scale_byte@byte byte `uc  1 a 1 92 ]
+"1109
+} 0
+"1046
+[v _process_scale_line process_scale_line `(v  1 s 1 process_scale_line ]
+{
+[s S1087 . 7 `a 1 valid 1 0 `l 1 milli_kg 4 1 `E5736 1 detected_unit 1 5 `uc 1 status 1 6 ]
+"1048
+[v process_scale_line@weight weight `S1087  1 a 7 30 ]
+"1046
+[v process_scale_line@line line `*.39uc  1 p 2 89 ]
+"1068
+} 0
+"998
+[v _uart2_write_wn_weight uart2_write_wn_weight `(v  1 s 1 uart2_write_wn_weight ]
+{
+"1000
+[v uart2_write_wn_weight@abs_milli_kg abs_milli_kg `ul  1 a 4 53 ]
+"1002
+[v uart2_write_wn_weight@gram_part gram_part `ul  1 a 4 49 ]
+"1001
+[v uart2_write_wn_weight@kg_part kg_part `ul  1 a 4 45 ]
+[s S1087 . 7 `a 1 valid 1 0 `l 1 milli_kg 4 1 `E5736 1 detected_unit 1 5 `uc 1 status 1 6 ]
+"998
+[v uart2_write_wn_weight@weight weight `*.39CS1087  1 p 2 39 ]
+"1039
+} 0
+"522
+[v _uart2_write_uint32_padded uart2_write_uint32_padded `(v  1 s 1 uart2_write_uint32_padded ]
+{
+"524
+[v uart2_write_uint32_padded@temp temp `ul  1 a 4 34 ]
+"525
+[v uart2_write_uint32_padded@digits digits `uc  1 a 1 38 ]
+"526
+[v uart2_write_uint32_padded@pad_count pad_count `uc  1 a 1 33 ]
+"522
+[v uart2_write_uint32_padded@value value `ul  1 p 4 28 ]
+[v uart2_write_uint32_padded@min_width min_width `uc  1 p 1 32 ]
+"548
+} 0
+"497
+[v _uart2_write_uint32 uart2_write_uint32 `(v  1 s 1 uart2_write_uint32 ]
+{
+"499
+[v uart2_write_uint32@buffer buffer `[10]uc  1 a 10 17 ]
+"500
+[v uart2_write_uint32@index index `uc  1 a 1 27 ]
+"497
+[v uart2_write_uint32@value value `ul  1 p 4 13 ]
+"520
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"7
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"25
+} 0
+"1041 C:\Users\RealTech\MPLABXProjects\AWS_Standard_Weight_Converter_V2.X\AWS_Standard_Weight_Converter_V2.c
+[v _uart2_write_error_frame uart2_write_error_frame `(v  1 s 1 uart2_write_error_frame ]
+{
+"1044
+} 0
+"488
+[v _uart2_write_string uart2_write_string `(v  1 s 1 uart2_write_string ]
+{
+[v uart2_write_string@text text `*.25Cuc  1 p 2 1 ]
+"495
+} 0
+"479
+[v _uart2_write_char uart2_write_char `(v  1 s 1 uart2_write_char ]
+{
+[v uart2_write_char@c c `uc  1 a 1 wreg ]
+[v uart2_write_char@c c `uc  1 a 1 wreg ]
+[v uart2_write_char@c c `uc  1 a 1 0 ]
+"486
+} 0
+"969
+[v _parse_weight_line parse_weight_line `(a  1 s 1 parse_weight_line ]
+{
+[s S1075 . 8 `a 1 valid 1 0 `l 1 native_milli_value 4 1 `a 1 has_decimal 1 5 `uc 1 digit_count 1 6 `uc 1 score 1 7 ]
+"971
+[v parse_weight_line@number number `S1075  1 a 8 21 ]
+"972
+[v parse_weight_line@unit unit `E5736  1 a 1 29 ]
+"969
+[v parse_weight_line@line line `*.39Cuc  1 p 2 17 ]
+[s S1087 . 7 `a 1 valid 1 0 `l 1 milli_kg 4 1 `E5736 1 detected_unit 1 5 `uc 1 status 1 6 ]
+[v parse_weight_line@weight weight `*.39S1087  1 p 2 19 ]
+"996
+} 0
+"168
+[s S1075 . 8 `a 1 valid 1 0 `l 1 native_milli_value 4 1 `a 1 has_decimal 1 5 `uc 1 digit_count 1 6 `uc 1 score 1 7 ]
+"814
+[v _find_best_number find_best_number `(S1075  1 s 8 find_best_number ]
+{
+"817
+[v find_best_number@best best `S1075  1 a 8 9 ]
+"818
+[v find_best_number@candidate candidate `S1075  1 a 8 0 ]
+"816
+[v find_best_number@i i `uc  1 a 1 8 ]
+"814
+[v find_best_number@text text `*.39Cuc  1 p 2 79 ]
+"842
+} 0
+"168
+[s S1075 . 8 `a 1 valid 1 0 `l 1 native_milli_value 4 1 `a 1 has_decimal 1 5 `uc 1 digit_count 1 6 `uc 1 score 1 7 ]
+"647
+[v _parse_number_at parse_number_at `(S1075  1 s 8 parse_number_at ]
+{
+"649
+[v parse_number_at@result result `S1075  1 a 8 71 ]
+"654
+[v parse_number_at@integer_part integer_part `ul  1 a 4 66 ]
+"661
+[v parse_number_at@native_milli_abs native_milli_abs `ul  1 a 4 61 ]
+"650
+[v parse_number_at@i i `uc  1 a 1 70 ]
+"656
+[v parse_number_at@decimal_digits decimal_digits `uc  1 a 1 65 ]
+"655
+[v parse_number_at@integer_digits integer_digits `uc  1 a 1 60 ]
+"653
+[v parse_number_at@has_decimal has_decimal `a  1 a 1 59 ]
+"660
+[v parse_number_at@d4 d4 `uc  1 a 1 54 ]
+"659
+[v parse_number_at@d3 d3 `uc  1 a 1 53 ]
+"658
+[v parse_number_at@d2 d2 `uc  1 a 1 52 ]
+"657
+[v parse_number_at@d1 d1 `uc  1 a 1 51 ]
+"652
+[v parse_number_at@has_sign has_sign `a  1 a 1 50 ]
+"651
+[v parse_number_at@negative negative `a  1 a 1 49 ]
+"647
+[v parse_number_at@text text `*.39Cuc  1 p 2 21 ]
+[v parse_number_at@start_index start_index `uc  1 p 1 23 ]
+"812
+} 0
+"636
+[v _pow10_u32 pow10_u32 `(ul  1 s 4 pow10_u32 ]
+{
+[v pow10_u32@power power `uc  1 a 1 wreg ]
+"638
+[v pow10_u32@value value `ul  1 a 4 17 ]
+"636
+[v pow10_u32@power power `uc  1 a 1 wreg ]
+"638
+[v pow10_u32@power power `uc  1 a 1 16 ]
+"645
+} 0
+"550
+[v _is_digit_ascii is_digit_ascii `(a  1 s 1 is_digit_ascii ]
+{
+[v is_digit_ascii@c c `uc  1 a 1 wreg ]
+[v is_digit_ascii@c c `uc  1 a 1 wreg ]
+"552
+[v is_digit_ascii@c c `uc  1 a 1 1 ]
+"553
+} 0
+"844
+[v _detect_unit detect_unit `(E5736  1 s 1 detect_unit ]
+{
+[v detect_unit@line line `*.39Cuc  1 p 2 14 ]
+"867
+} 0
+"603
+[v _contains_isolated_letter_ci contains_isolated_letter_ci `(a  1 s 1 contains_isolated_letter_ci ]
+{
+"605
+[v contains_isolated_letter_ci@i i `uc  1 a 1 13 ]
+"608
+[v contains_isolated_letter_ci@previous previous `uc  1 a 1 12 ]
+"609
+[v contains_isolated_letter_ci@next next `uc  1 a 1 11 ]
+"607
+[v contains_isolated_letter_ci@current current `uc  1 a 1 10 ]
+"606
+[v contains_isolated_letter_ci@target target `uc  1 a 1 9 ]
+"603
+[v contains_isolated_letter_ci@text text `*.39Cuc  1 p 2 4 ]
+[v contains_isolated_letter_ci@letter letter `uc  1 p 1 6 ]
+"634
+} 0
+"555
+[v _is_alpha_ascii is_alpha_ascii `(a  1 s 1 is_alpha_ascii ]
+{
+[v is_alpha_ascii@c c `uc  1 a 1 wreg ]
+"557
+[v is_alpha_ascii@u u `uc  1 a 1 3 ]
+"555
+[v is_alpha_ascii@c c `uc  1 a 1 wreg ]
+"557
+[v is_alpha_ascii@c c `uc  1 a 1 1 ]
+"559
+} 0
+"869
+[v _detect_status detect_status `(uc  1 s 1 detect_status ]
+{
+[v detect_status@line line `*.39Cuc  1 p 2 12 ]
+"894
+} 0
+"570
+[v _contains_ci contains_ci `(a  1 s 1 contains_ci ]
+{
+"573
+[v contains_ci@j j `uc  1 a 1 11 ]
+"572
+[v contains_ci@i i `uc  1 a 1 10 ]
+"570
+[v contains_ci@text text `*.39Cuc  1 p 2 1 ]
+[v contains_ci@pattern pattern `*.25Cuc  1 p 2 3 ]
+"601
+} 0
+"561
+[v _upper_ascii upper_ascii `(uc  1 s 1 upper_ascii ]
+{
+[v upper_ascii@c c `uc  1 a 1 wreg ]
+[v upper_ascii@c c `uc  1 a 1 wreg ]
+"563
+[v upper_ascii@c c `uc  1 a 1 0 ]
+"568
+} 0
+"896
+[v _convert_native_milli_to_milli_kg convert_native_milli_to_milli_kg `(l  1 s 4 convert_native_milli_to_milli_kg ]
+{
+"901
+[v convert_native_milli_to_milli_kg@temp64 temp64 `uo  1 a 8 35 ]
+"899
+[v convert_native_milli_to_milli_kg@abs_native abs_native `ul  1 a 4 47 ]
+"900
+[v convert_native_milli_to_milli_kg@converted converted `ul  1 a 4 43 ]
+"898
+[v convert_native_milli_to_milli_kg@negative negative `a  1 a 1 34 ]
+"896
+[v convert_native_milli_to_milli_kg@native_milli_value native_milli_value `l  1 p 4 25 ]
+[v convert_native_milli_to_milli_kg@unit unit `E5736  1 p 1 29 ]
+"967
+} 0
+"91 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+{
+"93
+[v ___omul@product product `uo  1 a 8 16 ]
+"91
+[v ___omul@multiplier multiplier `uo  1 p 8 0 ]
+[v ___omul@multiplicand multiplicand `uo  1 p 8 8 ]
+"354
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\lodiv.c
+[v ___lodiv __lodiv `(uo  1 e 8 0 ]
+{
+"12
+[v ___lodiv@quotient quotient `uo  1 a 8 16 ]
+"13
+[v ___lodiv@counter counter `uc  1 a 1 24 ]
+"9
+[v ___lodiv@dividend dividend `uo  1 p 8 0 ]
+[v ___lodiv@divisor divisor `uo  1 p 8 8 ]
+"32
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
+"7
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
+"30
+} 0
+"222 C:\Users\RealTech\MPLABXProjects\AWS_Standard_Weight_Converter_V2.X\AWS_Standard_Weight_Converter_V2.c
+[v _isr isr `IIH(v  1 e 1 0 ]
+{
+"231
+} 0

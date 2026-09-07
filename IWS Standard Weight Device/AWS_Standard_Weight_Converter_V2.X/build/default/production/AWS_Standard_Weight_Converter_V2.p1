@@ -1,0 +1,4068 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"16101 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16101:     struct {
+[s S798 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S798 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"16111
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16111:     struct {
+[s S799 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S799 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"16121
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16121:     struct {
+[s S800 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S800 . . GIEL GIEH ]
+"16100
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16100: typedef union {
+[u S797 `S798 1 `S799 1 `S800 1 ]
+[n S797 . . . . ]
+"16127
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16127: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS797 ~T0 @X0 0 e@4082 ]
+"15395
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15395: extern volatile unsigned char TMR0H __attribute__((address(0xFD7)));
+[v _TMR0H `Vuc ~T0 @X0 0 e@4055 ]
+"15375
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15375: extern volatile unsigned char TMR0L __attribute__((address(0xFD6)));
+[v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
+[p mainexit ]
+"187 AWS_Standard_Weight_Converter_V2.c
+[; ;AWS_Standard_Weight_Converter_V2.c: 187: static void system_init(void);
+[v _system_init `(v ~T0 @X0 0 sf ]
+"189
+[; ;AWS_Standard_Weight_Converter_V2.c: 189: static void delay_ms_blocking(uint16_t ms);
+[v _delay_ms_blocking `(v ~T0 @X0 0 sf1`us ]
+"195
+[; ;AWS_Standard_Weight_Converter_V2.c: 195: static uint32_t read_dip_baud(void);
+[v _read_dip_baud `(ul ~T0 @X0 0 sf ]
+"197
+[; ;AWS_Standard_Weight_Converter_V2.c: 197: static void uart1_init(uint32_t baud);
+[v _uart1_init `(v ~T0 @X0 0 sf1`ul ]
+"198
+[; ;AWS_Standard_Weight_Converter_V2.c: 198: static void uart2_init(uint32_t baud);
+[v _uart2_init `(v ~T0 @X0 0 sf1`ul ]
+"186
+[; ;AWS_Standard_Weight_Converter_V2.c: 186: static void timer0_init(void);
+[v _timer0_init `(v ~T0 @X0 0 sf ]
+"220
+[; ;AWS_Standard_Weight_Converter_V2.c: 220: static void startup_led_test(void);
+[v _startup_led_test `(v ~T0 @X0 0 sf ]
+"199
+[; ;AWS_Standard_Weight_Converter_V2.c: 199: static _Bool uart1_try_read(uint8_t *byte);
+[v _uart1_try_read `(a ~T0 @X0 0 sf1`*uc ]
+"188
+[; ;AWS_Standard_Weight_Converter_V2.c: 188: static uint32_t millis(void);
+[v _millis `(ul ~T0 @X0 0 sf ]
+"219
+[; ;AWS_Standard_Weight_Converter_V2.c: 219: static void handle_scale_byte(uint8_t byte, char *line_buffer, uint8_t *line_index);
+[v _handle_scale_byte `(v ~T0 @X0 0 sf3`uc`*uc`*uc ]
+"218
+[; ;AWS_Standard_Weight_Converter_V2.c: 218: static void process_scale_line(char *line);
+[v _process_scale_line `(v ~T0 @X0 0 sf1`*uc ]
+"15221 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15221:     struct {
+[s S738 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S738 . SCS HFIOFS OSTS IRCF IDLEN ]
+"15228
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15228:     struct {
+[s S739 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S739 . SCS0 SCS1 IOFS . IRCF0 IRCF1 IRCF2 ]
+"15220
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15220: typedef union {
+[u S737 `S738 1 `S739 1 ]
+[n S737 . . . ]
+"15238
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15238: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
+[v _OSCCONbits `VS737 ~T0 @X0 0 e@4051 ]
+"8273
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8273:     struct {
+[s S400 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S400 . TUN PLLEN INTSRC ]
+"8278
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8278:     struct {
+[s S401 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S401 . TUN0 TUN1 TUN2 TUN3 TUN4 TUN5 ]
+"8272
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8272: typedef union {
+[u S399 `S400 1 `S401 1 ]
+[n S399 . . . ]
+"8287
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8287: extern volatile OSCTUNEbits_t OSCTUNEbits __attribute__((address(0xF9B)));
+[v _OSCTUNEbits `VS399 ~T0 @X0 0 e@3995 ]
+"52
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 52: extern volatile unsigned char ANSELA __attribute__((address(0xF38)));
+[v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
+"97
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 97: extern volatile unsigned char ANSELB __attribute__((address(0xF39)));
+[v _ANSELB `Vuc ~T0 @X0 0 e@3897 ]
+"147
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 147: extern volatile unsigned char ANSELC __attribute__((address(0xF3A)));
+[v _ANSELC `Vuc ~T0 @X0 0 e@3898 ]
+"16031
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16031:     struct {
+[s S794 :7 `uc 1 :1 `uc 1 ]
+[n S794 . . NOT_RBPU ]
+"16035
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16035:     struct {
+[s S795 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S795 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
+"16045
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16045:     struct {
+[s S796 :7 `uc 1 :1 `uc 1 ]
+[n S796 . . RBPU ]
+"16030
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16030: typedef union {
+[u S793 `S794 1 `S795 1 `S796 1 ]
+[n S793 . . . . ]
+"16050
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16050: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
+[v _INTCON2bits `VS793 ~T0 @X0 0 e@4081 ]
+"8035
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8035:     struct {
+[s S392 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S392 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"8045
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8045:     struct {
+[s S393 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S393 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"8034
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8034: typedef union {
+[u S391 `S392 1 `S393 1 ]
+[n S391 . . . ]
+"8056
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8056: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
+[v _TRISCbits `VS391 ~T0 @X0 0 e@3988 ]
+"7813
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7813:     struct {
+[s S386 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S386 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"7823
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7823:     struct {
+[s S387 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S387 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"7812
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7812: typedef union {
+[u S385 `S386 1 `S387 1 ]
+[n S385 . . . ]
+"7834
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7834: extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
+[v _TRISBbits `VS385 ~T0 @X0 0 e@3987 ]
+"7362
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7362:     struct {
+[s S374 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S374 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"7372
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7372:     struct {
+[s S375 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S375 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
+"7361
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7361: typedef union {
+[u S373 `S374 1 `S375 1 ]
+[n S373 . . . ]
+"7383
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7383: extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
+[v _LATBbits `VS373 ~T0 @X0 0 e@3978 ]
+"7474
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7474:     struct {
+[s S377 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S377 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"7484
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7484:     struct {
+[s S378 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S378 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+"7473
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7473: typedef union {
+[u S376 `S377 1 `S378 1 ]
+[n S376 . . . ]
+"7495
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7495: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
+[v _LATCbits `VS376 ~T0 @X0 0 e@3979 ]
+"15304
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15304:     struct {
+[s S741 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S741 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
+"15312
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15312:     struct {
+[s S742 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S742 . T0PS0 T0PS1 T0PS2 ]
+"15303
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15303: typedef union {
+[u S740 `S741 1 `S742 1 ]
+[n S740 . . . ]
+"15318
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15318: extern volatile T0CONbits_t T0CONbits __attribute__((address(0xFD5)));
+[v _T0CONbits `VS740 ~T0 @X0 0 e@4053 ]
+"15003
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15003:     struct {
+[s S725 :1 `uc 1 ]
+[n S725 . NOT_BOR ]
+"15006
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15006:     struct {
+[s S726 :1 `uc 1 :1 `uc 1 ]
+[n S726 . . NOT_POR ]
+"15010
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15010:     struct {
+[s S727 :2 `uc 1 :1 `uc 1 ]
+[n S727 . . NOT_PD ]
+"15014
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15014:     struct {
+[s S728 :3 `uc 1 :1 `uc 1 ]
+[n S728 . . NOT_TO ]
+"15018
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15018:     struct {
+[s S729 :4 `uc 1 :1 `uc 1 ]
+[n S729 . . NOT_RI ]
+"15022
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15022:     struct {
+[s S730 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S730 . nBOR nPOR nPD nTO nRI . SBOREN IPEN ]
+"15032
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15032:     struct {
+[s S731 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S731 . BOR POR PD TO RI ]
+"15002
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15002: typedef union {
+[u S724 `S725 1 `S726 1 `S727 1 `S728 1 `S729 1 `S730 1 `S731 1 ]
+[n S724 . . . . . . . . ]
+"15040
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15040: extern volatile RCONbits_t RCONbits __attribute__((address(0xFD0)));
+[v _RCONbits `VS724 ~T0 @X0 0 e@4048 ]
+"6471
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6471:     struct {
+[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"6481
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6481:     struct {
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"6491
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6491:     struct {
+[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S344 . AN12 AN10 AN8 AN9 AN11 AN13 TX2 RX2 ]
+"6501
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6501:     struct {
+[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S345 . FLT0 C12IN3M P1B C12IN2M T5G T1G CK2 DT2 ]
+"6511
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6511:     struct {
+[s S346 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S346 . SRI C12IN3N CTED1 C12IN2N P1D CCP3 PGC PGD ]
+"6521
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6521:     struct {
+[s S347 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S347 . CCP4 P1C SDA2 CTED2 . T3CKI ]
+"6529
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6529:     struct {
+[s S348 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S348 . SS2 SCL2 SDI2 P2A . P3A ]
+"6537
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6537:     struct {
+[s S349 :1 `uc 1 ]
+[n S349 . NOT_SS2 ]
+"6540
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6540:     struct {
+[s S350 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S350 . nSS2 SCK2 . SDO2 . P2B ]
+"6548
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6548:     struct {
+[s S351 :3 `uc 1 :1 `uc 1 ]
+[n S351 . . CCP2_PA2 ]
+"6470
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6470: typedef union {
+[u S341 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 `S348 1 `S349 1 `S350 1 `S351 1 ]
+[n S341 . . . . . . . . . . . ]
+"6553
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6553: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
+[v _PORTBbits `VS341 ~T0 @X0 0 e@3969 ]
+"10019
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10019:     struct {
+[s S475 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S475 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"10029
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10029:     struct {
+[s S476 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S476 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+"10039
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10039:     struct {
+[s S477 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S477 . TXD8 . TX8_9 ]
+"10018
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10018: typedef union {
+[u S474 `S475 1 `S476 1 `S477 1 ]
+[n S474 . . . . ]
+"10045
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10045: extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0xFAC)));
+[v _TXSTA1bits `VS474 ~T0 @X0 0 e@4012 ]
+"11596
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11596:     struct {
+[s S561 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S561 . ABDEN WUE . BRG16 CKTXP DTRXP RCIDL ABDOVF ]
+"11606
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11606:     struct {
+[s S562 :4 `uc 1 :1 `uc 1 ]
+[n S562 . . SCKP ]
+"11610
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11610:     struct {
+[s S563 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S563 . ABDEN1 WUE1 . BRG161 SCKP1 DTRXP1 RCIDL1 ABDOVF1 ]
+"11620
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11620:     struct {
+[s S564 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S564 . . TXCKP RXDTP RCMT ]
+"11626
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11626:     struct {
+[s S565 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S565 . . TXCKP1 RXDTP1 RCMT1 ]
+"11632
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11632:     struct {
+[s S566 :5 `uc 1 :1 `uc 1 ]
+[n S566 . . RXCKP ]
+"11636
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11636:     struct {
+[s S567 :1 `uc 1 :1 `uc 1 ]
+[n S567 . . W4E ]
+"11595
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11595: typedef union {
+[u S560 `S561 1 `S562 1 `S563 1 `S564 1 `S565 1 `S566 1 `S567 1 ]
+[n S560 . . . . . . . . ]
+"11641
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11641: extern volatile BAUDCON1bits_t BAUDCON1bits __attribute__((address(0xFB8)));
+[v _BAUDCON1bits `VS560 ~T0 @X0 0 e@4024 ]
+"10613
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10613: extern volatile unsigned char SPBRGH1 __attribute__((address(0xFB0)));
+[v _SPBRGH1 `Vuc ~T0 @X0 0 e@4016 ]
+"10535
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10535: extern volatile unsigned char SPBRG1 __attribute__((address(0xFAF)));
+[v _SPBRG1 `Vuc ~T0 @X0 0 e@4015 ]
+"9563
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9563:     struct {
+[s S454 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S454 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"9573
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9573:     struct {
+[s S455 :3 `uc 1 :1 `uc 1 ]
+[n S455 . . ADEN ]
+"9577
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9577:     struct {
+[s S456 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S456 . RX9D1 OERR1 FERR1 ADDEN1 CREN1 SREN1 RX91 SPEN1 ]
+"9587
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9587:     struct {
+[s S457 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S457 . RCD8 . RC8_9 ]
+"9592
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9592:     struct {
+[s S458 :6 `uc 1 :1 `uc 1 ]
+[n S458 . . RC9 ]
+"9596
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9596:     struct {
+[s S459 :5 `uc 1 :1 `uc 1 ]
+[n S459 . . SRENA ]
+"9562
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9562: typedef union {
+[u S453 `S454 1 `S455 1 `S456 1 `S457 1 `S458 1 `S459 1 ]
+[n S453 . . . . . . . ]
+"9601
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9601: extern volatile RCSTA1bits_t RCSTA1bits __attribute__((address(0xFAB)));
+[v _RCSTA1bits `VS453 ~T0 @X0 0 e@4011 ]
+"4743
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4743:     struct {
+[s S226 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S226 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"4753
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4753:     struct {
+[s S227 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S227 . TX9D2 TRMT2 BRGH2 SENDB2 SYNC2 TXEN2 TX92 CSRC2 ]
+"4763
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4763:     struct {
+[s S228 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S228 . TXD82 . TX8_92 ]
+"4742
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4742: typedef union {
+[u S225 `S226 1 `S227 1 `S228 1 ]
+[n S225 . . . . ]
+"4769
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4769: extern volatile TXSTA2bits_t TXSTA2bits __attribute__((address(0xF72)));
+[v _TXSTA2bits `VS225 ~T0 @X0 0 e@3954 ]
+"4193
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4193:     struct {
+[s S204 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S204 . ABDEN WUE . BRG16 CKTXP DTRXP RCIDL ABDOVF ]
+"4203
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4203:     struct {
+[s S205 :4 `uc 1 :1 `uc 1 ]
+[n S205 . . SCKP ]
+"4207
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4207:     struct {
+[s S206 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S206 . ABDEN2 WUE2 . BRG162 SCKP2 DTRXP2 RCIDL2 ABDOVF2 ]
+"4217
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4217:     struct {
+[s S207 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S207 . . TXCKP2 RXDTP2 RCMT2 ]
+"4192
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4192: typedef union {
+[u S203 `S204 1 `S205 1 `S206 1 `S207 1 ]
+[n S203 . . . . . ]
+"4224
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4224: extern volatile BAUDCON2bits_t BAUDCON2bits __attribute__((address(0xF70)));
+[v _BAUDCON2bits `VS203 ~T0 @X0 0 e@3952 ]
+"5098
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5098: extern volatile unsigned char SPBRGH2 __attribute__((address(0xF76)));
+[v _SPBRGH2 `Vuc ~T0 @X0 0 e@3958 ]
+"5060
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5060: extern volatile unsigned char SPBRG2 __attribute__((address(0xF75)));
+[v _SPBRG2 `Vuc ~T0 @X0 0 e@3957 ]
+"4455
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4455:     struct {
+[s S214 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S214 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4465
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4465:     struct {
+[s S215 :3 `uc 1 :1 `uc 1 ]
+[n S215 . . ADEN ]
+"4469
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4469:     struct {
+[s S216 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S216 . RX9D2 OERR2 FERR2 ADDEN2 CREN2 SREN2 RX92 SPEN2 ]
+"4479
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4479:     struct {
+[s S217 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S217 . RCD82 . RC8_92 ]
+"4484
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4484:     struct {
+[s S218 :6 `uc 1 :1 `uc 1 ]
+[n S218 . . RC92 ]
+"4454
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4454: typedef union {
+[u S213 `S214 1 `S215 1 `S216 1 `S217 1 `S218 1 ]
+[n S213 . . . . . . ]
+"4489
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4489: extern volatile RCSTA2bits_t RCSTA2bits __attribute__((address(0xF71)));
+[v _RCSTA2bits `VS213 ~T0 @X0 0 e@3953 ]
+"8700
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8700:     struct {
+[s S416 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S416 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+"8709
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8709:     struct {
+[s S417 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S417 . . SSPIF TXIF RCIF ]
+"8699
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8699: typedef union {
+[u S415 `S416 1 `S417 1 ]
+[n S415 . . . ]
+"8716
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8716: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
+[v _PIR1bits `VS415 ~T0 @X0 0 e@3998 ]
+"10457
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10457: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
+[v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
+"9222
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9222:     struct {
+[s S438 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S438 . TMR1GIF TMR3GIF TMR5GIF CTMUIF TX2IF RC2IF BCL2IF SSP2IF ]
+"9232
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9232:     struct {
+[s S439 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S439 . . RXBNIF . TXBNIF ]
+"9221
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9221: typedef union {
+[u S437 `S438 1 `S439 1 ]
+[n S437 . . . ]
+"9239
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9239: extern volatile PIR3bits_t PIR3bits __attribute__((address(0xFA4)));
+[v _PIR3bits `VS437 ~T0 @X0 0 e@4004 ]
+"4984
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4984: extern volatile unsigned char TXREG2 __attribute__((address(0xF73)));
+[v _TXREG2 `Vuc ~T0 @X0 0 e@3955 ]
+"206 AWS_Standard_Weight_Converter_V2.c
+[; ;AWS_Standard_Weight_Converter_V2.c: 206: static char upper_ascii(char c);
+[v _upper_ascii `(uc ~T0 @X0 0 sf1`uc ]
+"168
+[; ;AWS_Standard_Weight_Converter_V2.c: 168: {
+[s S826 `a 1 `l 1 `a 1 `uc 1 `uc 1 ]
+[n S826 . valid native_milli_value has_decimal digit_count score ]
+"844
+[; ;AWS_Standard_Weight_Converter_V2.c: 844: static WeightUnit detect_unit(const char *line)
+[c E5736 0 1 2 3 4 .. ]
+[n E5736 . UNIT_UNKNOWN UNIT_KG UNIT_G UNIT_LB UNIT_TON  ]
+"177
+[; ;AWS_Standard_Weight_Converter_V2.c: 177: {
+[s S827 `a 1 `l 1 `E5736 1 `uc 1 ]
+[n S827 . valid milli_kg detected_unit status ]
+"54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 54: __asm("ANSELA equ 0F38h");
+[; <" ANSELA equ 0F38h ;# ">
+"99
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 99: __asm("ANSELB equ 0F39h");
+[; <" ANSELB equ 0F39h ;# ">
+"149
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 149: __asm("ANSELC equ 0F3Ah");
+[; <" ANSELC equ 0F3Ah ;# ">
+"200
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 200: __asm("PMD2 equ 0F3Dh");
+[; <" PMD2 equ 0F3Dh ;# ">
+"238
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 238: __asm("PMD1 equ 0F3Eh");
+[; <" PMD1 equ 0F3Eh ;# ">
+"303
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 303: __asm("PMD0 equ 0F3Fh");
+[; <" PMD0 equ 0F3Fh ;# ">
+"380
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 380: __asm("VREFCON2 equ 0F40h");
+[; <" VREFCON2 equ 0F40h ;# ">
+"385
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 385: __asm("DACCON1 equ 0F40h");
+[; <" DACCON1 equ 0F40h ;# ">
+"482
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 482: __asm("VREFCON1 equ 0F41h");
+[; <" VREFCON1 equ 0F41h ;# ">
+"487
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 487: __asm("DACCON0 equ 0F41h");
+[; <" DACCON0 equ 0F41h ;# ">
+"602
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 602: __asm("VREFCON0 equ 0F42h");
+[; <" VREFCON0 equ 0F42h ;# ">
+"607
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 607: __asm("FVRCON equ 0F42h");
+[; <" FVRCON equ 0F42h ;# ">
+"696
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 696: __asm("CTMUICON equ 0F43h");
+[; <" CTMUICON equ 0F43h ;# ">
+"701
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 701: __asm("CTMUICONH equ 0F43h");
+[; <" CTMUICONH equ 0F43h ;# ">
+"846
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 846: __asm("CTMUCONL equ 0F44h");
+[; <" CTMUCONL equ 0F44h ;# ">
+"851
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 851: __asm("CTMUCON1 equ 0F44h");
+[; <" CTMUCON1 equ 0F44h ;# ">
+"1000
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1000: __asm("CTMUCONH equ 0F45h");
+[; <" CTMUCONH equ 0F45h ;# ">
+"1005
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1005: __asm("CTMUCON0 equ 0F45h");
+[; <" CTMUCON0 equ 0F45h ;# ">
+"1112
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1112: __asm("SRCON1 equ 0F46h");
+[; <" SRCON1 equ 0F46h ;# ">
+"1174
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1174: __asm("SRCON0 equ 0F47h");
+[; <" SRCON0 equ 0F47h ;# ">
+"1245
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1245: __asm("CCPTMRS1 equ 0F48h");
+[; <" CCPTMRS1 equ 0F48h ;# ">
+"1297
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1297: __asm("CCPTMRS0 equ 0F49h");
+[; <" CCPTMRS0 equ 0F49h ;# ">
+"1371
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1371: __asm("T6CON equ 0F4Ah");
+[; <" T6CON equ 0F4Ah ;# ">
+"1442
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1442: __asm("PR6 equ 0F4Bh");
+[; <" PR6 equ 0F4Bh ;# ">
+"1462
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1462: __asm("TMR6 equ 0F4Ch");
+[; <" TMR6 equ 0F4Ch ;# ">
+"1482
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1482: __asm("T5GCON equ 0F4Dh");
+[; <" T5GCON equ 0F4Dh ;# ">
+"1577
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1577: __asm("T5CON equ 0F4Eh");
+[; <" T5CON equ 0F4Eh ;# ">
+"1686
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1686: __asm("TMR5 equ 0F4Fh");
+[; <" TMR5 equ 0F4Fh ;# ">
+"1693
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1693: __asm("TMR5L equ 0F4Fh");
+[; <" TMR5L equ 0F4Fh ;# ">
+"1713
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1713: __asm("TMR5H equ 0F50h");
+[; <" TMR5H equ 0F50h ;# ">
+"1733
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1733: __asm("T4CON equ 0F51h");
+[; <" T4CON equ 0F51h ;# ">
+"1804
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1804: __asm("PR4 equ 0F52h");
+[; <" PR4 equ 0F52h ;# ">
+"1824
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1824: __asm("TMR4 equ 0F53h");
+[; <" TMR4 equ 0F53h ;# ">
+"1844
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1844: __asm("CCP5CON equ 0F54h");
+[; <" CCP5CON equ 0F54h ;# ">
+"1908
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1908: __asm("CCPR5 equ 0F55h");
+[; <" CCPR5 equ 0F55h ;# ">
+"1915
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1915: __asm("CCPR5L equ 0F55h");
+[; <" CCPR5L equ 0F55h ;# ">
+"1935
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1935: __asm("CCPR5H equ 0F56h");
+[; <" CCPR5H equ 0F56h ;# ">
+"1955
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 1955: __asm("CCP4CON equ 0F57h");
+[; <" CCP4CON equ 0F57h ;# ">
+"2019
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2019: __asm("CCPR4 equ 0F58h");
+[; <" CCPR4 equ 0F58h ;# ">
+"2026
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2026: __asm("CCPR4L equ 0F58h");
+[; <" CCPR4L equ 0F58h ;# ">
+"2046
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2046: __asm("CCPR4H equ 0F59h");
+[; <" CCPR4H equ 0F59h ;# ">
+"2066
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2066: __asm("PSTR3CON equ 0F5Ah");
+[; <" PSTR3CON equ 0F5Ah ;# ">
+"2142
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2142: __asm("ECCP3AS equ 0F5Bh");
+[; <" ECCP3AS equ 0F5Bh ;# ">
+"2147
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2147: __asm("CCP3AS equ 0F5Bh");
+[; <" CCP3AS equ 0F5Bh ;# ">
+"2384
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2384: __asm("PWM3CON equ 0F5Ch");
+[; <" PWM3CON equ 0F5Ch ;# ">
+"2454
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2454: __asm("CCP3CON equ 0F5Dh");
+[; <" CCP3CON equ 0F5Dh ;# ">
+"2536
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2536: __asm("CCPR3 equ 0F5Eh");
+[; <" CCPR3 equ 0F5Eh ;# ">
+"2543
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2543: __asm("CCPR3L equ 0F5Eh");
+[; <" CCPR3L equ 0F5Eh ;# ">
+"2563
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2563: __asm("CCPR3H equ 0F5Fh");
+[; <" CCPR3H equ 0F5Fh ;# ">
+"2583
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2583: __asm("SLRCON equ 0F60h");
+[; <" SLRCON equ 0F60h ;# ">
+"2615
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2615: __asm("WPUB equ 0F61h");
+[; <" WPUB equ 0F61h ;# ">
+"2677
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2677: __asm("IOCB equ 0F62h");
+[; <" IOCB equ 0F62h ;# ">
+"2716
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2716: __asm("PSTR2CON equ 0F63h");
+[; <" PSTR2CON equ 0F63h ;# ">
+"2856
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2856: __asm("ECCP2AS equ 0F64h");
+[; <" ECCP2AS equ 0F64h ;# ">
+"2861
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 2861: __asm("CCP2AS equ 0F64h");
+[; <" CCP2AS equ 0F64h ;# ">
+"3098
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3098: __asm("PWM2CON equ 0F65h");
+[; <" PWM2CON equ 0F65h ;# ">
+"3168
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3168: __asm("CCP2CON equ 0F66h");
+[; <" CCP2CON equ 0F66h ;# ">
+"3250
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3250: __asm("CCPR2 equ 0F67h");
+[; <" CCPR2 equ 0F67h ;# ">
+"3257
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3257: __asm("CCPR2L equ 0F67h");
+[; <" CCPR2L equ 0F67h ;# ">
+"3277
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3277: __asm("CCPR2H equ 0F68h");
+[; <" CCPR2H equ 0F68h ;# ">
+"3297
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3297: __asm("SSP2CON3 equ 0F69h");
+[; <" SSP2CON3 equ 0F69h ;# ">
+"3359
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3359: __asm("SSP2MSK equ 0F6Ah");
+[; <" SSP2MSK equ 0F6Ah ;# ">
+"3429
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3429: __asm("SSP2CON2 equ 0F6Bh");
+[; <" SSP2CON2 equ 0F6Bh ;# ">
+"3574
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3574: __asm("SSP2CON1 equ 0F6Ch");
+[; <" SSP2CON1 equ 0F6Ch ;# ">
+"3694
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 3694: __asm("SSP2STAT equ 0F6Dh");
+[; <" SSP2STAT equ 0F6Dh ;# ">
+"4094
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4094: __asm("SSP2ADD equ 0F6Eh");
+[; <" SSP2ADD equ 0F6Eh ;# ">
+"4164
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4164: __asm("SSP2BUF equ 0F6Fh");
+[; <" SSP2BUF equ 0F6Fh ;# ">
+"4184
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4184: __asm("BAUDCON2 equ 0F70h");
+[; <" BAUDCON2 equ 0F70h ;# ">
+"4189
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4189: __asm("BAUD2CON equ 0F70h");
+[; <" BAUD2CON equ 0F70h ;# ">
+"4446
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4446: __asm("RCSTA2 equ 0F71h");
+[; <" RCSTA2 equ 0F71h ;# ">
+"4451
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4451: __asm("RC2STA equ 0F71h");
+[; <" RC2STA equ 0F71h ;# ">
+"4734
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4734: __asm("TXSTA2 equ 0F72h");
+[; <" TXSTA2 equ 0F72h ;# ">
+"4739
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4739: __asm("TX2STA equ 0F72h");
+[; <" TX2STA equ 0F72h ;# ">
+"4986
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4986: __asm("TXREG2 equ 0F73h");
+[; <" TXREG2 equ 0F73h ;# ">
+"4991
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 4991: __asm("TX2REG equ 0F73h");
+[; <" TX2REG equ 0F73h ;# ">
+"5024
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5024: __asm("RCREG2 equ 0F74h");
+[; <" RCREG2 equ 0F74h ;# ">
+"5029
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5029: __asm("RC2REG equ 0F74h");
+[; <" RC2REG equ 0F74h ;# ">
+"5062
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5062: __asm("SPBRG2 equ 0F75h");
+[; <" SPBRG2 equ 0F75h ;# ">
+"5067
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5067: __asm("SP2BRG equ 0F75h");
+[; <" SP2BRG equ 0F75h ;# ">
+"5100
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5100: __asm("SPBRGH2 equ 0F76h");
+[; <" SPBRGH2 equ 0F76h ;# ">
+"5105
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5105: __asm("SP2BRGH equ 0F76h");
+[; <" SP2BRGH equ 0F76h ;# ">
+"5138
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5138: __asm("CM2CON1 equ 0F77h");
+[; <" CM2CON1 equ 0F77h ;# ">
+"5143
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5143: __asm("CM12CON equ 0F77h");
+[; <" CM12CON equ 0F77h ;# ">
+"5260
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5260: __asm("CM2CON0 equ 0F78h");
+[; <" CM2CON0 equ 0F78h ;# ">
+"5265
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5265: __asm("CM2CON equ 0F78h");
+[; <" CM2CON equ 0F78h ;# ">
+"5540
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5540: __asm("CM1CON0 equ 0F79h");
+[; <" CM1CON0 equ 0F79h ;# ">
+"5545
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5545: __asm("CM1CON equ 0F79h");
+[; <" CM1CON equ 0F79h ;# ">
+"5962
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5962: __asm("PIE4 equ 0F7Ah");
+[; <" PIE4 equ 0F7Ah ;# ">
+"5994
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 5994: __asm("PIR4 equ 0F7Bh");
+[; <" PIR4 equ 0F7Bh ;# ">
+"6026
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6026: __asm("IPR4 equ 0F7Ch");
+[; <" IPR4 equ 0F7Ch ;# ">
+"6066
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6066: __asm("PIE5 equ 0F7Dh");
+[; <" PIE5 equ 0F7Dh ;# ">
+"6098
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6098: __asm("PIR5 equ 0F7Eh");
+[; <" PIR5 equ 0F7Eh ;# ">
+"6130
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6130: __asm("IPR5 equ 0F7Fh");
+[; <" IPR5 equ 0F7Fh ;# ">
+"6176
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6176: __asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+"6467
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6467: __asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+"6840
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 6840: __asm("PORTC equ 0F82h");
+[; <" PORTC equ 0F82h ;# ">
+"7171
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7171: __asm("PORTE equ 0F84h");
+[; <" PORTE equ 0F84h ;# ">
+"7246
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7246: __asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+"7358
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7358: __asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+"7470
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7470: __asm("LATC equ 0F8Bh");
+[; <" LATC equ 0F8Bh ;# ">
+"7582
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7582: __asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+"7587
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7587: __asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+"7804
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7804: __asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+"7809
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 7809: __asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+"8026
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8026: __asm("TRISC equ 0F94h");
+[; <" TRISC equ 0F94h ;# ">
+"8031
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8031: __asm("DDRC equ 0F94h");
+[; <" DDRC equ 0F94h ;# ">
+"8248
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8248: __asm("TRISE equ 0F96h");
+[; <" TRISE equ 0F96h ;# ">
+"8269
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8269: __asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"8339
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8339: __asm("HLVDCON equ 0F9Ch");
+[; <" HLVDCON equ 0F9Ch ;# ">
+"8344
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8344: __asm("LVDCON equ 0F9Ch");
+[; <" LVDCON equ 0F9Ch ;# ">
+"8619
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8619: __asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+"8696
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8696: __asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+"8773
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8773: __asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+"8850
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8850: __asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+"8936
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 8936: __asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+"9022
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9022: __asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+"9108
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9108: __asm("PIE3 equ 0FA3h");
+[; <" PIE3 equ 0FA3h ;# ">
+"9218
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9218: __asm("PIR3 equ 0FA4h");
+[; <" PIR3 equ 0FA4h ;# ">
+"9296
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9296: __asm("IPR3 equ 0FA5h");
+[; <" IPR3 equ 0FA5h ;# ">
+"9374
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9374: __asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+"9440
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9440: __asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+"9460
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9460: __asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+"9480
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9480: __asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+"9550
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9550: __asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+"9555
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9555: __asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+"9559
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 9559: __asm("RC1STA equ 0FABh");
+[; <" RC1STA equ 0FABh ;# ">
+"10006
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10006: __asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+"10011
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10011: __asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+"10015
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10015: __asm("TX1STA equ 0FACh");
+[; <" TX1STA equ 0FACh ;# ">
+"10381
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10381: __asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+"10386
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10386: __asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+"10390
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10390: __asm("TX1REG equ 0FADh");
+[; <" TX1REG equ 0FADh ;# ">
+"10459
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10459: __asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+"10464
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10464: __asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+"10468
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10468: __asm("RC1REG equ 0FAEh");
+[; <" RC1REG equ 0FAEh ;# ">
+"10537
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10537: __asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+"10542
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10542: __asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+"10546
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10546: __asm("SP1BRG equ 0FAFh");
+[; <" SP1BRG equ 0FAFh ;# ">
+"10615
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10615: __asm("SPBRGH1 equ 0FB0h");
+[; <" SPBRGH1 equ 0FB0h ;# ">
+"10620
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10620: __asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+"10624
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10624: __asm("SP1BRGH equ 0FB0h");
+[; <" SP1BRGH equ 0FB0h ;# ">
+"10693
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10693: __asm("T3CON equ 0FB1h");
+[; <" T3CON equ 0FB1h ;# ">
+"10801
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10801: __asm("TMR3 equ 0FB2h");
+[; <" TMR3 equ 0FB2h ;# ">
+"10808
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10808: __asm("TMR3L equ 0FB2h");
+[; <" TMR3L equ 0FB2h ;# ">
+"10828
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10828: __asm("TMR3H equ 0FB3h");
+[; <" TMR3H equ 0FB3h ;# ">
+"10848
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10848: __asm("T3GCON equ 0FB4h");
+[; <" T3GCON equ 0FB4h ;# ">
+"10943
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10943: __asm("ECCP1AS equ 0FB6h");
+[; <" ECCP1AS equ 0FB6h ;# ">
+"10948
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 10948: __asm("ECCPAS equ 0FB6h");
+[; <" ECCPAS equ 0FB6h ;# ">
+"11325
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11325: __asm("PWM1CON equ 0FB7h");
+[; <" PWM1CON equ 0FB7h ;# ">
+"11330
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11330: __asm("PWMCON equ 0FB7h");
+[; <" PWMCON equ 0FB7h ;# ">
+"11579
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11579: __asm("BAUDCON1 equ 0FB8h");
+[; <" BAUDCON1 equ 0FB8h ;# ">
+"11584
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11584: __asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+"11588
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11588: __asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+"11592
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 11592: __asm("BAUD1CON equ 0FB8h");
+[; <" BAUD1CON equ 0FB8h ;# ">
+"12253
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12253: __asm("PSTR1CON equ 0FB9h");
+[; <" PSTR1CON equ 0FB9h ;# ">
+"12258
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12258: __asm("PSTRCON equ 0FB9h");
+[; <" PSTRCON equ 0FB9h ;# ">
+"12403
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12403: __asm("T2CON equ 0FBAh");
+[; <" T2CON equ 0FBAh ;# ">
+"12474
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12474: __asm("PR2 equ 0FBBh");
+[; <" PR2 equ 0FBBh ;# ">
+"12494
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12494: __asm("TMR2 equ 0FBCh");
+[; <" TMR2 equ 0FBCh ;# ">
+"12514
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12514: __asm("CCP1CON equ 0FBDh");
+[; <" CCP1CON equ 0FBDh ;# ">
+"12596
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12596: __asm("CCPR1 equ 0FBEh");
+[; <" CCPR1 equ 0FBEh ;# ">
+"12603
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12603: __asm("CCPR1L equ 0FBEh");
+[; <" CCPR1L equ 0FBEh ;# ">
+"12623
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12623: __asm("CCPR1H equ 0FBFh");
+[; <" CCPR1H equ 0FBFh ;# ">
+"12643
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12643: __asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+"12714
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12714: __asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+"12782
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12782: __asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+"12907
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12907: __asm("ADRES equ 0FC3h");
+[; <" ADRES equ 0FC3h ;# ">
+"12914
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12914: __asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+"12934
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12934: __asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+"12954
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12954: __asm("SSP1CON2 equ 0FC5h");
+[; <" SSP1CON2 equ 0FC5h ;# ">
+"12959
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 12959: __asm("SSPCON2 equ 0FC5h");
+[; <" SSPCON2 equ 0FC5h ;# ">
+"13308
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 13308: __asm("SSP1CON1 equ 0FC6h");
+[; <" SSP1CON1 equ 0FC6h ;# ">
+"13313
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 13313: __asm("SSPCON1 equ 0FC6h");
+[; <" SSPCON1 equ 0FC6h ;# ">
+"13546
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 13546: __asm("SSP1STAT equ 0FC7h");
+[; <" SSP1STAT equ 0FC7h ;# ">
+"13551
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 13551: __asm("SSPSTAT equ 0FC7h");
+[; <" SSPSTAT equ 0FC7h ;# ">
+"14176
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14176: __asm("SSP1ADD equ 0FC8h");
+[; <" SSP1ADD equ 0FC8h ;# ">
+"14181
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14181: __asm("SSPADD equ 0FC8h");
+[; <" SSPADD equ 0FC8h ;# ">
+"14430
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14430: __asm("SSP1BUF equ 0FC9h");
+[; <" SSP1BUF equ 0FC9h ;# ">
+"14435
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14435: __asm("SSPBUF equ 0FC9h");
+[; <" SSPBUF equ 0FC9h ;# ">
+"14484
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14484: __asm("SSP1MSK equ 0FCAh");
+[; <" SSP1MSK equ 0FCAh ;# ">
+"14489
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14489: __asm("SSPMSK equ 0FCAh");
+[; <" SSPMSK equ 0FCAh ;# ">
+"14622
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14622: __asm("SSP1CON3 equ 0FCBh");
+[; <" SSP1CON3 equ 0FCBh ;# ">
+"14627
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14627: __asm("SSPCON3 equ 0FCBh");
+[; <" SSPCON3 equ 0FCBh ;# ">
+"14744
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14744: __asm("T1GCON equ 0FCCh");
+[; <" T1GCON equ 0FCCh ;# ">
+"14839
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14839: __asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+"14952
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14952: __asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+"14959
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14959: __asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+"14979
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14979: __asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+"14999
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 14999: __asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+"15132
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15132: __asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+"15160
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15160: __asm("OSCCON2 equ 0FD2h");
+[; <" OSCCON2 equ 0FD2h ;# ">
+"15217
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15217: __asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+"15300
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15300: __asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+"15370
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15370: __asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+"15377
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15377: __asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+"15397
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15397: __asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+"15417
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15417: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"15488
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15488: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"15495
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15495: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"15515
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15515: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"15522
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15522: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"15542
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15542: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"15562
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15562: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"15582
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15582: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"15602
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15602: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"15622
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15622: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"15629
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15629: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"15636
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15636: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"15656
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15656: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"15663
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15663: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"15683
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15683: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"15703
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15703: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"15723
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15723: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"15743
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15743: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"15763
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15763: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"15801
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15801: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"15808
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15808: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"15828
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15828: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"15835
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15835: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"15855
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15855: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"15875
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15875: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"15895
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15895: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"15915
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15915: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"15935
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 15935: __asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+"16027
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16027: __asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+"16097
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16097: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"16214
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16214: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"16221
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16221: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"16241
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16241: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"16261
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16261: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"16283
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16283: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"16290
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16290: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"16310
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16310: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"16330
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16330: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"16361
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16361: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"16368
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16368: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"16375
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16375: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"16395
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16395: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"16415
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16415: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"16422
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16422: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"16528
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16528: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"16535
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16535: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"16555
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16555: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"16575
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k22.h: 16575: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"44 AWS_Standard_Weight_Converter_V2.c
+[p x FOSC  =  INTIO67 ]
+"45
+[p x PLLCFG  =  OFF ]
+"46
+[p x PRICLKEN  =  ON ]
+"47
+[p x FCMEN  =  OFF ]
+"48
+[p x IESO  =  OFF ]
+"51
+[p x PWRTEN  =  ON ]
+"52
+[p x BOREN  =  SBORDIS ]
+"53
+[p x BORV  =  190 ]
+"56
+[p x WDTEN  =  OFF ]
+"57
+[p x WDTPS  =  32768 ]
+"60
+[p x CCP2MX  =  PORTC1 ]
+"61
+[p x PBADEN  =  OFF ]
+"62
+[p x CCP3MX  =  PORTB5 ]
+"63
+[p x HFOFST  =  ON ]
+"64
+[p x T3CMX  =  PORTC0 ]
+"65
+[p x P2BMX  =  PORTB5 ]
+"66
+[p x MCLRE  =  EXTMCLR ]
+"69
+[p x STVREN  =  ON ]
+"70
+[p x LVP  =  OFF ]
+"71
+[p x XINST  =  OFF ]
+"72
+[p x DEBUG  =  OFF ]
+"75
+[p x CP0  =  OFF ]
+"76
+[p x CP1  =  OFF ]
+"77
+[p x CP2  =  OFF ]
+"78
+[p x CP3  =  OFF ]
+"81
+[p x CPB  =  OFF ]
+"82
+[p x CPD  =  OFF ]
+"85
+[p x WRT0  =  OFF ]
+"86
+[p x WRT1  =  OFF ]
+"87
+[p x WRT2  =  OFF ]
+"88
+[p x WRT3  =  OFF ]
+"91
+[p x WRTC  =  OFF ]
+"92
+[p x WRTB  =  OFF ]
+"93
+[p x WRTD  =  OFF ]
+"96
+[p x EBTR0  =  OFF ]
+"97
+[p x EBTR1  =  OFF ]
+"98
+[p x EBTR2  =  OFF ]
+"99
+[p x EBTR3  =  OFF ]
+"102
+[p x EBTRB  =  OFF ]
+"156
+[; ;AWS_Standard_Weight_Converter_V2.c: 156: static volatile uint32_t g_millis = 0;
+[v _g_millis `Vul ~T0 @X0 1 s ]
+[i _g_millis
+-> -> -> 0 `i `l `ul
+]
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"222
+[; ;AWS_Standard_Weight_Converter_V2.c: 222: void __attribute__((picinterrupt(("")))) isr(void)
+[v _isr `(v ~T1 @X0 1 ef ]
+"223
+[; ;AWS_Standard_Weight_Converter_V2.c: 223: {
+{
+[e :U _isr ]
+[f ]
+"224
+[; ;AWS_Standard_Weight_Converter_V2.c: 224:     if (INTCONbits.TMR0IF)
+[e $ ! != -> . . _INTCONbits 0 2 `i -> 0 `i 829  ]
+"225
+[; ;AWS_Standard_Weight_Converter_V2.c: 225:     {
+{
+"226
+[; ;AWS_Standard_Weight_Converter_V2.c: 226:         TMR0H = ((uint8_t)(65036u >> 8));
+[e = _TMR0H -> >> -> 65036 `ui -> 8 `i `uc ]
+"227
+[; ;AWS_Standard_Weight_Converter_V2.c: 227:         TMR0L = ((uint8_t)(65036u & 0xFF));
+[e = _TMR0L -> & -> 65036 `ui -> -> 255 `i `ui `uc ]
+"228
+[; ;AWS_Standard_Weight_Converter_V2.c: 228:         INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"229
+[; ;AWS_Standard_Weight_Converter_V2.c: 229:         g_millis++;
+[e ++ _g_millis -> -> 1 `i `Vul ]
+"230
+[; ;AWS_Standard_Weight_Converter_V2.c: 230:     }
+}
+[e :U 829 ]
+"231
+[; ;AWS_Standard_Weight_Converter_V2.c: 231: }
+[e :UE 828 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"233
+[; ;AWS_Standard_Weight_Converter_V2.c: 233: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"234
+[; ;AWS_Standard_Weight_Converter_V2.c: 234: {
+{
+[e :U _main ]
+[f ]
+"235
+[; ;AWS_Standard_Weight_Converter_V2.c: 235:     char scale_line[96u];
+[v _scale_line `uc ~T0 @X0 -> 96 `i a ]
+"236
+[; ;AWS_Standard_Weight_Converter_V2.c: 236:     uint8_t scale_line_index = 0u;
+[v _scale_line_index `uc ~T0 @X0 1 a ]
+[e = _scale_line_index -> -> 0 `ui `uc ]
+"237
+[; ;AWS_Standard_Weight_Converter_V2.c: 237:     uint8_t received_byte = 0u;
+[v _received_byte `uc ~T0 @X0 1 a ]
+[e = _received_byte -> -> 0 `ui `uc ]
+"238
+[; ;AWS_Standard_Weight_Converter_V2.c: 238:     uint32_t last_rx_time = 0UL;
+[v _last_rx_time `ul ~T0 @X0 1 a ]
+[e = _last_rx_time -> 0 `ul ]
+"239
+[; ;AWS_Standard_Weight_Converter_V2.c: 239:     uint32_t scale_baud = 0UL;
+[v _scale_baud `ul ~T0 @X0 1 a ]
+[e = _scale_baud -> 0 `ul ]
+"240
+[; ;AWS_Standard_Weight_Converter_V2.c: 240:     uint32_t pc_baud = 0UL;
+[v _pc_baud `ul ~T0 @X0 1 a ]
+[e = _pc_baud -> 0 `ul ]
+"242
+[; ;AWS_Standard_Weight_Converter_V2.c: 242:     system_init();
+[e ( _system_init ..  ]
+"243
+[; ;AWS_Standard_Weight_Converter_V2.c: 243:     delay_ms_blocking((uint16_t)(30));
+[e ( _delay_ms_blocking (1 -> -> 30 `i `us ]
+"245
+[; ;AWS_Standard_Weight_Converter_V2.c: 245:     scale_baud = read_dip_baud();
+[e = _scale_baud ( _read_dip_baud ..  ]
+"250
+[; ;AWS_Standard_Weight_Converter_V2.c: 250:     pc_baud = 9600UL;
+[e = _pc_baud -> 9600 `ul ]
+"253
+[; ;AWS_Standard_Weight_Converter_V2.c: 253:     uart1_init(scale_baud);
+[e ( _uart1_init (1 _scale_baud ]
+"254
+[; ;AWS_Standard_Weight_Converter_V2.c: 254:     uart2_init(pc_baud);
+[e ( _uart2_init (1 _pc_baud ]
+"255
+[; ;AWS_Standard_Weight_Converter_V2.c: 255:     timer0_init();
+[e ( _timer0_init ..  ]
+"256
+[; ;AWS_Standard_Weight_Converter_V2.c: 256:     startup_led_test();
+[e ( _startup_led_test ..  ]
+"266
+[; ;AWS_Standard_Weight_Converter_V2.c: 266:     while (1)
+[e :U 832 ]
+"267
+[; ;AWS_Standard_Weight_Converter_V2.c: 267:     {
+{
+"268
+[; ;AWS_Standard_Weight_Converter_V2.c: 268:         if (uart1_try_read(&received_byte))
+[e $ ! != -> ( _uart1_try_read (1 &U _received_byte `i -> 0 `i 834  ]
+"269
+[; ;AWS_Standard_Weight_Converter_V2.c: 269:         {
+{
+"270
+[; ;AWS_Standard_Weight_Converter_V2.c: 270:             last_rx_time = millis();
+[e = _last_rx_time ( _millis ..  ]
+"271
+[; ;AWS_Standard_Weight_Converter_V2.c: 271:             handle_scale_byte(received_byte, scale_line, &scale_line_index);
+[e ( _handle_scale_byte (3 , , _received_byte &U _scale_line &U _scale_line_index ]
+"272
+[; ;AWS_Standard_Weight_Converter_V2.c: 272:         }
+}
+[e :U 834 ]
+"274
+[; ;AWS_Standard_Weight_Converter_V2.c: 274:         if (scale_line_index > 0u)
+[e $ ! > -> _scale_line_index `ui -> 0 `ui 835  ]
+"275
+[; ;AWS_Standard_Weight_Converter_V2.c: 275:         {
+{
+"276
+[; ;AWS_Standard_Weight_Converter_V2.c: 276:             uint32_t now = millis();
+[v _now `ul ~T0 @X0 1 a ]
+[e = _now ( _millis ..  ]
+"277
+[; ;AWS_Standard_Weight_Converter_V2.c: 277:             if ((uint32_t)(now - last_rx_time) >= 80u)
+[e $ ! >= - _now _last_rx_time -> -> 80 `ui `ul 836  ]
+"278
+[; ;AWS_Standard_Weight_Converter_V2.c: 278:             {
+{
+"279
+[; ;AWS_Standard_Weight_Converter_V2.c: 279:                 scale_line[scale_line_index] = '\0';
+[e = *U + &U _scale_line * -> _scale_line_index `ux -> -> # *U &U _scale_line `ui `ux -> -> 0 `ui `uc ]
+"280
+[; ;AWS_Standard_Weight_Converter_V2.c: 280:                 process_scale_line(scale_line);
+[e ( _process_scale_line (1 &U _scale_line ]
+"281
+[; ;AWS_Standard_Weight_Converter_V2.c: 281:                 scale_line_index = 0u;
+[e = _scale_line_index -> -> 0 `ui `uc ]
+"282
+[; ;AWS_Standard_Weight_Converter_V2.c: 282:             }
+}
+[e :U 836 ]
+"283
+[; ;AWS_Standard_Weight_Converter_V2.c: 283:         }
+}
+[e :U 835 ]
+"284
+[; ;AWS_Standard_Weight_Converter_V2.c: 284:     }
+}
+[e :U 831 ]
+[e $U 832  ]
+[e :U 833 ]
+"285
+[; ;AWS_Standard_Weight_Converter_V2.c: 285: }
+[e :UE 830 ]
+}
+"287
+[; ;AWS_Standard_Weight_Converter_V2.c: 287: static void oscillator_init(void)
+[v _oscillator_init `(v ~T0 @X0 1 sf ]
+"288
+[; ;AWS_Standard_Weight_Converter_V2.c: 288: {
+{
+[e :U _oscillator_init ]
+[f ]
+"289
+[; ;AWS_Standard_Weight_Converter_V2.c: 289:     OSCCONbits.SCS = 0b10;
+[e = . . _OSCCONbits 0 0 -> -> 2 `i `uc ]
+"290
+[; ;AWS_Standard_Weight_Converter_V2.c: 290:     OSCCONbits.IRCF = 0b111;
+[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
+"291
+[; ;AWS_Standard_Weight_Converter_V2.c: 291:     OSCTUNEbits.PLLEN = 0;
+[e = . . _OSCTUNEbits 0 1 -> -> 0 `i `uc ]
+"292
+[; ;AWS_Standard_Weight_Converter_V2.c: 292:     delay_ms_blocking((uint16_t)(5));
+[e ( _delay_ms_blocking (1 -> -> 5 `i `us ]
+"293
+[; ;AWS_Standard_Weight_Converter_V2.c: 293: }
+[e :UE 837 ]
+}
+"295
+[; ;AWS_Standard_Weight_Converter_V2.c: 295: static void gpio_init(void)
+[v _gpio_init `(v ~T0 @X0 1 sf ]
+"296
+[; ;AWS_Standard_Weight_Converter_V2.c: 296: {
+{
+[e :U _gpio_init ]
+[f ]
+"297
+[; ;AWS_Standard_Weight_Converter_V2.c: 297:     ANSELA = 0x00;
+[e = _ANSELA -> -> 0 `i `uc ]
+"298
+[; ;AWS_Standard_Weight_Converter_V2.c: 298:     ANSELB = 0x00;
+[e = _ANSELB -> -> 0 `i `uc ]
+"299
+[; ;AWS_Standard_Weight_Converter_V2.c: 299:     ANSELC = 0x00;
+[e = _ANSELC -> -> 0 `i `uc ]
+"300
+[; ;AWS_Standard_Weight_Converter_V2.c: 300:     INTCON2bits.RBPU = 1;
+[e = . . _INTCON2bits 2 1 -> -> 1 `i `uc ]
+"302
+[; ;AWS_Standard_Weight_Converter_V2.c: 302:     TRISCbits.TRISC7 = 1;
+[e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
+"303
+[; ;AWS_Standard_Weight_Converter_V2.c: 303:     TRISCbits.TRISC6 = 0;
+[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
+"304
+[; ;AWS_Standard_Weight_Converter_V2.c: 304:     TRISBbits.TRISB6 = 0;
+[e = . . _TRISBbits 0 6 -> -> 0 `i `uc ]
+"305
+[; ;AWS_Standard_Weight_Converter_V2.c: 305:     TRISBbits.TRISB7 = 1;
+[e = . . _TRISBbits 0 7 -> -> 1 `i `uc ]
+"307
+[; ;AWS_Standard_Weight_Converter_V2.c: 307:     TRISBbits.TRISB0 = 1;
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+"308
+[; ;AWS_Standard_Weight_Converter_V2.c: 308:     TRISBbits.TRISB1 = 1;
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+"309
+[; ;AWS_Standard_Weight_Converter_V2.c: 309:     TRISBbits.TRISB2 = 1;
+[e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
+"311
+[; ;AWS_Standard_Weight_Converter_V2.c: 311:     TRISBbits.TRISB4 = 0;
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
+"312
+[; ;AWS_Standard_Weight_Converter_V2.c: 312:     TRISBbits.TRISB5 = 0;
+[e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
+"313
+[; ;AWS_Standard_Weight_Converter_V2.c: 313:     TRISCbits.TRISC0 = 0;
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+"315
+[; ;AWS_Standard_Weight_Converter_V2.c: 315:     LATBbits.LATB4 = 0;
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+"316
+[; ;AWS_Standard_Weight_Converter_V2.c: 316:     LATBbits.LATB5 = 0;
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+"317
+[; ;AWS_Standard_Weight_Converter_V2.c: 317:     LATCbits.LATC0 = 0;
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+"318
+[; ;AWS_Standard_Weight_Converter_V2.c: 318: }
+[e :UE 838 ]
+}
+"320
+[; ;AWS_Standard_Weight_Converter_V2.c: 320: static void timer0_init(void)
+[v _timer0_init `(v ~T0 @X0 1 sf ]
+"321
+[; ;AWS_Standard_Weight_Converter_V2.c: 321: {
+{
+[e :U _timer0_init ]
+[f ]
+"322
+[; ;AWS_Standard_Weight_Converter_V2.c: 322:     T0CONbits.TMR0ON = 0;
+[e = . . _T0CONbits 0 5 -> -> 0 `i `uc ]
+"323
+[; ;AWS_Standard_Weight_Converter_V2.c: 323:     T0CONbits.T08BIT = 0;
+[e = . . _T0CONbits 0 4 -> -> 0 `i `uc ]
+"324
+[; ;AWS_Standard_Weight_Converter_V2.c: 324:     T0CONbits.T0CS = 0;
+[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
+"325
+[; ;AWS_Standard_Weight_Converter_V2.c: 325:     T0CONbits.T0SE = 0;
+[e = . . _T0CONbits 0 2 -> -> 0 `i `uc ]
+"326
+[; ;AWS_Standard_Weight_Converter_V2.c: 326:     T0CONbits.PSA = 0;
+[e = . . _T0CONbits 0 1 -> -> 0 `i `uc ]
+"327
+[; ;AWS_Standard_Weight_Converter_V2.c: 327:     T0CONbits.T0PS = 0b010;
+[e = . . _T0CONbits 0 0 -> -> 2 `i `uc ]
+"329
+[; ;AWS_Standard_Weight_Converter_V2.c: 329:     TMR0H = ((uint8_t)(65036u >> 8));
+[e = _TMR0H -> >> -> 65036 `ui -> 8 `i `uc ]
+"330
+[; ;AWS_Standard_Weight_Converter_V2.c: 330:     TMR0L = ((uint8_t)(65036u & 0xFF));
+[e = _TMR0L -> & -> 65036 `ui -> -> 255 `i `ui `uc ]
+"332
+[; ;AWS_Standard_Weight_Converter_V2.c: 332:     INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"333
+[; ;AWS_Standard_Weight_Converter_V2.c: 333:     INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+"334
+[; ;AWS_Standard_Weight_Converter_V2.c: 334:     RCONbits.IPEN = 0;
+[e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
+"335
+[; ;AWS_Standard_Weight_Converter_V2.c: 335:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"336
+[; ;AWS_Standard_Weight_Converter_V2.c: 336:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"338
+[; ;AWS_Standard_Weight_Converter_V2.c: 338:     T0CONbits.TMR0ON = 1;
+[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
+"339
+[; ;AWS_Standard_Weight_Converter_V2.c: 339: }
+[e :UE 839 ]
+}
+"341
+[; ;AWS_Standard_Weight_Converter_V2.c: 341: static void system_init(void)
+[v _system_init `(v ~T0 @X0 1 sf ]
+"342
+[; ;AWS_Standard_Weight_Converter_V2.c: 342: {
+{
+[e :U _system_init ]
+[f ]
+"343
+[; ;AWS_Standard_Weight_Converter_V2.c: 343:     oscillator_init();
+[e ( _oscillator_init ..  ]
+"344
+[; ;AWS_Standard_Weight_Converter_V2.c: 344:     gpio_init();
+[e ( _gpio_init ..  ]
+"345
+[; ;AWS_Standard_Weight_Converter_V2.c: 345: }
+[e :UE 840 ]
+}
+"347
+[; ;AWS_Standard_Weight_Converter_V2.c: 347: static uint32_t millis(void)
+[v _millis `(ul ~T0 @X0 1 sf ]
+"348
+[; ;AWS_Standard_Weight_Converter_V2.c: 348: {
+{
+[e :U _millis ]
+[f ]
+"349
+[; ;AWS_Standard_Weight_Converter_V2.c: 349:     uint32_t value;
+[v _value `ul ~T0 @X0 1 a ]
+"350
+[; ;AWS_Standard_Weight_Converter_V2.c: 350:     uint8_t gie_state;
+[v _gie_state `uc ~T0 @X0 1 a ]
+"352
+[; ;AWS_Standard_Weight_Converter_V2.c: 352:     gie_state = INTCONbits.GIE;
+[e = _gie_state . . _INTCONbits 1 7 ]
+"353
+[; ;AWS_Standard_Weight_Converter_V2.c: 353:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+"354
+[; ;AWS_Standard_Weight_Converter_V2.c: 354:     value = g_millis;
+[e = _value _g_millis ]
+"355
+[; ;AWS_Standard_Weight_Converter_V2.c: 355:     INTCONbits.GIE = gie_state;
+[e = . . _INTCONbits 1 7 _gie_state ]
+"357
+[; ;AWS_Standard_Weight_Converter_V2.c: 357:     return value;
+[e ) _value ]
+[e $UE 841  ]
+"358
+[; ;AWS_Standard_Weight_Converter_V2.c: 358: }
+[e :UE 841 ]
+}
+"360
+[; ;AWS_Standard_Weight_Converter_V2.c: 360: static void delay_ms_blocking(uint16_t ms)
+[v _delay_ms_blocking `(v ~T0 @X0 1 sf1`us ]
+"361
+[; ;AWS_Standard_Weight_Converter_V2.c: 361: {
+{
+[e :U _delay_ms_blocking ]
+"360
+[; ;AWS_Standard_Weight_Converter_V2.c: 360: static void delay_ms_blocking(uint16_t ms)
+[v _ms `us ~T0 @X0 1 r1 ]
+"361
+[; ;AWS_Standard_Weight_Converter_V2.c: 361: {
+[f ]
+"362
+[; ;AWS_Standard_Weight_Converter_V2.c: 362:     volatile uint16_t i;
+[v _i `Vus ~T0 @X0 1 a ]
+"363
+[; ;AWS_Standard_Weight_Converter_V2.c: 363:     while (ms > 0u)
+[e $U 843  ]
+[e :U 844 ]
+"364
+[; ;AWS_Standard_Weight_Converter_V2.c: 364:     {
+{
+"365
+[; ;AWS_Standard_Weight_Converter_V2.c: 365:         for (i = 0u; i < 600u; i++)
+{
+[e = _i -> -> 0 `ui `us ]
+[e $ < -> _i `ui -> 600 `ui 846  ]
+[e $U 847  ]
+[e :U 846 ]
+"366
+[; ;AWS_Standard_Weight_Converter_V2.c: 366:         {
+{
+"367
+[; ;AWS_Standard_Weight_Converter_V2.c: 367:             __asm("nop");
+[; <" nop ;# ">
+"368
+[; ;AWS_Standard_Weight_Converter_V2.c: 368:         }
+}
+[e ++ _i -> -> 1 `i `Vus ]
+[e $ < -> _i `ui -> 600 `ui 846  ]
+[e :U 847 ]
+}
+"369
+[; ;AWS_Standard_Weight_Converter_V2.c: 369:         ms--;
+[e -- _ms -> -> 1 `i `us ]
+"370
+[; ;AWS_Standard_Weight_Converter_V2.c: 370:     }
+}
+[e :U 843 ]
+"363
+[; ;AWS_Standard_Weight_Converter_V2.c: 363:     while (ms > 0u)
+[e $ > -> _ms `ui -> 0 `ui 844  ]
+[e :U 845 ]
+"371
+[; ;AWS_Standard_Weight_Converter_V2.c: 371: }
+[e :UE 842 ]
+}
+"373
+[; ;AWS_Standard_Weight_Converter_V2.c: 373: static uint32_t read_dip_baud(void)
+[v _read_dip_baud `(ul ~T0 @X0 1 sf ]
+"374
+[; ;AWS_Standard_Weight_Converter_V2.c: 374: {
+{
+[e :U _read_dip_baud ]
+[f ]
+"375
+[; ;AWS_Standard_Weight_Converter_V2.c: 375:     uint8_t code;
+[v _code `uc ~T0 @X0 1 a ]
+"376
+[; ;AWS_Standard_Weight_Converter_V2.c: 376:     delay_ms_blocking((uint16_t)(10));
+[e ( _delay_ms_blocking (1 -> -> 10 `i `us ]
+"377
+[; ;AWS_Standard_Weight_Converter_V2.c: 377:     code = 0u;
+[e = _code -> -> 0 `ui `uc ]
+"379
+[; ;AWS_Standard_Weight_Converter_V2.c: 379:     if (PORTBbits.RB0)
+[e $ ! != -> . . _PORTBbits 0 0 `i -> 0 `i 850  ]
+"380
+[; ;AWS_Standard_Weight_Converter_V2.c: 380:     {
+{
+"381
+[; ;AWS_Standard_Weight_Converter_V2.c: 381:         code |= 0x01u;
+[e =| _code -> -> 1 `ui `uc ]
+"382
+[; ;AWS_Standard_Weight_Converter_V2.c: 382:     }
+}
+[e :U 850 ]
+"383
+[; ;AWS_Standard_Weight_Converter_V2.c: 383:     if (PORTBbits.RB1)
+[e $ ! != -> . . _PORTBbits 0 1 `i -> 0 `i 851  ]
+"384
+[; ;AWS_Standard_Weight_Converter_V2.c: 384:     {
+{
+"385
+[; ;AWS_Standard_Weight_Converter_V2.c: 385:         code |= 0x02u;
+[e =| _code -> -> 2 `ui `uc ]
+"386
+[; ;AWS_Standard_Weight_Converter_V2.c: 386:     }
+}
+[e :U 851 ]
+"387
+[; ;AWS_Standard_Weight_Converter_V2.c: 387:     if (PORTBbits.RB2)
+[e $ ! != -> . . _PORTBbits 0 2 `i -> 0 `i 852  ]
+"388
+[; ;AWS_Standard_Weight_Converter_V2.c: 388:     {
+{
+"389
+[; ;AWS_Standard_Weight_Converter_V2.c: 389:         code |= 0x04u;
+[e =| _code -> -> 4 `ui `uc ]
+"390
+[; ;AWS_Standard_Weight_Converter_V2.c: 390:     }
+}
+[e :U 852 ]
+"392
+[; ;AWS_Standard_Weight_Converter_V2.c: 392:     switch (code)
+[e $U 854  ]
+"393
+[; ;AWS_Standard_Weight_Converter_V2.c: 393:     {
+{
+"394
+[; ;AWS_Standard_Weight_Converter_V2.c: 394:         case 0x00u: return 9600UL;
+[e :U 855 ]
+[e ) -> 9600 `ul ]
+[e $UE 849  ]
+"395
+[; ;AWS_Standard_Weight_Converter_V2.c: 395:         case 0x01u: return 1200UL;
+[e :U 856 ]
+[e ) -> 1200 `ul ]
+[e $UE 849  ]
+"396
+[; ;AWS_Standard_Weight_Converter_V2.c: 396:         case 0x02u: return 2400UL;
+[e :U 857 ]
+[e ) -> 2400 `ul ]
+[e $UE 849  ]
+"397
+[; ;AWS_Standard_Weight_Converter_V2.c: 397:         case 0x03u: return 4800UL;
+[e :U 858 ]
+[e ) -> 4800 `ul ]
+[e $UE 849  ]
+"398
+[; ;AWS_Standard_Weight_Converter_V2.c: 398:         case 0x04u: return 19200UL;
+[e :U 859 ]
+[e ) -> 19200 `ul ]
+[e $UE 849  ]
+"399
+[; ;AWS_Standard_Weight_Converter_V2.c: 399:         case 0x05u: return 38400UL;
+[e :U 860 ]
+[e ) -> 38400 `ul ]
+[e $UE 849  ]
+"400
+[; ;AWS_Standard_Weight_Converter_V2.c: 400:         case 0x06u: return 57600UL;
+[e :U 861 ]
+[e ) -> 57600 `ul ]
+[e $UE 849  ]
+"401
+[; ;AWS_Standard_Weight_Converter_V2.c: 401:         case 0x07u: return 115200UL;
+[e :U 862 ]
+[e ) -> 115200 `ul ]
+[e $UE 849  ]
+"402
+[; ;AWS_Standard_Weight_Converter_V2.c: 402:         default: return 9600UL;
+[e :U 863 ]
+[e ) -> 9600 `ul ]
+[e $UE 849  ]
+"403
+[; ;AWS_Standard_Weight_Converter_V2.c: 403:     }
+}
+[e $U 853  ]
+[e :U 854 ]
+[e [\ -> _code `i , $ -> -> 0 `ui `i 855
+ , $ -> -> 1 `ui `i 856
+ , $ -> -> 2 `ui `i 857
+ , $ -> -> 3 `ui `i 858
+ , $ -> -> 4 `ui `i 859
+ , $ -> -> 5 `ui `i 860
+ , $ -> -> 6 `ui `i 861
+ , $ -> -> 7 `ui `i 862
+ 863 ]
+[e :U 853 ]
+"404
+[; ;AWS_Standard_Weight_Converter_V2.c: 404: }
+[e :UE 849 ]
+}
+"406
+[; ;AWS_Standard_Weight_Converter_V2.c: 406: static uint16_t calculate_brg_value(uint32_t baud)
+[v _calculate_brg_value `(us ~T0 @X0 1 sf1`ul ]
+"407
+[; ;AWS_Standard_Weight_Converter_V2.c: 407: {
+{
+[e :U _calculate_brg_value ]
+"406
+[; ;AWS_Standard_Weight_Converter_V2.c: 406: static uint16_t calculate_brg_value(uint32_t baud)
+[v _baud `ul ~T0 @X0 1 r1 ]
+"407
+[; ;AWS_Standard_Weight_Converter_V2.c: 407: {
+[f ]
+"408
+[; ;AWS_Standard_Weight_Converter_V2.c: 408:     uint32_t brg;
+[v _brg `ul ~T0 @X0 1 a ]
+"409
+[; ;AWS_Standard_Weight_Converter_V2.c: 409:     brg = ((16000000UL / 4UL) + (baud / 2UL)) / baud;
+[e = _brg / + / -> 16000000 `ul -> 4 `ul / _baud -> 2 `ul _baud ]
+"410
+[; ;AWS_Standard_Weight_Converter_V2.c: 410:     if (brg > 0UL)
+[e $ ! > _brg -> 0 `ul 865  ]
+"411
+[; ;AWS_Standard_Weight_Converter_V2.c: 411:     {
+{
+"412
+[; ;AWS_Standard_Weight_Converter_V2.c: 412:         brg--;
+[e -- _brg -> -> -> 1 `i `l `ul ]
+"413
+[; ;AWS_Standard_Weight_Converter_V2.c: 413:     }
+}
+[e :U 865 ]
+"414
+[; ;AWS_Standard_Weight_Converter_V2.c: 414:     if (brg > 65535UL)
+[e $ ! > _brg -> 65535 `ul 866  ]
+"415
+[; ;AWS_Standard_Weight_Converter_V2.c: 415:     {
+{
+"416
+[; ;AWS_Standard_Weight_Converter_V2.c: 416:         brg = 65535UL;
+[e = _brg -> 65535 `ul ]
+"417
+[; ;AWS_Standard_Weight_Converter_V2.c: 417:     }
+}
+[e :U 866 ]
+"418
+[; ;AWS_Standard_Weight_Converter_V2.c: 418:     return (uint16_t)brg;
+[e ) -> _brg `us ]
+[e $UE 864  ]
+"419
+[; ;AWS_Standard_Weight_Converter_V2.c: 419: }
+[e :UE 864 ]
+}
+"421
+[; ;AWS_Standard_Weight_Converter_V2.c: 421: static void uart1_init(uint32_t baud)
+[v _uart1_init `(v ~T0 @X0 1 sf1`ul ]
+"422
+[; ;AWS_Standard_Weight_Converter_V2.c: 422: {
+{
+[e :U _uart1_init ]
+"421
+[; ;AWS_Standard_Weight_Converter_V2.c: 421: static void uart1_init(uint32_t baud)
+[v _baud `ul ~T0 @X0 1 r1 ]
+"422
+[; ;AWS_Standard_Weight_Converter_V2.c: 422: {
+[f ]
+"423
+[; ;AWS_Standard_Weight_Converter_V2.c: 423:     uint16_t brg = calculate_brg_value(baud);
+[v _brg `us ~T0 @X0 1 a ]
+[e = _brg ( _calculate_brg_value (1 _baud ]
+"425
+[; ;AWS_Standard_Weight_Converter_V2.c: 425:     TXSTA1bits.SYNC = 0;
+[e = . . _TXSTA1bits 0 4 -> -> 0 `i `uc ]
+"426
+[; ;AWS_Standard_Weight_Converter_V2.c: 426:     TXSTA1bits.BRGH = 1;
+[e = . . _TXSTA1bits 0 2 -> -> 1 `i `uc ]
+"427
+[; ;AWS_Standard_Weight_Converter_V2.c: 427:     BAUDCON1bits.BRG16 = 1;
+[e = . . _BAUDCON1bits 0 3 -> -> 1 `i `uc ]
+"429
+[; ;AWS_Standard_Weight_Converter_V2.c: 429:     SPBRGH1 = (uint8_t)(brg >> 8);
+[e = _SPBRGH1 -> >> -> _brg `ui -> 8 `i `uc ]
+"430
+[; ;AWS_Standard_Weight_Converter_V2.c: 430:     SPBRG1 = (uint8_t)(brg & 0xFFu);
+[e = _SPBRG1 -> & -> _brg `ui -> 255 `ui `uc ]
+"432
+[; ;AWS_Standard_Weight_Converter_V2.c: 432:     RCSTA1bits.SPEN = 1;
+[e = . . _RCSTA1bits 0 7 -> -> 1 `i `uc ]
+"433
+[; ;AWS_Standard_Weight_Converter_V2.c: 433:     RCSTA1bits.CREN = 1;
+[e = . . _RCSTA1bits 0 4 -> -> 1 `i `uc ]
+"434
+[; ;AWS_Standard_Weight_Converter_V2.c: 434:     TXSTA1bits.TXEN = 1;
+[e = . . _TXSTA1bits 0 5 -> -> 1 `i `uc ]
+"435
+[; ;AWS_Standard_Weight_Converter_V2.c: 435: }
+[e :UE 867 ]
+}
+"437
+[; ;AWS_Standard_Weight_Converter_V2.c: 437: static void uart2_init(uint32_t baud)
+[v _uart2_init `(v ~T0 @X0 1 sf1`ul ]
+"438
+[; ;AWS_Standard_Weight_Converter_V2.c: 438: {
+{
+[e :U _uart2_init ]
+"437
+[; ;AWS_Standard_Weight_Converter_V2.c: 437: static void uart2_init(uint32_t baud)
+[v _baud `ul ~T0 @X0 1 r1 ]
+"438
+[; ;AWS_Standard_Weight_Converter_V2.c: 438: {
+[f ]
+"439
+[; ;AWS_Standard_Weight_Converter_V2.c: 439:     uint16_t brg = calculate_brg_value(baud);
+[v _brg `us ~T0 @X0 1 a ]
+[e = _brg ( _calculate_brg_value (1 _baud ]
+"441
+[; ;AWS_Standard_Weight_Converter_V2.c: 441:     TXSTA2bits.SYNC = 0;
+[e = . . _TXSTA2bits 0 4 -> -> 0 `i `uc ]
+"442
+[; ;AWS_Standard_Weight_Converter_V2.c: 442:     TXSTA2bits.BRGH = 1;
+[e = . . _TXSTA2bits 0 2 -> -> 1 `i `uc ]
+"443
+[; ;AWS_Standard_Weight_Converter_V2.c: 443:     BAUDCON2bits.BRG16 = 1;
+[e = . . _BAUDCON2bits 0 3 -> -> 1 `i `uc ]
+"445
+[; ;AWS_Standard_Weight_Converter_V2.c: 445:     SPBRGH2 = (uint8_t)(brg >> 8);
+[e = _SPBRGH2 -> >> -> _brg `ui -> 8 `i `uc ]
+"446
+[; ;AWS_Standard_Weight_Converter_V2.c: 446:     SPBRG2 = (uint8_t)(brg & 0xFFu);
+[e = _SPBRG2 -> & -> _brg `ui -> 255 `ui `uc ]
+"448
+[; ;AWS_Standard_Weight_Converter_V2.c: 448:     RCSTA2bits.SPEN = 1;
+[e = . . _RCSTA2bits 0 7 -> -> 1 `i `uc ]
+"449
+[; ;AWS_Standard_Weight_Converter_V2.c: 449:     RCSTA2bits.CREN = 1;
+[e = . . _RCSTA2bits 0 4 -> -> 1 `i `uc ]
+"450
+[; ;AWS_Standard_Weight_Converter_V2.c: 450:     TXSTA2bits.TXEN = 1;
+[e = . . _TXSTA2bits 0 5 -> -> 1 `i `uc ]
+"451
+[; ;AWS_Standard_Weight_Converter_V2.c: 451: }
+[e :UE 868 ]
+}
+"453
+[; ;AWS_Standard_Weight_Converter_V2.c: 453: static _Bool uart1_try_read(uint8_t *byte)
+[v _uart1_try_read `(a ~T0 @X0 1 sf1`*uc ]
+"454
+[; ;AWS_Standard_Weight_Converter_V2.c: 454: {
+{
+[e :U _uart1_try_read ]
+"453
+[; ;AWS_Standard_Weight_Converter_V2.c: 453: static _Bool uart1_try_read(uint8_t *byte)
+[v _byte `*uc ~T0 @X0 1 r1 ]
+"454
+[; ;AWS_Standard_Weight_Converter_V2.c: 454: {
+[f ]
+"455
+[; ;AWS_Standard_Weight_Converter_V2.c: 455:     uint8_t dummy;
+[v _dummy `uc ~T0 @X0 1 a ]
+"457
+[; ;AWS_Standard_Weight_Converter_V2.c: 457:     if (RCSTA1bits.OERR)
+[e $ ! != -> . . _RCSTA1bits 0 1 `i -> 0 `i 870  ]
+"458
+[; ;AWS_Standard_Weight_Converter_V2.c: 458:     {
+{
+"459
+[; ;AWS_Standard_Weight_Converter_V2.c: 459:         RCSTA1bits.CREN = 0;
+[e = . . _RCSTA1bits 0 4 -> -> 0 `i `uc ]
+"460
+[; ;AWS_Standard_Weight_Converter_V2.c: 460:         RCSTA1bits.CREN = 1;
+[e = . . _RCSTA1bits 0 4 -> -> 1 `i `uc ]
+"461
+[; ;AWS_Standard_Weight_Converter_V2.c: 461:     }
+}
+[e :U 870 ]
+"463
+[; ;AWS_Standard_Weight_Converter_V2.c: 463:     if (!PIR1bits.RC1IF)
+[e $ ! ! != -> . . _PIR1bits 0 5 `i -> 0 `i 871  ]
+"464
+[; ;AWS_Standard_Weight_Converter_V2.c: 464:     {
+{
+"465
+[; ;AWS_Standard_Weight_Converter_V2.c: 465:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 869  ]
+"466
+[; ;AWS_Standard_Weight_Converter_V2.c: 466:     }
+}
+[e :U 871 ]
+"468
+[; ;AWS_Standard_Weight_Converter_V2.c: 468:     if (RCSTA1bits.FERR)
+[e $ ! != -> . . _RCSTA1bits 0 2 `i -> 0 `i 872  ]
+"469
+[; ;AWS_Standard_Weight_Converter_V2.c: 469:     {
+{
+"470
+[; ;AWS_Standard_Weight_Converter_V2.c: 470:         dummy = RCREG1;
+[e = _dummy _RCREG1 ]
+"471
+[; ;AWS_Standard_Weight_Converter_V2.c: 471:         (void)dummy;
+[e _dummy ]
+"472
+[; ;AWS_Standard_Weight_Converter_V2.c: 472:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 869  ]
+"473
+[; ;AWS_Standard_Weight_Converter_V2.c: 473:     }
+}
+[e :U 872 ]
+"475
+[; ;AWS_Standard_Weight_Converter_V2.c: 475:     *byte = RCREG1;
+[e = *U _byte _RCREG1 ]
+"476
+[; ;AWS_Standard_Weight_Converter_V2.c: 476:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 869  ]
+"477
+[; ;AWS_Standard_Weight_Converter_V2.c: 477: }
+[e :UE 869 ]
+}
+"479
+[; ;AWS_Standard_Weight_Converter_V2.c: 479: static void uart2_write_char(char c)
+[v _uart2_write_char `(v ~T0 @X0 1 sf1`uc ]
+"480
+[; ;AWS_Standard_Weight_Converter_V2.c: 480: {
+{
+[e :U _uart2_write_char ]
+"479
+[; ;AWS_Standard_Weight_Converter_V2.c: 479: static void uart2_write_char(char c)
+[v _c `uc ~T0 @X0 1 r1 ]
+"480
+[; ;AWS_Standard_Weight_Converter_V2.c: 480: {
+[f ]
+"481
+[; ;AWS_Standard_Weight_Converter_V2.c: 481:     while (!PIR3bits.TX2IF)
+[e $U 874  ]
+[e :U 875 ]
+"482
+[; ;AWS_Standard_Weight_Converter_V2.c: 482:     {
+{
+"484
+[; ;AWS_Standard_Weight_Converter_V2.c: 484:     }
+}
+[e :U 874 ]
+"481
+[; ;AWS_Standard_Weight_Converter_V2.c: 481:     while (!PIR3bits.TX2IF)
+[e $ ! != -> . . _PIR3bits 0 4 `i -> 0 `i 875  ]
+[e :U 876 ]
+"485
+[; ;AWS_Standard_Weight_Converter_V2.c: 485:     TXREG2 = c;
+[e = _TXREG2 -> _c `uc ]
+"486
+[; ;AWS_Standard_Weight_Converter_V2.c: 486: }
+[e :UE 873 ]
+}
+"488
+[; ;AWS_Standard_Weight_Converter_V2.c: 488: static void uart2_write_string(const char *text)
+[v _uart2_write_string `(v ~T0 @X0 1 sf1`*Cuc ]
+"489
+[; ;AWS_Standard_Weight_Converter_V2.c: 489: {
+{
+[e :U _uart2_write_string ]
+"488
+[; ;AWS_Standard_Weight_Converter_V2.c: 488: static void uart2_write_string(const char *text)
+[v _text `*Cuc ~T0 @X0 1 r1 ]
+"489
+[; ;AWS_Standard_Weight_Converter_V2.c: 489: {
+[f ]
+"490
+[; ;AWS_Standard_Weight_Converter_V2.c: 490:     while (*text != '\0')
+[e $U 878  ]
+[e :U 879 ]
+"491
+[; ;AWS_Standard_Weight_Converter_V2.c: 491:     {
+{
+"492
+[; ;AWS_Standard_Weight_Converter_V2.c: 492:         uart2_write_char(*text);
+[e ( _uart2_write_char (1 *U _text ]
+"493
+[; ;AWS_Standard_Weight_Converter_V2.c: 493:         text++;
+[e ++ _text * -> -> 1 `i `x -> -> # *U _text `i `x ]
+"494
+[; ;AWS_Standard_Weight_Converter_V2.c: 494:     }
+}
+[e :U 878 ]
+"490
+[; ;AWS_Standard_Weight_Converter_V2.c: 490:     while (*text != '\0')
+[e $ != -> *U _text `ui -> 0 `ui 879  ]
+[e :U 880 ]
+"495
+[; ;AWS_Standard_Weight_Converter_V2.c: 495: }
+[e :UE 877 ]
+}
+"497
+[; ;AWS_Standard_Weight_Converter_V2.c: 497: static void uart2_write_uint32(uint32_t value)
+[v _uart2_write_uint32 `(v ~T0 @X0 1 sf1`ul ]
+"498
+[; ;AWS_Standard_Weight_Converter_V2.c: 498: {
+{
+[e :U _uart2_write_uint32 ]
+"497
+[; ;AWS_Standard_Weight_Converter_V2.c: 497: static void uart2_write_uint32(uint32_t value)
+[v _value `ul ~T0 @X0 1 r1 ]
+"498
+[; ;AWS_Standard_Weight_Converter_V2.c: 498: {
+[f ]
+"499
+[; ;AWS_Standard_Weight_Converter_V2.c: 499:     char buffer[10];
+[v _buffer `uc ~T0 @X0 -> 10 `i a ]
+"500
+[; ;AWS_Standard_Weight_Converter_V2.c: 500:     uint8_t index = 0u;
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 0 `ui `uc ]
+"502
+[; ;AWS_Standard_Weight_Converter_V2.c: 502:     if (value == 0UL)
+[e $ ! == _value -> 0 `ul 882  ]
+"503
+[; ;AWS_Standard_Weight_Converter_V2.c: 503:     {
+{
+"504
+[; ;AWS_Standard_Weight_Converter_V2.c: 504:         uart2_write_char('0');
+[e ( _uart2_write_char (1 -> -> 48 `ui `uc ]
+"505
+[; ;AWS_Standard_Weight_Converter_V2.c: 505:         return;
+[e $UE 881  ]
+"506
+[; ;AWS_Standard_Weight_Converter_V2.c: 506:     }
+}
+[e :U 882 ]
+"508
+[; ;AWS_Standard_Weight_Converter_V2.c: 508:     while ((value > 0UL) && (index < sizeof(buffer)))
+[e $U 883  ]
+[e :U 884 ]
+"509
+[; ;AWS_Standard_Weight_Converter_V2.c: 509:     {
+{
+"510
+[; ;AWS_Standard_Weight_Converter_V2.c: 510:         buffer[index] = (char)('0' + (value % 10UL));
+[e = *U + &U _buffer * -> _index `ux -> -> # *U &U _buffer `ui `ux -> + -> -> 48 `ui `ul % _value -> 10 `ul `uc ]
+"511
+[; ;AWS_Standard_Weight_Converter_V2.c: 511:         value /= 10UL;
+[e =/ _value -> 10 `ul ]
+"512
+[; ;AWS_Standard_Weight_Converter_V2.c: 512:         index++;
+[e ++ _index -> -> 1 `i `uc ]
+"513
+[; ;AWS_Standard_Weight_Converter_V2.c: 513:     }
+}
+[e :U 883 ]
+"508
+[; ;AWS_Standard_Weight_Converter_V2.c: 508:     while ((value > 0UL) && (index < sizeof(buffer)))
+[e $ && > _value -> 0 `ul < -> _index `ui -> # _buffer `ui 884  ]
+[e :U 885 ]
+"515
+[; ;AWS_Standard_Weight_Converter_V2.c: 515:     while (index > 0u)
+[e $U 886  ]
+[e :U 887 ]
+"516
+[; ;AWS_Standard_Weight_Converter_V2.c: 516:     {
+{
+"517
+[; ;AWS_Standard_Weight_Converter_V2.c: 517:         index--;
+[e -- _index -> -> 1 `i `uc ]
+"518
+[; ;AWS_Standard_Weight_Converter_V2.c: 518:         uart2_write_char(buffer[index]);
+[e ( _uart2_write_char (1 *U + &U _buffer * -> _index `ux -> -> # *U &U _buffer `ui `ux ]
+"519
+[; ;AWS_Standard_Weight_Converter_V2.c: 519:     }
+}
+[e :U 886 ]
+"515
+[; ;AWS_Standard_Weight_Converter_V2.c: 515:     while (index > 0u)
+[e $ > -> _index `ui -> 0 `ui 887  ]
+[e :U 888 ]
+"520
+[; ;AWS_Standard_Weight_Converter_V2.c: 520: }
+[e :UE 881 ]
+}
+"522
+[; ;AWS_Standard_Weight_Converter_V2.c: 522: static void uart2_write_uint32_padded(uint32_t value, uint8_t min_width)
+[v _uart2_write_uint32_padded `(v ~T0 @X0 1 sf2`ul`uc ]
+"523
+[; ;AWS_Standard_Weight_Converter_V2.c: 523: {
+{
+[e :U _uart2_write_uint32_padded ]
+"522
+[; ;AWS_Standard_Weight_Converter_V2.c: 522: static void uart2_write_uint32_padded(uint32_t value, uint8_t min_width)
+[v _value `ul ~T0 @X0 1 r1 ]
+[v _min_width `uc ~T0 @X0 1 r2 ]
+"523
+[; ;AWS_Standard_Weight_Converter_V2.c: 523: {
+[f ]
+"524
+[; ;AWS_Standard_Weight_Converter_V2.c: 524:     uint32_t temp;
+[v _temp `ul ~T0 @X0 1 a ]
+"525
+[; ;AWS_Standard_Weight_Converter_V2.c: 525:     uint8_t digits;
+[v _digits `uc ~T0 @X0 1 a ]
+"526
+[; ;AWS_Standard_Weight_Converter_V2.c: 526:     uint8_t pad_count;
+[v _pad_count `uc ~T0 @X0 1 a ]
+"528
+[; ;AWS_Standard_Weight_Converter_V2.c: 528:     temp = value;
+[e = _temp _value ]
+"529
+[; ;AWS_Standard_Weight_Converter_V2.c: 529:     digits = 1u;
+[e = _digits -> -> 1 `ui `uc ]
+"531
+[; ;AWS_Standard_Weight_Converter_V2.c: 531:     while (temp >= 10UL)
+[e $U 890  ]
+[e :U 891 ]
+"532
+[; ;AWS_Standard_Weight_Converter_V2.c: 532:     {
+{
+"533
+[; ;AWS_Standard_Weight_Converter_V2.c: 533:         temp /= 10UL;
+[e =/ _temp -> 10 `ul ]
+"534
+[; ;AWS_Standard_Weight_Converter_V2.c: 534:         digits++;
+[e ++ _digits -> -> 1 `i `uc ]
+"535
+[; ;AWS_Standard_Weight_Converter_V2.c: 535:     }
+}
+[e :U 890 ]
+"531
+[; ;AWS_Standard_Weight_Converter_V2.c: 531:     while (temp >= 10UL)
+[e $ >= _temp -> 10 `ul 891  ]
+[e :U 892 ]
+"537
+[; ;AWS_Standard_Weight_Converter_V2.c: 537:     if (digits < min_width)
+[e $ ! < -> _digits `i -> _min_width `i 893  ]
+"538
+[; ;AWS_Standard_Weight_Converter_V2.c: 538:     {
+{
+"539
+[; ;AWS_Standard_Weight_Converter_V2.c: 539:         pad_count = (uint8_t)(min_width - digits);
+[e = _pad_count -> - -> _min_width `i -> _digits `i `uc ]
+"540
+[; ;AWS_Standard_Weight_Converter_V2.c: 540:         while (pad_count > 0u)
+[e $U 894  ]
+[e :U 895 ]
+"541
+[; ;AWS_Standard_Weight_Converter_V2.c: 541:         {
+{
+"542
+[; ;AWS_Standard_Weight_Converter_V2.c: 542:             uart2_write_char('0');
+[e ( _uart2_write_char (1 -> -> 48 `ui `uc ]
+"543
+[; ;AWS_Standard_Weight_Converter_V2.c: 543:             pad_count--;
+[e -- _pad_count -> -> 1 `i `uc ]
+"544
+[; ;AWS_Standard_Weight_Converter_V2.c: 544:         }
+}
+[e :U 894 ]
+"540
+[; ;AWS_Standard_Weight_Converter_V2.c: 540:         while (pad_count > 0u)
+[e $ > -> _pad_count `ui -> 0 `ui 895  ]
+[e :U 896 ]
+"545
+[; ;AWS_Standard_Weight_Converter_V2.c: 545:     }
+}
+[e :U 893 ]
+"547
+[; ;AWS_Standard_Weight_Converter_V2.c: 547:     uart2_write_uint32(value);
+[e ( _uart2_write_uint32 (1 _value ]
+"548
+[; ;AWS_Standard_Weight_Converter_V2.c: 548: }
+[e :UE 889 ]
+}
+"550
+[; ;AWS_Standard_Weight_Converter_V2.c: 550: static _Bool is_digit_ascii(char c)
+[v _is_digit_ascii `(a ~T0 @X0 1 sf1`uc ]
+"551
+[; ;AWS_Standard_Weight_Converter_V2.c: 551: {
+{
+[e :U _is_digit_ascii ]
+"550
+[; ;AWS_Standard_Weight_Converter_V2.c: 550: static _Bool is_digit_ascii(char c)
+[v _c `uc ~T0 @X0 1 r1 ]
+"551
+[; ;AWS_Standard_Weight_Converter_V2.c: 551: {
+[f ]
+"552
+[; ;AWS_Standard_Weight_Converter_V2.c: 552:     return ((c >= '0') && (c <= '9'));
+[e ) -> -> && >= -> _c `ui -> 48 `ui <= -> _c `ui -> 57 `ui `i `a ]
+[e $UE 897  ]
+"553
+[; ;AWS_Standard_Weight_Converter_V2.c: 553: }
+[e :UE 897 ]
+}
+"555
+[; ;AWS_Standard_Weight_Converter_V2.c: 555: static _Bool is_alpha_ascii(char c)
+[v _is_alpha_ascii `(a ~T0 @X0 1 sf1`uc ]
+"556
+[; ;AWS_Standard_Weight_Converter_V2.c: 556: {
+{
+[e :U _is_alpha_ascii ]
+"555
+[; ;AWS_Standard_Weight_Converter_V2.c: 555: static _Bool is_alpha_ascii(char c)
+[v _c `uc ~T0 @X0 1 r1 ]
+"556
+[; ;AWS_Standard_Weight_Converter_V2.c: 556: {
+[f ]
+"557
+[; ;AWS_Standard_Weight_Converter_V2.c: 557:     char u = upper_ascii(c);
+[v _u `uc ~T0 @X0 1 a ]
+[e = _u ( _upper_ascii (1 _c ]
+"558
+[; ;AWS_Standard_Weight_Converter_V2.c: 558:     return ((u >= 'A') && (u <= 'Z'));
+[e ) -> -> && >= -> _u `ui -> 65 `ui <= -> _u `ui -> 90 `ui `i `a ]
+[e $UE 898  ]
+"559
+[; ;AWS_Standard_Weight_Converter_V2.c: 559: }
+[e :UE 898 ]
+}
+"561
+[; ;AWS_Standard_Weight_Converter_V2.c: 561: static char upper_ascii(char c)
+[v _upper_ascii `(uc ~T0 @X0 1 sf1`uc ]
+"562
+[; ;AWS_Standard_Weight_Converter_V2.c: 562: {
+{
+[e :U _upper_ascii ]
+"561
+[; ;AWS_Standard_Weight_Converter_V2.c: 561: static char upper_ascii(char c)
+[v _c `uc ~T0 @X0 1 r1 ]
+"562
+[; ;AWS_Standard_Weight_Converter_V2.c: 562: {
+[f ]
+"563
+[; ;AWS_Standard_Weight_Converter_V2.c: 563:     if ((c >= 'a') && (c <= 'z'))
+[e $ ! && >= -> _c `ui -> 97 `ui <= -> _c `ui -> 122 `ui 900  ]
+"564
+[; ;AWS_Standard_Weight_Converter_V2.c: 564:     {
+{
+"565
+[; ;AWS_Standard_Weight_Converter_V2.c: 565:         return (char)(c - 32);
+[e ) -> - -> _c `i -> 32 `i `uc ]
+[e $UE 899  ]
+"566
+[; ;AWS_Standard_Weight_Converter_V2.c: 566:     }
+}
+[e :U 900 ]
+"567
+[; ;AWS_Standard_Weight_Converter_V2.c: 567:     return c;
+[e ) _c ]
+[e $UE 899  ]
+"568
+[; ;AWS_Standard_Weight_Converter_V2.c: 568: }
+[e :UE 899 ]
+}
+"570
+[; ;AWS_Standard_Weight_Converter_V2.c: 570: static _Bool contains_ci(const char *text, const char *pattern)
+[v _contains_ci `(a ~T0 @X0 1 sf2`*Cuc`*Cuc ]
+"571
+[; ;AWS_Standard_Weight_Converter_V2.c: 571: {
+{
+[e :U _contains_ci ]
+"570
+[; ;AWS_Standard_Weight_Converter_V2.c: 570: static _Bool contains_ci(const char *text, const char *pattern)
+[v _text `*Cuc ~T0 @X0 1 r1 ]
+[v _pattern `*Cuc ~T0 @X0 1 r2 ]
+"571
+[; ;AWS_Standard_Weight_Converter_V2.c: 571: {
+[f ]
+"572
+[; ;AWS_Standard_Weight_Converter_V2.c: 572:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"573
+[; ;AWS_Standard_Weight_Converter_V2.c: 573:     uint8_t j;
+[v _j `uc ~T0 @X0 1 a ]
+"575
+[; ;AWS_Standard_Weight_Converter_V2.c: 575:     if ((text == 0) || (pattern == 0))
+[e $ ! || == _text -> -> 0 `i `*Cuc == _pattern -> -> 0 `i `*Cuc 902  ]
+"576
+[; ;AWS_Standard_Weight_Converter_V2.c: 576:     {
+{
+"577
+[; ;AWS_Standard_Weight_Converter_V2.c: 577:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 901  ]
+"578
+[; ;AWS_Standard_Weight_Converter_V2.c: 578:     }
+}
+[e :U 902 ]
+"580
+[; ;AWS_Standard_Weight_Converter_V2.c: 580:     if (pattern[0] == '\0')
+[e $ ! == -> *U + _pattern * -> -> 0 `i `x -> -> # *U _pattern `i `x `ui -> 0 `ui 903  ]
+"581
+[; ;AWS_Standard_Weight_Converter_V2.c: 581:     {
+{
+"582
+[; ;AWS_Standard_Weight_Converter_V2.c: 582:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 901  ]
+"583
+[; ;AWS_Standard_Weight_Converter_V2.c: 583:     }
+}
+[e :U 903 ]
+"585
+[; ;AWS_Standard_Weight_Converter_V2.c: 585:     for (i = 0u; text[i] != '\0'; i++)
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $U 907  ]
+[e :U 904 ]
+"586
+[; ;AWS_Standard_Weight_Converter_V2.c: 586:     {
+{
+"587
+[; ;AWS_Standard_Weight_Converter_V2.c: 587:         j = 0u;
+[e = _j -> -> 0 `ui `uc ]
+"588
+[; ;AWS_Standard_Weight_Converter_V2.c: 588:         while ((pattern[j] != '\0') &&
+[e $U 908  ]
+[e :U 909 ]
+"591
+[; ;AWS_Standard_Weight_Converter_V2.c: 591:         {
+{
+"592
+[; ;AWS_Standard_Weight_Converter_V2.c: 592:             j++;
+[e ++ _j -> -> 1 `i `uc ]
+"593
+[; ;AWS_Standard_Weight_Converter_V2.c: 593:         }
+}
+[e :U 908 ]
+"588
+[; ;AWS_Standard_Weight_Converter_V2.c: 588:         while ((pattern[j] != '\0') &&
+[e $ && && != -> *U + _pattern * -> _j `ux -> -> # *U _pattern `ui `ux `ui -> 0 `ui != -> *U + _text * -> + -> _i `i -> _j `i `x -> -> # *U _text `i `x `ui -> 0 `ui == -> ( _upper_ascii (1 *U + _text * -> + -> _i `i -> _j `i `x -> -> # *U _text `i `x `i -> ( _upper_ascii (1 *U + _pattern * -> _j `ux -> -> # *U _pattern `ui `ux `i 909  ]
+[e :U 910 ]
+"594
+[; ;AWS_Standard_Weight_Converter_V2.c: 594:         if (pattern[j] == '\0')
+[e $ ! == -> *U + _pattern * -> _j `ux -> -> # *U _pattern `ui `ux `ui -> 0 `ui 911  ]
+"595
+[; ;AWS_Standard_Weight_Converter_V2.c: 595:         {
+{
+"596
+[; ;AWS_Standard_Weight_Converter_V2.c: 596:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 901  ]
+"597
+[; ;AWS_Standard_Weight_Converter_V2.c: 597:         }
+}
+[e :U 911 ]
+"598
+[; ;AWS_Standard_Weight_Converter_V2.c: 598:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 907 ]
+[e $ != -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 0 `ui 904  ]
+[e :U 905 ]
+}
+"600
+[; ;AWS_Standard_Weight_Converter_V2.c: 600:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 901  ]
+"601
+[; ;AWS_Standard_Weight_Converter_V2.c: 601: }
+[e :UE 901 ]
+}
+"603
+[; ;AWS_Standard_Weight_Converter_V2.c: 603: static _Bool contains_isolated_letter_ci(const char *text, char letter)
+[v _contains_isolated_letter_ci `(a ~T0 @X0 1 sf2`*Cuc`uc ]
+"604
+[; ;AWS_Standard_Weight_Converter_V2.c: 604: {
+{
+[e :U _contains_isolated_letter_ci ]
+"603
+[; ;AWS_Standard_Weight_Converter_V2.c: 603: static _Bool contains_isolated_letter_ci(const char *text, char letter)
+[v _text `*Cuc ~T0 @X0 1 r1 ]
+[v _letter `uc ~T0 @X0 1 r2 ]
+"604
+[; ;AWS_Standard_Weight_Converter_V2.c: 604: {
+[f ]
+"605
+[; ;AWS_Standard_Weight_Converter_V2.c: 605:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"606
+[; ;AWS_Standard_Weight_Converter_V2.c: 606:     char target = upper_ascii(letter);
+[v _target `uc ~T0 @X0 1 a ]
+[e = _target ( _upper_ascii (1 _letter ]
+"607
+[; ;AWS_Standard_Weight_Converter_V2.c: 607:     char current;
+[v _current `uc ~T0 @X0 1 a ]
+"608
+[; ;AWS_Standard_Weight_Converter_V2.c: 608:     char previous;
+[v _previous `uc ~T0 @X0 1 a ]
+"609
+[; ;AWS_Standard_Weight_Converter_V2.c: 609:     char next;
+[v _next `uc ~T0 @X0 1 a ]
+"611
+[; ;AWS_Standard_Weight_Converter_V2.c: 611:     for (i = 0u; text[i] != '\0'; i++)
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $U 916  ]
+[e :U 913 ]
+"612
+[; ;AWS_Standard_Weight_Converter_V2.c: 612:     {
+{
+"613
+[; ;AWS_Standard_Weight_Converter_V2.c: 613:         current = upper_ascii(text[i]);
+[e = _current ( _upper_ascii (1 *U + _text * -> _i `ux -> -> # *U _text `ui `ux ]
+"614
+[; ;AWS_Standard_Weight_Converter_V2.c: 614:         if (current == target)
+[e $ ! == -> _current `i -> _target `i 917  ]
+"615
+[; ;AWS_Standard_Weight_Converter_V2.c: 615:         {
+{
+"616
+[; ;AWS_Standard_Weight_Converter_V2.c: 616:             if (i == 0u)
+[e $ ! == -> _i `ui -> 0 `ui 918  ]
+"617
+[; ;AWS_Standard_Weight_Converter_V2.c: 617:             {
+{
+"618
+[; ;AWS_Standard_Weight_Converter_V2.c: 618:                 previous = '\0';
+[e = _previous -> -> 0 `ui `uc ]
+"619
+[; ;AWS_Standard_Weight_Converter_V2.c: 619:             }
+}
+[e $U 919  ]
+"620
+[; ;AWS_Standard_Weight_Converter_V2.c: 620:             else
+[e :U 918 ]
+"621
+[; ;AWS_Standard_Weight_Converter_V2.c: 621:             {
+{
+"622
+[; ;AWS_Standard_Weight_Converter_V2.c: 622:                 previous = text[i - 1u];
+[e = _previous *U + _text * -> - -> _i `ui -> 1 `ui `ux -> -> # *U _text `ui `ux ]
+"623
+[; ;AWS_Standard_Weight_Converter_V2.c: 623:             }
+}
+[e :U 919 ]
+"624
+[; ;AWS_Standard_Weight_Converter_V2.c: 624:             next = text[i + 1u];
+[e = _next *U + _text * -> + -> _i `ui -> 1 `ui `ux -> -> # *U _text `ui `ux ]
+"626
+[; ;AWS_Standard_Weight_Converter_V2.c: 626:             if (!is_alpha_ascii(previous) && !is_alpha_ascii(next))
+[e $ ! && ! != -> ( _is_alpha_ascii (1 _previous `i -> 0 `i ! != -> ( _is_alpha_ascii (1 _next `i -> 0 `i 920  ]
+"627
+[; ;AWS_Standard_Weight_Converter_V2.c: 627:             {
+{
+"628
+[; ;AWS_Standard_Weight_Converter_V2.c: 628:                 return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 912  ]
+"629
+[; ;AWS_Standard_Weight_Converter_V2.c: 629:             }
+}
+[e :U 920 ]
+"630
+[; ;AWS_Standard_Weight_Converter_V2.c: 630:         }
+}
+[e :U 917 ]
+"631
+[; ;AWS_Standard_Weight_Converter_V2.c: 631:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 916 ]
+[e $ != -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 0 `ui 913  ]
+[e :U 914 ]
+}
+"633
+[; ;AWS_Standard_Weight_Converter_V2.c: 633:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 912  ]
+"634
+[; ;AWS_Standard_Weight_Converter_V2.c: 634: }
+[e :UE 912 ]
+}
+"636
+[; ;AWS_Standard_Weight_Converter_V2.c: 636: static uint32_t pow10_u32(uint8_t power)
+[v _pow10_u32 `(ul ~T0 @X0 1 sf1`uc ]
+"637
+[; ;AWS_Standard_Weight_Converter_V2.c: 637: {
+{
+[e :U _pow10_u32 ]
+"636
+[; ;AWS_Standard_Weight_Converter_V2.c: 636: static uint32_t pow10_u32(uint8_t power)
+[v _power `uc ~T0 @X0 1 r1 ]
+"637
+[; ;AWS_Standard_Weight_Converter_V2.c: 637: {
+[f ]
+"638
+[; ;AWS_Standard_Weight_Converter_V2.c: 638:     uint32_t value = 1UL;
+[v _value `ul ~T0 @X0 1 a ]
+[e = _value -> 1 `ul ]
+"639
+[; ;AWS_Standard_Weight_Converter_V2.c: 639:     while (power > 0u)
+[e $U 922  ]
+[e :U 923 ]
+"640
+[; ;AWS_Standard_Weight_Converter_V2.c: 640:     {
+{
+"641
+[; ;AWS_Standard_Weight_Converter_V2.c: 641:         value *= 10UL;
+[e =* _value -> 10 `ul ]
+"642
+[; ;AWS_Standard_Weight_Converter_V2.c: 642:         power--;
+[e -- _power -> -> 1 `i `uc ]
+"643
+[; ;AWS_Standard_Weight_Converter_V2.c: 643:     }
+}
+[e :U 922 ]
+"639
+[; ;AWS_Standard_Weight_Converter_V2.c: 639:     while (power > 0u)
+[e $ > -> _power `ui -> 0 `ui 923  ]
+[e :U 924 ]
+"644
+[; ;AWS_Standard_Weight_Converter_V2.c: 644:     return value;
+[e ) _value ]
+[e $UE 921  ]
+"645
+[; ;AWS_Standard_Weight_Converter_V2.c: 645: }
+[e :UE 921 ]
+}
+"647
+[; ;AWS_Standard_Weight_Converter_V2.c: 647: static NumberCandidate parse_number_at(const char *text, uint8_t start_index)
+[v _parse_number_at `(S826 ~T0 @X0 1 sf2`*Cuc`uc ]
+"648
+[; ;AWS_Standard_Weight_Converter_V2.c: 648: {
+{
+[e :U _parse_number_at ]
+"647
+[; ;AWS_Standard_Weight_Converter_V2.c: 647: static NumberCandidate parse_number_at(const char *text, uint8_t start_index)
+[v _text `*Cuc ~T0 @X0 1 r1 ]
+[v _start_index `uc ~T0 @X0 1 r2 ]
+"648
+[; ;AWS_Standard_Weight_Converter_V2.c: 648: {
+[f ]
+"649
+[; ;AWS_Standard_Weight_Converter_V2.c: 649:     NumberCandidate result;
+[v _result `S826 ~T0 @X0 1 a ]
+"650
+[; ;AWS_Standard_Weight_Converter_V2.c: 650:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"651
+[; ;AWS_Standard_Weight_Converter_V2.c: 651:     _Bool negative;
+[v _negative `a ~T0 @X0 1 a ]
+"652
+[; ;AWS_Standard_Weight_Converter_V2.c: 652:     _Bool has_sign;
+[v _has_sign `a ~T0 @X0 1 a ]
+"653
+[; ;AWS_Standard_Weight_Converter_V2.c: 653:     _Bool has_decimal;
+[v _has_decimal `a ~T0 @X0 1 a ]
+"654
+[; ;AWS_Standard_Weight_Converter_V2.c: 654:     uint32_t integer_part;
+[v _integer_part `ul ~T0 @X0 1 a ]
+"655
+[; ;AWS_Standard_Weight_Converter_V2.c: 655:     uint8_t integer_digits;
+[v _integer_digits `uc ~T0 @X0 1 a ]
+"656
+[; ;AWS_Standard_Weight_Converter_V2.c: 656:     uint8_t decimal_digits;
+[v _decimal_digits `uc ~T0 @X0 1 a ]
+"657
+[; ;AWS_Standard_Weight_Converter_V2.c: 657:     uint8_t d1;
+[v _d1 `uc ~T0 @X0 1 a ]
+"658
+[; ;AWS_Standard_Weight_Converter_V2.c: 658:     uint8_t d2;
+[v _d2 `uc ~T0 @X0 1 a ]
+"659
+[; ;AWS_Standard_Weight_Converter_V2.c: 659:     uint8_t d3;
+[v _d3 `uc ~T0 @X0 1 a ]
+"660
+[; ;AWS_Standard_Weight_Converter_V2.c: 660:     uint8_t d4;
+[v _d4 `uc ~T0 @X0 1 a ]
+"661
+[; ;AWS_Standard_Weight_Converter_V2.c: 661:     uint32_t native_milli_abs;
+[v _native_milli_abs `ul ~T0 @X0 1 a ]
+"662
+[; ;AWS_Standard_Weight_Converter_V2.c: 662:     uint32_t divisor;
+[v _divisor `ul ~T0 @X0 1 a ]
+"663
+[; ;AWS_Standard_Weight_Converter_V2.c: 663:     uint32_t integer_scaled;
+[v _integer_scaled `ul ~T0 @X0 1 a ]
+"664
+[; ;AWS_Standard_Weight_Converter_V2.c: 664:     uint32_t rounding_add;
+[v _rounding_add `ul ~T0 @X0 1 a ]
+"666
+[; ;AWS_Standard_Weight_Converter_V2.c: 666:     result.valid = 0;
+[e = . _result 0 -> -> 0 `i `a ]
+"667
+[; ;AWS_Standard_Weight_Converter_V2.c: 667:     result.native_milli_value = 0;
+[e = . _result 1 -> -> 0 `i `l ]
+"668
+[; ;AWS_Standard_Weight_Converter_V2.c: 668:     result.has_decimal = 0;
+[e = . _result 2 -> -> 0 `i `a ]
+"669
+[; ;AWS_Standard_Weight_Converter_V2.c: 669:     result.digit_count = 0u;
+[e = . _result 3 -> -> 0 `ui `uc ]
+"670
+[; ;AWS_Standard_Weight_Converter_V2.c: 670:     result.score = 0u;
+[e = . _result 4 -> -> 0 `ui `uc ]
+"672
+[; ;AWS_Standard_Weight_Converter_V2.c: 672:     i = start_index;
+[e = _i _start_index ]
+"673
+[; ;AWS_Standard_Weight_Converter_V2.c: 673:     negative = 0;
+[e = _negative -> -> 0 `i `a ]
+"674
+[; ;AWS_Standard_Weight_Converter_V2.c: 674:     has_sign = 0;
+[e = _has_sign -> -> 0 `i `a ]
+"675
+[; ;AWS_Standard_Weight_Converter_V2.c: 675:     has_decimal = 0;
+[e = _has_decimal -> -> 0 `i `a ]
+"676
+[; ;AWS_Standard_Weight_Converter_V2.c: 676:     integer_part = 0UL;
+[e = _integer_part -> 0 `ul ]
+"677
+[; ;AWS_Standard_Weight_Converter_V2.c: 677:     integer_digits = 0u;
+[e = _integer_digits -> -> 0 `ui `uc ]
+"678
+[; ;AWS_Standard_Weight_Converter_V2.c: 678:     decimal_digits = 0u;
+[e = _decimal_digits -> -> 0 `ui `uc ]
+"679
+[; ;AWS_Standard_Weight_Converter_V2.c: 679:     d1 = 0u;
+[e = _d1 -> -> 0 `ui `uc ]
+"680
+[; ;AWS_Standard_Weight_Converter_V2.c: 680:     d2 = 0u;
+[e = _d2 -> -> 0 `ui `uc ]
+"681
+[; ;AWS_Standard_Weight_Converter_V2.c: 681:     d3 = 0u;
+[e = _d3 -> -> 0 `ui `uc ]
+"682
+[; ;AWS_Standard_Weight_Converter_V2.c: 682:     d4 = 0u;
+[e = _d4 -> -> 0 `ui `uc ]
+"684
+[; ;AWS_Standard_Weight_Converter_V2.c: 684:     if ((text[i] == '+') || (text[i] == '-'))
+[e $ ! || == -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 43 `ui == -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 45 `ui 926  ]
+"685
+[; ;AWS_Standard_Weight_Converter_V2.c: 685:     {
+{
+"686
+[; ;AWS_Standard_Weight_Converter_V2.c: 686:         has_sign = 1;
+[e = _has_sign -> -> 1 `i `a ]
+"687
+[; ;AWS_Standard_Weight_Converter_V2.c: 687:         if (text[i] == '-')
+[e $ ! == -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 45 `ui 927  ]
+"688
+[; ;AWS_Standard_Weight_Converter_V2.c: 688:         {
+{
+"689
+[; ;AWS_Standard_Weight_Converter_V2.c: 689:             negative = 1;
+[e = _negative -> -> 1 `i `a ]
+"690
+[; ;AWS_Standard_Weight_Converter_V2.c: 690:         }
+}
+[e :U 927 ]
+"691
+[; ;AWS_Standard_Weight_Converter_V2.c: 691:         i++;
+[e ++ _i -> -> 1 `i `uc ]
+"692
+[; ;AWS_Standard_Weight_Converter_V2.c: 692:         while (text[i] == ' ')
+[e $U 928  ]
+[e :U 929 ]
+"693
+[; ;AWS_Standard_Weight_Converter_V2.c: 693:         {
+{
+"694
+[; ;AWS_Standard_Weight_Converter_V2.c: 694:             i++;
+[e ++ _i -> -> 1 `i `uc ]
+"695
+[; ;AWS_Standard_Weight_Converter_V2.c: 695:         }
+}
+[e :U 928 ]
+"692
+[; ;AWS_Standard_Weight_Converter_V2.c: 692:         while (text[i] == ' ')
+[e $ == -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 32 `ui 929  ]
+[e :U 930 ]
+"696
+[; ;AWS_Standard_Weight_Converter_V2.c: 696:     }
+}
+[e :U 926 ]
+"698
+[; ;AWS_Standard_Weight_Converter_V2.c: 698:     if (!is_digit_ascii(text[i]))
+[e $ ! ! != -> ( _is_digit_ascii (1 *U + _text * -> _i `ux -> -> # *U _text `ui `ux `i -> 0 `i 931  ]
+"699
+[; ;AWS_Standard_Weight_Converter_V2.c: 699:     {
+{
+"700
+[; ;AWS_Standard_Weight_Converter_V2.c: 700:         return result;
+[e ) _result ]
+[e $UE 925  ]
+"701
+[; ;AWS_Standard_Weight_Converter_V2.c: 701:     }
+}
+[e :U 931 ]
+"703
+[; ;AWS_Standard_Weight_Converter_V2.c: 703:     while (is_digit_ascii(text[i]))
+[e $U 932  ]
+[e :U 933 ]
+"704
+[; ;AWS_Standard_Weight_Converter_V2.c: 704:     {
+{
+"705
+[; ;AWS_Standard_Weight_Converter_V2.c: 705:         if (integer_part < 2000000UL)
+[e $ ! < _integer_part -> 2000000 `ul 935  ]
+"706
+[; ;AWS_Standard_Weight_Converter_V2.c: 706:         {
+{
+"707
+[; ;AWS_Standard_Weight_Converter_V2.c: 707:             integer_part = (integer_part * 10UL) + (uint32_t)(text[i] - '0');
+[e = _integer_part + * _integer_part -> 10 `ul -> - -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 48 `ui `ul ]
+"708
+[; ;AWS_Standard_Weight_Converter_V2.c: 708:         }
+}
+[e :U 935 ]
+"709
+[; ;AWS_Standard_Weight_Converter_V2.c: 709:         integer_digits++;
+[e ++ _integer_digits -> -> 1 `i `uc ]
+"710
+[; ;AWS_Standard_Weight_Converter_V2.c: 710:         i++;
+[e ++ _i -> -> 1 `i `uc ]
+"711
+[; ;AWS_Standard_Weight_Converter_V2.c: 711:     }
+}
+[e :U 932 ]
+"703
+[; ;AWS_Standard_Weight_Converter_V2.c: 703:     while (is_digit_ascii(text[i]))
+[e $ != -> ( _is_digit_ascii (1 *U + _text * -> _i `ux -> -> # *U _text `ui `ux `i -> 0 `i 933  ]
+[e :U 934 ]
+"713
+[; ;AWS_Standard_Weight_Converter_V2.c: 713:     if ((text[i] == '.') || ((text[i] == ',') && (1u != 0u)))
+[e $ ! || == -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 46 `ui && == -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 44 `ui != -> 1 `ui -> 0 `ui 936  ]
+"714
+[; ;AWS_Standard_Weight_Converter_V2.c: 714:     {
+{
+"715
+[; ;AWS_Standard_Weight_Converter_V2.c: 715:         if (is_digit_ascii(text[i + 1u]))
+[e $ ! != -> ( _is_digit_ascii (1 *U + _text * -> + -> _i `ui -> 1 `ui `ux -> -> # *U _text `ui `ux `i -> 0 `i 937  ]
+"716
+[; ;AWS_Standard_Weight_Converter_V2.c: 716:         {
+{
+"717
+[; ;AWS_Standard_Weight_Converter_V2.c: 717:             has_decimal = 1;
+[e = _has_decimal -> -> 1 `i `a ]
+"718
+[; ;AWS_Standard_Weight_Converter_V2.c: 718:             i++;
+[e ++ _i -> -> 1 `i `uc ]
+"719
+[; ;AWS_Standard_Weight_Converter_V2.c: 719:             while (is_digit_ascii(text[i]))
+[e $U 938  ]
+[e :U 939 ]
+"720
+[; ;AWS_Standard_Weight_Converter_V2.c: 720:             {
+{
+"721
+[; ;AWS_Standard_Weight_Converter_V2.c: 721:                 decimal_digits++;
+[e ++ _decimal_digits -> -> 1 `i `uc ]
+"722
+[; ;AWS_Standard_Weight_Converter_V2.c: 722:                 if (decimal_digits == 1u)
+[e $ ! == -> _decimal_digits `ui -> 1 `ui 941  ]
+"723
+[; ;AWS_Standard_Weight_Converter_V2.c: 723:                 {
+{
+"724
+[; ;AWS_Standard_Weight_Converter_V2.c: 724:                     d1 = (uint8_t)(text[i] - '0');
+[e = _d1 -> - -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 48 `ui `uc ]
+"725
+[; ;AWS_Standard_Weight_Converter_V2.c: 725:                 }
+}
+[e $U 942  ]
+"726
+[; ;AWS_Standard_Weight_Converter_V2.c: 726:                 else if (decimal_digits == 2u)
+[e :U 941 ]
+[e $ ! == -> _decimal_digits `ui -> 2 `ui 943  ]
+"727
+[; ;AWS_Standard_Weight_Converter_V2.c: 727:                 {
+{
+"728
+[; ;AWS_Standard_Weight_Converter_V2.c: 728:                     d2 = (uint8_t)(text[i] - '0');
+[e = _d2 -> - -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 48 `ui `uc ]
+"729
+[; ;AWS_Standard_Weight_Converter_V2.c: 729:                 }
+}
+[e $U 944  ]
+"730
+[; ;AWS_Standard_Weight_Converter_V2.c: 730:                 else if (decimal_digits == 3u)
+[e :U 943 ]
+[e $ ! == -> _decimal_digits `ui -> 3 `ui 945  ]
+"731
+[; ;AWS_Standard_Weight_Converter_V2.c: 731:                 {
+{
+"732
+[; ;AWS_Standard_Weight_Converter_V2.c: 732:                     d3 = (uint8_t)(text[i] - '0');
+[e = _d3 -> - -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 48 `ui `uc ]
+"733
+[; ;AWS_Standard_Weight_Converter_V2.c: 733:                 }
+}
+[e $U 946  ]
+"734
+[; ;AWS_Standard_Weight_Converter_V2.c: 734:                 else if (decimal_digits == 4u)
+[e :U 945 ]
+[e $ ! == -> _decimal_digits `ui -> 4 `ui 947  ]
+"735
+[; ;AWS_Standard_Weight_Converter_V2.c: 735:                 {
+{
+"736
+[; ;AWS_Standard_Weight_Converter_V2.c: 736:                     d4 = (uint8_t)(text[i] - '0');
+[e = _d4 -> - -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 48 `ui `uc ]
+"737
+[; ;AWS_Standard_Weight_Converter_V2.c: 737:                 }
+}
+[e :U 947 ]
+[e :U 946 ]
+[e :U 944 ]
+[e :U 942 ]
+"738
+[; ;AWS_Standard_Weight_Converter_V2.c: 738:                 i++;
+[e ++ _i -> -> 1 `i `uc ]
+"739
+[; ;AWS_Standard_Weight_Converter_V2.c: 739:             }
+}
+[e :U 938 ]
+"719
+[; ;AWS_Standard_Weight_Converter_V2.c: 719:             while (is_digit_ascii(text[i]))
+[e $ != -> ( _is_digit_ascii (1 *U + _text * -> _i `ux -> -> # *U _text `ui `ux `i -> 0 `i 939  ]
+[e :U 940 ]
+"740
+[; ;AWS_Standard_Weight_Converter_V2.c: 740:         }
+}
+[e :U 937 ]
+"741
+[; ;AWS_Standard_Weight_Converter_V2.c: 741:     }
+}
+[e :U 936 ]
+"743
+[; ;AWS_Standard_Weight_Converter_V2.c: 743:     if (integer_digits == 0u)
+[e $ ! == -> _integer_digits `ui -> 0 `ui 948  ]
+"744
+[; ;AWS_Standard_Weight_Converter_V2.c: 744:     {
+{
+"745
+[; ;AWS_Standard_Weight_Converter_V2.c: 745:         return result;
+[e ) _result ]
+[e $UE 925  ]
+"746
+[; ;AWS_Standard_Weight_Converter_V2.c: 746:     }
+}
+[e :U 948 ]
+"748
+[; ;AWS_Standard_Weight_Converter_V2.c: 748:     if (has_decimal)
+[e $ ! != -> _has_decimal `i -> 0 `i 949  ]
+"749
+[; ;AWS_Standard_Weight_Converter_V2.c: 749:     {
+{
+"750
+[; ;AWS_Standard_Weight_Converter_V2.c: 750:         native_milli_abs = (integer_part * 1000UL) +
+[e = _native_milli_abs + + + * _integer_part -> 1000 `ul * -> _d1 `ul -> 100 `ul * -> _d2 `ul -> 10 `ul -> _d3 `ul ]
+"754
+[; ;AWS_Standard_Weight_Converter_V2.c: 754:         if (d4 >= 5u)
+[e $ ! >= -> _d4 `ui -> 5 `ui 950  ]
+"755
+[; ;AWS_Standard_Weight_Converter_V2.c: 755:         {
+{
+"756
+[; ;AWS_Standard_Weight_Converter_V2.c: 756:             native_milli_abs++;
+[e ++ _native_milli_abs -> -> -> 1 `i `l `ul ]
+"757
+[; ;AWS_Standard_Weight_Converter_V2.c: 757:         }
+}
+[e :U 950 ]
+"758
+[; ;AWS_Standard_Weight_Converter_V2.c: 758:     }
+}
+[e $U 951  ]
+"759
+[; ;AWS_Standard_Weight_Converter_V2.c: 759:     else
+[e :U 949 ]
+"760
+[; ;AWS_Standard_Weight_Converter_V2.c: 760:     {
+{
+"761
+[; ;AWS_Standard_Weight_Converter_V2.c: 761:         if (0u == 0u)
+[e $ ! == -> 0 `ui -> 0 `ui 952  ]
+"762
+[; ;AWS_Standard_Weight_Converter_V2.c: 762:         {
+{
+"763
+[; ;AWS_Standard_Weight_Converter_V2.c: 763:             native_milli_abs = integer_part * 1000UL;
+[e = _native_milli_abs * _integer_part -> 1000 `ul ]
+"764
+[; ;AWS_Standard_Weight_Converter_V2.c: 764:         }
+}
+[e $U 953  ]
+"765
+[; ;AWS_Standard_Weight_Converter_V2.c: 765:         else if (0u <= 3u)
+[e :U 952 ]
+[e $ ! <= -> 0 `ui -> 3 `ui 954  ]
+"766
+[; ;AWS_Standard_Weight_Converter_V2.c: 766:         {
+{
+"767
+[; ;AWS_Standard_Weight_Converter_V2.c: 767:             divisor = pow10_u32(0u);
+[e = _divisor ( _pow10_u32 (1 -> -> 0 `ui `uc ]
+"768
+[; ;AWS_Standard_Weight_Converter_V2.c: 768:             integer_scaled = integer_part * 1000UL;
+[e = _integer_scaled * _integer_part -> 1000 `ul ]
+"769
+[; ;AWS_Standard_Weight_Converter_V2.c: 769:             rounding_add = divisor / 2UL;
+[e = _rounding_add / _divisor -> 2 `ul ]
+"770
+[; ;AWS_Standard_Weight_Converter_V2.c: 770:             native_milli_abs = (integer_scaled + rounding_add) / divisor;
+[e = _native_milli_abs / + _integer_scaled _rounding_add _divisor ]
+"771
+[; ;AWS_Standard_Weight_Converter_V2.c: 771:         }
+}
+[e $U 955  ]
+"772
+[; ;AWS_Standard_Weight_Converter_V2.c: 772:         else
+[e :U 954 ]
+"773
+[; ;AWS_Standard_Weight_Converter_V2.c: 773:         {
+{
+"774
+[; ;AWS_Standard_Weight_Converter_V2.c: 774:             native_milli_abs = integer_part * 1000UL;
+[e = _native_milli_abs * _integer_part -> 1000 `ul ]
+"775
+[; ;AWS_Standard_Weight_Converter_V2.c: 775:         }
+}
+[e :U 955 ]
+[e :U 953 ]
+"776
+[; ;AWS_Standard_Weight_Converter_V2.c: 776:     }
+}
+[e :U 951 ]
+"778
+[; ;AWS_Standard_Weight_Converter_V2.c: 778:     if (native_milli_abs > 2000000000UL)
+[e $ ! > _native_milli_abs -> 2000000000 `ul 956  ]
+"779
+[; ;AWS_Standard_Weight_Converter_V2.c: 779:     {
+{
+"780
+[; ;AWS_Standard_Weight_Converter_V2.c: 780:         native_milli_abs = 2000000000UL;
+[e = _native_milli_abs -> 2000000000 `ul ]
+"781
+[; ;AWS_Standard_Weight_Converter_V2.c: 781:     }
+}
+[e :U 956 ]
+"783
+[; ;AWS_Standard_Weight_Converter_V2.c: 783:     result.valid = 1;
+[e = . _result 0 -> -> 1 `i `a ]
+"784
+[; ;AWS_Standard_Weight_Converter_V2.c: 784:     result.has_decimal = has_decimal;
+[e = . _result 2 _has_decimal ]
+"786
+[; ;AWS_Standard_Weight_Converter_V2.c: 786:     if (negative)
+[e $ ! != -> _negative `i -> 0 `i 957  ]
+"787
+[; ;AWS_Standard_Weight_Converter_V2.c: 787:     {
+{
+"788
+[; ;AWS_Standard_Weight_Converter_V2.c: 788:         result.native_milli_value = -((int32_t)native_milli_abs);
+[e = . _result 1 -U -> _native_milli_abs `l ]
+"789
+[; ;AWS_Standard_Weight_Converter_V2.c: 789:     }
+}
+[e $U 958  ]
+"790
+[; ;AWS_Standard_Weight_Converter_V2.c: 790:     else
+[e :U 957 ]
+"791
+[; ;AWS_Standard_Weight_Converter_V2.c: 791:     {
+{
+"792
+[; ;AWS_Standard_Weight_Converter_V2.c: 792:         result.native_milli_value = (int32_t)native_milli_abs;
+[e = . _result 1 -> _native_milli_abs `l ]
+"793
+[; ;AWS_Standard_Weight_Converter_V2.c: 793:     }
+}
+[e :U 958 ]
+"795
+[; ;AWS_Standard_Weight_Converter_V2.c: 795:     result.digit_count = (uint8_t)(integer_digits + decimal_digits);
+[e = . _result 3 -> + -> _integer_digits `i -> _decimal_digits `i `uc ]
+"796
+[; ;AWS_Standard_Weight_Converter_V2.c: 796:     result.score = result.digit_count;
+[e = . _result 4 . _result 3 ]
+"798
+[; ;AWS_Standard_Weight_Converter_V2.c: 798:     if (has_decimal)
+[e $ ! != -> _has_decimal `i -> 0 `i 959  ]
+"799
+[; ;AWS_Standard_Weight_Converter_V2.c: 799:     {
+{
+"800
+[; ;AWS_Standard_Weight_Converter_V2.c: 800:         result.score = (uint8_t)(result.score + 6u);
+[e = . _result 4 -> + -> . _result 4 `ui -> 6 `ui `uc ]
+"801
+[; ;AWS_Standard_Weight_Converter_V2.c: 801:     }
+}
+[e :U 959 ]
+"802
+[; ;AWS_Standard_Weight_Converter_V2.c: 802:     if (has_sign)
+[e $ ! != -> _has_sign `i -> 0 `i 960  ]
+"803
+[; ;AWS_Standard_Weight_Converter_V2.c: 803:     {
+{
+"804
+[; ;AWS_Standard_Weight_Converter_V2.c: 804:         result.score = (uint8_t)(result.score + 3u);
+[e = . _result 4 -> + -> . _result 4 `ui -> 3 `ui `uc ]
+"805
+[; ;AWS_Standard_Weight_Converter_V2.c: 805:     }
+}
+[e :U 960 ]
+"806
+[; ;AWS_Standard_Weight_Converter_V2.c: 806:     if (integer_digits >= 4u)
+[e $ ! >= -> _integer_digits `ui -> 4 `ui 961  ]
+"807
+[; ;AWS_Standard_Weight_Converter_V2.c: 807:     {
+{
+"808
+[; ;AWS_Standard_Weight_Converter_V2.c: 808:         result.score = (uint8_t)(result.score + 1u);
+[e = . _result 4 -> + -> . _result 4 `ui -> 1 `ui `uc ]
+"809
+[; ;AWS_Standard_Weight_Converter_V2.c: 809:     }
+}
+[e :U 961 ]
+"811
+[; ;AWS_Standard_Weight_Converter_V2.c: 811:     return result;
+[e ) _result ]
+[e $UE 925  ]
+"812
+[; ;AWS_Standard_Weight_Converter_V2.c: 812: }
+[e :UE 925 ]
+}
+"814
+[; ;AWS_Standard_Weight_Converter_V2.c: 814: static NumberCandidate find_best_number(const char *text)
+[v _find_best_number `(S826 ~T0 @X0 1 sf1`*Cuc ]
+"815
+[; ;AWS_Standard_Weight_Converter_V2.c: 815: {
+{
+[e :U _find_best_number ]
+"814
+[; ;AWS_Standard_Weight_Converter_V2.c: 814: static NumberCandidate find_best_number(const char *text)
+[v _text `*Cuc ~T0 @X0 1 r1 ]
+"815
+[; ;AWS_Standard_Weight_Converter_V2.c: 815: {
+[f ]
+"816
+[; ;AWS_Standard_Weight_Converter_V2.c: 816:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"817
+[; ;AWS_Standard_Weight_Converter_V2.c: 817:     NumberCandidate best;
+[v _best `S826 ~T0 @X0 1 a ]
+"818
+[; ;AWS_Standard_Weight_Converter_V2.c: 818:     NumberCandidate candidate;
+[v _candidate `S826 ~T0 @X0 1 a ]
+"820
+[; ;AWS_Standard_Weight_Converter_V2.c: 820:     best.valid = 0;
+[e = . _best 0 -> -> 0 `i `a ]
+"821
+[; ;AWS_Standard_Weight_Converter_V2.c: 821:     best.native_milli_value = 0;
+[e = . _best 1 -> -> 0 `i `l ]
+"822
+[; ;AWS_Standard_Weight_Converter_V2.c: 822:     best.has_decimal = 0;
+[e = . _best 2 -> -> 0 `i `a ]
+"823
+[; ;AWS_Standard_Weight_Converter_V2.c: 823:     best.digit_count = 0u;
+[e = . _best 3 -> -> 0 `ui `uc ]
+"824
+[; ;AWS_Standard_Weight_Converter_V2.c: 824:     best.score = 0u;
+[e = . _best 4 -> -> 0 `ui `uc ]
+"826
+[; ;AWS_Standard_Weight_Converter_V2.c: 826:     for (i = 0u; text[i] != '\0'; i++)
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $U 966  ]
+[e :U 963 ]
+"827
+[; ;AWS_Standard_Weight_Converter_V2.c: 827:     {
+{
+"828
+[; ;AWS_Standard_Weight_Converter_V2.c: 828:         if (is_digit_ascii(text[i]) || (text[i] == '+') || (text[i] == '-'))
+[e $ ! || || != -> ( _is_digit_ascii (1 *U + _text * -> _i `ux -> -> # *U _text `ui `ux `i -> 0 `i == -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 43 `ui == -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 45 `ui 967  ]
+"829
+[; ;AWS_Standard_Weight_Converter_V2.c: 829:         {
+{
+"830
+[; ;AWS_Standard_Weight_Converter_V2.c: 830:             candidate = parse_number_at(text, i);
+[e = _candidate ( _parse_number_at (2 , _text _i ]
+"831
+[; ;AWS_Standard_Weight_Converter_V2.c: 831:             if (candidate.valid)
+[e $ ! != -> . _candidate 0 `i -> 0 `i 968  ]
+"832
+[; ;AWS_Standard_Weight_Converter_V2.c: 832:             {
+{
+"833
+[; ;AWS_Standard_Weight_Converter_V2.c: 833:                 if ((!best.valid) || (candidate.score > best.score))
+[e $ ! || ! != -> . _best 0 `i -> 0 `i > -> . _candidate 4 `i -> . _best 4 `i 969  ]
+"834
+[; ;AWS_Standard_Weight_Converter_V2.c: 834:                 {
+{
+"835
+[; ;AWS_Standard_Weight_Converter_V2.c: 835:                     best = candidate;
+[e = _best _candidate ]
+"836
+[; ;AWS_Standard_Weight_Converter_V2.c: 836:                 }
+}
+[e :U 969 ]
+"837
+[; ;AWS_Standard_Weight_Converter_V2.c: 837:             }
+}
+[e :U 968 ]
+"838
+[; ;AWS_Standard_Weight_Converter_V2.c: 838:         }
+}
+[e :U 967 ]
+"839
+[; ;AWS_Standard_Weight_Converter_V2.c: 839:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 966 ]
+[e $ != -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 0 `ui 963  ]
+[e :U 964 ]
+}
+"841
+[; ;AWS_Standard_Weight_Converter_V2.c: 841:     return best;
+[e ) _best ]
+[e $UE 962  ]
+"842
+[; ;AWS_Standard_Weight_Converter_V2.c: 842: }
+[e :UE 962 ]
+}
+"844
+[; ;AWS_Standard_Weight_Converter_V2.c: 844: static WeightUnit detect_unit(const char *line)
+[v _detect_unit `(E5736 ~T0 @X0 1 sf1`*Cuc ]
+"845
+[; ;AWS_Standard_Weight_Converter_V2.c: 845: {
+{
+[e :U _detect_unit ]
+"844
+[; ;AWS_Standard_Weight_Converter_V2.c: 844: static WeightUnit detect_unit(const char *line)
+[v _line `*Cuc ~T0 @X0 1 r1 ]
+"845
+[; ;AWS_Standard_Weight_Converter_V2.c: 845: {
+[f ]
+"846
+[; ;AWS_Standard_Weight_Converter_V2.c: 846:     if (contains_ci(line, "kg") || contains_ci(line, "kgs") || contains_ci(line, "kilogram"))
+[e $ ! || || != -> ( _contains_ci (2 , _line :s 3C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 4C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 6C `i -> 0 `i 971  ]
+"847
+[; ;AWS_Standard_Weight_Converter_V2.c: 847:     {
+{
+"848
+[; ;AWS_Standard_Weight_Converter_V2.c: 848:         return UNIT_KG;
+[e ) . `E5736 1 ]
+[e $UE 970  ]
+"849
+[; ;AWS_Standard_Weight_Converter_V2.c: 849:     }
+}
+[e :U 971 ]
+"850
+[; ;AWS_Standard_Weight_Converter_V2.c: 850:     if (contains_ci(line, "lbs") || contains_ci(line, "lb") || contains_ci(line, "pound"))
+[e $ ! || || != -> ( _contains_ci (2 , _line :s 9C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 10C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 12C `i -> 0 `i 972  ]
+"851
+[; ;AWS_Standard_Weight_Converter_V2.c: 851:     {
+{
+"852
+[; ;AWS_Standard_Weight_Converter_V2.c: 852:         return UNIT_LB;
+[e ) . `E5736 3 ]
+[e $UE 970  ]
+"853
+[; ;AWS_Standard_Weight_Converter_V2.c: 853:     }
+}
+[e :U 972 ]
+"854
+[; ;AWS_Standard_Weight_Converter_V2.c: 854:     if (contains_ci(line, "tonne") || contains_ci(line, "tons") || contains_ci(line, "ton"))
+[e $ ! || || != -> ( _contains_ci (2 , _line :s 15C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 16C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 18C `i -> 0 `i 973  ]
+"855
+[; ;AWS_Standard_Weight_Converter_V2.c: 855:     {
+{
+"856
+[; ;AWS_Standard_Weight_Converter_V2.c: 856:         return UNIT_TON;
+[e ) . `E5736 4 ]
+[e $UE 970  ]
+"857
+[; ;AWS_Standard_Weight_Converter_V2.c: 857:     }
+}
+[e :U 973 ]
+"858
+[; ;AWS_Standard_Weight_Converter_V2.c: 858:     if (contains_isolated_letter_ci(line, 't'))
+[e $ ! != -> ( _contains_isolated_letter_ci (2 , _line -> -> 116 `ui `uc `i -> 0 `i 974  ]
+"859
+[; ;AWS_Standard_Weight_Converter_V2.c: 859:     {
+{
+"860
+[; ;AWS_Standard_Weight_Converter_V2.c: 860:         return UNIT_TON;
+[e ) . `E5736 4 ]
+[e $UE 970  ]
+"861
+[; ;AWS_Standard_Weight_Converter_V2.c: 861:     }
+}
+[e :U 974 ]
+"862
+[; ;AWS_Standard_Weight_Converter_V2.c: 862:     if (contains_isolated_letter_ci(line, 'g'))
+[e $ ! != -> ( _contains_isolated_letter_ci (2 , _line -> -> 103 `ui `uc `i -> 0 `i 975  ]
+"863
+[; ;AWS_Standard_Weight_Converter_V2.c: 863:     {
+{
+"864
+[; ;AWS_Standard_Weight_Converter_V2.c: 864:         return UNIT_G;
+[e ) . `E5736 2 ]
+[e $UE 970  ]
+"865
+[; ;AWS_Standard_Weight_Converter_V2.c: 865:     }
+}
+[e :U 975 ]
+"866
+[; ;AWS_Standard_Weight_Converter_V2.c: 866:     return UNIT_KG;
+[e ) . `E5736 1 ]
+[e $UE 970  ]
+"867
+[; ;AWS_Standard_Weight_Converter_V2.c: 867: }
+[e :UE 970 ]
+}
+"869
+[; ;AWS_Standard_Weight_Converter_V2.c: 869: static char detect_status(const char *line)
+[v _detect_status `(uc ~T0 @X0 1 sf1`*Cuc ]
+"870
+[; ;AWS_Standard_Weight_Converter_V2.c: 870: {
+{
+[e :U _detect_status ]
+"869
+[; ;AWS_Standard_Weight_Converter_V2.c: 869: static char detect_status(const char *line)
+[v _line `*Cuc ~T0 @X0 1 r1 ]
+"870
+[; ;AWS_Standard_Weight_Converter_V2.c: 870: {
+[f ]
+"871
+[; ;AWS_Standard_Weight_Converter_V2.c: 871:     if (contains_ci(line, "OVER") ||
+[e $ ! || || || || != -> ( _contains_ci (2 , _line :s 21C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 22C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 24C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 26C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 28C `i -> 0 `i 977  ]
+"876
+[; ;AWS_Standard_Weight_Converter_V2.c: 876:     {
+{
+"877
+[; ;AWS_Standard_Weight_Converter_V2.c: 877:         return 'O';
+[e ) -> -> 79 `ui `uc ]
+[e $UE 976  ]
+"878
+[; ;AWS_Standard_Weight_Converter_V2.c: 878:     }
+}
+[e :U 977 ]
+"880
+[; ;AWS_Standard_Weight_Converter_V2.c: 880:     if (contains_ci(line, "US") ||
+[e $ ! || || || != -> ( _contains_ci (2 , _line :s 31C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 32C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 34C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 36C `i -> 0 `i 978  ]
+"884
+[; ;AWS_Standard_Weight_Converter_V2.c: 884:     {
+{
+"885
+[; ;AWS_Standard_Weight_Converter_V2.c: 885:         return 'U';
+[e ) -> -> 85 `ui `uc ]
+[e $UE 976  ]
+"886
+[; ;AWS_Standard_Weight_Converter_V2.c: 886:     }
+}
+[e :U 978 ]
+"888
+[; ;AWS_Standard_Weight_Converter_V2.c: 888:     if (contains_ci(line, "ST") || contains_ci(line, "STABLE"))
+[e $ ! || != -> ( _contains_ci (2 , _line :s 39C `i -> 0 `i != -> ( _contains_ci (2 , _line :s 40C `i -> 0 `i 979  ]
+"889
+[; ;AWS_Standard_Weight_Converter_V2.c: 889:     {
+{
+"890
+[; ;AWS_Standard_Weight_Converter_V2.c: 890:         return 'S';
+[e ) -> -> 83 `ui `uc ]
+[e $UE 976  ]
+"891
+[; ;AWS_Standard_Weight_Converter_V2.c: 891:     }
+}
+[e :U 979 ]
+"893
+[; ;AWS_Standard_Weight_Converter_V2.c: 893:     return 'N';
+[e ) -> -> 78 `ui `uc ]
+[e $UE 976  ]
+"894
+[; ;AWS_Standard_Weight_Converter_V2.c: 894: }
+[e :UE 976 ]
+}
+"896
+[; ;AWS_Standard_Weight_Converter_V2.c: 896: static int32_t convert_native_milli_to_milli_kg(int32_t native_milli_value, WeightUnit unit)
+[v _convert_native_milli_to_milli_kg `(l ~T0 @X0 1 sf2`l`E5736 ]
+"897
+[; ;AWS_Standard_Weight_Converter_V2.c: 897: {
+{
+[e :U _convert_native_milli_to_milli_kg ]
+"896
+[; ;AWS_Standard_Weight_Converter_V2.c: 896: static int32_t convert_native_milli_to_milli_kg(int32_t native_milli_value, WeightUnit unit)
+[v _native_milli_value `l ~T0 @X0 1 r1 ]
+[v _unit `E5736 ~T0 @X0 1 r2 ]
+"897
+[; ;AWS_Standard_Weight_Converter_V2.c: 897: {
+[f ]
+"898
+[; ;AWS_Standard_Weight_Converter_V2.c: 898:     _Bool negative;
+[v _negative `a ~T0 @X0 1 a ]
+"899
+[; ;AWS_Standard_Weight_Converter_V2.c: 899:     uint32_t abs_native;
+[v _abs_native `ul ~T0 @X0 1 a ]
+"900
+[; ;AWS_Standard_Weight_Converter_V2.c: 900:     uint32_t converted;
+[v _converted `ul ~T0 @X0 1 a ]
+"901
+[; ;AWS_Standard_Weight_Converter_V2.c: 901:     uint64_t temp64;
+[v _temp64 `uo ~T0 @X0 1 a ]
+"903
+[; ;AWS_Standard_Weight_Converter_V2.c: 903:     negative = 0;
+[e = _negative -> -> 0 `i `a ]
+"904
+[; ;AWS_Standard_Weight_Converter_V2.c: 904:     if (native_milli_value < 0)
+[e $ ! < _native_milli_value -> -> 0 `i `l 981  ]
+"905
+[; ;AWS_Standard_Weight_Converter_V2.c: 905:     {
+{
+"906
+[; ;AWS_Standard_Weight_Converter_V2.c: 906:         negative = 1;
+[e = _negative -> -> 1 `i `a ]
+"907
+[; ;AWS_Standard_Weight_Converter_V2.c: 907:         abs_native = (uint32_t)(-native_milli_value);
+[e = _abs_native -> -U _native_milli_value `ul ]
+"908
+[; ;AWS_Standard_Weight_Converter_V2.c: 908:     }
+}
+[e $U 982  ]
+"909
+[; ;AWS_Standard_Weight_Converter_V2.c: 909:     else
+[e :U 981 ]
+"910
+[; ;AWS_Standard_Weight_Converter_V2.c: 910:     {
+{
+"911
+[; ;AWS_Standard_Weight_Converter_V2.c: 911:         abs_native = (uint32_t)native_milli_value;
+[e = _abs_native -> _native_milli_value `ul ]
+"912
+[; ;AWS_Standard_Weight_Converter_V2.c: 912:     }
+}
+[e :U 982 ]
+"915
+[; ;AWS_Standard_Weight_Converter_V2.c: 915:     switch (unit)
+[e $U 984  ]
+"916
+[; ;AWS_Standard_Weight_Converter_V2.c: 916:     {
+{
+"917
+[; ;AWS_Standard_Weight_Converter_V2.c: 917:         case UNIT_G:
+[e :U 985 ]
+"918
+[; ;AWS_Standard_Weight_Converter_V2.c: 918:             converted = (abs_native + 500UL) / 1000UL;
+[e = _converted / + _abs_native -> 500 `ul -> 1000 `ul ]
+"919
+[; ;AWS_Standard_Weight_Converter_V2.c: 919:             break;
+[e $U 983  ]
+"921
+[; ;AWS_Standard_Weight_Converter_V2.c: 921:         case UNIT_LB:
+[e :U 986 ]
+"922
+[; ;AWS_Standard_Weight_Converter_V2.c: 922:             temp64 = (uint64_t)abs_native * 45359237ULL;
+[e = _temp64 * -> _abs_native `uo -> 45359237 `uo ]
+"923
+[; ;AWS_Standard_Weight_Converter_V2.c: 923:             temp64 += 50000000ULL;
+[e =+ _temp64 -> 50000000 `uo ]
+"924
+[; ;AWS_Standard_Weight_Converter_V2.c: 924:             temp64 /= 100000000ULL;
+[e =/ _temp64 -> 100000000 `uo ]
+"925
+[; ;AWS_Standard_Weight_Converter_V2.c: 925:             if (temp64 > 2000000000ULL)
+[e $ ! > _temp64 -> 2000000000 `uo 987  ]
+"926
+[; ;AWS_Standard_Weight_Converter_V2.c: 926:             {
+{
+"927
+[; ;AWS_Standard_Weight_Converter_V2.c: 927:                 converted = 2000000000UL;
+[e = _converted -> 2000000000 `ul ]
+"928
+[; ;AWS_Standard_Weight_Converter_V2.c: 928:             }
+}
+[e $U 988  ]
+"929
+[; ;AWS_Standard_Weight_Converter_V2.c: 929:             else
+[e :U 987 ]
+"930
+[; ;AWS_Standard_Weight_Converter_V2.c: 930:             {
+{
+"931
+[; ;AWS_Standard_Weight_Converter_V2.c: 931:                 converted = (uint32_t)temp64;
+[e = _converted -> _temp64 `ul ]
+"932
+[; ;AWS_Standard_Weight_Converter_V2.c: 932:             }
+}
+[e :U 988 ]
+"933
+[; ;AWS_Standard_Weight_Converter_V2.c: 933:             break;
+[e $U 983  ]
+"935
+[; ;AWS_Standard_Weight_Converter_V2.c: 935:         case UNIT_TON:
+[e :U 989 ]
+"936
+[; ;AWS_Standard_Weight_Converter_V2.c: 936:             if (abs_native > 2000000UL)
+[e $ ! > _abs_native -> 2000000 `ul 990  ]
+"937
+[; ;AWS_Standard_Weight_Converter_V2.c: 937:             {
+{
+"938
+[; ;AWS_Standard_Weight_Converter_V2.c: 938:                 converted = 2000000000UL;
+[e = _converted -> 2000000000 `ul ]
+"939
+[; ;AWS_Standard_Weight_Converter_V2.c: 939:             }
+}
+[e $U 991  ]
+"940
+[; ;AWS_Standard_Weight_Converter_V2.c: 940:             else
+[e :U 990 ]
+"941
+[; ;AWS_Standard_Weight_Converter_V2.c: 941:             {
+{
+"942
+[; ;AWS_Standard_Weight_Converter_V2.c: 942:                 converted = abs_native * 1000UL;
+[e = _converted * _abs_native -> 1000 `ul ]
+"943
+[; ;AWS_Standard_Weight_Converter_V2.c: 943:             }
+}
+[e :U 991 ]
+"944
+[; ;AWS_Standard_Weight_Converter_V2.c: 944:             break;
+[e $U 983  ]
+"946
+[; ;AWS_Standard_Weight_Converter_V2.c: 946:         case UNIT_KG:
+[e :U 992 ]
+"947
+[; ;AWS_Standard_Weight_Converter_V2.c: 947:         case UNIT_UNKNOWN:
+[e :U 993 ]
+"948
+[; ;AWS_Standard_Weight_Converter_V2.c: 948:         default:
+[e :U 994 ]
+"949
+[; ;AWS_Standard_Weight_Converter_V2.c: 949:             converted = abs_native;
+[e = _converted _abs_native ]
+"950
+[; ;AWS_Standard_Weight_Converter_V2.c: 950:             break;
+[e $U 983  ]
+"951
+[; ;AWS_Standard_Weight_Converter_V2.c: 951:     }
+}
+[e $U 983  ]
+[e :U 984 ]
+[e [\ -> _unit `ui , $ -> . `E5736 2 `ui 985
+ , $ -> . `E5736 3 `ui 986
+ , $ -> . `E5736 4 `ui 989
+ , $ -> . `E5736 1 `ui 992
+ , $ -> . `E5736 0 `ui 993
+ 994 ]
+[e :U 983 ]
+"956
+[; ;AWS_Standard_Weight_Converter_V2.c: 956:     if (converted > 2000000000UL)
+[e $ ! > _converted -> 2000000000 `ul 995  ]
+"957
+[; ;AWS_Standard_Weight_Converter_V2.c: 957:     {
+{
+"958
+[; ;AWS_Standard_Weight_Converter_V2.c: 958:         converted = 2000000000UL;
+[e = _converted -> 2000000000 `ul ]
+"959
+[; ;AWS_Standard_Weight_Converter_V2.c: 959:     }
+}
+[e :U 995 ]
+"961
+[; ;AWS_Standard_Weight_Converter_V2.c: 961:     if (negative)
+[e $ ! != -> _negative `i -> 0 `i 996  ]
+"962
+[; ;AWS_Standard_Weight_Converter_V2.c: 962:     {
+{
+"963
+[; ;AWS_Standard_Weight_Converter_V2.c: 963:         return -((int32_t)converted);
+[e ) -U -> _converted `l ]
+[e $UE 980  ]
+"964
+[; ;AWS_Standard_Weight_Converter_V2.c: 964:     }
+}
+[e :U 996 ]
+"966
+[; ;AWS_Standard_Weight_Converter_V2.c: 966:     return (int32_t)converted;
+[e ) -> _converted `l ]
+[e $UE 980  ]
+"967
+[; ;AWS_Standard_Weight_Converter_V2.c: 967: }
+[e :UE 980 ]
+}
+"969
+[; ;AWS_Standard_Weight_Converter_V2.c: 969: static _Bool parse_weight_line(const char *line, WeightData *weight)
+[v _parse_weight_line `(a ~T0 @X0 1 sf2`*Cuc`*S827 ]
+"970
+[; ;AWS_Standard_Weight_Converter_V2.c: 970: {
+{
+[e :U _parse_weight_line ]
+"969
+[; ;AWS_Standard_Weight_Converter_V2.c: 969: static _Bool parse_weight_line(const char *line, WeightData *weight)
+[v _line `*Cuc ~T0 @X0 1 r1 ]
+[v _weight `*S827 ~T0 @X0 1 r2 ]
+"970
+[; ;AWS_Standard_Weight_Converter_V2.c: 970: {
+[f ]
+"971
+[; ;AWS_Standard_Weight_Converter_V2.c: 971:     NumberCandidate number;
+[v _number `S826 ~T0 @X0 1 a ]
+"972
+[; ;AWS_Standard_Weight_Converter_V2.c: 972:     WeightUnit unit;
+[v _unit `E5736 ~T0 @X0 1 a ]
+"974
+[; ;AWS_Standard_Weight_Converter_V2.c: 974:     if ((line == 0) || (weight == 0))
+[e $ ! || == _line -> -> 0 `i `*Cuc == _weight -> -> 0 `i `*S827 998  ]
+"975
+[; ;AWS_Standard_Weight_Converter_V2.c: 975:     {
+{
+"976
+[; ;AWS_Standard_Weight_Converter_V2.c: 976:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 997  ]
+"977
+[; ;AWS_Standard_Weight_Converter_V2.c: 977:     }
+}
+[e :U 998 ]
+"979
+[; ;AWS_Standard_Weight_Converter_V2.c: 979:     number = find_best_number(line);
+[e = _number ( _find_best_number (1 _line ]
+"980
+[; ;AWS_Standard_Weight_Converter_V2.c: 980:     if (!number.valid)
+[e $ ! ! != -> . _number 0 `i -> 0 `i 999  ]
+"981
+[; ;AWS_Standard_Weight_Converter_V2.c: 981:     {
+{
+"982
+[; ;AWS_Standard_Weight_Converter_V2.c: 982:         weight->valid = 0;
+[e = . *U _weight 0 -> -> 0 `i `a ]
+"983
+[; ;AWS_Standard_Weight_Converter_V2.c: 983:         weight->milli_kg = 0;
+[e = . *U _weight 1 -> -> 0 `i `l ]
+"984
+[; ;AWS_Standard_Weight_Converter_V2.c: 984:         weight->detected_unit = UNIT_KG;
+[e = . *U _weight 2 . `E5736 1 ]
+"985
+[; ;AWS_Standard_Weight_Converter_V2.c: 985:         weight->status = 'E';
+[e = . *U _weight 3 -> -> 69 `ui `uc ]
+"986
+[; ;AWS_Standard_Weight_Converter_V2.c: 986:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 997  ]
+"987
+[; ;AWS_Standard_Weight_Converter_V2.c: 987:     }
+}
+[e :U 999 ]
+"989
+[; ;AWS_Standard_Weight_Converter_V2.c: 989:     unit = detect_unit(line);
+[e = _unit ( _detect_unit (1 _line ]
+"990
+[; ;AWS_Standard_Weight_Converter_V2.c: 990:     weight->valid = 1;
+[e = . *U _weight 0 -> -> 1 `i `a ]
+"991
+[; ;AWS_Standard_Weight_Converter_V2.c: 991:     weight->detected_unit = unit;
+[e = . *U _weight 2 _unit ]
+"992
+[; ;AWS_Standard_Weight_Converter_V2.c: 992:     weight->status = detect_status(line);
+[e = . *U _weight 3 ( _detect_status (1 _line ]
+"993
+[; ;AWS_Standard_Weight_Converter_V2.c: 993:     weight->milli_kg = convert_native_milli_to_milli_kg(number.native_milli_value, unit);
+[e = . *U _weight 1 ( _convert_native_milli_to_milli_kg (2 , . _number 1 _unit ]
+"995
+[; ;AWS_Standard_Weight_Converter_V2.c: 995:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 997  ]
+"996
+[; ;AWS_Standard_Weight_Converter_V2.c: 996: }
+[e :UE 997 ]
+}
+"998
+[; ;AWS_Standard_Weight_Converter_V2.c: 998: static void uart2_write_wn_weight(const WeightData *weight)
+[v _uart2_write_wn_weight `(v ~T0 @X0 1 sf1`*CS827 ]
+"999
+[; ;AWS_Standard_Weight_Converter_V2.c: 999: {
+{
+[e :U _uart2_write_wn_weight ]
+"998
+[; ;AWS_Standard_Weight_Converter_V2.c: 998: static void uart2_write_wn_weight(const WeightData *weight)
+[v _weight `*CS827 ~T0 @X0 1 r1 ]
+"999
+[; ;AWS_Standard_Weight_Converter_V2.c: 999: {
+[f ]
+"1000
+[; ;AWS_Standard_Weight_Converter_V2.c: 1000:     uint32_t abs_milli_kg;
+[v _abs_milli_kg `ul ~T0 @X0 1 a ]
+"1001
+[; ;AWS_Standard_Weight_Converter_V2.c: 1001:     uint32_t kg_part;
+[v _kg_part `ul ~T0 @X0 1 a ]
+"1002
+[; ;AWS_Standard_Weight_Converter_V2.c: 1002:     uint32_t gram_part;
+[v _gram_part `ul ~T0 @X0 1 a ]
+"1004
+[; ;AWS_Standard_Weight_Converter_V2.c: 1004:     if (weight == 0)
+[e $ ! == _weight -> -> 0 `i `*CS827 1001  ]
+"1005
+[; ;AWS_Standard_Weight_Converter_V2.c: 1005:     {
+{
+"1006
+[; ;AWS_Standard_Weight_Converter_V2.c: 1006:         return;
+[e $UE 1000  ]
+"1007
+[; ;AWS_Standard_Weight_Converter_V2.c: 1007:     }
+}
+[e :U 1001 ]
+"1010
+[; ;AWS_Standard_Weight_Converter_V2.c: 1010:     if (weight->milli_kg < 0)
+[e $ ! < . *U _weight 1 -> -> 0 `i `l 1002  ]
+"1011
+[; ;AWS_Standard_Weight_Converter_V2.c: 1011:     {
+{
+"1012
+[; ;AWS_Standard_Weight_Converter_V2.c: 1012:         abs_milli_kg = (uint32_t)(-weight->milli_kg);
+[e = _abs_milli_kg -> -U . *U _weight 1 `ul ]
+"1013
+[; ;AWS_Standard_Weight_Converter_V2.c: 1013:     }
+}
+[e $U 1003  ]
+"1014
+[; ;AWS_Standard_Weight_Converter_V2.c: 1014:     else
+[e :U 1002 ]
+"1015
+[; ;AWS_Standard_Weight_Converter_V2.c: 1015:     {
+{
+"1016
+[; ;AWS_Standard_Weight_Converter_V2.c: 1016:         abs_milli_kg = (uint32_t)(weight->milli_kg);
+[e = _abs_milli_kg -> . *U _weight 1 `ul ]
+"1017
+[; ;AWS_Standard_Weight_Converter_V2.c: 1017:     }
+}
+[e :U 1003 ]
+"1018
+[; ;AWS_Standard_Weight_Converter_V2.c: 1018:     uart2_write_string("wn");
+[e ( _uart2_write_string (1 :s 41C ]
+"1032
+[; ;AWS_Standard_Weight_Converter_V2.c: 1032:     kg_part = abs_milli_kg / 1000UL;
+[e = _kg_part / _abs_milli_kg -> 1000 `ul ]
+"1033
+[; ;AWS_Standard_Weight_Converter_V2.c: 1033:     gram_part = abs_milli_kg % 1000UL;
+[e = _gram_part % _abs_milli_kg -> 1000 `ul ]
+"1035
+[; ;AWS_Standard_Weight_Converter_V2.c: 1035:     uart2_write_uint32_padded(kg_part, 6u);
+[e ( _uart2_write_uint32_padded (2 , _kg_part -> -> 6 `ui `uc ]
+"1036
+[; ;AWS_Standard_Weight_Converter_V2.c: 1036:     uart2_write_char('.');
+[e ( _uart2_write_char (1 -> -> 46 `ui `uc ]
+"1037
+[; ;AWS_Standard_Weight_Converter_V2.c: 1037:     uart2_write_uint32_padded(gram_part, 3u);
+[e ( _uart2_write_uint32_padded (2 , _gram_part -> -> 3 `ui `uc ]
+"1038
+[; ;AWS_Standard_Weight_Converter_V2.c: 1038:     uart2_write_string(" kg\r\n");
+[e ( _uart2_write_string (1 :s 42C ]
+"1039
+[; ;AWS_Standard_Weight_Converter_V2.c: 1039: }
+[e :UE 1000 ]
+}
+"1041
+[; ;AWS_Standard_Weight_Converter_V2.c: 1041: static void uart2_write_error_frame(void)
+[v _uart2_write_error_frame `(v ~T0 @X0 1 sf ]
+"1042
+[; ;AWS_Standard_Weight_Converter_V2.c: 1042: {
+{
+[e :U _uart2_write_error_frame ]
+[f ]
+"1043
+[; ;AWS_Standard_Weight_Converter_V2.c: 1043:     uart2_write_string("wn000000.000 kg\r\n");
+[e ( _uart2_write_string (1 :s 43C ]
+"1044
+[; ;AWS_Standard_Weight_Converter_V2.c: 1044: }
+[e :UE 1004 ]
+}
+"1046
+[; ;AWS_Standard_Weight_Converter_V2.c: 1046: static void process_scale_line(char *line)
+[v _process_scale_line `(v ~T0 @X0 1 sf1`*uc ]
+"1047
+[; ;AWS_Standard_Weight_Converter_V2.c: 1047: {
+{
+[e :U _process_scale_line ]
+"1046
+[; ;AWS_Standard_Weight_Converter_V2.c: 1046: static void process_scale_line(char *line)
+[v _line `*uc ~T0 @X0 1 r1 ]
+"1047
+[; ;AWS_Standard_Weight_Converter_V2.c: 1047: {
+[f ]
+"1048
+[; ;AWS_Standard_Weight_Converter_V2.c: 1048:     WeightData weight;
+[v _weight `S827 ~T0 @X0 1 a ]
+"1050
+[; ;AWS_Standard_Weight_Converter_V2.c: 1050:     LATBbits.LATB4 = 1;
+[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
+"1052
+[; ;AWS_Standard_Weight_Converter_V2.c: 1052:     if (parse_weight_line(line, &weight))
+[e $ ! != -> ( _parse_weight_line (2 , -> _line `*Cuc &U _weight `i -> 0 `i 1006  ]
+"1053
+[; ;AWS_Standard_Weight_Converter_V2.c: 1053:     {
+{
+"1054
+[; ;AWS_Standard_Weight_Converter_V2.c: 1054:         LATCbits.LATC0 = 0;
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+"1055
+[; ;AWS_Standard_Weight_Converter_V2.c: 1055:         LATBbits.LATB5 = 1;
+[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
+"1056
+[; ;AWS_Standard_Weight_Converter_V2.c: 1056:         uart2_write_wn_weight(&weight);
+[e ( _uart2_write_wn_weight (1 -> &U _weight `*CS827 ]
+"1057
+[; ;AWS_Standard_Weight_Converter_V2.c: 1057:         LATBbits.LATB5 = 0;
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+"1058
+[; ;AWS_Standard_Weight_Converter_V2.c: 1058:     }
+}
+[e $U 1007  ]
+"1059
+[; ;AWS_Standard_Weight_Converter_V2.c: 1059:     else
+[e :U 1006 ]
+"1060
+[; ;AWS_Standard_Weight_Converter_V2.c: 1060:     {
+{
+"1061
+[; ;AWS_Standard_Weight_Converter_V2.c: 1061:         LATCbits.LATC0 = 1;
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+"1063
+[; ;AWS_Standard_Weight_Converter_V2.c: 1063:         uart2_write_error_frame();
+[e ( _uart2_write_error_frame ..  ]
+"1065
+[; ;AWS_Standard_Weight_Converter_V2.c: 1065:     }
+}
+[e :U 1007 ]
+"1067
+[; ;AWS_Standard_Weight_Converter_V2.c: 1067:     LATBbits.LATB4 = 0;
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+"1068
+[; ;AWS_Standard_Weight_Converter_V2.c: 1068: }
+[e :UE 1005 ]
+}
+"1070
+[; ;AWS_Standard_Weight_Converter_V2.c: 1070: static void handle_scale_byte(uint8_t byte, char *line_buffer, uint8_t *line_index)
+[v _handle_scale_byte `(v ~T0 @X0 1 sf3`uc`*uc`*uc ]
+"1071
+[; ;AWS_Standard_Weight_Converter_V2.c: 1071: {
+{
+[e :U _handle_scale_byte ]
+"1070
+[; ;AWS_Standard_Weight_Converter_V2.c: 1070: static void handle_scale_byte(uint8_t byte, char *line_buffer, uint8_t *line_index)
+[v _byte `uc ~T0 @X0 1 r1 ]
+[v _line_buffer `*uc ~T0 @X0 1 r2 ]
+[v _line_index `*uc ~T0 @X0 1 r3 ]
+"1071
+[; ;AWS_Standard_Weight_Converter_V2.c: 1071: {
+[f ]
+"1073
+[; ;AWS_Standard_Weight_Converter_V2.c: 1073:     byte &= 0x7Fu;
+[e =& _byte -> -> 127 `ui `uc ]
+"1076
+[; ;AWS_Standard_Weight_Converter_V2.c: 1076:     if (byte == 0x02u)
+[e $ ! == -> _byte `ui -> 2 `ui 1009  ]
+"1077
+[; ;AWS_Standard_Weight_Converter_V2.c: 1077:     {
+{
+"1078
+[; ;AWS_Standard_Weight_Converter_V2.c: 1078:         *line_index = 0u;
+[e = *U _line_index -> -> 0 `ui `uc ]
+"1079
+[; ;AWS_Standard_Weight_Converter_V2.c: 1079:         return;
+[e $UE 1008  ]
+"1080
+[; ;AWS_Standard_Weight_Converter_V2.c: 1080:     }
+}
+[e :U 1009 ]
+"1082
+[; ;AWS_Standard_Weight_Converter_V2.c: 1082:     if ((byte == 0x03u) || (byte == '\r') || (byte == '\n'))
+[e $ ! || || == -> _byte `ui -> 3 `ui == -> _byte `ui -> 13 `ui == -> _byte `ui -> 10 `ui 1010  ]
+"1083
+[; ;AWS_Standard_Weight_Converter_V2.c: 1083:     {
+{
+"1084
+[; ;AWS_Standard_Weight_Converter_V2.c: 1084:         if (*line_index > 0u)
+[e $ ! > -> *U _line_index `ui -> 0 `ui 1011  ]
+"1085
+[; ;AWS_Standard_Weight_Converter_V2.c: 1085:         {
+{
+"1086
+[; ;AWS_Standard_Weight_Converter_V2.c: 1086:             line_buffer[*line_index] = '\0';
+[e = *U + _line_buffer * -> *U _line_index `ux -> -> # *U _line_buffer `ui `ux -> -> 0 `ui `uc ]
+"1087
+[; ;AWS_Standard_Weight_Converter_V2.c: 1087:             process_scale_line(line_buffer);
+[e ( _process_scale_line (1 _line_buffer ]
+"1088
+[; ;AWS_Standard_Weight_Converter_V2.c: 1088:             *line_index = 0u;
+[e = *U _line_index -> -> 0 `ui `uc ]
+"1089
+[; ;AWS_Standard_Weight_Converter_V2.c: 1089:         }
+}
+[e :U 1011 ]
+"1090
+[; ;AWS_Standard_Weight_Converter_V2.c: 1090:         return;
+[e $UE 1008  ]
+"1091
+[; ;AWS_Standard_Weight_Converter_V2.c: 1091:     }
+}
+[e :U 1010 ]
+"1093
+[; ;AWS_Standard_Weight_Converter_V2.c: 1093:     if ((byte >= 32u) && (byte <= 126u))
+[e $ ! && >= -> _byte `ui -> 32 `ui <= -> _byte `ui -> 126 `ui 1012  ]
+"1094
+[; ;AWS_Standard_Weight_Converter_V2.c: 1094:     {
+{
+"1095
+[; ;AWS_Standard_Weight_Converter_V2.c: 1095:         if (*line_index < (96u - 1u))
+[e $ ! < -> *U _line_index `ui - -> 96 `ui -> 1 `ui 1013  ]
+"1096
+[; ;AWS_Standard_Weight_Converter_V2.c: 1096:         {
+{
+"1097
+[; ;AWS_Standard_Weight_Converter_V2.c: 1097:             line_buffer[*line_index] = (char)byte;
+[e = *U + _line_buffer * -> *U _line_index `ux -> -> # *U _line_buffer `ui `ux -> _byte `uc ]
+"1098
+[; ;AWS_Standard_Weight_Converter_V2.c: 1098:             (*line_index)++;
+[e ++ *U _line_index -> -> 1 `i `uc ]
+"1099
+[; ;AWS_Standard_Weight_Converter_V2.c: 1099:         }
+}
+[e $U 1014  ]
+"1100
+[; ;AWS_Standard_Weight_Converter_V2.c: 1100:         else
+[e :U 1013 ]
+"1101
+[; ;AWS_Standard_Weight_Converter_V2.c: 1101:         {
+{
+"1102
+[; ;AWS_Standard_Weight_Converter_V2.c: 1102:             *line_index = 0u;
+[e = *U _line_index -> -> 0 `ui `uc ]
+"1103
+[; ;AWS_Standard_Weight_Converter_V2.c: 1103:             LATCbits.LATC0 = 1;
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+"1105
+[; ;AWS_Standard_Weight_Converter_V2.c: 1105:             uart2_write_error_frame();
+[e ( _uart2_write_error_frame ..  ]
+"1107
+[; ;AWS_Standard_Weight_Converter_V2.c: 1107:         }
+}
+[e :U 1014 ]
+"1108
+[; ;AWS_Standard_Weight_Converter_V2.c: 1108:     }
+}
+[e :U 1012 ]
+"1109
+[; ;AWS_Standard_Weight_Converter_V2.c: 1109: }
+[e :UE 1008 ]
+}
+"1111
+[; ;AWS_Standard_Weight_Converter_V2.c: 1111: static void startup_led_test(void)
+[v _startup_led_test `(v ~T0 @X0 1 sf ]
+"1112
+[; ;AWS_Standard_Weight_Converter_V2.c: 1112: {
+{
+[e :U _startup_led_test ]
+[f ]
+"1113
+[; ;AWS_Standard_Weight_Converter_V2.c: 1113:     LATBbits.LATB4 = 1;
+[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
+"1114
+[; ;AWS_Standard_Weight_Converter_V2.c: 1114:     LATBbits.LATB5 = 1;
+[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
+"1115
+[; ;AWS_Standard_Weight_Converter_V2.c: 1115:     LATCbits.LATC0 = 1;
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+"1117
+[; ;AWS_Standard_Weight_Converter_V2.c: 1117:     delay_ms_blocking((uint16_t)(80));
+[e ( _delay_ms_blocking (1 -> -> 80 `i `us ]
+"1119
+[; ;AWS_Standard_Weight_Converter_V2.c: 1119:     LATBbits.LATB4 = 0;
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+"1120
+[; ;AWS_Standard_Weight_Converter_V2.c: 1120:     LATBbits.LATB5 = 0;
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+"1121
+[; ;AWS_Standard_Weight_Converter_V2.c: 1121:     LATCbits.LATC0 = 0;
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+"1122
+[; ;AWS_Standard_Weight_Converter_V2.c: 1122: }
+[e :UE 1015 ]
+}
+[a 14C 116 111 110 115 0 ]
+[a 16C 116 111 110 115 0 ]
+[a 2C 107 103 115 0 ]
+[a 4C 107 103 115 0 ]
+[a 7C 108 98 115 0 ]
+[a 9C 108 98 115 0 ]
+[a 41C 119 110 0 ]
+[a 17C 116 111 110 0 ]
+[a 18C 116 111 110 0 ]
+[a 5C 107 105 108 111 103 114 97 109 0 ]
+[a 6C 107 105 108 111 103 114 97 109 0 ]
+[a 1C 107 103 0 ]
+[a 3C 107 103 0 ]
+[a 13C 116 111 110 110 101 0 ]
+[a 15C 116 111 110 110 101 0 ]
+[a 11C 112 111 117 110 100 0 ]
+[a 12C 112 111 117 110 100 0 ]
+[a 8C 108 98 0 ]
+[a 10C 108 98 0 ]
+[a 30C 85 78 83 84 0 ]
+[a 32C 85 78 83 84 0 ]
+[a 37C 83 84 0 ]
+[a 39C 83 84 0 ]
+[a 29C 85 83 0 ]
+[a 31C 85 83 0 ]
+[a 20C 79 86 82 0 ]
+[a 22C 79 86 82 0 ]
+[a 27C 69 82 82 0 ]
+[a 28C 69 82 82 0 ]
+[a 19C 79 86 69 82 0 ]
+[a 21C 79 86 69 82 0 ]
+[a 35C 68 89 78 0 ]
+[a 36C 68 89 78 0 ]
+[a 33C 77 79 84 73 79 78 0 ]
+[a 34C 77 79 84 73 79 78 0 ]
+[a 23C 79 76 0 ]
+[a 24C 79 76 0 ]
+[a 38C 83 84 65 66 76 69 0 ]
+[a 40C 83 84 65 66 76 69 0 ]
+[a 25C 45 45 45 45 0 ]
+[a 26C 45 45 45 45 0 ]
+[a 43C 119 110 48 48 48 48 48 48 46 48 48 48 32 107 103 13 10 0 ]
+[a 42C 32 107 103 13 10 0 ]
