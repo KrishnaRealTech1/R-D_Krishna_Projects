@@ -1,0 +1,9 @@
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\codelocal\Reader_demo\UHF_READER_Prime\Prime Reader Demo\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
