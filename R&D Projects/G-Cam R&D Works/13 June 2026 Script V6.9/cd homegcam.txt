@@ -1,0 +1,166 @@
+cd /home/gcam
+
+sudo python3 - <<'PY'
+from pathlib import Path
+import re
+import shutil
+import datetime
+
+APP = Path("/opt/gcam/app.py")
+CTRL = Path("/opt/gcam/controller.py")
+
+ALIASES = [
+    "camera temp url",
+    "camera temp access url",
+    "temp camera url",
+    "temp camera access url",
+    "camera temporary url",
+    "camera temporary access url",
+    "temporary camera url",
+    "temporary camera access url",
+    "camera config temp url",
+    "camera temporary config url",
+    "camera access url",
+    "cloudflare camera url",
+    "cloudflare temp camera url",
+    "cloudflare temp camera access url",
+    "cloudflare temporary camera url",
+    "cloudflare temporary camera access url",
+]
+
+def make_backup(path: Path) -> None:
+    ts = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    shutil.copy2(path, path.with_name(f"{path.name}.bak-camera-temp-{ts}"))
+
+def add_normalize_fix(text: str, return_expr: str, marker: str) -> str:
+    if marker in text:
+        return text
+
+    alias_set = ",\n        ".join(repr(x) for x in ALIASES)
+
+    block = f'''
+    # {marker}
+    if cmd in {{
+        {alias_set}
+    }}:
+        return {return_expr}
+'''
+
+    start = text.find("def normalize_command")
+    if start < 0:
+        raise SystemExit(f"normalize_command not found for {marker}")
+
+    tail = text[start:]
+    match = re.search(r'(^[ \t]*cmd\s*=.*$)', tail, re.M)
+    if not match:
+        raise SystemExit(f"cmd line inside normalize_command not found for {marker}")
+
+    insert_at = start + match.end(1)
+    return text[:insert_at] + "\n" + block + text[insert_at:]
+
+def insert_after_handle_cmd(text: str, block: str, marker: str) -> str:
+    if marker in text:
+        return text
+
+    start = text.find("def handle_command")
+    if start < 0:
+        raise SystemExit("handle_command not found")
+
+    tail = text[start:]
+    match = re.search(r'(^[ \t]*cmd\s*=\s*normalize_command\([^\n]*\)[ \t]*$)', tail, re.M)
+    if not match:
+        raise SystemExit("cmd = normalize_command(...) line not found inside handle_command")
+
+    insert_at = start + match.end(1)
+    return text[:insert_at] + "\n" + block + text[insert_at:]
+
+def patch_app() -> None:
+    make_backup(APP)
+    text = APP.read_text()
+
+    return_expr = "CAMERA_TEMPORARY_URL_COMMAND" if "CAMERA_TEMPORARY_URL_COMMAND" in text else repr("camera temporary url")
+    text = add_normalize_fix(text, return_expr, "GCAM_CAMERA_TEMP_URL_NORMALIZE_FIX")
+
+    app_block = '''
+    # GCAM_APP_CAMERA_TEMP_URL_COMMAND_BLOCK
+    if cmd in {"camera temporary url", "camera temp url"}:
+        live_payload = build_live_links_payload(force_new=True)
+
+        camera_temp_url = live_payload.get("camera_config_url_temp") or live_payload.get("camera_access_url_temp")
+        if not camera_temp_url:
+            temp_base = (
+                live_payload.get("dashboard_url_temp")
+                or live_payload.get("temporary_dashboard_url")
+                or live_payload.get("url")
+                or live_payload.get("live_base_url")
+            )
+            if temp_base:
+                camera_temp_url = str(temp_base).strip().rstrip("/") + "/camera"
+
+        if camera_temp_url:
+            live_payload["camera_config_url_temp"] = camera_temp_url
+            live_payload["camera_access_url_temp"] = camera_temp_url
+
+        response_payload = {
+            "device_id": DEVICE_ID,
+            "event": "camera_temporary_url_created" if camera_temp_url else "camera_temporary_url_failed",
+            "camera_name": CAMERA_NAME,
+            **live_payload,
+            "camera_config_url_temp": camera_temp_url,
+            "camera_access_url_temp": camera_temp_url,
+            "camera_config_target_url": CAMERA_CONFIG_TARGET_URL,
+            "camera_config_local_url": CAMERA_CONFIG_TARGET_URL,
+            "status": "success" if camera_temp_url else "failed",
+            "message": "Temporary Cloudflare camera access URL is ready" if camera_temp_url else "Temporary Cloudflare camera access URL unavailable",
+            "time": now_str(),
+        }
+
+        mqtt_publish(MQTT_RESPONSE_TOPIC, response_payload)
+
+        try:
+            add_event(response_payload["event"], {
+                "camera_config_url_temp": camera_temp_url,
+                "camera_config_target_url": CAMERA_CONFIG_TARGET_URL,
+                "status": response_payload["status"],
+            })
+        except Exception:
+            pass
+
+        return
+'''
+
+    text = insert_after_handle_cmd(text, app_block, "GCAM_APP_CAMERA_TEMP_URL_COMMAND_BLOCK")
+    APP.write_text(text)
+
+def patch_controller() -> None:
+    make_backup(CTRL)
+    text = CTRL.read_text()
+
+    text = add_normalize_fix(text, repr("camera temp url"), "GCAM_CONTROLLER_CAMERA_TEMP_URL_NORMALIZE_FIX")
+
+    controller_block = '''
+    # GCAM_CONTROLLER_CAMERA_TEMP_URL_COMMAND_BLOCK
+    if cmd == "camera temp url":
+        mqtt_publish({
+            "device_id": DEVICE_ID,
+            "event": "camera_temp_url_forwarded_to_app",
+            "requested_at": now_str(),
+            "camera_name": CAMERA_NAME,
+            "message": "Camera Temp URL command accepted. Main app will create the temporary Cloudflare /camera URL.",
+        })
+        return
+'''
+
+    text = insert_after_handle_cmd(text, controller_block, "GCAM_CONTROLLER_CAMERA_TEMP_URL_COMMAND_BLOCK")
+    CTRL.write_text(text)
+
+patch_app()
+patch_controller()
+print("Camera Temp URL MQTT hotfix applied successfully.")
+PY
+
+sudo python3 -m py_compile /opt/gcam/app.py /opt/gcam/controller.py
+sudo systemctl restart gcam.service gcam-controller.service
+sleep 3
+sudo systemctl status gcam.service --no-pager
+sudo systemctl status gcam-controller.service --no-pager

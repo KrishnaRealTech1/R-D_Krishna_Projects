@@ -1,0 +1,888 @@
+import os
+import queue
+import time
+import json
+import threading
+import datetime
+from ftplib import FTP_TLS
+import concurrent.futures
+
+import cv2
+import requests
+import serial
+import tkinter as tk
+from tkinter import ttk
+from PIL import Image, ImageTk
+
+class CameraApp:
+    def __init__(self, master):
+        self.master = master
+
+        self.cameras = []
+        self.running = True
+        self.snapshot_filenames = {}
+        self.last_seen_tag = None
+
+        # ---------------------------------------------------------
+        # Added this line to initialize the RFID read buffer.
+        self.buffer = b''  # <--- New line to fix the missing attribute
+        # ---------------------------------------------------------
+
+        self.rfid_value = tk.StringVar()
+        self.weight_value = tk.StringVar()
+
+        self.create_folders_and_files()
+        self.credentials = self.read_credentials()
+
+
+
+#Default Cam count 1
+        cam_count = self.credentials.get("CAM_COUNT", "0")  # Default to "0" if not found
+        try:
+            cam_count = int(cam_count)  # Convert to integer safely
+            self.rtsp_urls = [f"rtsp://admin:Admin@12@192.168.22.22{i}:554/Streaming/Channels/1/"
+                              for i in range(1, cam_count + 1)]
+        except ValueError:
+            print(f"Error: Invalid CAM_COUNT value '{cam_count}', defaulting to 1")
+            self.rtsp_urls = [f"rtsp://admin:Admin@12@192.168.22.221:554/Streaming/Channels/1/"]  # Default fallback
+
+ #       self.rtsp_urls = [f"rtsp://admin:Admin@12@192.168.22.22{i}:554/Streaming/Channels/1/" for i in range(1, int(self.credentials.get("CAM_COUNT")) + 1)]
+
+        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+        aws_MICRO_folder = os.path.join(desktop_path, "AWS_MICRO")
+        waste_types_file_path = os.path.join(aws_MICRO_folder, "WASTE_TYPES.txt")
+
+        self.waste_types = self.read_waste_types(waste_types_file_path)
+
+        self.selected_row_id = None
+        self.start_com_threads()
+        self.setup_ui()
+        self.check_and_reset_daily_counts()
+        self.load_and_display_initial_counts()
+
+    # UI Setup Methods
+    def setup_ui(self):
+        self.master.title("AWS MICRO")
+        self.master.state('zoomed')
+
+        input_frame = tk.Frame(self.master)
+        input_frame.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
+
+        self.setup_input_frame(input_frame)
+        self.setup_camera_output_frame()
+        self.setup_status_frame()
+        self.setup_table_frame()
+
+        self.update_cameras()
+
+    def setup_input_frame(self, input_frame):
+        tk.Label(input_frame, text="RFID:", font=('Helvetica', 16)).pack(side=tk.LEFT, padx=5, pady=5)
+        self.rfid_entry = tk.Entry(input_frame, font=('Helvetica', 16), width=30, textvariable=self.rfid_value)
+        self.rfid_entry.pack(side=tk.LEFT, padx=5, pady=5)
+
+        tk.Label(input_frame, text="Vehicle No:", font=('Helvetica', 16)).pack(side=tk.LEFT, padx=5, pady=5)
+        self.vehicle_no_entry = tk.Entry(input_frame, font=('Helvetica', 16), width=20)
+        self.vehicle_no_entry.pack(side=tk.LEFT, padx=5, pady=5)
+
+        tk.Label(input_frame, text="Weight:", font=('Helvetica', 16)).pack(side=tk.LEFT, padx=5, pady=5)
+        self.weight_entry = tk.Entry(input_frame, font=('Helvetica', 16), width=10, textvariable=self.weight_value)
+        self.weight_entry.pack(side=tk.LEFT, padx=5, pady=5)
+
+    def setup_camera_output_frame(self):
+        camera_output_frame = tk.Frame(self.master)
+        camera_output_frame.pack(side=tk.TOP, padx=10, pady=10, fill=tk.X)
+
+        for rtsp_url in self.rtsp_urls:
+            label = tk.Label(camera_output_frame)
+            label.pack(side=tk.LEFT, padx=20, pady=10)
+            self.cameras.append(label)
+
+    def setup_status_frame(self):
+        status_frame = tk.Frame(self.master)
+        status_frame.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
+
+        tk.Label(status_frame, text="Pending:", font=('Helvetica', 16)).pack(side=tk.LEFT, padx=10, pady=5)
+        self.pending_entry = tk.Entry(status_frame, font=('Helvetica', 16), width=5)
+        self.pending_entry.pack(side=tk.LEFT, padx=10, pady=5)
+
+        tk.Label(status_frame, text="Processed:", font=('Helvetica', 16)).pack(side=tk.LEFT, padx=10, pady=5)
+        self.processed_entry = tk.Entry(status_frame, font=('Helvetica', 16), width=5)
+        self.processed_entry.pack(side=tk.LEFT, padx=10, pady=5)
+
+        self.internet_status_canvas = tk.Canvas(status_frame, width=30, height=30, bg="red")
+        self.internet_status_canvas.pack(side=tk.RIGHT, padx=75, pady=5)
+
+        self.start_internet_status_check()
+
+    def setup_table_frame(self):
+        table_frame = tk.Frame(self.master)
+        table_frame.pack(fill='both', expand=True, padx=10, pady=10)
+
+        style = ttk.Style()
+        style.theme_use("default")
+        style.configure("Treeview.Heading", font=('Calibri', 16, 'bold'))
+        style.configure("Treeview", font=('Calibri', 14), rowheight=30)
+
+        self.tree = ttk.Treeview(table_frame, columns=("SNo", "Waste", "Weight"), show="headings", height=8)
+
+        scrollbar = ttk.Scrollbar(table_frame, orient="vertical", command=self.tree.yview)
+        self.tree.configure(yscrollcommand=scrollbar.set)
+        scrollbar.pack(side='right', fill='y')
+
+        self.tree.heading('SNo', text="SNo")
+        self.tree.heading('Waste', text="Waste")
+        self.tree.heading('Weight', text="Weight")
+
+        self.tree.column("SNo", width=50, anchor='center')
+        self.tree.column("Waste", width=300, anchor='center')
+        self.tree.column("Weight", width=150, anchor='center')
+
+        self.tree.pack(side='left', fill='both', expand=True)
+
+# ✅ Add "RealTech Systems" label at bottom-right
+        label = tk.Label(self.master, text="Powered By RealTech", font=("Arial", 10), fg="black", bg=self.master["bg"],
+                         bd=0)
+        label.place(relx=1.0, rely=1.0, anchor="se", x=-10, y=-10)  # Adjust x and y for padding
+
+        self.update_cameras()
+
+    # File and Folder Management
+    def create_folders_and_files(self):
+        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+        aws_MICRO_folder = os.path.join(desktop_path, "AWS_MICRO")
+        camera_output_folder = os.path.join(aws_MICRO_folder, "CAMERA_OUTPUT")
+        readings = os.path.join(aws_MICRO_folder, "READINGS")
+        pending_data = os.path.join(aws_MICRO_folder, "Pending_data")
+
+        for folder in (aws_MICRO_folder, camera_output_folder, readings, pending_data):
+            os.makedirs(folder, exist_ok=True)
+
+        file_contents = {
+            "PendingAndProccessed.txt": "Pending - 0 \nProcessed - 0  \n",
+            "WASTE_TYPES.txt": "",
+            "COM_PORT.txt": "WASTE -COM \nWEIGHT-COM \nRFID  -COM\n",
+            "Credentials.txt": "FTP_ADDRESS -\nFTP_DIRECTORY -\nIMG_NAME -\nSITE_NAME -\nCAM_COUNT -\n",
+        }
+
+        for filename, content in file_contents.items():
+            file_path = os.path.join(aws_MICRO_folder, filename)
+            if not os.path.exists(file_path):
+                with open(file_path, 'w') as file:
+                    file.write(content)
+
+    def read_waste_types(self, filepath, encoding='utf-8'):
+        try:
+            with open(filepath, 'r', encoding=encoding) as file:
+                return [line.strip() for line in file.readlines()]
+        except FileNotFoundError:
+            print(f"ENTER SOME WASTE TYPES IN WASTE_TYPES FILE")
+            return []
+
+    def read_credentials(self):
+        credentials_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "Credentials.txt")
+        credentials = {}
+
+        try:
+            with open(credentials_path, 'r') as file:
+                for line in file:
+                    if '-' in line:
+                        key, value = line.strip().split('-', 1)
+                        credentials[key.strip()] = value.strip()
+        except FileNotFoundError:
+            print(f"Credentials file not found: {credentials_path}")
+        return credentials
+
+    def read_com_ports(self):
+        com_ports = {"WASTE": None, "WEIGHT": None, "RFID": None}
+        com_ports_file_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "COM_PORT.txt")
+        try:
+            with open(com_ports_file_path, 'r') as file:
+                com_ports.update({parts[0].strip().upper(): parts[1].strip() for line in file if
+                                  (parts := line.split('-')) and len(parts) == 2})
+        except FileNotFoundError:
+            print(f"COM_PORTS.txt file not found in {com_ports_file_path}")
+        return com_ports
+
+    # RFID Methods
+    def run_rfid_reader(self, device_path, baud_rate=9600):
+        try:
+            ser = serial.Serial(device_path, baud_rate, timeout=1)
+            while True:
+                raw_data = ser.read(64)  # Read more bytes to handle fragmentation
+                self.buffer += raw_data  # Append new data to buffer
+
+                while len(self.buffer) >= 28:  # Process complete packets
+                    packet = self.buffer[:28]  # Extract one full packet
+                    self.buffer = self.buffer[28:]  # Remove processed data
+
+                    tag_name_data = packet[10:22]  # Extract RFID tag
+                    current_tag_name = self.parse_rfid_data(tag_name_data)
+
+                    if (current_tag_name.startswith("E280") or current_tag_name.startswith(
+                            "E200")) and current_tag_name != self.last_seen_tag:
+                        print("New RFID tag detected:", current_tag_name)
+                        self.master.after(0, lambda: self.rfid_value.set(current_tag_name))
+                        self.master.after(0, lambda: self.update_vehicle_number_from_rfid(current_tag_name))
+                        self.last_seen_tag = current_tag_name
+
+        except serial.SerialException as e:
+            print(f"Error opening or communicating with serial port: {e}")
+        except Exception as e:
+            print(f"Unexpected error in RFID reading or processing: {e}")
+
+    def parse_rfid_data(self, raw_data):
+        hex_str = ''.join(f"{byte:02X}" for byte in raw_data)
+        return hex_str
+
+    def update_vehicle_number_from_rfid(self, rfid_tag):
+        url = "http://dev.igps.io/aws_madurai/api/rf_id_check.php"
+        data = {"action": "get_vehicle", "rf_id": rfid_tag}
+        try:
+            response = requests.post(url, json=data)
+            if response.ok:
+                response_data = response.json()
+                if response_data and 'vehicle_no' in response_data[0]:
+                    vehicle_number = response_data[0].get('vehicle_no')
+                else:
+                    vehicle_number = "not.reg"
+
+                self.vehicle_no_entry.delete(0, tk.END)
+                self.vehicle_no_entry.insert(0, vehicle_number)
+                print(vehicle_number)
+            else:
+                print(f"Server returned error code {response.status_code} for RFID {rfid_tag}")
+                self.vehicle_no_entry.delete(0, tk.END)
+                self.vehicle_no_entry.insert(0, "not.reg")
+        except requests.RequestException as e:
+            print(f"Network error when getting vehicle number for RFID {rfid_tag}: {e}")
+            self.vehicle_no_entry.delete(0, tk.END)
+            self.vehicle_no_entry.insert(0, "not.reg")
+
+    # COM Port Methods
+    def listen_to_com_port(self, port, baud_rate=9600, data_type='waste'):
+        def handle_waste_data(data):
+            if data in ["21", "24"]:
+                self.master.after(0, self.handle_special_command, data)
+            elif data == "22":
+                self.master.after(0, self.clear_first_row)
+            elif data == "23":
+                self.master.after(0, self.clear_entire_table)
+            else:
+                try:
+                    value = int(data)
+                    if 1 <= value <= len(self.waste_types):
+                        waste_type = self.waste_types[value - 1]
+                        self.snapshot_filenames[waste_type] = []
+                        self.master.after(0, lambda: self.update_table(sno=value, waste_type=waste_type))
+                        camera_output_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "CAMERA_OUTPUT")
+                        for i, rtsp_url in enumerate(self.rtsp_urls):
+                            self.capture_and_save_snapshot(rtsp_url, i + 1, camera_output_folder,
+                                                           lambda cam_id, filename: self.snapshot_filenames
+                                                               [waste_type].append(filename) if filename else None)
+                except ValueError:
+                    print(f"Received non-integer value: {data}")
+
+        def handle_weight_data(data):
+            weight = self.extract_weight(data)
+            self.master.after(0, lambda: self.update_table(weight=weight))
+            self.master.after(0, lambda: self.weight_value.set(weight))
+
+        try:
+            with serial.Serial(port, baud_rate, timeout=2) as ser:
+                while self.running:
+                    if ser.in_waiting > 0:
+                        data = ser.readline().decode(errors='ignore').strip()
+                        if self.rfid_value.get():
+                            if data_type == 'waste':
+                                handle_waste_data(data)
+                            elif data_type == 'weight':
+                                handle_weight_data(data)
+        except serial.SerialException as e:
+            print(f"Serial port error: {e}")
+
+    def start_com_threads(self):
+        try:
+            com_ports = self.read_com_ports()
+            port_threads = {
+                "RFID": (self.run_rfid_reader, 9600),
+                "WASTE": (self.listen_to_com_port, 9600),
+                #"WEIGHT": (self.listen_to_com_port, 2400),
+                "WEIGHT": (self.listen_to_com_port, 9600)
+            }
+
+            for port_type, port_config in com_ports.items():
+                if port_config and port_type in port_threads:
+                    target, baud_rate = port_threads[port_type]
+                    try:
+                        if port_type == "RFID":
+                            thread = threading.Thread(target=target, args=(port_config, baud_rate), daemon=True)
+                        else:
+                            thread = threading.Thread(target=target, args=(port_config, baud_rate, port_type.lower()), daemon=True)
+                        thread.start()
+                    except Exception as e:
+                        print(f"Error starting thread for {port_type} on port {port_config}: {e}")
+        except Exception as e:
+            print(f"Error reading COM ports: {e}")
+
+# Weight Data Methods
+        # Weight Data Methods
+        def extract_weight(self, weight_str):
+            try:
+                weight_str = weight_str.strip()
+
+                # Check for format "wn" or "ww" prefix and "kg" suffix
+                if (weight_str.startswith("wn") or weight_str.startswith("ww")) and weight_str.endswith("kg"):
+                    weight_with_prefix = weight_str[2:-2]  # Remove "wn" or "ww" and "kg"
+                    weight = float(weight_with_prefix)
+                    return str(weight)
+
+                # Check for a generic weight format (just a number)
+                elif weight_str:  # Ensure it's not empty
+                    weight = float(weight_str)
+                    return str(weight)
+                else:
+                    return "0"  # Return "0" if empty string
+
+            except ValueError as e:
+                print(f"Error parsing weight from '{weight_str}': {e}")
+                return "0"  # Return "0" if there's an error
+
+    #Cam Module
+    import cv2
+    import threading
+    import time
+    import os
+    from PIL import Image, ImageTk
+    import concurrent.futures
+
+    # Camera Methods
+    def update_cameras(self):
+        for i, rtsp_url in enumerate(self.rtsp_urls):
+            threading.Thread(target=self.update_camera, args=(i, rtsp_url), daemon=True).start()
+
+    def update_camera(self, index, rtsp_url):
+        # Use FFmpeg as the backend for better performance
+        cap = cv2.VideoCapture(rtsp_url, cv2.CAP_FFMPEG)
+
+        # Reduce latency and buffer size
+        cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+        cap.set(cv2.CAP_PROP_FPS, 15)  # Adjust the FPS as needed
+
+        if not cap.isOpened():
+            print(f"Error: Unable to open camera stream at {rtsp_url}")
+            return
+
+        while self.running:
+            ret, frame = cap.read()
+
+            if not ret or frame is None:
+                print(f"Warning: Failed to read frame from {rtsp_url}")
+                time.sleep(0.1)  # Small delay to avoid CPU overload
+                continue
+
+            try:
+                # Convert color and resize frame
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                frame = cv2.resize(frame, (175, 175))
+
+                # Convert to Tkinter-compatible image
+                img = Image.fromarray(frame)
+                img = ImageTk.PhotoImage(image=img)
+
+                # Update camera feed in the UI
+                self.cameras[index].configure(image=img)
+                self.cameras[index].image = img
+
+            except Exception as e:
+                print(f"Error processing frame: {e}")
+                break
+
+        cap.release()
+        print(f"Camera {index} at {rtsp_url} released.")
+
+    def capture_and_save_snapshot(self, rtsp_url, camera_id, output_folder, callback):
+        def capture():
+            cap = cv2.VideoCapture(rtsp_url, cv2.CAP_FFMPEG)
+            if not cap.isOpened():
+                print(f"Error: Unable to open camera for snapshot at {rtsp_url}")
+                callback(camera_id, None)
+                return
+
+            success, frame = cap.read()
+            cap.release()
+
+            if success and frame is not None:
+                timestamp = time.strftime("%H%M%S_%d%m%y")
+                filename = f"{self.credentials.get('IMG_NAME')}_{timestamp}_camera{camera_id}.jpg"
+                filepath = os.path.join(output_folder, filename)
+
+                try:
+                    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+                        future = executor.submit(cv2.imwrite, filepath, frame)
+                        if future.result():
+                            print(f"Snapshot saved: {filepath}")
+                            callback(camera_id, filename)
+                        else:
+                            print(f"Failed to save snapshot: {filepath}")
+                            callback(camera_id, None)
+                except Exception as e:
+                    print(f"Snapshot saving error: {e}")
+                    callback(camera_id, None)
+            else:
+                print(f"Failed to capture snapshot from {rtsp_url}")
+                callback(camera_id, None)
+
+        threading.Thread(target=capture, daemon=True).start()
+
+
+    # Table Methods
+    def update_table(self, sno=None, waste_type=None, weight=None):
+        def update():
+            if weight is not None:
+                if self.selected_row_id:
+                    current_values = self.tree.item(self.selected_row_id)['values']
+                    new_values = (current_values[0], current_values[1], weight)
+                    self.tree.item(self.selected_row_id, values=new_values)
+                    self.selected_row_id = None
+            elif waste_type:
+                self.selected_row_id = self.tree.insert('', 0, values=(sno, waste_type, ""))
+
+        self.master.after(0, update)
+
+    def clear_first_row(self):
+        children = self.tree.get_children()
+        if children:
+            self.tree.delete(children[0])
+
+    def clear_entire_table(self):
+        for item in self.tree.get_children():
+            self.tree.delete(item)
+
+        self.rfid_value.set("")
+        self.vehicle_no_entry.delete(0, tk.END)
+        self.last_seen_tag = None
+        self.close_popup_if_open()
+
+    def on_tree_select(self, event):
+        self.selected_row_id = self.tree.focus()
+
+    # Popup Window Methods
+    def create_popup_window(self):
+        self.popup = tk.Toplevel(self.master)
+        self.popup.title("Data Summary")
+
+        popup_width = 800
+        popup_height = 500
+        self.popup.geometry(f"{popup_width}x{popup_height}")
+
+        self.master.update_idletasks()
+
+        main_window_x = self.master.winfo_x()
+        main_window_y = self.master.winfo_y()
+        main_window_width = self.master.winfo_width()
+        main_window_height = self.master.winfo_height()
+
+        center_x = main_window_x + (main_window_width - popup_width) // 2
+        center_y = main_window_y + (main_window_height - popup_height) // 2
+
+        self.popup.geometry(f"+{center_x}+{center_y}")
+
+        tk.Label(self.popup, text=f"RFID: {self.rfid_value.get()}", font=('Helvetica', 12)).pack()
+        tk.Label(self.popup, text=f"Vehicle No: {self.vehicle_no_entry.get()}", font=('Helvetica', 12)).pack()
+        current_timestamp = datetime.datetime.now().strftime("%H:%M:%S %d-%m-%Y")
+        tk.Label(self.popup, text=f"Timestamp: {current_timestamp}", font=('Helvetica', 12)).pack()
+
+        self.temp_rfid_value = self.rfid_value.get()
+        self.temp_vehicle_no = self.vehicle_no_entry.get()
+
+        tree_frame = tk.Frame(self.popup)
+        tree_frame.pack(fill='both', expand=True)
+
+        popup_tree = ttk.Treeview(tree_frame, columns=("Waste", "Total Weight"), show="headings", height=5)
+        popup_tree.pack(side='left', fill='both', expand=True)
+
+        popup_tree.heading('Waste', text="Waste")
+        popup_tree.heading('Total Weight', text="Total Weight")
+
+        popup_tree.column("Waste", width=200, anchor='center')
+        popup_tree.column("Total Weight", width=100, anchor='center')
+
+        weight_by_waste = {}
+        for child in self.tree.get_children():
+            values = self.tree.item(child)["values"]
+            waste_type, weight = values[1], values[2]
+            if waste_type in weight_by_waste:
+                weight_by_waste[waste_type] += float(weight)
+            else:
+                weight_by_waste[waste_type] = float(weight)
+
+        for waste, total_weight in weight_by_waste.items():
+            popup_tree.insert('', 'end', values=(waste, total_weight))
+
+    def handle_special_command(self, command):
+        if command == "24":
+            if hasattr(self, 'popup') and self.popup.winfo_exists():
+                self.save_and_clear_data()
+
+                all_images = []
+                for filenames in self.snapshot_filenames.values():
+                    all_images.extend(filenames)
+
+                self.popup.destroy()
+                self.upload_images_to_ftps_threaded(all_images)
+                self.snapshot_filenames.clear()
+
+                self.thank_you_popup = tk.Toplevel(self.master)
+                self.thank_you_popup.title("Thank You")
+
+                popup_width = 500
+                popup_height = 100
+
+                main_window_width = self.master.winfo_width()
+                main_window_height = self.master.winfo_height()
+                main_window_x = self.master.winfo_x()
+                main_window_y = self.master.winfo_y()
+
+                center_x = main_window_x + (main_window_width - popup_width) // 2
+                center_y = main_window_y + (main_window_height - popup_height) // 2
+
+                self.thank_you_popup.geometry(f"{popup_width}x{popup_height}+{center_x}+{center_y}")
+                tk.Label(self.thank_you_popup, text="நன்றி", font=("Arial", 22)).pack(expand=True)
+
+                self.thank_you_popup.after(3000, self.thank_you_popup.destroy)
+                self.thank_you_popup.transient(self.master)
+                self.thank_you_popup.grab_set()
+            else:
+                self.create_popup_window()
+        elif command == "21":
+            if hasattr(self, 'popup') and self.popup.winfo_exists():
+                self.popup.destroy()
+
+    def close_popup_if_open(self):
+        if hasattr(self, 'popup') and self.popup.winfo_exists():
+            self.popup.destroy()
+            print("Popup window closed.")
+
+    # Data Management Methods
+    def save_and_clear_data(self):
+        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+        readings_folder = os.path.join(desktop_path, "AWS_MICRO", "READINGS")
+
+        os.makedirs(readings_folder, exist_ok=True)
+
+        filename = os.path.join(readings_folder, f"{self.credentials.get('IMG_NAME')}_{time.strftime('%Y%m%d_%H%M%S')}.json")
+
+        current_time = time.strftime("%Y-%m-%d %H:%M:%S")
+        data_to_save = {
+            "RFID": self.temp_rfid_value,
+            "Vehicle_No": self.temp_vehicle_no,
+            "Site_Name": self.credentials.get('SITE_NAME'),
+            "Timestamp": current_time,
+            "Readings": []
+        }
+
+        aggregated_readings = {}
+        for child in self.tree.get_children():
+            values = self.tree.item(child)["values"]
+            waste_type, weight = values[1], float(values[2])
+            images = self.snapshot_filenames.get(waste_type, [])
+
+            if waste_type not in aggregated_readings:
+                aggregated_readings[waste_type] = {"Weight": weight, "Images": images}
+            else:
+                aggregated_readings[waste_type]["Weight"] += weight
+                for img in images:
+                    if img not in aggregated_readings[waste_type]["Images"]:
+                        aggregated_readings[waste_type]["Images"].append(img)
+
+        for waste_type, data in aggregated_readings.items():
+            data_to_save["Readings"].append({
+                "Waste": waste_type,
+                "Weight": str(data["Weight"]),
+                "Images": data["Images"]
+            })
+
+        with open(filename, 'w', encoding='utf-8') as file:
+            json.dump(data_to_save, file, indent=4, ensure_ascii=False)
+            json_data = json.dumps(data_to_save, ensure_ascii=False).encode('utf8')
+
+        try:
+            response = requests.post("https://gov.igps.io/aws_mini/api/fetchdata.php", data=json_data,
+                                     headers={'Content-Type': 'application/json'})
+            print("Data sent to API. Status code:", response.status_code)
+        except requests.RequestException as e:
+            print(f"Failed to send data to API: {e}")
+            self.save_failed_data(json_data)
+
+        self.clear_entire_table()
+        self.rfid_value.set("")
+        self.vehicle_no_entry.delete(0, tk.END)
+
+    def save_failed_data(self, data):
+        pending_data_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "Pending_data")
+        os.makedirs(pending_data_folder, exist_ok=True)
+        filename = os.path.join(pending_data_folder, f"failed_data_{time.strftime('%Y%m%d_%H%M%S')}.json")
+
+        if isinstance(data, bytes):
+            data = data.decode('utf-8')
+            data = json.loads(data)
+
+        with open(filename, 'w', encoding='utf-8') as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+
+    def resend_failed_data(self):
+        pending_data_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "Pending_data")
+        for filename in os.listdir(pending_data_folder):
+            if filename.endswith('.json'):
+                file_path = os.path.join(pending_data_folder, filename)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as file:
+                        data = json.load(file)
+                    response = requests.post("https://gov.igps.io/aws_mini/api/fetchdata.php", json=data,
+                                             headers={'Content-Type': 'application/json'})
+                    if response.status_code == 200:
+                        print(f"Data successfully resent for {filename}")
+                        self.update_pending_and_processed_counts(success=True)
+                        os.remove(file_path)
+                    else:
+                        print(f"Failed to resend data, status code: {response.status_code} for {filename}")
+                        self.update_pending_and_processed_counts(success=False)
+                except requests.RequestException as e:
+                    print(f"Failed to resend data for {filename}: {e}")
+                except json.JSONDecodeError:
+                    print(f"Invalid JSON in file {filename}")
+                except Exception as e:
+                    print(f"Error processing file {filename}: {e}")
+
+    def update_pending_and_processed_counts(self, success):
+        date_file_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "LastUpdateDate.txt")
+
+        current_date = datetime.date.today().isoformat()
+
+        try:
+            with open(date_file_path, 'r') as f:
+                last_update_date = f.read().strip()
+        except FileNotFoundError:
+            last_update_date = None
+
+        if current_date != last_update_date:
+            pending_count, processed_count = 0, 0
+            with open(date_file_path, 'w') as f:
+                f.write(current_date)
+        else:
+            file_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "PendingAndProccessed.txt")
+            try:
+                with open(file_path, 'r') as file:
+                    lines = file.readlines()
+                    pending_count, processed_count = [int(line.split('-')[1].strip()) for line in lines]
+            except Exception as e:
+                print(f"Error updating pending and processed counts: {e}")
+                return
+
+        if success:
+            pending_count -= 1
+            processed_count += 1
+
+        file_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "PendingAndProccessed.txt")
+        with open(file_path, 'w') as file:
+            file.write(f"Pending - {pending_count}\nProcessed - {processed_count}")
+
+    def check_and_reset_daily_counts(self):
+        current_date = datetime.date.today().isoformat()
+        date_file_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "LastUpdateDate.txt")
+
+        try:
+            with open(date_file_path, 'r') as file:
+                last_update_date = file.read().strip()
+        except FileNotFoundError:
+            last_update_date = None
+
+        if current_date != last_update_date:
+            self.reset_daily_counts()
+            with open(date_file_path, 'w') as file:
+                file.write(current_date)
+
+    def reset_daily_counts(self):
+        file_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "PendingAndProccessed.txt")
+        with open(file_path, 'w') as file:
+            file.write(f"Pending - 0\nProcessed - 0")
+
+        self.pending_entry.delete(0, tk.END)
+        self.pending_entry.insert(0, "0")
+        self.processed_entry.delete(0, tk.END)
+        self.processed_entry.insert(0, "0")
+
+    def process_and_upload_images(self):
+        pending_data_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "Pending_data")
+        camera_output_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "CAMERA_OUTPUT")
+
+        for filename in os.listdir(pending_data_folder):
+            if filename.endswith('.txt'):
+                file_path = os.path.join(pending_data_folder, filename)
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    image_filenames = file.read().splitlines()
+
+                valid_image_paths = [os.path.join(camera_output_folder, img) for img in image_filenames if
+                                     os.path.exists(os.path.join(camera_output_folder, img))]
+                if valid_image_paths:
+                    self.upload_images_to_ftps_threaded(valid_image_paths)
+
+                os.remove(file_path)
+
+    def upload_images_to_ftps_threaded(self, images):
+        threading.Thread(target=self.upload_images_to_ftps, args=(images,), daemon=True).start()
+
+    def upload_images_to_ftps(self, images, retries=3, timeout=30):
+        ftp_address = self.credentials.get('FTP_ADDRESS')
+        username = 'ftpuser'
+        password = 'VuSvGX!htx5bgE!gNBSJ!fFE'
+        ftp_directory = self.credentials.get('FTP_DIRECTORY')
+
+        if not all([ftp_address, username, password, ftp_directory]):
+            print("FTP credentials are not fully provided.")
+            return
+
+        output_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "CAMERA_OUTPUT")
+
+        def upload_image(image):
+            attempt = 0
+            while attempt < retries:
+                try:
+                    ftps = FTP_TLS(ftp_address, timeout=timeout)
+                    ftps.login(username, password)
+                    ftps.prot_p()
+                    ftps.cwd(ftp_directory)
+
+                    filepath = os.path.join(output_folder, image)
+                    if os.path.exists(filepath):
+                        with open(filepath, 'rb') as file:
+                            ftps.storbinary(f'STOR {image}', file)
+                            print(f"Uploaded {image} to FTPS.")
+                            ftps.quit()
+                            return True
+                    else:
+                        print(f"File does not exist: {filepath}")
+                        ftps.quit()
+                        return False
+                except Exception as e:
+                    print(f"Failed to upload {image} on attempt {attempt + 1}/{retries}: {e}")
+                    attempt += 1
+                    time.sleep(5)
+            return False
+
+        batch_success = True
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+            future_to_image = {executor.submit(upload_image, image): image for image in images}
+            for future in concurrent.futures.as_completed(future_to_image):
+                image = future_to_image[future]
+                try:
+                    success = future.result()
+                    if not success:
+                        batch_success = False
+                except Exception as e:
+                    print(f"Exception occurred during upload of {image}: {e}")
+                    batch_success = False
+
+        if not batch_success:
+            self.save_failed_uploads(images)
+
+        self.master.after(0, lambda: self.update_counters_based_on_batch_success(batch_success))
+
+    def save_failed_uploads(self, images):
+        pending_data_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "Pending_data")
+        os.makedirs(pending_data_folder, exist_ok=True)
+        filename = os.path.join(pending_data_folder, f"failed_uploads_{time.strftime('%Y%m%d_%H%M%S')}.txt")
+        with open(filename, 'w', encoding='utf-8') as file:
+            for image in images:
+                file.write(f"{image}\n")
+        print("Failed uploads saved locally for later retry.")
+
+    def update_counters_based_on_batch_success(self, batch_success):
+        pending_data_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "Pending_data")
+
+        pending_count = len([name for name in os.listdir(pending_data_folder) if name.endswith('.json')])
+
+        file_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "PendingAndProccessed.txt")
+        processed_count = 0
+        try:
+            with open(file_path, 'r') as file:
+                _, processed_count = [int(line.split('-')[1].strip()) for line in file.readlines()]
+        except FileNotFoundError:
+            print(f"File not found: {file_path}")
+        except ValueError:
+            print("Error parsing counts from file.")
+
+        processed_count += batch_success
+
+        with open(file_path, 'w') as file:
+            file.write(f"Pending - {pending_count}\nProcessed - {processed_count}")
+
+        self.pending_entry.delete(0, tk.END)
+        self.pending_entry.insert(0, str(pending_count))
+        self.processed_entry.delete(0, tk.END)
+        self.processed_entry.insert(0, str(processed_count))
+
+    # Internet Status Methods
+    def check_internet(self):
+        try:
+            response = requests.get("http://www.google.com", timeout=2)
+            return response.status_code == 200
+        except requests.ConnectionError:
+            return False
+        except requests.exceptions.ReadTimeout:
+            print(".", end="")
+            return False
+
+    def update_internet_status(self):
+        if self.check_internet():
+            self.internet_status_canvas.config(bg="green")
+            for data in self.load_pending_data():
+                self.resend_failed_data()
+                self.process_and_upload_images()
+        else:
+            print(".", end="")
+
+        self.master.after(5000, self.update_internet_status)
+
+    def load_pending_data(self):
+        pending_data_folder = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "Pending_data")
+        pending_data = []
+
+        for filename in filter(lambda f: f.endswith('.json'), os.listdir(pending_data_folder)):
+            file_path = os.path.join(pending_data_folder, filename)
+            try:
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    data = json.load(file)
+                    pending_data.append(data)
+            except json.JSONDecodeError:
+                print(f"Skipping file {filename} due to invalid JSON.")
+            except Exception as e:
+                print(f"Error loading data from file {filename}: {e}")
+
+        return pending_data
+
+    def start_internet_status_check(self):
+        internet_check_thread = threading.Thread(target=self.update_internet_status, daemon=True)
+        internet_check_thread.start()
+
+    # Load Initial Data
+    def load_and_display_initial_counts(self):
+        file_path = os.path.join(os.path.expanduser("~"), "Desktop", "AWS_MICRO", "PendingAndProccessed.txt")
+        try:
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+                pending_count, processed_count = [int(line.split('-')[1].strip()) for line in lines]
+        except Exception as e:
+            print(f"Error reading counts from file: {e}")
+            pending_count, processed_count = 0, 0
+
+        self.pending_entry.delete(0, tk.END)
+        self.pending_entry.insert(0, str(pending_count))
+        self.processed_entry.delete(0, tk.END)
+        self.processed_entry.insert(0, str(processed_count))
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = CameraApp(root)
+    root.mainloop()
