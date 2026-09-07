@@ -1,0 +1,21 @@
+{
+  "name": "Vector",
+  "version": "1.4.0",
+  "description": "Header-only fixed-capacity vector-like container with caller-provided static storage.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/janelia-arduino/Vector.git"
+  },
+  "authors": [
+    {
+      "name": "Peter Polidoro",
+      "email": "peter@polidoro.io",
+      "url": "https://github.com/peterpolidoro",
+      "maintainer": true
+    }
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/janelia-arduino/Vector",
+  "frameworks": "*",
+  "platforms": "*"
+}
