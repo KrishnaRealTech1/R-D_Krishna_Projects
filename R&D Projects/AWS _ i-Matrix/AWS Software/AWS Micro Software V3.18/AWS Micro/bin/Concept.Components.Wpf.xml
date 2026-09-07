@@ -1,0 +1,2597 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Concept.Components.Wpf</name>
+    </assembly>
+    <members>
+        <member name="P:Concept.Components.Wpf.LicensesCreationEditor.CommandExportAndTest">
+            <summary>
+            Gets the command export and test.
+            </summary>
+            <value>The command export and test.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LicenseParameterSignedFileSymmetricSha1Editor.CommandExportAndTest">
+            <summary>
+            Gets the command export and test.
+            </summary>
+            <value>The command export and test.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LicenseParameterSignedFileAsymmetricEditor.CommandExportAndTest">
+            <summary>
+            Gets the command export and test.
+            </summary>
+            <value>The command export and test.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.AllowedFeatureLinksEditor.LicenseFile">
+            <summary>
+            Gets the license file.
+            </summary>
+            <value>The license file.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.AllowedFeatureLinksEditor.FeatureViewModels">
+            <summary>
+            Gets or sets the feature view models.
+            </summary>
+            <value>The feature view models.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.AllowedFeatureLinksEditor.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.FeatureViewModel">
+            <summary>
+            Class FeatureViewModel
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.FeatureViewModel.#ctor(Concept.Components.Feature,Concept.Model.ConceptMultipleLink{Concept.Components.Feature})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.FeatureViewModel"/> class.
+            </summary>
+            <param name="feature">The feature.</param>
+            <param name="featuresLinks">The features links.</param>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureViewModel.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureViewModel.Description">
+            <summary>
+            Gets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureViewModel.IsAllowed">
+            <summary>
+            Gets or sets a value indicating whether this instance is allowed.
+            </summary>
+            <value><c>true</c> if this instance is allowed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureViewModel.CommandAllow">
+            <summary>
+            Gets the command allow.
+            </summary>
+            <value>The command allow.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.FeatureViewModel.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ConceptComponentsWpfUtils">
+            <summary>
+            Class ConceptComponentsWpfUtils
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ConceptComponentsWpfUtils.GetRootFactories(Concept.Model.ConceptFactories)">
+            <summary>
+            Gets the root factories.
+            </summary>
+            <param name="factories">The factories.</param>
+            <returns>ConceptFactories.</returns>
+        </member>
+        <member name="F:Concept.Components.Wpf.ConceptSignedLicenseFilesView.SignedLicenceFilesPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ConceptSignedLicenseFilesView.SignedLicenceFiles"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesView.SignedLicenceFiles">
+            <summary>
+            Gets or sets the signed licence files.
+            </summary>
+            <value>The signed licence files.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ConceptSignedLicenseFilesView.SelectedLicenseViewModelPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ConceptSignedLicenseFilesView.SelectedLicenseViewModel"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesView.SelectedLicenseViewModel">
+            <summary>
+            Gets or sets the selected license view model.
+            </summary>
+            <value>The selected license view model.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesView.CommandLicenseCreationData">
+            <summary>
+            Gets the command license creation data.
+            </summary>
+            <value>The command license creation data.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesView.CommandAdd">
+            <summary>
+            Gets the command add.
+            </summary>
+            <value>The command add.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesView.CommandRemove">
+            <summary>
+            Gets the command remove.
+            </summary>
+            <value>The command remove.</value>
+        </member>
+        <member name="T:Concept.Components.Wpf.SignedLicenseFileViewModel">
+            <summary>
+            Class SignedLicenseFileViewModel
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.SignedLicenseFileViewModel.#ctor(Concept.Components.SignedLicenseFile)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.SignedLicenseFileViewModel"/> class.
+            </summary>
+            <param name="license">The license.</param>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignedLicenseFileViewModel.License">
+            <summary>
+            Gets the license.
+            </summary>
+            <value>The license.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignedLicenseFileViewModel.LicenseNameThreadShared">
+            <summary>
+            Gets the license name thread shared.
+            </summary>
+            <value>The license name thread shared.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignedLicenseFileViewModel.IsValidThreadShared">
+            <summary>
+            Gets a value indicating whether this instance is valid thread shared.
+            </summary>
+            <value><c>true</c> if this instance is valid thread shared; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignedLicenseFileViewModel.FailureDescriptionThreadShared">
+            <summary>
+            Gets the failure description thread shared.
+            </summary>
+            <value>The failure description thread shared.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.SignedLicenseFileViewModel.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.SignedLicenseFileViewModel.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.SignedLicenseFileViewModel.DoPropertyChanged(System.String)">
+            <summary>
+            Does the property changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="T:Concept.Components.Wpf.DynamicProjectManager`1">
+            <summary>
+            Class managing polymorph projects.
+            </summary>
+            <typeparam name="TProjectType">Type from which projects have to inherit.</typeparam>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.#ctor(System.String,System.String,Concept.Utils.IntlText,Concept.Utils.IntlText,Concept.Utils.IntlText,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.DynamicProjectManager`1"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="extension">The extension.</param>
+            <param name="loadedProjectHeader">The LoadedProject header.</param>
+            <param name="projectsHeader">The projects header.</param>
+            <param name="emptyListInfos">The empty list infos.</param>
+            <param name="rootFolder">The root folder.</param>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.BeforeLoad">
+            <summary>
+            Occurs just before a project is loaded.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.AfterLoad">
+            <summary>
+            Occurs just after a project is loaded.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.BeforeEdit">
+            <summary>
+            Occurs just before a project is edited.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.AfterEdit">
+            <summary>
+            Occurs just after a project is edited.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.AfterEditCanceled">
+            <summary>
+            Occurs after canceling the modification of a project.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.BeforeAdd">
+            <summary>
+            Occurs just before a project is added.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.AfterAdd">
+            <summary>
+            Occurs just after a project is added.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.BeforeClone">
+            <summary>
+            Occurs just before a project is cloned.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.AfterClone">
+            <summary>
+            Occurs just after a project is cloned.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.BeforeRemove">
+            <summary>
+            Occurs just before a project is removed.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.AfterRemove">
+            <summary>
+            Occurs just after a project is removed.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.DynamicProjectManager`1.Initialization">
+            <summary>
+            Occurs when data context has changed and a new initialisation should be done.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.DynamicProjectManager`1.LoadedProjectHeaderTextPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.DynamicProjectManager`1.LoadedProjectHeaderText"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.DynamicProjectManager`1.LoadedProjectHeaderText">
+            <summary>
+            Gets or sets the LoadedProject header text.
+            </summary>
+            <value>The LoadedProject header text.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.DynamicProjectManager`1.ProjectsHeaderTextPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.DynamicProjectManager`1.ProjectsHeaderText"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.DynamicProjectManager`1.ProjectsHeaderText">
+            <summary>
+            Gets or sets the projects header text.
+            </summary>
+            <value>The projects header text.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.DynamicProjectManager`1.LoadedProject">
+            <summary>
+            Gets the LoadedProject.
+            </summary>
+            <value>The LoadedProject.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.DynamicProjectManager`1.SelectedCompletePathPropertyName">
+            <summary>
+            Gets the complete path.
+            </summary>
+            <value>The complete path.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.DynamicProjectManager`1.HasBeenModified">
+            <summary>
+            Gets or sets a value indicating whether this instance has been modified.
+            </summary>
+            <value><c>true</c> if this instance has been modified; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.Unload">
+            <summary>
+            Unloads this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.Load">
+            <summary>
+            Loads this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.New(System.Boolean)">
+            <summary>
+            News the specified update last filename.
+            </summary>
+            <param name="updateLastFilename">if set to <c>true</c> [update last filename].</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.Open">
+            <summary>
+            Opens this instance.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.Open(System.String)">
+            <summary>
+            Opens the specified filename.
+            </summary>
+            <param name="filename">The filename.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.Save">
+            <summary>
+            Saves this instance.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.SaveAs">
+            <summary>
+            Saves as.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="P:Concept.Components.Wpf.DynamicProjectManager`1.FolderEntry">
+            <summary>
+            Gets the folder entry for puo.
+            </summary>
+            <value>The folder entry.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.DynamicProjectManager`1.Folder">
+            <summary>
+            Gets or sets the folder.
+            </summary>
+            <value>The folder.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.DynamicProjectManager`1.LastFilenameEntry">
+            <summary>
+            Gets the last filename entry for puo.
+            </summary>
+            <value>The last filename entry.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.DynamicProjectManager`1.LastFilename">
+            <summary>
+            Gets or sets the last filename.
+            </summary>
+            <value>The last filename.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.LoadLast">
+            <summary>
+            Loads the last.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.SaveToFile(System.String)">
+            <summary>
+            Saves to file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.LoadFromFile(System.String,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector)">
+            <summary>
+            Loads from file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="factories">The factories.</param>
+            <param name="messageCollector">The message collector.</param>
+        </member>
+        <member name="M:Concept.Components.Wpf.DynamicProjectManager`1.LoadSelectedItem">
+            <summary>
+            Loads the selected project.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.StaticProjectManager`1">
+            <summary>
+            Class managing monomorphic projects.
+            </summary>
+            <typeparam name="TProjectType">Type from which projects have to inherit.</typeparam>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.#ctor(System.String,System.String,Concept.Utils.IntlText,Concept.Utils.IntlText,Concept.Utils.IntlText,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.StaticProjectManager`1"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="extension">The extension.</param>
+            <param name="loadedProjectHeader">The LoadedProject header.</param>
+            <param name="projectsHeader">The projects header.</param>
+            <param name="emptyListInfos">The empty list infos.</param>
+            <param name="rootFolder">The root folder.</param>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.BeforeLoad">
+            <summary>
+            Occurs just before a project is loaded.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.AfterLoad">
+            <summary>
+            Occurs just after a project is loaded.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.BeforeEdit">
+            <summary>
+            Occurs just before a project is edited.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.AfterEdit">
+            <summary>
+            Occurs just after a project is edited.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.AfterEditCanceled">
+            <summary>
+            Occurs after canceling the modification of a project.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.BeforeAdd">
+            <summary>
+            Occurs just before a project is added.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.AfterAdd">
+            <summary>
+            Occurs just after a project is added.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.BeforeClone">
+            <summary>
+            Occurs just before a project is cloned.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.AfterClone">
+            <summary>
+            Occurs just after a project is cloned.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.BeforeRemove">
+            <summary>
+            Occurs just before a project is removed.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.AfterRemove">
+            <summary>
+            Occurs just after a project is removed.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.StaticProjectManager`1.Initialization">
+            <summary>
+            Occurs when data context has changed and a new initialisation should be done.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.StaticProjectManager`1.LoadedProjectHeaderTextPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.StaticProjectManager`1.LoadedProjectHeaderText"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.StaticProjectManager`1.LoadedProjectHeaderText">
+            <summary>
+            Gets or sets the LoadedProject header text.
+            </summary>
+            <value>The LoadedProject header text.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.StaticProjectManager`1.ProjectsHeaderTextPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.StaticProjectManager`1.ProjectsHeaderText"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.StaticProjectManager`1.ProjectsHeaderText">
+            <summary>
+            Gets or sets the projects header text.
+            </summary>
+            <value>The projects header text.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.StaticProjectManager`1.LoadedProject">
+            <summary>
+            Gets the LoadedProject.
+            </summary>
+            <value>The LoadedProject.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.StaticProjectManager`1.SelectedCompletePathPropertyName">
+            <summary>
+            Gets the complete path.
+            </summary>
+            <value>The complete path.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.StaticProjectManager`1.HasBeenModified">
+            <summary>
+            Gets or sets a value indicating whether this instance has been modified.
+            </summary>
+            <value><c>true</c> if this instance has been modified; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.Unload">
+            <summary>
+            Unloads this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.New(System.Boolean)">
+            <summary>
+            News the specified update last filename.
+            </summary>
+            <param name="updateLastFilename">if set to <c>true</c> [update last filename].</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.Open">
+            <summary>
+            Opens this instance.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.Open(System.String)">
+            <summary>
+            Opens the specified filename.
+            </summary>
+            <param name="filename">The filename.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.Save">
+            <summary>
+            Saves this instance.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.SaveAs">
+            <summary>
+            Saves as.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="P:Concept.Components.Wpf.StaticProjectManager`1.FolderEntry">
+            <summary>
+            Gets the folder entry for puo.
+            </summary>
+            <value>The folder entry.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.StaticProjectManager`1.Folder">
+            <summary>
+            Gets or sets the folder.
+            </summary>
+            <value>The folder.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.StaticProjectManager`1.LastFilenameEntry">
+            <summary>
+            Gets the last filename entry for puo.
+            </summary>
+            <value>The last filename entry.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.StaticProjectManager`1.LastFilename">
+            <summary>
+            Gets or sets the last filename.
+            </summary>
+            <value>The last filename.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.LoadLast(System.Boolean)">
+            <summary>
+            Loads the last.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.SaveToFile(System.String)">
+            <summary>
+            Saves loaded project to file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.LoadFromFile(System.String,Concept.Model.ConceptFactories,Concept.Utils.MessageCollection,System.Boolean)">
+            <summary>
+            Load loaded project from file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="factories">The factories.</param>
+            <param name="messageCollector">The message collector.</param>
+        </member>
+        <member name="M:Concept.Components.Wpf.StaticProjectManager`1.LoadSelectedItem">
+            <summary>
+            Loads the selected project.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.RightsEditor.RepositoryProperty">
+            <summary>
+            The repository property
+            </summary>
+            <remarks>
+            This property is no more used!
+            </remarks>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightsEditor.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <remarks>
+            This property is no more used!
+            </remarks>
+            <value>The repository.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightRepositoryEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.RightRepositoryEditor"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightRepositoryEditor.UserText">
+            <summary>
+            Gets the user text.
+            </summary>
+            <value>The user text.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightRepositoryEditor.GroupText">
+            <summary>
+            Gets the group text.
+            </summary>
+            <value>The group text.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightRepositoryEditor.RightText">
+            <summary>
+            Gets the right text.
+            </summary>
+            <value>The right text.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.RightRepositoryEditor.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPassword.CommandUpdate">
+            <summary>
+            Gets the command update.
+            </summary>
+            <value>The command update.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPassword.CurrentPassword">
+            <summary>
+            Gets or sets the current password.
+            </summary>
+            <value>The current password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPassword.CurrentPasswordProperty">
+            <summary>
+            The current password property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPassword.OldPasswordNeeded">
+            <summary>
+            Gets or sets the need to fill the old user password.
+            </summary>
+            <value>Is the old user password needed.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPassword.OldPasswordNeededProperty">
+            <summary>
+            The old password needed property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPassword.ControlPassword">
+            <summary>
+            Gets or sets the control password.
+            </summary>
+            <value>The control password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPassword.ControlPasswordProperty">
+            <summary>
+            The control password property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPassword.FirstPassword">
+            <summary>
+            Gets or sets the first password.
+            </summary>
+            <value>The first password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPassword.FirstPasswordProperty">
+            <summary>
+            The first password property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPassword.SecondPassword">
+            <summary>
+            Gets or sets the second password.
+            </summary>
+            <value>The second password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPassword.SecondPasswordProperty">
+            <summary>
+            The second password property
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPassword.PasswordUpdatedEvent">
+            <summary>
+            The password updated event
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.EditPassword.PasswordUpdated">
+            <summary>
+            Occurs when [password updated].
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptRightsView.CommandSave">
+            <summary>
+            Gets the command save.
+            </summary>
+            <value>The command save.</value>
+        </member>
+        <member name="T:Concept.Components.Wpf.LoginMode">
+            <summary>
+            Enum LoginMode
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginMode.Graphical">
+            <summary>
+            The graphical mode display all available users
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginMode.Textual">
+            <summary>
+            The textual mode require username and password inputs.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControl.UsernamePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.LoginControl.Username"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>The username.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.LastUserLoggedName">
+            <summary>
+            Gets or sets the last logged username.
+            </summary>
+            <value>The last logged username.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControl.PasswordPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.LoginControl.Password"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>The password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControl.ConfirmPasswordPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.LoginControl.ConfirmPassword"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.ConfirmPassword">
+            <summary>
+            Gets or sets the confirm password.
+            </summary>
+            <value>
+            The confirm password.
+            </value>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControl.InformationTextPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.LoginControl.InformationText"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.InformationText">
+            <summary>
+            Gets or sets the information text.
+            </summary>
+            <value>The information text.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.Mode">
+            <summary>
+            Gets or sets the login mode.
+            </summary>
+            <value>
+            <see cref="F:Concept.Components.Wpf.LoginMode.Graphical"/> mode enables to select the user by clicking an image, while the <see cref="F:Concept.Components.Wpf.LoginMode.Textual"/> mode
+            forces the user to enter the login.
+            </value>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControl.ModeProperty">
+            <summary>
+            Identifies the <see cref="P:Concept.Components.Wpf.LoginControl.Mode"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.IsCaseSensitive">
+            <summary>
+            Gets or sets a value indicating whether the login is case sensitive.
+            </summary>
+            <value><c>true</c> if the login is case sensitive; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControl.IsCaseSensitiveProperty">
+            <summary>
+            Identifies the <see cref="P:Concept.Components.Wpf.LoginControl.IsCaseSensitive"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.LoginCommand">
+            <summary>
+            Gets the login command.
+            </summary>
+            <value>The login command.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.LogoutCommand">
+            <summary>
+            Gets the logout command.
+            </summary>
+            <value>The logout command.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.CommandGoToTextualMode">
+            <summary>
+            Gets the command go to textual mode.
+            </summary>
+            <value>
+            The command go to textual mode.
+            </value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.CommandGoToGraphicalMode">
+            <summary>
+            Gets the command go to graphical mode.
+            </summary>
+            <value>
+            The command go to graphical mode.
+            </value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.CommandBack">
+            <summary>
+            Gets the command back.
+            </summary>
+            <value>
+            The command back.
+            </value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControl.CommandSetPassword">
+            <summary>
+            Gets the command set password.
+            </summary>
+            <value>
+            The command set password.
+            </value>
+        </member>
+        <member name="E:Concept.Components.Wpf.LoginControl.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.NullableConverter">
+            <summary>
+            Class NullableConverter
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.NullableConverter.ValueWhenWhenNull">
+            <summary>
+            Gets or sets a value indicating whether [value when when null].
+            </summary>
+            <value><c>true</c> if [value when when null]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.NullableConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl">
+            <summary>
+            Interaction logic for ConceptSignedLicenseFilesView.xaml
+            </summary>
+            <summary>
+            ConceptSignedLicenseFilesViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ConceptSignedLicenseFilesView"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.SignedLicenceFilesPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.SignedLicenceFiles"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.SignedLicenceFiles">
+            <summary>
+            Gets or sets the signed licence files.
+            </summary>
+            <value>The signed licence files.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.SelectedLicenseViewModelPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.SelectedLicenseViewModel"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.SelectedLicenseViewModel">
+            <summary>
+            Gets or sets the selected license view model.
+            </summary>
+            <value>The selected license view model.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.CommandLicenseCreationData">
+            <summary>
+            Gets the command license creation data.
+            </summary>
+            <value>The command license creation data.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.CommandAdd">
+            <summary>
+            Gets the command add.
+            </summary>
+            <value>The command add.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.CommandRemove">
+            <summary>
+            Gets the command remove.
+            </summary>
+            <value>The command remove.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.DoPropertyChanged(System.String)">
+            <summary>
+            Does the property changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="M:Concept.Components.Wpf.ConceptSignedLicenseFilesViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.LicenseEditorUserControl">
+            <summary>
+            Interaction logic for LicenseEditor.xaml
+            </summary>
+            <summary>
+            LicenseEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.LicenseEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.LicenseEditor"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.LicenseEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.LicenseParameterSignedFileSymmetricSha1EditorUserControl">
+            <summary>
+            Interaction logic for LicenseParameterSignedFileSymmetricSha1Editor.xaml
+            </summary>
+            <summary>
+            LicenseParameterSignedFileSymmetricSha1EditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.LicenseParameterSignedFileSymmetricSha1EditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.LicenseParameterSignedFileSymmetricSha1Editor"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LicenseParameterSignedFileSymmetricSha1EditorUserControl.CommandExportAndTest">
+            <summary>
+            Gets the command export and test.
+            </summary>
+            <value>The command export and test.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.LicenseParameterSignedFileSymmetricSha1EditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.LicensesCreationEditorUserControl">
+            <summary>
+            Interaction logic for LicensesCreationEditor.xaml
+            </summary>
+            <summary>
+            LicensesCreationEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.LicensesCreationEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.LicensesCreationEditor"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LicensesCreationEditorUserControl.CommandExportAndTest">
+            <summary>
+            Gets the command export and test.
+            </summary>
+            <value>The command export and test.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.LicensesCreationEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.LicenseParameterSignedFileAsymmetricEditorUserControl">
+            <summary>
+            Interaction logic for LicenseParameterSignedFileAsymmetricEditor.xaml
+            </summary>
+            <summary>
+            LicenseParameterSignedFileAsymmetricEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.LicenseParameterSignedFileAsymmetricEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.LicenseParameterSignedFileAsymmetricEditor"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LicenseParameterSignedFileAsymmetricEditorUserControl.CommandExportAndTest">
+            <summary>
+            Gets the command export and test.
+            </summary>
+            <value>The command export and test.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.LicenseParameterSignedFileAsymmetricEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.SignatureEditorUserControl">
+            <summary>
+            Interaction logic for SignatureEditor.xaml
+            </summary>
+            <summary>
+            SignatureEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.SignatureEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.SignatureEditor"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignatureEditorUserControl.PublicKeyFilePath">
+            <summary>
+            Gets or sets the public key file path.
+            </summary>
+            <value>The public key file path.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignatureEditorUserControl.CommandSign">
+            <summary>
+            Gets the command sign.
+            </summary>
+            <value>The command sign.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignatureEditorUserControl.CommandCheckSignature">
+            <summary>
+            Gets the command check signature.
+            </summary>
+            <value>The command check signature.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.SignatureEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.INotifiable">
+            <summary>
+            Interface INotifiable
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.INotifiable.View">
+            <summary>
+            Gets the view.
+            </summary>
+            <value>The view.</value>
+        </member>
+        <member name="T:Concept.Components.Wpf.EntriesChoices">
+            <summary>
+            Enum EntriesChoices
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.EntriesChoices.HighestPriority">
+            <summary>
+            Notification entries Highest Priority
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.EntriesChoices.LastEntry">
+            <summary>
+            Notification entries Last Entry
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.NotificationView">
+            <summary>
+            Class NotificationView
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.NotificationView.HeaderContentPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.NotificationView.HeaderContent"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.NotificationView.HeaderContent">
+            <summary>
+            Gets the content of the header.
+            </summary>
+            <value>The content of the header.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.NotificationView.NotificationBar">
+            <summary>
+            Gets the notification bar.
+            </summary>
+            <value>The notification bar.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.NotificationView.IsOver">
+            <summary>
+            Gets or sets a value indicating whether this instance is over.
+            </summary>
+            <value><c>true</c> if this instance is over; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.NotificationView.IsOverProperty">
+            <summary>
+            The is over property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.NotificationView.ExpandDirection">
+            <summary>
+            Gets or sets the expand direction.
+            </summary>
+            <value>The expand direction.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.NotificationView.ExpandDirectionProperty">
+            <summary>
+            The expand direction property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.NotificationView.IsResumeVisible">
+            <summary>
+            Gets or sets a value indicating whether this instance is resume visible.
+            </summary>
+            <value><c>true</c> if this instance is resume visible; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.NotificationView.IsResumeVisibleProperty">
+            <summary>
+            The is resume visible property
+            </summary>
+            <remarks>
+            Using a DependencyProperty as the backing store for IsResumeVisible.  This enables animation, styling, binding, etc...
+            </remarks>
+        </member>
+        <member name="P:Concept.Components.Wpf.NotificationView.EntryChoice">
+            <summary>
+            Gets or sets the entry choice.
+            </summary>
+            <value>The entry choice.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.NotificationView.EntryChoiceProperty">
+            <summary>
+            The entry choice property
+            </summary>
+            <remarks>
+            Using a DependencyProperty as the backing store for EntryChoice.  This enables animation, styling, binding, etc...
+            </remarks>
+        </member>
+        <member name="M:Concept.Components.Wpf.NotificationView.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes call <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.NotificationView.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Invoked when the <see cref="P:System.Windows.Controls.ItemsControl.Items" /> property changes.
+            </summary>
+            <param name="e">Information about the change.</param>
+        </member>
+        <member name="M:Concept.Components.Wpf.NotificationView.OnItemsSourceChanged(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Called when the <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> property changes.
+            </summary>
+            <param name="oldValue">Old value of the <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> property.</param>
+            <param name="newValue">New value of the <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> property.</param>
+        </member>
+        <member name="E:Concept.Components.Wpf.NotificationView.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectsManagerSettingsView.Projects">
+            <summary>
+            Gets or sets the projects.
+            </summary>
+            <value>The projects.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectsManagerSettingsView.ProjectsProperty">
+            <summary>
+            The projects property
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ProjectManagerView"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectManagerView.ProjectsColumnWidthPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ProjectManagerView.ProjectsColumnWidth"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerView.ProjectsColumnWidth">
+            <summary>
+            Gets or sets the width of the projects column.
+            </summary>
+            <value>The width of the projects column.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerView.Projects.AddNew(System.String,System.String,System.String)">
+            <summary>
+            Adds the new.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="baseName">Name of the base.</param>
+            <param name="extension">The extension.</param>
+            <returns>ProjectDisplayItem{`0}.</returns>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerView.CommandAddProject">
+            <summary>
+            Gets the command add project.
+            </summary>
+            <value>The command add project.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerView.CommandRemoveProject">
+            <summary>
+            Gets the command remove project.
+            </summary>
+            <value>The command remove project.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerView.CommandLoadProject">
+            <summary>
+            Gets the command load project.
+            </summary>
+            <value>The command load project.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerView.LoadSelectedItem">
+            <summary>
+            Loads the selected project.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerView.CommandUnloadProject">
+            <summary>
+            Gets the command unload project.
+            </summary>
+            <value>The command unload project.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerView.EditSelectedItem">
+            <summary>
+            Edits the selected project.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerView.CommandEditProject">
+            <summary>
+            Gets the command edit project.
+            </summary>
+            <value>The command edit project.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerView.CommandCloneProject">
+            <summary>
+            Gets the command clone project.
+            </summary>
+            <value>The command clone project.</value>
+        </member>
+        <member name="T:Concept.Components.Wpf.ProjectDisplayItemBase">
+            <summary>
+            Class ProjectDisplayItemBase
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectDisplayItemBase.Component">
+            <summary>
+            Gets or sets the component.
+            </summary>
+            <value>The component.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectDisplayItemBase.IsLoadedPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ProjectDisplayItemBase.IsLoaded"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectDisplayItemBase.IsLoaded">
+            <summary>
+            Gets or sets a value indicating whether this instance is loaded.
+            </summary>
+            <value><c>true</c> if this instance is loaded; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectDisplayItemBase.HasErrorPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ProjectDisplayItemBase.HasError"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectDisplayItemBase.HasError">
+            <summary>
+            Gets or sets a value indicating whether this instance has error.
+            </summary>
+            <value><c>true</c> if this instance has error; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectDisplayItemBase.NamePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ProjectDisplayItemBase.Name"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectDisplayItemBase.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectDisplayItemBase.FullPathPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ProjectDisplayItemBase.FullPath"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectDisplayItemBase.FullPath">
+            <summary>
+            Gets or sets the full path.
+            </summary>
+            <value>The full path.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectDisplayItemBase.ErrorsMessagesPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ProjectDisplayItemBase.ErrorsMessages"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectDisplayItemBase.ErrorsMessages">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>The tag.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectDisplayItemBase.KeepOpenChoicePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ProjectDisplayItemBase.KeepOpenChoice"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectDisplayItemBase.KeepOpenChoice">
+            <summary>
+            Gets or sets the keep open choice.
+            </summary>
+            <value>The keep open choice.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.ProjectDisplayItemBase.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ProjectManagerFolderSelectorUserControl">
+            <summary>
+            Logique d'interaction pour ProjectManagerFolderSelector.xaml
+            </summary>
+            <summary>
+            ProjectManagerFolderSelectorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerFolderSelectorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ProjectManagerViewUserControl">
+            <summary>
+            Interaction logic for ManageProject.xaml
+            </summary>
+            <summary>
+            ProjectManagerViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerViewUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ProjectManagerView"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectManagerViewUserControl.ProjectsColumnWidthPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ProjectManagerViewUserControl.ProjectsColumnWidth"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerViewUserControl.ProjectsColumnWidth">
+            <summary>
+            Gets or sets the width of the projects column.
+            </summary>
+            <value>The width of the projects column.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerViewUserControl.Projects.AddNew(System.String,System.String,System.String)">
+            <summary>
+            Adds the new.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="baseName">Name of the base.</param>
+            <param name="extension">The extension.</param>
+            <returns>ProjectDisplayItem{`0}.</returns>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerViewUserControl.CommandAddProject">
+            <summary>
+            Gets the command add project.
+            </summary>
+            <value>The command add project.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerViewUserControl.CommandRemoveProject">
+            <summary>
+            Gets the command remove project.
+            </summary>
+            <value>The command remove project.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerViewUserControl.CommandLoadProject">
+            <summary>
+            Gets the command load project.
+            </summary>
+            <value>The command load project.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerViewUserControl.LoadSelectedItem">
+            <summary>
+            Loads the selected project.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerViewUserControl.CommandUnloadProject">
+            <summary>
+            Gets the command unload project.
+            </summary>
+            <value>The command unload project.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerViewUserControl.EditSelectedItem">
+            <summary>
+            Edits the selected project.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerViewUserControl.CommandEditProject">
+            <summary>
+            Gets the command edit project.
+            </summary>
+            <value>The command edit project.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerViewUserControl.CommandCloneProject">
+            <summary>
+            Gets the command clone project.
+            </summary>
+            <value>The command clone project.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.ProjectManagerViewUserControl.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ProjectManagerBase">
+            <summary>
+            Class ProjectManagerBase
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectManagerBase.SubjectManager">
+            <summary>
+            The subject manager
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectManagerBase.SubjectPreview">
+            <summary>
+            The subject preview
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectManagerBase.SubjectEditor">
+            <summary>
+            The subject editor
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerBase.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerBase.FileExtension">
+            <summary>
+            Gets or sets the file extension.
+            </summary>
+            <value>The file extension.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerBase.Factories">
+            <summary>
+            Gets or sets the custom factories.
+            </summary>
+            <value>The factories.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerBase.RootFolder">
+            <summary>
+            Used as default value for the Folder property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerBase.Folder">
+            <summary>
+            Folder path in which to store the files corresponding to the managed projects (can be a path relative to the application)
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectManagerBase.KeepOpenChoice">
+            <summary>
+            Gets or sets the keep open choice.
+            </summary>
+            <value>The keep open choice.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.ProjectManagerBase.AfterUnload">
+            <summary>
+            Occurs just after a project is unloaded.
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.ProjectManagerBase.BeforeUnload">
+            <summary>
+            Occurs just before a project is unloaded.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerBase.AddRepository(Concept.Model.ConceptContainer)">
+            <summary>
+            Adds the repository.
+            </summary>
+            <param name="container">The container.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerBase.RemoveRepository(Concept.Model.ConceptContainer)">
+            <summary>
+            Removes the repository.
+            </summary>
+            <param name="container">The container.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerBase.ContainsRepository(Concept.Model.ConceptContainer)">
+            <summary>
+            Determines whether a container is already in the repository.
+            </summary>
+            <param name="container">The container to locate in the repository.</param>
+            <returns>True if the container is inside the repository; False otherwise.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectManagerBase.ClearRepositories">
+            <summary>
+            Clears the repositories.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.BooleanHandler">
+            <summary>
+            Delegate BooleanHandler
+            </summary>
+            <param name="instance">The instance.</param>
+            <param name="args">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:Concept.Components.Wpf.KeepingOpenChoices">
+            <summary>
+            Enum KeepingOpenChoices
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.KeepingOpenChoices.KeepOpen">
+            <summary>
+            Keep open
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.KeepingOpenChoices.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ProjectSettingsUserControl">
+            <summary>
+            Interaction logic for ProjectSettings.xaml
+            </summary>
+            <summary>
+            ProjectSettingsUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectSettingsUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ProjectSettings"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectSettingsUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ProjectsManagerSettingsViewUserControl">
+            <summary>
+            Interaction logic for ProjectsManagerSettings.xaml
+            </summary>
+            <summary>
+            ProjectsManagerSettingsViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectsManagerSettingsViewUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ProjectsManagerSettingsView"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ProjectsManagerSettingsViewUserControl.Projects">
+            <summary>
+            Gets or sets the projects.
+            </summary>
+            <value>The projects.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ProjectsManagerSettingsViewUserControl.ProjectsProperty">
+            <summary>
+            The projects property
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ProjectsManagerSettingsViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ConceptLoginViewUserControl">
+            <summary>
+            Interaction logic for ConceptLoginViewUserControl.xaml
+            </summary>
+            <summary>
+            ConceptLoginViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ConceptLoginViewUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ConceptLoginViewUserControl"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ConceptLoginViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.LoginControlUserControl">
+            <summary>
+            Interaction logic for LoginControlUserControl.xaml
+            </summary>
+            <summary>
+            LoginControlUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.LoginControlUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.LoginControlUserControl"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControlUserControl.UsernamePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.LoginControlUserControl.Username"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControlUserControl.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>The username.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControlUserControl.PasswordPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.LoginControlUserControl.Password"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControlUserControl.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>The password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControlUserControl.InformationTextPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.LoginControlUserControl.InformationText"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControlUserControl.InformationText">
+            <summary>
+            Gets or sets the information text.
+            </summary>
+            <value>The information text.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControlUserControl.Mode">
+            <summary>
+            Gets or sets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.LoginControlUserControl.ModeProperty">
+            <summary>
+            The mode property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControlUserControl.LoginCommand">
+            <summary>
+            Gets the login command.
+            </summary>
+            <value>The login command.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.LoginControlUserControl.LogoutCommand">
+            <summary>
+            Gets the logout command.
+            </summary>
+            <value>The logout command.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.LoginControlUserControl.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.LoginControlUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ConceptRightsViewUserControl">
+            <summary>
+            Interaction logic for ConceptRightsViewUserControl.xaml
+            </summary>
+            <summary>
+            ConceptRightsViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ConceptRightsViewUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ConceptRightsViewUserControl"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ConceptRightsViewUserControl.CommandSave">
+            <summary>
+            Gets the command save.
+            </summary>
+            <value>The command save.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.ConceptRightsViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.CurrentElementToVisibilityConverter">
+            <summary>
+            Class CurrentElementToVisibilityConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.CurrentElementToVisibilityConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified values.
+            </summary>
+            <param name="values">The values.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.CurrentElementToVisibilityConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the back.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetTypes">The target types.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object[][].</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Concept.Components.Wpf.IsLoadedToImageViewToVisibilityConverter">
+            <summary>
+            Class IsLoadedToImageViewToVisibilityConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.IsLoadedToImageViewToVisibilityConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified values.
+            </summary>
+            <param name="values">The values.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.IsLoadedToImageViewToVisibilityConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the back.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetTypes">The target types.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object[][].</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Concept.Components.Wpf.HasProjectErrorToVisibilityConverter">
+            <summary>
+            Class HasProjectErrorToVisibilityConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.HasProjectErrorToVisibilityConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified values.
+            </summary>
+            <param name="values">The values.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.HasProjectErrorToVisibilityConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the back.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetTypes">The target types.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object[][].</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Concept.Components.Wpf.FullPathToNameConverter">
+            <summary>
+            Class FullPathToNameConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.FullPathToNameConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.FullPathToNameConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the back.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Components.Wpf.ItemsToHeightConverter">
+            <summary>
+            Class FullPathToNameConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ItemsToHeightConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.ItemsToHeightConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the back.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Components.Wpf.FileNameToConceptElementConverter">
+            <summary>
+            Class FileNameToConceptElementConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.FileNameToConceptElementConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.FileNameToConceptElementConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the back.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Components.Wpf.ListBoxItemToConceptElementConverter">
+            <summary>
+            Class ListBoxItemToConceptElementConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ListBoxItemToConceptElementConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.ListBoxItemToConceptElementConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the back.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Components.Wpf.IoMappingDefaultEditor">
+            <summary>
+            Interaction logic for IoMappingDefaultEditor.xaml
+            </summary>
+            <summary>
+            IoMappingDefaultEditor
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.IoMappingDefaultEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.IoMappingDefaultEditor"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.IoMappingDefaultEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.IoMappingItemEditor">
+            <summary>
+            Interaction logic for IoMappingItemEditor.xaml
+            </summary>
+            <summary>
+            IoMappingItemEditor
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.IoMappingItemEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.IoMappingItemEditor"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.IoMappingItemEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.IoMappingItemsEditor">
+            <summary>
+            Interaction logic for IoMappingItemsEditor.xaml
+            </summary>
+            <summary>
+            IoMappingItemsEditor
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.IoMappingItemsEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.IoMappingItemsEditor"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.IoMappingItemsEditor.CommandAdd">
+            <summary>
+            Gets the command add.
+            </summary>
+            <value>The command add.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.IoMappingItemsEditor.CommandClear">
+            <summary>
+            Gets the command clear.
+            </summary>
+            <value>The command clear.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.IoMappingItemsEditor.CommandExport">
+            <summary>
+            Gets the command export.
+            </summary>
+            <value>The command export.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.IoMappingItemsEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ApplicationFunctionCommandLicensed">
+            <summary>
+            Class ApplicationFunctionCommandLicensed
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ApplicationFunctionCommandLicensed.#ctor(Concept.Utils.IntlText,System.Windows.Media.ImageSource,System.Windows.Input.ICommand,System.Enum,Concept.Utils.IntlText)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ApplicationFunctionCommandLicensed"/> class.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="image">The image.</param>
+            <param name="command">The command.</param>
+            <param name="feature">The feature.</param>
+            <param name="toolTip">The tool tip.</param>
+        </member>
+        <member name="P:Concept.Components.Wpf.ApplicationFunctionCommandLicensed.Feature">
+            <summary>
+            Gets or sets the feature.
+            </summary>
+            <value>The feature.</value>
+        </member>
+        <member name="T:Concept.Components.Wpf.FeatureExtension">
+            <summary>
+            Class FeatureExtension
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.FeatureExtension.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.FeatureExtension"/> class.
+            </summary>
+            <param name="feature">The feature.</param>
+            <exception cref="T:System.Exception">The parameter 'feature' must be an Enum or a String</exception>
+        </member>
+        <member name="M:Concept.Components.Wpf.FeatureExtension.#ctor(System.Object,System.Windows.Visibility)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.FeatureExtension"/> class.
+            </summary>
+            <param name="feature">The feature.</param>
+            <param name="visibility">The visibility.</param>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureExtension.FeatureName">
+            <summary>
+            Gets or sets the name of the feature.
+            </summary>
+            <value>The name of the feature.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureExtension.VisibilityWhenNotValid">
+            <summary>
+            Gets or sets the visibility when not valid.
+            </summary>
+            <value>The visibility when not valid.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureExtension.Converter">
+            <summary>
+            Gets or sets the converter.
+            </summary>
+            <value>The converter.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureExtension.ConverterCulture">
+            <summary>
+            Gets or sets the converter culture.
+            </summary>
+            <value>The converter culture.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.FeatureExtension.ConverterParameter">
+            <summary>
+            Gets or sets the converter parameter.
+            </summary>
+            <value>The converter parameter.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.FeatureExtension.ProvideValue(System.IServiceProvider)">
+            <summary>
+            When implemented in a derived class, returns an object that is provided as the value of the target property for this markup extension.
+            </summary>
+            <param name="serviceProvider">A service provider helper that can provide services for the markup extension.</param>
+            <returns>The object value to set on the property where the extension is applied.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.FeatureExtension.GetFeaturedCommand(System.Windows.FrameworkElement)">
+            <summary>
+            Gets the featured command.
+            </summary>
+            <param name="target">The target.</param>
+            <returns>Enum.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.FeatureExtension.SetFeaturedCommand(System.Windows.FrameworkElement,System.Enum)">
+            <summary>
+            Sets the featured command.
+            </summary>
+            <param name="target">The target.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="F:Concept.Components.Wpf.FeatureExtension.FeaturedCommandProperty">
+            <summary>
+            The featured command property
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.AllowedFeatureLinksEditorUserControl">
+            <summary>
+            Interaction logic for AllowedFeatureListEditor.xaml
+            </summary>
+            <summary>
+            AllowedFeatureLinksEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.AllowedFeatureLinksEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.AllowedFeatureLinksEditor"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.AllowedFeatureLinksEditorUserControl.LicenseFile">
+            <summary>
+            Gets the license file.
+            </summary>
+            <value>The license file.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.AllowedFeatureLinksEditorUserControl.FeatureViewModels">
+            <summary>
+            Gets or sets the feature view models.
+            </summary>
+            <value>The feature view models.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.AllowedFeatureLinksEditorUserControl.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.AllowedFeatureLinksEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ValidationCheckInfosClientEditorUserControl">
+            <summary>
+            Interaction logic for ValidationCheckInfosClientEditor.xaml
+            </summary>
+            <summary>
+            ValidationCheckInfosClientEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ValidationCheckInfosClientEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ValidationCheckInfosClientEditor"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.ValidationCheckInfosClientEditorUserControl.InfosClientDataViewModelsPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ValidationCheckInfosClientEditorUserControl.InfosClientDataViewModels"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ValidationCheckInfosClientEditorUserControl.InfosClientDataViewModels">
+            <summary>
+            Gets or sets the infos client data view models.
+            </summary>
+            <value>The infos client data view models.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.ValidationCheckInfosClientEditorUserControl.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ValidationCheckInfosClientEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.ValidationCheckDateIntervalEditorUserControl">
+            <summary>
+            Interaction logic for ValidationCheckDateMaxEditor.xaml
+            </summary>
+            <summary>
+            ValidationCheckDateIntervalEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ValidationCheckDateIntervalEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.ValidationCheckDateIntervalEditor"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.ValidationCheckDateIntervalEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.PasswordHelper">
+            <summary>
+            Class PasswordHelper
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.PasswordHelper.PasswordProperty">
+            <summary>
+            The password property
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.PasswordHelper.AttachProperty">
+            <summary>
+            The attach property
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.PasswordHelper.SetAttach(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the attach.
+            </summary>
+            <param name="dp">The dp.</param>
+            <param name="value">if set to <c>true</c> [value].</param>
+        </member>
+        <member name="M:Concept.Components.Wpf.PasswordHelper.GetAttach(System.Windows.DependencyObject)">
+            <summary>
+            Gets the attach.
+            </summary>
+            <param name="dp">The dp.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.PasswordHelper.GetPassword(System.Windows.DependencyObject)">
+            <summary>
+            Gets the password.
+            </summary>
+            <param name="dp">The dp.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Components.Wpf.PasswordHelper.SetPassword(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Sets the password.
+            </summary>
+            <param name="dp">The dp.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:Concept.Components.Wpf.RightsExtension">
+            <summary>
+            Class RightsExtension
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightsExtension.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.RightsExtension"/> class.
+            </summary>
+            <param name="right">The right.</param>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightsExtension.#ctor(System.String,System.Windows.Visibility)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.RightsExtension"/> class.
+            </summary>
+            <param name="right">The right.</param>
+            <param name="visibility">The visibility.</param>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightsExtension.Right">
+            <summary>
+            Gets or sets the right.
+            </summary>
+            <value>The right.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightsExtension.VisibilityWhenNotValid">
+            <summary>
+            Gets or sets the visibility when not valid.
+            </summary>
+            <value>The visibility when not valid.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightsExtension.Converter">
+            <summary>
+            Gets or sets the converter.
+            </summary>
+            <value>The converter.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightsExtension.ConverterCulture">
+            <summary>
+            Gets or sets the converter culture.
+            </summary>
+            <value>The converter culture.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightsExtension.ConverterParameter">
+            <summary>
+            Gets or sets the converter parameter.
+            </summary>
+            <value>The converter parameter.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightsExtension.ProvideValue(System.IServiceProvider)">
+            <summary>
+            When implemented in a derived class, returns an object that is provided as the value of the target property for this markup extension.
+            </summary>
+            <param name="serviceProvider">A service provider helper that can provide services for the markup extension.</param>
+            <returns>The object value to set on the property where the extension is applied.</returns>
+            <remarks>
+            return true whether the current user has required right
+            </remarks>
+        </member>
+        <member name="T:Concept.Components.Wpf.RightsEditorUserControl">
+            <summary>
+            Interaction logic for RightsEditor.xaml
+            </summary>
+            <summary>
+            RightsEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightsEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.RightsEditor"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.RightsEditorUserControl.RepositoryProperty">
+            <summary>
+            The repository property
+            </summary>
+            <remarks>
+            This property is no more used!
+            </remarks>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightsEditorUserControl.Repository">
+            <summary>
+            Gets or sets the repository.
+            </summary>
+            <remarks>
+            This property is no more used!
+            </remarks>
+            <value>The repository.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightsEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.EditPasswordUserControl">
+            <summary>
+            Interaction logic for EditPasswordUserControl.xaml
+            </summary>
+            <summary>
+            EditPasswordUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.EditPasswordUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.EditPasswordUserControl"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPasswordUserControl.CommandUpdate">
+            <summary>
+            Gets the command update.
+            </summary>
+            <value>The command update.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPasswordUserControl.CurrentPassword">
+            <summary>
+            Gets or sets the current password.
+            </summary>
+            <value>The current password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPasswordUserControl.CurrentPasswordProperty">
+            <summary>
+            The current password property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPasswordUserControl.OldPasswordNeeded">
+            <summary>
+            Gets or sets the need to fill the old user password.
+            </summary>
+            <value>Is the old user password needed.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPasswordUserControl.OldPasswordNeededProperty">
+            <summary>
+            The old password needed property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPasswordUserControl.ControlPassword">
+            <summary>
+            Gets or sets the control password.
+            </summary>
+            <value>The control password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPasswordUserControl.ControlPasswordProperty">
+            <summary>
+            The control password property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPasswordUserControl.FirstPassword">
+            <summary>
+            Gets or sets the first password.
+            </summary>
+            <value>The first password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPasswordUserControl.FirstPasswordProperty">
+            <summary>
+            The first password property
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.EditPasswordUserControl.SecondPassword">
+            <summary>
+            Gets or sets the second password.
+            </summary>
+            <value>The second password.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPasswordUserControl.SecondPasswordProperty">
+            <summary>
+            The second password property
+            </summary>
+        </member>
+        <member name="F:Concept.Components.Wpf.EditPasswordUserControl.PasswordUpdatedEvent">
+            <summary>
+            The password updated event
+            </summary>
+        </member>
+        <member name="E:Concept.Components.Wpf.EditPasswordUserControl.PasswordUpdated">
+            <summary>
+            Occurs when [password updated].
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.EditPasswordUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.RightEditorUserControl">
+            <summary>
+            Interaction logic for RightEditor.xaml
+            </summary>
+            <summary>
+            RightEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.RightEditor" /> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.RightRepositoryEditorUserControl">
+            <summary>
+            Interaction logic for RightRepositoryEditorUserControl.xaml
+            </summary>
+            <summary>
+            RightRepositoryEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightRepositoryEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.RightRepositoryEditorUserControl"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightRepositoryEditorUserControl.UserText">
+            <summary>
+            Gets the user text.
+            </summary>
+            <value>The user text.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightRepositoryEditorUserControl.GroupText">
+            <summary>
+            Gets the group text.
+            </summary>
+            <value>The group text.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.RightRepositoryEditorUserControl.RightText">
+            <summary>
+            Gets the right text.
+            </summary>
+            <value>The right text.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.RightRepositoryEditorUserControl.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.RightRepositoryEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.UserEditorUserControl">
+            <summary>
+            Interaction logic for UserEditor.xaml
+            </summary>
+            <summary>
+            UserEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.UserEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.UserEditorUserControl"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.UserEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.UserGroupEditorUserControl">
+            <summary>
+            Interaction logic for UserGroupEditorUserControl.xaml
+            </summary>
+            <summary>
+            UserGroupEditorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.UserGroupEditorUserControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.UserGroupEditorUserControl" /> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.UserGroupEditorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.AccountImageToBitmapConverter">
+            <summary>
+            Class AccountImageToBitmapConverter
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.AccountImageToBitmapConverter.ValueWhenWhenNull">
+            <summary>
+            Gets or sets a value indicating whether [value when when null].
+            </summary>
+            <value><c>true</c> if [value when when null]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Components.Wpf.AccountImageToBitmapConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignatureEditor.PublicKeyFilePath">
+            <summary>
+            Gets or sets the public key file path.
+            </summary>
+            <value>The public key file path.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignatureEditor.CommandSign">
+            <summary>
+            Gets the command sign.
+            </summary>
+            <value>The command sign.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.SignatureEditor.CommandCheckSignature">
+            <summary>
+            Gets the command check signature.
+            </summary>
+            <value>The command check signature.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.ValidationCheckInfosClientEditor.InfosClientDataViewModelsPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.ValidationCheckInfosClientEditor.InfosClientDataViewModels"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.ValidationCheckInfosClientEditor.InfosClientDataViewModels">
+            <summary>
+            Gets or sets the infos client data view models.
+            </summary>
+            <value>The infos client data view models.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.ValidationCheckInfosClientEditor.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Wpf.InfosClientDataViewModel">
+            <summary>
+            Class InfosClientDataViewModel
+            </summary>
+        </member>
+        <member name="M:Concept.Components.Wpf.InfosClientDataViewModel.#ctor(Concept.Components.InfosClientData,Concept.Model.ConceptMultipleLink{Concept.Components.InfosClientData})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.Wpf.InfosClientDataViewModel"/> class.
+            </summary>
+            <param name="infoClientData">The info client data.</param>
+            <param name="infoClientDatasLinks">The info client datas links.</param>
+        </member>
+        <member name="P:Concept.Components.Wpf.InfosClientDataViewModel.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.InfosClientDataViewModel.Value">
+            <summary>
+            Gets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="F:Concept.Components.Wpf.InfosClientDataViewModel.IsUsedPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.Wpf.InfosClientDataViewModel.IsUsed"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Wpf.InfosClientDataViewModel.IsUsed">
+            <summary>
+            Gets or sets a value indicating whether this instance is used.
+            </summary>
+            <value><c>true</c> if this instance is used; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Components.Wpf.InfosClientDataViewModel.CommandUseInfoClient">
+            <summary>
+            Gets the command use info client.
+            </summary>
+            <value>The command use info client.</value>
+        </member>
+        <member name="E:Concept.Components.Wpf.InfosClientDataViewModel.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+    </members>
+</doc>
