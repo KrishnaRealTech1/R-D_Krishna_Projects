@@ -1,0 +1,2032 @@
+#!/usr/bin/env python3
+r"""
+Material AI Standalone Windows App
+
+What this app does:
+- Responsive Tkinter UI that adapts to screen/window size
+- Notepad-editable config.ini
+- Input COM port sensor trigger
+- Output COM port result sender
+- Configurable capture delay after trigger
+- Configurable PC storage folders
+- RTSP / USB camera capture
+- Reference image matching fallback
+- Optional TFLite AI model detection
+- SFTP upload
+
+Install app dependencies:
+    pip install opencv-python numpy paramiko pyserial
+
+Optional AI runtime:
+    pip install tensorflow
+
+Run:
+    python material_ai_standalone.py
+
+Config auto-created at:
+    C:\Users\<YourUser>\Documents\MaterialAI\config.ini
+"""
+
+from __future__ import annotations
+
+import configparser
+import logging
+import os
+import platform
+import re
+import subprocess
+import sys
+import threading
+import time
+import traceback
+from dataclasses import dataclass
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+
+try:
+    import cv2
+    import numpy as np
+except ImportError:
+    print("Install missing packages: pip install opencv-python numpy")
+    raise
+
+try:
+    import paramiko
+    PARAMIKO_AVAILABLE = True
+except ImportError:
+    paramiko = None
+    PARAMIKO_AVAILABLE = False
+
+try:
+    import serial
+    from serial.tools import list_ports
+    SERIAL_AVAILABLE = True
+except ImportError:
+    serial = None
+    list_ports = None
+    SERIAL_AVAILABLE = False
+
+try:
+    import tkinter as tk
+    from tkinter import filedialog, messagebox, simpledialog, ttk
+except ImportError:
+    print("Tkinter is not available in this Python installation.")
+    raise
+
+
+# =============================================================================
+# CONFIG FILE
+# =============================================================================
+
+def documents_dir() -> Path:
+    return Path(os.environ.get("USERPROFILE", str(Path.home()))) / "Documents"
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DEFAULT_CONFIG_DIR = documents_dir() / "MaterialAI"
+DEFAULT_CONFIG_PATH = DEFAULT_CONFIG_DIR / "config.ini"
+PROJECT_CONFIG_PATH = SCRIPT_DIR / "config.ini"
+
+
+def cli_config_path() -> Optional[Path]:
+    """Return a config path passed as --config path or --config=path."""
+    args = sys.argv[1:]
+    for index, arg in enumerate(args):
+        if arg == "--config" and index + 1 < len(args):
+            return Path(args[index + 1]).expanduser()
+        if arg.startswith("--config="):
+            return Path(arg.split("=", 1)[1]).expanduser()
+    return None
+
+
+def choose_config_path() -> Path:
+    """
+    Config priority:
+    1. command line: --config C:\\path\\config.ini
+    2. environment: MATERIAL_AI_CONFIG=C:\\path\\config.ini
+    3. config.ini next to this Python file / EXE
+    4. Documents\\MaterialAI\\config.ini
+
+    This fixes the common PyCharm issue where the user edits the project
+    config.ini but the old app silently reads Documents\\MaterialAI\\config.ini.
+    """
+    cli_path = cli_config_path()
+    if cli_path is not None:
+        return cli_path
+
+    env_path = os.environ.get("MATERIAL_AI_CONFIG", "").strip().strip('"')
+    if env_path:
+        return Path(env_path).expanduser()
+
+    if PROJECT_CONFIG_PATH.exists():
+        return PROJECT_CONFIG_PATH
+
+    return DEFAULT_CONFIG_PATH
+
+
+CONFIG_PATH = choose_config_path()
+CONFIG_DIR = CONFIG_PATH.parent
+
+
+def default_config() -> str:
+    return r"""# ============================================================
+# Material AI Standalone Config
+# Edit this file in Notepad, save, then restart the app.
+# ============================================================
+
+[App]
+# Leave blank to use C:\Users\<CurrentUser>\Documents\MaterialAI
+app_data_folder =
+start_maximized = no
+
+[UI]
+min_width = 900
+min_height = 600
+desktop_breakpoint_width = 1050
+initial_width_percent = 0.92
+initial_height_percent = 0.90
+
+[Camera]
+# RTSP URL or USB camera number: 0 / 1
+source = rtsp://admin:admin@192.168.22.226:554/h264/ch1/main/av_stream
+live_stream_fps = 10
+reconnect_seconds = 3
+
+[Storage]
+# Main folder where captured files are stored on this PC.
+# Leave blank to use: <app_data_folder>\captured_images
+files_directory =
+
+# Leave blank to use: <app_data_folder>\reference_images
+reference_directory =
+
+# Leave blank to use: <app_data_folder>\failed_uploads
+failed_upload_directory =
+
+# Leave blank to use: <app_data_folder>\logs
+log_directory =
+
+# Leave blank to use: <app_data_folder>\tmp
+temp_directory =
+
+# Leave blank to use: <app_data_folder>\model
+model_directory =
+
+# yes = captured images saved inside material-wise folders
+organize_by_material = yes
+
+[SFTP]
+enabled = yes
+host = 3.111.78.82
+port = 22
+username = ftpuser
+password = ftp123!@#
+remote_dir = /home/ftpuser/ftp/Kousic&Co
+
+# yes = upload into remote_dir/material_folder/
+# Example: /home/ftpuser/ftp/Kousic&Co/Raw_Material/image.jpg
+organize_by_material = yes
+
+# yes = automatically create remote_dir and material folders if missing
+create_folders = yes
+
+[InputSerial]
+# Sensor -> PC
+enabled = yes
+port = COM8
+baudrate = 9600
+command_text = Detects
+reconnect_seconds = 3
+
+[OutputSerial]
+# PC -> PLC / another device
+enabled = no
+port = COM5
+baudrate = 9600
+
+# Available variables: {material}, {ai_conf}, {ref_score}, {decision}, {time}
+template = {material}\n
+# yes = send output only if SFTP upload succeeded
+after_sftp_only = no
+
+[Trigger]
+# Delay after sensor trigger before camera capture
+capture_delay_seconds = 5
+
+# Ignore repeated trigger within this many seconds
+debounce_seconds = 2
+
+[AI]
+# Keep no until you train material_model.tflite using train_material_ai_model.py
+enabled = no
+backend = tflite
+
+# Leave blank to use: <model_directory>\material_model.tflite
+model_path =
+
+# Leave blank to use: <model_directory>\labels.txt
+labels_path =
+
+# For the included training script, keep raw_0_255
+# Other supported options: zero_to_one, minus_one_to_one
+input_normalization = raw_0_255
+ai_confidence_threshold = 0.80
+reference_confidence_threshold = 0.65
+prefer_ai_over_reference = yes
+
+[Image]
+jpeg_quality = 90
+width_for_processing = 640
+delete_image_after_success = no
+"""
+
+
+def ensure_config() -> None:
+    CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+    if not CONFIG_PATH.exists():
+        CONFIG_PATH.write_text(default_config(), encoding="utf-8")
+        print(f"Created config: {CONFIG_PATH}")
+
+
+CONFIG_ALIASES = {
+    ("Camera", "source"): [("Camera", "rtsp_url")],
+    ("Camera", "live_stream_fps"): [("Image", "live_stream_fps")],
+    ("Camera", "reconnect_seconds"): [("Image", "rtsp_reconnect_seconds")],
+
+    ("InputSerial", "enabled"): [("SerialTrigger", "enabled")],
+    ("InputSerial", "port"): [("SerialTrigger", "port")],
+    ("InputSerial", "baudrate"): [("SerialTrigger", "baudrate")],
+    ("InputSerial", "command_text"): [("SerialTrigger", "command_text")],
+    ("InputSerial", "reconnect_seconds"): [("SerialTrigger", "reconnect_seconds")],
+
+    ("OutputSerial", "enabled"): [("SerialOutput", "enabled")],
+    ("OutputSerial", "port"): [("SerialOutput", "port")],
+    ("OutputSerial", "baudrate"): [("SerialOutput", "baudrate")],
+    ("OutputSerial", "template"): [("SerialOutput", "template")],
+    ("OutputSerial", "after_sftp_only"): [("SerialOutput", "after_sftp_only")],
+}
+
+
+def copy_legacy_section(cfg: configparser.ConfigParser, old: str, new: str) -> bool:
+    changed = False
+    if not cfg.has_section(old):
+        return False
+    if not cfg.has_section(new):
+        cfg.add_section(new)
+        changed = True
+    for key, value in cfg.items(old):
+        current = cfg.get(new, key, fallback="").strip() if cfg.has_option(new, key) else ""
+        if not current:
+            cfg.set(new, key, value)
+            changed = True
+    return changed
+
+
+def copy_alias_value(cfg: configparser.ConfigParser, source_sec: str, source_key: str, target_sec: str, target_key: str) -> bool:
+    if not cfg.has_option(source_sec, source_key):
+        return False
+    if not cfg.has_section(target_sec):
+        cfg.add_section(target_sec)
+    target_value = cfg.get(target_sec, target_key, fallback="").strip() if cfg.has_option(target_sec, target_key) else ""
+    source_value = cfg.get(source_sec, source_key, fallback="").strip()
+    if not target_value and source_value:
+        cfg.set(target_sec, target_key, source_value)
+        return True
+    return False
+
+
+def load_config() -> configparser.ConfigParser:
+    ensure_config()
+    cfg = configparser.ConfigParser(interpolation=None, strict=False)
+    read_files = cfg.read(CONFIG_PATH, encoding="utf-8")
+    if not read_files:
+        raise RuntimeError(f"Could not read config file: {CONFIG_PATH}")
+
+    defaults = configparser.ConfigParser(interpolation=None, strict=False)
+    defaults.read_string(default_config())
+
+    changed = False
+
+    # Backward compatibility for older config files.
+    changed |= copy_legacy_section(cfg, "SerialTrigger", "InputSerial")
+    changed |= copy_legacy_section(cfg, "SerialOutput", "OutputSerial")
+    changed |= copy_alias_value(cfg, "Camera", "rtsp_url", "Camera", "source")
+    changed |= copy_alias_value(cfg, "Image", "live_stream_fps", "Camera", "live_stream_fps")
+    changed |= copy_alias_value(cfg, "Image", "rtsp_reconnect_seconds", "Camera", "reconnect_seconds")
+
+    for section in defaults.sections():
+        if not cfg.has_section(section):
+            cfg.add_section(section)
+            changed = True
+        for key, value in defaults.items(section):
+            if not cfg.has_option(section, key):
+                cfg.set(section, key, value)
+                changed = True
+
+    if changed:
+        with CONFIG_PATH.open("w", encoding="utf-8") as f:
+            cfg.write(f)
+
+    return cfg
+
+
+CFG = load_config()
+
+
+def cstr(sec: str, key: str, default: str = "") -> str:
+    try:
+        choices = [(sec, key)] + CONFIG_ALIASES.get((sec, key), [])
+        for section, option in choices:
+            if CFG.has_option(section, option):
+                value = str(CFG.get(section, option, fallback="")).strip()
+                if value != "":
+                    return value
+        return default
+    except Exception:
+        return default
+
+
+def cint(sec: str, key: str, default: int) -> int:
+    try:
+        return CFG.getint(sec, key, fallback=default)
+    except Exception:
+        return default
+
+
+def cfloat(sec: str, key: str, default: float) -> float:
+    try:
+        return CFG.getfloat(sec, key, fallback=default)
+    except Exception:
+        return default
+
+
+def cbool(sec: str, key: str, default: bool) -> bool:
+    try:
+        return CFG.getboolean(sec, key, fallback=default)
+    except Exception:
+        return default
+
+
+def ctemplate(sec: str, key: str, default: str) -> str:
+    return (
+        cstr(sec, key, default)
+        .replace("\\r\\n", "\r\n")
+        .replace("\\n", "\n")
+        .replace("\\r", "\r")
+        .replace("\\t", "\t")
+    )
+
+
+def default_app_dir() -> Path:
+    return documents_dir() / "MaterialAI"
+
+
+def safe_dir(raw: str, fallback: Path) -> Path:
+    raw = (raw or "").strip().strip('"')
+    if not raw:
+        return fallback
+    low = raw.lower().replace("/", "\\")
+    if "c:\\users\\youruser" in low or "c:\\users\\yourname" in low or "<your" in low:
+        return fallback
+    return Path(raw).expanduser()
+
+
+def safe_file(raw: str, fallback: Path) -> Path:
+    raw = (raw or "").strip().strip('"')
+    if not raw:
+        return fallback
+    low = raw.lower().replace("/", "\\")
+    if "c:\\users\\youruser" in low or "c:\\users\\yourname" in low or "<your" in low:
+        return fallback
+    return Path(raw).expanduser()
+
+
+def camera_source(value: str):
+    value = value.strip()
+    return int(value) if value.isdigit() else value
+
+
+APP_DIR = safe_dir(cstr("App", "app_data_folder", ""), default_app_dir())
+
+MIN_WIDTH = cint("UI", "min_width", 900)
+MIN_HEIGHT = cint("UI", "min_height", 600)
+DESKTOP_BREAKPOINT = cint("UI", "desktop_breakpoint_width", 1050)
+INITIAL_WIDTH_PERCENT = cfloat("UI", "initial_width_percent", 0.92)
+INITIAL_HEIGHT_PERCENT = cfloat("UI", "initial_height_percent", 0.90)
+START_MAXIMIZED = cbool("App", "start_maximized", False)
+
+CAMERA_SOURCE = camera_source(cstr("Camera", "source", "0"))
+LIVE_FPS = cfloat("Camera", "live_stream_fps", 10.0)
+CAMERA_RECONNECT = cfloat("Camera", "reconnect_seconds", 3.0)
+
+MODEL_DIR = safe_dir(cstr("Storage", "model_directory", ""), APP_DIR / "model")
+REFERENCE_DIR = safe_dir(cstr("Storage", "reference_directory", ""), APP_DIR / "reference_images")
+CAPTURE_DIR = safe_dir(cstr("Storage", "files_directory", ""), APP_DIR / "captured_images")
+FAILED_DIR = safe_dir(cstr("Storage", "failed_upload_directory", ""), APP_DIR / "failed_uploads")
+LOG_DIR = safe_dir(cstr("Storage", "log_directory", ""), APP_DIR / "logs")
+TMP_DIR = safe_dir(cstr("Storage", "temp_directory", ""), APP_DIR / "tmp")
+ORGANIZE_CAPTURE_BY_MATERIAL = cbool("Storage", "organize_by_material", True)
+
+SFTP_ENABLED = cbool("SFTP", "enabled", True)
+SFTP_HOST = cstr("SFTP", "host", "")
+SFTP_PORT = cint("SFTP", "port", 22)
+SFTP_USERNAME = cstr("SFTP", "username", "")
+SFTP_PASSWORD = cstr("SFTP", "password", "")
+SFTP_REMOTE_DIR = cstr("SFTP", "remote_dir", "/")
+SFTP_ORGANIZE_BY_MATERIAL = cbool("SFTP", "organize_by_material", True)
+SFTP_CREATE_REMOTE_FOLDERS = cbool("SFTP", "create_folders", True)
+
+INPUT_ENABLED = cbool("InputSerial", "enabled", True)
+INPUT_PORT = cstr("InputSerial", "port", "COM8")
+INPUT_BAUD = cint("InputSerial", "baudrate", 9600)
+INPUT_COMMAND = cstr("InputSerial", "command_text", "Detects")
+INPUT_RECONNECT = cfloat("InputSerial", "reconnect_seconds", 3.0)
+
+OUTPUT_ENABLED = cbool("OutputSerial", "enabled", False)
+OUTPUT_PORT = cstr("OutputSerial", "port", "COM5")
+OUTPUT_BAUD = cint("OutputSerial", "baudrate", 9600)
+OUTPUT_TEMPLATE = ctemplate("OutputSerial", "template", "{material}\n")
+OUTPUT_AFTER_SFTP_ONLY = cbool("OutputSerial", "after_sftp_only", False)
+
+CAPTURE_DELAY = cfloat("Trigger", "capture_delay_seconds", 5.0)
+DEBOUNCE = cfloat("Trigger", "debounce_seconds", 2.0)
+
+AI_ENABLED = cbool("AI", "enabled", False)
+AI_BACKEND = cstr("AI", "backend", "tflite").lower()
+AI_INPUT_NORMALIZATION = cstr("AI", "input_normalization", "raw_0_255").lower()
+AI_THRESHOLD = cfloat("AI", "ai_confidence_threshold", 0.80)
+REF_THRESHOLD = cfloat("AI", "reference_confidence_threshold", 0.65)
+PREFER_AI_OVER_REFERENCE = cbool("AI", "prefer_ai_over_reference", True)
+
+MODEL_PATH = safe_file(cstr("AI", "model_path", ""), MODEL_DIR / "material_model.tflite")
+LABELS_PATH = safe_file(cstr("AI", "labels_path", ""), MODEL_DIR / "labels.txt")
+
+JPEG_QUALITY = cint("Image", "jpeg_quality", 90)
+PROCESS_WIDTH = cint("Image", "width_for_processing", 640)
+DELETE_AFTER_SUCCESS = cbool("Image", "delete_image_after_success", False)
+
+for directory in [APP_DIR, MODEL_DIR, REFERENCE_DIR, CAPTURE_DIR, FAILED_DIR, LOG_DIR, TMP_DIR]:
+    directory.mkdir(parents=True, exist_ok=True)
+
+
+# =============================================================================
+# LOGGING
+# =============================================================================
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+    handlers=[
+        logging.FileHandler(LOG_DIR / "app.log", encoding="utf-8"),
+        logging.StreamHandler(sys.stdout),
+    ],
+)
+log = logging.getLogger("MaterialAI")
+
+
+# =============================================================================
+# OPTIONAL TFLITE AI RUNTIME
+# =============================================================================
+
+Interpreter = None
+if AI_ENABLED and AI_BACKEND == "tflite":
+    try:
+        from tflite_runtime.interpreter import Interpreter as Interpreter
+    except Exception:
+        try:
+            from tensorflow.lite.python.interpreter import Interpreter as Interpreter
+        except Exception:
+            Interpreter = None
+            print("[WARNING] TensorFlow/TFLite not installed. AI disabled; reference matching still works.")
+
+
+# =============================================================================
+# GENERAL UTILITIES
+# =============================================================================
+
+IMG_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+
+DEFAULT_MATERIALS = [
+    "Raw Material",
+    "6mm Jalli",
+    "12mm Jalli",
+    "20mm Jalli",
+    "35mm Jalli",
+    "M-Sand",
+    "P-Sand",
+    "Wet Mix",
+    "Empty",
+    "Other",
+]
+
+DEFAULT_FOLDERS = {
+    "Raw Material": "Raw_Material",
+    "6mm Jalli": "6mm_Jalli",
+    "12mm Jalli": "12mm_Jalli",
+    "20mm Jalli": "20mm_Jalli",
+    "35mm Jalli": "35mm_Jalli",
+    "M-Sand": "M-Sand",
+    "P-Sand": "P-Sand",
+    "Wet Mix": "Wet_Mix",
+    "Empty": "Empty",
+    "Other": "Other",
+}
+
+
+def now_name() -> str:
+    # Include milliseconds so repeated captures in the same second never overwrite each other.
+    return datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")[:-3]
+
+
+def now_display() -> str:
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+
+def slug_for(name: str) -> str:
+    if name in DEFAULT_FOLDERS:
+        return DEFAULT_FOLDERS[name]
+    x = re.sub(r"[^A-Za-z0-9._ -]+", "", name.strip())
+    x = re.sub(r"\s+", "_", x).strip("._- ")
+    return x or "Material"
+
+
+def safe_name(text: str) -> str:
+    x = re.sub(r"[^A-Za-z0-9._-]+", "_", text.strip()).strip("._-")
+    return x or "material"
+
+
+def normal_material(name: str) -> str:
+    key = name.strip().lower().replace("_", " ").replace("-", " ")
+    key = " ".join(key.split())
+    mapping = {
+        "raw material": "Raw Material",
+        "6mm jalli": "6mm Jalli",
+        "12mm jalli": "12mm Jalli",
+        "20mm jalli": "20mm Jalli",
+        "35mm jalli": "35mm Jalli",
+        "m sand": "M-Sand",
+        "msand": "M-Sand",
+        "p sand": "P-Sand",
+        "psand": "P-Sand",
+        "wet mix": "Wet Mix",
+        "empty": "Empty",
+        "other": "Other",
+    }
+    return mapping.get(key, name.strip() or "Other")
+
+
+def resize_width(img: np.ndarray, width: int) -> np.ndarray:
+    h, w = img.shape[:2]
+    if width <= 0 or w <= width:
+        return img
+    return cv2.resize(img, (width, int(h * width / w)), interpolation=cv2.INTER_AREA)
+
+
+def save_img(img: np.ndarray, folder: Path, prefix: str) -> Path:
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / f"{safe_name(prefix)}_{now_name()}.jpg"
+    ok = cv2.imwrite(str(path), img, [int(cv2.IMWRITE_JPEG_QUALITY), JPEG_QUALITY])
+    if not ok:
+        raise RuntimeError(f"Failed to save image: {path}")
+    return path
+
+
+def open_path(path: Path) -> None:
+    try:
+        if platform.system().lower().startswith("win"):
+            os.startfile(str(path))  # type: ignore[attr-defined]
+        elif platform.system().lower() == "darwin":
+            subprocess.Popen(["open", str(path)])
+        else:
+            subprocess.Popen(["xdg-open", str(path)])
+    except Exception as exc:
+        log.error("Open path failed: %s", exc)
+
+
+def open_in_notepad(path: Path) -> None:
+    try:
+        if platform.system().lower().startswith("win"):
+            subprocess.Popen(["notepad.exe", str(path)])
+        else:
+            open_path(path)
+    except Exception:
+        open_path(path)
+
+
+def frame_to_photo(img: np.ndarray, max_width: int, max_height: Optional[int] = None) -> Optional[tk.PhotoImage]:
+    try:
+        if img is None:
+            return None
+        h, w = img.shape[:2]
+        if w <= 0 or h <= 0:
+            return None
+        scale = max(1, int(max_width)) / float(w)
+        if max_height is not None:
+            scale = min(scale, max(1, int(max_height)) / float(h))
+        new_w = max(1, int(w * scale))
+        new_h = max(1, int(h * scale))
+        small = cv2.resize(img, (new_w, new_h), interpolation=cv2.INTER_AREA)
+        ok, buf = cv2.imencode(".png", small)
+        if not ok:
+            return None
+        return tk.PhotoImage(data=buf.tobytes())
+    except Exception:
+        return None
+
+
+def serial_ports() -> List[str]:
+    if not SERIAL_AVAILABLE or list_ports is None:
+        return []
+    try:
+        return [p.device for p in list_ports.comports()]
+    except Exception:
+        return []
+
+
+def port_exists(port: str) -> bool:
+    return port.strip().upper() in {p.upper() for p in serial_ports()}
+
+
+# =============================================================================
+# APP STATE
+# =============================================================================
+
+class State:
+    def __init__(self) -> None:
+        self.lock = threading.Lock()
+        self.data: Dict[str, object] = {
+            "camera": False,
+            "last_frame_at": "-",
+            "status": "Starting",
+            "material": "Waiting",
+            "decision": "-",
+            "ai_label": "Other",
+            "ai_conf": 0.0,
+            "ref_label": "Other",
+            "ref_score": 0.0,
+            "sftp": "Waiting",
+            "remote": "-",
+            "output": "Disabled" if not OUTPUT_ENABLED else "Waiting",
+            "trigger": "Waiting",
+            "error": "",
+            "last_capture": "",
+            "ai_status": "Disabled" if not AI_ENABLED else "Starting",
+        }
+
+    def set(self, **kw) -> None:
+        with self.lock:
+            self.data.update(kw)
+
+    def get(self) -> Dict[str, object]:
+        with self.lock:
+            return dict(self.data)
+
+
+state = State()
+
+
+# =============================================================================
+# MATERIAL REGISTRY + REFERENCE MATCHING
+# =============================================================================
+
+@dataclass
+class Material:
+    name: str
+    slug: str
+    folder: Path
+
+
+def read_labels() -> List[str]:
+    LABELS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    if not LABELS_PATH.exists():
+        LABELS_PATH.write_text("\n".join(DEFAULT_MATERIALS), encoding="utf-8")
+        return DEFAULT_MATERIALS[:]
+    labels = [x.strip() for x in LABELS_PATH.read_text(encoding="utf-8").splitlines() if x.strip()]
+    return labels or DEFAULT_MATERIALS[:]
+
+
+def append_label(name: str) -> None:
+    labels = read_labels()
+    if name in labels:
+        return
+    with LABELS_PATH.open("a", encoding="utf-8") as f:
+        if LABELS_PATH.stat().st_size:
+            f.write("\n")
+        f.write(name)
+
+
+class MaterialRegistry:
+    def __init__(self) -> None:
+        self.lock = threading.Lock()
+        self.items: List[Material] = []
+        self.reload()
+
+    def reload(self) -> None:
+        out: List[Material] = []
+        seen = set()
+        for label in read_labels():
+            name = normal_material(label)
+            if name in seen:
+                continue
+            folder = REFERENCE_DIR / slug_for(name)
+            folder.mkdir(parents=True, exist_ok=True)
+            out.append(Material(name=name, slug=folder.name, folder=folder))
+            seen.add(name)
+
+        existing_slugs = {m.slug for m in out}
+        if REFERENCE_DIR.exists():
+            for folder in sorted(p for p in REFERENCE_DIR.iterdir() if p.is_dir()):
+                if folder.name not in existing_slugs:
+                    out.append(Material(name=folder.name.replace("_", " "), slug=folder.name, folder=folder))
+
+        with self.lock:
+            self.items = out
+
+    def list(self) -> List[Material]:
+        with self.lock:
+            return list(self.items)
+
+    def by_slug(self, slug: str) -> Optional[Material]:
+        with self.lock:
+            return next((m for m in self.items if m.slug == slug), None)
+
+    def add(self, name: str) -> Material:
+        name = re.sub(r"\s+", " ", name.strip())
+        if not name:
+            raise ValueError("Material name is required")
+        if not re.match(r"^[A-Za-z0-9][A-Za-z0-9 ._/-]*$", name):
+            raise ValueError("Use letters, numbers, spaces, dot, slash, underscore, hyphen only")
+        folder = REFERENCE_DIR / slug_for(name)
+        folder.mkdir(parents=True, exist_ok=True)
+        append_label(name)
+        if ORGANIZE_CAPTURE_BY_MATERIAL:
+            (CAPTURE_DIR / folder.name).mkdir(parents=True, exist_ok=True)
+        self.reload()
+        material = self.by_slug(folder.name)
+        if not material:
+            raise RuntimeError("Material created but reload failed")
+        return material
+
+
+registry = MaterialRegistry()
+
+
+def ensure_local_material_folders() -> None:
+    """Create all expected local folders before capture/use.
+
+    This prevents first-run folder errors and makes Windows Explorer show the
+    material-wise folder structure immediately after startup.
+    """
+    for base in [CAPTURE_DIR, REFERENCE_DIR, FAILED_DIR, TMP_DIR, MODEL_DIR, LOG_DIR]:
+        base.mkdir(parents=True, exist_ok=True)
+    for material in registry.list():
+        material.folder.mkdir(parents=True, exist_ok=True)
+        if ORGANIZE_CAPTURE_BY_MATERIAL:
+            (CAPTURE_DIR / material.slug).mkdir(parents=True, exist_ok=True)
+        if DELETE_AFTER_SUCCESS:
+            (FAILED_DIR / material.slug).mkdir(parents=True, exist_ok=True)
+
+
+ensure_local_material_folders()
+
+
+def color_score(a: np.ndarray, b: np.ndarray) -> float:
+    try:
+        a = resize_width(a, PROCESS_WIDTH)
+        b = resize_width(b, PROCESS_WIDTH)
+        ha = cv2.calcHist([cv2.cvtColor(a, cv2.COLOR_BGR2HSV)], [0, 1, 2], None, [24, 24, 24], [0, 180, 0, 256, 0, 256])
+        hb = cv2.calcHist([cv2.cvtColor(b, cv2.COLOR_BGR2HSV)], [0, 1, 2], None, [24, 24, 24], [0, 180, 0, 256, 0, 256])
+        cv2.normalize(ha, ha)
+        cv2.normalize(hb, hb)
+        return max(0.0, min(1.0, float(cv2.compareHist(ha, hb, cv2.HISTCMP_CORREL))))
+    except Exception:
+        return 0.0
+
+
+def texture_score(a: np.ndarray, b: np.ndarray) -> float:
+    try:
+        ga = cv2.resize(cv2.cvtColor(resize_width(a, PROCESS_WIDTH), cv2.COLOR_BGR2GRAY), (320, 240))
+        gb = cv2.resize(cv2.cvtColor(resize_width(b, PROCESS_WIDTH), cv2.COLOR_BGR2GRAY), (320, 240))
+        la = cv2.Laplacian(ga, cv2.CV_32F)
+        lb = cv2.Laplacian(gb, cv2.CV_32F)
+        ha = cv2.calcHist([np.uint8(np.absolute(la))], [0], None, [64], [0, 256])
+        hb = cv2.calcHist([np.uint8(np.absolute(lb))], [0], None, [64], [0, 256])
+        cv2.normalize(ha, ha)
+        cv2.normalize(hb, hb)
+        return max(0.0, min(1.0, float(cv2.compareHist(ha, hb, cv2.HISTCMP_CORREL))))
+    except Exception:
+        return 0.0
+
+
+def orb_score(a: np.ndarray, b: np.ndarray) -> float:
+    try:
+        ga = cv2.cvtColor(resize_width(a, PROCESS_WIDTH), cv2.COLOR_BGR2GRAY)
+        gb = cv2.cvtColor(resize_width(b, PROCESS_WIDTH), cv2.COLOR_BGR2GRAY)
+        orb = cv2.ORB_create(nfeatures=400)
+        ka, da = orb.detectAndCompute(ga, None)
+        kb, db = orb.detectAndCompute(gb, None)
+        if da is None or db is None or len(ka) < 8 or len(kb) < 8:
+            return 0.0
+        matches = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True).match(da, db)
+        good = [m for m in matches if m.distance < 62]
+        return max(0.0, min(1.0, len(good) / float(max(1, min(len(ka), len(kb))))))
+    except Exception:
+        return 0.0
+
+
+def combined_score(a: np.ndarray, b: np.ndarray) -> float:
+    return max(0.0, min(1.0, 0.50 * color_score(a, b) + 0.30 * texture_score(a, b) + 0.20 * orb_score(a, b)))
+
+
+class ReferenceStore:
+    def __init__(self) -> None:
+        self.lock = threading.Lock()
+        self.refs: Dict[str, List[Tuple[Path, np.ndarray]]] = {}
+        self.reload()
+
+    def reload(self) -> None:
+        registry.reload()
+        out: Dict[str, List[Tuple[Path, np.ndarray]]] = {}
+        for material in registry.list():
+            images: List[Tuple[Path, np.ndarray]] = []
+            paths = sorted(material.folder.iterdir(), key=lambda x: x.stat().st_mtime) if material.folder.exists() else []
+            for path in paths:
+                if path.is_file() and path.suffix.lower() in IMG_EXT:
+                    img = cv2.imread(str(path))
+                    if img is not None:
+                        images.append((path, img))
+            out[material.name] = images
+        with self.lock:
+            self.refs = out
+        log.info("Loaded %d reference images", sum(len(v) for v in out.values()))
+
+    def best(self, img: np.ndarray) -> Tuple[str, float]:
+        best_label = "Other"
+        best_score = 0.0
+        with self.lock:
+            items = [(k, v[:]) for k, v in self.refs.items()]
+        for label, ref_items in items:
+            for _, ref_img in ref_items:
+                score = combined_score(img, ref_img)
+                if score > best_score:
+                    best_label = label
+                    best_score = score
+        return best_label, best_score
+
+    def metadata(self) -> List[Dict[str, object]]:
+        result: List[Dict[str, object]] = []
+        for material in registry.list():
+            files = sorted(
+                [p for p in material.folder.iterdir() if p.is_file() and p.suffix.lower() in IMG_EXT],
+                key=lambda p: p.stat().st_mtime,
+                reverse=True,
+            ) if material.folder.exists() else []
+            latest = files[0] if files else None
+            result.append({
+                "name": material.name,
+                "slug": material.slug,
+                "count": len(files),
+                "latest": latest,
+                "mtime": int(latest.stat().st_mtime) if latest else 0,
+            })
+        return result
+
+
+refs = ReferenceStore()
+
+
+# =============================================================================
+# CAMERA
+# =============================================================================
+
+class Camera:
+    def __init__(self, source) -> None:
+        self.source = source
+        self.lock = threading.Lock()
+        self.frame: Optional[np.ndarray] = None
+        self.running = False
+
+    def start(self) -> None:
+        if self.running:
+            return
+        self.running = True
+        threading.Thread(target=self._loop, daemon=True).start()
+
+    def stop(self) -> None:
+        self.running = False
+
+    def _loop(self) -> None:
+        while self.running:
+            cap = None
+            try:
+                log.info("Opening camera: %s", self.source)
+                cap = cv2.VideoCapture(self.source)
+                if not cap.isOpened():
+                    state.set(camera=False, error="Camera open failed")
+                    time.sleep(CAMERA_RECONNECT)
+                    continue
+                state.set(camera=True, error="")
+                while self.running:
+                    ok, frame = cap.read()
+                    if not ok or frame is None:
+                        state.set(camera=False, error="Camera read failed")
+                        break
+                    with self.lock:
+                        self.frame = frame.copy()
+                    state.set(camera=True, last_frame_at=now_display())
+                    time.sleep(0.01)
+            except Exception as exc:
+                state.set(camera=False, error=str(exc))
+                log.error("Camera error: %s", exc)
+            finally:
+                if cap is not None:
+                    cap.release()
+            time.sleep(CAMERA_RECONNECT)
+
+    def latest(self) -> Optional[np.ndarray]:
+        with self.lock:
+            return None if self.frame is None else self.frame.copy()
+
+    def capture(self, wait_seconds: float = 2.0) -> Optional[np.ndarray]:
+        """
+        Return the latest live-stream frame.
+
+        Important for RTSP cameras: avoid opening a second connection while the
+        live camera loop is already running because some cameras reject multiple
+        simultaneous RTSP sessions.
+        """
+        frame = self.latest()
+        if frame is not None:
+            return frame
+
+        deadline = time.time() + max(0.0, wait_seconds)
+        while self.running and time.time() < deadline:
+            time.sleep(0.05)
+            frame = self.latest()
+            if frame is not None:
+                return frame
+
+        if self.running:
+            return None
+
+        cap = cv2.VideoCapture(self.source)
+        if not cap.isOpened():
+            return None
+        try:
+            out = None
+            for _ in range(20):
+                ok, frame = cap.read()
+                if ok and frame is not None:
+                    out = frame
+                time.sleep(0.04)
+            return out
+        finally:
+            cap.release()
+
+
+camera = Camera(CAMERA_SOURCE)
+
+
+# =============================================================================
+# AI CLASSIFIER
+# =============================================================================
+
+class Classifier:
+    def __init__(self) -> None:
+        self.available = False
+        self.labels = read_labels()
+        self.interpreter = None
+        self.input_details = None
+        self.output_details = None
+
+        if not AI_ENABLED:
+            state.set(ai_status="Disabled")
+            log.info("AI disabled by config")
+            return
+
+        if AI_BACKEND != "tflite":
+            state.set(ai_status=f"Unsupported backend: {AI_BACKEND}")
+            log.warning("Unsupported AI backend: %s", AI_BACKEND)
+            return
+
+        if Interpreter is None:
+            state.set(ai_status="TensorFlow/TFLite missing")
+            log.warning("AI enabled but TensorFlow/TFLite unavailable")
+            return
+
+        if not MODEL_PATH.exists():
+            state.set(ai_status=f"Model missing: {MODEL_PATH.name}")
+            log.warning("AI model missing: %s", MODEL_PATH)
+            return
+
+        try:
+            self.interpreter = Interpreter(model_path=str(MODEL_PATH))
+            self.interpreter.allocate_tensors()
+            self.input_details = self.interpreter.get_input_details()
+            self.output_details = self.interpreter.get_output_details()
+            self.available = True
+            state.set(ai_status="Loaded")
+            log.info("AI model loaded: %s", MODEL_PATH)
+        except Exception as exc:
+            state.set(ai_status="Load failed")
+            log.error("AI load failed: %s", exc)
+
+    def _prepare_input(self, img: np.ndarray, inp: dict) -> np.ndarray:
+        shape = inp["shape"]
+        h = int(shape[1]) if len(shape) > 1 and int(shape[1]) > 0 else 224
+        w = int(shape[2]) if len(shape) > 2 and int(shape[2]) > 0 else 224
+        rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        resized = cv2.resize(rgb, (w, h), interpolation=cv2.INTER_AREA)
+        dtype = inp["dtype"]
+        if dtype == np.float32:
+            data = resized.astype(np.float32)
+            if AI_INPUT_NORMALIZATION == "zero_to_one":
+                data = data / 255.0
+            elif AI_INPUT_NORMALIZATION == "minus_one_to_one":
+                data = (data / 127.5) - 1.0
+        else:
+            data = resized.astype(dtype)
+        return np.expand_dims(data, axis=0)
+
+    def predict(self, img: np.ndarray) -> Tuple[str, float]:
+        if not self.available:
+            return "Other", 0.0
+        try:
+            inp = self.input_details[0]
+            data = self._prepare_input(img, inp)
+            self.interpreter.set_tensor(inp["index"], data)
+            self.interpreter.invoke()
+            out_detail = self.output_details[0]
+            output = self.interpreter.get_tensor(out_detail["index"])[0]
+            if output.dtype != np.float32:
+                scale, zero = out_detail.get("quantization", (0.0, 0))
+                output = scale * (output.astype(np.float32) - zero) if scale else output.astype(np.float32)
+            else:
+                output = output.astype(np.float32)
+            probs = output.ravel()
+            if np.max(probs) > 1.0 or np.min(probs) < 0.0 or not np.isclose(float(np.sum(probs)), 1.0, atol=0.20):
+                exp = np.exp(probs - np.max(probs))
+                probs = exp / np.sum(exp)
+            idx = int(np.argmax(probs))
+            label = self.labels[idx] if idx < len(self.labels) else "Other"
+            return normal_material(label), float(probs[idx])
+        except Exception as exc:
+            state.set(ai_status="Predict failed")
+            log.error("AI predict failed: %s", exc)
+            return "Other", 0.0
+
+
+classifier = Classifier()
+
+
+# =============================================================================
+# SFTP + SERIAL OUTPUT
+# =============================================================================
+
+def unique(vals: List[str]) -> List[str]:
+    seen = set()
+    out = []
+    for value in vals:
+        value = value.strip().rstrip("/")
+        if value and value not in seen:
+            seen.add(value)
+            out.append(value)
+    return out
+
+
+def normalize_remote_dir(remote: str, material: Optional[str] = None) -> str:
+    base = remote.strip().rstrip("/") or "/"
+    if material and SFTP_ORGANIZE_BY_MATERIAL:
+        suffix = slug_for(material)
+        return f"/{suffix}" if base == "/" else f"{base}/{suffix}"
+    return base
+
+
+def sftp_dirs(remote: str) -> List[str]:
+    raw = remote.strip().rstrip("/") or "/"
+    candidates = [raw]
+    for prefix in [f"/home/{SFTP_USERNAME}/", "/home/ftpuser/"]:
+        if raw.startswith(prefix):
+            rel = raw[len(prefix):].strip("/")
+            if rel:
+                candidates += [rel, "/" + rel]
+    stripped = raw.strip("/")
+    if stripped:
+        candidates.append(stripped)
+    return unique(candidates)
+
+
+def remote_exists(sftp: paramiko.SFTPClient, remote_path: str) -> bool:
+    try:
+        sftp.stat(remote_path)
+        return True
+    except IOError:
+        return False
+
+
+def mkdir_p(sftp: paramiko.SFTPClient, remote_dir: str) -> None:
+    """Create an SFTP directory tree if it does not already exist.
+
+    Works for absolute paths such as /home/ftpuser/ftp/Kousic&Co/Raw_Material
+    and relative paths such as ftp/Kousic&Co/Raw_Material.
+    """
+    remote_dir = (remote_dir or "").strip().replace("\\", "/").rstrip("/")
+    if not remote_dir or remote_dir in {".", "/"}:
+        return
+
+    current = "/" if remote_dir.startswith("/") else "."
+    for part in [p for p in remote_dir.split("/") if p]:
+        current = f"/{part}" if current == "/" else (part if current == "." else f"{current}/{part}")
+        if remote_exists(sftp, current):
+            continue
+        try:
+            sftp.mkdir(current)
+            log.info("SFTP folder created: %s", current)
+        except IOError:
+            # Another process may have created it between stat() and mkdir().
+            if not remote_exists(sftp, current):
+                raise
+
+
+def upload_sftp(path: Path, material: Optional[str] = None) -> Tuple[bool, str, Optional[str]]:
+    if not SFTP_ENABLED:
+        state.set(sftp="Disabled", remote="-", error="")
+        return True, "Disabled", None
+    if not PARAMIKO_AVAILABLE:
+        state.set(sftp="paramiko missing", error="Install missing package: pip install paramiko")
+        return False, "paramiko missing", None
+    if not SFTP_HOST or not SFTP_USERNAME:
+        state.set(sftp="Not configured", error="SFTP not configured")
+        return False, "SFTP not configured", None
+
+    client = None
+    sftp = None
+    errors = []
+    remote_base = normalize_remote_dir(SFTP_REMOTE_DIR, material)
+    try:
+        state.set(sftp="Connecting", error="")
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        client.connect(
+            SFTP_HOST,
+            port=SFTP_PORT,
+            username=SFTP_USERNAME,
+            password=SFTP_PASSWORD,
+            timeout=30,
+            banner_timeout=30,
+            auth_timeout=30,
+            look_for_keys=False,
+            allow_agent=False,
+        )
+        sftp = client.open_sftp()
+        for remote_dir in sftp_dirs(remote_base):
+            try:
+                state.set(sftp=f"Trying {remote_dir}")
+                if SFTP_CREATE_REMOTE_FOLDERS:
+                    mkdir_p(sftp, remote_dir)
+                elif not remote_exists(sftp, remote_dir):
+                    raise RuntimeError(f"Remote folder does not exist: {remote_dir}")
+                remote_path = remote_dir.rstrip("/") + "/" + path.name
+                tmp = remote_path + ".uploading"
+                sftp.put(str(path), tmp)
+                sftp.rename(tmp, remote_path)
+                sftp.stat(remote_path)
+                state.set(sftp="Uploaded", remote=remote_path, error="")
+                log.info("SFTP uploaded: %s -> %s", path, remote_path)
+                return True, "Uploaded", remote_path
+            except Exception as exc:
+                errors.append(f"{remote_dir}: {exc}")
+                log.warning("SFTP candidate failed: %s", exc)
+        msg = "SFTP failed: " + " | ".join(errors)
+        state.set(sftp="Failed", error=msg)
+        try:
+            failed = FAILED_DIR / path.name
+            failed.write_bytes(path.read_bytes())
+        except Exception:
+            pass
+        return False, msg, None
+    except Exception as exc:
+        msg = f"SFTP connection failed: {exc}"
+        state.set(sftp="Connection Failed", error=msg)
+        log.error(msg)
+        return False, msg, None
+    finally:
+        try:
+            if sftp:
+                sftp.close()
+            if client:
+                client.close()
+        except Exception:
+            pass
+
+
+def output_message(material: str, ai: float, ref: float, decision: str) -> str:
+    try:
+        msg = OUTPUT_TEMPLATE.format(
+            material=material,
+            ai_conf=f"{ai:.3f}",
+            ref_score=f"{ref:.3f}",
+            decision=decision,
+            time=now_display(),
+        )
+    except Exception:
+        msg = f"{material}\n"
+    return msg if msg.endswith(("\n", "\r")) else msg + "\n"
+
+
+def send_output(material: str, ai: float, ref: float, decision: str) -> bool:
+    if not OUTPUT_ENABLED:
+        state.set(output="Disabled")
+        return False
+    if not SERIAL_AVAILABLE:
+        state.set(output="pyserial missing")
+        return False
+    if not port_exists(OUTPUT_PORT):
+        state.set(output=f"Skipped: {OUTPUT_PORT} not found")
+        return False
+    try:
+        msg = output_message(material, ai, ref, decision)
+        with serial.Serial(OUTPUT_PORT, OUTPUT_BAUD, timeout=2) as port:
+            port.write(msg.encode("utf-8"))
+            port.flush()
+        state.set(output=f"Sent: {material}")
+        log.info("Output sent on %s: %s", OUTPUT_PORT, msg.strip())
+        return True
+    except Exception as exc:
+        err = f"Output failed on {OUTPUT_PORT}: {exc}"
+        state.set(output="Failed", error=err)
+        log.error(err)
+        return False
+
+
+# =============================================================================
+# PROCESSING + SERIAL TRIGGER
+# =============================================================================
+
+last_trigger_time = 0.0
+trigger_busy = False
+trigger_lock = threading.Lock()
+
+
+def decide(ai_label: str, ai_conf: float, ref_label: str, ref_score: float) -> Tuple[str, str]:
+    ai_ok = ai_conf >= AI_THRESHOLD and ai_label != "Other"
+    ref_ok = ref_score >= REF_THRESHOLD
+    if PREFER_AI_OVER_REFERENCE:
+        if ai_ok:
+            return ai_label, "AI Model"
+        if ref_ok:
+            return ref_label, "Reference Image"
+    else:
+        if ref_ok:
+            return ref_label, "Reference Image"
+        if ai_ok:
+            return ai_label, "AI Model"
+    if ai_conf > 0:
+        return ai_label, "Low Confidence AI"
+    if ref_score > 0:
+        return ref_label, "Low Confidence Reference"
+    return "Other", "Fallback"
+
+
+def process_frame(frame: np.ndarray, source: str) -> Dict[str, object]:
+    state.set(status=f"Processing ({source})", error="")
+    ai_label, ai_conf = classifier.predict(frame)
+    ref_label, ref_score = refs.best(frame)
+    material, decision = decide(ai_label, ai_conf, ref_label, ref_score)
+    save_folder = CAPTURE_DIR / slug_for(material) if ORGANIZE_CAPTURE_BY_MATERIAL else CAPTURE_DIR
+    saved = save_img(frame, save_folder, material)
+    sftp_ok, sftp_status, remote = upload_sftp(saved, material=material)
+    if OUTPUT_AFTER_SFTP_ONLY and not sftp_ok:
+        state.set(output="Skipped: SFTP failed")
+        output_ok = False
+    else:
+        output_ok = send_output(material, ai_conf, ref_score, decision)
+    if SFTP_ENABLED and sftp_ok and DELETE_AFTER_SUCCESS:
+        try:
+            saved.unlink(missing_ok=True)
+        except Exception:
+            pass
+    state.set(
+        status="Ready — waiting for trigger",
+        material=material,
+        decision=decision,
+        ai_label=ai_label,
+        ai_conf=ai_conf,
+        ref_label=ref_label,
+        ref_score=ref_score,
+        sftp=sftp_status if sftp_ok else "Failed",
+        remote=remote or "-",
+        last_capture=str(saved),
+        error="" if sftp_ok else sftp_status,
+    )
+    log.info(
+        "Detected: %s decision=%s ai=%s(%.3f) ref=%s(%.3f) sftp=%s output=%s",
+        material,
+        decision,
+        ai_label,
+        ai_conf,
+        ref_label,
+        ref_score,
+        sftp_ok,
+        output_ok,
+    )
+    return {"material": material, "decision": decision, "sftp_ok": sftp_ok, "remote": remote, "output_ok": output_ok}
+
+
+def fire_trigger(source: str) -> None:
+    global last_trigger_time, trigger_busy
+    now = time.time()
+    with trigger_lock:
+        if trigger_busy:
+            state.set(trigger="Ignored: capture busy")
+            log.info("Trigger ignored from %s because capture is already running", source)
+            return
+        if now - last_trigger_time < DEBOUNCE:
+            state.set(trigger="Ignored: debounce")
+            log.info("Trigger ignored from %s because debounce is active", source)
+            return
+        last_trigger_time = now
+        trigger_busy = True
+    try:
+        state.set(status=f"Triggered ({source}) — waiting {CAPTURE_DELAY:g}s", trigger=f"Triggered by {source}", error="")
+        log.info("Trigger fired from %s; waiting %.1fs", source, CAPTURE_DELAY)
+        time.sleep(CAPTURE_DELAY)
+        frame = camera.capture()
+        if frame is None:
+            state.set(status="Capture failed", error="No frame captured")
+            return
+        process_frame(frame, source)
+    except Exception as exc:
+        state.set(status="Process error", error=str(exc))
+        log.error("Process error: %s", exc)
+        log.error(traceback.format_exc())
+    finally:
+        with trigger_lock:
+            trigger_busy = False
+
+
+def start_trigger(source: str) -> None:
+    threading.Thread(target=fire_trigger, args=(source,), daemon=True).start()
+
+
+def serial_trigger_loop() -> None:
+    if not INPUT_ENABLED:
+        state.set(trigger="Disabled")
+        return
+    if not SERIAL_AVAILABLE:
+        state.set(trigger="pyserial missing")
+        return
+    command = INPUT_COMMAND.strip()
+    if not command:
+        state.set(trigger="Command empty")
+        return
+    command_lower = command.lower()
+    while True:
+        try:
+            state.set(trigger=f"Opening {INPUT_PORT}")
+            log.info("Opening input trigger port: %s @ %s command=%r", INPUT_PORT, INPUT_BAUD, command)
+            with serial.Serial(INPUT_PORT, INPUT_BAUD, timeout=0.5) as port:
+                try:
+                    port.reset_input_buffer()
+                except Exception:
+                    pass
+                buf = ""
+                state.set(trigger=f"Listening on {INPUT_PORT}", status=f"Ready — waiting for {command!r}", error="")
+                while True:
+                    raw = port.read(port.in_waiting or 1)
+                    if raw:
+                        text = raw.decode("utf-8", errors="ignore")
+                        buf += text
+                        if len(buf) > 512:
+                            buf = buf[-512:]
+                        log.info("Input trigger raw text: %r", text)
+                        if command_lower in buf.lower():
+                            log.info("Sensor command matched: %r", command)
+                            state.set(trigger=f"Received {command!r}")
+                            buf = ""
+                            start_trigger("serial sensor")
+                    time.sleep(0.03)
+        except Exception as exc:
+            err = f"Input COM failed on {INPUT_PORT}: {exc}"
+            state.set(trigger="Disconnected / retrying", error=err)
+            log.error(err)
+            time.sleep(INPUT_RECONNECT)
+
+
+# =============================================================================
+# RESPONSIVE UI
+# =============================================================================
+
+class ScrollableFrame(ttk.Frame):
+    def __init__(self, parent, bg: str) -> None:
+        super().__init__(parent)
+        self.canvas = tk.Canvas(self, bg=bg, highlightthickness=0, borderwidth=0)
+        self.scrollbar = ttk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
+        self.inner = ttk.Frame(self.canvas)
+        self.window_id = self.canvas.create_window((0, 0), window=self.inner, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        self.canvas.grid(row=0, column=0, sticky="nsew")
+        self.scrollbar.grid(row=0, column=1, sticky="ns")
+        self.rowconfigure(0, weight=1)
+        self.columnconfigure(0, weight=1)
+        self.inner.bind("<Configure>", self._on_inner_configure)
+        self.canvas.bind("<Configure>", self._on_canvas_configure)
+        self.canvas.bind("<Enter>", self._bind_mousewheel)
+        self.canvas.bind("<Leave>", self._unbind_mousewheel)
+
+    def _on_inner_configure(self, _event=None) -> None:
+        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+
+    def _on_canvas_configure(self, event) -> None:
+        self.canvas.itemconfigure(self.window_id, width=event.width)
+
+    def _bind_mousewheel(self, _event=None) -> None:
+        self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
+
+    def _unbind_mousewheel(self, _event=None) -> None:
+        self.canvas.unbind_all("<MouseWheel>")
+
+    def _on_mousewheel(self, event) -> None:
+        self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+
+class App:
+    def __init__(self, root: tk.Tk) -> None:
+        self.root = root
+        self.root.title("Material AI Standalone")
+        self.root.minsize(MIN_WIDTH, MIN_HEIGHT)
+        self.video_photo = None
+        self.preview_photo = None
+        self.selected_slug = ""
+        self.signature = ""
+        self.is_compact = False
+        self.last_ui_width = 0
+        self.reference_capture_busy = False
+        self.colors = {
+            "bg": "#fff7ed",
+            "panel": "#ffffff",
+            "panel2": "#ffedd5",
+            "text": "#2b1d13",
+            "muted": "#7c5e45",
+            "line": "#fdba74",
+            "info": "#fff3e0",
+            "info_text": "#7c2d12",
+            "success": "#15803d",
+            "error": "#dc2626",
+            "accent": "#f97316",
+            "accent_dark": "#c2410c",
+            "button_bg": "#f97316",
+            "button_hover": "#ea580c",
+            "button_text": "#ffffff",
+            "entry_bg": "#fffdf8",
+            "list_bg": "#fffaf2",
+            "select_bg": "#fb923c",
+            "select_text": "#ffffff",
+            "camera_bg": "#1c1917",
+            "camera_text": "#ffffff",
+        }
+        self.root.configure(bg=self.colors["bg"])
+        self.setup_window_size()
+        self.setup_style()
+        self.build()
+        self.refresh_materials(force=True)
+        self.update_status()
+        self.update_video()
+        self.root.bind("<Configure>", self.on_resize)
+        self.root.protocol("WM_DELETE_WINDOW", self.close)
+
+    def setup_window_size(self) -> None:
+        screen_w = self.root.winfo_screenwidth()
+        screen_h = self.root.winfo_screenheight()
+        width = max(MIN_WIDTH, min(int(screen_w * INITIAL_WIDTH_PERCENT), screen_w))
+        height = max(MIN_HEIGHT, min(int(screen_h * INITIAL_HEIGHT_PERCENT), screen_h))
+        x = max(0, int((screen_w - width) / 2))
+        y = max(0, int((screen_h - height) / 2))
+        self.root.geometry(f"{width}x{height}+{x}+{y}")
+        if START_MAXIMIZED and platform.system().lower().startswith("win"):
+            self.root.state("zoomed")
+
+    def setup_style(self) -> None:
+        style = ttk.Style()
+        try:
+            style.theme_use("clam")
+        except Exception:
+            pass
+
+        style.configure("TFrame", background=self.colors["bg"])
+        style.configure("Panel.TFrame", background=self.colors["panel"])
+
+        style.configure(
+            "TLabel",
+            background=self.colors["bg"],
+            foreground=self.colors["text"],
+        )
+        style.configure(
+            "Panel.TLabel",
+            background=self.colors["panel"],
+            foreground=self.colors["text"],
+        )
+        style.configure(
+            "Title.TLabel",
+            background=self.colors["bg"],
+            foreground=self.colors["accent_dark"],
+            font=("Segoe UI", 22, "bold"),
+        )
+        style.configure(
+            "Header.TLabel",
+            background=self.colors["panel"],
+            foreground=self.colors["accent"],
+            font=("Segoe UI", 13, "bold"),
+        )
+
+        style.configure(
+            "TButton",
+            font=("Segoe UI", 10, "bold"),
+            padding=7,
+            background=self.colors["button_bg"],
+            foreground=self.colors["button_text"],
+            bordercolor=self.colors["accent"],
+            lightcolor=self.colors["button_bg"],
+            darkcolor=self.colors["accent_dark"],
+        )
+        style.map(
+            "TButton",
+            background=[
+                ("pressed", self.colors["accent_dark"]),
+                ("active", self.colors["button_hover"]),
+                ("disabled", "#e7e5e4"),
+            ],
+            foreground=[
+                ("disabled", "#a8a29e"),
+            ],
+        )
+
+        style.configure(
+            "TEntry",
+            fieldbackground=self.colors["entry_bg"],
+            foreground=self.colors["text"],
+            bordercolor=self.colors["line"],
+            lightcolor=self.colors["line"],
+            darkcolor=self.colors["line"],
+        )
+
+    def build(self) -> None:
+        self.main = ttk.Frame(self.root)
+        self.main.pack(fill="both", expand=True, padx=12, pady=10)
+
+        self.top = ttk.Frame(self.main)
+        self.top.pack(fill="x", pady=(0, 8))
+        self.title_label = ttk.Label(self.top, text="RealTech Systems", style="Title.TLabel")
+        self.title_label.pack(side="left")
+        ttk.Button(self.top, text="Edit Config", command=lambda: open_in_notepad(CONFIG_PATH)).pack(side="right", padx=3)
+        ttk.Button(self.top, text="Open Data Folder", command=lambda: open_path(APP_DIR)).pack(side="right", padx=3)
+        ttk.Button(self.top, text="Reload References", command=self.reload_refs).pack(side="right", padx=3)
+
+        info = (
+            f"Config: {CONFIG_PATH}  |  Input: {INPUT_PORT}@{INPUT_BAUD} {INPUT_COMMAND!r}  |  "
+            f"Output: {'ON' if OUTPUT_ENABLED else 'OFF'} {OUTPUT_PORT}@{OUTPUT_BAUD}  |  "
+            f"Capture Delay: {CAPTURE_DELAY:g}s  |  Storage: {CAPTURE_DIR}"
+        )
+        self.info_label = tk.Label(self.main, text=info, bg=self.colors["bg"], fg=self.colors["muted"], font=("Segoe UI", 9), anchor="w", justify="left")
+        self.info_label.pack(fill="x", pady=(0, 8))
+
+        self.body = ttk.Frame(self.main)
+        self.body.pack(fill="both", expand=True)
+        self.body.rowconfigure(0, weight=1)
+        self.body.columnconfigure(0, weight=3)
+        self.body.columnconfigure(1, weight=2)
+
+        self.left = ttk.Frame(self.body, style="Panel.TFrame")
+        self.left.grid(row=0, column=0, sticky="nsew", padx=(0, 10))
+        self.left.rowconfigure(1, weight=1)
+        self.left.columnconfigure(0, weight=1)
+        ttk.Label(self.left, text="Live Camera", style="Header.TLabel").grid(row=0, column=0, sticky="w", padx=12, pady=10)
+        self.video = tk.Label(
+            self.left,
+            bg=self.colors["camera_bg"],
+            fg=self.colors["camera_text"],
+            text="Opening camera...",
+            font=("Segoe UI", 16, "bold"),
+        )
+        self.video.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 12))
+        self.buttons = ttk.Frame(self.left, style="Panel.TFrame")
+        self.buttons.grid(row=2, column=0, sticky="ew", padx=12, pady=(0, 12))
+        self.action_buttons: List[ttk.Button] = [
+            ttk.Button(self.buttons, text="Capture + Classify", command=lambda: start_trigger("manual button")),
+            ttk.Button(self.buttons, text="Test SFTP", command=self.test_sftp),
+            ttk.Button(self.buttons, text="Test Output", command=self.test_output),
+            ttk.Button(self.buttons, text="Last Capture", command=self.open_last_capture),
+        ]
+        self.layout_action_buttons(compact=False)
+
+        self.right_scroll = ScrollableFrame(self.body, self.colors["bg"])
+        self.right_scroll.grid(row=0, column=1, sticky="nsew")
+        self.right = self.right_scroll.inner
+        self.right.columnconfigure(0, weight=1)
+        self.build_status_panel()
+        self.build_add_material_panel()
+        self.build_reference_panel()
+        self.build_material_list_panel()
+
+    def build_status_panel(self) -> None:
+        self.status_panel = ttk.Frame(self.right, style="Panel.TFrame")
+        self.status_panel.grid(row=0, column=0, sticky="ew", pady=(0, 8))
+        self.status_panel.columnconfigure((0, 1), weight=1)
+        ttk.Label(self.status_panel, text="Status", style="Header.TLabel").grid(row=0, column=0, columnspan=2, sticky="w", padx=10, pady=8)
+        self.lbls: Dict[str, tk.Label] = {}
+        self.status_boxes: List[Tuple[tk.Frame, str]] = []
+        fields = [
+            ("material", "Material"),
+            ("decision", "Decision"),
+            ("ref_score", "Ref Score"),
+            ("ai_conf", "AI Conf"),
+            ("ai_status", "AI Status"),
+            ("sftp", "SFTP"),
+            ("output", "Output"),
+            ("trigger", "Trigger"),
+            ("status", "System"),
+            ("remote", "Remote"),
+        ]
+        for key, title in fields:
+            box = tk.Frame(self.status_panel, bg=self.colors["panel2"], highlightbackground=self.colors["line"], highlightthickness=1)
+            tk.Label(box, text=title, bg=self.colors["panel2"], fg=self.colors["muted"], font=("Segoe UI", 8, "bold")).pack(anchor="w", padx=7, pady=(5, 0))
+            val = tk.Label(box, text="-", bg=self.colors["panel2"], fg=self.colors["text"], font=("Segoe UI", 11, "bold"), anchor="w", justify="left", wraplength=220)
+            val.pack(fill="x", padx=7, pady=(0, 6))
+            self.lbls[key] = val
+            self.status_boxes.append((box, key))
+        self.message = tk.Label(self.status_panel, text="Ready", bg=self.colors["info"], fg="#dbeafe", justify="left", anchor="w", wraplength=480, padx=8, pady=7)
+        self.layout_status_boxes(compact=False)
+
+    def build_add_material_panel(self) -> None:
+        self.add_panel = ttk.Frame(self.right, style="Panel.TFrame")
+        self.add_panel.grid(row=1, column=0, sticky="ew", pady=(0, 8))
+        self.add_panel.columnconfigure(0, weight=1)
+        ttk.Label(self.add_panel, text="Add Material", style="Header.TLabel").grid(row=0, column=0, columnspan=2, sticky="w", padx=10, pady=8)
+        self.new_name = ttk.Entry(self.add_panel)
+        self.new_name.grid(row=1, column=0, sticky="ew", padx=(10, 5), pady=(0, 10))
+        ttk.Button(self.add_panel, text="Add", command=self.add_material).grid(row=1, column=1, sticky="ew", padx=(5, 10), pady=(0, 10))
+
+    def build_reference_panel(self) -> None:
+        self.ref_panel = ttk.Frame(self.right, style="Panel.TFrame")
+        self.ref_panel.grid(row=2, column=0, sticky="ew", pady=(0, 8))
+        self.ref_panel.columnconfigure((0, 1, 2), weight=1)
+        ttk.Label(self.ref_panel, text="Reference Tools", style="Header.TLabel").grid(row=0, column=0, columnspan=3, sticky="w", padx=10, pady=8)
+        ttk.Button(self.ref_panel, text="Capture Ref", command=self.capture_ref).grid(row=1, column=0, sticky="ew",
+                                                                                      padx=(10, 4), pady=(0, 10))
+        ttk.Button(self.ref_panel, text="Upload Ref", command=self.upload_ref).grid(row=1, column=1, sticky="ew",
+                                                                                    padx=4, pady=(0, 10))
+        ttk.Button(self.ref_panel, text="Open Folder", command=self.open_material_folder).grid(row=1, column=2,
+                                                                                               sticky="ew",
+                                                                                               padx=(4, 10),
+                                                                                               pady=(0, 10))
+
+    def build_material_list_panel(self) -> None:
+        self.list_panel = ttk.Frame(self.right, style="Panel.TFrame")
+        self.list_panel.grid(row=3, column=0, sticky="nsew")
+        self.list_panel.rowconfigure(1, weight=1)
+        self.list_panel.columnconfigure(0, weight=1)
+        ttk.Label(self.list_panel, text="Materials", style="Header.TLabel").grid(row=0, column=0, sticky="w", padx=10,
+                                                                                 pady=8)
+
+        self.listbox = tk.Listbox(
+            self.list_panel,
+            bg=self.colors["list_bg"],
+            fg=self.colors["text"],
+            selectbackground=self.colors["select_bg"],
+            selectforeground=self.colors["select_text"],
+            highlightbackground=self.colors["line"],
+            highlightcolor=self.colors["line"],
+            font=("Segoe UI", 10),
+            activestyle="none",
+            relief="flat",
+            height=9,
+        )
+        self.listbox.grid(row=1, column=0, sticky="nsew", padx=10, pady=(0, 8))
+        self.listbox.bind("<<ListboxSelect>>", lambda _event: self.update_preview())
+
+        self.preview_frame = tk.Frame(
+            self.list_panel,
+            bg=self.colors["list_bg"],
+            highlightbackground=self.colors["line"],
+            highlightthickness=1,
+            height=210,
+        )
+        self.preview_frame.grid(row=2, column=0, sticky="ew", padx=10, pady=(0, 10))
+        self.preview_frame.grid_propagate(False)
+
+        self.preview = tk.Label(
+            self.preview_frame,
+            bg=self.colors["list_bg"],
+            fg=self.colors["muted"],
+            text="Select material",
+            font=("Segoe UI", 10, "bold"),
+            compound="top",
+        )
+        self.preview.pack(fill="both", expand=True, padx=6, pady=6)
+
+    def layout_action_buttons(self, compact: bool) -> None:
+        for child in self.action_buttons:
+            child.grid_forget()
+        for col in range(4):
+            self.buttons.columnconfigure(col, weight=0)
+        if compact:
+            for col in range(2):
+                self.buttons.columnconfigure(col, weight=1)
+            for index, button in enumerate(self.action_buttons):
+                button.grid(row=index // 2, column=index % 2, sticky="ew", padx=3, pady=3)
+        else:
+            for col in range(4):
+                self.buttons.columnconfigure(col, weight=1)
+            for index, button in enumerate(self.action_buttons):
+                button.grid(row=0, column=index, sticky="ew", padx=3, pady=3)
+
+    def layout_status_boxes(self, compact: bool) -> None:
+        for box, _key in self.status_boxes:
+            box.grid_forget()
+        columns = 1 if compact else 2
+        for index, (box, _key) in enumerate(self.status_boxes):
+            box.grid(row=1 + index // columns, column=index % columns, sticky="ew", padx=6, pady=5)
+        message_row = 1 + ((len(self.status_boxes) + columns - 1) // columns)
+        self.message.grid(row=message_row, column=0, columnspan=columns, sticky="ew", padx=6, pady=8)
+
+    def on_resize(self, event) -> None:
+        if event.widget is not self.root:
+            return
+        width = max(1, self.root.winfo_width())
+        if abs(width - self.last_ui_width) < 15:
+            return
+        self.last_ui_width = width
+        compact = width < DESKTOP_BREAKPOINT
+        if compact != self.is_compact:
+            self.is_compact = compact
+            self.apply_layout_mode(compact)
+        self.info_label.configure(wraplength=max(250, width - 80))
+        status_wrap = max(170, int(max(1, self.right.winfo_width()) / (1 if compact else 2)) - 50)
+        for label in self.lbls.values():
+            label.configure(wraplength=status_wrap)
+        self.message.configure(wraplength=max(250, self.right.winfo_width() - 50))
+
+    def apply_layout_mode(self, compact: bool) -> None:
+        self.left.grid_forget()
+        self.right_scroll.grid_forget()
+        for row in range(2):
+            self.body.rowconfigure(row, weight=0)
+        for col in range(2):
+            self.body.columnconfigure(col, weight=0)
+        if compact:
+            self.body.columnconfigure(0, weight=1)
+            self.body.rowconfigure(0, weight=3)
+            self.body.rowconfigure(1, weight=2)
+            self.left.grid(row=0, column=0, sticky="nsew", padx=0, pady=(0, 10))
+            self.right_scroll.grid(row=1, column=0, sticky="nsew")
+            self.layout_action_buttons(compact=True)
+            self.layout_status_boxes(compact=True)
+        else:
+            self.body.rowconfigure(0, weight=1)
+            self.body.columnconfigure(0, weight=3)
+            self.body.columnconfigure(1, weight=2)
+            self.left.grid(row=0, column=0, sticky="nsew", padx=(0, 10), pady=0)
+            self.right_scroll.grid(row=0, column=1, sticky="nsew")
+            self.layout_action_buttons(compact=False)
+            self.layout_status_boxes(compact=False)
+
+    def selected_material(self) -> Optional[Material]:
+        sel = self.listbox.curselection()
+        if not sel:
+            return None
+        meta = refs.metadata()
+        index = sel[0]
+        if index >= len(meta):
+            return None
+        return registry.by_slug(str(meta[index]["slug"]))
+
+    def refresh_materials(self, force: bool = False) -> None:
+        meta = refs.metadata()
+        sig = "|".join(f"{m['slug']}:{m['count']}:{m['mtime']}" for m in meta)
+        if not force and sig == self.signature:
+            return
+        self.signature = sig
+        old_slug = self.selected_slug
+        self.listbox.delete(0, tk.END)
+        selected = 0
+        for index, material in enumerate(meta):
+            self.listbox.insert(tk.END, f"{material['name']}    [{material['count']}]")
+            if material["slug"] == old_slug:
+                selected = index
+        if meta:
+            self.listbox.selection_set(selected)
+            self.selected_slug = str(meta[selected]["slug"])
+            self.update_preview()
+
+    def update_preview(self) -> None:
+        material = self.selected_material()
+        if not material:
+            self.preview_photo = None
+            self.preview.configure(image="", text="Select material")
+            return
+        self.selected_slug = material.slug
+        files = sorted(
+            [p for p in material.folder.iterdir() if p.is_file() and p.suffix.lower() in IMG_EXT],
+            key=lambda p: p.stat().st_mtime,
+            reverse=True,
+        ) if material.folder.exists() else []
+        if not files:
+            self.preview_photo = None
+            self.preview.configure(image="", text=f"{material.name}\n\nNo reference image available.\nClick Capture Ref or Upload Ref.")
+            return
+        latest_file = files[0]
+        img = cv2.imread(str(latest_file))
+        if img is None:
+            self.preview_photo = None
+            self.preview.configure(image="", text=f"{material.name}\n\nCould not load reference image:\n{latest_file.name}")
+            return
+        w = max(220, self.preview_frame.winfo_width() - 20)
+        h = max(120, self.preview_frame.winfo_height() - 45)
+        photo = frame_to_photo(img, w, max_height=h)
+        if photo:
+            self.preview_photo = photo
+            self.preview.configure(image=self.preview_photo, text=f"{material.name}\n{latest_file.name}", compound="top")
+        else:
+            self.preview_photo = None
+            self.preview.configure(image="", text=f"{material.name}\n\nPreview failed")
+
+    def update_status(self) -> None:
+        data = state.get()
+        for key, label in self.lbls.items():
+            value = data.get(key, "-")
+            if isinstance(value, float):
+                value = f"{value:.3f}"
+            label.configure(text=str(value))
+        error = str(data.get("error", ""))
+        self.message.configure(
+            text=error if error else "Ready",
+            fg=self.colors["error"] if error else self.colors["info_text"],
+        )
+        self.refresh_materials()
+        self.root.after(500, self.update_status)
+
+    def update_video(self) -> None:
+        frame = camera.latest()
+        if frame is not None:
+            width = max(320, self.video.winfo_width() - 6)
+            height = max(240, self.video.winfo_height() - 6)
+            photo = frame_to_photo(frame, width, max_height=height)
+            if photo:
+                self.video_photo = photo
+                self.video.configure(image=self.video_photo, text="")
+        else:
+            self.video.configure(image="", text="Waiting for camera...")
+        delay = int(max(50, 1000 / max(1.0, LIVE_FPS)))
+        self.root.after(delay, self.update_video)
+
+    def reload_refs(self) -> None:
+        refs.reload()
+        self.signature = ""
+        self.refresh_materials(force=True)
+        self.message.configure(text="References reloaded", fg=self.colors["success"])
+
+    def add_material(self) -> None:
+        name = self.new_name.get().strip()
+        if not name:
+            name = simpledialog.askstring("Add Material", "Material name:", parent=self.root) or ""
+        name = name.strip()
+        if not name:
+            return
+        try:
+            material = registry.add(name)
+            refs.reload()
+            self.new_name.delete(0, tk.END)
+            self.selected_slug = material.slug
+            self.signature = ""
+            self.refresh_materials(force=True)
+        except Exception as exc:
+            messagebox.showerror("Add failed", str(exc))
+
+    def capture_ref(self) -> None:
+        material = self.selected_material()
+        if not material:
+            messagebox.showinfo("Select material", "Select a material first.")
+            return
+
+        if self.reference_capture_busy:
+            state.set(error="Reference capture already running")
+            return
+
+        self.reference_capture_busy = True
+        state.set(status=f"Capturing reference for {material.name}", error="")
+
+        def finish() -> None:
+            self.reference_capture_busy = False
+            self.signature = ""
+            self.refresh_materials(True)
+
+        def task() -> None:
+            try:
+                frame = camera.capture()
+                if frame is None:
+                    state.set(error="No frame captured for reference")
+                    return
+                saved = save_img(frame, material.folder, material.name)
+                log.info("Reference captured: %s", saved)
+                refs.reload()
+                state.set(status="Reference captured", error="")
+            except Exception as exc:
+                state.set(error=f"Reference capture failed: {exc}")
+                log.error("Reference capture failed: %s", exc)
+                log.error(traceback.format_exc())
+            finally:
+                self.root.after(0, finish)
+
+        threading.Thread(target=task, daemon=True).start()
+
+    def upload_ref(self) -> None:
+        material = self.selected_material()
+        if not material:
+            messagebox.showinfo("Select material", "Select a material first.")
+            return
+        file = filedialog.askopenfilename(
+            title=f"Reference for {material.name}",
+            filetypes=[("Images", "*.jpg *.jpeg *.png *.bmp *.webp"), ("All files", "*.*")],
+        )
+        if not file:
+            return
+        src = Path(file)
+        if src.suffix.lower() not in IMG_EXT:
+            messagebox.showerror("Invalid", "Use JPG, JPEG, PNG, BMP, or WEBP")
+            return
+        img = cv2.imread(str(src))
+        if img is None:
+            messagebox.showerror("Invalid", "Could not read image")
+            return
+        saved = save_img(img, material.folder, material.name)
+        log.info("Reference uploaded: %s", saved)
+        refs.reload()
+        self.signature = ""
+        self.refresh_materials(True)
+
+    def open_material_folder(self) -> None:
+        material = self.selected_material()
+        if material:
+            material.folder.mkdir(parents=True, exist_ok=True)
+            open_path(material.folder)
+
+    def test_sftp(self) -> None:
+        def task() -> None:
+            path = TMP_DIR / f"sftp_test_{now_name()}.txt"
+            path.write_text(f"SFTP test {now_display()}\n", encoding="utf-8")
+            upload_sftp(path, material="TEST")
+        threading.Thread(target=task, daemon=True).start()
+
+    def test_output(self) -> None:
+        threading.Thread(target=lambda: send_output("TEST", 0.0, 0.0, "Manual Test"), daemon=True).start()
+
+    def open_last_capture(self) -> None:
+        path = str(state.get().get("last_capture", ""))
+        if path and Path(path).exists():
+            open_path(Path(path))
+        else:
+            messagebox.showinfo("Last capture", "No captured image yet.")
+
+    def close(self) -> None:
+        camera.stop()
+        self.root.destroy()
+
+
+# =============================================================================
+# STARTUP
+# =============================================================================
+
+def banner() -> None:
+    log.info("============================================================")
+    log.info("Material AI Standalone Desktop App")
+    log.info("Config      : %s", CONFIG_PATH)
+    log.info("Project cfg : %s", PROJECT_CONFIG_PATH)
+    log.info("Default cfg : %s", DEFAULT_CONFIG_PATH)
+    log.info("Data        : %s", APP_DIR)
+    log.info("Capture Dir : %s", CAPTURE_DIR)
+    log.info("Reference   : %s", REFERENCE_DIR)
+    log.info("Model       : %s", MODEL_PATH)
+    log.info("Labels      : %s", LABELS_PATH)
+    log.info("Camera      : %s", CAMERA_SOURCE)
+    log.info("SFTP        : enabled=%s paramiko=%s %s@%s:%s -> %s", SFTP_ENABLED, PARAMIKO_AVAILABLE, SFTP_USERNAME, SFTP_HOST, SFTP_PORT, SFTP_REMOTE_DIR)
+    log.info("SFTP folders: organize_by_material=%s create_folders=%s", SFTP_ORGANIZE_BY_MATERIAL, SFTP_CREATE_REMOTE_FOLDERS)
+    log.info("Input COM   : enabled=%s %s @ %s command=%r", INPUT_ENABLED, INPUT_PORT, INPUT_BAUD, INPUT_COMMAND)
+    log.info("Output COM  : enabled=%s %s @ %s", OUTPUT_ENABLED, OUTPUT_PORT, OUTPUT_BAUD)
+    log.info("Delay       : %.3fs", CAPTURE_DELAY)
+    log.info("AI          : enabled=%s available=%s", AI_ENABLED, classifier.available)
+    log.info("COM ports   : %s", ", ".join(serial_ports()) or "None / pyserial missing")
+    log.info("============================================================")
+
+
+def main() -> None:
+    banner()
+    camera.start()
+    threading.Thread(target=serial_trigger_loop, daemon=True).start()
+    root = tk.Tk()
+    App(root)
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()

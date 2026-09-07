@@ -1,0 +1,281 @@
+/*=============================================================
+ * File   : main.c  (single-file, polarity-safe, RMW-safe, blink)
+ * Target : Nuvoton N76E003AT20 (8051 core)
+ * Func   : Relay ON 5 h / OFF 3 h (loop) -- starts with ON cycle
+ *          P1.1 Green = BLINKS while relay ON
+ *          P1.0 Red   = BLINKS while relay OFF
+ *          P1.2 Blue  = power LED (always ON)
+ * Boot   : Polarity probe: drive P1.3 LOW 2 s (Red), then HIGH 2 s (Green)
+ * Clock  : 16 MHz HIRC, CKDIV=0
+ * Timer  : Timer0 Mode1 (16-bit), 1T source, 1 ms blocking delay
+ * Tool   : Keil C51 / SDCC
+ * Note   : Port-1 writes are RMW-safe via p1_shadow (no P1 reads in expressions)
+ *          Blink helpers accept 32-bit durations (hours-safe).
+ * Change : (1) Removed dependency on _nop_()/inline asm; NOP() is a no-op.
+ *          (2) Reassert relay state every blink slice to prevent OFF-phase glitches.
+ =============================================================/
+
+#include <intrins.h>   /* harmless; not relying on any intrinsic now */
+
+/* ---------- NOP wrapper (portable no-op) ---------- */
+#ifndef NOP
+  #define NOP()  do{}while(0)
+#endif
+
+/* ---------------- SFRs (subset) ---------------- */
+sfr P1     = 0x90;
+sfr TCON   = 0x88;
+sfr TMOD   = 0x89;
+sfr TL0    = 0x8A;
+sfr TH0    = 0x8C;
+sfr CKCON  = 0x8E;
+sfr CKDIV  = 0x95;
+sfr P1M1   = 0xB3;
+sfr P1M2   = 0xB4;
+sfr WDCON  = 0xC0;
+
+/* TCON bits */
+sbit TF0 = TCON^5;
+sbit TR0 = TCON^4;
+
+/* ---------------- Pins ---------------- */
+#define LED_RED_P1_0      0   /* OFF indicator LED (Red)   */
+#define LED_GREEN_P1_1    1   /* ON  indicator LED (Green) */
+#define LED_BLUE_P1_2     2   /* Power LED (Blue)          */
+#define RELAY_P1_3        3   /* Transistor drive to relay */
+
+/* ---------------- Configuration ----------------
+ * For BC847 NPN low-side: base HIGH energizes the relay.
+ * ------------------------------------------------*/
+#define RELAY_ON_LEVEL      1   /* 1 => P1.3 HIGH = ON, 0 => P1.3 LOW = ON */
+#define LED_ACTIVE_LOW      0   /* 0: pin=1 turns LED ON ; 1: pin=0 turns LED ON */
+
+/* ---------------- Blink timing (ms) ----------------
+ * BLINK_PERIOD_MS: full period of blink (ON+OFF). 500 => 2 Hz blinking.
+ * ---------------------------------------------------*/
+#define BLINK_PERIOD_MS     500U
+#define BLINK_ON_MS         (BLINK_PERIOD_MS/2)
+#define BLINK_OFF_MS        (BLINK_PERIOD_MS - BLINK_ON_MS)
+
+/* ---------------- Long-time constants ----------------
+ * Hours expressed in milliseconds (32-bit).
+ * ---------------------------------------------------*/
+#define HOUR_MS             (3600000UL)
+#define ON_PHASE_MS         (5UL * HOUR_MS)  /* 5 hours */
+#define OFF_PHASE_MS        (3UL * HOUR_MS)  /* 3 hours */
+
+/* Masks */
+#define LED_R_MASK   ((unsigned char)(1U<<LED_RED_P1_0))
+#define LED_G_MASK   ((unsigned char)(1U<<LED_GREEN_P1_1))
+#define LED_B_MASK   ((unsigned char)(1U<<LED_BLUE_P1_2))
+#define RELAY_MASK   ((unsigned char)(1U<<RELAY_P1_3))
+#define LED_RG_MASK  ((unsigned char)(LED_R_MASK|LED_G_MASK))
+
+/* ---------------- Port-1 RMW-safe shadow ----------------
+ * NEVER read P1 inside expressions; modify p1_shadow and then commit.
+ * --------------------------------------------------------*/
+static unsigned char p1_shadow;
+#define P1_COMMIT()   do{ P1 = p1_shadow; }while(0)
+
+/* ---------------- Helpers ---------------- */
+#define set_TR0()        do{ TR0 = 1; }while(0)
+#define clr_TR0()        do{ TR0 = 0; }while(0)
+#define clr_TF0()        do{ TF0 = 0; }while(0)
+
+#define P1x_PushPull(pin)  do{ \
+    P1M1 &= (unsigned char)~(1U<<(pin)); \
+    P1M2 |= (unsigned char) (1U<<(pin)); \
+  }while(0)
+
+/* LED control using p1_shadow (RMW-safe) */
+#if LED_ACTIVE_LOW
+  #define LEDS_RG_OFF()      do{ p1_shadow |=  LED_RG_MASK; P1_COMMIT(); }while(0)                 /* OFF=1 */
+  #define LED_RED_ON()       do{ p1_shadow |=  LED_RG_MASK; p1_shadow &= (unsigned char)~LED_R_MASK; P1_COMMIT(); }while(0)
+  #define LED_GREEN_ON()     do{ p1_shadow |=  LED_RG_MASK; p1_shadow &= (unsigned char)~LED_G_MASK; P1_COMMIT(); }while(0)
+  #define LED_BLUE_ON()      do{ p1_shadow &= (unsigned char)~LED_B_MASK; P1_COMMIT(); }while(0)
+  #define LED_BLUE_OFF()     do{ p1_shadow |=  LED_B_MASK; P1_COMMIT(); }while(0)
+  #define LED_RED_OFF()      do{ p1_shadow |=  LED_R_MASK; P1_COMMIT(); }while(0)
+  #define LED_GREEN_OFF()    do{ p1_shadow |=  LED_G_MASK; P1_COMMIT(); }while(0)
+#else
+  #define LEDS_RG_OFF()      do{ p1_shadow &= (unsigned char)~LED_RG_MASK; P1_COMMIT(); }while(0)  /* OFF=0 */
+  #define LED_RED_ON()       do{ p1_shadow &= (unsigned char)~LED_RG_MASK; p1_shadow |= LED_R_MASK; P1_COMMIT(); }while(0)
+  #define LED_GREEN_ON()     do{ p1_shadow &= (unsigned char)~LED_RG_MASK; p1_shadow |= LED_G_MASK; P1_COMMIT(); }while(0)
+  #define LED_BLUE_ON()      do{ p1_shadow |=  LED_B_MASK; P1_COMMIT(); }while(0)
+  #define LED_BLUE_OFF()     do{ p1_shadow &= (unsigned char)~LED_B_MASK; P1_COMMIT(); }while(0)
+  #define LED_RED_OFF()      do{ p1_shadow &= (unsigned char)~LED_R_MASK; P1_COMMIT(); }while(0)
+  #define LED_GREEN_OFF()    do{ p1_shadow &= (unsigned char)~LED_G_MASK; P1_COMMIT(); }while(0)
+#endif
+
+/* Relay drive using shadow (RMW-safe) */
+static void relay_drive_level(unsigned char level)
+{
+    if (level) p1_shadow |=  RELAY_MASK;
+    else       p1_shadow &= (unsigned char)~RELAY_MASK;
+    P1_COMMIT();
+}
+
+#define RELAY_ON()   relay_drive_level((unsigned char)RELAY_ON_LEVEL)
+#define RELAY_OFF()  relay_drive_level((unsigned char)!RELAY_ON_LEVEL)
+
+/* ---------------- Prototypes ---------------- */
+static void clock_init_16mhz(void);
+static void timer0_init_mode1_1T(void);
+static void delay_ms(unsigned int ms);           /* 1..65535 ms chunk delay */
+static void gpio_init(void);
+
+/* NOTE: 32-bit durations for multi-hour cycles */
+static void blink_green_for_ms(unsigned long total_ms);
+static void blink_red_for_ms(unsigned long total_ms);
+
+/* ---------------- Blink helpers (blocking, hardened) ----------------
+ * Re-assert the intended relay state on every slice to prevent any
+ * transient corruption of the relay bit in p1_shadow.
+ */
+static void blink_green_for_ms(unsigned long total_ms)
+{
+    unsigned long remaining = total_ms;
+    while (remaining)
+    {
+        /* Ensure relay is ON for entire green cycle */
+        RELAY_ON();
+
+        /* ON slice */
+        LEDS_RG_OFF();      /* ensure opposite LED is off */
+        LED_GREEN_ON();
+        if (remaining <= (unsigned long)BLINK_ON_MS) { delay_ms((unsigned int)remaining); return; }
+        delay_ms(BLINK_ON_MS);
+        remaining -= (unsigned long)BLINK_ON_MS;
+
+        /* Ensure relay stays ON before next commit */
+        RELAY_ON();
+
+        /* OFF slice for the green LED (relay remains ON) */
+        LED_GREEN_OFF();
+        if (remaining <= (unsigned long)BLINK_OFF_MS) { delay_ms((unsigned int)remaining); return; }
+        delay_ms(BLINK_OFF_MS);
+        remaining -= (unsigned long)BLINK_OFF_MS;
+    }
+}
+
+static void blink_red_for_ms(unsigned long total_ms)
+{
+    unsigned long remaining = total_ms;
+    while (remaining)
+    {
+        /* Ensure relay is OFF for entire red cycle */
+        RELAY_OFF();
+
+        /* ON slice (RED on) */
+        LEDS_RG_OFF();      /* ensure opposite LED is off */
+        LED_RED_ON();
+        if (remaining <= (unsigned long)BLINK_ON_MS) { delay_ms((unsigned int)remaining); return; }
+        delay_ms(BLINK_ON_MS);
+        remaining -= (unsigned long)BLINK_ON_MS;
+
+        /* Ensure relay stays OFF before next commit */
+        RELAY_OFF();
+
+        /* OFF slice for the red LED (relay remains OFF) */
+        LED_RED_OFF();
+        if (remaining <= (unsigned long)BLINK_OFF_MS) { delay_ms((unsigned int)remaining); return; }
+        delay_ms(BLINK_OFF_MS);
+        remaining -= (unsigned long)BLINK_OFF_MS;
+    }
+}
+
+/* ---------------- Implementation ---------------- */
+
+void main(void)
+{
+    clock_init_16mhz();
+    gpio_init();
+    timer0_init_mode1_1T();
+
+    /* Blue power LED ON solid from boot */
+    LED_BLUE_ON();
+
+    /* ===== Polarity probe: first LOW (2 s, Red), then HIGH (2 s, Green) ===== */
+    relay_drive_level(0);  /* drive LOW */
+    LEDS_RG_OFF(); LED_RED_ON();
+    delay_ms(2000);
+
+    relay_drive_level(1);  /* drive HIGH */
+    LEDS_RG_OFF(); LED_GREEN_ON();
+    delay_ms(2000);
+    /* ===== End probe ===== */
+
+    for (;;)
+    {
+        /* ON phase 5 h: relay ON, GREEN blinks */
+        RELAY_ON();
+        blink_green_for_ms(ON_PHASE_MS);
+
+        /* OFF phase 3 h: relay OFF, RED blinks */
+        RELAY_OFF();
+        blink_red_for_ms(OFF_PHASE_MS);
+    }
+}
+
+/* Force Fsys = 16 MHz (CKDIV=0). */
+static void clock_init_16mhz(void)
+{
+    /* Disable WDT (bit 6 is WDTEN on N76E003) */
+    WDCON &= (unsigned char)~(1U<<6);
+
+    /* CKDIV is not TA-protected on N76E003; 0 => divide-by-1 */
+    CKDIV = 0x00;
+
+    /* tiny settle (NOPs removed; not required for this MCU) */
+    NOP(); NOP(); NOP(); NOP();
+}
+
+/* Timer0: Mode1 (16-bit), 1T, 1.000 ms tick @ 16 MHz (TH0/TL0 = 0xC1/0x80) */
+static void timer0_init_mode1_1T(void)
+{
+    clr_TR0();
+    TMOD &= 0xF0;
+    TMOD |= 0x01;        /* mode 1 (16-bit) */
+    CKCON &= (unsigned char)~(1U<<3);
+    CKCON |=  (unsigned char)(1U<<3);   /* T0M=1 => 1T */
+    clr_TF0();
+}
+
+/* Blocking ms delay using Timer0 overflow (1T mode)
+ * Accepts up to 65535 ms per call; multi-hour waits are
+ * implemented by calling this repeatedly inside the blink helpers.
+ */
+static void delay_ms(unsigned int ms)
+{
+    while (ms--)
+    {
+        TH0 = 0xC1; TL0 = 0x80;   /* preload for 1.000 ms */
+        clr_TF0(); set_TR0();
+        while (!TF0) { /* wait */ }
+        clr_TR0(); clr_TF0();
+    }
+}
+
+/* Glitch-free GPIO init: write safe states first, then push-pull */
+static void gpio_init(void)
+{
+    /* Initialize shadow with current port latch (best-effort) */
+    p1_shadow = P1;
+
+    /* Safe states before mode change */
+    relay_drive_level(0);
+    relay_drive_level(1);               /* touch both to discharge coupling */
+    p1_shadow |=  LED_RG_MASK;          /* R/G OFF for now */
+    p1_shadow &= (unsigned char)~LED_B_MASK;  /* Blue OFF for now */
+    P1_COMMIT();
+
+    /* Configure as push-pull outputs */
+    P1x_PushPull(LED_RED_P1_0);
+    P1x_PushPull(LED_GREEN_P1_1);
+    P1x_PushPull(LED_BLUE_P1_2);
+    P1x_PushPull(RELAY_P1_3);
+
+    /* Reassert safe state explicitly */
+    LEDS_RG_OFF();
+    LED_BLUE_OFF();
+    RELAY_OFF();                        /* OFF according to RELAY_ON_LEVEL */
+}

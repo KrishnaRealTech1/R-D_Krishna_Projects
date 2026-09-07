@@ -1,0 +1,17 @@
+src/RfidVehicleAccess.App/App.xaml.cs
+src/RfidVehicleAccess.App/Data/TripRepository.cs
+src/RfidVehicleAccess.App/MainWindow.xaml
+src/RfidVehicleAccess.App/RfidVehicleAccess.App.csproj
+src/RfidVehicleAccess.App/Services/ServerConnectivityWorker.cs
+src/RfidVehicleAccess.App/Services/ServerSyncWorker.cs
+src/RfidVehicleAccess.App/Services/SystemEventHub.cs
+src/RfidVehicleAccess.App/Services/TripSyncCoordinator.cs
+src/RfidVehicleAccess.App/StartupLoadingWindow.xaml
+src/RfidVehicleAccess.App/StartupLoadingWindow.xaml.cs
+src/RfidVehicleAccess.App/ViewModels/MainViewModel.cs
+README.md
+CHANGES_v0.1.42.md
+TESTING_v0.1.42_SERVER_STATUS_PENDING_CLEAR_STARTUP_LOADING.md
+VALIDATION_RESULT_v0.1.42.txt
+docs/RealTech_STP_Simple_MQTT_SFTP_Guide_v0.1.42.docx
+docs/RealTech_STP_Simple_MQTT_SFTP_Guide_v0.1.42.pdf

@@ -1,0 +1,7 @@
+src/RfidVehicleAccess.App/Services/AppOptions.cs
+src/RfidVehicleAccess.App/Services/ImageUploadService.cs
+src/RfidVehicleAccess.App/ServerPanelWindow.xaml.cs
+src/RfidVehicleAccess.App/appsettings.json
+CHANGES_v1.0_FTPS_CERTIFICATE_VALIDATION.md
+TESTING_v1.0_FTPS_CERTIFICATE_VALIDATION.md
+MODIFIED_FILES_v1.0_FTPS_CERTIFICATE_VALIDATION.txt
