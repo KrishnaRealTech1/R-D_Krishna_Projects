@@ -1,0 +1,1967 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Concept.Components</name>
+    </assembly>
+    <members>
+        <member name="T:Concept.Components.ConceptComponentController">
+            <summary>
+            Class ConceptComponentController
+            </summary>
+        </member>
+        <member name="E:Concept.Components.ConceptComponentController.OnError">
+            <summary>
+            Occurs when [on error].
+            </summary>
+            <remarks>
+            This EventHandler is called by a dedicated thread, watch out for shared variables or view accessibility!
+            </remarks>
+        </member>
+        <member name="T:Concept.Components.EventArgsString">
+            <summary>
+            Class EventArgsString
+            </summary>
+        </member>
+        <member name="M:Concept.Components.EventArgsString.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.EventArgsString"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="P:Concept.Components.EventArgsString.Message">
+            <summary>
+            Gets the message.
+            </summary>
+            <value>The message.</value>
+        </member>
+        <member name="T:Concept.Components.IoConfiguration">
+            <summary>
+            Class IoConfiguration
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoConfiguration.IoTechnologies">
+            <summary>
+            Gets or sets the io technologies.
+            </summary>
+            <value>The io technologies.</value>
+        </member>
+        <member name="P:Concept.Components.IoConfiguration.IoMappingItems">
+            <summary>
+            Gets or sets the io mapping items.
+            </summary>
+            <value>The io mapping items.</value>
+        </member>
+        <member name="T:Concept.Components.IoTechnologies">
+            <summary>
+            Class IoTechnologies
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMapping">
+            <summary>
+            The base class for Io Mapping
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingCyclic">
+            <summary>
+            The base class for cyclic Io mapping
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoMappingCyclic.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+            <value>The address.</value>
+        </member>
+        <member name="T:Concept.Components.IoMappingAcyclic">
+            <summary>
+            The base class for acyclic Io mapping
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoMappingAcyclic.VariablePath">
+            <summary>
+            Gets or sets the variable path.
+            </summary>
+            <value>The variable path.</value>
+        </member>
+        <member name="P:Concept.Components.IoMappingAcyclic.NodeAddress">
+            <summary>
+            Gets or sets the node address.
+            </summary>
+            <value>The node address.</value>
+        </member>
+        <member name="T:Concept.Components.IoMappingDefault`1">
+            <summary>
+            The default class for Io Mapping
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoMappingDefaultInput`1">
+            <summary>
+            The default class for input Mapping
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoMappingDefaultOuput`1">
+            <summary>
+            The default class for output Mapping
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoMappingInputCyclic">
+            <summary>
+            Class IoMappingInputCyclic
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingInputAcyclic">
+            <summary>
+            Class IoMappingInputAcyclic
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicInput`1">
+            <summary>
+            Class IoMappingChannelCyclicInput
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicInput`1">
+            <summary>
+            Class IoMappingChannelAcyclicInput
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.InputOutputCycleSync">
+            <summary>
+            Class InputOutputCycleSync
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicInputDigital">
+            <summary>
+            Class IoMappingChannelCyclicInputDigital
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoMappingChannelCyclicInputDigital.Bit">
+            <summary>
+            Gets or sets the bit.
+            </summary>
+            <value>The bit.</value>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicInputDigital">
+            <summary>
+            Class IoMappingChannelAcyclicInputDigital
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoMappingChannelAcyclicInputDigital.Bit">
+            <summary>
+            Gets or sets the bit.
+            </summary>
+            <value>The bit.</value>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicInputInt8">
+            <summary>
+            Class IoMappingChannelCyclicInputInt8
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicInputInt8">
+            <summary>
+            Class IoMappingChannelAcyclicInputInt8
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicInputInt16">
+            <summary>
+            Class IoMappingChannelCyclicInputInt16
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicInputInt16">
+            <summary>
+            Class IoMappingChannelAcyclicInputInt16
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicInputInt32">
+            <summary>
+            Class IoMappingChannelCyclicInputInt32
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicInputInt32">
+            <summary>
+            Class IoMappingChannelAcyclicInputInt32
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingItem">
+            <summary>
+            Class IoMappingItem
+            </summary>
+        </member>
+        <member name="M:Concept.Components.IoMappingItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.IoMappingItem"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoMappingItem.IoFactoryLink">
+            <summary>
+            Gets or sets the io factory link.
+            </summary>
+            <value>The <see cref="T:Concept.Components.BaseIoTechnologyFactory">io factory</see> linked.</value>
+        </member>
+        <member name="P:Concept.Components.IoMappingItem.IoMappingComponent">
+            <summary>
+            Gets or sets the io mapping component.
+            </summary>
+            <value>The <see cref="T:Concept.Components.IoMapping">io mapping</see> component.</value>
+        </member>
+        <member name="M:Concept.Components.IoMappingItem.ReadFrom(Concept.Utils.IDataStoreNode,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector)">
+            <summary>
+            Load a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> from a node.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="factories">The list of factories to use for the desirialisation of the ConceptElement.</param>
+            <param name="messageCollector">The message collector that collects error occuring during the process.</param>
+        </member>
+        <member name="M:Concept.Components.IoMappingItem.WriteTo(Concept.Utils.IDataStoreNode)">
+            <summary>
+            Saves a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> to a node.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="T:Concept.Components.IoMappingItems">
+            <summary>
+            Class IoMappingItems
+            </summary>
+        </member>
+        <member name="M:Concept.Components.IoMappingItems.WriteTo(Concept.Utils.IDataStoreNode)">
+            <summary>
+            Saves a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> to a node.
+            </summary>
+            <param name="node">The node where the data will be saved.</param>
+        </member>
+        <member name="M:Concept.Components.IoMappingItems.ReadFrom(Concept.Utils.IDataStoreNode,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector)">
+            <summary>
+            Load a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> from a node.
+            </summary>
+            <param name="node">The node containing the data of the ConceptElement.</param>
+            <param name="factories">The list of factories to use for the desirialisation of the ConceptElement.</param>
+            <param name="messageCollector">The message collector that collects error occuring during the process.</param>
+        </member>
+        <member name="M:Concept.Components.IoMappingItems.ReadFromWithoutClear(Concept.Utils.IDataStoreNode,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads from without clear.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="factories">The factories.</param>
+            <param name="messageCollector">The message collector.</param>
+        </member>
+        <member name="T:Concept.Components.IoMappingOutputCyclic">
+            <summary>
+            Class IoMappingOutputCyclic
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingOutputAcyclic">
+            <summary>
+            Class IoMappingOutputAcyclic
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicOutput`1">
+            <summary>
+            Class IoMappingChannelCyclicOutput
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicOutput`1">
+            <summary>
+            Class IoMappingChannelAcyclicOutput
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicOutputDigital">
+            <summary>
+            Class IoMappingChannelCyclicOutputDigital
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoMappingChannelCyclicOutputDigital.Bit">
+            <summary>
+            Gets or sets the bit.
+            </summary>
+            <value>The bit.</value>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicOutputDigital">
+            <summary>
+            Class IoMappingChannelAcyclicOutputDigital
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoMappingChannelAcyclicOutputDigital.Bit">
+            <summary>
+            Gets or sets the bit.
+            </summary>
+            <value>The bit.</value>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicOutputInt8">
+            <summary>
+            Class IoMappingChannelCyclicOutputInt8
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicOutputInt8">
+            <summary>
+            Class IoMappingChannelAcyclicOutputInt8
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicOutputInt16">
+            <summary>
+            Class IoMappingChannelCyclicOutputInt16
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicOutputInt16">
+            <summary>
+            Class IoMappingChannelAcyclicOutputInt16
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelCyclicOutputInt32">
+            <summary>
+            Class IoMappingChannelCyclicOutputInt32
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoMappingChannelAcyclicOutputInt32">
+            <summary>
+            Class IoMappingChannelAcyclicOutputInt32
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoTechnology">
+            <summary>
+            The base class for IoTechnology
+            </summary>
+        </member>
+        <member name="T:Concept.Components.IoTechnologyChannel">
+            <summary>
+            Class IoTechnologyChannel
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.CyclicInputDigital">
+            <summary>
+            Gets or sets the cyclic input digital.
+            </summary>
+            <value>The cyclic input digital.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.AcyclicInputDigital">
+            <summary>
+            Gets or sets the acyclic input digital.
+            </summary>
+            <value>The acyclic input digital.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.CyclicInputInt8">
+            <summary>
+            Gets or sets the cyclic input int8.
+            </summary>
+            <value>The cyclic input int8.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.AcyclicInputInt8">
+            <summary>
+            Gets or sets the acyclic input int8.
+            </summary>
+            <value>The acyclic input int8.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.CyclicInputInt16">
+            <summary>
+            Gets or sets the cyclic input int16.
+            </summary>
+            <value>The cyclic input int16.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.AcyclicInputInt16">
+            <summary>
+            Gets or sets the acyclic input int16.
+            </summary>
+            <value>The acyclic input int16.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.CyclicInputInt32">
+            <summary>
+            Gets or sets the cyclic input int32.
+            </summary>
+            <value>The cyclic input int32.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.AcyclicInputInt32">
+            <summary>
+            Gets or sets the acyclic input int32.
+            </summary>
+            <value>The acyclic input int32.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.InputOutputCycleSync">
+            <summary>
+            Gets or sets the input output cycle sync.
+            </summary>
+            <value>The input output cycle sync.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.CyclicOutputDigital">
+            <summary>
+            Gets or sets the cyclic output digital.
+            </summary>
+            <value>The cyclic output digital.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.AcyclicOutputDigital">
+            <summary>
+            Gets or sets the acyclic output digital.
+            </summary>
+            <value>The acyclic output digital.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.CyclicOutputInt8">
+            <summary>
+            Gets or sets the cyclic output int8.
+            </summary>
+            <value>The cyclic output int8.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.AcyclicOutputInt8">
+            <summary>
+            Gets or sets the acyclic output int8.
+            </summary>
+            <value>The acyclic output int8.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.CyclicOutputInt16">
+            <summary>
+            Gets or sets the cyclic output int16.
+            </summary>
+            <value>The cyclic output int16.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.AcyclicOutputInt16">
+            <summary>
+            Gets or sets the acyclic output int16.
+            </summary>
+            <value>The acyclic output int16.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.CyclicOutputInt32">
+            <summary>
+            Gets or sets the cyclic output int32.
+            </summary>
+            <value>The cyclic output int32.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyChannel.AcyclicOutputInt32">
+            <summary>
+            Gets or sets the acyclic output int32.
+            </summary>
+            <value>The acyclic output int32.</value>
+        </member>
+        <member name="T:Concept.Components.BaseIoTechnologyFactory">
+            <summary>
+            Class BaseIoTechnologyFactory
+            </summary>
+        </member>
+        <member name="M:Concept.Components.BaseIoTechnologyFactory.CreateObject">
+            <summary>
+            Creates the object.
+            </summary>
+            <returns>ConceptElement.</returns>
+        </member>
+        <member name="P:Concept.Components.BaseIoTechnologyFactory.IoTechnology">
+            <summary>
+            Shortcut to the parent Io technology.
+            </summary>
+            <value>The io technology.</value>
+        </member>
+        <member name="P:Concept.Components.BaseIoTechnologyFactory.DisplayName">
+            <summary>
+            Gets the display name. This property can be translate with the <see cref="T:Concept.Utils.Intl">Intl</see> mecanism.
+            </summary>
+            <value>The display name.</value>
+            <exception cref="T:System.NotSupportedException">DisplayName cannot be set in BaseIoTechnologyFactory</exception>
+        </member>
+        <member name="T:Concept.Components.IoTechnologyFactory`1">
+            <summary>
+            Class IoTechnologyFactory
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Concept.Components.IoTechnologyFactory`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.IoTechnologyFactory`1"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.IoTechnologyFactory`1.CreateObject">
+            <summary>
+            Creates the object.
+            </summary>
+            <returns>ConceptElement.</returns>
+        </member>
+        <member name="T:Concept.Components.IoTechnologyFactoryEtherCat`1">
+            <summary>
+            Class IoTechnologyFactoryEtherCat
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoTechnologyFactoryNull`1">
+            <summary>
+            Class IoTechnologyFactoryNull
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoTechnologyFactorySimulation`1">
+            <summary>
+            Class IoTechnologyFactorySimulation
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Concept.Components.IoTechnologyNull">
+            <summary>
+            Class IoTechnologyNull which represent a fallback Io technology.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullInputDigital">
+            <summary>
+            Gets or sets the null input digital.
+            </summary>
+            <value>The null input digital.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullInputInt16">
+            <summary>
+            Gets or sets the null input int16.
+            </summary>
+            <value>The null input int16.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullInputInt32">
+            <summary>
+            Gets or sets the null input int32.
+            </summary>
+            <value>The null input int32.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullInputInt64">
+            <summary>
+            Gets or sets the null input int64.
+            </summary>
+            <value>The null input int64.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullOutputDigital">
+            <summary>
+            Gets or sets the null output digital.
+            </summary>
+            <value>The null output digital.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullOutputInt16">
+            <summary>
+            Gets or sets the null output int16.
+            </summary>
+            <value>The null output int16.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullOutputInt32">
+            <summary>
+            Gets or sets the null output int32.
+            </summary>
+            <value>The null output int32.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullOutputInt64">
+            <summary>
+            Gets or sets the null output int64.
+            </summary>
+            <value>The null output int64.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologyNull.NullSync">
+            <summary>
+            Gets or sets the null sync.
+            </summary>
+            <value>The null sync.</value>
+        </member>
+        <member name="T:Concept.Components.IoTechnologySimulation">
+            <summary>
+            Class IoTechnologySimulation
+            </summary>
+        </member>
+        <member name="P:Concept.Components.IoTechnologySimulation.SimulationInputDigital">
+            <summary>
+            Gets or sets the simulation input digital.
+            </summary>
+            <value>The simulation input digital.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologySimulation.SimulationInputInt16">
+            <summary>
+            Gets or sets the simulation input int16.
+            </summary>
+            <value>The simulation input int16.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologySimulation.SimulationInputInt32">
+            <summary>
+            Gets or sets the simulation input int32.
+            </summary>
+            <value>The simulation input int32.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologySimulation.SimulationSync">
+            <summary>
+            Gets or sets the simulation sync.
+            </summary>
+            <value>The simulation sync.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologySimulation.SimulationOutputDigital">
+            <summary>
+            Gets or sets the simulation output digital.
+            </summary>
+            <value>The simulation output digital.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologySimulation.SimulationOutputInt16">
+            <summary>
+            Gets or sets the simulation output int16.
+            </summary>
+            <value>The simulation output int16.</value>
+        </member>
+        <member name="P:Concept.Components.IoTechnologySimulation.SimulationOutputInt32">
+            <summary>
+            Gets or sets the simulation output int32.
+            </summary>
+            <value>The simulation output int32.</value>
+        </member>
+        <member name="T:Concept.Components.InfosClientData">
+            <summary>
+            Class InfosClientData
+            </summary>
+        </member>
+        <member name="P:Concept.Components.InfosClientData.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:Concept.Components.InfosClientData.DisplayName">
+            <summary>
+            Gets the display name. This property can be translate with the <see cref="T:Concept.Utils.Intl">Intl</see> mecanism.
+            </summary>
+            <value>The display name.</value>
+        </member>
+        <member name="T:Concept.Components.LicenseParameterSignedFileSymmetricSha1">
+            <summary>
+            Class LicenseParameterSignedFileSymmetricSha1
+            </summary>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileSymmetricSha1.SignedLicenseFileSymmetricSha1">
+            <summary>
+            Gets or sets the signed license file symmetric sha1.
+            </summary>
+            <value>The signed license file symmetric sha1.</value>
+        </member>
+        <member name="F:Concept.Components.LicenseParameterSignedFileSymmetricSha1.SymmetricKeyPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.LicenseParameterSignedFileSymmetricSha1.SymmetricKey"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileSymmetricSha1.SymmetricKey">
+            <summary>
+            Gets or sets the symmetric key.
+            </summary>
+            <value>The symmetric key.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileSymmetricSha1.License">
+            <summary>
+            Gets the license.
+            </summary>
+            <value>The license.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileSymmetricSha1.SignedLicense">
+            <summary>
+            Gets the signed license.
+            </summary>
+            <value>The signed license.</value>
+        </member>
+        <member name="T:Concept.Components.LicenseParameterSignedFileAsymmetric">
+            <summary>
+            Class LicenseParameterSignedFileAsymmetric
+            </summary>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileAsymmetric.SignedLicenseFileAsymmetric">
+            <summary>
+            Gets or sets the signed license file asymmetric.
+            </summary>
+            <value>The signed license file asymmetric.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileAsymmetric.RsaPublicKeyFilePath">
+            <summary>
+            Gets or sets the RSA public key file path.
+            </summary>
+            <value>The RSA public key file path.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileAsymmetric.RsaPrivateKeyFilePath">
+            <summary>
+            Gets or sets the RSA private key file path.
+            </summary>
+            <value>The RSA private key file path.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileAsymmetric.License">
+            <summary>
+            Gets the license.
+            </summary>
+            <value>The license.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFileAsymmetric.SignedLicense">
+            <summary>
+            Gets the signed license.
+            </summary>
+            <value>The signed license.</value>
+        </member>
+        <member name="T:Concept.Components.LicenseParameterSignedFile">
+            <summary>
+            Class LicenseParameterSignedFile
+            </summary>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFile.SignedLicense">
+            <summary>
+            Gets the signed license.
+            </summary>
+            <value>The signed license.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFile.LicenseCreationDataFilePath">
+            <summary>
+            Gets or sets the license creation data file path.
+            </summary>
+            <value>The license creation data file path.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseParameterSignedFile.Children">
+            <summary>
+            Gets the children.
+            </summary>
+            <remarks>
+            Implementation of interface <see cref="T:Concept.Model.IChildrenView" />
+            </remarks>
+            <value>The children.</value>
+        </member>
+        <member name="T:Concept.Components.BaseLicense">
+            <summary>Represents the license base class which enable to unlock specific <see cref="T:Concept.Components.Feature">features</see>.</summary>
+        </member>
+        <member name="P:Concept.Components.BaseLicense.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="F:Concept.Components.BaseLicense.IsValidThreadSharedPropertyName">
+            <summary>Constant string to manage <see cref="P:Concept.Components.BaseLicense.IsValidThreadShared" /> property name.</summary>
+        </member>
+        <member name="P:Concept.Components.BaseLicense.IsValidThreadShared">
+            <summary>
+            Gets or sets a value indicating whether this instance is valid thread shared.
+            </summary>
+            <remarks> 
+            This Property is modified by a dedicated thread, watch out for shared access or view accessibility!
+            </remarks>
+            <value><c>true</c> if this instance is valid thread shared; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Components.BaseLicense.FailureDescriptionThreadSharedPropertyName">
+            <summary>Constant string to manage <see cref="P:Concept.Components.BaseLicense.FailureDescriptionThreadShared" /> property name.</summary>
+        </member>
+        <member name="P:Concept.Components.BaseLicense.FailureDescriptionThreadShared">
+            <summary>Gets or sets the failure description which is thread shared.</summary>
+            <remarks> 
+            This Property is modified by a dedicated thread, watch out for shared access or view accessibility!
+            </remarks>
+            <value>The failure description thread shared.</value>
+        </member>
+        <member name="P:Concept.Components.BaseLicense.AllowedFeaturesThreadShared">
+            <summary>Gets the allowed features list which is thread shared.</summary>
+            <remarks>This Property is modified by a dedicated thread, watch out for shared access or view accessibility!</remarks>
+            <value>The allowed features lsit.</value>
+        </member>
+        <member name="M:Concept.Components.BaseLicense.Validate">
+            <summary>Verifies if this instance is valid.</summary>
+            <remarks>This Property is modified by a dedicated thread, watch out for shared access or view accessibility!</remarks>
+            <returns>The instance validity.</returns>
+        </member>
+        <member name="E:Concept.Components.BaseLicense.ThreadSharedPropertyChanged">
+            <summary>
+            Provide a shared thread property changed event.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.BaseLicense.DoThreadSharedPropertyChanged(System.String)">
+            <summary>Invokes the event <see cref="E:Concept.Components.BaseLicense.ThreadSharedPropertyChanged">thread shared property changed</see>.</summary>
+            <param name="propertyName">The name of the property that changes.</param>
+        </member>
+        <member name="T:Concept.Components.BaseLicenseKey">
+            <summary>
+            Class BaseLicenseKey
+            </summary>
+        </member>
+        <member name="F:Concept.Components.BaseLicenseKey.KeyPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.BaseLicenseKey.Key"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.BaseLicenseKey.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="T:Concept.Components.BaseLicenseParameter">
+            <summary>
+            Base class BaseLicenseParameter
+            </summary>
+        </member>
+        <member name="P:Concept.Components.BaseLicenseParameter.License">
+            <summary>
+            Gets the license.
+            </summary>
+            <value>The license.</value>
+        </member>
+        <member name="T:Concept.Components.BaseLicenseParameters">
+            <summary>
+            Class BaseLicenseParameters which is a <see cref="T:Concept.Model.ConceptDynamicList" /> of <see cref="T:Concept.Components.BaseLicenseParameter" />
+            </summary>
+        </member>
+        <member name="T:Concept.Components.ConceptLicenseKey">
+            <summary>
+            Class ConceptLicenseKey
+            </summary>
+        </member>
+        <member name="M:Concept.Components.ConceptLicenseKey.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.ConceptLicenseKey"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.ConceptLicenseKey.CompanyNamePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.ConceptLicenseKey.CompanyName"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ConceptLicenseKey.CompanyName">
+            <summary>
+            Gets or sets the name of the company.
+            </summary>
+            <value>The name of the company.</value>
+        </member>
+        <member name="F:Concept.Components.ConceptLicenseKey.UsernamePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.ConceptLicenseKey.Username"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ConceptLicenseKey.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>The username.</value>
+        </member>
+        <member name="P:Concept.Components.ConceptLicenseKey.ApplicationName">
+            <summary>
+            Gets or sets the name of the application.
+            </summary>
+            <value>The name of the application.</value>
+        </member>
+        <member name="P:Concept.Components.ConceptLicenseKey.ProductImage">
+            <summary>
+            Gets or sets the product image.
+            </summary>
+            <value>The product image.</value>
+        </member>
+        <member name="P:Concept.Components.ConceptLicenseKey.ProductUrl">
+            <summary>
+            Gets or sets the product URL.
+            </summary>
+            <value>The product URL.</value>
+        </member>
+        <member name="M:Concept.Components.ConceptLicenseKey.AddFeatureGroup(System.String)">
+            <summary>
+            Adds the feature group.
+            </summary>
+            <param name="groupName">Name of the group.</param>
+            <returns>FeaturesGroup.</returns>
+        </member>
+        <member name="M:Concept.Components.ConceptLicenseKey.AddFeatureGroup(System.String,System.Collections.Generic.IEnumerable{Concept.Components.Feature})">
+            <summary>
+            Adds the feature group.
+            </summary>
+            <param name="groupName">Name of the group.</param>
+            <param name="features">The features.</param>
+            <returns>FeaturesGroup.</returns>
+        </member>
+        <member name="F:Concept.Components.ConceptLicenseKey.FeaturesGroups">
+            <summary>
+            A list of available <see cref="T:Concept.Components.FeaturesGroup"/>.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.FeaturesGroup">
+            <summary>
+            Class FeaturesGroup
+            </summary>
+        </member>
+        <member name="M:Concept.Components.FeaturesGroup.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.FeaturesGroup"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:Concept.Components.FeaturesGroup.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Concept.Components.FeaturesGroup.Features">
+            <summary>
+            Gets the features.
+            </summary>
+            <value>The features.</value>
+        </member>
+        <member name="M:Concept.Components.FeaturesGroup.AddFeature(Concept.Components.Feature)">
+            <summary>
+            Adds the feature.
+            </summary>
+            <param name="feature">The feature.</param>
+            <exception cref="T:Concept.Utils.ConceptException"></exception>
+        </member>
+        <member name="M:Concept.Components.FeaturesGroup.AddNewFeature(System.Enum)">
+            <summary>
+            Adds the new feature.
+            </summary>
+            <param name="featureEnum">The feature enum.</param>
+            <returns>Feature.</returns>
+        </member>
+        <member name="M:Concept.Components.FeaturesGroup.AddNewFeatures(System.Type)">
+            <summary>
+            Adds the new features.
+            </summary>
+            <param name="featuresEnumType">Type of the features enum.</param>
+            <returns>List{Feature}.</returns>
+        </member>
+        <member name="T:Concept.Components.LicenseCreationData">
+            <summary>Represents the necessary data to create a license outside of application.</summary>
+        </member>
+        <member name="P:Concept.Components.LicenseCreationData.LocalInfosClientDatas">
+            <summary>Gets the local infos client datas.</summary>
+            <value>The local infos client datas.</value>
+        </member>
+        <member name="M:Concept.Components.LicenseCreationData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.LicenseCreationData"/> class.
+            </summary>
+            <remarks>
+            Kept for AutoCreate in parent class.
+            </remarks>
+        </member>
+        <member name="M:Concept.Components.LicenseCreationData.#ctor(System.Collections.Generic.IEnumerable{Concept.Components.Feature})">
+            <summary>Initializes a new instance of the <see cref="T:Concept.Components.LicenseCreationData" /> class.</summary>
+            <param name="features">The features of application.</param>
+        </member>
+        <member name="P:Concept.Components.LicenseCreationData.InfosClientDatas">
+            <summary>Gets or sets the infos client datas.</summary>
+            <value>The infos client datas.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseCreationData.AvailableFeatures">
+            <summary>
+            Gets or sets the available features.
+            </summary>
+            <value>The available features.</value>
+        </member>
+        <member name="M:Concept.Components.LicenseCreationData.RefreshFeatures(System.Collections.Generic.IEnumerable{Concept.Components.Feature})">
+            <summary>Clears <see cref="P:Concept.Components.LicenseCreationData.AvailableFeatures">available features</see> and adds the features in parameter.</summary>
+            <param name="features">The new application features.</param>
+        </member>
+        <member name="T:Concept.Components.Feature">
+            <summary>Represents an application features to manage with a license.</summary>
+        </member>
+        <member name="P:Concept.Components.Feature.Description">
+            <summary>Gets or sets the description with a translatable text.</summary>
+            <value>The description.</value>
+        </member>
+        <member name="F:Concept.Components.Feature.DescriptionStringPropertyName">
+            <summary>Gets the <see cref="P:Concept.Components.Feature.DescriptionString">description string</see> property name.</summary>
+            <value>The <see cref="P:Concept.Components.Feature.DescriptionString">description string</see> property name.</value>
+        </member>
+        <member name="P:Concept.Components.Feature.DescriptionString">
+            <summary>Gets or sets the description in string.</summary>
+            <value>The description.</value>
+        </member>
+        <member name="F:Concept.Components.Feature.IntlDescriptionKeyEntry">
+            <summary>Constant string to manage IntlDescriptionKey puo.</summary>
+        </member>
+        <member name="F:Concept.Components.Feature.IntlDescriptionDefaultTextEntry">
+            <summary>Constant string to manage IntlDesctriptionDefaultText in puo.</summary>
+        </member>
+        <member name="M:Concept.Components.Feature.ReadFrom(Concept.Utils.IDataStoreNode,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector)">
+            <summary>Load a <see cref="T:Concept.Components.Feature">feature</see> from an xml node.</summary>
+            <param name="node">The xml node.</param>
+            <param name="factories">The list of factories to use for the deserialization of the ConceptElement.</param>
+            <param name="messageCollector">The message collector that collects error occurring during the process.</param>
+        </member>
+        <member name="M:Concept.Components.Feature.WriteTo(Concept.Utils.IDataStoreNode)">
+            <summary>Saves a <see cref="T:Concept.Components.Feature">feature</see> to an xml node.</summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="T:Concept.Components.AllowedFeaturesLinks">
+            <summary>
+            Class AllowedFeaturesLinks which is a <see cref="T:Concept.Model.ConceptMultipleLink">ConceptMultipleLink</see> of <see cref="T:Concept.Components.Feature">Feature</see>
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Signature">
+            <summary>
+            Class Signature
+            </summary>
+            <remarks>
+            This class is kept for Concept.Hmi 2012 Compatibility
+            </remarks>
+        </member>
+        <member name="P:Concept.Components.Signature.XmlSignature">
+            <summary>
+            Gets or sets the XML signature.
+            </summary>
+            <value>The XML signature.</value>
+        </member>
+        <member name="M:Concept.Components.Signature.Sign(System.Security.Cryptography.RSA)">
+            <summary>
+            Signs the specified private key.
+            </summary>
+            <param name="privateKey">The private key.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Components.Signature.CheckPublicKey(System.String)">
+            <summary>
+            Checks the public key.
+            </summary>
+            <param name="publicKeyXml">The public key XML.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Components.Signature.CheckPublicKey(System.Security.Cryptography.RSA)">
+            <summary>
+            Checks the public key.
+            </summary>
+            <param name="rsaPublicKey">The RSA public key.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="P:Concept.Components.Signature.PrivateKeyFile">
+            <summary>
+            Gets or sets the private key file.
+            </summary>
+            <value>The private key file.</value>
+        </member>
+        <member name="M:Concept.Components.Signature.WriteTo(Concept.Utils.IDataStoreNode)">
+            <summary>
+            Saves a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> to a node.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="T:Concept.Components.SignedLicenseFileSymmetricSha1">
+            <summary>
+            Class SignedLicenseFileSymmetricSha1
+            </summary>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFileSymmetricSha1.SymmetricKey">
+            <summary>
+            Gets or sets the symmetric key.
+            </summary>
+            <value>The symmetric key.</value>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFileSymmetricSha1.LoadFromFile(System.String,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector,System.Boolean,System.String)">
+            <summary>
+            Loads from file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="factories">The factories.</param>
+            <param name="messageCollector">The message collector.</param>
+            <param name="useSubject">if set to <c>true</c> [use subject].</param>
+            <param name="subject">The subject.</param>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFileSymmetricSha1.SaveToFile(System.String,System.Boolean,System.String)">
+            <summary>
+            Saves to file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="useSubjet">if set to <c>true</c> [use subjet].</param>
+            <param name="subject">The subject.</param>
+            <exception cref="T:System.NotSupportedException">SymmetricKey cannot be null.</exception>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFileSymmetricSha1.ExportToFileAndCheck(System.String)">
+            <summary>
+            Exports to file and check.
+            </summary>
+            <param name="licenseFilePath">The license file path.</param>
+            <returns><c>true</c> if check success, <c>false</c> otherwise</returns>
+        </member>
+        <member name="T:Concept.Components.SignedLicenseFileAsymmetric">
+            <summary>
+            Class SignedLicenseFileAsymmetric
+            </summary>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFileAsymmetric.RsaPublicKey">
+            <summary>
+            Gets or sets the RSA public key.
+            </summary>
+            <value>The RSA public key.</value>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFileAsymmetric.RsaPrivateKey">
+            <summary>
+            Gets or sets the RSA private key.
+            </summary>
+            <value>The RSA private key.</value>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFileAsymmetric.LoadFromFile(System.String,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector,System.Boolean,System.String)">
+            <summary>
+            Loads from file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="factories">The factories.</param>
+            <param name="messageCollector">The message collector.</param>
+            <param name="useSubject">if set to <c>true</c> [use subject].</param>
+            <param name="subject">The subject.</param>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFileAsymmetric.SaveToFile(System.String,System.Boolean,System.String)">
+            <summary>
+            Saves to file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="useSubjet">if set to <c>true</c> [use subjet].</param>
+            <param name="subject">The subject.</param>
+            <exception cref="T:System.NotSupportedException">RsaPrivateKey cannot be null.</exception>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFileAsymmetric.ExportToFileAndCheck(System.String)">
+            <summary>
+            Exports to file and check.
+            </summary>
+            <param name="licenseFilePath">The license file path.</param>
+            <returns><c>true</c> if check success, <c>false</c> otherwise</returns>
+        </member>
+        <member name="T:Concept.Components.License">
+            <summary>
+            Class License
+            </summary>
+            <remarks>
+            This class kept for Concept.Hmi 2012 Compatibility
+            </remarks>
+        </member>
+        <member name="F:Concept.Components.License.CreationDataFilePathPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.License.CreationDataFilePath"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.License.CreationDataFilePath">
+            <summary>
+            Gets or sets the creation data file path.
+            </summary>
+            <value>The creation data file path.</value>
+        </member>
+        <member name="P:Concept.Components.License.Signature">
+            <summary>
+            Gets or sets the signature.
+            </summary>
+            <value>The signature.</value>
+        </member>
+        <member name="P:Concept.Components.License.IsSigned">
+            <summary>
+            Gets or sets a value indicating whether this instance is signed.
+            </summary>
+            <value><c>true</c> if this instance is signed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Components.License.Children">
+            <summary>
+            Gets the children.
+            </summary>
+            <value>The children.</value>
+        </member>
+        <member name="T:Concept.Components.SignedLicenseFile">
+            <summary>
+            Class SignedLicenseFile
+            </summary>
+        </member>
+        <member name="F:Concept.Components.SignedLicenseFile.LicenseCreationDataPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.SignedLicenseFile.LicenseCreationData"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFile.LicenseCreationData">
+            <summary>
+            Gets or sets the license creation data.
+            </summary>
+            <remarks>
+            Serialized with any license to provide features and validation check functionnalities
+            </remarks>
+            <value>The license creation data.</value>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFile.AllowedFeaturesLinks">
+            <summary>
+            Gets or sets the allowed features links.
+            </summary>
+            <value>The allowed features links.</value>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFile.ValidationChecks">
+            <summary>
+            Gets or sets the validation checks.
+            </summary>
+            <value>The validation checks.</value>
+        </member>
+        <member name="F:Concept.Components.SignedLicenseFile.LicenseNameThreadSharedPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.SignedLicenseFile.LicenseNameThreadShared"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFile.LicenseNameThreadShared">
+            <summary>
+            Gets or sets the license name thread shared.
+            </summary>
+            <value>The license name thread shared.</value>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFile.FilePath">
+            <summary>
+            Gets or sets the file path.
+            </summary>
+            <value>The file path.</value>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFile.ExportToFileAndCheck(System.String)">
+            <summary>
+            Exports to file and check.
+            </summary>
+            <param name="licenseFilePath">The license file path.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFile.LoadFromFile(System.String,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector,System.Boolean,System.String)">
+            <summary>
+            Loads from file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="factories">The factories.</param>
+            <param name="messageCollector">The message collector.</param>
+            <param name="useSubject">if set to <c>true</c> [use subject].</param>
+            <param name="subject">The subject.</param>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFile.SaveToFile(System.String,System.Boolean,System.String)">
+            <summary>
+            Saves to file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="useSubjet">if set to <c>true</c> [use subjet].</param>
+            <param name="subject">The subject.</param>
+        </member>
+        <member name="P:Concept.Components.SignedLicenseFile.AllowedFeaturesThreadShared">
+            <summary>
+            Gets the allowed features thread shared.
+            </summary>
+            <value>The allowed features thread shared.</value>
+            <remarks>This Property is modified by a dedicated thread, watch out for shared access or view accessibility!</remarks>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFile.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns>bool</returns>
+            <remarks>This Property is modified by a dedicated thread, watch out for shared access or view accessibility!</remarks>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFile.LoadFromFile(System.String,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector)">
+            <summary>
+            Load a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> from a node.
+            </summary>
+            <param name="fileName">The file containing the data of the ConceptElement.</param>
+            <param name="factories">The list of factories to use for the deserialisation of the ConceptElement.</param>
+            <param name="messageCollector">The message collector that collects error occuring during the process.</param>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFile.LoadFromFile(System.String,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector,System.String)">
+            <summary>
+            Load a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> from a node of specific subject.
+            </summary>
+            <param name="fileName">The file containing the data of the ConceptElement.</param>
+            <param name="factories">The list of factories to use for the deserialisation of the ConceptElement.</param>
+            <param name="messageCollector">The message collector that collects error occuring during the process.</param>
+            <param name="subject">The subject that will be load.</param>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFile.SaveToFile(System.String)">
+            <summary>
+            Saves a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> to a node.
+            </summary>
+            <param name="fileName">The file where the data will be saved.</param>
+        </member>
+        <member name="M:Concept.Components.SignedLicenseFile.SaveToFile(System.String,System.String)">
+            <summary>
+            Saves a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> of a specific subject to a node.
+            </summary>
+            <param name="fileName">The file where the data will be saved.</param>
+            <param name="subject">Subject specify the serialization.</param>
+        </member>
+        <member name="T:Concept.Components.LicenseRepository">
+            <summary>Provides tools to define and manage licenses for application features. This class is a singleton.</summary>
+        </member>
+        <member name="F:Concept.Components.LicenseRepository.LicenseFileExtension">
+            <summary>
+            Constant string to represent <see cref="T:Concept.Components.License"/> extension.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.LicenseRepository.LicenseFileFilter">
+            <summary>
+            Constant string to represent <see cref="T:Concept.Components.License"/> file filter.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.LicenseRepository.DefaultLicensesFolder">
+            <summary>
+            Constant string to represent the default <see cref="T:Concept.Components.License"/> directory.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.Instance">
+            <summary>Gets the instance of <see cref="T:Concept.Components.LicenseRepository">license repository</see> singleton.</summary>
+            <remarks>        
+            There's only one LicenseRepository at a time (Singleton).
+            A singleton is used to ease the access when binding.
+            Thread safe
+            </remarks>
+            <value>The instance of <see cref="T:Concept.Components.LicenseRepository">license repository</see> singleton.</value>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.Initialize(System.TimeSpan,System.Int32)">
+            <summary>Creates and starts the cyclic license check thread. This thread verify the validity of internal licenses and license files.</summary>
+            <param name="checkTime">Defines the execution frequency of cyclic license check thread.</param>
+            <param name="fileCheckOnceEvery">Defines the number of <strong>checkTime</strong> to verify the <see cref="P:Concept.Components.LicenseRepository.LicenseDirectory">license files directory</see>.</param>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.Initialize(System.Type,System.TimeSpan,System.Int32)">
+            <summary>Creates the <see cref="T:Concept.Components.Feature">features</see> from an enumeration type and registers them. Creates and Starts the cyclic license check thread. This thread verify the validity
+            of internal licenses and license files.</summary>
+            <param name="enumFeatures">The enumeration type which represent <see cref="T:Concept.Components.Feature">features</see>.</param>
+            <param name="checkTime">Defines the execution frequency of cyclic license check thread.</param>
+            <param name="fileCheckOnceEvery">Defines the number of <strong>checkTime</strong> to verify the <see cref="P:Concept.Components.LicenseRepository.LicenseDirectory">license files directory</see>.</param>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.Initialize(System.Collections.Generic.IEnumerable{Concept.Components.Feature},System.TimeSpan,System.Int32)">
+            <summary>Registers the <see cref="T:Concept.Components.Feature">features</see> of a <see cref="T:Concept.Components.Feature">features</see> list. Creates and starts the cyclic license check thread. This thread verify the validity of internal
+            licenses and license files.</summary>
+            <param name="features">The <see cref="T:Concept.Components.Feature">features</see> list.</param>
+            <param name="checkTime">Defines the execution frequency of cyclic license check thread.</param>
+            <param name="fileCheckOnceEvery">Defines the number of <strong>checkTime</strong> to verify the <see cref="P:Concept.Components.LicenseRepository.LicenseDirectory">license files directory</see>.</param>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.DynamicLicenseCreationData">
+            <summary>Gets the dynamic license creation data which contains the necessary data to generate license files.</summary>
+            <value>The dynamic license creation data.</value>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.ExportLicenseCreationData(System.String)">
+            <summary>Generates a file which contains some information about the computer and the application. This file well be imported in oStudio to generate a
+            license file.</summary>
+            <param name="filePath">The file path of information file.</param>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.ExportInfosClient(System.String)">
+            <summary>Calls only <see cref="M:Concept.Components.LicenseRepository.ExportLicenseCreationData(System.String)">export license creation data</see> method. This method is obsolete but present for compatibility with old versions.</summary>
+            <param name="filePath">The file path of information file.</param>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.LicenseDirectory">
+            <summary>Gets or sets the license directory path. All license files are stored in this directory.</summary>
+            <value>The license directory path.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.AllLicenses">
+            <summary>Gets all licenses.</summary>
+            <value>All licenses.</value>
+        </member>
+        <member name="E:Concept.Components.LicenseRepository.AllLicensesCollectionChanged">
+            <summary>Occurs when <see cref="P:Concept.Components.LicenseRepository.AllLicenses">all licenses</see> collection changed.</summary>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.SignedLicenseFiles">
+            <summary>Gets all signed license files.</summary>
+            <value>The signed license files.</value>
+        </member>
+        <member name="E:Concept.Components.LicenseRepository.SignedLicenseFilesCollectionChanged">
+            <summary>Occurs when <see cref="P:Concept.Components.LicenseRepository.SignedLicenseFiles">signed license files</see> collection changed.</summary>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.InternalLicenses">
+            <summary>
+            Gets the internal licenses.
+            </summary>
+            <value>The internal licenses.</value>
+        </member>
+        <member name="E:Concept.Components.LicenseRepository.InternalLicensesCollectionChanged">
+            <summary>Occurs when<see cref="P:Concept.Components.LicenseRepository.InternalLicenses"> internal licenses</see> collection changed.</summary>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.AddInternalLicense(Concept.Components.BaseLicense)">
+            <summary>Adds an internal license. An internal license is a license managed fully in code. For example, a license that inherits of <see cref="T:Concept.Components.ConceptLicenseKey">ConceptLicenseKey</see>
+            and unlocks the features with key.</summary>
+            <param name="license">The license object to add in license repository.</param>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.RemoveInternalLicense(Concept.Components.BaseLicense)">
+            <summary>Removes an internal license. An internal license is a license managed fully in code. For example, a license that inherits of
+            <see cref="T:Concept.Components.ConceptLicenseKey">ConceptLicenseKey</see> and unlocks the features with key.</summary>
+            <param name="license">The license object to remove of license repository.</param>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.RsaPublicKeyXml">
+            <summary>Gets or sets the RSA public key XML.</summary>
+            <value>The RSA public key XML.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.AllFeatures">
+            <summary>Gets all register features.</summary>
+            <value>all register features.</value>
+        </member>
+        <member name="P:Concept.Components.LicenseRepository.AllowedFeatures">
+            <summary>
+            Gets the name of the allowed features.
+            </summary>
+            <value>The name of the allowed features.</value>
+        </member>
+        <member name="F:Concept.Components.LicenseRepository.AllowedFeaturesChanged">
+            <summary>Occurs when <see cref="P:Concept.Components.LicenseRepository.AllowedFeatures">allowed features</see> collection changed. This event is called by a dedicated thread, watch out for shared variables or view
+            accessibility!</summary>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.SetFeatureDescription(System.Enum,System.String)">
+            <summary>Sets <span>the <see cref="T:Concept.Components.Feature">feature</see> description from enumeration value which represents the <see cref="T:Concept.Components.Feature">feature</see>.</span></summary>
+            <param name="featureEnum">Then enumeration value which represents the <see cref="T:Concept.Components.Feature">feature</see>.</param>
+            <param name="description">The <see cref="T:Concept.Components.Feature">feature</see> description.</param>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.IsAllowed(System.Enum)">
+            <summary>Determines whether the specified feature is allowed.</summary>
+            <param name="feature">The specified feature.</param>
+            <returns>
+              <c>true</c> if the specified feature is allowed; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.IsAllowed(System.String)">
+            <summary>
+            Determines whether the specified feature name is allowed.
+            </summary>
+            <param name="featureName">Name of the feature.</param>
+            <returns><c>true</c> if the specified feature name is allowed; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.GetFeatureFromEnum(System.Enum)">
+            <summary>Retrieve the <paramref name="feature">feature object</paramref> from an enumeration value.</summary>
+            <param name="feature">The enumeration value which represent the feature.</param>
+            <returns>Feature.</returns>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.RegisterFeature(Concept.Components.Feature)">
+            <summary>Registers a new <paramref name="feature">feature</paramref>.</summary>
+            <param name="feature">The new feature.</param>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.RegisterFeature(System.String,System.String)">
+            <summary>Creates a new <see cref="T:Concept.Components.Feature">feature</see> with name and description then registers it.</summary>
+            <param name="name">The name of new feature.</param>
+            <param name="description">The description of new feature.</param>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.RegisterFeatures(System.Collections.Generic.IEnumerable{Concept.Components.Feature})">
+            <summary>Registers all <see cref="T:Concept.Components.Feature">features</see> of <see cref="T:Concept.Components.Feature">features</see> list.</summary>
+            <param name="features">The <see cref="T:Concept.Components.Feature">features</see> list.</param>
+        </member>
+        <member name="M:Concept.Components.LicenseRepository.RegisterFeatures(System.Type)">
+            <summary>Creates the <see cref="T:Concept.Components.Feature">features</see> from an enumeration type and registers them.</summary>
+            <param name="featuresEnumType">The enumeration type which represent <see cref="T:Concept.Components.Feature">features</see>.</param>
+        </member>
+        <member name="T:Concept.Components.Licenses">
+            <summary>
+            Class Licenses
+            </summary>
+        </member>
+        <member name="P:Concept.Components.Licenses.BaseLicenseParameters">
+            <summary>
+            Gets or sets the base license parameters.
+            </summary>
+            <value>The base license parameters.</value>
+        </member>
+        <member name="P:Concept.Components.Licenses.Children">
+            <summary>
+            Gets the children.
+            </summary>
+            <value>The children.</value>
+        </member>
+        <member name="T:Concept.Components.ValidationCheck">
+            <summary>
+            Class ValidationCheck
+            </summary>
+        </member>
+        <member name="M:Concept.Components.ValidationCheck.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns>ValidationCheckState.</returns>
+        </member>
+        <member name="T:Concept.Components.ValidationChecks">
+            <summary>
+            Class ValidationChecks
+            </summary>
+        </member>
+        <member name="T:Concept.Components.ValidationCheckDateInterval">
+            <summary>
+            Class ValidationCheckDateInterval
+            </summary>
+        </member>
+        <member name="M:Concept.Components.ValidationCheckDateInterval.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.ValidationCheckDateInterval"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.ValidationCheckDateInterval.DateMinPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.ValidationCheckDateInterval.DateMin"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckDateInterval.DateMin">
+            <summary>
+            Gets or sets the begin date.
+            </summary>
+            <value>The begin date.</value>
+        </member>
+        <member name="F:Concept.Components.ValidationCheckDateInterval.DateMaxPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.ValidationCheckDateInterval.DateMax"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckDateInterval.DateMax">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>The end date.</value>
+        </member>
+        <member name="M:Concept.Components.ValidationCheckDateInterval.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns>ValidationCheckState.</returns>
+        </member>
+        <member name="T:Concept.Components.ValidationCheckInfosClient">
+            <summary>
+            Class ValidationCheckInfosClient
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckInfosClient.InfosClientDatasLinks">
+            <summary>
+            Gets or sets the infos client datas to check.
+            </summary>
+            <value>The infos client datas to check.</value>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckInfosClient.ParentSignedLicenseFile">
+            <summary>
+            Gets the parent <see cref="T:Concept.Components.SignedLicenseFile"/>.
+            </summary>
+            <value>The parent signed license file.</value>
+        </member>
+        <member name="M:Concept.Components.ValidationCheckInfosClient.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns>ValidationCheckState.</returns>
+        </member>
+        <member name="T:Concept.Components.ValidationCheckSerial">
+            <summary>
+            Class ValidationCheckSerial
+            </summary>
+        </member>
+        <member name="F:Concept.Components.ValidationCheckSerial.SerialPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.ValidationCheckSerial.Serial"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckSerial.Serial">
+            <summary>
+            Gets or sets the serial.
+            </summary>
+            <value>The serial.</value>
+        </member>
+        <member name="F:Concept.Components.ValidationCheckSerial.CompanyPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.ValidationCheckSerial.Company"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckSerial.Company">
+            <summary>
+            Gets or sets the company.
+            </summary>
+            <value>The company.</value>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckSerial.ValidationRequired">
+            <summary>
+            Gets or sets a value indicating whether [validation required].
+            </summary>
+            <value><c>true</c> if [validation required]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Concept.Components.ValidationCheckState">
+            <summary>
+            Class ValidationCheckState
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckState.IsValid">
+            <summary>
+            Gets or sets a value indicating whether this instance is valid.
+            </summary>
+            <value><c>true</c> if this instance is valid; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckState.FailureMessage">
+            <summary>
+            Gets or sets the failure message.
+            </summary>
+            <value>The failure message.</value>
+        </member>
+        <member name="P:Concept.Components.ValidationCheckState.Warning">
+            <summary>
+            Gets or sets the warning.
+            </summary>
+            <value>The warning.</value>
+        </member>
+        <member name="T:Concept.Components.UserAccountImage">
+            <summary>
+            Enum UserAccountImage
+            </summary>
+        </member>
+        <member name="F:Concept.Components.UserAccountImage.Monitor">
+            <summary>
+            Represents a monitor <see cref="T:Concept.Components.ConceptUser"/>
+            </summary>
+        </member>
+        <member name="F:Concept.Components.UserAccountImage.Operator">
+            <summary>
+            Represents an operator <see cref="T:Concept.Components.ConceptUser"/>
+            </summary>
+        </member>
+        <member name="F:Concept.Components.UserAccountImage.Manager">
+            <summary>
+            Represents a manager <see cref="T:Concept.Components.ConceptUser"/>
+            </summary>
+        </member>
+        <member name="F:Concept.Components.UserAccountImage.Admin">
+            <summary>
+            Represents an admin <see cref="T:Concept.Components.ConceptUser"/>
+            </summary>
+        </member>
+        <member name="F:Concept.Components.BaseUser.IsVisiblePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.BaseUser.IsVisible"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.BaseUser.IsVisible">
+            <summary>
+            Gets or sets the user visibility.
+            </summary>
+            <value>The visibility.</value>
+        </member>
+        <member name="F:Concept.Components.BaseUser.PasswordPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.BaseUser.Password"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.BaseUser.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>The password.</value>
+        </member>
+        <member name="F:Concept.Components.BaseUser.SetPasswordOnFirstLoginPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.BaseUser.SetPasswordOnFirstLogin"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.BaseUser.SetPasswordOnFirstLogin">
+            <summary>
+            Gets or sets a value indicating whether to set password on first login.
+            </summary>
+            <value>
+            <c>true</c> set password on first login; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="F:Concept.Components.BaseUser.AccountImagePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.BaseUser.AccountImage"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.BaseUser.AccountImage">
+            <summary>
+            Gets or sets the account image.
+            </summary>
+            <remarks>
+            Default value is set to <see cref="F:Concept.Components.UserAccountImage.Monitor"/>.
+            </remarks>
+            <value>The account image.</value>
+        </member>
+        <member name="M:Concept.Components.BaseUser.ChangePassword(System.String)">
+            <summary>
+            Changes the password.
+            </summary>
+            <param name="newPassword">The new password.</param>
+        </member>
+        <member name="M:Concept.Components.BaseUser.CheckPassword(System.String)">
+            <summary>
+            Checks the password.
+            </summary>
+            <param name="password">The password.</param>
+            <returns><c>true</c> if the password is valid, <c>false</c> otherwise</returns>
+        </member>
+        <member name="T:Concept.Components.Users">
+            <summary>
+            Class Users
+            </summary>
+        </member>
+        <member name="M:Concept.Components.BaseUserGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.ConceptUserGroup"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.BaseUserGroup.UsersLink">
+            <summary>
+            Gets or sets the <see cref="T:Concept.Components.ConceptUser"/> links.
+            </summary>
+            <value>The <see cref="T:Concept.Components.ConceptUser"/> links.</value>
+        </member>
+        <member name="P:Concept.Components.BaseUserGroup.Repository">
+            <summary>
+            Shortcut to the parent <see cref="T:Concept.Components.RightRepository"/>.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.BaseUserGroup.Users">
+            <summary>
+            Shortcut to the <see cref="P:Concept.Components.BaseUserGroup.UsersLink"/> references.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Groups">
+            <summary>
+            Class Groups
+            </summary>
+        </member>
+        <member name="T:Concept.Components.CryptedConceptMultipleLink`1">
+            <summary>
+            Class CryptedConceptMultipleLink
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Concept.Components.CryptedConceptMultipleLink`1.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="M:Concept.Components.CryptedConceptMultipleLink`1.ReadFrom(Concept.Utils.IDataStoreNode,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads from.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="factories">The factories.</param>
+            <param name="messageCollector">The message collector.</param>
+        </member>
+        <member name="M:Concept.Components.CryptedConceptMultipleLink`1.WriteTo(Concept.Utils.IDataStoreNode)">
+            <summary>
+            Writes to.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="T:Concept.Components.HashPassword">
+            <summary>
+            Class HashPassword
+            </summary>
+        </member>
+        <member name="M:Concept.Components.HashPassword.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.HashPassword"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.HashPassword.SetPassword(System.String)">
+            <summary>
+            Sets the password.
+            </summary>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Concept.Components.HashPassword.Check(System.String)">
+            <summary>
+            Checks the specified password.
+            </summary>
+            <param name="password">The password.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Components.HashPassword.ReadFrom(Concept.Utils.IDataStoreNode,Concept.Model.ConceptFactories,Concept.Utils.IMessageCollector)">
+            <summary>
+            Load a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> from a node.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="factories">The list of factories to use for the desirialisation of the ConceptElement.</param>
+            <param name="messageCollector">The message collector that collects error occuring during the process.</param>
+        </member>
+        <member name="M:Concept.Components.HashPassword.WriteTo(Concept.Utils.IDataStoreNode)">
+            <summary>
+            Saves a <see cref="T:Concept.Model.ConceptElement">ConceptElement</see> to a node.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="T:Concept.Components.Right">
+            <summary>
+            Class Right
+            </summary>
+        </member>
+        <member name="T:Concept.Components.Rights">
+            <summary>
+            Class Rights
+            </summary>
+        </member>
+        <member name="T:Concept.Components.LoginResult">
+            <summary>
+            Enum LoginResult
+            </summary>
+        </member>
+        <member name="F:Concept.Components.LoginResult.Success">
+            <summary>
+            Login as success
+            </summary>
+        </member>
+        <member name="F:Concept.Components.LoginResult.BadUsername">
+            <summary>
+            Login as failed with a bad username
+            </summary>
+        </member>
+        <member name="F:Concept.Components.LoginResult.BadPassword">
+            <summary>
+            Login as failed with a bad password
+            </summary>
+        </member>
+        <member name="T:Concept.Components.RightRepository">
+            <summary>
+            Class RightRepository
+            </summary>
+        </member>
+        <member name="P:Concept.Components.RightRepository.Instance">
+            <summary>
+            Gets the instance.
+            </summary>
+            <value>The instance.</value>
+        </member>
+        <member name="P:Concept.Components.RightRepository.FilePath">
+            <summary>
+            Gets the default file path where the users rights are saved.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.RightRepository.DefaultFileName">
+            <summary>
+            Gets the default file name used by the right repository to save the users rights.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.RightRepository.Initialize(System.Type)">
+            <summary>
+            Initializes the user right management with the specified features listed in the enum. 
+            This approach simplify the rights management in the Xaml views thanks to the intellisens on Enum.
+            </summary>
+            <param name="featuresEnum">The features enum.</param>
+        </member>
+        <member name="M:Concept.Components.RightRepository.Initialize(System.Type,System.String)">
+            <summary>
+            Initializes the user right management with the specified features listed in the enum. 
+            This approach simplify the rights management in the Xaml views thanks to the intellisens on Enum.
+            </summary>
+            <param name="featuresEnum">The features enum.</param>
+            <param name="fileName">The file name in which the user rights will be contained.</param>
+        </member>
+        <member name="M:Concept.Components.RightRepository.Initialize(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes the user right management with the specified features listed.
+            </summary>
+            <param name="features">The features.</param>
+        </member>
+        <member name="M:Concept.Components.RightRepository.Initialize(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Initializes the user right management with the specified features listed.
+            </summary>
+            <param name="features">The features.</param>
+            <param name="fileName">The file name in which the user rights will be contained.</param>
+        </member>
+        <member name="P:Concept.Components.RightRepository.Rights">
+            <summary>
+            Gets the rights.
+            </summary>
+            <value>The rights.</value>
+        </member>
+        <member name="P:Concept.Components.RightRepository.Groups">
+            <summary>
+            Gets the groups.
+            </summary>
+            <value>The groups.</value>
+        </member>
+        <member name="P:Concept.Components.RightRepository.Users">
+            <summary>
+            Gets the users.
+            </summary>
+            <value>The users.</value>
+        </member>
+        <member name="F:Concept.Components.RightRepository.CurrentUserPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.RightRepository.CurrentUser"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.RightRepository.CurrentUser">
+            <summary>
+            Gets the current user.
+            </summary>
+            <value>The current user.</value>
+        </member>
+        <member name="E:Concept.Components.RightRepository.CurrentUserChanged">
+            <summary>
+            Occurs when [current user changed].
+            </summary>
+        </member>
+        <member name="F:Concept.Components.RightRepository.CurrentBaseUserPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.RightRepository.CurrentBaseUser"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.RightRepository.CurrentBaseUser">
+            <summary>
+            Gets the current base user.
+            </summary>
+            <value>The current base user.</value>
+        </member>
+        <member name="M:Concept.Components.RightRepository.Login(System.String,System.String)">
+            <summary>
+            Checks the combination of username and password.
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns>A <see cref="T:Concept.Components.LoginResult"/> indicating the result of the authentication.</returns>
+        </member>
+        <member name="M:Concept.Components.RightRepository.Login(System.String,System.String,System.Boolean)">
+            <summary>
+            Checks the combination of username and password.
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <param name="isCaseSensitive">Indicates to check the username in case sensitive mode.</param>
+            <returns>A <see cref="T:Concept.Components.LoginResult"/> indicating the result of the authentication.</returns>
+        </member>
+        <member name="M:Concept.Components.RightRepository.Logout">
+            <summary>
+            Logouts this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Components.RightRepository.HasCurrentUserRight(System.String)">
+            <summary>
+            Determines whether [has current user right] [the specified right].
+            </summary>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if [has current user right] [the specified right]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Components.RightRepository.Save">
+            <summary>
+            Saves this instance.
+            </summary>
+        </member>
+        <member name="T:Concept.Components.ConceptUser">
+            <summary>
+            Class User
+            </summary>
+        </member>
+        <member name="M:Concept.Components.ConceptUser.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.ConceptUser"/> class.
+            </summary>
+        </member>
+        <member name="F:Concept.Components.ConceptUser.RightsLinkPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Components.ConceptUser.RightsLink"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ConceptUser.RightsLink">
+            <summary>
+            Gets or sets the <see cref="T:Concept.Components.Right"/> links. 
+            </summary>
+            <value>The <see cref="T:Concept.Components.Right"/> links.</value>
+        </member>
+        <member name="P:Concept.Components.ConceptUser.Rights">
+            <summary>
+            Shortcut to linked <see cref="P:Concept.Components.ConceptUser.RightsLink"/> references.
+            </summary>
+            <value>The rights.</value>
+        </member>
+        <member name="M:Concept.Components.ConceptUser.HasRight(System.String)">
+            <summary>
+            Determines whether the specified right has right.
+            </summary>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if the specified right has right; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Concept.Components.ConceptUserGroup">
+            <summary>
+            Class UserGroup
+            </summary>
+        </member>
+        <member name="M:Concept.Components.ConceptUserGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Components.ConceptUserGroup"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Components.ConceptUserGroup.RightsLink">
+            <summary>
+            Gets or sets the <see cref="T:Concept.Components.Right"/> links.
+            </summary>
+            <value>The <see cref="T:Concept.Components.Right"/> links.</value>
+        </member>
+        <member name="M:Concept.Components.ConceptUserGroup.HasRight(System.String)">
+            <summary>
+            Determines whether the specified right has right.
+            </summary>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if the specified right has right; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:Concept.Components.ConceptUserGroup.Rights">
+            <summary>
+            Shortcut to the <see cref="P:Concept.Components.ConceptUserGroup.RightsLink"/> references.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2323 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Concept.Utils.Wpf</name>
+    </assembly>
+    <members>
+        <member name="T:Concept.Utils.Wpf.NavigationControlV2StyleType">
+            <summary>
+            Enum NavigationControlV2StyleType
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2StyleType.ButtonItemsStyle">
+            <summary>
+            The button style
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2StyleType.TabItemsStyle">
+            <summary>
+            The tab style
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2StyleType.TreeViewItemsStyle">
+            <summary>
+            The treeview style
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2StyleType.CustomItemsStyle">
+            <summary>
+            The custom style
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.NavigationControlV2Transitions">
+            <summary>
+            Enum NavigationControlV2Transitions
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2Transitions.None">
+            <summary>
+            No transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2Transitions.Fade">
+            <summary>
+            Fade transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2Transitions.SwitchOnRight">
+            <summary>
+            Switch on right transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2Transitions.SwitchOnLeft">
+            <summary>
+            Switch on left transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2Transitions.SwitchOnUp">
+            <summary>
+            Switch on up transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2Transitions.SwitchOnDown">
+            <summary>
+            Switch on down transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2Transitions.SlideUpDown">
+            <summary>
+            Slide up down transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2Transitions.SlideLeftRight">
+            <summary>
+            Slide left right transition
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.NavigationControlV2">
+            <summary>
+            Class NavigationControlV2
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.TabItemsStyleName">
+            <summary>
+            The tab items style name
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.TreeViewItemsStyleName">
+            <summary>
+            The tree view items style name
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControlV2.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.Wpf.NavigationControlV2"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.NavigationBarDock">
+            <summary>
+            Gets or sets the navigation bar dock.
+            </summary>
+            <value>The navigation bar dock.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.NavBarPlacementProperty">
+            <summary>
+            The nav bar placement property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.NavigationBarBackground">
+            <summary>
+            Gets or sets the navigation bar background.
+            </summary>
+            <value>The navigation bar background.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.NavigationBarBackgroundProperty">
+            <summary>
+            The navigation bar background property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.Transition">
+            <summary>
+            Gets or sets the transition.
+            </summary>
+            <value>The transition.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.TransitionProperty">
+            <summary>
+            The transition property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.CustomTransition">
+            <summary>
+            Gets or sets the custom transition.
+            </summary>
+            <value>The custom transition.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.CustomTransitionProperty">
+            <summary>
+            The custom transition property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.StyleType">
+            <summary>
+            Gets or sets the type of the style.
+            </summary>
+            <value>The type of the style.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.StyleTypeProperty">
+            <summary>
+            The style type property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.CustomStyle">
+            <summary>
+            Gets or sets the custom style.
+            </summary>
+            <value>The custom style.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.CustomStyleProperty">
+            <summary>
+            The custom style property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.CategoryContainers">
+            <summary>
+            Gets or sets the category containers.
+            </summary>
+            <value>The category containers.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlV2.CategoryContainersProperty">
+            <summary>
+            The category containers property
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControlV2.StyleTypePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Styles the type property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControlV2.CustomStylePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Customs the style property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControlV2.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes call <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />.
+            </summary>
+            <exception cref="T:System.NotSupportedException">The NavigationControlV2 needs a Panel PART named \ + PartElementsPanelName + \ to work correctly</exception>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.TransitionDuration">
+            <summary>
+            Gets or sets the duration of the transition.
+            </summary>
+            <value>The duration of the transition.</value>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControlV2.IndexOf(System.Windows.FrameworkElement)">
+            <summary>
+            Indexes the of.
+            </summary>
+            <param name="elementWrapper">The element wrapper.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.IsTouchTransitionEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is touch transition enabled.
+            </summary>
+            <value><c>true</c> if this instance is touch transition enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.TouchDeltaToStartTransition">
+            <summary>
+            Gets or sets the touch delta to start transition.
+            </summary>
+            <value>The touch delta to start transition.</value>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlV2.TransitionTouchNumer">
+            <summary>
+            Gets or sets the transition touch numer.
+            </summary>
+            <value>The transition touch numer.</value>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControlV2.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Called when the selection changes.
+            </summary>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="E:Concept.Utils.Wpf.NavigationControlV2.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControlV2.DoPropertyChanged(System.String)">
+            <summary>
+            Does the property changed.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ExtendedTreeView">
+            <summary>
+            Class ExtendedTreeView
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ExtendedTreeView.OnSelectedItemChanged(System.Windows.RoutedPropertyChangedEventArgs{System.Object})">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.TreeView.SelectedItemChanged" /> event when the <see cref="P:System.Windows.Controls.TreeView.SelectedItem" /> property value changes.
+            </summary>
+            <param name="e">Provides the item that was previously selected and the item that is currently selected for the <see cref="E:System.Windows.Controls.TreeView.SelectedItemChanged" /> event.</param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.ExtendedTreeView.ReadOnlySelectedItem">
+            <summary>
+            Gets or sets the read only selected item.
+            </summary>
+            <value>The read only selected item.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ExtendedTreeView.ReadOnlySelectedItemProperty">
+            <summary>
+            The read only selected item property
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.DockToOrientationConverter">
+            <summary>
+            Class DockToOrientationConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DockToOrientationConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.DockToMarginConverter">
+            <summary>
+            Class DockToMarginConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DockToMarginConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+            <exception cref="T:System.NotSupportedException">The parameter of the ValueConverter DockToMarginConverter has to be of type double</exception>
+        </member>
+        <member name="T:Concept.Utils.Wpf.SameObjectsToBoolConverter">
+            <summary>
+            Class SameObjectsToBoolConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SameObjectsToBoolConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified values.
+            </summary>
+            <param name="values">The values.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+            <exception cref="T:System.NotSupportedException">The ValueConverter SameObjectsToBoolConverter has to have 2 values</exception>
+        </member>
+        <member name="E:Concept.Utils.Wpf.ControlNotifyPropertyChanged.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ControlNotifyPropertyChanged.DoPropertyChanged(System.String)">
+            <summary>
+            Does the property changed.
+            </summary>
+            <param name="propertyName">The name.</param>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WaitWindow">
+            <summary>
+            Interaction logic for WaitWindow.xaml
+            </summary>
+            <summary>
+            WaitWindow
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WaitWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ModalDialogResult">
+            <summary>
+            Specifies which ButtonWrappedContentControl button that a user clicks.
+            The values of this enum are synchrone with the MessageBoxResult of .Net.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ModalDialogResult.OK">
+            <summary>
+            The result value of ButtonWrappedContentControl box is OK.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ModalDialogResult.Cancel">
+            <summary>
+            The result value of the ButtonWrappedContentControl is Cancel.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ModalDialogResult.Close">
+            <summary>
+            The result value of the message box is Close.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ModalDialogEventArgs">
+            <summary>
+            A class to manage a ButtonWrappedContentControlEventArgs argument with one parameter.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ModalDialogEventArgs.#ctor(Concept.Utils.Wpf.ModalDialogResult)">
+            <summary>
+            Initializes a new instance of ButtonWrappedContentControlEventArgs.
+            </summary>
+            <param name="result">The value of the event argument.</param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.ModalDialogEventArgs.Result">
+            <summary>
+            Gets the Result value.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ButtonWrappedContentControl">
+            <summary>
+            Class ButtonWrappedContentControl
+            </summary>
+        </member>
+        <member name="E:Concept.Utils.Wpf.ButtonWrappedContentControl.Closed">
+            <summary>
+            Occurs when the dialog is closed.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.ButtonWrappedContentControl.SingleCloseButton">
+            <summary>
+            Gets or sets a value indicating whether [single close button].
+            </summary>
+            <value><c>true</c> if [single close button]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ButtonWrappedContentControl.SingleCloseButtonProperty">
+            <summary>
+            The single close button property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.ButtonWrappedContentControl.ShowButtons">
+            <summary>
+            Gets or sets a value indicating whether [show buttons].
+            </summary>
+            <value><c>true</c> if [show buttons]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ButtonWrappedContentControl.ShowButtonsProperty">
+            <summary>
+            The show buttons property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.ButtonWrappedContentControl.CommandOK">
+            <summary>
+            Gets the command OK.
+            </summary>
+            <value>The command OK.</value>
+        </member>
+        <member name="P:Concept.Utils.Wpf.ButtonWrappedContentControl.CommandCancel">
+            <summary>
+            Gets the command Cancel.
+            </summary>
+            <value>The command Cancel.</value>
+        </member>
+        <member name="P:Concept.Utils.Wpf.ButtonWrappedContentControl.CommandClose">
+            <summary>
+            Gets the command Close.
+            </summary>
+            <value>The command Close.</value>
+        </member>
+        <member name="E:Concept.Utils.Wpf.IModalDialog.ModalClosed">
+            <summary>
+            Occurs when [Closed].
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ConceptualPanel">
+            <summary>
+            This panel maintains a collection of conceptual children that are neither logical
+            children nor visual children of the panel.  This allows those visuals to be connected 
+            to other parts of the UI, if necessary, or even to remain disconnected. 
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptualPanel.OnChildrenCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            For simplicity, this class will listen to change notifications on the DisconnectedUIElementCollection
+            and provide them to descendants through the OnChildAdded and OnChildRemoved members.  
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.#ctor(System.Windows.UIElement)">
+            <summary>
+            This collection can be used by a panel to maintain a collection of child elements 
+            that are *not* connected to their owner as visual children or logical children.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.Add(System.Windows.UIElement)">
+            <summary>
+            Adds the element to the DisconnectedUIElementCollection
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.Clear">
+            <summary>
+            Removes all elements from the DisconnectedUIElementCollection
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.Contains(System.Windows.UIElement)">
+            <summary>
+            Determines whether an element is in the DisconnectedUIElementCollection
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the collection into the Array
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.CopyTo(System.Windows.UIElement[],System.Int32)">
+            <summary>
+            Strongly typed version of CopyTo
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DisconnectedUIElementCollection.Count">
+            <summary>
+            Gets the number of elements in the collection.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that can iterate through the collection.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.IndexOf(System.Windows.UIElement)">
+            <summary>
+            Returns the index of the element in the DisconnectedUIElementCollection
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.Insert(System.Int32,System.Windows.UIElement)">
+            <summary>
+            Inserts an element into the DisconnectedUIElementCollection at the specified index
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.Remove(System.Windows.UIElement)">
+            <summary>
+            Removes the specified element from the DisconnectedUIElementCollection
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index from the DisconnectedUIElementCollection 
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            Removes the specified number of elements starting at the specified index from the DisconnectedUIElementCollection
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.Initialize">
+            <summary>
+            The Initialize method is simply exposed as an accessible member that can
+            be called from the ConceptualPanel's Loaded event.  Accessing this member 
+            via the Children property will implicitly cause CreateUIElementCollection
+            to be called to create the disconnected collection.  This method exists
+            because simple access of a property like Count might be optimized away by 
+            an aggressive compiler.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DisconnectedUIElementCollection.VerifyWriteAccess">
+            <summary>
+            If the owner is an items host, we need to enforce the rule that elements
+            cannot be explicitly added to the disconnected collection.  However, it is still
+            possible to modify the visual or logical "connected" children of a ConceptualPanel 
+            while it is an items host by simply calling the AddVisualChild, RemoveVisualChild, 
+            AddLogicalChild, or RemoveLogicalChild methods.  Logic within ConceptualPanel
+            ensures that any visual children added in this manner will be returned within 
+            a GetVisualChild() enumeration.
+            </summary>
+        </member>
+        <member name="E:Concept.Utils.Wpf.DisconnectedUIElementCollection.CollectionChanged">
+            <summary>
+            Since the owner of the collection is not the parent of the elements, it needs
+            a mechanism by which to monitor its collection of child visuals.
+            This class provides such notifications via INotifyCollectionChanged.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.LogicalPanel">
+            <summary>
+            This panel extends ConceptualPanel by ensuring that its conceptual children are also "logical" children.  
+            Because certain things like property inheritance and resource resolution work through the logical
+            tree, this allows the disconnected visuals to be connected to the panel's ancestor tree
+            in a logical manner without being part of it's visual tree. 
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.LogicalPanel.OnLogicalChildrenChanged(System.Windows.UIElement,System.Windows.UIElement)">
+            <summary>
+            This class uses the OnLogicalChildrenChanged method to provide notification to descendants 
+            when its logical children change.  Note that this is intentionally
+            similar to the OnVisualChildrenChanged approach supported by all visuals.
+            </summary>
+            <param name="childAdded"></param>
+            <param name="childRemoved"></param>
+        </member>
+        <member name="T:Concept.Utils.Wpf.Viewport3DEx">
+            <summary>
+            A Viewport3D subclass that shields Panel3D from needing to arrange the 
+            3D models in a specific order.  For models to be truly transparent, and
+            have the models 'behind' them be visible, they must exist in the Children
+            collection in the opposite order of the way you see them on-screen.  The
+            front model must be the last child, and the back model must be the first
+            child (not including the scene's light source).
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Viewport3DEx.AddToBack(System.Windows.Media.Media3D.Viewport2DVisual3D)">
+            <summary>
+            Adds the specified model to the rear of the 3D scene.
+            </summary>
+            <param name="model">The rear item in the scene.</param>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Viewport3DEx.AddToFront(System.Windows.Media.Media3D.Viewport2DVisual3D)">
+            <summary>
+            Adds the specified model to the front of the 3D scene.
+            </summary>
+            <param name="model">The front item in the scene.</param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.Viewport3DEx.AllowTransparency">
+            <summary>
+            Gets/sets whether the models in the scene support 
+            showing the models behind through them.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.Viewport3DEx.BackModel">
+            <summary>
+            Returns the model at the back of the 3D scene.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Viewport3DEx.GetModelAt(System.Int32)">
+            <summary>
+            Returns the model at the specified model index.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Viewport3DEx.GetModels">
+            <summary>
+            Returns an enumerable object with which the models are enumerated, from front to back.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.Viewport3DEx.FrontModel">
+            <summary>
+            Returns the model at the front of the 3D scene.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Viewport3DEx.GetVisualIndex(System.Windows.Media.Media3D.Viewport2DVisual3D)">
+            <summary>
+            Returns the index of the specified model where 0 is the front item.
+            If the model is not in the scene, returns -1.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.Viewport3DEx.ModelCount">
+            <summary>
+            Returns the number of Viewport2DVisual3D objects in the Children collection.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Viewport3DEx.RemoveAllModels">
+            <summary>
+            Removes all of the models from the scene.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Viewport3DEx.RemoveBackModel">
+            <summary>
+            Removes and returns the back model in the scene.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Viewport3DEx.RemoveFrontModel">
+            <summary>
+            Removes and returns the front model in the scene.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ConceptSkinsViewUserControl">
+            <summary>
+            Interaction logic for ConceptSkinsView.xaml
+            </summary>
+            <summary>
+            ConceptSkinsViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptSkinsViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.NotifiableContentControl">
+            <summary>
+            Class NotifiableContentControl
+            </summary>
+        </member>
+        <member name="E:Concept.Utils.Wpf.NotifiableContentControl.OkCallBack">
+            <summary>
+            Occurs when [ok call back].
+            </summary>
+        </member>
+        <member name="E:Concept.Utils.Wpf.NotifiableContentControl.CancelCallBack">
+            <summary>
+            Occurs when [cancel call back].
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NotifiableContentControl.Show(System.Windows.FrameworkElement,System.Boolean,System.Boolean)">
+            <summary>
+            Shows the specified element.
+            </summary>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NotifiableContentControl.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes call <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />.
+            </summary>
+            <exception cref="T:System.NotSupportedException">The NotifiableContentControl needs a ItemsControl PART named \ + PartGridName + \ to work correctly</exception>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NotifiableContentControl.SingleCloseButton">
+            <summary>
+            Gets or sets a value indicating whether [single close button].
+            </summary>
+            <value><c>true</c> if [single close button]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NotifiableContentControl.SingleCloseButtonProperty">
+            <summary>
+            The single close button property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NotifiableContentControl.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NotifiableContentControl.TitleProperty">
+            <summary>
+            The title property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NotifiableContentControl.CommandOK">
+            <summary>
+            Gets the command OK.
+            </summary>
+            <value>The command OK.</value>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NotifiableContentControl.CommandCancel">
+            <summary>
+            Gets the command cancel.
+            </summary>
+            <value>The command cancel.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NotifiableContentControl.ShowButtonsPropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Utils.Wpf.NotifiableContentControl.ShowButtons"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NotifiableContentControl.ShowButtons">
+            <summary>
+            Gets or sets a value indicating whether [show buttons].
+            </summary>
+            <value><c>true</c> if [show buttons]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NotifiableContentControl.ShowTitlePropertyName">
+            <summary>
+            Constant string to manage <see cref="P:Concept.Utils.Wpf.NotifiableContentControl.ShowTitle"/> property changed.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NotifiableContentControl.ShowTitle">
+            <summary>
+            Gets or sets a value indicating whether [show title].
+            </summary>
+            <value><c>true</c> if [show title]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:Concept.Utils.Wpf.NotifiableContentControl.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ChartLegendEditor">
+            <summary>
+            Interaction logic for ChartLegendEditor.xaml
+            </summary>
+            <summary>
+            ChartLegendEditor
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ChartLegendEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ChartLine">
+            <summary>
+            Interaction logic for Window1.xaml
+            </summary>
+            <summary>
+            ChartLine
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ChartLine.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ColorPicker">
+            <summary>
+            The ColorPicker Control displays an interface to choose a color by its four components:
+             - Red (R)
+             - Green (G)
+             - Blue (B)
+             - Alpha (A)
+            Each color component can be selected with a slider, and the resulting color is display
+            in a square next to the sliders.
+            It is possible to initialize the color of the control when you instanciate it with the property "Color".
+            This control can be used in XAML with this line (for example):
+            <![CDATA[ <CC:ColorPicker Color="Blue" ColorChanged="colorPicker_ColorChanged"/> ]]>
+            </summary>
+            <summary>
+            ColorPicker
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ColorPicker.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptUtilsWpfUtils.GetEnumAttributeImage(System.Reflection.FieldInfo)">
+            <summary>
+            Gets the enum attribute image.
+            </summary>
+            <param name="field">The field.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptUtilsWpfUtils.GetImage(Concept.Utils.ImageAttribute)">
+            <summary>
+            Gets the image.
+            </summary>
+            <param name="imageAttr">The image attr.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptUtilsWpfUtils.GetImage(System.Object,System.String)">
+            <summary>
+            Retrieves an image based on the <paramref name="item"/> assembly and the <paramref name="path"/> of the image relative to this assembly, the <paramref name="item"/> assembly must be the same than the one containing the image to retrieve.
+            </summary>
+            <param name="item">The item from which to retrieve the assembly location</param>
+            <param name="path">The path of the image relative to the item's assembly</param>
+            <returns></returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptUtilsWpfUtils.AreBindingValidationsValid(System.Windows.DependencyObject)">
+            <summary>
+            Tests all the validation rules of all the bindings of the <c>DependencyObject</c> passed in parameters, recursively to all its visual children.
+            For each validation rule that is not valid, marks it as invalid.
+            </summary>
+            <param name="dependencyObject">The <c>DependencyObject</c> on which to test the validation rules.</param>
+            <returns><c>True</c> if all validation rules are valid, <c>False</c> otherwise.</returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.BitmapImageToImageConverter">
+            <summary>
+            Class BitmapImageToImageConverter
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.BitmapImageToImageConverter.NeededType">
+            <summary>
+            Gets or sets the type of the needed.
+            </summary>
+            <value>The type of the needed.</value>
+        </member>
+        <member name="M:Concept.Utils.Wpf.BitmapImageToImageConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.PercentConverter">
+            <summary>
+            Class PercentConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.PercentConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.GetFirstTypeAncestorConverter">
+            <summary>
+            Class GetFirstTypeAncestorConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.GetFirstTypeAncestorConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.TimeSpanToStringConverter">
+            <summary>
+            Class TimeSpanToStringConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.TimeSpanToStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.LimitedTimeSpanToStringConverter">
+            <summary>
+            Class LimitedTimeSpanToStringConverter
+            Values[0] : User input as string.
+            Values[1] : InputMode of the TimeSpanEditor.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.TimeSpanInputModeToStringConverter">
+            <summary>
+            Class TimeSpanInputModeToStringConverter
+            Days => days
+            Hours => h
+            Minutes => min
+            Seconds => s
+            Milliseconds => ms
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.PathToImageSourceConverter">
+            <summary>
+            Class UriToImageSourceConverter
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.VisualTreeHelpers.IfNotNull``2(``0,System.Func{``0,``1})">
+            <summary>
+            If <paramref name="t"/> is not null, returns the result of the function <paramref name="fn"/> otherwise the default value of type U
+            </summary>
+            <typeparam name="T">The type of the object to test for nullability</typeparam>
+            <typeparam name="U">The type of to return</typeparam>
+            <param name="t">The object to test for nullability</param>
+            <param name="fn">The function to execute if <paramref name="t"/> is not null</param>
+            <returns></returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.StyleTuning">
+            <summary>
+            Interaction logic for StyleTuning.xaml
+            </summary>
+            <summary>
+            StyleTuning
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.StyleTuning.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ConceptMessage">
+            <summary>
+            Class ConceptMessage
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ConceptLogsViewUserControl">
+            <summary>
+            Interaction logic for ConceptLogsView.xaml
+            </summary>
+            <summary>
+            ConceptLogsViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptLogsViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.DragInfo">
+            <summary>
+            Holds information about a the source of a drag drop operation.
+            </summary>
+            
+            <remarks>
+            The <see cref="T:Concept.Utils.Wpf.DragInfo"/> class holds all of the framework's information about the source
+            of a drag. It is used by <see cref="M:Concept.Utils.Wpf.IDragSource.StartDrag(Concept.Utils.Wpf.DragInfo)"/> to determine whether a drag 
+            can start, and what the dragged data should be.
+            </remarks>
+        </member>
+        <member name="M:Concept.Utils.Wpf.DragInfo.#ctor(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Initializes a new instance of the DragInfo class.
+            </summary>
+            
+            <param name="sender">
+            The sender of the mouse event that initiated the drag.
+            </param>
+            
+            <param name="e">
+            The mouse event that initiated the drag.
+            </param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DragInfo.Data">
+            <summary>
+            Gets or sets the drag data.
+            </summary>
+            
+            <remarks>
+            This must be set by a drag handler in order for a drag to start.
+            </remarks>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DragInfo.DragStartPosition">
+            <summary>
+            Gets the position of the click that initiated the drag, relative to <see cref="P:Concept.Utils.Wpf.DragInfo.VisualSource"/>.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DragInfo.Effects">
+            <summary>
+            Gets or sets the allowed effects for the drag.
+            </summary>
+            
+            <remarks>
+            This must be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/> by a drag handler in order 
+            for a drag to start.
+            </remarks>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DragInfo.MouseButton">
+            <summary>
+            Gets the mouse button that initiated the drag.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DragInfo.SourceCollection">
+            <summary>
+            Gets the collection that the source ItemsControl is bound to.
+            </summary>
+            
+            <remarks>
+            If the control that initated the drag is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DragInfo.SourceItem">
+            <summary>
+            Gets the object that a dragged item is bound to.
+            </summary>
+            
+            <remarks>
+            If the control that initated the drag is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DragInfo.VisualSource">
+            <summary>
+            Gets the control that initiated the drag.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.IDragSource">
+            <summary>
+            Interface implemented by Drag Handlers.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.IDragSource.StartDrag(Concept.Utils.Wpf.DragInfo)">
+            <summary>
+            Queries whether a drag can be started.
+            </summary>
+            
+            <param name="dragInfo">
+            Information about the drag.
+            </param>
+            
+            <remarks>
+            To allow a drag to be started, the <see cref="P:Concept.Utils.Wpf.DragInfo.Effects"/> property on <paramref name="dragInfo"/> 
+            should be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/>. 
+            </remarks>
+        </member>
+        <member name="M:Concept.Utils.Wpf.IDragSource.Dropped(Concept.Utils.Wpf.DropInfo)">
+            <summary>
+            Notifies the drag handler that a drop has occurred.
+            </summary>
+            
+            <param name="dropInfo">
+              Information about the drop.
+            </param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DropInfo.Data">
+            <summary>
+            Gets the drag data.
+            </summary>
+            
+            <remarks>
+            If the drag came from within the framework, this will hold:
+            
+            - The dragged data if a single item was dragged.
+            - A typed IEnumerable if multiple items were dragged.
+            </remarks>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DropInfo.DragInfo">
+            <summary>
+            Gets a <see cref="P:Concept.Utils.Wpf.DropInfo.DragInfo"/> object holding information about the source of the drag, 
+            if the drag came from within the framework.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DropInfo.DropPosition">
+            <summary>
+            Gets the mouse position relative to the VisualTarget
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DropInfo.Effects">
+            <summary>
+            Gets or sets the allowed effects for the drop.
+            </summary>
+            
+            <remarks>
+            This must be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/> by a drop handler in order 
+            for a drop to be possible.
+            </remarks>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DropInfo.InsertIndex">
+            <summary>
+            Gets the current insert position within <see cref="P:Concept.Utils.Wpf.DropInfo.TargetCollection"/>.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DropInfo.TargetCollection">
+            <summary>
+            Gets the collection that the target ItemsControl is bound to.
+            </summary>
+            
+            <remarks>
+            If the current drop target is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DropInfo.TargetItem">
+            <summary>
+            Gets the object that the current drop target is bound to.
+            </summary>
+            
+            <remarks>
+            If the current drop target is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:Concept.Utils.Wpf.DropInfo.VisualTarget">
+            <summary>
+            Gets the control that is the current drop target.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.IDropTarget">
+            <summary>
+            Interface implemented by Drop Handlers.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.IDropTarget.DragOver(Concept.Utils.Wpf.DropInfo)">
+            <summary>
+            Updates the current drag state.
+            </summary>
+            
+            <param name="dropInfo">
+              Information about the drag.
+            </param>
+            
+            <remarks>
+            To allow a drop at the current drag position, the <see cref="P:Concept.Utils.Wpf.DropInfo.Effects"/> property on 
+            <paramref name="dropInfo"/> should be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/>
+            and <see cref="P:Concept.Utils.Wpf.DropInfo.Data"/> should be set to a non-null value.
+            </remarks>
+        </member>
+        <member name="M:Concept.Utils.Wpf.IDropTarget.Drop(Concept.Utils.Wpf.DropInfo)">
+            <summary>
+            Performs a drop.
+            </summary>
+            
+            <param name="dropInfo">
+              Information about the drop.
+            </param>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ExceptionDisplayer">
+            <summary>
+            Interaction logic for ExceptionDisplayer.xaml
+            </summary>
+            <summary>
+            ExceptionDisplayer
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ExceptionDisplayer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WindowExceptionDisplayer">
+            <summary>
+            Interaction logic for WindowExceptionDisplayer.xaml
+            </summary>
+            <summary>
+            WindowExceptionDisplayer
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WindowExceptionDisplayer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.CancelEventArgs`1">
+            <summary>
+            A generic class to manage a CancelEventArgs argument with one parameter.
+            </summary>
+            <typeparam name="T">The type of the parameter.</typeparam>
+        </member>
+        <member name="M:Concept.Utils.Wpf.CancelEventArgs`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of generic EventArgs.
+            </summary>
+            <param name="parameter">The value of the event argument.</param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.CancelEventArgs`1.Parameter">
+            <summary>
+            Gets the argument value.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WpfCommand">
+            <summary>
+            A Command implementation for the MVVM pattern using events
+            </summary>
+        </member>
+        <member name="E:Concept.Utils.Wpf.WpfCommand.Executed">
+            <summary>
+            Event fired when the execution occurs.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WpfCommand.OnExecuted(System.Object)">
+            <summary>
+            Fires the Executed event.
+            </summary>
+        </member>
+        <member name="E:Concept.Utils.Wpf.WpfCommand.CanExecuteChecking">
+            <summary>
+            Event fired when the CanExecute checking occurs.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WpfCommand.OnCanExecuteChecking(System.Object)">
+            <summary>
+            Fires the CanExecuteChecking event. If not assigned, a value of true is returned.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WpfCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">Data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>true if this command can be executed; otherwise, false.</returns>
+        </member>
+        <member name="E:Concept.Utils.Wpf.WpfCommand.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WpfCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">Data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ConceptLanguagesViewUserControl">
+            <summary>
+            Interaction logic for ConceptLanguagesView.xaml
+            </summary>
+            <summary>
+            ConceptLanguagesViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptLanguagesViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.IntlLanguageSelector">
+            <summary>
+            Interaction logic for IntlLanguageSelector.xaml
+            </summary>
+            <summary>
+            IntlLanguageSelector
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.IntlLanguageSelector.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.CategoryContainer">
+            <summary>
+            Class CategoryContainer
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.CategoryContainer.Category">
+            <summary>
+            Gets or sets the category.
+            </summary>
+            <value>The category.</value>
+        </member>
+        <member name="P:Concept.Utils.Wpf.CategoryContainer.Controls">
+            <summary>
+            Gets or sets the controls.
+            </summary>
+            <value>The controls.</value>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ClassicTransitionTypes">
+            <summary>
+            Enum NavigationControlTransitions
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ClassicTransitionTypes.None">
+            <summary>
+            No transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ClassicTransitionTypes.SlideUpDown">
+            <summary>
+            Slide up down transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ClassicTransitionTypes.SlideLeftRight">
+            <summary>
+            Slide left right transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ClassicTransitionTypes.Fade">
+            <summary>
+            Fade transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.ClassicTransitionTypes.RotationSlideLeftRight">
+            <summary>
+            Deep slide transition
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.MultiContentDisplayer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.Wpf.NavigationControl"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.MultiContentDisplayer.Transition">
+            <summary>
+            Gets or sets the transition.
+            </summary>
+            <value>The transition.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MultiContentDisplayer.TransitionProperty">
+            <summary>
+            The transition property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.MultiContentDisplayer.CustomTransition">
+            <summary>
+            Gets or sets the custom transition.
+            </summary>
+            <value>The custom transition.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MultiContentDisplayer.CustomTransitionProperty">
+            <summary>
+            The custom transition property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.MultiContentDisplayer.TransitionDuration">
+            <summary>
+            Gets or sets the duration of the transition.
+            </summary>
+            <value>The duration of the transition.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MultiContentDisplayer.TransitionDurationProperty">
+            <summary>
+            The TransitionDuration property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.MultiContentDisplayer.IsTouchTransitionEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is touch transition enabled.
+            </summary>
+            <value><c>true</c> if this instance is touch transition enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MultiContentDisplayer.IsTouchTransitionEnabledProperty">
+            <summary>
+            The IsTouchTransitionEnabled property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.MultiContentDisplayer.TouchDeltaToStartTransition">
+            <summary>
+            Gets or sets the touch delta to start transition.
+            </summary>
+            <value>The touch delta to start transition.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MultiContentDisplayer.TouchDeltaToStartTransitionProperty">
+            <summary>
+            The TouchDeltaToStartTransition property
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.MultiContentDisplayer.TouchTransitionPointsNumber">
+            <summary>
+            Gets or sets the transition touch numer.
+            </summary>
+            <value>The transition touch numer.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MultiContentDisplayer.TouchTransitionPointsNumberProperty">
+            <summary>
+            The TouchTransitionPointsNumber property
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.MultiContentDisplayer.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Called when the selection changes.
+            </summary>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="T:Concept.Utils.Wpf.NavigationControlStyleType">
+            <summary>
+            Enum NavigationControlStyleType
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlStyleType.ButtonItemsStyle">
+            <summary>
+            The button style
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlStyleType.TabItemsStyle">
+            <summary>
+            The tab style
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlStyleType.TreeViewItemsStyle">
+            <summary>
+            The treeview style
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlStyleType.CustomItemsStyle">
+            <summary>
+            The custom style
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.NavigationControlTransitions">
+            <summary>
+            Enum NavigationControlTransitions
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTransitions.None">
+            <summary>
+            No transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTransitions.Fade">
+            <summary>
+            Fade transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTransitions.SwitchOnRight">
+            <summary>
+            Switch on right transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTransitions.SwitchOnLeft">
+            <summary>
+            Switch on left transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTransitions.SwitchOnUp">
+            <summary>
+            Switch on up transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTransitions.SwitchOnDown">
+            <summary>
+            Switch on down transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTransitions.SlideUpDown">
+            <summary>
+            Slide up down transition
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTransitions.SlideLeftRight">
+            <summary>
+            Slide left right transition
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.NavigationControl">
+            <summary>
+              <div>
+                NavigationControl is a flexible navigation component used to navigate between different screens of a application. This control can be used to
+                build the main navigation of a application.
+            </div>
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.TabItemsStyleName">
+            <summary>Constant who contains the name of tab item style.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.TreeViewItemsStyleName">
+            <summary>Constant who contains the name of Tree view items style.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.CategoryGeneral">
+            <summary>Gets constant IntlText CategoryGeneral.</summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.#ctor">
+            <summary>Default constructor</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.NavigationBarDock">
+            <summary>
+            Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.NavBarPlacementProperty">NavBarPlacementProperty</see> value.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.NavBarPlacementProperty">
+            <summary>
+              <font color="#2A2A2A">Dependency property who allows to define the position of the navigation bar (top, bottom, left, or right). </font>
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.NavigationBarDockPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Method to signal a changement on <see cref="F:Concept.Utils.Wpf.NavigationControl.NavBarPlacementProperty">NavBarPlacementProperty</see>.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.NavigationBarBackground">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.NavigationBarBackgroundProperty">NavigationBarBackgroundProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.NavigationBarBackgroundProperty">
+            <summary>Dependency property who allows to define the color background of the navigation bar.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.NavigationBarVisibility">
+            <summary> Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.NavigationBarVisibilityProperty">NavigationBarVisibilityProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.NavigationBarVisibilityProperty">
+            <summary>Dependency property who allows to define the visibility of the navigation bar.</summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.GetMenuTitle(System.Windows.DependencyObject)">
+            <summary>
+            Gets <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuTitleProperty">MenuTitleProperty</see> value of obj.
+            </summary>
+            <param name="obj">Object used to get <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuTitleProperty">MenuTitleProperty</see> value.</param>
+            <returns>IntlText who represents title of obj.</returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.SetMenuTitle(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Sets the <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuTitleProperty">MenuTitleProperty</see> value of obj with value.
+            </summary>
+            <param name="obj">Object used to set <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuTitleProperty">MenuTitleProperty</see> value.</param>
+            <param name="value">IntlText who represents the new menu title value for obj.</param>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.MenuTitleProperty">
+            <summary>
+              <font color="#2A2A2A">Attached property who allows to define the title of a navigation item.</font>
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.GetMenuImageSource(System.Windows.DependencyObject)">
+            <summary>
+            Gets <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuImageSourceProperty">MenuImageSourceProperty</see> value of obj.
+            </summary>
+            <param name="obj">Object used to get <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuImageSourceProperty">MenuImageSourceProperty</see> value</param>
+            <returns>ImageSource of obj.</returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.SetMenuImageSource(System.Windows.DependencyObject,System.Windows.Media.ImageSource)">
+            <summary>
+            Sets the <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuImageSourceProperty">MenuImageSourceProperty</see> value of obj with value.
+            </summary>
+            <param name="obj">Object used to set <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuImageSourceProperty">MenuImageSourceProperty</see> value.</param>
+            <param name="value">ImageSource who represents the new image source value for obj.</param>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.MenuImageSourceProperty">
+            <summary>
+              <span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(42,42,42); FONT: 13px/18px &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; WIDOWS: 1; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-size-adjust: none; font-stretch: normal">
+            Attached property who allows to define the image of a navigation item.</span>
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.GetMenuCategory(System.Windows.DependencyObject)">
+            <summary>
+            Gets <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuCategoryProperty">MenuCategoryProperty</see> value of obj.
+            </summary>
+            <param name="obj">Object used to get <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuCategoryProperty">MenuCategoryProperty</see> value.</param>
+            <returns>IntlText who represents menu category of obj.</returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.SetMenuCategory(System.Windows.DependencyObject,Concept.Utils.IntlText)">
+            <summary>
+            Sets the <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuCategoryProperty">MenuCategoryProperty</see> value of obj with value.
+            </summary>
+            <param name="obj">Object used to set <see cref="F:Concept.Utils.Wpf.NavigationControl.MenuCategoryProperty">MenuCategoryProperty</see> value.</param>
+            <param name="value">IntlText who represents the new menu category value for obj.</param>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.MenuCategoryProperty">
+            <summary>
+              <font color="#2A2A2A">Dependency property who allows to group menu item by category.</font>
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.Transition">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.TransitionProperty">TransitionProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.TransitionProperty">
+            <summary>Dependency property who allows to define the transition which animate your screens when you navigate in enum  <see cref="T:Concept.Utils.Wpf.ClassicTransitionTypes">ClassicTransitionTypes</see>.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.CustomTransition">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.CustomTransitionProperty">CustomTransitionProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.CustomTransitionProperty">
+            <summary>Dependency property who allows to define transition between the changements of page.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.TransitionDuration">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.TransitionDurationProperty">TransitionDurationProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.TransitionDurationProperty">
+            <summary>Dependency property who allows to define the time in second of the transition.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.IsTouchTransitionEnabled">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.IsTouchTransitionEnabledProperty">IsTouchTransitionEnabledProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.IsTouchTransitionEnabledProperty">
+            <summary>
+              <font color="#2A2A2A">Dependency property who allows to define if is it possible to touch the screen to navigate . You will need to use a touch transition if
+            this property is set to true.</font>
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.TouchDeltaToStartTransition">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.TouchDeltaToStartTransitionProperty">TouchDeltaToStartTransitionProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.TouchDeltaToStartTransitionProperty">
+            <summary>Dependency property who allows to define the maximum displacement of finger to start transition. If the displacement is more than this delta, the transition is
+            not strated.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControl.TouchTransitionPointsNumber">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.NavigationControl.TouchTransitionPointsNumberProperty">TouchTransitionPointsNumberProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControl.TouchTransitionPointsNumberProperty">
+            <summary>Dependency property who allows to define the number of touch points needed to enable the transition.</summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.ManageNewItems">
+            <summary>Calls <see cref="M:Concept.Utils.Wpf.NavigationControl.ManageNewItems">ManageNewItems</see> method for each navigation items.</summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.NavigationControl.GetItemInformation(System.Object)">
+            <summary>Set attached properties MenuImageSource and MenuTitle of the item. Item must implement the interface <see cref="T:Concept.Utils.Wpf.IControlInfoProvider">IControlInfoProvider</see> who provides a title and an image source.</summary>
+            <param name="item">Visual element who implements the interface <see cref="T:Concept.Utils.Wpf.IControlInfoProvider">IControlInfoProvider</see>.</param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.NavigationControlTree.CategoryContainers">
+            <summary>
+            Gets or sets the category containers.
+            </summary>
+            <value>The category containers.</value>
+        </member>
+        <member name="F:Concept.Utils.Wpf.NavigationControlTree.CategoryContainersProperty">
+            <summary>
+            The category containers property
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ConceptPhysicalUnitViewUserControl">
+            <summary>
+            Interaction logic for ConceptPhysicalUnitView.xaml
+            </summary>
+            <summary>
+            ConceptPhysicalUnitViewUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptPhysicalUnitViewUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.TimeSpanInputMode">
+            <summary>
+            Describes the different types of user input mode for a <see cref="T:System.TimeSpan"/>.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.TimeSpanInputMode.All">
+            <summary>
+            Indicates a combination of all others user input type. A valid user input would be for instance: 23d41min22s.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.TimeSpanInputMode.Days">
+            <summary>
+            Indicates that the user input value is an amount of days.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.TimeSpanInputMode.Hours">
+            <summary>
+            Indicates that the user input value is an amount of hours.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.TimeSpanInputMode.Minutes">
+            <summary>
+            Indicates that the user input value is an amount of minutes.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.TimeSpanInputMode.Seconds">
+            <summary>
+            Indicates that the user input value is an amount of seconds.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.TimeSpanInputMode.Milliseconds">
+            <summary>
+            Indicates that the user input value is an amount of milliseconds.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.TimeSpanValidationRule">
+            <summary>
+            Provides a way to check if the user input <see cref="T:System.String"/> is a valid <see cref="T:System.TimeSpan"/>.
+            </summary>
+            <seealso cref="T:System.Windows.Controls.ValidationRule"/>
+        </member>
+        <member name="M:Concept.Utils.Wpf.TimeSpanValidationRule.#ctor(Concept.Utils.Wpf.TimeSpanInputMode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.Wpf.TimeSpanValidationRule"/> class.
+            </summary>
+            <param name="inputMode">
+            One of the enumeration values that specifies the user input mode. By default input mode is set to <see cref="F:Concept.Utils.Wpf.TimeSpanInputMode.All"/>
+            </param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.TimeSpanValidationRule.InputMode">
+            <summary>
+            Gets or sets the user input mode.
+            </summary>
+            <value>The user input mode.</value>
+        </member>
+        <member name="M:Concept.Utils.Wpf.TimeSpanValidationRule.Validate(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Validates that the <see cref="T:System.String"/> user input is a well formatted <see cref="T:System.TimeSpan"/>.
+            </summary>
+            <param name="value">The value from the binding target to check.</param>
+            <param name="cultureInfo">The culture to use in this rule.</param>
+            <returns>
+            A <see cref="T:System.Windows.Controls.ValidationResult"/> object.
+            </returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.HCF">
+            <summary>
+            HIGHCONTRAST flags
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.RGN">
+            <summary>
+            CombingRgn flags.  RGN_*
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.RGN.AND">
+            <summary>
+            Creates the intersection of the two combined regions.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.RGN.OR">
+            <summary>
+            Creates the union of two combined regions.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.RGN.XOR">
+            <summary>
+            Creates the union of two combined regions except for any overlapping areas.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.RGN.DIFF">
+            <summary>
+            Combines the parts of hrgnSrc1 that are not part of hrgnSrc2.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.RGN.COPY">
+            <summary>
+            Creates a copy of the region identified by hrgnSrc1.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.HT">
+            <summary>
+            Non-client hit test values, HT*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.GCLP">
+            <summary>
+            GetClassLongPtr values, GCLP_*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.GWL">
+            <summary>
+            GetWindowLongPtr values, GWL_*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.SM">
+            <summary>
+            SystemMetrics.  SM_*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.SPI">
+            <summary>
+            SystemParameterInfo values, SPI_*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.SPIF">
+            <summary>
+            SystemParameterInfo flag values, SPIF_*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WS">
+            <summary>
+            WindowStyle values, WS_*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WM">
+            <summary>
+            Window message values, WM_*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WS_EX">
+            <summary>
+            Window style extended values, WS_EX_*
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.DeviceCap">
+            <summary>
+            GetDeviceCaps nIndex values.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.DeviceCap.BITSPIXEL">
+            <summary>Number of bits per pixel
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.DeviceCap.PLANES">
+            <summary>
+            Number of planes
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.DeviceCap.LOGPIXELSX">
+            <summary>
+            Logical pixels inch in X
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.DeviceCap.LOGPIXELSY">
+            <summary>
+            Logical pixels inch in Y
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.MF">
+            <summary>
+            EnableMenuItem uEnable values, MF_*
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MF.DOES_NOT_EXIST">
+            <summary>
+            Possible return value for EnableMenuItem
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.SWP">
+            <summary>
+            SetWindowPos options
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.SW">
+            <summary>
+            ShowWindow options
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.SC.F_ISSECURE">
+            <summary>
+            SCF_ISSECURE
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MARGINS.cxLeftWidth">
+            <summary>Width of left border that retains its size.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MARGINS.cxRightWidth">
+            <summary>Width of right border that retains its size.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MARGINS.cyTopHeight">
+            <summary>Height of top border that retains its size.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.MARGINS.cyBottomHeight">
+            <summary>Height of bottom border that retains its size.</summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WndProc">
+            <summary>Delegate declaration that matches native WndProc signatures.</summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.MessageHandler">
+            <summary>Delegate declaration that matches managed WndProc signatures.</summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.Win32Error">
+            <summary>
+            Wrapper for common Win32 status codes.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_SUCCESS">
+            <summary>The operation completed successfully.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_INVALID_FUNCTION">
+            <summary>Incorrect function.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_FILE_NOT_FOUND">
+            <summary>The system cannot find the file specified.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_PATH_NOT_FOUND">
+            <summary>The system cannot find the path specified.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_TOO_MANY_OPEN_FILES">
+            <summary>The system cannot open the file.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_ACCESS_DENIED">
+            <summary>Access is denied.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_INVALID_HANDLE">
+            <summary>The handle is invalid.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_OUTOFMEMORY">
+            <summary>Not enough storage is available to complete this operation.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_NO_MORE_FILES">
+            <summary>There are no more files.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_SHARING_VIOLATION">
+            <summary>The process cannot access the file because it is being used by another process.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_INVALID_PARAMETER">
+            <summary>The parameter is incorrect.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_INSUFFICIENT_BUFFER">
+            <summary>The data area passed to a system call is too small.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_NESTING_NOT_ALLOWED">
+            <summary>Cannot nest calls to LoadModule.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_KEY_DELETED">
+            <summary>Illegal operation attempted on a registry key that has been marked for deletion.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_NOT_FOUND">
+            <summary>Element not found.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_NO_MATCH">
+            <summary>There was no match for the specified key in the index.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_BAD_DEVICE">
+            <summary>An invalid device was specified.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_CANCELLED">
+            <summary>The operation was canceled by the user.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_CLASS_ALREADY_EXISTS">
+            <summary>The window class was already registered.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Win32Error.ERROR_INVALID_DATATYPE">
+            <summary>The specified datatype is invalid.</summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Win32Error.#ctor(System.Int32)">
+            <summary>
+            Create a new Win32 error.
+            </summary>
+            <param name="i">The integer value of the error.</param>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Win32Error.op_Explicit(Concept.Utils.Wpf.Win32Error)~Concept.Utils.Wpf.HRESULT">
+            <summary>Performs HRESULT_FROM_WIN32 conversion.</summary>
+            <param name="error">The Win32 error being converted to an HRESULT.</param>
+            <returns>The equivilent HRESULT value.</returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Win32Error.ToHRESULT">
+            <summary>Performs HRESULT_FROM_WIN32 conversion.</summary>
+            <returns>The equivilent HRESULT value.</returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Win32Error.GetLastError">
+            <summary>Performs the equivalent of Win32's GetLastError()</summary>
+            <returns>A Win32Error instance with the result of the native GetLastError</returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Win32Error.op_Equality(Concept.Utils.Wpf.Win32Error,Concept.Utils.Wpf.Win32Error)">
+            <summary>
+            Compare two Win32 error codes for equality.
+            </summary>
+            <param name="errLeft">The first error code to compare.</param>
+            <param name="errRight">The second error code to compare.</param>
+            <returns>Whether the two error codes are the same.</returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.Win32Error.op_Inequality(Concept.Utils.Wpf.Win32Error,Concept.Utils.Wpf.Win32Error)">
+            <summary>
+            Compare two Win32 error codes for inequality.
+            </summary>
+            <param name="errLeft">The first error code to compare.</param>
+            <param name="errRight">The second error code to compare.</param>
+            <returns>Whether the two error codes are not the same.</returns>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Null">
+            <summary>FACILITY_NULL</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Rpc">
+            <summary>FACILITY_RPC</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Dispatch">
+            <summary>FACILITY_DISPATCH</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Storage">
+            <summary>FACILITY_STORAGE</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Itf">
+            <summary>FACILITY_ITF</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Win32">
+            <summary>FACILITY_WIN32</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Windows">
+            <summary>FACILITY_WINDOWS</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Control">
+            <summary>FACILITY_CONTROL</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.Ese">
+            <summary>MSDN doced facility code for ESE errors.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.Facility.WinCodec">
+            <summary>FACILITY_WINCODEC (WIC)</summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.HRESULT">
+            <summary>Wrapper for HRESULT status codes.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.S_OK">
+            <summary>S_OK</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.S_FALSE">
+            <summary>S_FALSE</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_PENDING">
+            <summary>E_PENDING</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_NOTIMPL">
+            <summary>E_NOTIMPL</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_NOINTERFACE">
+            <summary>E_NOINTERFACE</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_POINTER">
+            <summary>E_POINTER</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_ABORT">
+            <summary>E_ABORT</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_FAIL">
+            <summary>E_FAIL</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_UNEXPECTED">
+            <summary>E_UNEXPECTED</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.STG_E_INVALIDFUNCTION">
+            <summary>STG_E_INVALIDFUNCTION</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.REGDB_E_CLASSNOTREG">
+            <summary>REGDB_E_CLASSNOTREG</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.DESTS_E_NO_MATCHING_ASSOC_HANDLER">
+            <summary>DESTS_E_NO_MATCHING_ASSOC_HANDLER.  Win7 internal error code for Jump Lists.</summary>
+            <remarks>There is no Assoc Handler for the given item registered by the specified application.</remarks>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.DESTS_E_NORECDOCS">
+            <summary>DESTS_E_NORECDOCS.  Win7 internal error code for Jump Lists.</summary>
+            <remarks>The given item is excluded from the recent docs folder by the NoRecDocs bit on its registration.</remarks>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.DESTS_E_NOTALLCLEARED">
+            <summary>DESTS_E_NOTALLCLEARED.  Win7 internal error code for Jump Lists.</summary>
+            <remarks>Not all of the items were successfully cleared</remarks>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_ACCESSDENIED">
+            <summary>E_ACCESSDENIED</summary>
+            <remarks>Win32Error ERROR_ACCESS_DENIED.</remarks>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_OUTOFMEMORY">
+            <summary>E_OUTOFMEMORY</summary>
+            <remarks>Win32Error ERROR_OUTOFMEMORY.</remarks>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.E_INVALIDARG">
+            <summary>E_INVALIDARG</summary>
+            <remarks>Win32Error ERROR_INVALID_PARAMETER.</remarks>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.INTSAFE_E_ARITHMETIC_OVERFLOW">
+            <summary>INTSAFE_E_ARITHMETIC_OVERFLOW</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.COR_E_OBJECTDISPOSED">
+            <summary>COR_E_OBJECTDISPOSED</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.WC_E_GREATERTHAN">
+            <summary>WC_E_GREATERTHAN</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.HRESULT.WC_E_SYNTAX">
+            <summary>WC_E_SYNTAX</summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.HRESULT.#ctor(System.UInt32)">
+            <summary>
+            Create an HRESULT from an integer value.
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="P:Concept.Utils.Wpf.HRESULT.Facility">
+            <summary>
+            retrieve HRESULT_FACILITY
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.HRESULT.Code">
+            <summary>
+            retrieve HRESULT_CODE
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.HRESULT.ToString">
+            <summary>
+            Get a string representation of this HRESULT.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.HRESULT.ThrowLastError">
+            <summary>
+            Convert the result of Win32 GetLastError() into a raised exception.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.WindowChrome.CaptionHeight">
+            <summary>The extent of the top of the window to treat as the caption.</summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.PhysicalUnitSelectorUserControl">
+            <summary>
+            Interaction logic for PhysicalUnitSelector.xaml
+            </summary>
+            <summary>
+            PhysicalUnitSelectorUserControl
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.PhysicalUnitSelectorUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.AutoGreyableImage.#cctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.Wpf.AutoGreyableImage"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.AutoGreyableImage.OnAutoGreyScaleImageIsEnabledPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when [auto grey scale image is enabled property changed].
+            </summary>
+            <param name="source">The source.</param>
+            <param name="args">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Concept.Utils.Wpf.AutoGreyableImage.OnAutoGreyScaleImageSourceChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the source changed.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="args">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Concept.Utils.Wpf.FileNameArrayEditor">
+            <summary>
+            Interaction logic for FileNameArrayEditor.xaml
+            </summary>
+            <summary>
+            FileNameArrayEditor
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.FileNameArrayEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.InputBox">
+            <summary>
+            Interaction logic for InputBox.xaml
+            </summary>
+            <summary>
+            InputBox
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.InputBox.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.ConceptSkinSelector">
+            <summary>
+            Interaction logic for ConceptSkinSelector.xaml
+            </summary>
+            <summary>
+            ConceptSkinSelector
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.ConceptSkinSelector.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.VisualExtensions">
+            <summary>
+            Extension Methods for the System.Windows.Media.Visual Class
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.VisualExtensions.PngBitmap(System.Windows.Media.Visual)">
+            <summary>
+            Returns the contents of a WPF Visual as a Bitmap in PNG format.
+            </summary>
+            <param name="visual">A WPF Visual.</param>
+            <returns>A GDI+ System.Drawing.Bitmap.</returns>
+        </member>
+        <member name="M:Concept.Utils.Wpf.VisualExtensions.BitmapSource(System.Windows.Media.Visual)">
+            <summary>
+            Returns the contents of a WPF Visual as a BitmapSource, e.g.
+            for binding to an Image control.
+            </summary>
+            <param name="visual">A WPF Visual.</param>
+            <returns>A set of pixels.</returns>
+        </member>
+        <member name="T:Concept.Utils.Wpf.SyntaxHighlightBox">
+            <summary>
+            SyntaxHighlightBox
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.GetIndexOfFirstVisibleLine">
+            <summary>
+            Returns the index of the first visible text line.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.GetIndexOfLastVisibleLine">
+            <summary>
+            Returns the index of the last visible text line.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.FormatBlock(Concept.Utils.Wpf.SyntaxHighlightBox.InnerTextBlock,Concept.Utils.Wpf.SyntaxHighlightBox.InnerTextBlock)">
+            <summary>
+            Formats and Highlights the text of a block.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.GetLineCount(System.String)">
+            <summary>
+            Returns the raw number of the current line count.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.GetFirstCharIndexFromLineIndex(System.String,System.Int32)">
+            <summary>
+            Returns the index of the first character of the
+            specified line. If the index is greater than the current
+            line count, the method returns the index of the last
+            character. The line index is zero-based.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.GetLastCharIndexFromLineIndex(System.String,System.Int32)">
+            <summary>
+            Returns the index of the last character of the
+            specified line. If the index is greater than the current
+            line count, the method returns the index of the last
+            character. The line-index is zero-based.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.GetFormattedText(System.String)">
+            <summary>
+            Returns a formatted text object from the given string
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.GetFormattedLineNumbers(System.Int32,System.Int32)">
+            <summary>
+            Returns a string containing a list of numbers separated with newlines.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.GetFormattedTextWidth(System.String)">
+            <summary>
+            Returns the width of a text once formatted.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.SyntaxHighlightBox.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.HighlightRuleWords">
+            <summary>
+            A set of words and their RuleOptions.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.HighlightRuleArea">
+            <summary>
+            An area start/stop definition and its RuleOptions.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.HighlightRuleRegex">
+            <summary>
+            A regex and its RuleOptions.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.RuleOptions">
+            <summary>
+            A set of options linked to each rule.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WindowEditSingleContent">
+            <summary>
+            Interaction logic for WindowEditSingleContent.xaml
+            </summary>
+            <summary>
+            WindowEditSingleContent
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WindowEditSingleContent.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Wpf.WizardControl">
+            <summary>Wizard Control will guide the user through the different steps of a complex process.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.WizardControl.ContentStyleName">
+            <summary>Constant who contains the style name of <see cref="P:Concept.Utils.Wpf.WizardControl.Wizard">wizard</see> component</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.WizardControl.ComponentsPanelPart">
+            <summary>Constant who contains the panel name of components </summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WizardControl.#ctor">
+            <summary>Constructor which define default value for <see cref="P:Concept.Utils.Wpf.WizardControl.TransitionDuration">transition duration</see></summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.WizardControl.Wizard">
+            <summary>Gets or Sets <see cref="F:Concept.Utils.Wpf.WizardControl.WizardProperty">WizardProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.WizardControl.WizardProperty">
+            <summary>Dependency property who allows to define <see cref="P:Concept.Utils.Wpf.WizardControl.Wizard">wizard</see>. The <see cref="P:Concept.Utils.Wpf.WizardControl.Wizard">wizard</see> provides the data model to display in this control.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.WizardControl.IsTitleVisible">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.WizardControl.IsTitleVisibleProperty">IsTilteVisibleProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.WizardControl.IsTitleVisibleProperty">
+            <summary>Dependency property who allows to define if the Title of wizard are visible.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.WizardControl.IsSummaryVisible">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.WizardControl.IsSummaryVisibleProperty">IsSummaryVisibleProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.WizardControl.IsSummaryVisibleProperty">
+            <summary>Dependency property who allows to define if the summary of all wizard pages are visible.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.WizardControl.Transition">
+            <summary>Gets or Sets <see cref="F:Concept.Utils.Wpf.WizardControl.TransitionProperty">TransitionProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.WizardControl.TransitionProperty">
+            <summary>Dependency property who allows to define the transition which animate your screens when you navigate. This choice is done with the
+            enumeration <see cref="T:Concept.Utils.Wpf.WizardControlTransitions">WizardControlTransitions</see>.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.WizardControl.CustomTransition">
+            <summary>Gets or sets <see cref="F:Concept.Utils.Wpf.WizardControl.CustomTransitionProperty">CustomTransitionProperty</see> value.</summary>
+        </member>
+        <member name="F:Concept.Utils.Wpf.WizardControl.CustomTransitionProperty">
+            <summary>Dependency property who allows to define a custom transition between the changements of page.</summary>
+        </member>
+        <member name="P:Concept.Utils.Wpf.WizardControl.TransitionDuration">
+            <summary>Gets or sets the duration of transition.</summary>
+        </member>
+        <member name="M:Concept.Utils.Wpf.WizardControl.OnApplyTemplate">
+            <summary>On this call, the wizard control apply the used transition and navigate to its first page.</summary>
+        </member>
+        <member name="E:Concept.Utils.Wpf.WizardControl.Exited">
+            <summary>Event called when wizard is finished or wizard is cancelled.</summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

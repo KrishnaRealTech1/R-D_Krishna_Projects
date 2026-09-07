@@ -1,0 +1,3814 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Concept.Utils</name>
+    </assembly>
+    <members>
+        <member name="T:Concept.Utils.AssemblyInfoReader">
+            <summary>
+            Class AssemblyInfoReader
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.AssemblyInfoReader.GetAssemblyAttribute``1(System.Func{``0,System.String})">
+            <summary>
+            Gets the executing assembly attribute.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">The value.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.AssemblyInfoReader.GetCustomAssemblyAttribute``1(System.Func{``0,System.String},System.Type)">
+            <summary>
+            Gets the custom assembly attribute.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">The value.</param>
+            <param name="assemblyBaseType">The type contained in the assembly on which to get the assembly attribute.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.AssemblyInfoReader.GetCustomAssemblyAttribute``1(System.Func{``0,System.String},System.Reflection.Assembly)">
+            <summary>
+            Gets the custom assembly attribute.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">The value.</param>
+            <param name="baseAssembly">The assembly on which to get the assembly attribute.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.AssemblyInfoReader.#ctor(System.Reflection.Assembly)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.AssemblyInfoReader"/> class.
+            </summary>
+            <param name="assembly">The assembly.</param>
+        </member>
+        <member name="P:Concept.Utils.AssemblyInfoReader.AssemblyTitle">
+            <summary>
+            Gets the assembly title.
+            </summary>
+            <value>The assembly title.</value>
+        </member>
+        <member name="P:Concept.Utils.AssemblyInfoReader.AssemblyVersion">
+            <summary>
+            Gets the assembly version.
+            </summary>
+            <value>The assembly version.</value>
+        </member>
+        <member name="P:Concept.Utils.AssemblyInfoReader.AssemblyDescription">
+            <summary>
+            Gets the assembly description.
+            </summary>
+            <value>The assembly description.</value>
+        </member>
+        <member name="P:Concept.Utils.AssemblyInfoReader.AssemblyProduct">
+            <summary>
+            Gets the assembly product.
+            </summary>
+            <value>The assembly product.</value>
+        </member>
+        <member name="P:Concept.Utils.AssemblyInfoReader.AssemblyCopyright">
+            <summary>
+            Gets the assembly copyright.
+            </summary>
+            <value>The assembly copyright.</value>
+        </member>
+        <member name="P:Concept.Utils.AssemblyInfoReader.AssemblyCompany">
+            <summary>
+            Gets the assembly company.
+            </summary>
+            <value>The assembly company.</value>
+        </member>
+        <member name="T:Concept.Utils.ConceptWeakEvent`1">
+            <summary>
+            A class for managing a weak event.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.ConceptWeakEvent`1.Add(`0)">
+            <summary>
+            Adds the specified eh.
+            </summary>
+            <param name="eh">The eh.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptWeakEvent`1.Remove(`0)">
+            <summary>
+            Removes the specified eh.
+            </summary>
+            <param name="eh">The eh.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptWeakEvent`1.Raise(System.Object,System.EventArgs)">
+            <summary>
+            Raises the specified sender.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Concept.Utils.ConceptWeakEventSource">
+            <summary>
+            Class ConceptWeakEventSource
+            </summary>
+        </member>
+        <member name="E:Concept.Utils.ConceptWeakEventSource.Event">
+            <summary>
+            Occurs when [event].
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.ConceptWeakEventSource.RaiseEvent">
+            <summary>
+            Raises the event.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.ConceptWeakEventSource.RaiseEvent(System.Object)">
+            <summary>
+            Raises the event.
+            </summary>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptWeakEventSource.RaiseEvent``1(``0)">
+            <summary>
+            Raises the event.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="args">The args.</param>
+        </member>
+        <member name="P:Concept.Utils.ConceptWeakEventSource.Sender">
+            <summary>
+            Gets or sets the sender.
+            </summary>
+            <value>The sender.</value>
+        </member>
+        <member name="T:Concept.Utils.ConceptWeakReference`1">
+            <summary>
+            Class ConceptWeakReference
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Concept.Utils.ConceptWeakReference`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.ConceptWeakReference`1"/> class.
+            </summary>
+            <param name="reference">The reference.</param>
+        </member>
+        <member name="P:Concept.Utils.ConceptWeakReference`1.Reference">
+            <summary>
+            Gets the reference.
+            </summary>
+            <value>The reference.</value>
+        </member>
+        <member name="T:Concept.Utils.IDetailsProvider">
+            <summary>
+            Interface IDetailsProvider
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.IDetailsProvider.Details">
+            <summary>
+            Gets the details.
+            </summary>
+            <value>The details.</value>
+        </member>
+        <member name="T:Concept.Utils.CsvExport">
+            <summary>
+            Class CsvExport
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.CsvExport.Item(System.String)">
+            <summary>
+            Sets the <see cref="T:System.Object"/> with the specified field.
+            </summary>
+            <param name="field">The field.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Utils.CsvExport.AddRow">
+            <summary>
+            Adds the row.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.CsvExport.Export">
+            <summary>
+            Exports this instance.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.CsvExport.ExportToFile(System.String)">
+            <summary>
+            Exports to file.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Concept.Utils.CsvExport.ExportToBytes">
+            <summary>
+            Exports to bytes.
+            </summary>
+            <returns>System.Byte[][].</returns>
+        </member>
+        <member name="T:Concept.Utils.EncryptionUtils">
+            <summary>
+            Class EncryptionUtils
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EncryptionUtils.PublicRsaKeySuffix">
+            <summary>
+            The public RSA key suffix
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EncryptionUtils.PrivateRsaKeySuffix">
+            <summary>
+            The private RSA key suffix
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EncryptionUtils.RsaKeysFileFilter">
+            <summary>
+            The RSA keys file filter
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.EncryptionUtils.GenerateRsaKeys(System.Int32,System.String,System.String)">
+            <summary>
+            Generates the RSA keys.
+            </summary>
+            <param name="keySize">Size of the key.</param>
+            <param name="keyName">Name of the key.</param>
+            <param name="generatingFolderPath">The generating folder path.</param>
+        </member>
+        <member name="M:Concept.Utils.EncryptionUtils.SignXmlDocumentUsingRsa(System.Xml.XmlDocument,System.Security.Cryptography.RSACryptoServiceProvider)">
+            <summary>
+            Signs the XML document using RSA.
+            </summary>
+            <param name="baseXmlDocument">The base XML document.</param>
+            <param name="rsaPrivateKey">The RSA private key.</param>
+            <returns>XmlDocument.</returns>
+        </member>
+        <member name="M:Concept.Utils.EncryptionUtils.ResolveSignedXmlDocumentUsingRsa(System.Xml.XmlDocument,System.Security.Cryptography.RSACryptoServiceProvider)">
+            <summary>
+            Resolves the signed XML document using RSA.
+            </summary>
+            <param name="signedXmlDocument">The signed XML document.</param>
+            <param name="rsaPublicKey">The RSA public key.</param>
+            <returns>XmlDocument.</returns>
+            <exception cref="T:System.NotSupportedException">
+            Signed XML Document has a bad Concept Format!
+            or
+            Signed XML Document does not match the XML Signature!
+            </exception>
+        </member>
+        <member name="M:Concept.Utils.EncryptionUtils.SignXmlDocumentUsingSha1(System.Xml.XmlDocument,System.String)">
+            <summary>
+            Signs the XML document using sha1.
+            </summary>
+            <param name="baseXmlDocument">The base XML document.</param>
+            <param name="symmetricKey">The symmetric key.</param>
+            <returns>XmlDocument.</returns>
+        </member>
+        <member name="M:Concept.Utils.EncryptionUtils.ResolveSignedXmlDocumentUsingSha1(System.Xml.XmlDocument,System.String)">
+            <summary>
+            Resolves the signed XML document using sha1.
+            </summary>
+            <param name="signedXmlDocument">The signed XML document.</param>
+            <param name="symmetricKey">The symmetric key.</param>
+            <returns>XmlDocument.</returns>
+            <exception cref="T:System.NotSupportedException">
+            Signed XML Document has a bad Concept Format!
+            or
+            Signed XML Document does not match the XML Signature!
+            </exception>
+        </member>
+        <member name="M:Concept.Utils.EncryptionUtils.EncryptString(System.String,System.String)">
+            <summary>
+            Encrypts the string.
+            </summary>
+            <param name="plainText">The plain text.</param>
+            <param name="key">The key.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.EncryptionUtils.DecryptString(System.String,System.String)">
+            <summary>
+            Decrypts the string.
+            </summary>
+            <param name="cipherText">The cipher text.</param>
+            <param name="key">The key.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Concept.Utils.Filter`1">
+            <summary>
+            Delegate Filter
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item">The item.</param>
+            <returns>Filter result <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Concept.Utils.FilterEventArgs`1">
+            <summary>
+            Class FilterEventArgs
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Concept.Utils.FilterEventArgs`1.Item">
+            <summary>
+            The item
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.FilterEventArgs`1.Accept">
+            <summary>
+            The accept
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.FilterEvent`1">
+            <summary>
+            Delegate FilterEvent
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sender">The sender.</param>
+            <param name="e">The e.</param>
+        </member>
+        <member name="T:Concept.Utils.ConceptUtilsUtils">
+            <summary>
+            Class ConceptUtilsUtils
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.IsEnumDisplayableField(System.Reflection.FieldInfo)">
+            <summary>
+            Determines whether [is enum displayable field] [the specified field].
+            </summary>
+            <param name="field">The field.</param>
+            <returns><c>true</c> if [is enum displayable field] [the specified field]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.GetEnumNameAttributeText(System.Reflection.FieldInfo)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.EnumIntlNameAttribute"/> attribute on <see cref="T:System.Reflection.FieldInfo"/>.
+            </summary>
+            <param name="field">The field.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.GetEnumNameAttributeText(System.Enum)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.EnumIntlNameAttribute"/> attribute on <see cref="T:System.Enum"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.GetEnumDetailsAttributeText(System.Reflection.FieldInfo)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.EnumIntlDetailsAttribute"/> attribute on <see cref="T:System.Reflection.FieldInfo"/>.
+            </summary>
+            <param name="field">The field.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.GetEnumDetailsAttributeText(System.Enum)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.EnumIntlDetailsAttribute"/> attribute on <see cref="T:System.Enum"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.ConceptUtilsUtils.ApplicationDataPath">
+            <summary>
+            Gets or sets the application data path.
+            </summary>
+            <value>The application data path.</value>
+            <exception cref="T:System.NotSupportedException">The application folder has already been used. The field is now freezed</exception>
+        </member>
+        <member name="P:Concept.Utils.ConceptUtilsUtils.ApplicationName">
+            <summary>
+            Gets or sets the name of the application.
+            </summary>
+            <value>The name of the application.</value>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.InitializePuoFile(System.Boolean)">
+            <summary>
+            Initializes the puo file.
+            </summary>
+            <param name="forceCopy">if set to <c>true</c> [force copy].</param>
+        </member>
+        <member name="P:Concept.Utils.ConceptUtilsUtils.IsApplicationInDebugMode">
+            <summary>
+            Gets a value indicating whether this instance is application in debug mode.
+            </summary>
+            <value><c>true</c> if this instance is application in debug mode; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Concept.Utils.ConceptUtilsUtils.ConceptFileExtension">
+            <summary>
+            Constant string to represent configuration extension.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptUtilsUtils.ConceptFileFilter">
+            <summary>
+            Constant string to represent configuration file filter.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptUtilsUtils.DefaultSubject">
+            <summary>
+            Constant string to represent the default subject.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptUtilsUtils.DefaultNullableValue">
+            <summary>
+            Constant string to represent the default value for a nullable.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ConceptUtilsUtils.DefaultSubjects">
+            <summary>
+            Gets the default subjects.
+            </summary>
+            <value>The default subjects.</value>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.GetMessageOf(System.Exception)">
+            <summary>
+            Gets the message of.
+            </summary>
+            <param name="e">The e.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.LogException(System.Exception)">
+            <summary>
+            Logs the exception.
+            </summary>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.LogException(System.String,System.String,System.String,System.String)">
+            <summary>
+            Logs the exception.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="type">The type.</param>
+            <param name="source">The source.</param>
+            <param name="stackTrace">The stackTrace.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.LogException(System.String,System.Exception)">
+            <summary>
+            Logs the exception.
+            </summary>
+            <param name="filename">The filename.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.LogException(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Logs the exception.
+            </summary>
+            <param name="filename">The filename.</param>
+            <param name="message">The message.</param>
+            <param name="type">The type.</param>
+            <param name="source">The source.</param>
+            <param name="stackTrace">The stackTrace.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.IsA(System.Type,System.Type)">
+            <summary>
+            Determines whether the specified type is the same as the ref type.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="refType">Type of reference.</param>
+            <returns><c>true</c> if type is a refType; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.IsNullableType(System.Type)">
+            <summary>
+            Determines whether the specified type is a nullable type (<![CDATA[ Nullable<> ]]>).
+            </summary>
+            <param name="type">The type.</param>
+            <returns><c>true</c> if type is a nullable; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.GetUnderlyingTypeFromNullableOrSelf(System.Type,System.Type@)">
+            <summary>
+            Retrieves the underlying type if the specified type is a nullable type. If the specified type is not a nullable type, retrieves the specified type.
+            Returns whether the specified type was a nullable type or not.
+            </summary>
+            <param name="type">The specified type.</param>
+            <param name="underlyingType">The underlying type or the specified type.</param>
+            <returns><c>true</c> if type is a nullable; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.CreateDirectory(System.String,System.Boolean,Concept.Utils.IMessageCollector)">
+            <summary>
+            Creates the directory.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="overwrite">if set to <c>true</c> [overwrite].</param>
+            <param name="messages">The messages.</param>
+            <returns><c>true</c> if directory has been created and the files cleared, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.GetAttributePhysicalUnitDimension(System.Reflection.PropertyInfo)">
+            <summary>
+            Gets the attribute <see cref="T:Concept.Utils.ConceptPhysicalUnitDimensionAttribute">physical unit dimension</see>.
+            </summary>
+            <param name="property">The property.</param>
+            <returns>PhysicalUnitDimension.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.AddStringConverter(Concept.Utils.ConceptStringConverter)">
+            <summary>
+            Adds the string converter.
+            </summary>
+            <param name="converter">The converter.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.StringConverterOf(System.Type)">
+            <summary>
+            Strings the converter of.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>ConceptStringConverter.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.ConvertTimeSpanToString(System.TimeSpan)">
+            <summary>
+            Converts a TimeSpan into a string representation. Ex.: 23d11h04m21s
+            </summary>
+            <param name="timeSpan">The TimeSpan object to convert in string.</param>
+            <returns>The string representation of the TimeSpan object.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.ConvertStringToTimeSpan(System.String)">
+            <summary>
+            Converts a string into a TimeSpan object.
+            </summary>
+            <param name="value">The string to convert into a TimeSpan object.</param>
+            <exception cref="T:System.FormatException">Occurs when the string format is not valid. Example of a valid format: 1d08h23m42s134ms812us</exception>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.TryConvertStringToTimeSpan(System.String,System.TimeSpan@)">
+            <summary>
+            Tries to convert a string into a TimeSpan object.
+            </summary>
+            <param name="value">The string to convert into a TimeSpan object.</param>
+            <param name="timeSpan">The TimeSpan object created based on the input string.</param>
+            <returns>True when the conversion is successful, else false.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.ToString(System.Type,System.Object)">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="obj">The obj.</param>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.FromString(System.Type,System.String,Concept.Utils.IMessageCollector,System.Object)">
+            <summary>
+            Froms the string.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="value">The value.</param>
+            <param name="messageCollector">The message collector.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns>System.Object.</returns>
+            <exception cref="T:System.Exception">Error loading properties - Type unknown :  + type</exception>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.SameStrings(System.String[],System.String[])">
+            <summary>
+            Sames the strings.
+            </summary>
+            <param name="stringsA">The strings A.</param>
+            <param name="stringsB">The strings B.</param>
+            <returns><c>true</c> if stringA equal stringB, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.WriteDiagnostic(System.String)">
+            <summary>
+            Writes the diagnostic.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.WriteDebugInformation(System.String)">
+            <summary>
+            Writes the debug information.
+            </summary>
+            <param name="message">The message.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Concept.Utils.ConceptUtilsUtils.WarnPropertyNotFound(Concept.Utils.IMessageCollector,Concept.Utils.IDataStoreNode,System.String,System.Object)">
+            <summary>
+            Warns the property not found.
+            </summary>
+            <param name="messageCollector">The message collector.</param>
+            <param name="node">The node.</param>
+            <param name="path">The path.</param>
+            <param name="defaultValue">The default value.</param>
+        </member>
+        <member name="F:Concept.Utils.ConceptUtilsUtils.ApplicationAssembliesCollectionChanged">
+            <summary>
+            The application assemblies collection changed
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.ConceptStringConverter">
+            <summary>
+            Class ConceptStringConverter
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ConceptStringConverter.Type">
+            <summary>
+            Gets the type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="M:Concept.Utils.ConceptStringConverter.ConvertTo(System.Object)">
+            <summary>
+            Converts to.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptStringConverter.ConvertFrom(System.String)">
+            <summary>
+            Converts from.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptStringConverter.CheckValidObjectType(System.Object)">
+            <summary>
+            Checks the type of the valid object.
+            </summary>
+            <param name="value">The value.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="T:Concept.Utils.EventArgs`1">
+            <summary>
+            A generic class to manage an event argument with one parameter.
+            </summary>
+            <typeparam name="T">The type of the parameter.</typeparam>
+        </member>
+        <member name="M:Concept.Utils.EventArgs`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of generic EventArgs.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:Concept.Utils.EventArgs`1.Value">
+            <summary>
+            Gets the value object.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.EnumerableUtils">
+            <summary>
+            Class EnumerableUtils
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.YieldReturn``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Yields the return.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <param name="source">The source.</param>
+            <returns>IEnumerable{``0}.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.Filter``1(System.Collections.IEnumerable,Concept.Utils.Filter{``0})">
+            <summary>
+            Filters the specified list.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list">The list.</param>
+            <param name="filter">The filter.</param>
+            <returns>IEnumerable{``0}.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.Filter(System.Collections.IEnumerable,Concept.Utils.Filter{System.Object})">
+            <summary>
+            Filters the <paramref name="list"/>
+            </summary>
+            <param name="list">The list</param>
+            <param name="filter">The filter</param>
+            <returns>The filtered list</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.ToString(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <param name="list">The list.</param>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.AppendToCollection``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Appends to collection.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="collection">The collection.</param>
+            <param name="enumerable">The enumerable.</param>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.ToList``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            To the list.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <returns>List{T}.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.ToEnumerable``1(``0)">
+            <summary>
+            To the enumerable.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item">The item.</param>
+            <returns>IEnumerable{T}.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.Contains(System.Collections.IEnumerable,System.Object)">
+            <summary>
+            Determines whether [contains] [the specified enumerable].
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+            <param name="containedObject">The contained object.</param>
+            <returns><c>true</c> if [contains] [the specified enumerable]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.Concat(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Concats the specified enumerable1.
+            </summary>
+            <param name="enumerable1">The enumerable1.</param>
+            <param name="enumerable2">The enumerable2.</param>
+            <returns>IEnumerable.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.Concat``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Concats the specified enumerable1.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable1">The enumerable1.</param>
+            <param name="enumerable2">The enumerable2.</param>
+            <returns>IEnumerable{``0}.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.IsEmpty(System.Collections.IEnumerable)">
+            <summary>
+            Determines whether the specified enumerable is empty.
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+            <returns><c>true</c> if the specified enumerable is empty; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.Count(System.Collections.IEnumerable)">
+            <summary>
+            Counts the specified enumerable.
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.First``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Firsts the specified enumerable.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <returns>T</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.First(System.Collections.IEnumerable)">
+            <summary>
+            Firsts the specified enumerable.
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Concept.Utils.EnumerableUtils.StringToEnum``1(System.String)">
+            <summary>
+            Strings to enum.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="name">The name.</param>
+            <returns>T</returns>
+        </member>
+        <member name="T:Concept.Utils.EditorNotification">
+            <summary>
+            Enum EditorNotification
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EditorNotification.BeforeDisplay">
+            <summary>
+            Notify before display
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EditorNotification.AfterDisplay">
+            <summary>
+            Notify after display
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EditorNotification.BeforeValidation">
+            <summary>
+            Notify before validation
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EditorNotification.AfterValidation">
+            <summary>
+            Notify after validation
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EditorNotification.BeforeCancel">
+            <summary>
+            Notify before cancel
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EditorNotification.AfterCancel">
+            <summary>
+            Notify after cancel
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EditorNotification.HelpDisabled">
+            <summary>
+            Notify help disabled
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.EditorNotification.HelpOpen">
+            <summary>
+            Notify help open
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.INotifiableEditor">
+            <summary>
+            Interface INotifiableEditor
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.INotifiableEditor.Notification(Concept.Utils.EditorNotification,System.Boolean@)">
+            <summary>
+            Notifies the specified notification.
+            </summary>
+            <param name="notification">The notification.</param>
+            <param name="result">if set to <c>true</c> [result].</param>
+        </member>
+        <member name="T:Concept.Utils.ICategorizedEditor">
+            <summary>
+            Interface ICategorizedEditor
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ICategorizedEditor.Category">
+            <summary>
+            Gets the category.
+            </summary>
+            <value>The category.</value>
+        </member>
+        <member name="T:Concept.Utils.ReadOnlyDictionary`2">
+            <summary>
+            Class ReadOnlyDictionary
+            </summary>
+            <typeparam name="TKey">The type of the T key.</typeparam>
+            <typeparam name="TValue">The type of the T value.</typeparam>
+        </member>
+        <member name="M:Concept.Utils.ReadOnlyDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.ReadOnlyDictionary`2"/> class.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="P:Concept.Utils.ReadOnlyDictionary`2.Item(`0)">
+            <summary>
+            Gets the TValue with the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>TValue</returns>
+            <exception cref="T:System.NullReferenceException">No value found for given key</exception>
+        </member>
+        <member name="M:Concept.Utils.ReadOnlyDictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the specified key contains key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns><c>true</c> if the specified key contains key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.ReadOnlyDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Tries the get value.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns><c>true</c> if successfully get the value, <c>false</c> otherwise</returns>
+        </member>
+        <member name="T:Concept.Utils.SystemUtils">
+            <summary>
+            Class SystemUtils
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.SystemUtils.Is64BitProcess">
+            <summary>
+            Gets a value indicating whether [is64 bit process].
+            </summary>
+            <value><c>true</c> if [is64 bit process]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Utils.SystemUtils.Is64BitOperatingSystem">
+            <summary>
+            Gets a value indicating whether [is64 bit operating system].
+            </summary>
+            <value><c>true</c> if [is64 bit operating system]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Concept.Utils.XmlDataStore">
+            <summary>
+            Class XmlDataStore
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.XmlDataStore"/> class.
+            </summary>
+            <param name="rootName">Name of the root.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.XmlDataStore"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.XmlDataStore.Xml">
+            <summary>
+            Gets or sets the XML.
+            </summary>
+            <value>The XML.</value>
+        </member>
+        <member name="P:Concept.Utils.XmlDataStore.Changed">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Concept.Utils.XmlDataStore"/> is changed.
+            </summary>
+            <value><c>true</c> if changed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.LoadFromStream(System.IO.Stream)">
+            <summary>
+            Loads from stream.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.LoadFromFile(System.String)">
+            <summary>
+            Loads from file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.SaveToStream(System.IO.Stream)">
+            <summary>
+            Saves to stream.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.SaveToFile(System.String)">
+            <summary>
+            Saves to file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.LoadFromString(System.String)">
+            <summary>
+            Loads from string.
+            </summary>
+            <param name="stringContent">Content of the string.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.OnChange">
+            <summary>
+            Called when [change].
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.SaveToString(System.String@)">
+            <summary>
+            Saves to string.
+            </summary>
+            <param name="stringContent">Content of the string.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStore.SaveToXmlIndentedString(System.String@)">
+            <summary>
+            Saves to xml indented string.
+            </summary>
+            <param name="stringContent">Content of the string.</param>
+        </member>
+        <member name="T:Concept.Utils.XmlDataStoreNode">
+            <summary>
+            Class XmlDataStoreNode
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.XmlDataStoreNode.Change">
+            <summary>
+            The change <see cref="T:Concept.Utils.ConceptWeakEventSource">event</see>.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.HasItem(System.String)">
+            <summary>
+            Determines whether the specified path has item.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if the specified path has item; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.DeleteItem(System.String)">
+            <summary>
+            Deletes the item.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.ReadString(System.String,System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the string.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="defaultValue">The default value.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.WriteString(System.String,System.String)">
+            <summary>
+            Writes the string.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.GetNode(System.String,System.Boolean)">
+            <summary>
+            Gets the node.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="forceCreate">if set to <c>true</c> [force create].</param>
+            <returns>IDataStoreNode.</returns>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.GetPath">
+            <summary>
+            Gets the path.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.OnChange">
+            <summary>
+            Called when [change].
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.XmlDataStoreNode.NormalizePath(System.String)">
+            <summary>
+            Normalizes the path.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Concept.Utils.XmlAdvancedDataStore">
+            <summary>
+            Class XmlAdvancedDataStore
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.XmlAdvancedDataStore.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.XmlAdvancedDataStore"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.XmlAdvancedDataStore.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.XmlAdvancedDataStore"/> class.
+            </summary>
+            <param name="rootName">Name of the root.</param>
+        </member>
+        <member name="P:Concept.Utils.XmlAdvancedDataStore.EncryptionKey">
+            <summary>
+            Gets or sets the encryption key.
+            </summary>
+            <value>The encryption key.</value>
+        </member>
+        <member name="P:Concept.Utils.XmlAdvancedDataStore.DeserializingMessages">
+            <summary>
+            Gets or sets the deserializing messages.
+            </summary>
+            <value>The deserializing messages.</value>
+        </member>
+        <member name="P:Concept.Utils.XmlAdvancedDataStore.RsaPublicKey">
+            <summary>
+            Gets or sets the RSA public key.
+            </summary>
+            <value>The RSA public key.</value>
+        </member>
+        <member name="P:Concept.Utils.XmlAdvancedDataStore.RsaPrivateKey">
+            <summary>
+            Gets or sets the RSA private key.
+            </summary>
+            <value>The RSA private key.</value>
+        </member>
+        <member name="P:Concept.Utils.XmlAdvancedDataStore.Sha1SymmetricKey">
+            <summary>
+            Gets or sets the sha1 symmetric key.
+            </summary>
+            <value>The sha1 symmetric key.</value>
+        </member>
+        <member name="M:Concept.Utils.XmlAdvancedDataStore.LoadFromString(System.String)">
+            <summary>
+            Loads from string.
+            </summary>
+            <param name="stringContent">Content of the string.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlAdvancedDataStore.SaveToString(System.String@)">
+            <summary>
+            Saves to string.
+            </summary>
+            <param name="stringContent">Content of the string.</param>
+        </member>
+        <member name="T:Concept.Utils.IDataStoreNode">
+            <summary>
+            Interface IDataStoreNode
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.IDataStoreNode.Path">
+            <summary>
+            Gets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.HasItem(System.String)">
+            <summary>
+            Determines whether the specified path has item.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if the specified path has item; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.GetNode(System.String,System.Boolean)">
+            <summary>
+            Gets the node.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="forceCreate">if set to <c>true</c> [force create].</param>
+            <returns>IDataStoreNode.</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.DeleteItem(System.String)">
+            <summary>
+            Deletes the item.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadBool(System.String,System.Boolean,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the bool.
+            </summary>
+            <remarks>
+            Value Management - MessageCollector can be null if warnings are not suited
+            </remarks>
+            <param name="path">The path.</param>
+            <param name="defaultValue">if set to <c>true</c> [default value].</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteBool(System.String,System.Boolean)">
+            <summary>
+            Writes the bool.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="value">if set to <c>true</c> [value].</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadInt(System.String,System.Int32,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the int.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="defaultValue">The default value.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteInt(System.String,System.Int32)">
+            <summary>
+            Writes the int.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadDouble(System.String,System.Double,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the double.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="defaultValue">The default value.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteDouble(System.String,System.Double)">
+            <summary>
+            Writes the double.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadString(System.String,System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the string.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="defaultValue">The default value.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteString(System.String,System.String)">
+            <summary>
+            Writes the string.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadBools(System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the bools.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.Boolean[].</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteBools(System.String,System.Collections.Generic.IEnumerable{System.Boolean})">
+            <summary>
+            Writes the bools.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="newValue">The new value.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadInts(System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the ints.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.Int32[].</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteInts(System.String,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Writes the ints.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="newValue">The new value.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadDoubles(System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the doubles.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.Double[].</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteDoubles(System.String,System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Writes the doubles.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="newValue">The new value.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadStrings(System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the strings.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.String[].</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteStrings(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Writes the strings.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="newValue">The new value.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadBinary(System.String,System.Byte[],Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the binary.
+            </summary>
+            <param name="keyPath">The key path.</param>
+            <param name="defaultValue">The default value.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.Byte[].</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteBinary(System.String,System.Byte[])">
+            <summary>
+            Writes the binary.
+            </summary>
+            <param name="keyPath">The key path.</param>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.ReadImage(System.String,System.Drawing.Image,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the image.
+            </summary>
+            <param name="keyPath">The key path.</param>
+            <param name="defaultImage">The default image.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>Image.</returns>
+        </member>
+        <member name="M:Concept.Utils.IDataStoreNode.WriteImage(System.String,System.Drawing.Image)">
+            <summary>
+            Writes the image.
+            </summary>
+            <param name="keyPath">The key path.</param>
+            <param name="image">The image.</param>
+        </member>
+        <member name="T:Concept.Utils.Intl">
+            <summary>
+            Class Intl
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.Intl.IntlFileExtension">
+            <summary>
+            The intl file extension
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Intl.Dictionnary">
+            <summary>
+            Gets the dictionnary.
+            </summary>
+            <value>The dictionnary.</value>
+        </member>
+        <member name="M:Concept.Utils.Intl.Text(System.String,System.String)">
+            <summary>
+            Texts the specified item code.
+            </summary>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.Intl.TextLine(System.String,System.String)">
+            <summary>
+            Texts the line.
+            </summary>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.Intl.Format(System.String,System.String,System.Object[])">
+            <summary>
+            Formats the specified item code.
+            </summary>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+            <param name="args">The args.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.Intl.FormatLine(System.String,System.String,System.Object[])">
+            <summary>
+            Formats the line.
+            </summary>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+            <param name="args">The args.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.Intl.OK">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> OK.
+            </summary>
+            <value>The OK.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Cancel">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> Cancel.
+            </summary>
+            <value>The cancel.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Help">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> help.
+            </summary>
+            <value>The help.</value>
+        </member>
+        <member name="M:Concept.Utils.Intl.Help_(System.String)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> underline help.
+            </summary>
+            <param name="underlineMark">The underline mark.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.Intl.Close">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> close.
+            </summary>
+            <value>The close.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Abort">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> abort.
+            </summary>
+            <value>The abort.</value>
+        </member>
+        <member name="M:Concept.Utils.Intl.Abort_(System.String)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> underline abort.
+            </summary>
+            <param name="underlineMark">The underline mark.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.Intl.Retry">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> retry.
+            </summary>
+            <value>The retry.</value>
+        </member>
+        <member name="M:Concept.Utils.Intl.Retry_(System.String)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> underline retry.
+            </summary>
+            <param name="underlineMark">The underline mark.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.Intl.Ignore">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> ignore.
+            </summary>
+            <value>The ignore.</value>
+        </member>
+        <member name="M:Concept.Utils.Intl.Ignore_(System.String)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> underline ignore.
+            </summary>
+            <param name="underlineMark">The underline mark.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.Intl.Yes">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> yes.
+            </summary>
+            <value>The yes.</value>
+        </member>
+        <member name="M:Concept.Utils.Intl.Yes_(System.String)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> underline yes.
+            </summary>
+            <param name="underlineMark">The underline mark.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.Intl.No">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> no.
+            </summary>
+            <value>The no.</value>
+        </member>
+        <member name="M:Concept.Utils.Intl.No_(System.String)">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> underline no.
+            </summary>
+            <param name="underlineMark">The underline mark.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.Intl.Information">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> information.
+            </summary>
+            <value>The information.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Confirmation">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> confirmation.
+            </summary>
+            <value>The confirmation.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Warning">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> warning.
+            </summary>
+            <value>The warning.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Error">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> error.
+            </summary>
+            <value>The error.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Add">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> add.
+            </summary>
+            <value>The add.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Clear">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> clear.
+            </summary>
+            <value>The clear.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Remove">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> remove.
+            </summary>
+            <value>The remove.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Clone">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> clone.
+            </summary>
+            <value>The clone.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.InsertBefore">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> insert before.
+            </summary>
+            <value>The insert before.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.InsertAfter">
+            <summary>
+            Gets the <see cref="T:Concept.Utils.IntlText"/> insert after.
+            </summary>
+            <value>The insert after.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Up">
+            <summary>
+            Gets <see cref="T:Concept.Utils.IntlText"/> up.
+            </summary>
+            <value>Up.</value>
+        </member>
+        <member name="P:Concept.Utils.Intl.Down">
+            <summary>
+            Gets <see cref="T:Concept.Utils.IntlText"/> down.
+            </summary>
+            <value>Down.</value>
+        </member>
+        <member name="T:Concept.Utils.DataLoggerMode">
+            <summary>
+            Enum DataLoggerMode
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.DataLoggerMode.Disabled">
+            <summary>
+            Disable the logger
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.DataLoggerMode.AppendFile">
+            <summary>
+            Append to exsiting log file
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.DataLoggerMode.RewriteFile">
+            <summary>
+            Rewrite the log file
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.DataLoggerMode.FilePerDay">
+            <summary>
+            Create on log file per day
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.DataLogger">
+            <summary>
+            Class DataLogger
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.#ctor(Concept.Utils.DataLoggingService,System.String,Concept.Utils.DataLoggerMode,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.DataLogger"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+            <param name="defaultMode">The default mode.</param>
+            <param name="logExtension">The log extension.</param>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.#ctor(Concept.Utils.DataLoggingService,System.String,Concept.Utils.DataLoggerMode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.DataLogger"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+            <param name="defaultMode">The default mode.</param>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.#ctor(Concept.Utils.DataLoggingService,System.String,Concept.Utils.DataLoggerMode,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.DataLogger"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+            <param name="defaultMode">The default mode.</param>
+            <param name="configurable">if set to <c>true</c> [configurable].</param>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.#ctor(Concept.Utils.DataLoggingService,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.DataLogger"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.#ctor(Concept.Utils.DataLoggingService,System.String,Concept.Utils.DataLoggerMode,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.DataLogger"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+            <param name="defaultMode">The default mode.</param>
+            <param name="logExtension">The log extension.</param>
+            <param name="configurable">if set to <c>true</c> [configurable].</param>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.#ctor(Concept.Utils.DataLoggingService,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.DataLogger"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+            <param name="logExtension">The log extension.</param>
+        </member>
+        <member name="P:Concept.Utils.DataLogger.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Concept.Utils.DataLogger.Mode">
+            <summary>
+            Gets or sets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:Concept.Utils.DataLogger.Checksum">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Concept.Utils.DataLogger"/> is checksum.
+            </summary>
+            <value><c>true</c> if checksum; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Utils.DataLogger.TimeStamped">
+            <summary>
+            Gets or sets a value indicating whether [time stamped].
+            </summary>
+            <value><c>true</c> if [time stamped]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.ChecksumCompute">
+            <summary>
+            Checksums the compute.
+            </summary>
+            <returns><c>true</c> if checksum is correct, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.WriteLine(System.String)">
+            <summary>
+            Writes the line.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:Concept.Utils.DataLogger.WriteLine(System.String,System.Object[])">
+            <summary>
+            Writes the line.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="args">The args.</param>
+        </member>
+        <member name="T:Concept.Utils.DataLoggingService">
+            <summary>
+            Class DataLoggingService
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.DataLoggingService.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.DataLoggingService"/> class.
+            </summary>
+            <param name="logDirectory">The log directory.</param>
+            <param name="forceCreateDirectory">if set to <c>true</c> [force create directory].</param>
+        </member>
+        <member name="M:Concept.Utils.DataLoggingService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.DataLoggingService"/> class.
+            </summary>
+            <param name="logDirectory">The log directory.</param>
+        </member>
+        <member name="E:Concept.Utils.DataLoggingService.Error">
+            <summary>
+            Occurs when [error].
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.DataLoggingService.LogDirectory">
+            <summary>
+            Gets the log directory.
+            </summary>
+            <value>The log directory.</value>
+        </member>
+        <member name="P:Concept.Utils.DataLoggingService.DataLoggers">
+            <summary>
+            Gets the data loggers.
+            </summary>
+            <value>The data loggers.</value>
+        </member>
+        <member name="P:Concept.Utils.DataLoggingService.HasDataLoggers">
+            <summary>
+            Gets a value indicating whether this instance has data loggers.
+            </summary>
+            <value><c>true</c> if this instance has data loggers; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Utils.DataLoggingService.GetInternalDataLogger(System.String,Concept.Utils.DataLoggerMode)">
+            <summary>
+            Gets the internal data logger.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="defaultMode">The default mode.</param>
+            <returns>InternalDataLogger.</returns>
+        </member>
+        <member name="M:Concept.Utils.DataLoggingService.GetInternalDataLogger(System.String,Concept.Utils.DataLoggerMode,System.String)">
+            <summary>
+            Gets the internal data logger.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="defaultMode">The default mode.</param>
+            <param name="logExtension">The log extension.</param>
+            <returns>InternalDataLogger.</returns>
+        </member>
+        <member name="M:Concept.Utils.DataLoggingService.Save">
+            <summary>
+            Saves this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.DataLoggingService.Load">
+            <summary>
+            Loads this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.DataLoggingService.Terminate">
+             <summary>
+             Terminates this instance.
+             </summary>
+             <remarks>
+             This method MUST be called before leaving the application to :
+             <list type="bullet" >
+             <item>close all files</item>
+             <item>stop the service thread</item>
+             </list>
+            </remarks>
+        </member>
+        <member name="T:Concept.Utils.InternalDataLogger">
+            <summary>
+            Class InternalDataLogger
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.#ctor(Concept.Utils.DataLoggingService,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.InternalDataLogger"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.#ctor(Concept.Utils.DataLoggingService,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.InternalDataLogger"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+            <param name="logExtension">The log extension.</param>
+        </member>
+        <member name="P:Concept.Utils.InternalDataLogger.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Concept.Utils.InternalDataLogger.Mode">
+            <summary>
+            Gets or sets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:Concept.Utils.InternalDataLogger.Configurable">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Concept.Utils.InternalDataLogger"/> is configurable.
+            </summary>
+            <value><c>true</c> if configurable; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Utils.InternalDataLogger.TimeStamped">
+            <summary>
+            Gets or sets a value indicating whether [time stamped].
+            </summary>
+            <value><c>true</c> if [time stamped]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.Write(System.String)">
+            <summary>
+            Writes the specified text.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.Write(System.Object)">
+            <summary>
+            Writes the specified o.
+            </summary>
+            <param name="o">The o.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.Write(System.String,System.Object[])">
+            <summary>
+            Writes the specified text.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="args">The args.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.WriteLine(System.String)">
+            <summary>
+            Writes the line.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.WriteLine(System.Object)">
+            <summary>
+            Writes the line.
+            </summary>
+            <param name="o">The o.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.WriteLine(System.String,System.Object[])">
+            <summary>
+            Writes the line.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="args">The args.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.ReadConfigurationFrom(Concept.Utils.IDataStoreNode,Concept.Utils.IMessageCollector,Concept.Utils.DataLoggerMode)">
+            <summary>
+            Reads the configuration from.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="messageCollector">The message collector.</param>
+            <param name="defaultMode">The default mode.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.WriteConfigurationTo(Concept.Utils.IDataStoreNode)">
+            <summary>
+            Writes the configuration to.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="P:Concept.Utils.InternalDataLogger.Checksum">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Concept.Utils.InternalDataLogger"/> is checksum.
+            </summary>
+            <value><c>true</c> if checksum; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Utils.InternalDataLogger.ChecksumCompute">
+            <summary>
+            Checksums the compute.
+            </summary>
+            <returns><c>true</c> if checksum is correct, <c>false</c> otherwise</returns>
+            <exception cref="T:System.NotSupportedException">Cannot compute Checksum on an unsecure log</exception>
+        </member>
+        <member name="T:Concept.Utils.DataStoreNode">
+            <summary>
+            Class DataStoreNode
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.DataStoreNode.NodePathSeparator">
+            <summary>
+            The node path separator
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.DataStoreNode.HasItem(System.String)">
+            <summary>
+            Determines whether the specified path has item.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if the specified path has item; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.DataStoreNode.DeleteItem(System.String)">
+            <summary>
+            Deletes the item.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Concept.Utils.DataStoreNode.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.DataStoreNode.ReadString(System.String,System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the string.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="defaultValue">The default value.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.DataStoreNode.WriteString(System.String,System.String)">
+            <summary>
+            Writes the string.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Concept.Utils.DataStoreNode.GetNode(System.String,System.Boolean)">
+            <summary>
+            Gets the node.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="forceCreate">if set to <c>true</c> [force create].</param>
+            <returns>IDataStoreNode.</returns>
+        </member>
+        <member name="M:Concept.Utils.DataStoreNode.GetPath">
+            <summary>
+            Gets the path.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Concept.Utils.IMessageCollector">
+            <summary>
+            Interface IMessageCollector
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.IMessageCollector.Add(System.String)">
+            <summary>
+            Adds the specified message.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:Concept.Utils.IWarningCollector">
+            <summary>
+            Interface IWarningCollector
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.IWarningCollector.Add(System.String,System.String,Concept.Utils.WarningSeverity,System.EventHandler)">
+            <summary>
+            Adds the specified sender.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="message">The message.</param>
+            <param name="severity">The severity.</param>
+            <param name="resolutionCallBack">The resolution call back.</param>
+        </member>
+        <member name="P:Concept.Utils.IWarningCollector.Warnings">
+            <summary>
+            Gets the warnings.
+            </summary>
+            <value>The warnings.</value>
+        </member>
+        <member name="T:Concept.Utils.MessageCollection">
+            <summary>
+            Class MessageCollection
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.MessageCollection.Text">
+            <summary>
+            Gets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="T:Concept.Utils.WarningSeverity">
+            <summary>
+            Enum WarningSeverity
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.WarningSeverity.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.WarningSeverity.Informational">
+            <summary>
+            Informational
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.WarningSeverity.Serious">
+            <summary>
+            Serious
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.WarningSeverity.Critical">
+            <summary>
+            Critical
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.WarningItem">
+            <summary>
+            Class WarningItem
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.WarningItem.#ctor(System.String,System.String,Concept.Utils.WarningSeverity,System.EventHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.WarningItem"/> class.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="message">The message.</param>
+            <param name="severity">The severity.</param>
+            <param name="resolutionCallBack">The resolution call back.</param>
+        </member>
+        <member name="P:Concept.Utils.WarningItem.Sender">
+            <summary>
+            Gets the sender.
+            </summary>
+            <value>The sender.</value>
+        </member>
+        <member name="P:Concept.Utils.WarningItem.Message">
+            <summary>
+            Gets the message.
+            </summary>
+            <value>The message.</value>
+        </member>
+        <member name="P:Concept.Utils.WarningItem.Severity">
+            <summary>
+            Gets the severity.
+            </summary>
+            <value>The severity.</value>
+        </member>
+        <member name="P:Concept.Utils.WarningItem.ResolutionCallBack">
+            <summary>
+            Gets the resolution call back.
+            </summary>
+            <value>The resolution call back.</value>
+        </member>
+        <member name="M:Concept.Utils.WarningItem.SetCallBack(System.EventHandler)">
+            <summary>
+            Sets the call back.
+            </summary>
+            <param name="callBack">The call back.</param>
+        </member>
+        <member name="P:Concept.Utils.WarningItem.HasCallBack">
+            <summary>
+            Gets a value indicating whether this instance has call back.
+            </summary>
+            <value><c>true</c> if this instance has call back; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Concept.Utils.WarningCollection">
+            <summary>
+            Class WarningCollection
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.WarningCollection.GoToErrorEnabled">
+            <summary>
+            Gets or sets a value indicating whether [go to error enabled].
+            </summary>
+            <value><c>true</c> if [go to error enabled]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Concept.Utils.IntlDictionnary">
+            <summary>
+            Class IntlDictionnary
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.IntlDictionnary.CommandMark">
+            <summary>
+            The command mark
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.IntlDictionnary.CommentMark">
+            <summary>
+            The comment mark
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.IntlDictionnary.TranslationSeparator">
+            <summary>
+            The translation separator
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.IntlDictionnary.LanguageCodeSeparator">
+            <summary>
+            The language code separator
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.IntlDictionnary.CommandLanguage">
+            <summary>
+            The command language
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.IntlDictionnary.CommandImport">
+            <summary>
+            The command import
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.IntlDictionnary.LanguageDefault">
+            <summary>
+            The language default
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.IntlDictionnary"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.IntlDictionnary.ImportedFiles">
+            <summary>
+            Gets the imported files.
+            </summary>
+            <value>The imported files.</value>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.GetLanguage(System.String)">
+            <summary>
+            Gets the language.
+            </summary>
+            <param name="languageCode">The language code.</param>
+            <returns>IntlLanguage.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.SetLanguageName(System.String,System.String)">
+            <summary>
+            Sets the name of an existing language identified by a code or if no language is found creates a new one.
+            </summary>
+            <param name="languageCode">The code used to identify the language.</param>
+            <param name="languageName">The name of the language.</param>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.SetLanguageName(System.String,System.String,System.String)">
+            <summary>
+            Sets the name of an existing language identified by a code or if no language is found creates a new one.
+            </summary>
+            <param name="languageCode">The code used to identify the language.</param>
+            <param name="languageName">The name of the language.</param>
+            <param name="iconPath">The icon path for the language.</param>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.HasLanguageName(System.String)">
+            <summary>
+            Determines whether [has language name] [the specified language name].
+            </summary>
+            <param name="languageName">Name of the language.</param>
+            <returns><c>true</c> if [has language name] [the specified language name]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.GetLanguageCode(System.String)">
+            <summary>
+            Gets the language code.
+            </summary>
+            <param name="languageName">Name of the language.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.HasLanguageCode(System.String)">
+            <summary>
+            Determines whether [has language code] [the specified language code].
+            </summary>
+            <param name="languageCode">The language code.</param>
+            <returns><c>true</c> if [has language code] [the specified language code]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.GetLanguageName(System.String)">
+            <summary>
+            Gets the name of the language.
+            </summary>
+            <param name="languageCode">The language code.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:Concept.Utils.IntlDictionnary.Languages">
+            <summary>
+            Gets the languages.
+            </summary>
+            <value>The languages.</value>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.Add(System.String,System.String,System.String)">
+            <summary>
+            Adds the specified language code.
+            </summary>
+            <param name="languageCode">The language code.</param>
+            <param name="itemCode">The item code.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.IntlDictionnary.DefaultLanguageCode">
+            <summary>
+            Gets or sets the default language code.
+            </summary>
+            <value>The default language code.</value>
+        </member>
+        <member name="P:Concept.Utils.IntlDictionnary.SelectedLanguageCode">
+            <summary>
+            Gets or sets the selected language code.
+            </summary>
+            <value>The selected language code.</value>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.GetLastSelectedLanguageCode">
+            <summary>
+            Gets the last selected language code.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.IntlDictionnary.SelectedLanguageChanged">
+            <summary>
+            The selected language changed
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.Translate(Concept.Utils.IntlLanguage,System.String,System.String)">
+            <summary>
+            Translates the specified language.
+            </summary>
+            <param name="language">The language.</param>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.Translate(System.String,System.String,System.String)">
+            <summary>
+            Translates the specified language code.
+            </summary>
+            <param name="languageCode">The language code.</param>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.Translate(System.String,System.String)">
+            <summary>
+            Translates the specified item code.
+            </summary>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.LoadFromFile(System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Loads from file.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <param name="messageCollector">The message collector.</param>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.AppendFromFile(System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Appends from file.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <param name="messageCollector">The message collector.</param>
+        </member>
+        <member name="M:Concept.Utils.IntlDictionnary.OnSelectedLanguageChanged">
+            <summary>
+            Called when [selected language changed].
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.TranslationStatus">
+            <summary>
+            Enum TranslationStatus
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.TranslationStatus.UnDefined">
+            <summary>
+            The undefined
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.TranslationStatus.None">
+            <summary>
+            The none
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.TranslationStatus.Low">
+            <summary>
+            The low
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.TranslationStatus.Half">
+            <summary>
+            The half
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.TranslationStatus.High">
+            <summary>
+            The high
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.TranslationStatus.All">
+            <summary>
+            All
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.IntlLanguage">
+            <summary>
+            Represents a language of an application and contains all the key / value pairs needed for translation.
+            A language is identified by a unique code. For instance: EN
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.IntlLanguage.NullLanguage">
+            <summary>
+            Gets the null language.
+            </summary>
+            <value>The null language.</value>
+        </member>
+        <member name="M:Concept.Utils.IntlLanguage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.IntlLanguage"/> class.
+            </summary>
+            <param name="code">A unique code used to identify the language. For instance: EN</param>
+        </member>
+        <member name="P:Concept.Utils.IntlLanguage.Code">
+            <summary>
+            Gets the code used to identify the language.
+            </summary>
+            <value>The language code.</value>
+        </member>
+        <member name="P:Concept.Utils.IntlLanguage.Name">
+            <summary>
+            Gets or sets the language name.
+            </summary>
+            <value>The language name.</value>
+        </member>
+        <member name="P:Concept.Utils.IntlLanguage.IconPath">
+            <summary>
+            Gets or sets the language icon path.
+            </summary>
+            <value>The language icon path.</value>
+        </member>
+        <member name="P:Concept.Utils.IntlLanguage.TranslationStatus">
+            <summary>
+            Gets the translation status.
+            </summary>
+            <value>The translation status.</value>
+        </member>
+        <member name="P:Concept.Utils.IntlLanguage.IntlIds">
+            <summary>
+            Gets the intl ids.
+            </summary>
+            <value>The intl ids.</value>
+        </member>
+        <member name="P:Concept.Utils.IntlLanguage.IntlIdsMissingTranslation">
+            <summary>
+            Gets the missing translation ids.
+            </summary>
+            <value>the missing translation ids.</value>
+        </member>
+        <member name="M:Concept.Utils.IntlLanguage.SetTranslation(System.String,System.String)">
+            <summary>
+            Sets a translated text for a given id.
+            </summary>
+            <param name="id">The id used to identify the corresponding translation in the dictionary.</param>
+            <param name="text">The translated text</param>
+        </member>
+        <member name="M:Concept.Utils.IntlLanguage.HasTranslation(System.String)">
+            <summary>
+            Determines whether the specified id has a translation.
+            </summary>
+            <param name="id">The id used to identify a translation.</param>
+            <returns><c>true</c> if the specified id has a translation; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlLanguage.Translate(System.String,System.String)">
+            <summary>
+            Gets the translated text for the given id.
+            </summary>
+            <param name="id">The id for which we want the translation.</param>
+            <param name="defaultText">The text returned by default if no translation is found.</param>
+            <returns>The translated text for the given id.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlLanguage.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:Concept.Utils.IntlText">
+            <summary>
+            Class IntlText
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.IntlText.Empty">
+            <summary>
+            Gets the empty.
+            </summary>
+            <value>The empty.</value>
+        </member>
+        <member name="M:Concept.Utils.IntlText.op_Explicit(Concept.Utils.IntlText)~System.String">
+            <summary>
+            Performs an explicit conversion from <see cref="T:Concept.Utils.IntlText"/> to <see cref="T:System.String"/>.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlText.op_Implicit(System.String)~Concept.Utils.IntlText">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.String"/> to <see cref="T:Concept.Utils.IntlText"/>.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlText.#ctor(System.String,System.String,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.IntlText"/> class.
+            </summary>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+            <param name="args">The args.</param>
+        </member>
+        <member name="M:Concept.Utils.IntlText.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.IntlText"/> class.
+            </summary>
+            <param name="itemCode">The item code.</param>
+            <param name="defaultText">The default text.</param>
+        </member>
+        <member name="M:Concept.Utils.IntlText.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.IntlText"/> class.
+            </summary>
+            <param name="defaultText">The default text.</param>
+        </member>
+        <member name="P:Concept.Utils.IntlText.ItemCode">
+            <summary>
+            Gets the item code.
+            </summary>
+            <value>The item code.</value>
+        </member>
+        <member name="P:Concept.Utils.IntlText.DefaultText">
+            <summary>
+            Gets the default text.
+            </summary>
+            <value>The default text.</value>
+        </member>
+        <member name="P:Concept.Utils.IntlText.Args">
+            <summary>
+            Gets the args.
+            </summary>
+            <value>The args.</value>
+        </member>
+        <member name="M:Concept.Utils.IntlText.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:Concept.Utils.IntlTextConverter">
+            <summary>
+            The IntlTextConverter class provides gives the opportunity to automatically convert 
+            from string to IntlText and from IntlText to string.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.IntlTextConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert an object of the given type to the type of this converter, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+            <param name="sourceType">A <see cref="T:System.Type" /> that represents the type you want to convert from.</param>
+            <returns>true if this converter can perform the conversion; otherwise, false.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlTextConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the given object to the type of this converter, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+            <param name="culture">The <see cref="T:System.Globalization.CultureInfo" /> to use as the current culture.</param>
+            <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+            <returns>An <see cref="T:System.Object" /> that represents the converted value.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlTextConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert the object to the specified type, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+            <param name="destinationType">A <see cref="T:System.Type" /> that represents the type you want to convert to.</param>
+            <returns>true if this converter can perform the conversion; otherwise, false.</returns>
+        </member>
+        <member name="M:Concept.Utils.IntlTextConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts the given value object to the specified type, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo" />. If null is passed, the current culture is assumed.</param>
+            <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+            <param name="destinationType">The <see cref="T:System.Type" /> to convert the <paramref name="value" /> parameter to.</param>
+            <returns>An <see cref="T:System.Object" /> that represents the converted value.</returns>
+        </member>
+        <member name="T:Concept.Utils.ConceptLicenseUtils">
+            <summary>
+            Class ConceptLicenseUtils
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptLicenseUtils.LicenseFileExtension">
+            <summary>
+            Constant string to represent License extension.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptLicenseUtils.LicenseFileFilter">
+            <summary>
+            Constant string to represent the license file filter
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptLicenseUtils.SdkLicenseFileName">
+            <summary>
+            The SDK license file name
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptLicenseUtils.SdkExtensionToCheck">
+            <summary>
+            The SDK extension to check
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.SdkProductNameToCheck">
+            <summary>
+            The SDK product name to check
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptLicenseUtils.RunTimeLicenseFileName">
+            <summary>
+            The run time license file name
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.ConceptLicenseUtils.RunTimeExtensionToCheck">
+            <summary>
+            The run time extension to check
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.RunTimeProductNameToCheck">
+            <summary>
+            The run time product name to check
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.IsLicenseValid">
+            <summary>
+            Gets or sets a value indicating whether this instance is license valid.
+            </summary>
+            <value><c>true</c> if this instance is license valid; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.TestTimeLeft">
+            <summary>
+            Gets the test time left.
+            </summary>
+            <value>The test time left.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.LicenseError">
+            <summary>
+            Gets the license error.
+            </summary>
+            <value>The license error.</value>
+        </member>
+        <member name="E:Concept.Utils.ConceptLicenseUtils.LicenseCheckFailed">
+            <summary>
+            Occurs when [license check failed].
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.ProductName">
+            <summary>
+            Gets the name of the product.
+            </summary>
+            <value>The name of the product.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.ReleaseVersion">
+            <summary>
+            Gets the release version.
+            </summary>
+            <value>The release version.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.CompanyName">
+            <summary>
+            Gets the name of the company.
+            </summary>
+            <value>The name of the company.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.ValidityDate">
+            <summary>
+            Gets the validity date.
+            </summary>
+            <value>The validity date.</value>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.CheckApplicationStartUp">
+            <summary>
+            Checks the application start up.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.ApplicationStartUpCheckDone">
+            <summary>
+            Gets a value indicating whether [application start up check done].
+            </summary>
+            <value><c>true</c> if [application start up check done]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.SdkLicenseFilePath">
+            <summary>
+            Gets the SDK license file path.
+            </summary>
+            <value>The SDK license file path.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.SdkLicenseFolderPath">
+            <summary>
+            Gets the SDK licenses folder path.
+            </summary>
+            <value>The SDK licenses folder path.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.SdkLicenseFileStream">
+            <summary>
+            Gets or sets the Sdk license file stream.
+            </summary>
+            <value>The Sdk license file stream.</value>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.CreateCurrentSdkLicenseFile(System.Security.Cryptography.RSACryptoServiceProvider,System.String,System.String,System.DateTime)">
+            <summary>
+            Creates the current SDK license file.
+            </summary>
+            <param name="rsaPrivateKey">The RSA private key.</param>
+            <param name="folderPath">The folder path.</param>
+            <param name="companyName">Name of the company.</param>
+            <param name="validityDate">The validity date.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.CreateSdkLicenseFile(System.Security.Cryptography.RSACryptoServiceProvider,System.String,System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            Creates the SDK license file.
+            </summary>
+            <param name="rsaPrivateKey">The RSA private key.</param>
+            <param name="folderPath">The folder path.</param>
+            <param name="productName">Name of the product.</param>
+            <param name="releaseVersion">The release version.</param>
+            <param name="companyName">Name of the company.</param>
+            <param name="validityDate">The validity date.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.CreateCurrentRuntimeLicenseFile(System.Security.Cryptography.RSACryptoServiceProvider,System.String,System.String,System.DateTime)">
+            <summary>
+            Creates the current runtime license file.
+            </summary>
+            <param name="rsaPrivateKey">The RSA private key.</param>
+            <param name="folderPath">The folder path.</param>
+            <param name="companyName">Name of the company.</param>
+            <param name="validityDate">The validity date.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.CreateRuntimeLicenseFile(System.Security.Cryptography.RSACryptoServiceProvider,System.String,System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            Creates the runtime license file.
+            </summary>
+            <param name="rsaPrivateKey">The RSA private key.</param>
+            <param name="folderPath">The folder path.</param>
+            <param name="productName">Name of the product.</param>
+            <param name="releaseVersion">The release version.</param>
+            <param name="companyName">Name of the company.</param>
+            <param name="validityDate">The validity date.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.TestCheckSdkLicense">
+            <summary>
+            Tests the check SDK license.
+            </summary>
+            <returns><c>true</c> if the license is correct, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.TestCheckSdkLicense(System.String)">
+            <summary>
+            Tests the specifed SDK license.
+            </summary>
+            <returns><c>true</c> if the license is correct, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.TestCheckSdkLicenses">
+            <summary>
+            Tests the check SDK licenses. Multiple SDK licenses can be installed. At least one valid license is required.
+            </summary>
+            <returns><c>true</c> if one license is correct, <c>false</c> otherwise</returns>
+        </member>
+        <member name="P:Concept.Utils.ConceptLicenseUtils.RuntimeLicenseFileStream">
+            <summary>
+            Gets or sets the runtime license file stream.
+            </summary>
+            <value>The runtime license file stream.</value>
+        </member>
+        <member name="M:Concept.Utils.ConceptLicenseUtils.TestCheckRuntimeLicense">
+            <summary>
+            Tests the check runtime license.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="T:Concept.Utils.InternalPersistent">
+            <summary>
+            Class InternalPersistent
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.InternalPersistent.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.InternalPersistent"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:Concept.Utils.InternalPersistent.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="M:Concept.Utils.InternalPersistent.SaveToFile(System.String)">
+            <summary>
+            Saves to file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="P:Concept.Utils.InternalPersistent.ShouldSave">
+            <summary>
+            Gets a value indicating whether [should save].
+            </summary>
+            <value><c>true</c> if [should save]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Concept.Utils.InternalPersistent.OnChange">
+            <summary>
+            Called when [change].
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.PersistenceService">
+            <summary>
+            Class PersistenceService
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.PersistenceService.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.PersistenceService"/> class.
+            </summary>
+            <param name="persistenceDirectory">The persistence directory.</param>
+            <param name="forceCreateDirectory">if set to <c>true</c> [force create directory].</param>
+        </member>
+        <member name="M:Concept.Utils.PersistenceService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.PersistenceService"/> class.
+            </summary>
+            <param name="persistenceDirectory">The persistence directory.</param>
+        </member>
+        <member name="M:Concept.Utils.PersistenceService.GetInternalPersistent(System.String)">
+            <summary>
+            Gets the internal persistent.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>InternalPersistent.</returns>
+        </member>
+        <member name="M:Concept.Utils.PersistenceService.Terminate">
+             <summary>
+             Terminates this instance.
+             </summary>
+            <remarks>
+             This method MUST be called before leaving the application to :
+             <list type="bullet">
+             <item>stop the persistence service thread</item>
+             <item>save all changed persistents</item>
+             </list>
+             </remarks> 
+        </member>
+        <member name="P:Concept.Utils.PersistenceService.PersistenceDirectory">
+            <summary>
+            Gets the persistence directory.
+            </summary>
+            <value>The persistence directory.</value>
+        </member>
+        <member name="T:Concept.Utils.Persistent">
+            <summary>
+            Class Persistent
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Persistent.#ctor(Concept.Utils.PersistenceService,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.Persistent"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:Concept.Utils.Persistent.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="M:Concept.Utils.Persistent.HasItem(System.String)">
+            <summary>
+            Determines whether the specified path has item.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if the specified path has item; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.Persistent.DeleteItem(System.String)">
+            <summary>
+            Deletes the item.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Concept.Utils.Persistent.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Persistent.ReadString(System.String,System.String,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads the string.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="defaultValue">The default value.</param>
+            <param name="messageCollector">The message collector.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.Persistent.WriteString(System.String,System.String)">
+            <summary>
+            Writes the string.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Concept.Utils.Persistent.GetNode(System.String,System.Boolean)">
+            <summary>
+            Gets the node.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="forceCreate">if set to <c>true</c> [force create].</param>
+            <returns>IDataStoreNode.</returns>
+        </member>
+        <member name="M:Concept.Utils.Persistent.GetPath">
+            <summary>
+            Gets the path.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Concept.Utils.StringFormatSpecifier">
+            <summary>
+            Enum StringFormatSpecifier
+            </summary>
+            <remarks>
+            Based on the string format specifiers described here : http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx
+            </remarks>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.Currency">
+            <summary>
+            The currency
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.Decimal">
+            <summary>
+            The decimal
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.Exponential">
+            <summary>
+            The exponential
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.FixedPoint">
+            <summary>
+            The fixed point
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.General">
+            <summary>
+            The general
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.Number">
+            <summary>
+            The number
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.Percent">
+            <summary>
+            The percent
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.RoundTrip">
+            <summary>
+            The round trip
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringFormatSpecifier.Hexadecimal">
+            <summary>
+            The hexadecimal
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.PhysicalUnit">
+            <summary>
+            Class PhysicalUnit
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnit.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.PhysicalUnit"/> class.
+            </summary>
+            <param name="symbol">The symbol.</param>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnit.Symbol">
+            <summary>
+            Gets the symbol.
+            </summary>
+            <value>The symbol.</value>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnit.ValueFromString(System.String)">
+            <summary>
+            Converts a string value into a double value and in the meantime apply the unit converter.
+            </summary>
+            <param name="text">The string value to convert in double.</param>
+            <returns>A double value converted with the right unit converter.</returns>
+            <exception cref="T:Concept.Utils.ConceptException">Occurs when the string value cannot be interpreted as a valid value of the physical unit.</exception>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnit.ValueFromString(System.String,System.Double@)">
+            <summary>
+            Converts a string value into a double value and in the meantime apply the unit converter.
+            </summary>
+            <param name="text">The string value to convert in double.</param>
+            <param name="value">The double value converted with the right unit converter.</param>
+            <returns><c>true</c> if success, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnit.ValueToString(System.Double,Concept.Utils.StringFormatSpecifier)">
+            <summary>
+            Converts a double value into a string value and in the meantime apply the unit converter.
+            </summary>
+            <param name="value">The double value to convert in string.</param>
+            <param name="stringFormatSpecifier">The string format specifier used to correctly format the output string.</param>
+            <returns>A string value formatted and converted with the right unit converter.</returns>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnit.ValueToString(System.Double,System.String)">
+            <summary>
+            Converts a double value into a string value and in the meantime apply the unit converter.
+            </summary>
+            <param name="value">The double value to convert in string.</param>
+            <param name="stringFormat">The custom string format used to correctly format the output string.</param>
+            <returns>A string value formatted and converted with the right unit converter.</returns>
+        </member>
+        <member name="T:Concept.Utils.PhysicalUnitSimple">
+            <summary>
+            Class PhysicalUnitSimple
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitSimple.#ctor(System.String,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.PhysicalUnitSimple"/> class.
+            </summary>
+            <param name="symbol">The symbol used to describe a unit. Example: millimeter symbol is mm.</param>
+            <param name="factor">The conversion factor.</param>
+            <param name="decimals">The number of displayed decimals.</param>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitSimple.ValueOfUnit">
+            <summary>
+            Gets the conversion factor.
+            </summary>
+            <value>The conversion factor.</value>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitSimple.Decimals">
+            <summary>
+            Gets the number of displayed decimals.
+            </summary>
+            <value>The number of displayed decimals.</value>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitSimple.ValueFromString(System.String,System.Double@)">
+            <summary>
+            Converts a string value into a double value and in the meantime apply the unit converter.
+            </summary>
+            <param name="text">The string value to convert in double.</param>
+            <param name="value">The double value converted with the right unit converter.</param>
+            <returns><c>true</c> if success, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitSimple.ValueToString(System.Double,Concept.Utils.StringFormatSpecifier)">
+            <summary>
+            Converts a double value into a string value and in the meantime apply the unit converter.
+            </summary>
+            <param name="value">The double value to convert in string.</param>
+            <param name="stringFormatSpecifier">The string format specifier used to correctly format the output string.</param>
+            <returns>A string value formatted and converted with the right unit converter.</returns>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitSimple.ValueToString(System.Double,System.String)">
+            <summary>
+            Converts a double value into a string value and in the meantime apply the unit converter.
+            </summary>
+            <param name="value">The double value to convert in string.</param>
+            <param name="stringFormat">The custom string format used to correctly format the output string.</param>
+            <returns>A string value formatted and converted with the right unit converter.</returns>
+        </member>
+        <member name="T:Concept.Utils.ConceptPhysicalUnitDimensionAttribute">
+            <summary>
+            Class ConceptPhysicalUnitDimensionAttribute
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.ConceptPhysicalUnitDimensionAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.ConceptPhysicalUnitDimensionAttribute"/> class.
+            </summary>
+            <param name="unit">The unit.</param>
+        </member>
+        <member name="P:Concept.Utils.ConceptPhysicalUnitDimensionAttribute.Unit">
+            <summary>
+            Gets or sets the unit.
+            </summary>
+            <value>The unit.</value>
+        </member>
+        <member name="T:Concept.Utils.PhysicalUnitDimension">
+            <summary>
+            Class PhysicalUnitDimension
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitDimension.Id">
+            <summary>
+            Gets the id.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitDimension.DefaultUnit">
+            <summary>
+            Gets the default unit.
+            </summary>
+            <value>The default unit.</value>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitDimension.Unit">
+            <summary>
+            Gets the unit.
+            </summary>
+            <value>The unit.</value>
+        </member>
+        <member name="T:Concept.Utils.PhysicalUnitDimension.PhysicalUnitDimensionUnitIndexer">
+            <summary>
+            Class PhysicalUnitDimensionUnitIndexer
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitDimension.PhysicalUnitDimensionUnitIndexer.Item(Concept.Utils.PhysicalUnitSystem)">
+            <summary>
+            Gets or sets the <see cref="T:Concept.Utils.PhysicalUnit"/> with the specified system.
+            </summary>
+            <param name="system">The system.</param>
+            <returns>PhysicalUnit.</returns>
+            <exception cref="T:Concept.Utils.ConceptException"></exception>
+        </member>
+        <member name="T:Concept.Utils.PhysicalUnitDimensions">
+            <summary>
+            Class PhysicalUnitDimensions
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitDimensions.Contains(System.String)">
+            <summary>
+            Determines whether [contains] [the specified id].
+            </summary>
+            <param name="id">The id.</param>
+            <returns><c>true</c> if [contains] [the specified id]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitDimensions.Add(System.String,Concept.Utils.PhysicalUnit)">
+            <summary>
+            Adds the specified id.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="defaultUnit">The default unit.</param>
+            <returns>PhysicalUnitDimension.</returns>
+            <exception cref="T:Concept.Utils.ConceptException"></exception>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitDimensions.Items">
+            <summary>
+            Gets the items.
+            </summary>
+            <value>The items.</value>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitDimensions.Get(System.String)">
+            <summary>
+            Gets the specified id.
+            </summary>
+            <param name="id">The id.</param>
+            <returns>PhysicalUnitDimension.</returns>
+            <exception cref="T:Concept.Utils.ConceptException"></exception>
+        </member>
+        <member name="F:Concept.Utils.PhysicalUnitDimensions.CollectionChanged">
+            <summary>
+            The selected changed
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.PhysicalUnitSystem">
+            <summary>
+            Class PhysicalUnitSystem
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitSystem.IntlName">
+            <summary>
+            Gets the intl name.
+            </summary>
+            <value>The intl name.</value>
+        </member>
+        <member name="T:Concept.Utils.PhysicalUnitSystems">
+            <summary>
+            Class PhysicalUnitSystems
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitSystems.Add(Concept.Utils.IntlText)">
+            <summary>
+            Adds the specified name.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>PhysicalUnitSystem.</returns>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitSystems.Add(System.String)">
+            <summary>
+            Adds the specified name.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>PhysicalUnitSystem.</returns>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitSystems.Add(System.String,System.String)">
+            <summary>
+            Adds the specified name.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="id">The id.</param>
+            <returns>PhysicalUnitSystem.</returns>
+            <exception cref="T:System.NotSupportedException">Physical system id already exists</exception>
+        </member>
+        <member name="M:Concept.Utils.PhysicalUnitSystems.Find(System.String)">
+            <summary>
+            Finds the specified id.
+            </summary>
+            <param name="id">The id.</param>
+            <returns>PhysicalUnitSystem.</returns>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitSystems.Items">
+            <summary>
+            Gets the items.
+            </summary>
+            <value>The items.</value>
+        </member>
+        <member name="P:Concept.Utils.PhysicalUnitSystems.Selected">
+            <summary>
+            Gets or sets the selected.
+            </summary>
+            <value>The selected.</value>
+        </member>
+        <member name="F:Concept.Utils.PhysicalUnitSystems.SelectedChanged">
+            <summary>
+            The selected changed
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.PhysicalUnitSystems.CollectionChanged">
+            <summary>
+            Rise when the collection of Physical unit systems changed
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Properties.Resources.None16x16">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Properties.Resources.None32x32">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.Properties.Resources.RsaConceptPublicKey">
+            <summary>
+              Looks up a localized string similar to &lt;RSAKeyValue&gt;&lt;Modulus&gt;36drlazu4djGk72dlaSZzf/9SgdLePQvNNRgbjnC0nPyoibjQiHlKP3lgPq6wIIAxIK5OHXJm3KPYdjbedfQNBTZ/PUDlPQvm+32vJZGr8GgCcf+5uIR6jZQg2z6lc0bDfOLN7f8GzY+wBGjXvohQBzYoQFEsD29cVXPqNXnP+aJTD1XHjjWKEVuvsUUeu5vYULN5dUzZ8xEo3aPy1G0CfsQqxloh7k10gzH7qRkLqwNEyLIVGBo8VbRXsyNmADDw0ns3ujAf5rlW3J4hVFTboW+huy8iPg2BPFVyopDdrTFX83PnBP6N5wwTLZxPFoKCd7OjWJSsimlOiLUIb5yBw==&lt;/Modulus&gt;&lt;Exponent&gt;AQAB&lt;/Exponent&gt;&lt;/RSAKeyValue&gt;.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.CsScript">
+            <summary>
+            Class CsScript
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.CsScript.DefaultEntryPointName">
+            <summary>
+            The default entry point name
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.CsScript.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.CsScript"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.CsScript.CompilerErrors">
+            <summary>
+            Gets the compiler errors.
+            </summary>
+            <value>The compiler errors.</value>
+        </member>
+        <member name="P:Concept.Utils.CsScript.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Concept.Utils.CsScript.EntryPointName">
+            <summary>
+            Gets or sets the name of the entry point.
+            </summary>
+            <value>The name of the entry point.</value>
+        </member>
+        <member name="P:Concept.Utils.CsScript.Context">
+            <summary>
+            Gets the context.
+            </summary>
+            <remarks>
+            Context is an Expando. All its properties are generated as context variables for the script
+            </remarks>
+            <value>The context.</value>
+        </member>
+        <member name="P:Concept.Utils.CsScript.Source">
+            <summary>
+            Gets or sets the source.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="P:Concept.Utils.CsScript.SuccessfullyCompiled">
+            <summary>
+            Gets a value indicating whether [successfully compiled].
+            </summary>
+            <value><c>true</c> if [successfully compiled]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Utils.CsScript.UsingClause">
+            <summary>
+            Gets or sets the using clause.
+            </summary>
+            <value>The using clause.</value>
+        </member>
+        <member name="P:Concept.Utils.CsScript.HiddenSource">
+            <summary>
+            Gets or sets the hidden source.
+            </summary>
+            <value>The hidden source.</value>
+        </member>
+        <member name="T:Concept.Utils.CsScriptEngine">
+            <summary>
+            Class CsScriptEngine
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.CsScriptEngine.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.CsScriptEngine"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.CsScriptEngine.Context">
+            <summary>
+            Gets the context.
+            </summary>
+            <remarks>
+            Context is an Expando. All its properties are generated as context variables for the script
+            </remarks>
+            <value>The context.</value>
+        </member>
+        <member name="P:Concept.Utils.CsScriptEngine.Globals">
+            <summary>
+            Gets the globals.
+            </summary>
+            <remarks>
+            Globals is an expando, visible from within the scripts with the name "Globals". 
+            It can be used to share variables between scripts.
+            </remarks>
+            <value>The globals.</value>
+        </member>
+        <member name="M:Concept.Utils.CsScriptEngine.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.CsScriptEngine.HiddenSource">
+            <summary>
+            Gets or sets the hidden source.
+            </summary>
+            <value>The hidden source.</value>
+        </member>
+        <member name="M:Concept.Utils.CsScriptEngine.Execute(Concept.Utils.CsScript)">
+            <summary>
+            Executes the specified script.
+            </summary>
+            <param name="script">The script.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.CsScriptEngine.Compile(Concept.Utils.CsScript,System.String@)">
+            <summary>
+            Compiles the specified script.
+            </summary>
+            <param name="script">The script.</param>
+            <param name="diagnostic">The diagnostic.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.CsScriptEngine.Execute(Concept.Utils.CsScript,System.String@)">
+            <summary>
+            Executes the specified script.
+            </summary>
+            <param name="script">The script.</param>
+            <param name="diagnostic">The diagnostic.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.CsScriptEngine.GenerateDll(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Generates the DLL.
+            </summary>
+            <param name="assemblyPath">The assembly path.</param>
+            <param name="pathes">The pathes.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.CsScriptEngine.GenerateInMemory(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Generates the DLL.
+            </summary>
+            <param name="name">The assembly name.</param>
+            <param name="pathes">The pathes.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise</returns>
+        </member>
+        <member name="T:Concept.Utils.DownTimer">
+            <summary>   Standard DownTimer. </summary>
+        </member>
+        <member name="M:Concept.Utils.DownTimer.#ctor">
+            <summary>   Default constructor. </summary>
+        </member>
+        <member name="M:Concept.Utils.DownTimer.#ctor(System.UInt32)">
+            <summary>   Constructor. </summary>
+            <param name="initialTime">  initial Time value. </param>
+        </member>
+        <member name="M:Concept.Utils.DownTimer.#ctor(System.Int32)">
+            <summary>   Constructor. </summary>
+            <param name="initialTime">  initial Time value. </param>
+        </member>
+        <member name="M:Concept.Utils.DownTimer.#ctor(System.TimeSpan)">
+            <summary>   Constructor. </summary>
+            <param name="initialTime">  initial Time value. </param>
+        </member>
+        <member name="P:Concept.Utils.DownTimer.Time">
+            <summary>   Gets or sets the time. </summary>
+            <value> The time. </value>
+        </member>
+        <member name="M:Concept.Utils.DownTimer.Reset">
+            <summary>   Resets the timer. </summary>
+        </member>
+        <member name="P:Concept.Utils.DownTimer.Elapsed">
+            <summary>   Query if the time has elapsed. </summary>
+            <value> true if elapsed, false if not. </value>
+        </member>
+        <member name="T:Concept.Utils.XmlConfigFile">
+            <summary>
+            Class XmlConfigFile
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.XmlConfigFile.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.XmlConfigFile"/> class.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlConfigFile.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.XmlConfigFile"/> class.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="rootName">Name of the root.</param>
+        </member>
+        <member name="M:Concept.Utils.XmlConfigFile.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:Concept.Utils.XmlConfigFile"/> class.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.XmlConfigFile.FileName">
+            <summary>
+            Gets the name of the file.
+            </summary>
+            <value>The name of the file.</value>
+        </member>
+        <member name="M:Concept.Utils.XmlConfigFile.Save">
+            <summary>
+            Saves this instance.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.Timer">
+            <summary>   Summary description for Timer. </summary>
+        </member>
+        <member name="P:Concept.Utils.Timer.Tick">
+            <summary>
+            Gets the tick.
+            </summary>
+            <value>The tick.</value>
+        </member>
+        <member name="P:Concept.Utils.Timer.TickResolution">
+            <summary>
+            Gets or sets the tick resolution.
+            </summary>
+            <remarks>Unit is [ms]</remarks>
+            <value>The tick resolution.</value>
+        </member>
+        <member name="M:Concept.Utils.Timer.WaitTick">
+            <summary>
+            Waits the tick.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.Timer.Wait(System.Int32)">
+            <summary>
+            Waits the specified duration.
+            </summary>
+            <param name="duration">The duration.</param>
+        </member>
+        <member name="T:Concept.Utils.UpTimer">
+            <summary>
+            Standard UpTimer
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.UpTimer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.UpTimer"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.UpTimer.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.UpTimer"/> class.
+            </summary>
+            <param name="start">if set to <c>true</c> [start].</param>
+        </member>
+        <member name="M:Concept.Utils.UpTimer.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.UpTimer.Stop">
+            <summary>
+            Stops this instance.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.UpTimer.Reset">
+            <summary>
+            Resets this instance.
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.UpTimer.Started">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Concept.Utils.UpTimer"/> is started.
+            </summary>
+            <value><c>true</c> if started; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Concept.Utils.UpTimer.Time">
+            <summary>
+            Gets or sets the time.
+            </summary>
+            <value>The time.</value>
+        </member>
+        <member name="T:Concept.Utils.ConceptException">
+            <summary>
+            Concept exception class
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.ConceptException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.ConceptException"/> class.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.ConceptException.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.ConceptException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="id">The id.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Exception" /> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Exception" /> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptException.#ctor(System.String,System.Int32,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.ConceptException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="id">The id.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Concept.Utils.ConceptException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Exception" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="P:Concept.Utils.ConceptException.ID">
+            <summary>
+            Gets the ID.
+            </summary>
+            <value>The ID.</value>
+        </member>
+        <member name="P:Concept.Utils.ConceptException.Description">
+            <summary>
+            Gets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="T:Concept.Utils.StringUtils">
+            <summary>
+            Summary description for String.
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.StringUtils.StringSeparator">
+            <summary>
+            The string separator
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.Extract(System.String@,System.String@,System.String)">
+            <summary>
+            Extracts the specified extracted.
+            </summary>
+            <param name="extracted">The extracted.</param>
+            <param name="remaining">The remaining.</param>
+            <param name="separator">The separator.</param>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ExtractRightToLeft(System.String@,System.String@,System.String)">
+            <summary>
+            Extracts the right to left.
+            </summary>
+            <param name="extracted">The extracted.</param>
+            <param name="remaining">The remaining.</param>
+            <param name="separator">The separator.</param>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.IsInt(System.String)">
+            <summary>
+            Determines whether the specified text is int.
+            </summary>
+            <param name="text">The text.</param>
+            <returns><c>true</c> if the specified text is int; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.IsFloat(System.String)">
+            <summary>
+            Determines whether the specified text is float.
+            </summary>
+            <param name="text">The text.</param>
+            <returns><c>true</c> if the specified text is float; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ValInt(System.String)">
+            <summary>
+            Vals the int.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ValFloat(System.String)">
+            <summary>
+            Vals the float.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.SameText(System.String,System.String)">
+            <summary>
+            Check if the both text are the sames, ignore the case.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if left equal right, <c>false</c> otherwise</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.Chr(System.Int32)">
+            <summary>
+            CHRs the specified ASCII.
+            </summary>
+            <param name="ascii">The ASCII.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.Ascii(System.Char)">
+            <summary>
+            ASCIIs the specified char.
+            </summary>
+            <param name="c">The c.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.Str(System.Int32)">
+            <summary>
+            STRs the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.StrFloat(System.Double)">
+            <summary>
+            STRs the float.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.EncodeSpecialChars(System.String)">
+            <summary>
+            Encodes the special chars.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.DecodeSpecialChars(System.String)">
+            <summary>
+            Decodes the special chars.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.String.</returns>
+            <exception cref="T:Concept.Utils.ConceptException">
+            Invalid escape sequence
+            or
+            Invalid escape sequence
+            </exception>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.SimpleEncrypt(System.String,System.Int32)">
+            <summary>
+            Simples the encrypt.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="key">The key.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.SimpleEncrypt(System.String)">
+            <summary>
+            Simples the encrypt.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.SimpleDecrypt(System.String,System.Int32)">
+            <summary>
+            Simples the decrypt.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="key">The key.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.SimpleDecrypt(System.String)">
+            <summary>
+            Simples the decrypt.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.GetRelativeFilePath(System.String,System.String)">
+            <summary>
+            Gets the relative file path.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="referencePath">The reference path.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.GetAbsoluteFilePath(System.String,System.String)">
+            <summary>
+            Gets the absolute file path.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="referencePath">The reference path.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.GetRelevantFilePath(System.String,System.String)">
+            <summary>
+            Get the relative file path for directory and sub directories, and absolute for external directories
+            </summary>
+            <param name="path">The path.</param>
+            <param name="referencePath">The reference path.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.SplitLines(System.String)">
+            <summary>
+            Splits the lines.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.String[].</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.AlignText(System.String,System.Drawing.StringAlignment,System.Int32,System.Char)">
+            <summary>
+            Aligns the text.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="alignment">The alignment.</param>
+            <param name="length">The length.</param>
+            <param name="stuffing">The stuffing.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ConcatStrings(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Concats the strings.
+            </summary>
+            <param name="values">The values.</param>
+            <param name="separator">The separator.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.Contains(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Determines whether [contains] [the specified enumerable].
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+            <param name="text">The text.</param>
+            <returns><c>true</c> if [contains] [the specified enumerable]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ExtractQuotedString(System.String)">
+            <summary>
+            Extracts the quoted string.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.FromUTF8(System.String)">
+            <summary>
+            Froms the UTF8.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ToUTF8(System.String)">
+            <summary>
+            To the UTF8.
+            </summary>
+            <param name="text">The text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.Normalize(System.String)">
+            <summary>
+            Normalizes the specified ref string.
+            </summary>
+            <param name="refString">The ref string.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ExtractFilePath(System.String)">
+            <summary>
+            Extracts the file path.
+            </summary>
+            <remarks>Kept for Concept.Hmi 2012 Compatibility</remarks>
+            <param name="filePath">The file path.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ExtractFileExtension(System.String)">
+            <summary>
+            Extracts the file extension.
+            </summary>
+            <remarks>Kept for Concept.Hmi 2012 Compatibility</remarks>
+            <param name="filePath">The file path.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ExtractFileName(System.String)">
+            <summary>
+            Extracts the name of the file.
+            </summary>
+            <remarks>Kept for Concept.Hmi 2012 Compatibility</remarks>
+            <param name="filePath">The file path.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Concept.Utils.StringUtils.ExtractFileNameWithoutExtension(System.String)">
+            <summary>
+            Extracts the file name without extension.
+            </summary>
+            <remarks>Kept for Concept.Hmi 2012 Compatibility</remarks>
+            <param name="filePath">The file path.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Concept.Utils.UserPreference">
+            <summary>
+            Class UserPreference
+            </summary>
+        </member>
+        <member name="F:Concept.Utils.UserPreference.UserPreferenceFileExtension">
+            <summary>
+            The user preference file extension
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.UserPreference.FilePath">
+            <summary>
+            Gets the file path.
+            </summary>
+            <value>The file path.</value>
+        </member>
+        <member name="P:Concept.Utils.UserPreference.UserOptions">
+            <summary>
+            Gets the user options.
+            </summary>
+            <value>The user options.</value>
+        </member>
+        <member name="M:Concept.Utils.UserPreference.Reload">
+            <summary>
+            Reloads this instance.
+            </summary>
+        </member>
+        <member name="T:Concept.Utils.IUserPreference">
+            <summary>
+            Interface IUserPreference
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.IUserPreference.NodeName">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>The name of the node.</value>
+        </member>
+        <member name="M:Concept.Utils.IUserPreference.ReadFrom(Concept.Utils.IDataStoreNode,Concept.Utils.IMessageCollector)">
+            <summary>
+            Reads from.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="messages">The messages.</param>
+        </member>
+        <member name="M:Concept.Utils.IUserPreference.SaveTo(Concept.Utils.IDataStoreNode)">
+            <summary>
+            Saves to.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="T:Concept.Utils.ImageAttribute">
+            <summary>
+            ConceptImageAttribute is a class attribute which defines an
+            image for the ConceptComponent. 
+            </summary>
+        </member>
+        <member name="P:Concept.Utils.ImageAttribute.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Concept.Utils.ImageAttribute.AssemblyType">
+            <summary>
+            Gets the type of the assembly.
+            </summary>
+            <value>The type of the assembly.</value>
+        </member>
+        <member name="M:Concept.Utils.ImageAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.ImageAttribute"/> class.
+            </summary>
+            <param name="assemblyType">Type of the assembly.</param>
+            <param name="resourceName">Name of the resource.</param>
+        </member>
+        <member name="T:Concept.Utils.EnumImageAttribute">
+            <summary>
+            ConceptEnumSmallImageAttribute is a field attribute which
+            defines a small image for an enumerate field.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.EnumImageAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.ImageAttribute" /> class.
+            </summary>
+            <param name="assemblyType">Type of the assembly.</param>
+            <param name="resourceName">Name of the resource.</param>
+        </member>
+        <member name="T:Concept.Utils.BaseEnumTextAttribute">
+            <summary>
+            BaseEnumTextAttribute is a base field attribute which defines
+            a text for an enumerate field.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.BaseEnumTextAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.BaseEnumTextAttribute"/> class.
+            </summary>
+            <param name="intlId">The intl id.</param>
+            <param name="defaultText">The default text.</param>
+        </member>
+        <member name="P:Concept.Utils.BaseEnumTextAttribute.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="T:Concept.Utils.EnumIntlDetailsAttribute">
+            <summary>
+            EnumIntlDetailsAttribute is a field attribute which defines
+            the details for an enumerate field.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.EnumIntlDetailsAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.BaseEnumTextAttribute" /> class.
+            </summary>
+            <param name="intlId">The intl id.</param>
+            <param name="defaultText">The default text.</param>
+        </member>
+        <member name="T:Concept.Utils.EnumIntlNameAttribute">
+            <summary>
+            EnumIntlNameAttribute is a field attribute which defines
+            the name of an enumerate field.
+            </summary>
+        </member>
+        <member name="M:Concept.Utils.EnumIntlNameAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Concept.Utils.BaseEnumTextAttribute" /> class.
+            </summary>
+            <param name="intlId">The intl id.</param>
+            <param name="defaultText">The default text.</param>
+        </member>
+    </members>
+</doc>
