@@ -1,0 +1,2270 @@
+
+
+Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
+                                                                                               Fri May 22 15:37:08 2026
+
+Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
+     1                           	processor	12F683
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	idataBANK0,global,class=CODE,delta=2,noexec
+     5                           	psect	strings,global,class=STRING,delta=2,noexec
+     6                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     7                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     8                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1,noexec
+     9                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+    10                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+    11                           	psect	maintext,global,class=CODE,split=1,delta=2
+    12                           	psect	text1,local,class=CODE,merge=1,delta=2
+    13                           	psect	text2,local,class=CODE,merge=1,delta=2
+    14                           	psect	text3,local,class=CODE,merge=1,delta=2
+    15                           	psect	text4,local,class=CODE,merge=1,delta=2
+    16                           	psect	text5,local,class=CODE,merge=1,delta=2
+    17                           	psect	text6,local,class=CODE,merge=1,delta=2
+    18                           	psect	text7,local,class=CODE,merge=1,delta=2
+    19                           	psect	text8,local,class=CODE,merge=1,delta=2
+    20                           	psect	text9,local,class=CODE,merge=1,delta=2
+    21                           	psect	text10,local,class=CODE,merge=1,delta=2
+    22                           	psect	text11,local,class=CODE,merge=1,delta=2
+    23                           	psect	text12,local,class=CODE,merge=1,delta=2
+    24                           	psect	text13,local,class=CODE,merge=1,delta=2
+    25                           	psect	text14,local,class=CODE,merge=1,delta=2
+    26                           	psect	intentry,global,class=CODE,delta=2
+    27                           	psect	text15,local,class=CODE,merge=1,delta=2
+    28                           	psect	text16,local,class=CODE,merge=1,delta=2
+    29                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    30                           	dabs	1,0x7E,2
+    31  0000                     
+    32                           ; Generated 17/08/2023 GMT
+    33                           ; 
+    34                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    35                           ; All rights reserved.
+    36                           ; 
+    37                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    38                           ; 
+    39                           ; Redistribution and use in source and binary forms, with or without modification, are
+    40                           ; permitted provided that the following conditions are met:
+    41                           ; 
+    42                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    43                           ;        conditions and the following disclaimer.
+    44                           ; 
+    45                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    46                           ;        of conditions and the following disclaimer in the documentation and/or other
+    47                           ;        materials provided with the distribution. Publication is not required when
+    48                           ;        this file is used in an embedded application.
+    49                           ; 
+    50                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    51                           ;        software without specific prior written permission.
+    52                           ; 
+    53                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    54                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    55                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    56                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    57                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    58                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    59                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    60                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    61                           ; 
+    62                           ; 
+    63                           ; Code-generator required, PIC12F683 Definitions
+    64                           ; 
+    65                           ; SFR Addresses
+    66  0000                     	;# 
+    67  0001                     	;# 
+    68  0002                     	;# 
+    69  0003                     	;# 
+    70  0004                     	;# 
+    71  0005                     	;# 
+    72  000A                     	;# 
+    73  000B                     	;# 
+    74  000C                     	;# 
+    75  000E                     	;# 
+    76  000E                     	;# 
+    77  000F                     	;# 
+    78  0010                     	;# 
+    79  0011                     	;# 
+    80  0012                     	;# 
+    81  0013                     	;# 
+    82  0013                     	;# 
+    83  0014                     	;# 
+    84  0015                     	;# 
+    85  0018                     	;# 
+    86  0019                     	;# 
+    87  001A                     	;# 
+    88  001E                     	;# 
+    89  001F                     	;# 
+    90  0081                     	;# 
+    91  0085                     	;# 
+    92  008C                     	;# 
+    93  008E                     	;# 
+    94  008F                     	;# 
+    95  0090                     	;# 
+    96  0092                     	;# 
+    97  0095                     	;# 
+    98  0095                     	;# 
+    99  0096                     	;# 
+   100  0096                     	;# 
+   101  0099                     	;# 
+   102  009A                     	;# 
+   103  009A                     	;# 
+   104  009B                     	;# 
+   105  009C                     	;# 
+   106  009D                     	;# 
+   107  009E                     	;# 
+   108  009F                     	;# 
+   109  0000                     	;# 
+   110  0001                     	;# 
+   111  0002                     	;# 
+   112  0003                     	;# 
+   113  0004                     	;# 
+   114  0005                     	;# 
+   115  000A                     	;# 
+   116  000B                     	;# 
+   117  000C                     	;# 
+   118  000E                     	;# 
+   119  000E                     	;# 
+   120  000F                     	;# 
+   121  0010                     	;# 
+   122  0011                     	;# 
+   123  0012                     	;# 
+   124  0013                     	;# 
+   125  0013                     	;# 
+   126  0014                     	;# 
+   127  0015                     	;# 
+   128  0018                     	;# 
+   129  0019                     	;# 
+   130  001A                     	;# 
+   131  001E                     	;# 
+   132  001F                     	;# 
+   133  0081                     	;# 
+   134  0085                     	;# 
+   135  008C                     	;# 
+   136  008E                     	;# 
+   137  008F                     	;# 
+   138  0090                     	;# 
+   139  0092                     	;# 
+   140  0095                     	;# 
+   141  0095                     	;# 
+   142  0096                     	;# 
+   143  0096                     	;# 
+   144  0099                     	;# 
+   145  009A                     	;# 
+   146  009A                     	;# 
+   147  009B                     	;# 
+   148  009C                     	;# 
+   149  009D                     	;# 
+   150  009E                     	;# 
+   151  009F                     	;# 
+   152                           
+   153                           	psect	idataBANK0
+   154  01B1                     __pidataBANK0:
+   155                           
+   156                           ;initializer for _gpio_shadow
+   157  01B1  3404               	retlw	4
+   158  0012                     _T2CON	set	18
+   159  0019                     _CMCON0	set	25
+   160  001F                     _ADCON0	set	31
+   161  0012                     _T2CONbits	set	18
+   162  0011                     _TMR2	set	17
+   163  0005                     _GPIO	set	5
+   164  000B                     _INTCONbits	set	11
+   165  000C                     _PIR1bits	set	12
+   166  000E                     _TMR1L	set	14
+   167  000F                     _TMR1H	set	15
+   168  0010                     _T1CON	set	16
+   169  0092                     _PR2	set	146
+   170  008C                     _PIE1bits	set	140
+   171  0095                     _WPU	set	149
+   172  0081                     _OPTION_REG	set	129
+   173  0085                     _TRISIO	set	133
+   174  009F                     _ANSEL	set	159
+   175  008F                     _OSCCON	set	143
+   176                           
+   177                           	psect	strings
+   178  017A                     __pstrings:
+   179  017A                     stringtab:
+   180  017A                     __stringtab:
+   181  017A                     stringcode:	
+   182                           ;	String table - string pointers are 1 byte each
+   183                           
+   184  017A                     stringdir:
+   185  017A  3001               	movlw	high stringdir
+   186  017B  008A               	movwf	10
+   187  017C  0804               	movf	4,w
+   188  017D  0A84               	incf	4,f
+   189  017E  0782               	addwf	2,f
+   190  017F                     __stringbase:
+   191  017F  3400               	retlw	0
+   192  0180                     __end_of__stringtab:
+   193  0180                     STR_1:
+   194  0180  3444               	retlw	68	;'D'
+   195  0181  3465               	retlw	101	;'e'
+   196  0182  3474               	retlw	116	;'t'
+   197  0183  3465               	retlw	101	;'e'
+   198  0184  3463               	retlw	99	;'c'
+   199  0185  3474               	retlw	116	;'t'
+   200  0186  3473               	retlw	115	;'s'
+   201  0187  3400               	retlw	0
+   202                           
+   203                           	psect	cinit
+   204  0010                     start_initialization:	
+   205                           ; #config settings
+   206                           
+   207  0010                     __initialization:
+   208                           
+   209                           ; Initialize objects allocated to BANK0
+   210  0010  21B1               	fcall	__pidataBANK0	;fetch initializer
+   211  0011  00A7               	movwf	__pdataBANK0& (0+127)
+   212                           
+   213                           ; Clear objects allocated to COMMON
+   214  0012  01F8               	clrf	__pbssCOMMON& (0+127)
+   215  0013  01F9               	clrf	(__pbssCOMMON+1)& (0+127)
+   216  0014  01FA               	clrf	(__pbssCOMMON+2)& (0+127)
+   217  0015  01FB               	clrf	(__pbssCOMMON+3)& (0+127)
+   218  0016  01FC               	clrf	(__pbssCOMMON+4)& (0+127)
+   219  0017                     end_of_initialization:	
+   220                           ;End of C runtime variable initialization code
+   221                           
+   222  0017                     __end_of__initialization:
+   223  0017  0183               	clrf	3
+   224  0018  28E3               	ljmp	_main	;jump to C main() function
+   225                           
+   226                           	psect	bssCOMMON
+   227  0078                     __pbssCOMMON:
+   228  0078                     _uart_tx_frame:
+   229  0078                     	ds	2
+   230  007A                     _uart_tx_busy:
+   231  007A                     	ds	1
+   232  007B                     _uart_tx_bits_remaining:
+   233  007B                     	ds	1
+   234  007C                     _uart_tx_ptr:
+   235  007C                     	ds	1
+   236                           
+   237                           	psect	dataBANK0
+   238  0027                     __pdataBANK0:
+   239  0027                     _gpio_shadow:
+   240  0027                     	ds	1
+   241                           
+   242                           	psect	cstackCOMMON
+   243  0070                     __pcstackCOMMON:
+   244  0070                     ?_pin2_is_high:
+   245  0070                     ?_led_on:	
+   246                           ; 1 bytes @ 0x0
+   247                           
+   248  0070                     ?_led_off:	
+   249                           ; 1 bytes @ 0x0
+   250                           
+   251  0070                     ?_uart_timer_start:	
+   252                           ; 1 bytes @ 0x0
+   253                           
+   254  0070                     ?_uart_timer_stop:	
+   255                           ; 1 bytes @ 0x0
+   256                           
+   257  0070                     ??_uart_timer_stop:	
+   258                           ; 1 bytes @ 0x0
+   259                           
+   260  0070                     ?_uart_is_busy:	
+   261                           ; 1 bytes @ 0x0
+   262                           
+   263  0070                     ?_uart_load_character:	
+   264                           ; 1 bytes @ 0x0
+   265                           
+   266  0070                     ?_uart_output_next_bit_main_context:	
+   267                           ; 1 bytes @ 0x0
+   268                           
+   269  0070                     ?_uart_send_string_async:	
+   270                           ; 1 bytes @ 0x0
+   271                           
+   272  0070                     ?_blink_led_three_times:	
+   273                           ; 1 bytes @ 0x0
+   274                           
+   275  0070                     ?_trigger_detect_action:	
+   276                           ; 1 bytes @ 0x0
+   277                           
+   278  0070                     ?_system_init:	
+   279                           ; 1 bytes @ 0x0
+   280                           
+   281  0070                     ?_isr:	
+   282                           ; 1 bytes @ 0x0
+   283                           
+   284  0070                     ?_main:	
+   285                           ; 1 bytes @ 0x0
+   286                           
+   287  0070                     ?i1_uart_load_character:	
+   288                           ; 1 bytes @ 0x0
+   289                           
+   290  0070                     ??i1_uart_load_character:	
+   291                           ; 1 bytes @ 0x0
+   292                           
+   293                           
+   294                           ; 1 bytes @ 0x0
+   295  0070                     	ds	2
+   296  0072                     i1uart_load_character@data:
+   297                           
+   298                           ; 1 bytes @ 0x2
+   299  0072                     	ds	1
+   300  0073                     ??_isr:
+   301                           
+   302                           ; 1 bytes @ 0x3
+   303  0073                     	ds	5
+   304                           
+   305                           	psect	cstackBANK0
+   306  0020                     __pcstackBANK0:
+   307  0020                     ?_delay_ms_custom:
+   308  0020                     ?_gpio_write_atomic:	
+   309                           ; 1 bytes @ 0x0
+   310                           
+   311  0020                     ??_pin2_is_high:	
+   312                           ; 1 bytes @ 0x0
+   313                           
+   314  0020                     ??_uart_timer_start:	
+   315                           ; 1 bytes @ 0x0
+   316                           
+   317  0020                     ??_uart_is_busy:	
+   318                           ; 1 bytes @ 0x0
+   319                           
+   320  0020                     ??_uart_load_character:	
+   321                           ; 1 bytes @ 0x0
+   322                           
+   323  0020                     ??_uart_output_next_bit_main_context:	
+   324                           ; 1 bytes @ 0x0
+   325                           
+   326  0020                     ??_system_init:	
+   327                           ; 1 bytes @ 0x0
+   328                           
+   329  0020                     gpio_write_atomic@level:	
+   330                           ; 1 bytes @ 0x0
+   331                           
+   332  0020                     delay_ms_custom@ms:	
+   333                           ; 1 bytes @ 0x0
+   334                           
+   335                           
+   336                           ; 2 bytes @ 0x0
+   337  0020                     	ds	1
+   338  0021                     ??_gpio_write_atomic:
+   339                           
+   340                           ; 1 bytes @ 0x1
+   341  0021                     	ds	1
+   342  0022                     ??_delay_ms_custom:
+   343  0022                     gpio_write_atomic@gie_state:	
+   344                           ; 1 bytes @ 0x2
+   345                           
+   346  0022                     uart_load_character@data:	
+   347                           ; 1 bytes @ 0x2
+   348                           
+   349                           
+   350                           ; 1 bytes @ 0x2
+   351  0022                     	ds	1
+   352  0023                     ??_uart_send_string_async:
+   353  0023                     gpio_write_atomic@mask:	
+   354                           ; 1 bytes @ 0x3
+   355                           
+   356                           
+   357                           ; 1 bytes @ 0x3
+   358  0023                     	ds	1
+   359  0024                     ??_led_on:
+   360  0024                     ??_led_off:	
+   361                           ; 1 bytes @ 0x4
+   362                           
+   363  0024                     ??_blink_led_three_times:	
+   364                           ; 1 bytes @ 0x4
+   365                           
+   366  0024                     uart_send_string_async@text:	
+   367                           ; 1 bytes @ 0x4
+   368                           
+   369                           
+   370                           ; 1 bytes @ 0x4
+   371  0024                     	ds	1
+   372  0025                     blink_led_three_times@i:
+   373                           
+   374                           ; 1 bytes @ 0x5
+   375  0025                     	ds	1
+   376  0026                     ??_trigger_detect_action:
+   377  0026                     ??_main:	
+   378                           ; 1 bytes @ 0x6
+   379                           
+   380  0026                     main@pin2_was_high:	
+   381                           ; 1 bytes @ 0x6
+   382                           
+   383                           
+   384                           ; 1 bytes @ 0x6
+   385  0026                     	ds	1
+   386                           
+   387                           	psect	maintext
+   388  00E3                     __pmaintext:	
+   389 ;;
+   390 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   391 ;;
+   392 ;; *************** function _main *****************
+   393 ;; Defined at:
+   394 ;;		line 390 in file "KousicandCo.c"
+   395 ;; Parameters:    Size  Location     Type
+   396 ;;		None
+   397 ;; Auto vars:     Size  Location     Type
+   398 ;;  pin2_was_hig    1    6[BANK0 ] _Bool 
+   399 ;; Return value:  Size  Location     Type
+   400 ;;                  1    wreg      void 
+   401 ;; Registers used:
+   402 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   403 ;; Tracked objects:
+   404 ;;		On entry : B00/0
+   405 ;;		On exit  : 0/0
+   406 ;;		Unchanged: 0/0
+   407 ;; Data sizes:     COMMON   BANK0   BANK1
+   408 ;;      Params:         0       0       0
+   409 ;;      Locals:         0       1       0
+   410 ;;      Temps:          0       0       0
+   411 ;;      Totals:         0       1       0
+   412 ;;Total ram usage:        1 bytes
+   413 ;; Hardware stack levels required when called:    6
+   414 ;; This function calls:
+   415 ;;		_delay_ms_custom
+   416 ;;		_pin2_is_high
+   417 ;;		_system_init
+   418 ;;		_trigger_detect_action
+   419 ;; This function is called by:
+   420 ;;		Startup code after reset
+   421 ;; This function uses a non-reentrant model
+   422 ;;
+   423                           
+   424                           
+   425                           ;psect for function _main
+   426  00E3                     _main:
+   427  00E3                     l1154:	
+   428                           ;incstack = 0
+   429                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   430                           
+   431                           
+   432                           ;KousicandCo.c: 392:     _Bool pin2_was_high;;KousicandCo.c: 394:     system_init();
+   433  00E3  2099               	fcall	_system_init
+   434  00E4                     l1156:
+   435                           
+   436                           ;KousicandCo.c: 396:     pin2_was_high = 0;
+   437  00E4  1283               	bcf	3,5	;RP0=0, select bank0
+   438  00E5  01A6               	clrf	main@pin2_was_high
+   439  00E6                     l1158:
+   440                           
+   441                           ;KousicandCo.c: 399:     {;KousicandCo.c: 400:         if (pin2_is_high())
+   442  00E6  2192               	fcall	_pin2_is_high
+   443  00E7  3A00               	xorlw	0
+   444  00E8  1903               	skipnz
+   445  00E9  28EB               	goto	u401
+   446  00EA  28EC               	goto	u400
+   447  00EB                     u401:
+   448  00EB  28E4               	goto	l1156
+   449  00EC                     u400:
+   450  00EC                     l1160:
+   451                           
+   452                           ;KousicandCo.c: 401:         {;KousicandCo.c: 402:             delay_ms_custom(20u);
+   453  00EC  3014               	movlw	20
+   454  00ED  1283               	bcf	3,5	;RP0=0, select bank0
+   455  00EE  00A0               	movwf	delay_ms_custom@ms
+   456  00EF  3000               	movlw	0
+   457  00F0  00A1               	movwf	delay_ms_custom@ms+1
+   458  00F1  20C1               	fcall	_delay_ms_custom
+   459  00F2                     l1162:
+   460                           
+   461                           ;KousicandCo.c: 404:             if (pin2_is_high() && !pin2_was_high)
+   462  00F2  2192               	fcall	_pin2_is_high
+   463  00F3  3A00               	xorlw	0
+   464  00F4  1903               	skipnz
+   465  00F5  28F7               	goto	u411
+   466  00F6  28F8               	goto	u410
+   467  00F7                     u411:
+   468  00F7  28E6               	goto	l1158
+   469  00F8                     u410:
+   470  00F8                     l1164:
+   471  00F8  1283               	bcf	3,5	;RP0=0, select bank0
+   472  00F9  0826               	movf	main@pin2_was_high,w
+   473  00FA  1D03               	btfss	3,2
+   474  00FB  28FD               	goto	u421
+   475  00FC  28FE               	goto	u420
+   476  00FD                     u421:
+   477  00FD  28E6               	goto	l1158
+   478  00FE                     u420:
+   479  00FE                     l1166:
+   480                           
+   481                           ;KousicandCo.c: 405:             {;KousicandCo.c: 406:                 trigger_detect_ac
+      +                          tion();
+   482  00FE  2188               	fcall	_trigger_detect_action
+   483  00FF                     l1168:
+   484                           
+   485                           ;KousicandCo.c: 407:                 pin2_was_high = 1;
+   486  00FF  1283               	bcf	3,5	;RP0=0, select bank0
+   487  0100  01A6               	clrf	main@pin2_was_high
+   488  0101  0AA6               	incf	main@pin2_was_high,f
+   489  0102  28E6               	goto	l1158
+   490  0103  280F               	ljmp	start
+   491  0104                     __end_of_main:
+   492                           
+   493                           	psect	text1
+   494  0188                     __ptext1:	
+   495 ;; *************** function _trigger_detect_action *****************
+   496 ;; Defined at:
+   497 ;;		line 241 in file "KousicandCo.c"
+   498 ;; Parameters:    Size  Location     Type
+   499 ;;		None
+   500 ;; Auto vars:     Size  Location     Type
+   501 ;;		None
+   502 ;; Return value:  Size  Location     Type
+   503 ;;                  1    wreg      void 
+   504 ;; Registers used:
+   505 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   506 ;; Tracked objects:
+   507 ;;		On entry : 0/0
+   508 ;;		On exit  : 0/0
+   509 ;;		Unchanged: 0/0
+   510 ;; Data sizes:     COMMON   BANK0   BANK1
+   511 ;;      Params:         0       0       0
+   512 ;;      Locals:         0       0       0
+   513 ;;      Temps:          0       0       0
+   514 ;;      Totals:         0       0       0
+   515 ;;Total ram usage:        0 bytes
+   516 ;; Hardware stack levels used:    1
+   517 ;; Hardware stack levels required when called:    5
+   518 ;; This function calls:
+   519 ;;		_blink_led_three_times
+   520 ;;		_uart_is_busy
+   521 ;;		_uart_send_string_async
+   522 ;; This function is called by:
+   523 ;;		_main
+   524 ;; This function uses a non-reentrant model
+   525 ;;
+   526                           
+   527                           
+   528                           ;psect for function _trigger_detect_action
+   529  0188                     _trigger_detect_action:
+   530  0188                     l1064:	
+   531                           ;incstack = 0
+   532                           ; Regs used in _trigger_detect_action: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   533                           
+   534                           
+   535                           ;KousicandCo.c: 243:     uart_send_string_async("Detects");
+   536  0188  3001               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
+   537  0189  206C               	fcall	_uart_send_string_async
+   538  018A                     l1066:
+   539                           
+   540                           ;KousicandCo.c: 245:     blink_led_three_times();
+   541  018A  2121               	fcall	_blink_led_three_times
+   542  018B                     l1068:	
+   543                           ;KousicandCo.c: 247:     while (uart_is_busy())
+   544                           
+   545                           
+   546                           ;KousicandCo.c: 247:     while (uart_is_busy())
+   547  018B  21AF               	fcall	_uart_is_busy
+   548  018C  3A00               	xorlw	0
+   549  018D  1D03               	skipz
+   550  018E  2990               	goto	u321
+   551  018F  2991               	goto	u320
+   552  0190                     u321:
+   553  0190  298B               	goto	l1068
+   554  0191                     u320:
+   555  0191                     l106:
+   556  0191  0008               	return
+   557  0192                     __end_of_trigger_detect_action:
+   558                           
+   559                           	psect	text2
+   560  006C                     __ptext2:	
+   561 ;; *************** function _uart_send_string_async *****************
+   562 ;; Defined at:
+   563 ;;		line 191 in file "KousicandCo.c"
+   564 ;; Parameters:    Size  Location     Type
+   565 ;;  text            1    wreg     PTR const unsigned char 
+   566 ;;		 -> STR_1(8), 
+   567 ;; Auto vars:     Size  Location     Type
+   568 ;;  text            1    4[BANK0 ] PTR const unsigned char 
+   569 ;;		 -> STR_1(8), 
+   570 ;; Return value:  Size  Location     Type
+   571 ;;                  1    wreg      void 
+   572 ;; Registers used:
+   573 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   574 ;; Tracked objects:
+   575 ;;		On entry : 0/0
+   576 ;;		On exit  : 0/0
+   577 ;;		Unchanged: 0/0
+   578 ;; Data sizes:     COMMON   BANK0   BANK1
+   579 ;;      Params:         0       0       0
+   580 ;;      Locals:         0       1       0
+   581 ;;      Temps:          0       1       0
+   582 ;;      Totals:         0       2       0
+   583 ;;Total ram usage:        2 bytes
+   584 ;; Hardware stack levels used:    1
+   585 ;; Hardware stack levels required when called:    3
+   586 ;; This function calls:
+   587 ;;		_uart_load_character
+   588 ;;		_uart_output_next_bit_main_context
+   589 ;;		_uart_timer_start
+   590 ;; This function is called by:
+   591 ;;		_trigger_detect_action
+   592 ;; This function uses a non-reentrant model
+   593 ;;
+   594                           
+   595                           
+   596                           ;psect for function _uart_send_string_async
+   597  006C                     _uart_send_string_async:
+   598                           
+   599                           ;incstack = 0
+   600                           ; Regs used in _uart_send_string_async: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   601                           ;uart_send_string_async@text stored from wreg
+   602  006C  1283               	bcf	3,5	;RP0=0, select bank0
+   603  006D  00A4               	movwf	uart_send_string_async@text
+   604  006E                     l1014:
+   605  006E                     l1016:	
+   606                           ;KousicandCo.c: 191: static void uart_send_string_async(const char *text);KousicandCo.c:
+      +                           192: {;KousicandCo.c: 193:     while (uart_tx_busy)
+   607                           
+   608                           
+   609                           ;KousicandCo.c: 193:     while (uart_tx_busy)
+   610  006E  087A               	movf	_uart_tx_busy,w	;volatile
+   611  006F  1D03               	btfss	3,2
+   612  0070  2872               	goto	u271
+   613  0071  2873               	goto	u270
+   614  0072                     u271:
+   615  0072  286E               	goto	l1016
+   616  0073                     u270:
+   617  0073                     l1018:
+   618                           
+   619                           ;KousicandCo.c: 198:     if (text == 0)
+   620  0073  1283               	bcf	3,5	;RP0=0, select bank0
+   621  0074  0824               	movf	uart_send_string_async@text,w
+   622  0075  1D03               	btfss	3,2
+   623  0076  2878               	goto	u281
+   624  0077  2879               	goto	u280
+   625  0078                     u281:
+   626  0078  287A               	goto	l1022
+   627  0079                     u280:
+   628  0079  2898               	goto	l94
+   629  007A                     l1022:
+   630                           
+   631                           ;KousicandCo.c: 203:     if (text[0] == '\0')
+   632  007A  0824               	movf	uart_send_string_async@text,w
+   633  007B  0084               	movwf	4
+   634  007C  217A               	fcall	stringdir
+   635  007D  3A00               	xorlw	0
+   636  007E  1D03               	skipz
+   637  007F  2881               	goto	u291
+   638  0080  2882               	goto	u290
+   639  0081                     u291:
+   640  0081  2883               	goto	l95
+   641  0082                     u290:
+   642  0082  2898               	goto	l94
+   643  0083                     l95:	
+   644                           ;KousicandCo.c: 206:     }
+   645                           
+   646                           
+   647                           ;KousicandCo.c: 208:     INTCONbits.GIE = 0;
+   648  0083  138B               	bcf	11,7	;volatile
+   649  0084                     l1026:
+   650                           
+   651                           ;KousicandCo.c: 210:     uart_tx_ptr = text;
+   652  0084  0824               	movf	uart_send_string_async@text,w
+   653  0085  00A3               	movwf	??_uart_send_string_async
+   654  0086  0823               	movf	??_uart_send_string_async,w
+   655  0087  00FC               	movwf	_uart_tx_ptr
+   656  0088                     l1028:
+   657                           
+   658                           ;KousicandCo.c: 211:     uart_load_character(*uart_tx_ptr);
+   659  0088  087C               	movf	_uart_tx_ptr,w
+   660  0089  0084               	movwf	4
+   661  008A  217A               	fcall	stringdir
+   662  008B  2155               	fcall	_uart_load_character
+   663  008C                     l1030:
+   664                           
+   665                           ;KousicandCo.c: 212:     uart_tx_ptr++;
+   666  008C  3001               	movlw	1
+   667  008D  1283               	bcf	3,5	;RP0=0, select bank0
+   668  008E  00A3               	movwf	??_uart_send_string_async
+   669  008F  0823               	movf	??_uart_send_string_async,w
+   670  0090  07FC               	addwf	_uart_tx_ptr,f
+   671  0091                     l1032:
+   672                           
+   673                           ;KousicandCo.c: 214:     uart_tx_busy = 1;
+   674  0091  3001               	movlw	1
+   675  0092  00A3               	movwf	??_uart_send_string_async
+   676  0093  0823               	movf	??_uart_send_string_async,w
+   677  0094  00FA               	movwf	_uart_tx_busy	;volatile
+   678  0095                     l1034:
+   679                           
+   680                           ;KousicandCo.c: 220:     uart_output_next_bit_main_context();
+   681  0095  213D               	fcall	_uart_output_next_bit_main_context
+   682  0096                     l1036:
+   683                           
+   684                           ;KousicandCo.c: 222:     uart_timer_start();
+   685  0096  21A1               	fcall	_uart_timer_start
+   686  0097                     l1038:
+   687                           
+   688                           ;KousicandCo.c: 224:     INTCONbits.GIE = 1;
+   689  0097  178B               	bsf	11,7	;volatile
+   690  0098                     l94:
+   691  0098  0008               	return
+   692  0099                     __end_of_uart_send_string_async:
+   693                           
+   694                           	psect	text3
+   695  01A1                     __ptext3:	
+   696 ;; *************** function _uart_timer_start *****************
+   697 ;; Defined at:
+   698 ;;		line 144 in file "KousicandCo.c"
+   699 ;; Parameters:    Size  Location     Type
+   700 ;;		None
+   701 ;; Auto vars:     Size  Location     Type
+   702 ;;		None
+   703 ;; Return value:  Size  Location     Type
+   704 ;;                  1    wreg      void 
+   705 ;; Registers used:
+   706 ;;		status,2
+   707 ;; Tracked objects:
+   708 ;;		On entry : 0/0
+   709 ;;		On exit  : 0/0
+   710 ;;		Unchanged: 0/0
+   711 ;; Data sizes:     COMMON   BANK0   BANK1
+   712 ;;      Params:         0       0       0
+   713 ;;      Locals:         0       0       0
+   714 ;;      Temps:          0       0       0
+   715 ;;      Totals:         0       0       0
+   716 ;;Total ram usage:        0 bytes
+   717 ;; Hardware stack levels used:    1
+   718 ;; Hardware stack levels required when called:    2
+   719 ;; This function calls:
+   720 ;;		Nothing
+   721 ;; This function is called by:
+   722 ;;		_uart_send_string_async
+   723 ;; This function uses a non-reentrant model
+   724 ;;
+   725                           
+   726                           
+   727                           ;psect for function _uart_timer_start
+   728  01A1                     _uart_timer_start:
+   729  01A1                     l988:	
+   730                           ;incstack = 0
+   731                           ; Regs used in _uart_timer_start: [status,2]
+   732                           
+   733                           
+   734                           ;KousicandCo.c: 146:     TMR2 = 0;
+   735  01A1  1283               	bcf	3,5	;RP0=0, select bank0
+   736  01A2  0191               	clrf	17	;volatile
+   737  01A3                     l990:
+   738                           
+   739                           ;KousicandCo.c: 147:     PIR1bits.TMR2IF = 0;
+   740  01A3  108C               	bcf	12,1	;volatile
+   741  01A4                     l992:
+   742                           
+   743                           ;KousicandCo.c: 148:     T2CONbits.TMR2ON = 1;
+   744  01A4  1512               	bsf	18,2	;volatile
+   745  01A5                     l73:
+   746  01A5  0008               	return
+   747  01A6                     __end_of_uart_timer_start:
+   748                           
+   749                           	psect	text4
+   750  013D                     __ptext4:	
+   751 ;; *************** function _uart_output_next_bit_main_context *****************
+   752 ;; Defined at:
+   753 ;;		line 174 in file "KousicandCo.c"
+   754 ;; Parameters:    Size  Location     Type
+   755 ;;		None
+   756 ;; Auto vars:     Size  Location     Type
+   757 ;;		None
+   758 ;; Return value:  Size  Location     Type
+   759 ;;                  1    wreg      void 
+   760 ;; Registers used:
+   761 ;;		wreg, status,2, status,0
+   762 ;; Tracked objects:
+   763 ;;		On entry : 0/0
+   764 ;;		On exit  : 0/0
+   765 ;;		Unchanged: 0/0
+   766 ;; Data sizes:     COMMON   BANK0   BANK1
+   767 ;;      Params:         0       0       0
+   768 ;;      Locals:         0       0       0
+   769 ;;      Temps:          0       1       0
+   770 ;;      Totals:         0       1       0
+   771 ;;Total ram usage:        1 bytes
+   772 ;; Hardware stack levels used:    1
+   773 ;; Hardware stack levels required when called:    2
+   774 ;; This function calls:
+   775 ;;		Nothing
+   776 ;; This function is called by:
+   777 ;;		_uart_send_string_async
+   778 ;; This function uses a non-reentrant model
+   779 ;;
+   780                           
+   781                           
+   782                           ;psect for function _uart_output_next_bit_main_context
+   783  013D                     _uart_output_next_bit_main_context:
+   784  013D                     l998:	
+   785                           ;incstack = 0
+   786                           ; Regs used in _uart_output_next_bit_main_context: [wreg+status,2+status,0]
+   787                           
+   788                           
+   789                           ;KousicandCo.c: 176:     if ((uart_tx_frame & 0x0001u) != 0u)
+   790  013D  1C78               	btfss	_uart_tx_frame,0	;volatile
+   791  013E  2940               	goto	u251
+   792  013F  2941               	goto	u250
+   793  0140                     u251:
+   794  0140  2944               	goto	l1002
+   795  0141                     u250:
+   796  0141                     l1000:
+   797                           
+   798                           ;KousicandCo.c: 177:     {;KousicandCo.c: 178:         gpio_shadow |= 0x04u;
+   799  0141  1283               	bcf	3,5	;RP0=0, select bank0
+   800  0142  1527               	bsf	_gpio_shadow,2	;volatile
+   801                           
+   802                           ;KousicandCo.c: 179:     }
+   803  0143  2949               	goto	l1004
+   804  0144                     l1002:
+   805                           
+   806                           ;KousicandCo.c: 181:     {;KousicandCo.c: 182:         gpio_shadow &= (uint8_t)(~0x04u);
+   807  0144  30FB               	movlw	251
+   808  0145  1283               	bcf	3,5	;RP0=0, select bank0
+   809  0146  00A0               	movwf	??_uart_output_next_bit_main_context
+   810  0147  0820               	movf	??_uart_output_next_bit_main_context,w
+   811  0148  05A7               	andwf	_gpio_shadow,f	;volatile
+   812  0149                     l1004:
+   813                           
+   814                           ;KousicandCo.c: 185:     GPIO = gpio_shadow;
+   815  0149  0827               	movf	_gpio_shadow,w	;volatile
+   816  014A  0085               	movwf	5	;volatile
+   817  014B                     l1006:
+   818                           
+   819                           ;KousicandCo.c: 187:     uart_tx_frame >>= 1;
+   820  014B  3001               	movlw	1
+   821  014C                     u265:
+   822  014C  1003               	clrc
+   823  014D  0CF9               	rrf	_uart_tx_frame+1,f	;volatile
+   824  014E  0CF8               	rrf	_uart_tx_frame,f	;volatile
+   825  014F  3EFF               	addlw	-1
+   826  0150  1D03               	skipz
+   827  0151  294C               	goto	u265
+   828  0152                     l1008:
+   829                           
+   830                           ;KousicandCo.c: 188:     uart_tx_bits_remaining--;
+   831  0152  3001               	movlw	1
+   832  0153  02FB               	subwf	_uart_tx_bits_remaining,f	;volatile
+   833  0154                     l87:
+   834  0154  0008               	return
+   835  0155                     __end_of_uart_output_next_bit_main_context:
+   836                           
+   837                           	psect	text5
+   838  0155                     __ptext5:	
+   839 ;; *************** function _uart_load_character *****************
+   840 ;; Defined at:
+   841 ;;		line 162 in file "KousicandCo.c"
+   842 ;; Parameters:    Size  Location     Type
+   843 ;;  data            1    wreg     unsigned char 
+   844 ;; Auto vars:     Size  Location     Type
+   845 ;;  data            1    2[BANK0 ] unsigned char 
+   846 ;; Return value:  Size  Location     Type
+   847 ;;                  1    wreg      void 
+   848 ;; Registers used:
+   849 ;;		wreg, status,2, status,0
+   850 ;; Tracked objects:
+   851 ;;		On entry : 0/0
+   852 ;;		On exit  : 0/0
+   853 ;;		Unchanged: 0/0
+   854 ;; Data sizes:     COMMON   BANK0   BANK1
+   855 ;;      Params:         0       0       0
+   856 ;;      Locals:         0       1       0
+   857 ;;      Temps:          0       2       0
+   858 ;;      Totals:         0       3       0
+   859 ;;Total ram usage:        3 bytes
+   860 ;; Hardware stack levels used:    1
+   861 ;; Hardware stack levels required when called:    2
+   862 ;; This function calls:
+   863 ;;		Nothing
+   864 ;; This function is called by:
+   865 ;;		_uart_send_string_async
+   866 ;; This function uses a non-reentrant model
+   867 ;;
+   868                           
+   869                           
+   870                           ;psect for function _uart_load_character
+   871  0155                     _uart_load_character:
+   872                           
+   873                           ;incstack = 0
+   874                           ; Regs used in _uart_load_character: [wreg+status,2+status,0]
+   875                           ;uart_load_character@data stored from wreg
+   876  0155  1283               	bcf	3,5	;RP0=0, select bank0
+   877  0156  00A2               	movwf	uart_load_character@data
+   878  0157                     l994:
+   879                           
+   880                           ;KousicandCo.c: 162: static void uart_load_character(char data);KousicandCo.c: 163: {;Ko
+      +                          usicandCo.c: 170:     uart_tx_frame = ((uint16_t)1u << 9) | ((uint16_t)((uint8_t)data) <
+      +                          < 1);
+   881  0157  0822               	movf	uart_load_character@data,w
+   882  0158  00A0               	movwf	??_uart_load_character
+   883  0159  01A1               	clrf	??_uart_load_character+1
+   884  015A  1003               	clrc
+   885  015B  0DA0               	rlf	??_uart_load_character,f
+   886  015C  0DA1               	rlf	??_uart_load_character+1,f
+   887  015D  3000               	movlw	0
+   888  015E  0420               	iorwf	??_uart_load_character,w
+   889  015F  00F8               	movwf	_uart_tx_frame	;volatile
+   890  0160  3002               	movlw	2
+   891  0161  0421               	iorwf	??_uart_load_character+1,w
+   892  0162  00F9               	movwf	_uart_tx_frame+1	;volatile
+   893  0163                     l996:
+   894                           
+   895                           ;KousicandCo.c: 171:     uart_tx_bits_remaining = 10u;
+   896  0163  300A               	movlw	10
+   897  0164  00A0               	movwf	??_uart_load_character
+   898  0165  0820               	movf	??_uart_load_character,w
+   899  0166  00FB               	movwf	_uart_tx_bits_remaining	;volatile
+   900  0167                     l82:
+   901  0167  0008               	return
+   902  0168                     __end_of_uart_load_character:
+   903                           
+   904                           	psect	text6
+   905  01AF                     __ptext6:	
+   906 ;; *************** function _uart_is_busy *****************
+   907 ;; Defined at:
+   908 ;;		line 157 in file "KousicandCo.c"
+   909 ;; Parameters:    Size  Location     Type
+   910 ;;		None
+   911 ;; Auto vars:     Size  Location     Type
+   912 ;;		None
+   913 ;; Return value:  Size  Location     Type
+   914 ;;                  1    wreg      _Bool 
+   915 ;; Registers used:
+   916 ;;		wreg
+   917 ;; Tracked objects:
+   918 ;;		On entry : 0/0
+   919 ;;		On exit  : 0/0
+   920 ;;		Unchanged: 0/0
+   921 ;; Data sizes:     COMMON   BANK0   BANK1
+   922 ;;      Params:         0       0       0
+   923 ;;      Locals:         0       0       0
+   924 ;;      Temps:          0       0       0
+   925 ;;      Totals:         0       0       0
+   926 ;;Total ram usage:        0 bytes
+   927 ;; Hardware stack levels used:    1
+   928 ;; Hardware stack levels required when called:    2
+   929 ;; This function calls:
+   930 ;;		Nothing
+   931 ;; This function is called by:
+   932 ;;		_trigger_detect_action
+   933 ;; This function uses a non-reentrant model
+   934 ;;
+   935                           
+   936                           
+   937                           ;psect for function _uart_is_busy
+   938  01AF                     _uart_is_busy:
+   939  01AF                     l1010:	
+   940                           ;incstack = 0
+   941                           ; Regs used in _uart_is_busy: [wreg]
+   942                           
+   943                           
+   944                           ;KousicandCo.c: 159:     return uart_tx_busy;
+   945  01AF  087A               	movf	_uart_tx_busy,w	;volatile
+   946  01B0                     l79:
+   947  01B0  0008               	return
+   948  01B1                     __end_of_uart_is_busy:
+   949                           
+   950                           	psect	text7
+   951  0121                     __ptext7:	
+   952 ;; *************** function _blink_led_three_times *****************
+   953 ;; Defined at:
+   954 ;;		line 227 in file "KousicandCo.c"
+   955 ;; Parameters:    Size  Location     Type
+   956 ;;		None
+   957 ;; Auto vars:     Size  Location     Type
+   958 ;;  i               1    5[BANK0 ] unsigned char 
+   959 ;; Return value:  Size  Location     Type
+   960 ;;                  1    wreg      void 
+   961 ;; Registers used:
+   962 ;;		wreg, status,2, status,0, pclath, cstack
+   963 ;; Tracked objects:
+   964 ;;		On entry : 0/0
+   965 ;;		On exit  : 0/0
+   966 ;;		Unchanged: 0/0
+   967 ;; Data sizes:     COMMON   BANK0   BANK1
+   968 ;;      Params:         0       0       0
+   969 ;;      Locals:         0       1       0
+   970 ;;      Temps:          0       1       0
+   971 ;;      Totals:         0       2       0
+   972 ;;Total ram usage:        2 bytes
+   973 ;; Hardware stack levels used:    1
+   974 ;; Hardware stack levels required when called:    4
+   975 ;; This function calls:
+   976 ;;		_delay_ms_custom
+   977 ;;		_led_off
+   978 ;;		_led_on
+   979 ;; This function is called by:
+   980 ;;		_trigger_detect_action
+   981 ;; This function uses a non-reentrant model
+   982 ;;
+   983                           
+   984                           
+   985                           ;psect for function _blink_led_three_times
+   986  0121                     _blink_led_three_times:
+   987  0121                     l1040:	
+   988                           ;incstack = 0
+   989                           ; Regs used in _blink_led_three_times: [wreg+status,2+status,0+pclath+cstack]
+   990                           
+   991                           
+   992                           ;KousicandCo.c: 229:     uint8_t i;;KousicandCo.c: 231:     for (i = 0u; i < 3u; i++)
+   993  0121  1283               	bcf	3,5	;RP0=0, select bank0
+   994  0122  01A5               	clrf	blink_led_three_times@i
+   995  0123                     l1046:
+   996                           
+   997                           ;KousicandCo.c: 232:     {;KousicandCo.c: 233:         led_on();
+   998  0123  219B               	fcall	_led_on
+   999                           
+  1000                           ;KousicandCo.c: 234:         delay_ms_custom(120u);
+  1001  0124  3078               	movlw	120
+  1002  0125  1283               	bcf	3,5	;RP0=0, select bank0
+  1003  0126  00A0               	movwf	delay_ms_custom@ms
+  1004  0127  3000               	movlw	0
+  1005  0128  00A1               	movwf	delay_ms_custom@ms+1
+  1006  0129  20C1               	fcall	_delay_ms_custom
+  1007                           
+  1008                           ;KousicandCo.c: 236:         led_off();
+  1009  012A  21A6               	fcall	_led_off
+  1010                           
+  1011                           ;KousicandCo.c: 237:         delay_ms_custom(120u);
+  1012  012B  3078               	movlw	120
+  1013  012C  1283               	bcf	3,5	;RP0=0, select bank0
+  1014  012D  00A0               	movwf	delay_ms_custom@ms
+  1015  012E  3000               	movlw	0
+  1016  012F  00A1               	movwf	delay_ms_custom@ms+1
+  1017  0130  20C1               	fcall	_delay_ms_custom
+  1018  0131                     l1048:
+  1019                           
+  1020                           ;KousicandCo.c: 238:     }
+  1021  0131  3001               	movlw	1
+  1022  0132  1283               	bcf	3,5	;RP0=0, select bank0
+  1023  0133  00A4               	movwf	??_blink_led_three_times
+  1024  0134  0824               	movf	??_blink_led_three_times,w
+  1025  0135  07A5               	addwf	blink_led_three_times@i,f
+  1026  0136                     l1050:
+  1027  0136  3003               	movlw	3
+  1028  0137  0225               	subwf	blink_led_three_times@i,w
+  1029  0138  1C03               	skipc
+  1030  0139  293B               	goto	u301
+  1031  013A  293C               	goto	u300
+  1032  013B                     u301:
+  1033  013B  2923               	goto	l1046
+  1034  013C                     u300:
+  1035  013C                     l100:
+  1036  013C  0008               	return
+  1037  013D                     __end_of_blink_led_three_times:
+  1038                           
+  1039                           	psect	text8
+  1040  019B                     __ptext8:	
+  1041 ;; *************** function _led_on *****************
+  1042 ;; Defined at:
+  1043 ;;		line 134 in file "KousicandCo.c"
+  1044 ;; Parameters:    Size  Location     Type
+  1045 ;;		None
+  1046 ;; Auto vars:     Size  Location     Type
+  1047 ;;		None
+  1048 ;; Return value:  Size  Location     Type
+  1049 ;;                  1    wreg      void 
+  1050 ;; Registers used:
+  1051 ;;		wreg, status,2, status,0, pclath, cstack
+  1052 ;; Tracked objects:
+  1053 ;;		On entry : 0/0
+  1054 ;;		On exit  : 0/0
+  1055 ;;		Unchanged: 0/0
+  1056 ;; Data sizes:     COMMON   BANK0   BANK1
+  1057 ;;      Params:         0       0       0
+  1058 ;;      Locals:         0       0       0
+  1059 ;;      Temps:          0       0       0
+  1060 ;;      Totals:         0       0       0
+  1061 ;;Total ram usage:        0 bytes
+  1062 ;; Hardware stack levels used:    1
+  1063 ;; Hardware stack levels required when called:    3
+  1064 ;; This function calls:
+  1065 ;;		_gpio_write_atomic
+  1066 ;; This function is called by:
+  1067 ;;		_blink_led_three_times
+  1068 ;; This function uses a non-reentrant model
+  1069 ;;
+  1070                           
+  1071                           
+  1072                           ;psect for function _led_on
+  1073  019B                     _led_on:
+  1074  019B                     l984:	
+  1075                           ;incstack = 0
+  1076                           ; Regs used in _led_on: [wreg+status,2+status,0+pclath+cstack]
+  1077                           
+  1078                           
+  1079                           ;KousicandCo.c: 136:     gpio_write_atomic(0x10u, 1);
+  1080  019B  1283               	bcf	3,5	;RP0=0, select bank0
+  1081  019C  01A0               	clrf	gpio_write_atomic@level
+  1082  019D  0AA0               	incf	gpio_write_atomic@level,f
+  1083  019E  3010               	movlw	16
+  1084  019F  2104               	fcall	_gpio_write_atomic
+  1085  01A0                     l67:
+  1086  01A0  0008               	return
+  1087  01A1                     __end_of_led_on:
+  1088                           
+  1089                           	psect	text9
+  1090  01A6                     __ptext9:	
+  1091 ;; *************** function _led_off *****************
+  1092 ;; Defined at:
+  1093 ;;		line 139 in file "KousicandCo.c"
+  1094 ;; Parameters:    Size  Location     Type
+  1095 ;;		None
+  1096 ;; Auto vars:     Size  Location     Type
+  1097 ;;		None
+  1098 ;; Return value:  Size  Location     Type
+  1099 ;;                  1    wreg      void 
+  1100 ;; Registers used:
+  1101 ;;		wreg, status,2, status,0, pclath, cstack
+  1102 ;; Tracked objects:
+  1103 ;;		On entry : 0/0
+  1104 ;;		On exit  : 0/0
+  1105 ;;		Unchanged: 0/0
+  1106 ;; Data sizes:     COMMON   BANK0   BANK1
+  1107 ;;      Params:         0       0       0
+  1108 ;;      Locals:         0       0       0
+  1109 ;;      Temps:          0       0       0
+  1110 ;;      Totals:         0       0       0
+  1111 ;;Total ram usage:        0 bytes
+  1112 ;; Hardware stack levels used:    1
+  1113 ;; Hardware stack levels required when called:    3
+  1114 ;; This function calls:
+  1115 ;;		_gpio_write_atomic
+  1116 ;; This function is called by:
+  1117 ;;		_blink_led_three_times
+  1118 ;; This function uses a non-reentrant model
+  1119 ;;
+  1120                           
+  1121                           
+  1122                           ;psect for function _led_off
+  1123  01A6                     _led_off:
+  1124  01A6                     l986:	
+  1125                           ;incstack = 0
+  1126                           ; Regs used in _led_off: [wreg+status,2+status,0+pclath+cstack]
+  1127                           
+  1128                           
+  1129                           ;KousicandCo.c: 141:     gpio_write_atomic(0x10u, 0);
+  1130  01A6  1283               	bcf	3,5	;RP0=0, select bank0
+  1131  01A7  01A0               	clrf	gpio_write_atomic@level
+  1132  01A8  3010               	movlw	16
+  1133  01A9  2104               	fcall	_gpio_write_atomic
+  1134  01AA                     l70:
+  1135  01AA  0008               	return
+  1136  01AB                     __end_of_led_off:
+  1137                           
+  1138                           	psect	text10
+  1139  0104                     __ptext10:	
+  1140 ;; *************** function _gpio_write_atomic *****************
+  1141 ;; Defined at:
+  1142 ;;		line 103 in file "KousicandCo.c"
+  1143 ;; Parameters:    Size  Location     Type
+  1144 ;;  mask            1    wreg     unsigned char 
+  1145 ;;  level           1    0[BANK0 ] _Bool 
+  1146 ;; Auto vars:     Size  Location     Type
+  1147 ;;  mask            1    3[BANK0 ] unsigned char 
+  1148 ;;  gie_state       1    2[BANK0 ] unsigned char 
+  1149 ;; Return value:  Size  Location     Type
+  1150 ;;                  1    wreg      void 
+  1151 ;; Registers used:
+  1152 ;;		wreg, status,2, status,0
+  1153 ;; Tracked objects:
+  1154 ;;		On entry : 0/0
+  1155 ;;		On exit  : 0/0
+  1156 ;;		Unchanged: 0/0
+  1157 ;; Data sizes:     COMMON   BANK0   BANK1
+  1158 ;;      Params:         0       1       0
+  1159 ;;      Locals:         0       2       0
+  1160 ;;      Temps:          0       1       0
+  1161 ;;      Totals:         0       4       0
+  1162 ;;Total ram usage:        4 bytes
+  1163 ;; Hardware stack levels used:    1
+  1164 ;; Hardware stack levels required when called:    2
+  1165 ;; This function calls:
+  1166 ;;		Nothing
+  1167 ;; This function is called by:
+  1168 ;;		_led_on
+  1169 ;;		_led_off
+  1170 ;; This function uses a non-reentrant model
+  1171 ;;
+  1172                           
+  1173                           
+  1174                           ;psect for function _gpio_write_atomic
+  1175  0104                     _gpio_write_atomic:
+  1176                           
+  1177                           ;incstack = 0
+  1178                           ; Regs used in _gpio_write_atomic: [wreg+status,2+status,0]
+  1179                           ;gpio_write_atomic@mask stored from wreg
+  1180  0104  1283               	bcf	3,5	;RP0=0, select bank0
+  1181  0105  00A3               	movwf	gpio_write_atomic@mask
+  1182  0106                     l950:
+  1183                           
+  1184                           ;KousicandCo.c: 103: static void gpio_write_atomic(uint8_t mask, _Bool level);KousicandC
+      +                          o.c: 104: {;KousicandCo.c: 105:     uint8_t gie_state;;KousicandCo.c: 107:     gie_state
+      +                           = INTCONbits.GIE;
+  1185  0106  3000               	movlw	0
+  1186  0107  1B8B               	btfsc	11,7	;volatile
+  1187  0108  3001               	movlw	1
+  1188  0109  00A2               	movwf	gpio_write_atomic@gie_state
+  1189  010A                     l952:
+  1190                           
+  1191                           ;KousicandCo.c: 108:     INTCONbits.GIE = 0;
+  1192  010A  138B               	bcf	11,7	;volatile
+  1193  010B                     l954:
+  1194                           
+  1195                           ;KousicandCo.c: 110:     if (level)
+  1196  010B  0820               	movf	gpio_write_atomic@level,w
+  1197  010C  1903               	btfsc	3,2
+  1198  010D  290F               	goto	u221
+  1199  010E  2910               	goto	u220
+  1200  010F                     u221:
+  1201  010F  2915               	goto	l958
+  1202  0110                     u220:
+  1203  0110                     l956:
+  1204                           
+  1205                           ;KousicandCo.c: 111:     {;KousicandCo.c: 112:         gpio_shadow |= mask;
+  1206  0110  0823               	movf	gpio_write_atomic@mask,w	;volatile
+  1207  0111  00A1               	movwf	??_gpio_write_atomic
+  1208  0112  0821               	movf	??_gpio_write_atomic,w
+  1209  0113  04A7               	iorwf	_gpio_shadow,f	;volatile
+  1210                           
+  1211                           ;KousicandCo.c: 113:     }
+  1212  0114  2919               	goto	l960
+  1213  0115                     l958:
+  1214                           
+  1215                           ;KousicandCo.c: 115:     {;KousicandCo.c: 116:         gpio_shadow &= (uint8_t)(~mask);
+  1216  0115  0923               	comf	gpio_write_atomic@mask,w
+  1217  0116  00A1               	movwf	??_gpio_write_atomic
+  1218  0117  0821               	movf	??_gpio_write_atomic,w
+  1219  0118  05A7               	andwf	_gpio_shadow,f	;volatile
+  1220  0119                     l960:
+  1221                           
+  1222                           ;KousicandCo.c: 119:     GPIO = gpio_shadow;
+  1223  0119  0827               	movf	_gpio_shadow,w	;volatile
+  1224  011A  0085               	movwf	5	;volatile
+  1225  011B                     l962:
+  1226                           
+  1227                           ;KousicandCo.c: 121:     INTCONbits.GIE = gie_state;
+  1228  011B  0C22               	rrf	gpio_write_atomic@gie_state,w
+  1229  011C  1C03               	skipc
+  1230  011D  138B               	bcf	11,7	;volatile
+  1231  011E  1803               	skipnc
+  1232  011F  178B               	bsf	11,7	;volatile
+  1233  0120                     l60:
+  1234  0120  0008               	return
+  1235  0121                     __end_of_gpio_write_atomic:
+  1236                           
+  1237                           	psect	text11
+  1238  00C1                     __ptext11:	
+  1239 ;; *************** function _delay_ms_custom *****************
+  1240 ;; Defined at:
+  1241 ;;		line 78 in file "KousicandCo.c"
+  1242 ;; Parameters:    Size  Location     Type
+  1243 ;;  ms              2    0[BANK0 ] unsigned int 
+  1244 ;; Auto vars:     Size  Location     Type
+  1245 ;;		None
+  1246 ;; Return value:  Size  Location     Type
+  1247 ;;                  1    wreg      void 
+  1248 ;; Registers used:
+  1249 ;;		wreg, status,2, status,0
+  1250 ;; Tracked objects:
+  1251 ;;		On entry : 0/0
+  1252 ;;		On exit  : 0/0
+  1253 ;;		Unchanged: 0/0
+  1254 ;; Data sizes:     COMMON   BANK0   BANK1
+  1255 ;;      Params:         0       2       0
+  1256 ;;      Locals:         0       0       0
+  1257 ;;      Temps:          0       1       0
+  1258 ;;      Totals:         0       3       0
+  1259 ;;Total ram usage:        3 bytes
+  1260 ;; Hardware stack levels used:    1
+  1261 ;; Hardware stack levels required when called:    2
+  1262 ;; This function calls:
+  1263 ;;		Nothing
+  1264 ;; This function is called by:
+  1265 ;;		_blink_led_three_times
+  1266 ;;		_main
+  1267 ;; This function uses a non-reentrant model
+  1268 ;;
+  1269                           
+  1270                           
+  1271                           ;psect for function _delay_ms_custom
+  1272  00C1                     _delay_ms_custom:
+  1273  00C1                     l964:	
+  1274                           ;incstack = 0
+  1275                           ; Regs used in _delay_ms_custom: [wreg+status,2+status,0]
+  1276                           
+  1277                           
+  1278                           ;KousicandCo.c: 78: static void delay_ms_custom(uint16_t ms);KousicandCo.c: 79: {;Kousic
+      +                          andCo.c: 80:     while (ms > 0u)
+  1279  00C1  28DB               	goto	l982
+  1280  00C2                     l966:
+  1281                           
+  1282                           ;KousicandCo.c: 81:     {;KousicandCo.c: 82:         T1CON &= 0xFEu;
+  1283  00C2  30FE               	movlw	254
+  1284  00C3  00A2               	movwf	??_delay_ms_custom
+  1285  00C4  0822               	movf	??_delay_ms_custom,w
+  1286  00C5  0590               	andwf	16,f	;volatile
+  1287  00C6                     l968:
+  1288                           
+  1289                           ;KousicandCo.c: 84:         TMR1H = 0xFFu;
+  1290  00C6  30FF               	movlw	255
+  1291  00C7  008F               	movwf	15	;volatile
+  1292  00C8                     l970:
+  1293                           
+  1294                           ;KousicandCo.c: 85:         TMR1L = 0x06u;
+  1295  00C8  3006               	movlw	6
+  1296  00C9  008E               	movwf	14	;volatile
+  1297  00CA                     l972:
+  1298                           
+  1299                           ;KousicandCo.c: 87:         PIR1bits.TMR1IF = 0;
+  1300  00CA  100C               	bcf	12,0	;volatile
+  1301  00CB                     l974:
+  1302                           
+  1303                           ;KousicandCo.c: 89:         T1CON |= 0x01u;
+  1304  00CB  1410               	bsf	16,0	;volatile
+  1305  00CC                     l51:	
+  1306                           ;KousicandCo.c: 92:         {;KousicandCo.c: 94:         }
+  1307                           
+  1308                           
+  1309                           ;KousicandCo.c: 91:         while (PIR1bits.TMR1IF == 0u)
+  1310  00CC  1C0C               	btfss	12,0	;volatile
+  1311  00CD  28CF               	goto	u231
+  1312  00CE  28D0               	goto	u230
+  1313  00CF                     u231:
+  1314  00CF  28CC               	goto	l51
+  1315  00D0                     u230:
+  1316  00D0                     l976:
+  1317                           
+  1318                           ;KousicandCo.c: 96:         T1CON &= 0xFEu;
+  1319  00D0  30FE               	movlw	254
+  1320  00D1  00A2               	movwf	??_delay_ms_custom
+  1321  00D2  0822               	movf	??_delay_ms_custom,w
+  1322  00D3  0590               	andwf	16,f	;volatile
+  1323  00D4                     l978:
+  1324                           
+  1325                           ;KousicandCo.c: 97:         PIR1bits.TMR1IF = 0;
+  1326  00D4  100C               	bcf	12,0	;volatile
+  1327  00D5                     l980:
+  1328                           
+  1329                           ;KousicandCo.c: 99:         ms--;
+  1330  00D5  3001               	movlw	1
+  1331  00D6  02A0               	subwf	delay_ms_custom@ms,f
+  1332  00D7  3000               	movlw	0
+  1333  00D8  1C03               	skipc
+  1334  00D9  03A1               	decf	delay_ms_custom@ms+1,f
+  1335  00DA  02A1               	subwf	delay_ms_custom@ms+1,f
+  1336  00DB                     l982:
+  1337                           
+  1338                           ;KousicandCo.c: 80:     while (ms > 0u)
+  1339  00DB  1283               	bcf	3,5	;RP0=0, select bank0
+  1340  00DC  0820               	movf	delay_ms_custom@ms,w
+  1341  00DD  0421               	iorwf	delay_ms_custom@ms+1,w
+  1342  00DE  1D03               	btfss	3,2
+  1343  00DF  28E1               	goto	u241
+  1344  00E0  28E2               	goto	u240
+  1345  00E1                     u241:
+  1346  00E1  28C2               	goto	l966
+  1347  00E2                     u240:
+  1348  00E2                     l55:
+  1349  00E2  0008               	return
+  1350  00E3                     __end_of_delay_ms_custom:
+  1351                           
+  1352                           	psect	text12
+  1353  0099                     __ptext12:	
+  1354 ;; *************** function _system_init *****************
+  1355 ;; Defined at:
+  1356 ;;		line 253 in file "KousicandCo.c"
+  1357 ;; Parameters:    Size  Location     Type
+  1358 ;;		None
+  1359 ;; Auto vars:     Size  Location     Type
+  1360 ;;		None
+  1361 ;; Return value:  Size  Location     Type
+  1362 ;;                  1    wreg      void 
+  1363 ;; Registers used:
+  1364 ;;		wreg, status,2
+  1365 ;; Tracked objects:
+  1366 ;;		On entry : 0/0
+  1367 ;;		On exit  : 0/0
+  1368 ;;		Unchanged: 0/0
+  1369 ;; Data sizes:     COMMON   BANK0   BANK1
+  1370 ;;      Params:         0       0       0
+  1371 ;;      Locals:         0       0       0
+  1372 ;;      Temps:          0       1       0
+  1373 ;;      Totals:         0       1       0
+  1374 ;;Total ram usage:        1 bytes
+  1375 ;; Hardware stack levels used:    1
+  1376 ;; Hardware stack levels required when called:    2
+  1377 ;; This function calls:
+  1378 ;;		Nothing
+  1379 ;; This function is called by:
+  1380 ;;		_main
+  1381 ;; This function uses a non-reentrant model
+  1382 ;;
+  1383                           
+  1384                           
+  1385                           ;psect for function _system_init
+  1386  0099                     _system_init:
+  1387  0099                     l1070:	
+  1388                           ;incstack = 0
+  1389                           ; Regs used in _system_init: [wreg+status,2]
+  1390                           
+  1391                           
+  1392                           ;KousicandCo.c: 258:     OSCCON = 0b01110000;
+  1393  0099  3070               	movlw	112
+  1394  009A  1683               	bsf	3,5	;RP0=1, select bank1
+  1395  009B  008F               	movwf	15	;volatile
+  1396  009C                     l1072:
+  1397                           
+  1398                           ;KousicandCo.c: 263:     ANSEL = 0x00;
+  1399  009C  019F               	clrf	31	;volatile
+  1400  009D                     l1074:
+  1401                           
+  1402                           ;KousicandCo.c: 264:     ADCON0 = 0x00;
+  1403  009D  1283               	bcf	3,5	;RP0=0, select bank0
+  1404  009E  019F               	clrf	31	;volatile
+  1405                           
+  1406                           ;KousicandCo.c: 265:     CMCON0 = 0x07;
+  1407  009F  3007               	movlw	7
+  1408  00A0  0099               	movwf	25	;volatile
+  1409                           
+  1410                           ;KousicandCo.c: 271:     gpio_shadow = 0x04u;
+  1411  00A1  3004               	movlw	4
+  1412  00A2  00A0               	movwf	??_system_init
+  1413  00A3  0820               	movf	??_system_init,w
+  1414  00A4  00A7               	movwf	_gpio_shadow	;volatile
+  1415                           
+  1416                           ;KousicandCo.c: 272:     GPIO = gpio_shadow;
+  1417  00A5  0827               	movf	_gpio_shadow,w	;volatile
+  1418  00A6  0085               	movwf	5	;volatile
+  1419                           
+  1420                           ;KousicandCo.c: 282:     TRISIO = 0b00101000;
+  1421  00A7  3028               	movlw	40
+  1422  00A8  1683               	bsf	3,5	;RP0=1, select bank1
+  1423  00A9  0085               	movwf	5	;volatile
+  1424  00AA                     l1076:
+  1425                           
+  1426                           ;KousicandCo.c: 288:     OPTION_REG = OPTION_REG | 0x80u;
+  1427  00AA  0801               	movf	1,w
+  1428  00AB  3880               	iorlw	128
+  1429  00AC  0081               	movwf	1	;volatile
+  1430                           
+  1431                           ;KousicandCo.c: 289:     WPU = 0x00;
+  1432  00AD  0195               	clrf	21	;volatile
+  1433  00AE                     l1078:
+  1434                           
+  1435                           ;KousicandCo.c: 295:     T1CON = 0b00110000;
+  1436  00AE  3030               	movlw	48
+  1437  00AF  1283               	bcf	3,5	;RP0=0, select bank0
+  1438  00B0  0090               	movwf	16	;volatile
+  1439  00B1                     l1080:
+  1440                           
+  1441                           ;KousicandCo.c: 296:     TMR1H = 0x00;
+  1442  00B1  018F               	clrf	15	;volatile
+  1443  00B2                     l1082:
+  1444                           
+  1445                           ;KousicandCo.c: 297:     TMR1L = 0x00;
+  1446  00B2  018E               	clrf	14	;volatile
+  1447  00B3                     l1084:
+  1448                           
+  1449                           ;KousicandCo.c: 298:     PIR1bits.TMR1IF = 0;
+  1450  00B3  100C               	bcf	12,0	;volatile
+  1451  00B4                     l1086:
+  1452                           
+  1453                           ;KousicandCo.c: 299:     PIE1bits.TMR1IE = 0;
+  1454  00B4  1683               	bsf	3,5	;RP0=1, select bank1
+  1455  00B5  100C               	bcf	12,0	;volatile
+  1456  00B6                     l1088:
+  1457                           
+  1458                           ;KousicandCo.c: 305:     PR2 = 207u;
+  1459  00B6  30CF               	movlw	207
+  1460  00B7  0092               	movwf	18	;volatile
+  1461                           
+  1462                           ;KousicandCo.c: 306:     TMR2 = 0;
+  1463  00B8  1283               	bcf	3,5	;RP0=0, select bank0
+  1464  00B9  0191               	clrf	17	;volatile
+  1465                           
+  1466                           ;KousicandCo.c: 307:     T2CON = 0x00;
+  1467  00BA  0192               	clrf	18	;volatile
+  1468  00BB                     l1090:
+  1469                           
+  1470                           ;KousicandCo.c: 309:     PIR1bits.TMR2IF = 0;
+  1471  00BB  108C               	bcf	12,1	;volatile
+  1472  00BC                     l1092:
+  1473                           
+  1474                           ;KousicandCo.c: 310:     PIE1bits.TMR2IE = 1;
+  1475  00BC  1683               	bsf	3,5	;RP0=1, select bank1
+  1476  00BD  148C               	bsf	12,1	;volatile
+  1477  00BE                     l1094:
+  1478                           
+  1479                           ;KousicandCo.c: 312:     INTCONbits.PEIE = 1;
+  1480  00BE  170B               	bsf	11,6	;volatile
+  1481  00BF                     l1096:
+  1482                           
+  1483                           ;KousicandCo.c: 313:     INTCONbits.GIE = 1;
+  1484  00BF  178B               	bsf	11,7	;volatile
+  1485  00C0                     l109:
+  1486  00C0  0008               	return
+  1487  00C1                     __end_of_system_init:
+  1488                           
+  1489                           	psect	text13
+  1490  0192                     __ptext13:	
+  1491 ;; *************** function _pin2_is_high *****************
+  1492 ;; Defined at:
+  1493 ;;		line 124 in file "KousicandCo.c"
+  1494 ;; Parameters:    Size  Location     Type
+  1495 ;;		None
+  1496 ;; Auto vars:     Size  Location     Type
+  1497 ;;		None
+  1498 ;; Return value:  Size  Location     Type
+  1499 ;;                  1    wreg      _Bool 
+  1500 ;; Registers used:
+  1501 ;;		wreg
+  1502 ;; Tracked objects:
+  1503 ;;		On entry : 0/0
+  1504 ;;		On exit  : 0/0
+  1505 ;;		Unchanged: 0/0
+  1506 ;; Data sizes:     COMMON   BANK0   BANK1
+  1507 ;;      Params:         0       0       0
+  1508 ;;      Locals:         0       0       0
+  1509 ;;      Temps:          0       0       0
+  1510 ;;      Totals:         0       0       0
+  1511 ;;Total ram usage:        0 bytes
+  1512 ;; Hardware stack levels used:    1
+  1513 ;; Hardware stack levels required when called:    2
+  1514 ;; This function calls:
+  1515 ;;		Nothing
+  1516 ;; This function is called by:
+  1517 ;;		_main
+  1518 ;; This function uses a non-reentrant model
+  1519 ;;
+  1520                           
+  1521                           
+  1522                           ;psect for function _pin2_is_high
+  1523  0192                     _pin2_is_high:
+  1524  0192                     l1052:	
+  1525                           ;incstack = 0
+  1526                           ; Regs used in _pin2_is_high: [wreg]
+  1527                           
+  1528                           
+  1529                           ;KousicandCo.c: 126:     if ((GPIO & 0x20u) != 0u)
+  1530  0192  1283               	bcf	3,5	;RP0=0, select bank0
+  1531  0193  1E85               	btfss	5,5	;volatile
+  1532  0194  2996               	goto	u311
+  1533  0195  2997               	goto	u310
+  1534  0196                     u311:
+  1535  0196  2999               	goto	l1058
+  1536  0197                     u310:
+  1537  0197                     l1054:
+  1538                           
+  1539                           ;KousicandCo.c: 127:     {;KousicandCo.c: 128:         return 1;
+  1540  0197  3001               	movlw	1
+  1541  0198  299A               	goto	l64
+  1542  0199                     l1058:
+  1543                           
+  1544                           ;KousicandCo.c: 131:     return 0;
+  1545  0199  3000               	movlw	0
+  1546  019A                     l64:
+  1547  019A  0008               	return
+  1548  019B                     __end_of_pin2_is_high:
+  1549                           
+  1550                           	psect	text14
+  1551  0019                     __ptext14:	
+  1552 ;; *************** function _isr *****************
+  1553 ;; Defined at:
+  1554 ;;		line 316 in file "KousicandCo.c"
+  1555 ;; Parameters:    Size  Location     Type
+  1556 ;;		None
+  1557 ;; Auto vars:     Size  Location     Type
+  1558 ;;		None
+  1559 ;; Return value:  Size  Location     Type
+  1560 ;;                  1    wreg      void 
+  1561 ;; Registers used:
+  1562 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1563 ;; Tracked objects:
+  1564 ;;		On entry : 0/0
+  1565 ;;		On exit  : 0/0
+  1566 ;;		Unchanged: 0/0
+  1567 ;; Data sizes:     COMMON   BANK0   BANK1
+  1568 ;;      Params:         0       0       0
+  1569 ;;      Locals:         0       0       0
+  1570 ;;      Temps:          5       0       0
+  1571 ;;      Totals:         5       0       0
+  1572 ;;Total ram usage:        5 bytes
+  1573 ;; Hardware stack levels used:    1
+  1574 ;; Hardware stack levels required when called:    1
+  1575 ;; This function calls:
+  1576 ;;		_uart_timer_stop
+  1577 ;;		i1_uart_load_character
+  1578 ;; This function is called by:
+  1579 ;;		Interrupt level 1
+  1580 ;; This function uses a non-reentrant model
+  1581 ;;
+  1582                           
+  1583                           
+  1584                           ;psect for function _isr
+  1585  0019                     _isr:
+  1586  0019                     i1l1102:
+  1587                           
+  1588                           ;KousicandCo.c: 318:     if (PIR1bits.TMR2IF)
+  1589  0019  1C8C               	btfss	12,1	;volatile
+  1590  001A  281C               	goto	u33_21
+  1591  001B  281D               	goto	u33_20
+  1592  001C                     u33_21:
+  1593  001C  2861               	goto	i1l125
+  1594  001D                     u33_20:
+  1595  001D                     i1l1104:
+  1596                           
+  1597                           ;KousicandCo.c: 319:     {;KousicandCo.c: 320:         PIR1bits.TMR2IF = 0;
+  1598  001D  108C               	bcf	12,1	;volatile
+  1599  001E                     i1l1106:
+  1600                           
+  1601                           ;KousicandCo.c: 322:         if (uart_tx_busy)
+  1602  001E  087A               	movf	_uart_tx_busy,w	;volatile
+  1603  001F  1903               	btfsc	3,2
+  1604  0020  2822               	goto	u34_21
+  1605  0021  2823               	goto	u34_20
+  1606  0022                     u34_21:
+  1607  0022  285C               	goto	i1l1148
+  1608  0023                     u34_20:
+  1609  0023                     i1l1108:
+  1610                           
+  1611                           ;KousicandCo.c: 323:         {;KousicandCo.c: 324:             if (uart_tx_bits_remainin
+      +                          g > 0u)
+  1612  0023  087B               	movf	_uart_tx_bits_remaining,w	;volatile
+  1613  0024  1903               	btfsc	3,2
+  1614  0025  2827               	goto	u35_21
+  1615  0026  2828               	goto	u35_20
+  1616  0027                     u35_21:
+  1617  0027  2840               	goto	i1l1122
+  1618  0028                     u35_20:
+  1619  0028                     i1l1110:
+  1620                           
+  1621                           ;KousicandCo.c: 325:             {;KousicandCo.c: 330:                 if ((uart_tx_fram
+      +                          e & 0x0001u) != 0u)
+  1622  0028  1C78               	btfss	_uart_tx_frame,0	;volatile
+  1623  0029  282B               	goto	u36_21
+  1624  002A  282C               	goto	u36_20
+  1625  002B                     u36_21:
+  1626  002B  282F               	goto	i1l1114
+  1627  002C                     u36_20:
+  1628  002C                     i1l1112:
+  1629                           
+  1630                           ;KousicandCo.c: 331:                 {;KousicandCo.c: 332:                     gpio_shad
+      +                          ow |= 0x04u;
+  1631  002C  1283               	bcf	3,5	;RP0=0, select bank0
+  1632  002D  1527               	bsf	_gpio_shadow,2	;volatile
+  1633                           
+  1634                           ;KousicandCo.c: 333:                 }
+  1635  002E  2834               	goto	i1l1116
+  1636  002F                     i1l1114:
+  1637                           
+  1638                           ;KousicandCo.c: 335:                 {;KousicandCo.c: 336:                     gpio_shad
+      +                          ow &= (uint8_t)(~0x04u);
+  1639  002F  30FB               	movlw	251
+  1640  0030  00F3               	movwf	??_isr
+  1641  0031  0873               	movf	??_isr,w
+  1642  0032  1283               	bcf	3,5	;RP0=0, select bank0
+  1643  0033  05A7               	andwf	_gpio_shadow,f	;volatile
+  1644  0034                     i1l1116:
+  1645                           
+  1646                           ;KousicandCo.c: 339:                 GPIO = gpio_shadow;
+  1647  0034  0827               	movf	_gpio_shadow,w	;volatile
+  1648  0035  0085               	movwf	5	;volatile
+  1649  0036                     i1l1118:
+  1650                           
+  1651                           ;KousicandCo.c: 341:                 uart_tx_frame >>= 1;
+  1652  0036  3001               	movlw	1
+  1653  0037                     u37_25:
+  1654  0037  1003               	clrc
+  1655  0038  0CF9               	rrf	_uart_tx_frame+1,f	;volatile
+  1656  0039  0CF8               	rrf	_uart_tx_frame,f	;volatile
+  1657  003A  3EFF               	addlw	-1
+  1658  003B  1D03               	skipz
+  1659  003C  2837               	goto	u37_25
+  1660  003D                     i1l1120:
+  1661                           
+  1662                           ;KousicandCo.c: 342:                 uart_tx_bits_remaining--;
+  1663  003D  3001               	movlw	1
+  1664  003E  02FB               	subwf	_uart_tx_bits_remaining,f	;volatile
+  1665                           
+  1666                           ;KousicandCo.c: 343:             }
+  1667  003F  2861               	goto	i1l125
+  1668  0040                     i1l1122:
+  1669                           
+  1670                           ;KousicandCo.c: 345:             {;KousicandCo.c: 350:                 if (*uart_tx_ptr 
+      +                          != '\0')
+  1671  0040  087C               	movf	_uart_tx_ptr,w
+  1672  0041  0084               	movwf	4
+  1673  0042  217A               	fcall	stringdir
+  1674  0043  3A00               	xorlw	0
+  1675  0044  1903               	skipnz
+  1676  0045  2847               	goto	u38_21
+  1677  0046  2848               	goto	u38_20
+  1678  0047                     u38_21:
+  1679  0047  2855               	goto	i1l1140
+  1680  0048                     u38_20:
+  1681  0048                     i1l1124:
+  1682                           
+  1683                           ;KousicandCo.c: 351:                 {;KousicandCo.c: 352:                     uart_load
+      +                          _character(*uart_tx_ptr);
+  1684  0048  087C               	movf	_uart_tx_ptr,w
+  1685  0049  0084               	movwf	4
+  1686  004A  217A               	fcall	stringdir
+  1687  004B  2168               	fcall	i1_uart_load_character
+  1688  004C                     i1l1126:
+  1689                           
+  1690                           ;KousicandCo.c: 353:                     uart_tx_ptr++;
+  1691  004C  3001               	movlw	1
+  1692  004D  00F3               	movwf	??_isr
+  1693  004E  0873               	movf	??_isr,w
+  1694  004F  07FC               	addwf	_uart_tx_ptr,f
+  1695  0050                     i1l1128:
+  1696                           
+  1697                           ;KousicandCo.c: 355:                     if ((uart_tx_frame & 0x0001u) != 0u)
+  1698  0050  1C78               	btfss	_uart_tx_frame,0	;volatile
+  1699  0051  2853               	goto	u39_21
+  1700  0052  2854               	goto	u39_20
+  1701  0053                     u39_21:
+  1702  0053  282F               	goto	i1l1114
+  1703  0054                     u39_20:
+  1704  0054  282C               	goto	i1l1112
+  1705  0055                     i1l1140:
+  1706                           
+  1707                           ;KousicandCo.c: 370:                 {;KousicandCo.c: 371:                     uart_time
+      +                          r_stop();
+  1708  0055  21AB               	fcall	_uart_timer_stop
+  1709  0056                     i1l1142:
+  1710                           
+  1711                           ;KousicandCo.c: 373:                     gpio_shadow |= 0x04u;
+  1712  0056  1283               	bcf	3,5	;RP0=0, select bank0
+  1713  0057  1527               	bsf	_gpio_shadow,2	;volatile
+  1714  0058                     i1l1144:
+  1715                           
+  1716                           ;KousicandCo.c: 374:                     GPIO = gpio_shadow;
+  1717  0058  0827               	movf	_gpio_shadow,w	;volatile
+  1718  0059  0085               	movwf	5	;volatile
+  1719  005A                     i1l1146:
+  1720                           
+  1721                           ;KousicandCo.c: 376:                     uart_tx_busy = 0;
+  1722  005A  01FA               	clrf	_uart_tx_busy	;volatile
+  1723  005B  2861               	goto	i1l125
+  1724  005C                     i1l1148:
+  1725                           
+  1726                           ;KousicandCo.c: 381:         {;KousicandCo.c: 382:             uart_timer_stop();
+  1727  005C  21AB               	fcall	_uart_timer_stop
+  1728  005D                     i1l1150:
+  1729                           
+  1730                           ;KousicandCo.c: 384:             gpio_shadow |= 0x04u;
+  1731  005D  1283               	bcf	3,5	;RP0=0, select bank0
+  1732  005E  1527               	bsf	_gpio_shadow,2	;volatile
+  1733  005F                     i1l1152:
+  1734                           
+  1735                           ;KousicandCo.c: 385:             GPIO = gpio_shadow;
+  1736  005F  0827               	movf	_gpio_shadow,w	;volatile
+  1737  0060  0085               	movwf	5	;volatile
+  1738  0061                     i1l125:
+  1739  0061  0877               	movf	??_isr+4,w
+  1740  0062  00FF               	movwf	btemp+1
+  1741  0063  0876               	movf	??_isr+3,w
+  1742  0064  008A               	movwf	10
+  1743  0065  0875               	movf	??_isr+2,w
+  1744  0066  0084               	movwf	4
+  1745  0067  0E74               	swapf	??_isr+1,w
+  1746  0068  0083               	movwf	3
+  1747  0069  0EFE               	swapf	btemp,f
+  1748  006A  0E7E               	swapf	btemp,w
+  1749  006B  0009               	retfie
+  1750  006C                     __end_of_isr:
+  1751                           
+  1752                           	psect	intentry
+  1753  0004                     __pintentry:	
+  1754                           ;incstack = 0
+  1755                           ; Regs used in _isr: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1756                           
+  1757  0004                     interrupt_function:
+  1758  007E                     saved_w	set	btemp
+  1759  0004  00FE               	movwf	btemp
+  1760  0005  0E03               	swapf	3,w
+  1761  0006  00F4               	movwf	??_isr+1
+  1762  0007  0804               	movf	4,w
+  1763  0008  00F5               	movwf	??_isr+2
+  1764  0009  080A               	movf	10,w
+  1765  000A  00F6               	movwf	??_isr+3
+  1766  000B  1283               	bcf	3,5	;RP0=0, select bank0
+  1767  000C  087F               	movf	btemp+1,w
+  1768  000D  00F7               	movwf	??_isr+4
+  1769  000E  2819               	ljmp	_isr
+  1770                           
+  1771                           	psect	text15
+  1772  0168                     __ptext15:	
+  1773 ;; *************** function i1_uart_load_character *****************
+  1774 ;; Defined at:
+  1775 ;;		line 162 in file "KousicandCo.c"
+  1776 ;; Parameters:    Size  Location     Type
+  1777 ;;  data            1    wreg     unsigned char 
+  1778 ;; Auto vars:     Size  Location     Type
+  1779 ;;  data            1    2[COMMON] unsigned char 
+  1780 ;; Return value:  Size  Location     Type
+  1781 ;;                  1    wreg      void 
+  1782 ;; Registers used:
+  1783 ;;		wreg, status,2, status,0
+  1784 ;; Tracked objects:
+  1785 ;;		On entry : 0/0
+  1786 ;;		On exit  : 0/0
+  1787 ;;		Unchanged: 0/0
+  1788 ;; Data sizes:     COMMON   BANK0   BANK1
+  1789 ;;      Params:         0       0       0
+  1790 ;;      Locals:         1       0       0
+  1791 ;;      Temps:          2       0       0
+  1792 ;;      Totals:         3       0       0
+  1793 ;;Total ram usage:        3 bytes
+  1794 ;; Hardware stack levels used:    1
+  1795 ;; This function calls:
+  1796 ;;		Nothing
+  1797 ;; This function is called by:
+  1798 ;;		_isr
+  1799 ;; This function uses a non-reentrant model
+  1800 ;;
+  1801                           
+  1802                           
+  1803                           ;psect for function i1_uart_load_character
+  1804  0168                     i1_uart_load_character:
+  1805                           
+  1806                           ;incstack = 0
+  1807                           ; Regs used in i1_uart_load_character: [wreg+status,2+status,0]
+  1808                           ;i1uart_load_character@data stored from wreg
+  1809  0168  00F2               	movwf	i1uart_load_character@data
+  1810  0169                     i1l1098:
+  1811                           
+  1812                           ;KousicandCo.c: 162: static void uart_load_character(char data);KousicandCo.c: 163: {;Ko
+      +                          usicandCo.c: 170:     uart_tx_frame = ((uint16_t)1u << 9) | ((uint16_t)((uint8_t)data) <
+      +                          < 1);
+  1813  0169  0872               	movf	i1uart_load_character@data,w
+  1814  016A  00F0               	movwf	??i1_uart_load_character
+  1815  016B  01F1               	clrf	??i1_uart_load_character+1
+  1816  016C  1003               	clrc
+  1817  016D  0DF0               	rlf	??i1_uart_load_character,f
+  1818  016E  0DF1               	rlf	??i1_uart_load_character+1,f
+  1819  016F  3000               	movlw	0
+  1820  0170  0470               	iorwf	??i1_uart_load_character,w
+  1821  0171  00F8               	movwf	_uart_tx_frame	;volatile
+  1822  0172  3002               	movlw	2
+  1823  0173  0471               	iorwf	??i1_uart_load_character+1,w
+  1824  0174  00F9               	movwf	_uart_tx_frame+1	;volatile
+  1825  0175                     i1l1100:
+  1826                           
+  1827                           ;KousicandCo.c: 171:     uart_tx_bits_remaining = 10u;
+  1828  0175  300A               	movlw	10
+  1829  0176  00F0               	movwf	??i1_uart_load_character
+  1830  0177  0870               	movf	??i1_uart_load_character,w
+  1831  0178  00FB               	movwf	_uart_tx_bits_remaining	;volatile
+  1832  0179                     i1l82:
+  1833  0179  0008               	return
+  1834  017A                     __end_ofi1_uart_load_character:
+  1835                           
+  1836                           	psect	text16
+  1837  01AB                     __ptext16:	
+  1838 ;; *************** function _uart_timer_stop *****************
+  1839 ;; Defined at:
+  1840 ;;		line 151 in file "KousicandCo.c"
+  1841 ;; Parameters:    Size  Location     Type
+  1842 ;;		None
+  1843 ;; Auto vars:     Size  Location     Type
+  1844 ;;		None
+  1845 ;; Return value:  Size  Location     Type
+  1846 ;;                  1    wreg      void 
+  1847 ;; Registers used:
+  1848 ;;		None
+  1849 ;; Tracked objects:
+  1850 ;;		On entry : 0/0
+  1851 ;;		On exit  : 0/0
+  1852 ;;		Unchanged: 0/0
+  1853 ;; Data sizes:     COMMON   BANK0   BANK1
+  1854 ;;      Params:         0       0       0
+  1855 ;;      Locals:         0       0       0
+  1856 ;;      Temps:          0       0       0
+  1857 ;;      Totals:         0       0       0
+  1858 ;;Total ram usage:        0 bytes
+  1859 ;; Hardware stack levels used:    1
+  1860 ;; This function calls:
+  1861 ;;		Nothing
+  1862 ;; This function is called by:
+  1863 ;;		_isr
+  1864 ;; This function uses a non-reentrant model
+  1865 ;;
+  1866                           
+  1867                           
+  1868                           ;psect for function _uart_timer_stop
+  1869  01AB                     _uart_timer_stop:
+  1870  01AB                     i1l1062:	
+  1871                           ;incstack = 0
+  1872                           ; Regs used in _uart_timer_stop: []
+  1873                           
+  1874                           
+  1875                           ;KousicandCo.c: 153:     T2CONbits.TMR2ON = 0;
+  1876  01AB  1283               	bcf	3,5	;RP0=0, select bank0
+  1877  01AC  1112               	bcf	18,2	;volatile
+  1878                           
+  1879                           ;KousicandCo.c: 154:     PIR1bits.TMR2IF = 0;
+  1880  01AD  108C               	bcf	12,1	;volatile
+  1881  01AE                     i1l76:
+  1882  01AE  0008               	return
+  1883  01AF                     __end_of_uart_timer_stop:
+  1884  007E                     btemp	set	126	;btemp
+  1885  007E                     wtemp0	set	126
+  1886                           
+  1887                           	psect	config
+  1888                           
+  1889                           ;Config register CONFIG @ 0x2007
+  1890                           ;	Oscillator Selection bits
+  1891                           ;	FOSC = INTOSCIO, INTOSCIO oscillator: I/O function on RA4/OSC2/CLKOUT pin, I/O functio
+      +                          n on RA5/OSC1/CLKIN
+  1892                           ;	Watchdog Timer Enable bit
+  1893                           ;	WDTE = OFF, WDT disabled
+  1894                           ;	Power-up Timer Enable bit
+  1895                           ;	PWRTE = ON, PWRT enabled
+  1896                           ;	MCLR Pin Function Select bit
+  1897                           ;	MCLRE = OFF, MCLR pin function is digital input, MCLR internally tied to VDD
+  1898                           ;	Code Protection bit
+  1899                           ;	CP = OFF, Program memory code protection is disabled
+  1900                           ;	Data Code Protection bit
+  1901                           ;	CPD = OFF, Data memory code protection is disabled
+  1902                           ;	Brown Out Detect
+  1903                           ;	BOREN = ON, BOR enabled
+  1904                           ;	Internal External Switchover bit
+  1905                           ;	IESO = OFF, Internal External Switchover mode is disabled
+  1906                           ;	Fail-Safe Clock Monitor Enabled bit
+  1907                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
+  1908  2007                     	org	8199
+  1909  2007  33C4               	dw	13252
+
+Data Sizes:
+    Strings     8
+    Constant    0
+    Data        1
+    BSS         5
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      8      13
+    BANK0            80      7       8
+    BANK1            32      0       0
+
+Pointer List with Targets:
+
+    uart_tx_ptr	PTR  unsigned char  size(1) Largest target is 8
+		 -> STR_1(CODE[8]), NULL(NULL[0]), 
+
+    uart_send_string_async@text	PTR const unsigned char  size(1) Largest target is 8
+		 -> STR_1(CODE[8]), 
+
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _isr in COMMON
+
+    _isr->i1_uart_load_character
+
+Critical Paths under _main in BANK0
+
+    _trigger_detect_action->_blink_led_three_times
+    _uart_send_string_async->_uart_load_character
+    _led_on->_gpio_write_atomic
+    _led_off->_gpio_write_atomic
+
+Critical Paths under _isr in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _isr in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 1     1      0    1176
+                                              6 BANK0      1     1      0
+                    _delay_ms_custom
+                       _pin2_is_high
+                        _system_init
+              _trigger_detect_action
+ ---------------------------------------------------------------------------------
+ (1) _trigger_detect_action                                0     0      0     900
+              _blink_led_three_times
+                       _uart_is_busy
+             _uart_send_string_async
+ ---------------------------------------------------------------------------------
+ (2) _uart_send_string_async                               2     2      0     121
+                                              3 BANK0      2     2      0
+                _uart_load_character
+  _uart_output_next_bit_main_context
+                   _uart_timer_start
+ ---------------------------------------------------------------------------------
+ (3) _uart_timer_start                                     0     0      0       0
+ ---------------------------------------------------------------------------------
+ (3) _uart_output_next_bit_main_context                    1     1      0       0
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ (3) _uart_load_character                                  3     3      0      22
+                                              0 BANK0      3     3      0
+ ---------------------------------------------------------------------------------
+ (2) _uart_is_busy                                         0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _blink_led_three_times                                2     2      0     779
+                                              4 BANK0      2     2      0
+                    _delay_ms_custom
+                            _led_off
+                             _led_on
+ ---------------------------------------------------------------------------------
+ (3) _led_on                                               0     0      0     241
+                  _gpio_write_atomic
+ ---------------------------------------------------------------------------------
+ (3) _led_off                                              0     0      0     241
+                  _gpio_write_atomic
+ ---------------------------------------------------------------------------------
+ (4) _gpio_write_atomic                                    4     3      1     241
+                                              0 BANK0      4     3      1
+ ---------------------------------------------------------------------------------
+ (3) _delay_ms_custom                                      3     1      2     251
+                                              0 BANK0      3     1      2
+ ---------------------------------------------------------------------------------
+ (1) _system_init                                          1     1      0       0
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _pin2_is_high                                         0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (5) _isr                                                  5     5      0      22
+                                              3 COMMON     5     5      0
+                    _uart_timer_stop
+              i1_uart_load_character
+ ---------------------------------------------------------------------------------
+ (6) i1_uart_load_character                                3     3      0      22
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ (6) _uart_timer_stop                                      0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 6
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _delay_ms_custom
+   _pin2_is_high
+   _system_init
+   _trigger_detect_action
+     _blink_led_three_times
+       _delay_ms_custom
+       _led_off
+         _gpio_write_atomic
+       _led_on
+         _gpio_write_atomic
+     _uart_is_busy
+     _uart_send_string_async
+       _uart_load_character
+       _uart_output_next_bit_main_context
+       _uart_timer_start
+
+ _isr (ROOT)
+   _uart_timer_stop
+   i1_uart_load_character
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK1               20      0       0       5        0.0%
+BITBANK1            20      0       0       7        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50      7       8       4       10.0%
+BITBANK0            50      0       0       3        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      8       D       1       92.9%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      15       8        0.0%
+ABS                  0      0      15       6        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
+Symbol Table                                                                                   Fri May 22 15:37:08 2026
+
+            __end_of_uart_send_string_async 0099                                           pc 0002  
+                                        l51 00CC                                          l60 0120  
+                                        l70 01AA                                          l55 00E2  
+                                        l64 019A                                          l73 01A5  
+                                        l82 0167                                          l67 01A0  
+                                        l94 0098                                          l79 01B0  
+                                        l87 0154                                          l95 0083  
+                                        fsr 0004                         __end_of_system_init 00C1  
+                                       l100 013C                                         l106 0191  
+                                       l109 00C0                                         l950 0106  
+                                       l960 0119                                         l952 010A  
+                                       l970 00C8                                         l962 011B  
+                                       l954 010B                                         l980 00D5  
+                                       l972 00CA                                         l964 00C1  
+                                       l956 0110                                         l974 00CB  
+                                       l966 00C2                                         l982 00DB  
+                                       l958 0115                                         l990 01A3  
+                                       l976 00D0                                         l968 00C6  
+                                       l984 019B                                         l992 01A4  
+                                       l978 00D4                                         l986 01A6  
+                                       l994 0157                                         l996 0163  
+                                       l988 01A1                                         l998 013D  
+                  __size_of_uart_timer_stop 0004                                         u220 0110  
+                                       u300 013C                                         u221 010F  
+                                       u301 013B                                         u310 0197  
+                                       u230 00D0                                         u311 0196  
+                                       u231 00CF                                         u240 00E2  
+                                       u320 0191                                         u400 00EC  
+                                       u241 00E1                                         u321 0190  
+                                       u401 00EB                                         u250 0141  
+                                       u410 00F8                                         u251 0140  
+                                       u411 00F7                                         u420 00FE  
+                                       u421 00FD                                         u270 0073  
+                                       _PR2 0092                                         u271 0072  
+                                       u280 0079                                         u265 014C  
+                                       u281 0078                                         u290 0082  
+                                       u291 0081                                         _WPU 0095  
+                                       _isr 0019                                         fsr0 0004  
+                         delay_ms_custom@ms 0020                                        l1000 0141  
+                                      l1010 01AF                                        l1002 0144  
+                                      l1004 0149                                        l1006 014B  
+                                      l1030 008C                                        l1022 007A  
+                                      l1014 006E                                        l1040 0121  
+                                      l1008 0152                                        l1032 0091  
+                                      l1016 006E                                        l1050 0136  
+                                      l1034 0095                                        l1026 0084  
+                                      l1018 0073                                        l1052 0192  
+                                      l1036 0096                                        l1028 0088  
+                                      l1054 0197                                        l1070 0099  
+                                      l1046 0123                                        l1038 0097  
+                                      l1080 00B1                                        l1072 009C  
+                                      l1048 0131                                        l1064 0188  
+                                      l1160 00EC                                        l1058 0199  
+                                      l1090 00BB                                        l1082 00B2  
+                                      l1074 009D                                        l1066 018A  
+                                      l1162 00F2                                        l1154 00E3  
+                                      l1092 00BC                                        l1084 00B3  
+                                      l1076 00AA                                        l1068 018B  
+                                      l1164 00F8                                        l1156 00E4  
+                                      l1094 00BE                                        l1086 00B4  
+                                      l1078 00AE                                        l1166 00FE  
+                                      l1158 00E6                                        l1096 00BF  
+                                      l1088 00B6                                        l1168 00FF  
+                                      ?_isr 0070                                        STR_1 0180  
+                                      _GPIO 0005                                        i1l82 0179  
+                                      i1l76 01AE                                        _TMR2 0011  
+                                      _main 00E3                                        btemp 007E  
+                                      start 000F                     uart_load_character@data 0022  
+                  __end_of_uart_timer_start 01A6                                       ??_isr 0073  
+                                     ?_main 0070                                       _ANSEL 009F  
+                                     _T1CON 0010                                       _T2CON 0012  
+                gpio_write_atomic@gie_state 0022                                       i1l125 0061  
+                 i1uart_load_character@data 0072                                       u33_20 001D  
+                                     u33_21 001C                                       _TMR1H 000F  
+                                     _TMR1L 000E                                       u34_20 0023  
+                                     u34_21 0022                                       u35_20 0028  
+                                     u35_21 0027                                       u36_20 002C  
+                                     u36_21 002B                                       u37_25 0037  
+                                     u38_20 0048                                       u38_21 0047  
+                                     u39_20 0054                                       u39_21 0053  
+                             ?_pin2_is_high 0070                             __end_of_led_off 01AB  
+                                     pclath 000A                                       status 0003  
+                                     wtemp0 007E                             __initialization 0010  
+                               _system_init 0099                                __end_of_main 0104  
+                                    ??_main 0026                __size_of_uart_load_character 0013  
+                            ??_pin2_is_high 0020                                      _ADCON0 001F  
+                         ??_uart_timer_stop 0070                                      _CMCON0 0019  
+                                    i1l1100 0175                                      i1l1110 0028  
+                                    i1l1102 0019                                      i1l1120 003D  
+                                    i1l1112 002C                                      i1l1104 001D  
+                                    i1l1114 002F                                      i1l1122 0040  
+                                    i1l1106 001E                                      i1l1124 0048  
+                                    i1l1140 0055                                      i1l1116 0034  
+                                    i1l1108 0023                                      i1l1062 01AB  
+                                    i1l1150 005D                                      i1l1142 0056  
+                                    i1l1126 004C                                      i1l1118 0036  
+                                    i1l1152 005F                                      i1l1144 0058  
+                                    i1l1128 0050                                      i1l1146 005A  
+                                    i1l1148 005C                                      i1l1098 0169  
+                                    _OSCCON 008F                                      _TRISIO 0085  
+                  __size_of_delay_ms_custom 0022                                      _led_on 019B  
+                                 ??_led_off 0024                                      saved_w 007E  
+            __size_of_blink_led_three_times 001C               __end_of_blink_led_three_times 013D  
+                   ??i1_uart_load_character 0070                     __end_of__initialization 0017  
+                            __pcstackCOMMON 0070                                __pidataBANK0 01B1  
+                uart_send_string_async@text 0024                       _trigger_detect_action 0188  
+                    _uart_tx_bits_remaining 007B                                  __pmaintext 00E3  
+                      __end_of_pin2_is_high 019B                           ?_uart_timer_start 0070  
+                                __pintentry 0004                                     ?_led_on 0070  
+                         ??_delay_ms_custom 0022                          ??_uart_timer_start 0020  
+                                __stringtab 017A                         _uart_load_character 0155  
+                              ?_system_init 0070                             __size_of_led_on 0006  
+                    ?_trigger_detect_action 0070                             _uart_timer_stop 01AB  
+                                   __ptext1 0188                                     __ptext2 006C  
+                                   __ptext3 01A1                                     __ptext4 013D  
+                                   __ptext5 0155                                     __ptext6 01AF  
+                                   __ptext7 0121                                     __ptext8 019B  
+                                   __ptext9 01A6                                     _led_off 01A6  
+                      ?_uart_load_character 0070                                   _T2CONbits 0012  
+                              __size_of_isr 0053                        end_of_initialization 0017  
+                     gpio_write_atomic@mask 0023                               ?_uart_is_busy 0070  
+                  ??_uart_send_string_async 0023                       ??_uart_load_character 0020  
+            __size_ofi1_uart_load_character 0012                              ??_uart_is_busy 0020  
+             __end_ofi1_uart_load_character 017A                       __size_of_pin2_is_high 0009  
+                   __end_of_uart_timer_stop 01AF                              __end_of_led_on 01A1  
+                       start_initialization 0010                                 __end_of_isr 006C  
+                              _pin2_is_high 0192                       _blink_led_three_times 0121  
+                           _delay_ms_custom 00C1             __size_of_uart_send_string_async 002D  
+                    blink_led_three_times@i 0025                                    ??_led_on 0024  
+                               __pdataBANK0 0027                        __size_of_system_init 0028  
+                               __pbssCOMMON 0078                                   ___latbits 0000  
+                             __pcstackBANK0 0020                   __size_of_uart_timer_start 0005  
+                          ?_uart_timer_stop 0070                     ??_trigger_detect_action 0026  
+                      __end_of_uart_is_busy 01B1                                   __pstrings 017A  
+                    _uart_send_string_async 006C                                    ?_led_off 0070  
+                   __end_of_delay_ms_custom 00E3                      ?_blink_led_three_times 0070  
+                         interrupt_function 0004                                    _PIE1bits 008C  
+                                  _PIR1bits 000C                                 __stringbase 017F  
+                         _gpio_write_atomic 0104   __end_of_uart_output_next_bit_main_context 0155  
+__size_of_uart_output_next_bit_main_context 0018         ??_uart_output_next_bit_main_context 0020  
+        ?_uart_output_next_bit_main_context 0070           _uart_output_next_bit_main_context 013D  
+                        ?_gpio_write_atomic 0020                         ??_gpio_write_atomic 0021  
+                               _gpio_shadow 0027                 __end_of_uart_load_character 0168  
+                 __end_of_gpio_write_atomic 0121                          __end_of__stringtab 0180  
+                          __size_of_led_off 0005                            _uart_timer_start 01A1  
+                                  __ptext10 0104                                    __ptext11 00C1  
+                                  __ptext12 0099                                    __ptext13 0192  
+                                  __ptext14 0019                                    __ptext15 0168  
+                                  __ptext16 01AB                            ?_delay_ms_custom 0020  
+                             __size_of_main 0021                       i1_uart_load_character 0168  
+                             _uart_tx_frame 0078                       __size_of_uart_is_busy 0002  
+                         main@pin2_was_high 0026                                  _INTCONbits 000B  
+                    gpio_write_atomic@level 0020                                    intlevel1 0000  
+                              _uart_is_busy 01AF                                   stringcode 017A  
+                              _uart_tx_busy 007A                               ??_system_init 0020  
+                   ?_uart_send_string_async 0070              __size_of_trigger_detect_action 000A  
+             __end_of_trigger_detect_action 0192                  __size_of_gpio_write_atomic 001D  
+                                _OPTION_REG 0081                     ??_blink_led_three_times 0024  
+                                  stringdir 017A                                    stringtab 017A  
+                               _uart_tx_ptr 007C                      ?i1_uart_load_character 0070  

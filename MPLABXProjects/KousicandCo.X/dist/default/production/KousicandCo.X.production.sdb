@@ -1,0 +1,255 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F683 ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"78 C:\Users\RealTech\MPLABXProjects\KousicandCo.X\KousicandCo.c
+[v _delay_ms_custom delay_ms_custom `(v  1 s 1 delay_ms_custom ]
+"103
+[v _gpio_write_atomic gpio_write_atomic `(v  1 s 1 gpio_write_atomic ]
+"124
+[v _pin2_is_high pin2_is_high `(a  1 s 1 pin2_is_high ]
+"134
+[v _led_on led_on `(v  1 s 1 led_on ]
+"139
+[v _led_off led_off `(v  1 s 1 led_off ]
+"144
+[v _uart_timer_start uart_timer_start `(v  1 s 1 uart_timer_start ]
+"151
+[v _uart_timer_stop uart_timer_stop `(v  1 s 1 uart_timer_stop ]
+"157
+[v _uart_is_busy uart_is_busy `(a  1 s 1 uart_is_busy ]
+"162
+[v _uart_load_character uart_load_character `(v  1 s 1 uart_load_character ]
+[v i1_uart_load_character uart_load_character `(v  1 s 1 i1_uart_load_character ]
+"174
+[v _uart_output_next_bit_main_context uart_output_next_bit_main_context `(v  1 s 1 uart_output_next_bit_main_context ]
+"191
+[v _uart_send_string_async uart_send_string_async `(v  1 s 1 uart_send_string_async ]
+"227
+[v _blink_led_three_times blink_led_three_times `(v  1 s 1 blink_led_three_times ]
+"241
+[v _trigger_detect_action trigger_detect_action `(v  1 s 1 trigger_detect_action ]
+"253
+[v _system_init system_init `(v  1 s 1 system_init ]
+"316
+[v _isr isr `II(v  1 e 1 0 ]
+"390
+[v _main main `(v  1 e 1 0 ]
+"166 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[v _GPIO GPIO `VEuc  1 e 1 @5 ]
+[s S53 . 1 `uc 1 GPIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 GPIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"259
+[s S62 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S67 . 1 `S53 1 . 1 0 `S62 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES67  1 e 1 @11 ]
+[s S25 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 OSFIF 1 0 :1:2 
+`uc 1 CMIF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CCP1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 EEIF 1 0 :1:7 
+]
+"335
+[s S34 . 1 `uc 1 T1IF 1 0 :1:0 
+`uc 1 T2IF 1 0 :1:1 
+]
+[u S37 . 1 `S25 1 . 1 0 `S34 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES37  1 e 1 @12 ]
+"392
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
+"399
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+"406
+[v _T1CON T1CON `VEuc  1 e 1 @16 ]
+"483
+[v _TMR2 TMR2 `VEuc  1 e 1 @17 ]
+"490
+[v _T2CON T2CON `VEuc  1 e 1 @18 ]
+[s S87 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 TOUTPS 1 0 :4:3 
+]
+"511
+[s S91 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 TOUTPS0 1 0 :1:3 
+`uc 1 TOUTPS1 1 0 :1:4 
+`uc 1 TOUTPS2 1 0 :1:5 
+`uc 1 TOUTPS3 1 0 :1:6 
+]
+[u S99 . 1 `S87 1 . 1 0 `S91 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES99  1 e 1 @18 ]
+"699
+[v _CMCON0 CMCON0 `VEuc  1 e 1 @25 ]
+"791
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"881
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"951
+[v _TRISIO TRISIO `VEuc  1 e 1 @133 ]
+[s S122 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 OSFIE 1 0 :1:2 
+`uc 1 CMIE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CCP1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 EEIE 1 0 :1:7 
+]
+"1022
+[s S131 . 1 `uc 1 T1IE 1 0 :1:0 
+`uc 1 T2IE 1 0 :1:1 
+]
+[u S134 . 1 `S122 1 . 1 0 `S131 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES134  1 e 1 @140 ]
+"1111
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
+"1228
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"1235
+[v _WPU WPU `VEuc  1 e 1 @149 ]
+"1720
+[v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
+"71 C:\Users\RealTech\MPLABXProjects\KousicandCo.X\KousicandCo.c
+[v _gpio_shadow gpio_shadow `VEuc  1 s 1 gpio_shadow ]
+"73
+[v _uart_tx_ptr uart_tx_ptr `*.24DVECuc  1 s 1 uart_tx_ptr ]
+"74
+[v _uart_tx_frame uart_tx_frame `VEui  1 s 2 uart_tx_frame ]
+"75
+[v _uart_tx_bits_remaining uart_tx_bits_remaining `VEuc  1 s 1 uart_tx_bits_remaining ]
+"76
+[v _uart_tx_busy uart_tx_busy `VEa  1 s 1 uart_tx_busy ]
+"390
+[v _main main `(v  1 e 1 0 ]
+{
+"392
+[v main@pin2_was_high pin2_was_high `a  1 a 1 6 ]
+"415
+} 0
+"241
+[v _trigger_detect_action trigger_detect_action `(v  1 s 1 trigger_detect_action ]
+{
+"251
+} 0
+"191
+[v _uart_send_string_async uart_send_string_async `(v  1 s 1 uart_send_string_async ]
+{
+[v uart_send_string_async@text text `*.24DCuc  1 a 1 wreg ]
+[v uart_send_string_async@text text `*.24DCuc  1 a 1 wreg ]
+[v uart_send_string_async@text text `*.24DCuc  1 a 1 4 ]
+"225
+} 0
+"144
+[v _uart_timer_start uart_timer_start `(v  1 s 1 uart_timer_start ]
+{
+"149
+} 0
+"174
+[v _uart_output_next_bit_main_context uart_output_next_bit_main_context `(v  1 s 1 uart_output_next_bit_main_context ]
+{
+"189
+} 0
+"162
+[v _uart_load_character uart_load_character `(v  1 s 1 uart_load_character ]
+{
+[v uart_load_character@data data `uc  1 a 1 wreg ]
+[v uart_load_character@data data `uc  1 a 1 wreg ]
+"170
+[v uart_load_character@data data `uc  1 a 1 2 ]
+"172
+} 0
+"157
+[v _uart_is_busy uart_is_busy `(a  1 s 1 uart_is_busy ]
+{
+"160
+} 0
+"227
+[v _blink_led_three_times blink_led_three_times `(v  1 s 1 blink_led_three_times ]
+{
+"229
+[v blink_led_three_times@i i `uc  1 a 1 5 ]
+"239
+} 0
+"134
+[v _led_on led_on `(v  1 s 1 led_on ]
+{
+"137
+} 0
+"139
+[v _led_off led_off `(v  1 s 1 led_off ]
+{
+"142
+} 0
+"103
+[v _gpio_write_atomic gpio_write_atomic `(v  1 s 1 gpio_write_atomic ]
+{
+[v gpio_write_atomic@mask mask `uc  1 a 1 wreg ]
+"105
+[v gpio_write_atomic@gie_state gie_state `uc  1 a 1 2 ]
+"103
+[v gpio_write_atomic@mask mask `uc  1 a 1 wreg ]
+[v gpio_write_atomic@level level `a  1 p 1 0 ]
+"107
+[v gpio_write_atomic@mask mask `uc  1 a 1 3 ]
+"122
+} 0
+"78
+[v _delay_ms_custom delay_ms_custom `(v  1 s 1 delay_ms_custom ]
+{
+[v delay_ms_custom@ms ms `ui  1 p 2 0 ]
+"101
+} 0
+"253
+[v _system_init system_init `(v  1 s 1 system_init ]
+{
+"314
+} 0
+"124
+[v _pin2_is_high pin2_is_high `(a  1 s 1 pin2_is_high ]
+{
+"132
+} 0
+"316
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"388
+} 0
+"162
+[v i1_uart_load_character uart_load_character `(v  1 s 1 i1_uart_load_character ]
+{
+[v i1uart_load_character@data data `uc  1 a 1 wreg ]
+[v i1uart_load_character@data data `uc  1 a 1 wreg ]
+"170
+[v i1uart_load_character@data data `uc  1 a 1 2 ]
+"172
+} 0
+"151
+[v _uart_timer_stop uart_timer_stop `(v  1 s 1 uart_timer_stop ]
+{
+"155
+} 0

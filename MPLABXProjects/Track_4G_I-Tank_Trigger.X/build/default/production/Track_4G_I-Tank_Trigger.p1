@@ -1,0 +1,538 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"166 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 166: extern volatile unsigned char GPIO __attribute__((address(0x005)));
+[v _GPIO `Vuc ~T0 @X0 0 e@5 ]
+"59
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 242:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . GPIF INTF T0IF GPIE INTE T0IE PEIE GIE ]
+"252
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 252:     struct {
+[s S11 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S11 . . TMR0IF . TMR0IE ]
+"241
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 241: typedef union {
+[u S9 `S10 1 `S11 1 ]
+[n S9 . . . ]
+"259
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 259: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS9 ~T0 @X0 0 e@11 ]
+"1117
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1117:     struct {
+[s S48 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S48 . SCS LTS HTS OSTS IRCF ]
+"1124
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1124:     struct {
+[s S49 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S49 . . IRCF0 IRCF1 IRCF2 ]
+"1116
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1116: typedef union {
+[u S47 `S48 1 `S49 1 ]
+[n S47 . . . ]
+"1131
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1131: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
+[v _OSCCONbits `VS47 ~T0 @X0 0 e@143 ]
+"1720
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1720: extern volatile unsigned char ANSEL __attribute__((address(0x09F)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@159 ]
+"791
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 791: extern volatile unsigned char ADCON0 __attribute__((address(0x01F)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+"699
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 699: extern volatile unsigned char CMCON0 __attribute__((address(0x019)));
+[v _CMCON0 `Vuc ~T0 @X0 0 e@25 ]
+"951
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 951: extern volatile unsigned char TRISIO __attribute__((address(0x085)));
+[v _TRISIO `Vuc ~T0 @X0 0 e@133 ]
+"887
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 887:     struct {
+[s S38 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . PS PSA T0SE T0CS INTEDG nGPPU ]
+"895
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 895:     struct {
+[s S39 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S39 . PS0 PS1 PS2 ]
+"886
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 886: typedef union {
+[u S37 `S38 1 `S39 1 ]
+[n S37 . . . ]
+"901
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 901: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x081)));
+[v _OPTION_REGbits `VS37 ~T0 @X0 0 e@129 ]
+[p mainexit ]
+"172
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 172:     struct {
+[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S6 . GP0 GP1 GP2 GP3 GP4 GP5 ]
+"171
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 171: typedef union {
+[u S5 `S6 1 ]
+[n S5 . . ]
+"181
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 181: extern volatile GPIObits_t GPIObits __attribute__((address(0x005)));
+[v _GPIObits `VS5 ~T0 @X0 0 e@5 ]
+"54 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 168: __asm("GPIO equ 05h");
+[; <" GPIO equ 05h ;# ">
+"218
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 218: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"238
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 238: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"316
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 316: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"387
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 387: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"394
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 394: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"401
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 401: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"408
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 408: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"485
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 485: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"492
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 492: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"563
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 563: __asm("CCPR1 equ 013h");
+[; <" CCPR1 equ 013h ;# ">
+"570
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 570: __asm("CCPR1L equ 013h");
+[; <" CCPR1L equ 013h ;# ">
+"577
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 577: __asm("CCPR1H equ 014h");
+[; <" CCPR1H equ 014h ;# ">
+"584
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 584: __asm("CCP1CON equ 015h");
+[; <" CCP1CON equ 015h ;# ">
+"648
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 648: __asm("WDTCON equ 018h");
+[; <" WDTCON equ 018h ;# ">
+"701
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 701: __asm("CMCON0 equ 019h");
+[; <" CMCON0 equ 019h ;# ">
+"760
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 760: __asm("CMCON1 equ 01Ah");
+[; <" CMCON1 equ 01Ah ;# ">
+"786
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 786: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"793
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 793: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"883
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 883: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"953
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 953: __asm("TRISIO equ 085h");
+[; <" TRISIO equ 085h ;# ">
+"1003
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1003: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1074
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1074: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1113
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1113: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1178
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1178: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1230
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1230: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1237
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1237: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"1242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1242: __asm("WPUA equ 095h");
+[; <" WPUA equ 095h ;# ">
+"1391
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1391: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"1396
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1396: __asm("IOCA equ 096h");
+[; <" IOCA equ 096h ;# ">
+"1565
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1565: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1625
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1625: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1630
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1630: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1663
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1663: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1670
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1670: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1708
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1708: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+"1715
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1715: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"1722
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1722: __asm("ANSEL equ 09Fh");
+[; <" ANSEL equ 09Fh ;# ">
+"17 Track_4G_I-Tank_Trigger.c
+[p x FOSC    =  INTOSCIO ]
+"18
+[p x WDTE    =  OFF ]
+"19
+[p x PWRTE  =  ON ]
+"20
+[p x MCLRE  =  ON ]
+"21
+[p x CP        =  OFF ]
+"22
+[p x CPD      =  OFF ]
+"23
+[p x BOREN  =  ON ]
+"24
+[p x IESO    =  OFF ]
+"25
+[p x FCMEN  =  OFF ]
+"38
+[; ;Track_4G_I-Tank_Trigger.c: 38: static volatile uint8_t gpio_shadow = 0;
+[v _gpio_shadow `Vuc ~T0 @X0 1 s ]
+[i _gpio_shadow
+-> -> 0 `i `uc
+]
+[v F656 `(v ~T0 @X0 1 tf ]
+"41
+[; ;Track_4G_I-Tank_Trigger.c: 41: static __attribute__((inline)) void gpio_apply(void)
+[v _gpio_apply `TF656 ~T0 @X0 1 s ]
+"42
+[; ;Track_4G_I-Tank_Trigger.c: 42: {
+{
+[e :U _gpio_apply ]
+[f ]
+"43
+[; ;Track_4G_I-Tank_Trigger.c: 43:     GPIO = gpio_shadow;
+[e = _GPIO _gpio_shadow ]
+"44
+[; ;Track_4G_I-Tank_Trigger.c: 44: }
+[e :UE 77 ]
+}
+[v F658 `(v ~T0 @X0 1 tf1`a ]
+"47
+[; ;Track_4G_I-Tank_Trigger.c: 47: static __attribute__((inline)) void output_set(_Bool on)
+[v _output_set `TF658 ~T0 @X0 1 s ]
+"48
+[; ;Track_4G_I-Tank_Trigger.c: 48: {
+{
+[e :U _output_set ]
+"47
+[; ;Track_4G_I-Tank_Trigger.c: 47: static __attribute__((inline)) void output_set(_Bool on)
+[v _on `a ~T0 @X0 1 r1 ]
+"48
+[; ;Track_4G_I-Tank_Trigger.c: 48: {
+[f ]
+"49
+[; ;Track_4G_I-Tank_Trigger.c: 49:     if (on)
+[e $ ! != -> _on `i -> 0 `i 79  ]
+"50
+[; ;Track_4G_I-Tank_Trigger.c: 50:         gpio_shadow |= (uint8_t)(1u << 5);
+[e =| _gpio_shadow -> -> << -> 1 `ui -> 5 `i `uc `Vuc ]
+[e $U 80  ]
+"51
+[; ;Track_4G_I-Tank_Trigger.c: 51:     else
+[e :U 79 ]
+"52
+[; ;Track_4G_I-Tank_Trigger.c: 52:         gpio_shadow &= (uint8_t)~(1u << 5);
+[e =& _gpio_shadow -> -> ~ << -> 1 `ui -> 5 `i `uc `Vuc ]
+[e :U 80 ]
+"54
+[; ;Track_4G_I-Tank_Trigger.c: 54:     gpio_apply();
+[e ( _gpio_apply ..  ]
+"55
+[; ;Track_4G_I-Tank_Trigger.c: 55: }
+[e :UE 78 ]
+}
+"61
+[; ;Track_4G_I-Tank_Trigger.c: 61: static void tick_1ms(void)
+[v _tick_1ms `(v ~T0 @X0 1 sf ]
+"62
+[; ;Track_4G_I-Tank_Trigger.c: 62: {
+{
+[e :U _tick_1ms ]
+[f ]
+"69
+[; ;Track_4G_I-Tank_Trigger.c: 69:     TMR0 = (uint8_t)(256u - 31u);
+[e = _TMR0 -> - -> 256 `ui -> 31 `ui `uc ]
+"70
+[; ;Track_4G_I-Tank_Trigger.c: 70:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"71
+[; ;Track_4G_I-Tank_Trigger.c: 71:     while (!INTCONbits.T0IF) { ; }
+[e $U 82  ]
+[e :U 83 ]
+{
+}
+[e :U 82 ]
+[e $ ! != -> . . _INTCONbits 0 2 `i -> 0 `i 83  ]
+[e :U 84 ]
+"72
+[; ;Track_4G_I-Tank_Trigger.c: 72:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"75
+[; ;Track_4G_I-Tank_Trigger.c: 75: }
+[e :UE 81 ]
+}
+"77
+[; ;Track_4G_I-Tank_Trigger.c: 77: static void mcu_init(void)
+[v _mcu_init `(v ~T0 @X0 1 sf ]
+"78
+[; ;Track_4G_I-Tank_Trigger.c: 78: {
+{
+[e :U _mcu_init ]
+[f ]
+"80
+[; ;Track_4G_I-Tank_Trigger.c: 80:     OSCCONbits.IRCF = 0b110;
+[e = . . _OSCCONbits 0 4 -> -> 6 `i `uc ]
+"81
+[; ;Track_4G_I-Tank_Trigger.c: 81:     OSCCONbits.SCS = 1;
+[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
+"84
+[; ;Track_4G_I-Tank_Trigger.c: 84:     ANSEL = 0x00;
+[e = _ANSEL -> -> 0 `i `uc ]
+"85
+[; ;Track_4G_I-Tank_Trigger.c: 85:     ADCON0 = 0x00;
+[e = _ADCON0 -> -> 0 `i `uc ]
+"86
+[; ;Track_4G_I-Tank_Trigger.c: 86:     CMCON0 = 0x07;
+[e = _CMCON0 -> -> 7 `i `uc ]
+"90
+[; ;Track_4G_I-Tank_Trigger.c: 90:     TRISIO = 0b00001100;
+[e = _TRISIO -> -> 12 `i `uc ]
+"93
+[; ;Track_4G_I-Tank_Trigger.c: 93:     OPTION_REGbits.T0CS = 0;
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+"94
+[; ;Track_4G_I-Tank_Trigger.c: 94:     OPTION_REGbits.PSA = 0;
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+"95
+[; ;Track_4G_I-Tank_Trigger.c: 95:     OPTION_REGbits.PS = 0b100;
+[e = . . _OPTION_REGbits 0 0 -> -> 4 `i `uc ]
+"96
+[; ;Track_4G_I-Tank_Trigger.c: 96:     OPTION_REGbits.nGPPU = 1;
+[e = . . _OPTION_REGbits 0 5 -> -> 1 `i `uc ]
+"99
+[; ;Track_4G_I-Tank_Trigger.c: 99:     gpio_shadow = 0x00;
+[e = _gpio_shadow -> -> 0 `i `uc ]
+"100
+[; ;Track_4G_I-Tank_Trigger.c: 100:     gpio_apply();
+[e ( _gpio_apply ..  ]
+"101
+[; ;Track_4G_I-Tank_Trigger.c: 101:     output_set(0);
+[e ( _output_set (1 -> -> 0 `i `a ]
+"102
+[; ;Track_4G_I-Tank_Trigger.c: 102: }
+[e :UE 85 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"104
+[; ;Track_4G_I-Tank_Trigger.c: 104: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"105
+[; ;Track_4G_I-Tank_Trigger.c: 105: {
+{
+[e :U _main ]
+[f ]
+"106
+[; ;Track_4G_I-Tank_Trigger.c: 106:     mcu_init();
+[e ( _mcu_init ..  ]
+"108
+[; ;Track_4G_I-Tank_Trigger.c: 108:     _Bool stable_in = 0;
+[v _stable_in `a ~T0 @X0 1 a ]
+[e = _stable_in -> -> 0 `i `a ]
+"109
+[; ;Track_4G_I-Tank_Trigger.c: 109:     uint16_t debounce_cnt = 0;
+[v _debounce_cnt `ui ~T0 @X0 1 a ]
+[e = _debounce_cnt -> -> 0 `i `ui ]
+"110
+[; ;Track_4G_I-Tank_Trigger.c: 110:     uint16_t high_ms = 0;
+[v _high_ms `ui ~T0 @X0 1 a ]
+[e = _high_ms -> -> 0 `i `ui ]
+"112
+[; ;Track_4G_I-Tank_Trigger.c: 112:     _Bool raw = 0;
+[v _raw `a ~T0 @X0 1 a ]
+[e = _raw -> -> 0 `i `a ]
+"114
+[; ;Track_4G_I-Tank_Trigger.c: 114:     while (1)
+[e :U 88 ]
+"115
+[; ;Track_4G_I-Tank_Trigger.c: 115:     {
+{
+"116
+[; ;Track_4G_I-Tank_Trigger.c: 116:         tick_1ms();
+[e ( _tick_1ms ..  ]
+"124
+[; ;Track_4G_I-Tank_Trigger.c: 124:         raw = ((GPIObits.GP2) ? 1 : 0);
+[e = _raw -> ? != -> . . _GPIObits 0 2 `i -> 0 `i : -> 1 `i -> 0 `i `a ]
+"126
+[; ;Track_4G_I-Tank_Trigger.c: 126:         if (raw == stable_in)
+[e $ ! == -> _raw `i -> _stable_in `i 90  ]
+"127
+[; ;Track_4G_I-Tank_Trigger.c: 127:         {
+{
+"128
+[; ;Track_4G_I-Tank_Trigger.c: 128:             debounce_cnt = 0;
+[e = _debounce_cnt -> -> 0 `i `ui ]
+"129
+[; ;Track_4G_I-Tank_Trigger.c: 129:         }
+}
+[e $U 91  ]
+"130
+[; ;Track_4G_I-Tank_Trigger.c: 130:         else
+[e :U 90 ]
+"131
+[; ;Track_4G_I-Tank_Trigger.c: 131:         {
+{
+"132
+[; ;Track_4G_I-Tank_Trigger.c: 132:             if (10u == 0u)
+[e $ ! == -> 10 `ui -> 0 `ui 92  ]
+"133
+[; ;Track_4G_I-Tank_Trigger.c: 133:             {
+{
+"134
+[; ;Track_4G_I-Tank_Trigger.c: 134:                 stable_in = raw;
+[e = _stable_in _raw ]
+"135
+[; ;Track_4G_I-Tank_Trigger.c: 135:                 debounce_cnt = 0;
+[e = _debounce_cnt -> -> 0 `i `ui ]
+"136
+[; ;Track_4G_I-Tank_Trigger.c: 136:             }
+}
+[e $U 93  ]
+"137
+[; ;Track_4G_I-Tank_Trigger.c: 137:             else
+[e :U 92 ]
+"138
+[; ;Track_4G_I-Tank_Trigger.c: 138:             {
+{
+"139
+[; ;Track_4G_I-Tank_Trigger.c: 139:                 if (debounce_cnt < 10u)
+[e $ ! < _debounce_cnt -> 10 `ui 94  ]
+"140
+[; ;Track_4G_I-Tank_Trigger.c: 140:                     debounce_cnt++;
+[e ++ _debounce_cnt -> -> 1 `i `ui ]
+[e :U 94 ]
+"142
+[; ;Track_4G_I-Tank_Trigger.c: 142:                 if (debounce_cnt >= 10u)
+[e $ ! >= _debounce_cnt -> 10 `ui 95  ]
+"143
+[; ;Track_4G_I-Tank_Trigger.c: 143:                 {
+{
+"144
+[; ;Track_4G_I-Tank_Trigger.c: 144:                     stable_in = raw;
+[e = _stable_in _raw ]
+"145
+[; ;Track_4G_I-Tank_Trigger.c: 145:                     debounce_cnt = 0;
+[e = _debounce_cnt -> -> 0 `i `ui ]
+"146
+[; ;Track_4G_I-Tank_Trigger.c: 146:                 }
+}
+[e :U 95 ]
+"147
+[; ;Track_4G_I-Tank_Trigger.c: 147:             }
+}
+[e :U 93 ]
+"148
+[; ;Track_4G_I-Tank_Trigger.c: 148:         }
+}
+[e :U 91 ]
+"152
+[; ;Track_4G_I-Tank_Trigger.c: 152:         if (stable_in)
+[e $ ! != -> _stable_in `i -> 0 `i 96  ]
+"153
+[; ;Track_4G_I-Tank_Trigger.c: 153:         {
+{
+"154
+[; ;Track_4G_I-Tank_Trigger.c: 154:             if (high_ms < 5000u)
+[e $ ! < _high_ms -> 5000 `ui 97  ]
+"155
+[; ;Track_4G_I-Tank_Trigger.c: 155:             {
+{
+"156
+[; ;Track_4G_I-Tank_Trigger.c: 156:                 high_ms++;
+[e ++ _high_ms -> -> 1 `i `ui ]
+"157
+[; ;Track_4G_I-Tank_Trigger.c: 157:                 output_set(0);
+[e ( _output_set (1 -> -> 0 `i `a ]
+"158
+[; ;Track_4G_I-Tank_Trigger.c: 158:             }
+}
+[e $U 98  ]
+"159
+[; ;Track_4G_I-Tank_Trigger.c: 159:             else
+[e :U 97 ]
+"160
+[; ;Track_4G_I-Tank_Trigger.c: 160:             {
+{
+"161
+[; ;Track_4G_I-Tank_Trigger.c: 161:                 output_set(1);
+[e ( _output_set (1 -> -> 1 `i `a ]
+"162
+[; ;Track_4G_I-Tank_Trigger.c: 162:             }
+}
+[e :U 98 ]
+"163
+[; ;Track_4G_I-Tank_Trigger.c: 163:         }
+}
+[e $U 99  ]
+"164
+[; ;Track_4G_I-Tank_Trigger.c: 164:         else
+[e :U 96 ]
+"165
+[; ;Track_4G_I-Tank_Trigger.c: 165:         {
+{
+"166
+[; ;Track_4G_I-Tank_Trigger.c: 166:             high_ms = 0;
+[e = _high_ms -> -> 0 `i `ui ]
+"167
+[; ;Track_4G_I-Tank_Trigger.c: 167:             output_set(0);
+[e ( _output_set (1 -> -> 0 `i `a ]
+"168
+[; ;Track_4G_I-Tank_Trigger.c: 168:         }
+}
+[e :U 99 ]
+"169
+[; ;Track_4G_I-Tank_Trigger.c: 169:     }
+}
+[e :U 87 ]
+[e $U 88  ]
+[e :U 89 ]
+"170
+[; ;Track_4G_I-Tank_Trigger.c: 170: }
+[e :UE 86 ]
+}

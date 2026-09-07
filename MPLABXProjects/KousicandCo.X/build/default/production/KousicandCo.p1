@@ -1,0 +1,1092 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"406 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 406: extern volatile unsigned char T1CON __attribute__((address(0x010)));
+[v _T1CON `Vuc ~T0 @X0 0 e@16 ]
+"399
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 399: extern volatile unsigned char TMR1H __attribute__((address(0x00F)));
+[v _TMR1H `Vuc ~T0 @X0 0 e@15 ]
+"392
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 392: extern volatile unsigned char TMR1L __attribute__((address(0x00E)));
+[v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
+"320
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 320:     struct {
+[s S13 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S13 . TMR1IF TMR2IF OSFIF CMIF . CCP1IF ADIF EEIF ]
+"330
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 330:     struct {
+[s S14 :1 `uc 1 :1 `uc 1 ]
+[n S14 . T1IF T2IF ]
+"319
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 319: typedef union {
+[u S12 `S13 1 `S14 1 ]
+[n S12 . . . ]
+"335
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 335: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS12 ~T0 @X0 0 e@12 ]
+"242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 242:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . GPIF INTF T0IF GPIE INTE T0IE PEIE GIE ]
+"252
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 252:     struct {
+[s S11 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S11 . . TMR0IF . TMR0IE ]
+"241
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 241: typedef union {
+[u S9 `S10 1 `S11 1 ]
+[n S9 . . . ]
+"259
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 259: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS9 ~T0 @X0 0 e@11 ]
+"166
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 166: extern volatile unsigned char GPIO __attribute__((address(0x005)));
+[v _GPIO `Vuc ~T0 @X0 0 e@5 ]
+"483
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 483: extern volatile unsigned char TMR2 __attribute__((address(0x011)));
+[v _TMR2 `Vuc ~T0 @X0 0 e@17 ]
+"496
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 496:     struct {
+[s S19 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S19 . T2CKPS TMR2ON TOUTPS ]
+"501
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 501:     struct {
+[s S20 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S20 . T2CKPS0 T2CKPS1 . TOUTPS0 TOUTPS1 TOUTPS2 TOUTPS3 ]
+"495
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 495: typedef union {
+[u S18 `S19 1 `S20 1 ]
+[n S18 . . . ]
+"511
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 511: extern volatile T2CONbits_t T2CONbits __attribute__((address(0x012)));
+[v _T2CONbits `VS18 ~T0 @X0 0 e@18 ]
+"1111
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1111: extern volatile unsigned char OSCCON __attribute__((address(0x08F)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@143 ]
+"1720
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1720: extern volatile unsigned char ANSEL __attribute__((address(0x09F)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@159 ]
+"791
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 791: extern volatile unsigned char ADCON0 __attribute__((address(0x01F)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+"699
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 699: extern volatile unsigned char CMCON0 __attribute__((address(0x019)));
+[v _CMCON0 `Vuc ~T0 @X0 0 e@25 ]
+"951
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 951: extern volatile unsigned char TRISIO __attribute__((address(0x085)));
+[v _TRISIO `Vuc ~T0 @X0 0 e@133 ]
+"881
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 881: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"1235
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1235: extern volatile unsigned char WPU __attribute__((address(0x095)));
+[v _WPU `Vuc ~T0 @X0 0 e@149 ]
+"1007
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1007:     struct {
+[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S43 . TMR1IE TMR2IE OSFIE CMIE . CCP1IE ADIE EEIE ]
+"1017
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1017:     struct {
+[s S44 :1 `uc 1 :1 `uc 1 ]
+[n S44 . T1IE T2IE ]
+"1006
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1006: typedef union {
+[u S42 `S43 1 `S44 1 ]
+[n S42 . . . ]
+"1022
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1022: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
+[v _PIE1bits `VS42 ~T0 @X0 0 e@140 ]
+"1228
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1228: extern volatile unsigned char PR2 __attribute__((address(0x092)));
+[v _PR2 `Vuc ~T0 @X0 0 e@146 ]
+"490
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 490: extern volatile unsigned char T2CON __attribute__((address(0x012)));
+[v _T2CON `Vuc ~T0 @X0 0 e@18 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+[p mainexit ]
+"54 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 168: __asm("GPIO equ 05h");
+[; <" GPIO equ 05h ;# ">
+"218
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 218: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"238
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 238: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"316
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 316: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"387
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 387: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"394
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 394: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"401
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 401: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"408
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 408: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"485
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 485: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"492
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 492: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"563
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 563: __asm("CCPR1 equ 013h");
+[; <" CCPR1 equ 013h ;# ">
+"570
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 570: __asm("CCPR1L equ 013h");
+[; <" CCPR1L equ 013h ;# ">
+"577
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 577: __asm("CCPR1H equ 014h");
+[; <" CCPR1H equ 014h ;# ">
+"584
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 584: __asm("CCP1CON equ 015h");
+[; <" CCP1CON equ 015h ;# ">
+"648
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 648: __asm("WDTCON equ 018h");
+[; <" WDTCON equ 018h ;# ">
+"701
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 701: __asm("CMCON0 equ 019h");
+[; <" CMCON0 equ 019h ;# ">
+"760
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 760: __asm("CMCON1 equ 01Ah");
+[; <" CMCON1 equ 01Ah ;# ">
+"786
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 786: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"793
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 793: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"883
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 883: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"953
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 953: __asm("TRISIO equ 085h");
+[; <" TRISIO equ 085h ;# ">
+"1003
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1003: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1074
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1074: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1113
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1113: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1178
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1178: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1230
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1230: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1237
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1237: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"1242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1242: __asm("WPUA equ 095h");
+[; <" WPUA equ 095h ;# ">
+"1391
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1391: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"1396
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1396: __asm("IOCA equ 096h");
+[; <" IOCA equ 096h ;# ">
+"1565
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1565: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1625
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1625: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1630
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1630: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1663
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1663: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1670
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1670: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1708
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1708: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+"1715
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1715: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"1722
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1722: __asm("ANSEL equ 09Fh");
+[; <" ANSEL equ 09Fh ;# ">
+"26 KousicandCo.c
+[p x FOSC    =  INTOSCIO ]
+"27
+[p x WDTE    =  OFF ]
+"28
+[p x PWRTE  =  ON ]
+"29
+[p x MCLRE  =  OFF ]
+"30
+[p x CP        =  OFF ]
+"31
+[p x CPD      =  OFF ]
+"32
+[p x BOREN  =  ON ]
+"33
+[p x IESO    =  OFF ]
+"34
+[p x FCMEN  =  OFF ]
+"71
+[; ;KousicandCo.c: 71: static volatile uint8_t gpio_shadow = 0x04u;
+[v _gpio_shadow `Vuc ~T0 @X0 1 s ]
+[i _gpio_shadow
+-> -> 4 `ui `uc
+]
+"73
+[; ;KousicandCo.c: 73: static volatile const char *uart_tx_ptr = 0;
+[v _uart_tx_ptr `*CVuc ~T0 @X0 1 s ]
+[i _uart_tx_ptr
+-> -> 0 `i `*CVuc
+]
+"74
+[; ;KousicandCo.c: 74: static volatile uint16_t uart_tx_frame = 0;
+[v _uart_tx_frame `Vui ~T0 @X0 1 s ]
+[i _uart_tx_frame
+-> -> 0 `i `ui
+]
+"75
+[; ;KousicandCo.c: 75: static volatile uint8_t uart_tx_bits_remaining = 0;
+[v _uart_tx_bits_remaining `Vuc ~T0 @X0 1 s ]
+[i _uart_tx_bits_remaining
+-> -> 0 `i `uc
+]
+"76
+[; ;KousicandCo.c: 76: static volatile _Bool uart_tx_busy = 0;
+[v _uart_tx_busy `Va ~T0 @X0 1 s ]
+[i _uart_tx_busy
+-> -> 0 `i `a
+]
+"78
+[; ;KousicandCo.c: 78: static void delay_ms_custom(uint16_t ms)
+[v _delay_ms_custom `(v ~T0 @X0 1 sf1`ui ]
+"79
+[; ;KousicandCo.c: 79: {
+{
+[e :U _delay_ms_custom ]
+"78
+[; ;KousicandCo.c: 78: static void delay_ms_custom(uint16_t ms)
+[v _ms `ui ~T0 @X0 1 r1 ]
+"79
+[; ;KousicandCo.c: 79: {
+[f ]
+"80
+[; ;KousicandCo.c: 80:     while (ms > 0u)
+[e $U 78  ]
+[e :U 79 ]
+"81
+[; ;KousicandCo.c: 81:     {
+{
+"82
+[; ;KousicandCo.c: 82:         T1CON &= 0xFEu;
+[e =& _T1CON -> -> 254 `ui `Vuc ]
+"84
+[; ;KousicandCo.c: 84:         TMR1H = 0xFFu;
+[e = _TMR1H -> -> 255 `ui `uc ]
+"85
+[; ;KousicandCo.c: 85:         TMR1L = 0x06u;
+[e = _TMR1L -> -> 6 `ui `uc ]
+"87
+[; ;KousicandCo.c: 87:         PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"89
+[; ;KousicandCo.c: 89:         T1CON |= 0x01u;
+[e =| _T1CON -> -> 1 `ui `Vuc ]
+"91
+[; ;KousicandCo.c: 91:         while (PIR1bits.TMR1IF == 0u)
+[e $U 81  ]
+[e :U 82 ]
+"92
+[; ;KousicandCo.c: 92:         {
+{
+"94
+[; ;KousicandCo.c: 94:         }
+}
+[e :U 81 ]
+"91
+[; ;KousicandCo.c: 91:         while (PIR1bits.TMR1IF == 0u)
+[e $ == -> . . _PIR1bits 0 0 `ui -> 0 `ui 82  ]
+[e :U 83 ]
+"96
+[; ;KousicandCo.c: 96:         T1CON &= 0xFEu;
+[e =& _T1CON -> -> 254 `ui `Vuc ]
+"97
+[; ;KousicandCo.c: 97:         PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"99
+[; ;KousicandCo.c: 99:         ms--;
+[e -- _ms -> -> 1 `i `ui ]
+"100
+[; ;KousicandCo.c: 100:     }
+}
+[e :U 78 ]
+"80
+[; ;KousicandCo.c: 80:     while (ms > 0u)
+[e $ > _ms -> 0 `ui 79  ]
+[e :U 80 ]
+"101
+[; ;KousicandCo.c: 101: }
+[e :UE 77 ]
+}
+"103
+[; ;KousicandCo.c: 103: static void gpio_write_atomic(uint8_t mask, _Bool level)
+[v _gpio_write_atomic `(v ~T0 @X0 1 sf2`uc`a ]
+"104
+[; ;KousicandCo.c: 104: {
+{
+[e :U _gpio_write_atomic ]
+"103
+[; ;KousicandCo.c: 103: static void gpio_write_atomic(uint8_t mask, _Bool level)
+[v _mask `uc ~T0 @X0 1 r1 ]
+[v _level `a ~T0 @X0 1 r2 ]
+"104
+[; ;KousicandCo.c: 104: {
+[f ]
+"105
+[; ;KousicandCo.c: 105:     uint8_t gie_state;
+[v _gie_state `uc ~T0 @X0 1 a ]
+"107
+[; ;KousicandCo.c: 107:     gie_state = INTCONbits.GIE;
+[e = _gie_state . . _INTCONbits 0 7 ]
+"108
+[; ;KousicandCo.c: 108:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"110
+[; ;KousicandCo.c: 110:     if (level)
+[e $ ! != -> _level `i -> 0 `i 85  ]
+"111
+[; ;KousicandCo.c: 111:     {
+{
+"112
+[; ;KousicandCo.c: 112:         gpio_shadow |= mask;
+[e =| _gpio_shadow -> _mask `Vuc ]
+"113
+[; ;KousicandCo.c: 113:     }
+}
+[e $U 86  ]
+"114
+[; ;KousicandCo.c: 114:     else
+[e :U 85 ]
+"115
+[; ;KousicandCo.c: 115:     {
+{
+"116
+[; ;KousicandCo.c: 116:         gpio_shadow &= (uint8_t)(~mask);
+[e =& _gpio_shadow -> -> ~ -> _mask `i `uc `Vuc ]
+"117
+[; ;KousicandCo.c: 117:     }
+}
+[e :U 86 ]
+"119
+[; ;KousicandCo.c: 119:     GPIO = gpio_shadow;
+[e = _GPIO _gpio_shadow ]
+"121
+[; ;KousicandCo.c: 121:     INTCONbits.GIE = gie_state;
+[e = . . _INTCONbits 0 7 _gie_state ]
+"122
+[; ;KousicandCo.c: 122: }
+[e :UE 84 ]
+}
+"124
+[; ;KousicandCo.c: 124: static _Bool pin2_is_high(void)
+[v _pin2_is_high `(a ~T0 @X0 1 sf ]
+"125
+[; ;KousicandCo.c: 125: {
+{
+[e :U _pin2_is_high ]
+[f ]
+"126
+[; ;KousicandCo.c: 126:     if ((GPIO & 0x20u) != 0u)
+[e $ ! != & -> _GPIO `ui -> 32 `ui -> 0 `ui 88  ]
+"127
+[; ;KousicandCo.c: 127:     {
+{
+"128
+[; ;KousicandCo.c: 128:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 87  ]
+"129
+[; ;KousicandCo.c: 129:     }
+}
+[e :U 88 ]
+"131
+[; ;KousicandCo.c: 131:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 87  ]
+"132
+[; ;KousicandCo.c: 132: }
+[e :UE 87 ]
+}
+"134
+[; ;KousicandCo.c: 134: static void led_on(void)
+[v _led_on `(v ~T0 @X0 1 sf ]
+"135
+[; ;KousicandCo.c: 135: {
+{
+[e :U _led_on ]
+[f ]
+"136
+[; ;KousicandCo.c: 136:     gpio_write_atomic(0x10u, 1);
+[e ( _gpio_write_atomic (2 , -> -> 16 `ui `uc -> -> 1 `i `a ]
+"137
+[; ;KousicandCo.c: 137: }
+[e :UE 89 ]
+}
+"139
+[; ;KousicandCo.c: 139: static void led_off(void)
+[v _led_off `(v ~T0 @X0 1 sf ]
+"140
+[; ;KousicandCo.c: 140: {
+{
+[e :U _led_off ]
+[f ]
+"141
+[; ;KousicandCo.c: 141:     gpio_write_atomic(0x10u, 0);
+[e ( _gpio_write_atomic (2 , -> -> 16 `ui `uc -> -> 0 `i `a ]
+"142
+[; ;KousicandCo.c: 142: }
+[e :UE 90 ]
+}
+"144
+[; ;KousicandCo.c: 144: static void uart_timer_start(void)
+[v _uart_timer_start `(v ~T0 @X0 1 sf ]
+"145
+[; ;KousicandCo.c: 145: {
+{
+[e :U _uart_timer_start ]
+[f ]
+"146
+[; ;KousicandCo.c: 146:     TMR2 = 0;
+[e = _TMR2 -> -> 0 `i `uc ]
+"147
+[; ;KousicandCo.c: 147:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"148
+[; ;KousicandCo.c: 148:     T2CONbits.TMR2ON = 1;
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+"149
+[; ;KousicandCo.c: 149: }
+[e :UE 91 ]
+}
+"151
+[; ;KousicandCo.c: 151: static void uart_timer_stop(void)
+[v _uart_timer_stop `(v ~T0 @X0 1 sf ]
+"152
+[; ;KousicandCo.c: 152: {
+{
+[e :U _uart_timer_stop ]
+[f ]
+"153
+[; ;KousicandCo.c: 153:     T2CONbits.TMR2ON = 0;
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+"154
+[; ;KousicandCo.c: 154:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"155
+[; ;KousicandCo.c: 155: }
+[e :UE 92 ]
+}
+"157
+[; ;KousicandCo.c: 157: static _Bool uart_is_busy(void)
+[v _uart_is_busy `(a ~T0 @X0 1 sf ]
+"158
+[; ;KousicandCo.c: 158: {
+{
+[e :U _uart_is_busy ]
+[f ]
+"159
+[; ;KousicandCo.c: 159:     return uart_tx_busy;
+[e ) _uart_tx_busy ]
+[e $UE 93  ]
+"160
+[; ;KousicandCo.c: 160: }
+[e :UE 93 ]
+}
+"162
+[; ;KousicandCo.c: 162: static void uart_load_character(char data)
+[v _uart_load_character `(v ~T0 @X0 1 sf1`uc ]
+"163
+[; ;KousicandCo.c: 163: {
+{
+[e :U _uart_load_character ]
+"162
+[; ;KousicandCo.c: 162: static void uart_load_character(char data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"163
+[; ;KousicandCo.c: 163: {
+[f ]
+"170
+[; ;KousicandCo.c: 170:     uart_tx_frame = ((uint16_t)1u << 9) | ((uint16_t)((uint8_t)data) << 1);
+[e = _uart_tx_frame | << -> 1 `ui -> 9 `i << -> -> _data `uc `ui -> 1 `i ]
+"171
+[; ;KousicandCo.c: 171:     uart_tx_bits_remaining = 10u;
+[e = _uart_tx_bits_remaining -> -> 10 `ui `uc ]
+"172
+[; ;KousicandCo.c: 172: }
+[e :UE 94 ]
+}
+"174
+[; ;KousicandCo.c: 174: static void uart_output_next_bit_main_context(void)
+[v _uart_output_next_bit_main_context `(v ~T0 @X0 1 sf ]
+"175
+[; ;KousicandCo.c: 175: {
+{
+[e :U _uart_output_next_bit_main_context ]
+[f ]
+"176
+[; ;KousicandCo.c: 176:     if ((uart_tx_frame & 0x0001u) != 0u)
+[e $ ! != & _uart_tx_frame -> 1 `ui -> 0 `ui 96  ]
+"177
+[; ;KousicandCo.c: 177:     {
+{
+"178
+[; ;KousicandCo.c: 178:         gpio_shadow |= 0x04u;
+[e =| _gpio_shadow -> -> 4 `ui `Vuc ]
+"179
+[; ;KousicandCo.c: 179:     }
+}
+[e $U 97  ]
+"180
+[; ;KousicandCo.c: 180:     else
+[e :U 96 ]
+"181
+[; ;KousicandCo.c: 181:     {
+{
+"182
+[; ;KousicandCo.c: 182:         gpio_shadow &= (uint8_t)(~0x04u);
+[e =& _gpio_shadow -> -> ~ -> 4 `ui `uc `Vuc ]
+"183
+[; ;KousicandCo.c: 183:     }
+}
+[e :U 97 ]
+"185
+[; ;KousicandCo.c: 185:     GPIO = gpio_shadow;
+[e = _GPIO _gpio_shadow ]
+"187
+[; ;KousicandCo.c: 187:     uart_tx_frame >>= 1;
+[e =>> _uart_tx_frame -> -> 1 `i `Vui ]
+"188
+[; ;KousicandCo.c: 188:     uart_tx_bits_remaining--;
+[e -- _uart_tx_bits_remaining -> -> 1 `i `Vuc ]
+"189
+[; ;KousicandCo.c: 189: }
+[e :UE 95 ]
+}
+"191
+[; ;KousicandCo.c: 191: static void uart_send_string_async(const char *text)
+[v _uart_send_string_async `(v ~T0 @X0 1 sf1`*Cuc ]
+"192
+[; ;KousicandCo.c: 192: {
+{
+[e :U _uart_send_string_async ]
+"191
+[; ;KousicandCo.c: 191: static void uart_send_string_async(const char *text)
+[v _text `*Cuc ~T0 @X0 1 r1 ]
+"192
+[; ;KousicandCo.c: 192: {
+[f ]
+"193
+[; ;KousicandCo.c: 193:     while (uart_tx_busy)
+[e $U 99  ]
+[e :U 100 ]
+"194
+[; ;KousicandCo.c: 194:     {
+{
+"196
+[; ;KousicandCo.c: 196:     }
+}
+[e :U 99 ]
+"193
+[; ;KousicandCo.c: 193:     while (uart_tx_busy)
+[e $ != -> _uart_tx_busy `i -> 0 `i 100  ]
+[e :U 101 ]
+"198
+[; ;KousicandCo.c: 198:     if (text == 0)
+[e $ ! == _text -> -> 0 `i `*Cuc 102  ]
+"199
+[; ;KousicandCo.c: 199:     {
+{
+"200
+[; ;KousicandCo.c: 200:         return;
+[e $UE 98  ]
+"201
+[; ;KousicandCo.c: 201:     }
+}
+[e :U 102 ]
+"203
+[; ;KousicandCo.c: 203:     if (text[0] == '\0')
+[e $ ! == -> *U + _text * -> -> 0 `i `x -> -> # *U _text `i `x `ui -> 0 `ui 103  ]
+"204
+[; ;KousicandCo.c: 204:     {
+{
+"205
+[; ;KousicandCo.c: 205:         return;
+[e $UE 98  ]
+"206
+[; ;KousicandCo.c: 206:     }
+}
+[e :U 103 ]
+"208
+[; ;KousicandCo.c: 208:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"210
+[; ;KousicandCo.c: 210:     uart_tx_ptr = text;
+[e = _uart_tx_ptr -> _text `*CVuc ]
+"211
+[; ;KousicandCo.c: 211:     uart_load_character(*uart_tx_ptr);
+[e ( _uart_load_character (1 *U _uart_tx_ptr ]
+"212
+[; ;KousicandCo.c: 212:     uart_tx_ptr++;
+[e ++ _uart_tx_ptr * -> -> 1 `i `x -> -> # *U _uart_tx_ptr `i `x ]
+"214
+[; ;KousicandCo.c: 214:     uart_tx_busy = 1;
+[e = _uart_tx_busy -> -> 1 `i `a ]
+"220
+[; ;KousicandCo.c: 220:     uart_output_next_bit_main_context();
+[e ( _uart_output_next_bit_main_context ..  ]
+"222
+[; ;KousicandCo.c: 222:     uart_timer_start();
+[e ( _uart_timer_start ..  ]
+"224
+[; ;KousicandCo.c: 224:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"225
+[; ;KousicandCo.c: 225: }
+[e :UE 98 ]
+}
+"227
+[; ;KousicandCo.c: 227: static void blink_led_three_times(void)
+[v _blink_led_three_times `(v ~T0 @X0 1 sf ]
+"228
+[; ;KousicandCo.c: 228: {
+{
+[e :U _blink_led_three_times ]
+[f ]
+"229
+[; ;KousicandCo.c: 229:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"231
+[; ;KousicandCo.c: 231:     for (i = 0u; i < 3u; i++)
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 3 `ui 105  ]
+[e $U 106  ]
+[e :U 105 ]
+"232
+[; ;KousicandCo.c: 232:     {
+{
+"233
+[; ;KousicandCo.c: 233:         led_on();
+[e ( _led_on ..  ]
+"234
+[; ;KousicandCo.c: 234:         delay_ms_custom(120u);
+[e ( _delay_ms_custom (1 -> 120 `ui ]
+"236
+[; ;KousicandCo.c: 236:         led_off();
+[e ( _led_off ..  ]
+"237
+[; ;KousicandCo.c: 237:         delay_ms_custom(120u);
+[e ( _delay_ms_custom (1 -> 120 `ui ]
+"238
+[; ;KousicandCo.c: 238:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 3 `ui 105  ]
+[e :U 106 ]
+}
+"239
+[; ;KousicandCo.c: 239: }
+[e :UE 104 ]
+}
+"241
+[; ;KousicandCo.c: 241: static void trigger_detect_action(void)
+[v _trigger_detect_action `(v ~T0 @X0 1 sf ]
+"242
+[; ;KousicandCo.c: 242: {
+{
+[e :U _trigger_detect_action ]
+[f ]
+"243
+[; ;KousicandCo.c: 243:     uart_send_string_async("Detects");
+[e ( _uart_send_string_async (1 :s 1C ]
+"245
+[; ;KousicandCo.c: 245:     blink_led_three_times();
+[e ( _blink_led_three_times ..  ]
+"247
+[; ;KousicandCo.c: 247:     while (uart_is_busy())
+[e $U 109  ]
+[e :U 110 ]
+"248
+[; ;KousicandCo.c: 248:     {
+{
+"250
+[; ;KousicandCo.c: 250:     }
+}
+[e :U 109 ]
+"247
+[; ;KousicandCo.c: 247:     while (uart_is_busy())
+[e $ != -> ( _uart_is_busy ..  `i -> 0 `i 110  ]
+[e :U 111 ]
+"251
+[; ;KousicandCo.c: 251: }
+[e :UE 108 ]
+}
+"253
+[; ;KousicandCo.c: 253: static void system_init(void)
+[v _system_init `(v ~T0 @X0 1 sf ]
+"254
+[; ;KousicandCo.c: 254: {
+{
+[e :U _system_init ]
+[f ]
+"258
+[; ;KousicandCo.c: 258:     OSCCON = 0b01110000;
+[e = _OSCCON -> -> 112 `i `uc ]
+"263
+[; ;KousicandCo.c: 263:     ANSEL = 0x00;
+[e = _ANSEL -> -> 0 `i `uc ]
+"264
+[; ;KousicandCo.c: 264:     ADCON0 = 0x00;
+[e = _ADCON0 -> -> 0 `i `uc ]
+"265
+[; ;KousicandCo.c: 265:     CMCON0 = 0x07;
+[e = _CMCON0 -> -> 7 `i `uc ]
+"271
+[; ;KousicandCo.c: 271:     gpio_shadow = 0x04u;
+[e = _gpio_shadow -> -> 4 `ui `uc ]
+"272
+[; ;KousicandCo.c: 272:     GPIO = gpio_shadow;
+[e = _GPIO _gpio_shadow ]
+"282
+[; ;KousicandCo.c: 282:     TRISIO = 0b00101000;
+[e = _TRISIO -> -> 40 `i `uc ]
+"288
+[; ;KousicandCo.c: 288:     OPTION_REG = OPTION_REG | 0x80u;
+[e = _OPTION_REG -> | -> _OPTION_REG `ui -> 128 `ui `uc ]
+"289
+[; ;KousicandCo.c: 289:     WPU = 0x00;
+[e = _WPU -> -> 0 `i `uc ]
+"295
+[; ;KousicandCo.c: 295:     T1CON = 0b00110000;
+[e = _T1CON -> -> 48 `i `uc ]
+"296
+[; ;KousicandCo.c: 296:     TMR1H = 0x00;
+[e = _TMR1H -> -> 0 `i `uc ]
+"297
+[; ;KousicandCo.c: 297:     TMR1L = 0x00;
+[e = _TMR1L -> -> 0 `i `uc ]
+"298
+[; ;KousicandCo.c: 298:     PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"299
+[; ;KousicandCo.c: 299:     PIE1bits.TMR1IE = 0;
+[e = . . _PIE1bits 0 0 -> -> 0 `i `uc ]
+"305
+[; ;KousicandCo.c: 305:     PR2 = 207u;
+[e = _PR2 -> -> 207 `ui `uc ]
+"306
+[; ;KousicandCo.c: 306:     TMR2 = 0;
+[e = _TMR2 -> -> 0 `i `uc ]
+"307
+[; ;KousicandCo.c: 307:     T2CON = 0x00;
+[e = _T2CON -> -> 0 `i `uc ]
+"309
+[; ;KousicandCo.c: 309:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"310
+[; ;KousicandCo.c: 310:     PIE1bits.TMR2IE = 1;
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+"312
+[; ;KousicandCo.c: 312:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"313
+[; ;KousicandCo.c: 313:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"314
+[; ;KousicandCo.c: 314: }
+[e :UE 112 ]
+}
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"316
+[; ;KousicandCo.c: 316: void __attribute__((picinterrupt(("")))) isr(void)
+[v _isr `(v ~T1 @X0 1 ef ]
+"317
+[; ;KousicandCo.c: 317: {
+{
+[e :U _isr ]
+[f ]
+"318
+[; ;KousicandCo.c: 318:     if (PIR1bits.TMR2IF)
+[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 114  ]
+"319
+[; ;KousicandCo.c: 319:     {
+{
+"320
+[; ;KousicandCo.c: 320:         PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"322
+[; ;KousicandCo.c: 322:         if (uart_tx_busy)
+[e $ ! != -> _uart_tx_busy `i -> 0 `i 115  ]
+"323
+[; ;KousicandCo.c: 323:         {
+{
+"324
+[; ;KousicandCo.c: 324:             if (uart_tx_bits_remaining > 0u)
+[e $ ! > -> _uart_tx_bits_remaining `ui -> 0 `ui 116  ]
+"325
+[; ;KousicandCo.c: 325:             {
+{
+"330
+[; ;KousicandCo.c: 330:                 if ((uart_tx_frame & 0x0001u) != 0u)
+[e $ ! != & _uart_tx_frame -> 1 `ui -> 0 `ui 117  ]
+"331
+[; ;KousicandCo.c: 331:                 {
+{
+"332
+[; ;KousicandCo.c: 332:                     gpio_shadow |= 0x04u;
+[e =| _gpio_shadow -> -> 4 `ui `Vuc ]
+"333
+[; ;KousicandCo.c: 333:                 }
+}
+[e $U 118  ]
+"334
+[; ;KousicandCo.c: 334:                 else
+[e :U 117 ]
+"335
+[; ;KousicandCo.c: 335:                 {
+{
+"336
+[; ;KousicandCo.c: 336:                     gpio_shadow &= (uint8_t)(~0x04u);
+[e =& _gpio_shadow -> -> ~ -> 4 `ui `uc `Vuc ]
+"337
+[; ;KousicandCo.c: 337:                 }
+}
+[e :U 118 ]
+"339
+[; ;KousicandCo.c: 339:                 GPIO = gpio_shadow;
+[e = _GPIO _gpio_shadow ]
+"341
+[; ;KousicandCo.c: 341:                 uart_tx_frame >>= 1;
+[e =>> _uart_tx_frame -> -> 1 `i `Vui ]
+"342
+[; ;KousicandCo.c: 342:                 uart_tx_bits_remaining--;
+[e -- _uart_tx_bits_remaining -> -> 1 `i `Vuc ]
+"343
+[; ;KousicandCo.c: 343:             }
+}
+[e $U 119  ]
+"344
+[; ;KousicandCo.c: 344:             else
+[e :U 116 ]
+"345
+[; ;KousicandCo.c: 345:             {
+{
+"350
+[; ;KousicandCo.c: 350:                 if (*uart_tx_ptr != '\0')
+[e $ ! != -> *U _uart_tx_ptr `ui -> 0 `ui 120  ]
+"351
+[; ;KousicandCo.c: 351:                 {
+{
+"352
+[; ;KousicandCo.c: 352:                     uart_load_character(*uart_tx_ptr);
+[e ( _uart_load_character (1 *U _uart_tx_ptr ]
+"353
+[; ;KousicandCo.c: 353:                     uart_tx_ptr++;
+[e ++ _uart_tx_ptr * -> -> 1 `i `x -> -> # *U _uart_tx_ptr `i `x ]
+"355
+[; ;KousicandCo.c: 355:                     if ((uart_tx_frame & 0x0001u) != 0u)
+[e $ ! != & _uart_tx_frame -> 1 `ui -> 0 `ui 121  ]
+"356
+[; ;KousicandCo.c: 356:                     {
+{
+"357
+[; ;KousicandCo.c: 357:                         gpio_shadow |= 0x04u;
+[e =| _gpio_shadow -> -> 4 `ui `Vuc ]
+"358
+[; ;KousicandCo.c: 358:                     }
+}
+[e $U 122  ]
+"359
+[; ;KousicandCo.c: 359:                     else
+[e :U 121 ]
+"360
+[; ;KousicandCo.c: 360:                     {
+{
+"361
+[; ;KousicandCo.c: 361:                         gpio_shadow &= (uint8_t)(~0x04u);
+[e =& _gpio_shadow -> -> ~ -> 4 `ui `uc `Vuc ]
+"362
+[; ;KousicandCo.c: 362:                     }
+}
+[e :U 122 ]
+"364
+[; ;KousicandCo.c: 364:                     GPIO = gpio_shadow;
+[e = _GPIO _gpio_shadow ]
+"366
+[; ;KousicandCo.c: 366:                     uart_tx_frame >>= 1;
+[e =>> _uart_tx_frame -> -> 1 `i `Vui ]
+"367
+[; ;KousicandCo.c: 367:                     uart_tx_bits_remaining--;
+[e -- _uart_tx_bits_remaining -> -> 1 `i `Vuc ]
+"368
+[; ;KousicandCo.c: 368:                 }
+}
+[e $U 123  ]
+"369
+[; ;KousicandCo.c: 369:                 else
+[e :U 120 ]
+"370
+[; ;KousicandCo.c: 370:                 {
+{
+"371
+[; ;KousicandCo.c: 371:                     uart_timer_stop();
+[e ( _uart_timer_stop ..  ]
+"373
+[; ;KousicandCo.c: 373:                     gpio_shadow |= 0x04u;
+[e =| _gpio_shadow -> -> 4 `ui `Vuc ]
+"374
+[; ;KousicandCo.c: 374:                     GPIO = gpio_shadow;
+[e = _GPIO _gpio_shadow ]
+"376
+[; ;KousicandCo.c: 376:                     uart_tx_busy = 0;
+[e = _uart_tx_busy -> -> 0 `i `a ]
+"377
+[; ;KousicandCo.c: 377:                 }
+}
+[e :U 123 ]
+"378
+[; ;KousicandCo.c: 378:             }
+}
+[e :U 119 ]
+"379
+[; ;KousicandCo.c: 379:         }
+}
+[e $U 124  ]
+"380
+[; ;KousicandCo.c: 380:         else
+[e :U 115 ]
+"381
+[; ;KousicandCo.c: 381:         {
+{
+"382
+[; ;KousicandCo.c: 382:             uart_timer_stop();
+[e ( _uart_timer_stop ..  ]
+"384
+[; ;KousicandCo.c: 384:             gpio_shadow |= 0x04u;
+[e =| _gpio_shadow -> -> 4 `ui `Vuc ]
+"385
+[; ;KousicandCo.c: 385:             GPIO = gpio_shadow;
+[e = _GPIO _gpio_shadow ]
+"386
+[; ;KousicandCo.c: 386:         }
+}
+[e :U 124 ]
+"387
+[; ;KousicandCo.c: 387:     }
+}
+[e :U 114 ]
+"388
+[; ;KousicandCo.c: 388: }
+[e :UE 113 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"390
+[; ;KousicandCo.c: 390: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"391
+[; ;KousicandCo.c: 391: {
+{
+[e :U _main ]
+[f ]
+"392
+[; ;KousicandCo.c: 392:     _Bool pin2_was_high;
+[v _pin2_was_high `a ~T0 @X0 1 a ]
+"394
+[; ;KousicandCo.c: 394:     system_init();
+[e ( _system_init ..  ]
+"396
+[; ;KousicandCo.c: 396:     pin2_was_high = 0;
+[e = _pin2_was_high -> -> 0 `i `a ]
+"398
+[; ;KousicandCo.c: 398:     while (1)
+[e :U 127 ]
+"399
+[; ;KousicandCo.c: 399:     {
+{
+"400
+[; ;KousicandCo.c: 400:         if (pin2_is_high())
+[e $ ! != -> ( _pin2_is_high ..  `i -> 0 `i 129  ]
+"401
+[; ;KousicandCo.c: 401:         {
+{
+"402
+[; ;KousicandCo.c: 402:             delay_ms_custom(20u);
+[e ( _delay_ms_custom (1 -> 20 `ui ]
+"404
+[; ;KousicandCo.c: 404:             if (pin2_is_high() && !pin2_was_high)
+[e $ ! && != -> ( _pin2_is_high ..  `i -> 0 `i ! != -> _pin2_was_high `i -> 0 `i 130  ]
+"405
+[; ;KousicandCo.c: 405:             {
+{
+"406
+[; ;KousicandCo.c: 406:                 trigger_detect_action();
+[e ( _trigger_detect_action ..  ]
+"407
+[; ;KousicandCo.c: 407:                 pin2_was_high = 1;
+[e = _pin2_was_high -> -> 1 `i `a ]
+"408
+[; ;KousicandCo.c: 408:             }
+}
+[e :U 130 ]
+"409
+[; ;KousicandCo.c: 409:         }
+}
+[e $U 131  ]
+"410
+[; ;KousicandCo.c: 410:         else
+[e :U 129 ]
+"411
+[; ;KousicandCo.c: 411:         {
+{
+"412
+[; ;KousicandCo.c: 412:             pin2_was_high = 0;
+[e = _pin2_was_high -> -> 0 `i `a ]
+"413
+[; ;KousicandCo.c: 413:         }
+}
+[e :U 131 ]
+"414
+[; ;KousicandCo.c: 414:     }
+}
+[e :U 126 ]
+[e $U 127  ]
+[e :U 128 ]
+"415
+[; ;KousicandCo.c: 415: }
+[e :UE 125 ]
+}
+[a 1C 68 101 116 101 99 116 115 0 ]

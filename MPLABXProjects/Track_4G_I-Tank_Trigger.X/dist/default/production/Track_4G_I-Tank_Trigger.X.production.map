@@ -1,0 +1,418 @@
+Microchip MPLAB XC8 Compiler V2.31
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
+  -h+dist/default/production\Track_4G_I-Tank_Trigger.X.production.sym \
+  --cmf=dist/default/production\Track_4G_I-Tank_Trigger.X.production.cmf -z \
+  -Q12F683 -oC:\Users\RealTech\AppData\Local\Temp\s498.2 \
+  --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/Track_4G_I-Tank_Trigger.X.production.map -E1 \
+  -ver=XC8 Compiler --acfsm=1493 -ASTACK=020h-06Fh -pstack=STACK \
+  -ACODE=00h-07FFh -ASTRCODE=00h-07FFh -ASTRING=00h-0FFhx8 \
+  -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 -ACOMMON=070h-07Fh \
+  -ABANK0=020h-06Fh -ABANK1=0A0h-0BFh -ARAM=020h-06Fh,0A0h-0BFh \
+  -AABS1=020h-07Fh,0A0h-0BFh -ASFR0=00h-01Fh -ASFR1=080h-09Fh \
+  -ACONFIG=02007h-02007h -DCONFIG=2 -AIDLOC=02000h-02003h -DIDLOC=2 \
+  -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
+  -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -k C:\Users\RealTech\AppData\Local\Temp\s498.o \
+  dist/default/production\Track_4G_I-Tank_Trigger.X.production.o 
+
+Object code version is 3.11
+
+Machine type is 12F683
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\RealTech\AppData\Local\Temp\s498.o
+                end_init                              0        0        1        0       0
+                config                             2007     2007        1        0       4
+dist/default/production\Track_4G_I-Tank_Trigger.X.production.o
+                cinit                               7FD      7FD        3      FFA       0
+                config                             2007     2007        1        0       4
+                text4                               775      775        4      EEA       0
+                text3                               783      783        E      F06       0
+                text2                               791      791       1A      F22       0
+                text1                               779      779        A      EF2       0
+                maintext                            7AB      7AB       52      F56       0
+                cstackCOMMON                         70       70        9       70       1
+                bssCOMMON                            79       79        1       70       1
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              0        0        1         0
+                cinit                               7FD      7FD        3         0
+                text4                               775      775        4         0
+                text3                               783      783        E         0
+                text2                               791      791       1A         0
+                text1                               779      779        A         0
+                maintext                            7AB      7AB       52         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        9         1
+                bssCOMMON                            79       79        1         1
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   CONFIG         
+                config                             2007     2007        1         4
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000001  000001         0       0  CODE        2
+                cstackCOMMON                   000070  00000A  00007A        70       1  COMMON      1
+                text4                          000775  000004  000779       EEA       0  CODE        2
+                text1                          000779  00000A  000783       EF2       0  CODE        2
+                text3                          000783  00000E  000791       F06       0  CODE        2
+                text2                          000791  00001A  0007AB       F22       0  CODE        2
+                maintext                       0007AB  000052  0007FD       F56       0  CODE        2
+                cinit                          0007FD  000003  000800       FFA       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0020-006F             50           1
+        BANK1            00A0-00BF             20           1
+        CODE             0001-0774            774           2
+        COMMON           007A-007D              4           1
+        CONST            0001-0774            100           2
+        EEDATA           2100-21FF            100           2
+        ENTRY            0001-0774            100           2
+        IDLOC            2000-2003              4           2
+        RAM              0020-006F             50           1
+                         00A0-00BF             20
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        STACK            0020-006F             50           1
+        STRCODE          0001-0774            774           2
+        STRING           0001-0774            100           2
+
+                                  Symbol Table
+
+_ADCON0                  (abs)        001F
+_ANSEL                   (abs)        009F
+_CMCON0                  (abs)        0019
+_GPIO                    (abs)        0005
+_GPIObits                (abs)        0005
+_INTCONbits              (abs)        000B
+_OPTION_REGbits          (abs)        0081
+_OSCCONbits              (abs)        008F
+_TMR0                    (abs)        0001
+_TRISIO                  (abs)        0085
+__Habs1                  abs1         0000
+__Hbank0                 bank0        0000
+__Hbank1                 bank1        0000
+__HbssCOMMON             bssCOMMON    0000
+__Hcinit                 cinit        0800
+__Hclrtext               clrtext      0000
+__Hcode                  code         0000
+__Hcommon                common       0000
+__Hconfig                config       2008
+__HcstackCOMMON          cstackCOMMON 0000
+__Heeprom_data           eeprom_data  0000
+__Hend_init              end_init     0001
+__Hfunctab               functab      0000
+__Hinit                  init         0000
+__Hintentry              intentry     0000
+__Hmaintext              maintext     0000
+__Hpowerup               powerup      0000
+__Hram                   ram          0000
+__Hreset_vec             reset_vec    0000
+__Hsfr0                  sfr0         0000
+__Hsfr1                  sfr1         0000
+__Hspace_0               (abs)        0800
+__Hspace_1               (abs)        007A
+__Hspace_2               (abs)        0000
+__Hspace_3               (abs)        0000
+__Hspace_4               (abs)        400F
+__Hstack                 stack        0000
+__Hstrings               strings      0000
+__Htext                  text         0000
+__Labs1                  abs1         0000
+__Lbank0                 bank0        0000
+__Lbank1                 bank1        0000
+__LbssCOMMON             bssCOMMON    0000
+__Lcinit                 cinit        07FD
+__Lclrtext               clrtext      0000
+__Lcode                  code         0000
+__Lcommon                common       0000
+__Lconfig                config       0000
+__LcstackCOMMON          cstackCOMMON 0000
+__Leeprom_data           eeprom_data  0000
+__Lend_init              end_init     0000
+__Lfunctab               functab      0000
+__Linit                  init         0000
+__Lintentry              intentry     0000
+__Lmaintext              maintext     0000
+__Lpowerup               powerup      0000
+__Lram                   ram          0000
+__Lreset_vec             reset_vec    0000
+__Lsfr0                  sfr0         0000
+__Lsfr1                  sfr1         0000
+__Lspace_0               (abs)        0000
+__Lspace_1               (abs)        0000
+__Lspace_2               (abs)        0000
+__Lspace_3               (abs)        0000
+__Lspace_4               (abs)        0000
+__Lstack                 stack        0000
+__Lstrings               strings      0000
+__Ltext                  text         0000
+__S0                     (abs)        0800
+__S1                     (abs)        007A
+__S2                     (abs)        0000
+__S3                     (abs)        0000
+___int_sp                stack        0000
+___latbits               (abs)        0000
+___sp                    stack        0000
+___stackhi               (abs)        0000
+___stacklo               (abs)        0000
+__end_of__initialization cinit        07FE
+__end_of_gpio_apply      text4        0779
+__end_of_main            maintext     07FD
+__end_of_mcu_init        text2        07AB
+__end_of_output_set      text3        0791
+__end_of_tick_1ms        text1        0783
+__initialization         cinit        07FD
+__pbssCOMMON             bssCOMMON    0079
+__pcstackCOMMON          cstackCOMMON 0070
+__pmaintext              maintext     07AB
+__ptext1                 text1        0779
+__ptext2                 text2        0791
+__ptext3                 text3        0783
+__ptext4                 text4        0775
+__size_of_gpio_apply     (abs)        0000
+__size_of_main           (abs)        0000
+__size_of_mcu_init       (abs)        0000
+__size_of_output_set     (abs)        0000
+__size_of_tick_1ms       (abs)        0000
+_gpio_apply              text4        0775
+_gpio_shadow             bssCOMMON    0079
+_main                    maintext     07AB
+_mcu_init                text2        0791
+_output_set              text3        0783
+_tick_1ms                text1        0779
+btemp                    (abs)        007E
+end_of_initialization    cinit        07FE
+intlevel0                functab      0000
+intlevel1                functab      0000
+intlevel2                functab      0000
+intlevel3                functab      0000
+intlevel4                functab      0000
+intlevel5                functab      0000
+main@debounce_cnt        cstackCOMMON 0075
+main@high_ms             cstackCOMMON 0073
+main@raw                 cstackCOMMON 0078
+main@stable_in           cstackCOMMON 0077
+output_set@on            cstackCOMMON 0071
+reset_vec                reset_vec    0000
+start                    init         0000
+start_initialization     cinit        07FD
+wtemp0                   (abs)        007E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 104 in file "Track_4G_I-Tank_Trigger.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  debounce_cnt    2    5[COMMON] unsigned int 
+  high_ms         2    3[COMMON] unsigned int 
+  raw             1    8[COMMON] _Bool 
+  stable_in       1    7[COMMON] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         6       0       0
+      Temps:          1       0       0
+      Totals:         7       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels required when called:    3
+ This function calls:
+		_mcu_init
+		_output_set
+		_tick_1ms
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _tick_1ms *****************
+ Defined at:
+		line 61 in file "Track_4G_I-Tank_Trigger.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _mcu_init *****************
+ Defined at:
+		line 77 in file "Track_4G_I-Tank_Trigger.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_gpio_apply
+		_output_set
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _output_set *****************
+ Defined at:
+		line 47 in file "Track_4G_I-Tank_Trigger.c"
+ Parameters:    Size  Location     Type
+  on              1    wreg     _Bool 
+ Auto vars:     Size  Location     Type
+  on              1    1[COMMON] _Bool 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          1       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_gpio_apply
+ This function is called by:
+		_mcu_init
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _gpio_apply *****************
+ Defined at:
+		line 41 in file "Track_4G_I-Tank_Trigger.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_output_set
+		_mcu_init
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+shared
+		__initialization		CODE           	07FD	0000	1
+
+shared estimated size: 1
+
+Track_4G_I-Tank_Trigger.c
+		_tick_1ms      		CODE           	0779	0000	10
+		_main          		CODE           	07AB	0000	82
+		_gpio_apply    		CODE           	0775	0000	4
+		_mcu_init      		CODE           	0791	0000	26
+		_output_set    		CODE           	0783	0000	14
+
+Track_4G_I-Tank_Trigger.c estimated size: 136
+

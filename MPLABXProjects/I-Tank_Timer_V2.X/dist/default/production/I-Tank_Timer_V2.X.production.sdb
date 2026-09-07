@@ -1,0 +1,57 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F683 ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"20 C:\Users\IQC\MPLABXProjects\I-Tank_Timer_V2.X\I-Tank_Timer_V2.c
+[v _Get_Off_Delay Get_Off_Delay `(ui  1 e 2 0 ]
+"31
+[v _Wait_Seconds Wait_Seconds `(v  1 e 1 0 ]
+"37
+[v _main main `(v  1 e 1 0 ]
+"166 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc/pic12f683.h
+[v _GPIO GPIO `VEuc  1 e 1 @5 ]
+"699
+[v _CMCON0 CMCON0 `VEuc  1 e 1 @25 ]
+"951
+[v _TRISIO TRISIO `VEuc  1 e 1 @133 ]
+"1720
+[v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
+"1917
+[v _GP0 GP0 `VEb  1 e 0 @40 ]
+"1920
+[v _GP1 GP1 `VEb  1 e 0 @41 ]
+"1923
+[v _GP2 GP2 `VEb  1 e 0 @42 ]
+"1929
+[v _GP4 GP4 `VEb  1 e 0 @44 ]
+"1932
+[v _GP5 GP5 `VEb  1 e 0 @45 ]
+"37 C:\Users\IQC\MPLABXProjects\I-Tank_Timer_V2.X\I-Tank_Timer_V2.c
+[v _main main `(v  1 e 1 0 ]
+{
+"45
+[v main@off_delay off_delay `ui  1 a 2 5 ]
+"53
+} 0
+"31
+[v _Wait_Seconds Wait_Seconds `(v  1 e 1 0 ]
+{
+[v Wait_Seconds@sec sec `ui  1 p 2 0 ]
+"35
+} 0
+"20
+[v _Get_Off_Delay Get_Off_Delay `(ui  1 e 2 0 ]
+{
+"21
+[v Get_Off_Delay@delay delay `ui  1 a 2 2 ]
+"29
+} 0
