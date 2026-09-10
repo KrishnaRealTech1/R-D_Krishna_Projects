@@ -1,8 +1,20 @@
 /*
- * File:   EAS_ITank_RTC_Interface_40min_Updated.c
- * Author: RealTech
+ * File:   I-Tank_Auto-Flush_RTC_40mins-30secs.c
+ * Author: Krishna
  *
- * Created on 19 August, 2026, 5:14 PM
+ * Created on 10 September, 2026, 10:30 AM
+ * 
+ * Pin 4 - Low = Test Mode
+ * DIP 1 - 0, DIP 2 - 0 = 30Sec OFF, 10Sec ON.
+ * DIP 1 - 0, DIP 2 - 1 = 10Sec OFF, 5Sec ON.
+ * DIP 1 - 1, DIP 2 - 0 = 60Sec OFF, 15Sec ON.
+
+ * Pin 4 - High = Normal Mode
+ * DIP 1 - 0, DIP 2 - 0 = For Every 40Mins Once Relay ON for 30Secs For 24x6(Suday Not Enable).
+ * DIP 1 - 1, DIP 2 - 0 = For Every 40Mins Once Relay ON for 30Secs For 24x7(Sunday Enable).
+ * DIP 1 - 0, DIP 2 - 1 = For Every 40Mins Once Relay ON for 30Secs For 8AM to 6PM (Suday Not Enable).
+ * DIP 1 - 1, DIP 2 - 1 = For Every 40Mins Once Relay ON for 30Secs For 8AM to 6PM (Suday Enable).
+ * 
  */
 
 #define _XTAL_FREQ                      4000000UL

@@ -3,11 +3,11 @@ Microchip MPLAB XC8 Compiler V2.31
 Linker command line:
 
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
-  -h+dist/default/production\EAS_ITank_RTC_Interface_40min_Updated.X.production.sym \
-  --cmf=dist/default/production\EAS_ITank_RTC_Interface_40min_Updated.X.production.cmf \
-  -z -Q12F683 -oC:\Users\RealTech\AppData\Local\Temp\skrc.2 \
+  -h+dist/default/production\I-Tank_Auto-Flush_RTC_40mins-30secs.X.production.sym \
+  --cmf=dist/default/production\I-Tank_Auto-Flush_RTC_40mins-30secs.X.production.cmf \
+  -z -Q12F683 -oC:\Users\RealTech\AppData\Local\Temp\sfdk.2 \
   --defsym=__MPLAB_BUILD=1 \
-  -Mdist/default/production/EAS_ITank_RTC_Interface_40min_Updated.X.production.map \
+  -Mdist/default/production/I-Tank_Auto-Flush_RTC_40mins-30secs.X.production.map \
   -E1 -ver=XC8 Compiler --acfsm=1493 -ASTACK=03Dh-06Fh -pstack=STACK \
   -ACODE=00h-07FFh -ASTRCODE=00h-07FFh -ASTRING=00h-0FFhx8 \
   -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 -ACOMMON=070h-07Fh \
@@ -16,9 +16,9 @@ Linker command line:
   -ACONFIG=02007h-02007h -DCONFIG=2 -AIDLOC=02000h-02003h -DIDLOC=2 \
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
-  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\RealTech\AppData\Local\Temp\skrc.o \
-  dist/default/production\EAS_ITank_RTC_Interface_40min_Updated.X.production.o 
+  -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -k C:\Users\RealTech\AppData\Local\Temp\sfdk.o \
+  dist/default/production\I-Tank_Auto-Flush_RTC_40mins-30secs.X.production.o 
 
 Object code version is 3.11
 
@@ -27,54 +27,53 @@ Machine type is 12F683
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\RealTech\AppData\Local\Temp\skrc.o
-                end_init                              4        4        1        8       0
-                reset_vec                             0        0        1        0       0
+C:\Users\RealTech\AppData\Local\Temp\sfdk.o
+                end_init                              0        0        1        0       0
                 config                             2007     2007        1        0       4
-dist/default/production\EAS_ITank_RTC_Interface_40min_Updated.X.production.o
-                cinit                                 5        5        2        8       0
+dist/default/production\I-Tank_Auto-Flush_RTC_40mins-30secs.X.production.o
+                cinit                               7FE      7FE        2      FFC       0
                 config                             2007     2007        1        0       4
-                text40                              378      378       36        8       0
-                text39                              51D      51D       15        8       0
-                text38                              4E9      4E9       1B        8       0
-                text37                              532      532        E        8       0
-                text36                              5AA      5AA        5        8       0
-                text35                              5C4      5C4        3        8       0
-                text34                              5A5      5A5        5        8       0
-                text33                              5B7      5B7        4        8       0
-                text32                              5C1      5C1        3        8       0
-                text31                              3DB      3DB       2B        8       0
-                text30                              591      591        8        8       0
-                text29                              599      599        7        8       0
-                text28                              3AE      3AE       2D        8       0
-                text27                                7        7       CB        8       0
-                text26                              589      589        8        8       0
-                text25                              54D      54D        D        8       0
-                text24                              5B3      5B3        4        8       0
-                text23                              203      203       61        8       0
-                text22                              5BE      5BE        3        8       0
-                text21                              4C7      4C7       22        8       0
-                text20                              565      565        B        8       0
-                text19                              581      581        8        8       0
-                text18                              16F      16F       94        8       0
-                text17                              42F      42F       29        8       0
-                text16                              2BF      2BF       48        8       0
-                text15                              570      570        9        8       0
-                text14                              504      504       19        8       0
-                text13                              406      406       29        8       0
-                text12                              5AF      5AF        4        8       0
-                text11                              458      458       26        8       0
-                text10                              307      307       3A        8       0
-                text9                               47E      47E       25        8       0
-                text8                               341      341       37        8       0
-                text7                               540      540        D        8       0
-                text6                               55A      55A        B        8       0
-                text5                               5BB      5BB        3        8       0
-                text4                               5A0      5A0        5        8       0
-                text3                               579      579        8        8       0
-                text2                               4A3      4A3       24        8       0
-                text1                               264      264       5B        8       0
-                maintext                             D2       D2       9D        8       0
+                text40                              457      457       36      8AE       0
+                text39                              2D3      2D3       15      5A6       0
+                text38                              301      301       1B      602       0
+                text37                              2C5      2C5        E      58A       0
+                text36                              256      256        5      4AC       0
+                text35                              23E      23E        3      47C       0
+                text34                              25B      25B        5      4B6       0
+                text33                              24A      24A        4      494       0
+                text32                              241      241        3      482       0
+                text31                              3FF      3FF       2B      7FE       0
+                text30                              26C      26C        8      4D8       0
+                text29                              265      265        7      4CA       0
+                text28                              42A      42A       2D      854       0
+                text27                              733      733       CB      E66       0
+                text26                              274      274        8      4E8       0
+                text25                              2AB      2AB        D      556       0
+                text24                              24E      24E        4      49C       0
+                text23                              5A1      5A1       61      B42       0
+                text22                              244      244        3      488       0
+                text21                              31C      31C       22      638       0
+                text20                              295      295        B      52A       0
+                text19                              27C      27C        8      4F8       0
+                text18                              602      602       94      C04       0
+                text17                              3AD      3AD       29      75A       0
+                text16                              4FE      4FE       48      9FC       0
+                text15                              28C      28C        9      518       0
+                text14                              2E8      2E8       19      5D0       0
+                text13                              3D6      3D6       29      7AC       0
+                text12                              252      252        4      4A4       0
+                text11                              387      387       26      70E       0
+                text10                              4C4      4C4       3A      988       0
+                text9                               362      362       25      6C4       0
+                text8                               48D      48D       37      91A       0
+                text7                               2B8      2B8        D      570       0
+                text6                               2A0      2A0        B      540       0
+                text5                               247      247        3      48E       0
+                text4                               260      260        5      4C0       0
+                text3                               284      284        8      508       0
+                text2                               33E      33E       24      67C       0
+                text1                               546      546       5B      A8C       0
+                maintext                            696      696       9D      D2C       0
                 cstackBANK0                          20       20       1D       20       1
                 cstackCOMMON                         70       70        E       70       1
 
@@ -82,50 +81,49 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   STACK          
 
         CLASS   CODE           
-                end_init                              4        4        1         0
-                cinit                                 5        5        2         0
-                reset_vec                             0        0        1         0
-                text40                              378      378       36         0
-                text39                              51D      51D       15         0
-                text38                              4E9      4E9       1B         0
-                text37                              532      532        E         0
-                text36                              5AA      5AA        5         0
-                text35                              5C4      5C4        3         0
-                text34                              5A5      5A5        5         0
-                text33                              5B7      5B7        4         0
-                text32                              5C1      5C1        3         0
-                text31                              3DB      3DB       2B         0
-                text30                              591      591        8         0
-                text29                              599      599        7         0
-                text28                              3AE      3AE       2D         0
-                text27                                7        7       CB         0
-                text26                              589      589        8         0
-                text25                              54D      54D        D         0
-                text24                              5B3      5B3        4         0
-                text23                              203      203       61         0
-                text22                              5BE      5BE        3         0
-                text21                              4C7      4C7       22         0
-                text20                              565      565        B         0
-                text19                              581      581        8         0
-                text18                              16F      16F       94         0
-                text17                              42F      42F       29         0
-                text16                              2BF      2BF       48         0
-                text15                              570      570        9         0
-                text14                              504      504       19         0
-                text13                              406      406       29         0
-                text12                              5AF      5AF        4         0
-                text11                              458      458       26         0
-                text10                              307      307       3A         0
-                text9                               47E      47E       25         0
-                text8                               341      341       37         0
-                text7                               540      540        D         0
-                text6                               55A      55A        B         0
-                text5                               5BB      5BB        3         0
-                text4                               5A0      5A0        5         0
-                text3                               579      579        8         0
-                text2                               4A3      4A3       24         0
-                text1                               264      264       5B         0
-                maintext                             D2       D2       9D         0
+                end_init                              0        0        1         0
+                cinit                               7FE      7FE        2         0
+                text40                              457      457       36         0
+                text39                              2D3      2D3       15         0
+                text38                              301      301       1B         0
+                text37                              2C5      2C5        E         0
+                text36                              256      256        5         0
+                text35                              23E      23E        3         0
+                text34                              25B      25B        5         0
+                text33                              24A      24A        4         0
+                text32                              241      241        3         0
+                text31                              3FF      3FF       2B         0
+                text30                              26C      26C        8         0
+                text29                              265      265        7         0
+                text28                              42A      42A       2D         0
+                text27                              733      733       CB         0
+                text26                              274      274        8         0
+                text25                              2AB      2AB        D         0
+                text24                              24E      24E        4         0
+                text23                              5A1      5A1       61         0
+                text22                              244      244        3         0
+                text21                              31C      31C       22         0
+                text20                              295      295        B         0
+                text19                              27C      27C        8         0
+                text18                              602      602       94         0
+                text17                              3AD      3AD       29         0
+                text16                              4FE      4FE       48         0
+                text15                              28C      28C        9         0
+                text14                              2E8      2E8       19         0
+                text13                              3D6      3D6       29         0
+                text12                              252      252        4         0
+                text11                              387      387       26         0
+                text10                              4C4      4C4       3A         0
+                text9                               362      362       25         0
+                text8                               48D      48D       37         0
+                text7                               2B8      2B8        D         0
+                text6                               2A0      2A0        B         0
+                text5                               247      247        3         0
+                text4                               260      260        5         0
+                text3                               284      284        8         0
+                text2                               33E      33E       24         0
+                text1                               546      546       5B         0
+                maintext                            696      696       9D         0
 
         CLASS   STRCODE        
 
@@ -164,9 +162,50 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000001  000001         0       0  CODE        2
-                intentry                       000004  0005C3  0005C7         8       0  CODE        2
                 cstackBANK0                    000020  00001D  00003D        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                text35                         00023E  000003  000241       47C       0  CODE        2
+                text32                         000241  000003  000244       482       0  CODE        2
+                text22                         000244  000003  000247       488       0  CODE        2
+                text5                          000247  000003  00024A       48E       0  CODE        2
+                text33                         00024A  000004  00024E       494       0  CODE        2
+                text24                         00024E  000004  000252       49C       0  CODE        2
+                text12                         000252  000004  000256       4A4       0  CODE        2
+                text36                         000256  000005  00025B       4AC       0  CODE        2
+                text34                         00025B  000005  000260       4B6       0  CODE        2
+                text4                          000260  000005  000265       4C0       0  CODE        2
+                text29                         000265  000007  00026C       4CA       0  CODE        2
+                text30                         00026C  000008  000274       4D8       0  CODE        2
+                text26                         000274  000008  00027C       4E8       0  CODE        2
+                text19                         00027C  000008  000284       4F8       0  CODE        2
+                text3                          000284  000008  00028C       508       0  CODE        2
+                text15                         00028C  000009  000295       518       0  CODE        2
+                text20                         000295  00000B  0002A0       52A       0  CODE        2
+                text6                          0002A0  00000B  0002AB       540       0  CODE        2
+                text25                         0002AB  00000D  0002B8       556       0  CODE        2
+                text7                          0002B8  00000D  0002C5       570       0  CODE        2
+                text37                         0002C5  00000E  0002D3       58A       0  CODE        2
+                text39                         0002D3  000015  0002E8       5A6       0  CODE        2
+                text14                         0002E8  000019  000301       5D0       0  CODE        2
+                text38                         000301  00001B  00031C       602       0  CODE        2
+                text21                         00031C  000022  00033E       638       0  CODE        2
+                text2                          00033E  000024  000362       67C       0  CODE        2
+                text9                          000362  000025  000387       6C4       0  CODE        2
+                text11                         000387  000026  0003AD       70E       0  CODE        2
+                text17                         0003AD  000029  0003D6       75A       0  CODE        2
+                text13                         0003D6  000029  0003FF       7AC       0  CODE        2
+                text31                         0003FF  00002B  00042A       7FE       0  CODE        2
+                text28                         00042A  00002D  000457       854       0  CODE        2
+                text40                         000457  000036  00048D       8AE       0  CODE        2
+                text8                          00048D  000037  0004C4       91A       0  CODE        2
+                text10                         0004C4  00003A  0004FE       988       0  CODE        2
+                text16                         0004FE  000048  000546       9FC       0  CODE        2
+                text1                          000546  00005B  0005A1       A8C       0  CODE        2
+                text23                         0005A1  000061  000602       B42       0  CODE        2
+                text18                         000602  000094  000696       C04       0  CODE        2
+                maintext                       000696  00009D  000733       D2C       0  CODE        2
+                text27                         000733  0000CB  0007FE       E66       0  CODE        2
+                cinit                          0007FE  000002  000800       FFC       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
@@ -174,23 +213,18 @@ UNUSED ADDRESS RANGES
         Name                Unused          Largest block    Delta
         BANK0            003D-006F             33           1
         BANK1            00A0-00BF             20           1
-        CODE             0001-0003              3           2
-                         05C7-07FF            239
-        CONST            0001-0003              3           2
-                         05C7-07FF            100
+        CODE             0001-023D            23D           2
+        CONST            0001-023D            100           2
         EEDATA           2100-21FF            100           2
-        ENTRY            0001-0003              3           2
-                         05C7-07FF            100
+        ENTRY            0001-023D            100           2
         IDLOC            2000-2003              4           2
         RAM              003D-006F             33           1
                          00A0-00BF             20
         SFR0             0000-001F             20           1
         SFR1             0080-009F             20           1
         STACK            003D-006F             33           1
-        STRCODE          0001-0003              3           2
-                         05C7-07FF            239
-        STRING           0001-0003              3           2
-                         05C7-07FF            100
+        STRCODE          0001-023D            23D           2
+        STRING           0001-023D            100           2
 
                                   Symbol Table
 
@@ -269,59 +303,59 @@ Trigger_Checksum@month                        cstackCOMMON 0072
 Trigger_Checksum@year                         cstackCOMMON 0073
 _ADCON0                                       (abs)        001F
 _ANSEL                                        (abs)        009F
-_Already_Triggered_This_Minute                text40       0378
-_BCD_To_Dec                                   text38       04E9
+_Already_Triggered_This_Minute                text40       0457
+_BCD_To_Dec                                   text38       0301
 _CMCON0                                       (abs)        0019
-_DS3231_ReadTime                              text27       0007
-_DS3231_ReadTime_With_Retry                   text21       04C7
-_Delay_Approx_1s                              text7        0540
-_Delay_Approx_250ms                           text25       054D
-_Delay_Approx_65ms                            text26       0589
-_Delay_Seconds                                text6        055A
+_DS3231_ReadTime                              text27       0733
+_DS3231_ReadTime_With_Retry                   text21       031C
+_Delay_Approx_1s                              text7        02B8
+_Delay_Approx_250ms                           text25       02AB
+_Delay_Approx_65ms                            text26       0274
+_Delay_Seconds                                text6        02A0
 _EEADR                                        (abs)        009B
 _EECON1bits                                   (abs)        009C
 _EECON2                                       (abs)        009D
 _EEDAT                                        (abs)        009A
-_EEPROM_Load_Last_Trigger                     text18       016F
-_EEPROM_ReadByte                              text20       0565
-_EEPROM_Save_Last_Trigger                     text16       02BF
-_EEPROM_WriteByte                             text17       042F
+_EEPROM_Load_Last_Trigger                     text18       0602
+_EEPROM_ReadByte                              text20       0295
+_EEPROM_Save_Last_Trigger                     text16       04FE
+_EEPROM_WriteByte                             text17       03AD
 _GPIO                                         (abs)        0005
 _GPIObits                                     (abs)        0005
-_I2C_Delay                                    text37       0532
-_I2C_Init                                     text24       05B3
-_I2C_ReadByte                                 text31       03DB
-_I2C_Start                                    text30       0591
-_I2C_Stop                                     text29       0599
-_I2C_WriteByte                                text28       03AE
+_I2C_Delay                                    text37       02C5
+_I2C_Init                                     text24       024E
+_I2C_ReadByte                                 text31       03FF
+_I2C_Start                                    text30       026C
+_I2C_Stop                                     text29       0265
+_I2C_WriteByte                                text28       042A
 _INTCONbits                                   (abs)        000B
-_Init_Device                                  text14       0504
-_Is_Allowed_Day_And_Hour                      text11       0458
-_Is_Hour_Window_Enabled                       text13       0406
-_Is_Scheduled_Relay_Time                      text8        0341
-_Is_Sunday_Enabled                            text12       05AF
-_Is_Test_Mode_Enabled                         text3        0579
+_Init_Device                                  text14       02E8
+_Is_Allowed_Day_And_Hour                      text11       0387
+_Is_Hour_Window_Enabled                       text13       03D6
+_Is_Scheduled_Relay_Time                      text8        048D
+_Is_Sunday_Enabled                            text12       0252
+_Is_Test_Mode_Enabled                         text3        0284
 _OPTION_REGbits                               (abs)        0081
 _OSCCONbits                                   (abs)        008F
-_RTC_Time_Is_Valid                            text23       0203
-_Relay_Off                                    text22       05BE
-_Relay_On                                     text5        05BB
-_Relay_Reset_Pulse                            text4        05A0
-_Relay_Test_Cycle                             text1        0264
-_SCL_Low                                      text36       05AA
-_SCL_Release                                  text35       05C4
-_SDA_Low                                      text34       05A5
-_SDA_Read                                     text33       05B7
-_SDA_Release                                  text32       05C1
+_RTC_Time_Is_Valid                            text23       05A1
+_Relay_Off                                    text22       0244
+_Relay_On                                     text5        0247
+_Relay_Reset_Pulse                            text4        0260
+_Relay_Test_Cycle                             text1        0546
+_SCL_Low                                      text36       0256
+_SCL_Release                                  text35       023E
+_SDA_Low                                      text34       025B
+_SDA_Read                                     text33       024A
+_SDA_Release                                  text32       0241
 _TMR0                                         (abs)        0001
 _TRISIObits                                   (abs)        0085
-_Test_Delay_Seconds_Abortable                 text2        04A3
-_Timer0_Init_For_Delay                        text15       0570
-_Trigger_Checksum                             text19       0581
+_Test_Delay_Seconds_Abortable                 text2        033E
+_Timer0_Init_For_Delay                        text15       028C
+_Trigger_Checksum                             text19       027C
 __Habs1                                       abs1         0000
 __Hbank0                                      bank0        0000
 __Hbank1                                      bank1        0000
-__Hcinit                                      cinit        0007
+__Hcinit                                      cinit        0800
 __Hclrtext                                    clrtext      0000
 __Hcode                                       code         0000
 __Hcommon                                     common       0000
@@ -329,17 +363,17 @@ __Hconfig                                     config       2008
 __HcstackBANK0                                cstackBANK0  0000
 __HcstackCOMMON                               cstackCOMMON 0000
 __Heeprom_data                                eeprom_data  0000
-__Hend_init                                   end_init     0005
+__Hend_init                                   end_init     0001
 __Hfunctab                                    functab      0000
-__Hinit                                       init         0004
-__Hintentry                                   intentry     0004
+__Hinit                                       init         0000
+__Hintentry                                   intentry     0000
 __Hmaintext                                   maintext     0000
 __Hpowerup                                    powerup      0000
 __Hram                                        ram          0000
-__Hreset_vec                                  reset_vec    0001
+__Hreset_vec                                  reset_vec    0000
 __Hsfr0                                       sfr0         0000
 __Hsfr1                                       sfr1         0000
-__Hspace_0                                    (abs)        05C7
+__Hspace_0                                    (abs)        0800
 __Hspace_1                                    (abs)        007E
 __Hspace_2                                    (abs)        0000
 __Hspace_3                                    (abs)        0000
@@ -350,7 +384,7 @@ __Htext                                       text         0000
 __Labs1                                       abs1         0000
 __Lbank0                                      bank0        0000
 __Lbank1                                      bank1        0000
-__Lcinit                                      cinit        0005
+__Lcinit                                      cinit        07FE
 __Lclrtext                                    clrtext      0000
 __Lcode                                       code         0000
 __Lcommon                                     common       0000
@@ -358,10 +392,10 @@ __Lconfig                                     config       0000
 __LcstackBANK0                                cstackBANK0  0000
 __LcstackCOMMON                               cstackCOMMON 0000
 __Leeprom_data                                eeprom_data  0000
-__Lend_init                                   end_init     0004
+__Lend_init                                   end_init     0000
 __Lfunctab                                    functab      0000
-__Linit                                       init         0004
-__Lintentry                                   intentry     0004
+__Linit                                       init         0000
+__Lintentry                                   intentry     0000
 __Lmaintext                                   maintext     0000
 __Lpowerup                                    powerup      0000
 __Lram                                        ram          0000
@@ -376,113 +410,113 @@ __Lspace_4                                    (abs)        0000
 __Lstack                                      stack        0000
 __Lstrings                                    strings      0000
 __Ltext                                       text         0000
-__S0                                          (abs)        05C7
+__S0                                          (abs)        0800
 __S1                                          (abs)        007E
 __S2                                          (abs)        0000
 __S3                                          (abs)        0000
-___bmul                                       text39       051D
+___bmul                                       text39       02D3
 ___bmul@multiplicand                          cstackCOMMON 0070
 ___bmul@multiplier                            cstackCOMMON 0073
 ___bmul@product                               cstackCOMMON 0072
 ___int_sp                                     stack        0000
 ___latbits                                    (abs)        0000
-___lwmod                                      text10       0307
+___lwmod                                      text10       04C4
 ___lwmod@counter                              cstackCOMMON 0075
 ___lwmod@dividend                             cstackCOMMON 0072
 ___lwmod@divisor                              cstackCOMMON 0070
 ___sp                                         stack        0000
 ___stackhi                                    (abs)        0000
 ___stacklo                                    (abs)        0000
-___wmul                                       text9        047E
+___wmul                                       text9        0362
 ___wmul@multiplicand                          cstackCOMMON 0072
 ___wmul@multiplier                            cstackCOMMON 0070
 ___wmul@product                               cstackCOMMON 0074
-__end_of_Already_Triggered_This_Minute        text40       03AE
-__end_of_BCD_To_Dec                           text38       0504
-__end_of_DS3231_ReadTime                      text27       00D2
-__end_of_DS3231_ReadTime_With_Retry           text21       04E9
-__end_of_Delay_Approx_1s                      text7        054D
-__end_of_Delay_Approx_250ms                   text25       055A
-__end_of_Delay_Approx_65ms                    text26       0591
-__end_of_Delay_Seconds                        text6        0565
-__end_of_EEPROM_Load_Last_Trigger             text18       0203
-__end_of_EEPROM_ReadByte                      text20       0570
-__end_of_EEPROM_Save_Last_Trigger             text16       0307
-__end_of_EEPROM_WriteByte                     text17       0458
-__end_of_I2C_Delay                            text37       0540
-__end_of_I2C_Init                             text24       05B7
-__end_of_I2C_ReadByte                         text31       0406
-__end_of_I2C_Start                            text30       0599
-__end_of_I2C_Stop                             text29       05A0
-__end_of_I2C_WriteByte                        text28       03DB
-__end_of_Init_Device                          text14       051D
-__end_of_Is_Allowed_Day_And_Hour              text11       047E
-__end_of_Is_Hour_Window_Enabled               text13       042F
-__end_of_Is_Scheduled_Relay_Time              text8        0378
-__end_of_Is_Sunday_Enabled                    text12       05B3
-__end_of_Is_Test_Mode_Enabled                 text3        0581
-__end_of_RTC_Time_Is_Valid                    text23       0264
-__end_of_Relay_Off                            text22       05C1
-__end_of_Relay_On                             text5        05BE
-__end_of_Relay_Reset_Pulse                    text4        05A5
-__end_of_Relay_Test_Cycle                     text1        02BF
-__end_of_SCL_Low                              text36       05AF
-__end_of_SCL_Release                          text35       05C7
-__end_of_SDA_Low                              text34       05AA
-__end_of_SDA_Read                             text33       05BB
-__end_of_SDA_Release                          text32       05C4
-__end_of_Test_Delay_Seconds_Abortable         text2        04C7
-__end_of_Timer0_Init_For_Delay                text15       0579
-__end_of_Trigger_Checksum                     text19       0589
-__end_of___bmul                               text39       0532
-__end_of___lwmod                              text10       0341
-__end_of___wmul                               text9        04A3
-__end_of__initialization                      cinit        0005
-__end_of_main                                 maintext     016F
-__initialization                              cinit        0005
+__end_of_Already_Triggered_This_Minute        text40       048D
+__end_of_BCD_To_Dec                           text38       031C
+__end_of_DS3231_ReadTime                      text27       07FE
+__end_of_DS3231_ReadTime_With_Retry           text21       033E
+__end_of_Delay_Approx_1s                      text7        02C5
+__end_of_Delay_Approx_250ms                   text25       02B8
+__end_of_Delay_Approx_65ms                    text26       027C
+__end_of_Delay_Seconds                        text6        02AB
+__end_of_EEPROM_Load_Last_Trigger             text18       0696
+__end_of_EEPROM_ReadByte                      text20       02A0
+__end_of_EEPROM_Save_Last_Trigger             text16       0546
+__end_of_EEPROM_WriteByte                     text17       03D6
+__end_of_I2C_Delay                            text37       02D3
+__end_of_I2C_Init                             text24       0252
+__end_of_I2C_ReadByte                         text31       042A
+__end_of_I2C_Start                            text30       0274
+__end_of_I2C_Stop                             text29       026C
+__end_of_I2C_WriteByte                        text28       0457
+__end_of_Init_Device                          text14       0301
+__end_of_Is_Allowed_Day_And_Hour              text11       03AD
+__end_of_Is_Hour_Window_Enabled               text13       03FF
+__end_of_Is_Scheduled_Relay_Time              text8        04C4
+__end_of_Is_Sunday_Enabled                    text12       0256
+__end_of_Is_Test_Mode_Enabled                 text3        028C
+__end_of_RTC_Time_Is_Valid                    text23       0602
+__end_of_Relay_Off                            text22       0247
+__end_of_Relay_On                             text5        024A
+__end_of_Relay_Reset_Pulse                    text4        0265
+__end_of_Relay_Test_Cycle                     text1        05A1
+__end_of_SCL_Low                              text36       025B
+__end_of_SCL_Release                          text35       0241
+__end_of_SDA_Low                              text34       0260
+__end_of_SDA_Read                             text33       024E
+__end_of_SDA_Release                          text32       0244
+__end_of_Test_Delay_Seconds_Abortable         text2        0362
+__end_of_Timer0_Init_For_Delay                text15       0295
+__end_of_Trigger_Checksum                     text19       0284
+__end_of___bmul                               text39       02E8
+__end_of___lwmod                              text10       04FE
+__end_of___wmul                               text9        0387
+__end_of__initialization                      cinit        07FE
+__end_of_main                                 maintext     0733
+__initialization                              cinit        07FE
 __pcstackBANK0                                cstackBANK0  0020
 __pcstackCOMMON                               cstackCOMMON 0070
-__pmaintext                                   maintext     00D2
-__ptext1                                      text1        0264
-__ptext10                                     text10       0307
-__ptext11                                     text11       0458
-__ptext12                                     text12       05AF
-__ptext13                                     text13       0406
-__ptext14                                     text14       0504
-__ptext15                                     text15       0570
-__ptext16                                     text16       02BF
-__ptext17                                     text17       042F
-__ptext18                                     text18       016F
-__ptext19                                     text19       0581
-__ptext2                                      text2        04A3
-__ptext20                                     text20       0565
-__ptext21                                     text21       04C7
-__ptext22                                     text22       05BE
-__ptext23                                     text23       0203
-__ptext24                                     text24       05B3
-__ptext25                                     text25       054D
-__ptext26                                     text26       0589
-__ptext27                                     text27       0007
-__ptext28                                     text28       03AE
-__ptext29                                     text29       0599
-__ptext3                                      text3        0579
-__ptext30                                     text30       0591
-__ptext31                                     text31       03DB
-__ptext32                                     text32       05C1
-__ptext33                                     text33       05B7
-__ptext34                                     text34       05A5
-__ptext35                                     text35       05C4
-__ptext36                                     text36       05AA
-__ptext37                                     text37       0532
-__ptext38                                     text38       04E9
-__ptext39                                     text39       051D
-__ptext4                                      text4        05A0
-__ptext40                                     text40       0378
-__ptext5                                      text5        05BB
-__ptext6                                      text6        055A
-__ptext7                                      text7        0540
-__ptext8                                      text8        0341
-__ptext9                                      text9        047E
+__pmaintext                                   maintext     0696
+__ptext1                                      text1        0546
+__ptext10                                     text10       04C4
+__ptext11                                     text11       0387
+__ptext12                                     text12       0252
+__ptext13                                     text13       03D6
+__ptext14                                     text14       02E8
+__ptext15                                     text15       028C
+__ptext16                                     text16       04FE
+__ptext17                                     text17       03AD
+__ptext18                                     text18       0602
+__ptext19                                     text19       027C
+__ptext2                                      text2        033E
+__ptext20                                     text20       0295
+__ptext21                                     text21       031C
+__ptext22                                     text22       0244
+__ptext23                                     text23       05A1
+__ptext24                                     text24       024E
+__ptext25                                     text25       02AB
+__ptext26                                     text26       0274
+__ptext27                                     text27       0733
+__ptext28                                     text28       042A
+__ptext29                                     text29       0265
+__ptext3                                      text3        0284
+__ptext30                                     text30       026C
+__ptext31                                     text31       03FF
+__ptext32                                     text32       0241
+__ptext33                                     text33       024A
+__ptext34                                     text34       025B
+__ptext35                                     text35       023E
+__ptext36                                     text36       0256
+__ptext37                                     text37       02C5
+__ptext38                                     text38       0301
+__ptext39                                     text39       02D3
+__ptext4                                      text4        0260
+__ptext40                                     text40       0457
+__ptext5                                      text5        0247
+__ptext6                                      text6        02A0
+__ptext7                                      text7        02B8
+__ptext8                                      text8        048D
+__ptext9                                      text9        0362
 __size_of_Already_Triggered_This_Minute       (abs)        0000
 __size_of_BCD_To_Dec                          (abs)        0000
 __size_of_DS3231_ReadTime                     (abs)        0000
@@ -524,9 +558,9 @@ __size_of___bmul                              (abs)        0000
 __size_of___lwmod                             (abs)        0000
 __size_of___wmul                              (abs)        0000
 __size_of_main                                (abs)        0000
-_main                                         maintext     00D2
+_main                                         maintext     0696
 btemp                                         (abs)        007E
-end_of_initialization                         cinit        0005
+end_of_initialization                         cinit        07FE
 intlevel0                                     functab      0000
 intlevel1                                     functab      0000
 intlevel2                                     functab      0000
@@ -541,8 +575,8 @@ main@last_trigger_month                       cstackBANK0  0034
 main@last_trigger_year                        cstackBANK0  0035
 main@now                                      cstackBANK0  0036
 reset_vec                                     reset_vec    0000
-start                                         init         0004
-start_initialization                          cinit        0005
+start                                         init         0000
+start_initialization                          cinit        07FE
 wtemp0                                        (abs)        007E
 
 
@@ -550,7 +584,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 1127 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 1139 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -598,7 +632,7 @@ Total ram usage:       19 bytes
 
  *************** function _Relay_Test_Cycle *****************
  Defined at:
-		line 275 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 287 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -635,7 +669,7 @@ Total ram usage:        5 bytes
 
  *************** function _Test_Delay_Seconds_Abortable *****************
  Defined at:
-		line 251 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 263 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   seconds         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -669,7 +703,7 @@ Total ram usage:        4 bytes
 
  *************** function _Is_Test_Mode_Enabled *****************
  Defined at:
-		line 1012 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 1024 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -700,7 +734,7 @@ Total ram usage:        0 bytes
 
  *************** function _Relay_Reset_Pulse *****************
  Defined at:
-		line 238 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 250 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -732,7 +766,7 @@ Total ram usage:        0 bytes
 
  *************** function _Relay_On *****************
  Defined at:
-		line 228 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 240 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -762,7 +796,7 @@ Total ram usage:        0 bytes
 
  *************** function _Delay_Seconds *****************
  Defined at:
-		line 384 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 396 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   seconds         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -794,7 +828,7 @@ Total ram usage:        1 bytes
 
  *************** function _Delay_Approx_1s *****************
  Defined at:
-		line 374 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 386 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -825,7 +859,7 @@ Total ram usage:        2 bytes
 
  *************** function _Is_Scheduled_Relay_Time *****************
  Defined at:
-		line 1034 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 1046 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   now             1    wreg     PTR const struct .
 		 -> main@now(7), 
@@ -920,7 +954,7 @@ Total ram usage:        6 bytes
 
  *************** function _Is_Allowed_Day_And_Hour *****************
  Defined at:
-		line 1017 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 1029 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   now             1    wreg     PTR const struct .
 		 -> main@now(7), 
@@ -953,7 +987,7 @@ Total ram usage:        2 bytes
 
  *************** function _Is_Sunday_Enabled *****************
  Defined at:
-		line 974 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 986 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -982,7 +1016,7 @@ Total ram usage:        0 bytes
 
  *************** function _Is_Hour_Window_Enabled *****************
  Defined at:
-		line 979 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 991 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   hour            1    wreg     unsigned char 
   minute          1    0[COMMON] unsigned char 
@@ -1013,7 +1047,7 @@ Total ram usage:        3 bytes
 
  *************** function _Init_Device *****************
  Defined at:
-		line 1091 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 1103 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1046,7 +1080,7 @@ Total ram usage:        0 bytes
 
  *************** function _Timer0_Init_For_Delay *****************
  Defined at:
-		line 340 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 352 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1075,7 +1109,7 @@ Total ram usage:        0 bytes
 
  *************** function _EEPROM_Save_Last_Trigger *****************
  Defined at:
-		line 728 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 740 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   hour            1    wreg     unsigned char 
   minute          1    5[COMMON] unsigned char 
@@ -1111,7 +1145,7 @@ Total ram usage:       11 bytes
 
  *************** function _EEPROM_WriteByte *****************
  Defined at:
-		line 616 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 628 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   address         1    wreg     unsigned char 
   value           1    1[COMMON] unsigned char 
@@ -1143,7 +1177,7 @@ Total ram usage:        3 bytes
 
  *************** function _EEPROM_Load_Last_Trigger *****************
  Defined at:
-		line 664 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 676 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   last_hour       1    wreg     PTR unsigned char 
 		 -> main@last_trigger_hour(1), 
@@ -1190,7 +1224,7 @@ Total ram usage:       15 bytes
 
  *************** function _Trigger_Checksum *****************
  Defined at:
-		line 655 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 667 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   hour            1    wreg     unsigned char 
   minute          1    0[COMMON] unsigned char 
@@ -1224,7 +1258,7 @@ Total ram usage:        5 bytes
 
  *************** function _EEPROM_ReadByte *****************
  Defined at:
-		line 603 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 615 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   address         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1254,7 +1288,7 @@ Total ram usage:        1 bytes
 
  *************** function _DS3231_ReadTime_With_Retry *****************
  Defined at:
-		line 879 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 891 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   time            1    wreg     PTR struct .
 		 -> main@now(7), 
@@ -1291,7 +1325,7 @@ Total ram usage:        3 bytes
 
  *************** function _Relay_Off *****************
  Defined at:
-		line 233 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 245 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1326,7 +1360,7 @@ Total ram usage:        0 bytes
 
  *************** function _RTC_Time_Is_Valid *****************
  Defined at:
-		line 839 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 851 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   time            1    wreg     PTR const struct .
 		 -> main@now(7), 
@@ -1357,7 +1391,7 @@ Total ram usage:        1 bytes
 
  *************** function _I2C_Init *****************
  Defined at:
-		line 455 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 467 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1391,7 +1425,7 @@ Total ram usage:        0 bytes
 
  *************** function _Delay_Approx_250ms *****************
  Defined at:
-		line 364 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 376 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1423,7 +1457,7 @@ Total ram usage:        2 bytes
 
  *************** function _Delay_Approx_65ms *****************
  Defined at:
-		line 353 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 365 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1454,7 +1488,7 @@ Total ram usage:        0 bytes
 
  *************** function _DS3231_ReadTime *****************
  Defined at:
-		line 756 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 768 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   time            1    wreg     PTR struct .
 		 -> main@now(7), 
@@ -1499,7 +1533,7 @@ Total ram usage:       11 bytes
 
  *************** function _I2C_WriteByte *****************
  Defined at:
-		line 487 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 499 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   data            1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1536,7 +1570,7 @@ Total ram usage:        4 bytes
 
  *************** function _I2C_Stop *****************
  Defined at:
-		line 475 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 487 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1569,7 +1603,7 @@ Total ram usage:        0 bytes
 
  *************** function _I2C_Start *****************
  Defined at:
-		line 462 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 474 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1603,7 +1637,7 @@ Total ram usage:        0 bytes
 
  *************** function _I2C_ReadByte *****************
  Defined at:
-		line 528 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 540 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   send_ack        1    wreg     _Bool 
  Auto vars:     Size  Location     Type
@@ -1640,7 +1674,7 @@ Total ram usage:        4 bytes
 
  *************** function _SDA_Release *****************
  Defined at:
-		line 428 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 440 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1674,7 +1708,7 @@ Total ram usage:        0 bytes
 
  *************** function _SDA_Read *****************
  Defined at:
-		line 444 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 456 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1704,7 +1738,7 @@ Total ram usage:        0 bytes
 
  *************** function _SDA_Low *****************
  Defined at:
-		line 422 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 434 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1736,7 +1770,7 @@ Total ram usage:        0 bytes
 
  *************** function _SCL_Release *****************
  Defined at:
-		line 439 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 451 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1770,7 +1804,7 @@ Total ram usage:        0 bytes
 
  *************** function _SCL_Low *****************
  Defined at:
-		line 433 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 445 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1801,7 +1835,7 @@ Total ram usage:        0 bytes
 
  *************** function _I2C_Delay *****************
  Defined at:
-		line 409 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 421 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1834,7 +1868,7 @@ Total ram usage:        2 bytes
 
  *************** function _BCD_To_Dec *****************
  Defined at:
-		line 576 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 588 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   bcd             1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1897,7 +1931,7 @@ Total ram usage:        4 bytes
 
  *************** function _Already_Triggered_This_Minute *****************
  Defined at:
-		line 1053 in file "EAS_ITank_RTC_Interface_40min_Updated.c"
+		line 1065 in file "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
  Parameters:    Size  Location     Type
   now             1    wreg     PTR const struct .
 		 -> main@now(7), 
@@ -1936,64 +1970,64 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-		___lwmod       		CODE           	0307	0000	58
+		___lwmod       		CODE           	04C4	0000	58
 
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c estimated size: 58
 
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
-		___wmul        		CODE           	047E	0000	37
+		___wmul        		CODE           	0362	0000	37
 
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c estimated size: 37
 
 shared
-		__initialization		CODE           	0005	0000	1
+		__initialization		CODE           	07FE	0000	1
 
 shared estimated size: 1
 
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-		___bmul        		CODE           	051D	0000	21
+		___bmul        		CODE           	02D3	0000	21
 
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c estimated size: 21
 
-EAS_ITank_RTC_Interface_40min_Updated.c
-		_SCL_Release   		CODE           	05C4	0000	3
-		_Test_Delay_Seconds_Abortable		CODE           	04A3	0000	36
-		_Relay_Reset_Pulse		CODE           	05A0	0000	5
-		_DS3231_ReadTime_With_Retry		CODE           	04C7	0000	34
-		_main          		CODE           	00D2	0000	157
-		_BCD_To_Dec    		CODE           	04E9	0000	27
-		_Delay_Approx_65ms		CODE           	0589	0000	8
-		_EEPROM_WriteByte		CODE           	042F	0000	41
-		_Is_Allowed_Day_And_Hour		CODE           	0458	0000	38
-		_Delay_Approx_250ms		CODE           	054D	0000	13
-		_Is_Sunday_Enabled		CODE           	05AF	0000	4
-		_Relay_Test_Cycle		CODE           	0264	0000	91
-		_SDA_Low       		CODE           	05A5	0000	5
-		_I2C_Stop      		CODE           	0599	0000	7
-		_I2C_WriteByte 		CODE           	03AE	0000	45
-		_RTC_Time_Is_Valid		CODE           	0203	0000	97
-		_SDA_Release   		CODE           	05C1	0000	3
-		_DS3231_ReadTime		CODE           	0007	0000	203
-		_I2C_Init      		CODE           	05B3	0000	4
-		_I2C_ReadByte  		CODE           	03DB	0000	43
-		_Delay_Approx_1s		CODE           	0540	0000	13
-		_Delay_Seconds 		CODE           	055A	0000	11
-		_I2C_Delay     		CODE           	0532	0000	14
-		_Is_Test_Mode_Enabled		CODE           	0579	0000	8
-		_EEPROM_ReadByte		CODE           	0565	0000	11
-		_EEPROM_Load_Last_Trigger		CODE           	016F	0000	148
-		_EEPROM_Save_Last_Trigger		CODE           	02BF	0000	72
-		_Is_Hour_Window_Enabled		CODE           	0406	0000	41
-		_Timer0_Init_For_Delay		CODE           	0570	0000	9
-		_Trigger_Checksum		CODE           	0581	0000	8
-		_I2C_Start     		CODE           	0591	0000	8
-		_Already_Triggered_This_Minute		CODE           	0378	0000	54
-		_Is_Scheduled_Relay_Time		CODE           	0341	0000	55
-		_Relay_On      		CODE           	05BB	0000	3
-		_Relay_Off     		CODE           	05BE	0000	3
-		_Init_Device   		CODE           	0504	0000	25
-		_SCL_Low       		CODE           	05AA	0000	5
-		_SDA_Read      		CODE           	05B7	0000	4
+I-Tank_Auto-Flush_RTC_40mins-30secs.c
+		_SCL_Release   		CODE           	023E	0000	3
+		_Test_Delay_Seconds_Abortable		CODE           	033E	0000	36
+		_Relay_Reset_Pulse		CODE           	0260	0000	5
+		_DS3231_ReadTime_With_Retry		CODE           	031C	0000	34
+		_main          		CODE           	0696	0000	157
+		_BCD_To_Dec    		CODE           	0301	0000	27
+		_Delay_Approx_65ms		CODE           	0274	0000	8
+		_EEPROM_WriteByte		CODE           	03AD	0000	41
+		_Is_Allowed_Day_And_Hour		CODE           	0387	0000	38
+		_Delay_Approx_250ms		CODE           	02AB	0000	13
+		_Is_Sunday_Enabled		CODE           	0252	0000	4
+		_Relay_Test_Cycle		CODE           	0546	0000	91
+		_SDA_Low       		CODE           	025B	0000	5
+		_I2C_Stop      		CODE           	0265	0000	7
+		_I2C_WriteByte 		CODE           	042A	0000	45
+		_RTC_Time_Is_Valid		CODE           	05A1	0000	97
+		_SDA_Release   		CODE           	0241	0000	3
+		_DS3231_ReadTime		CODE           	0733	0000	203
+		_I2C_Init      		CODE           	024E	0000	4
+		_I2C_ReadByte  		CODE           	03FF	0000	43
+		_Delay_Approx_1s		CODE           	02B8	0000	13
+		_Delay_Seconds 		CODE           	02A0	0000	11
+		_I2C_Delay     		CODE           	02C5	0000	14
+		_Is_Test_Mode_Enabled		CODE           	0284	0000	8
+		_EEPROM_ReadByte		CODE           	0295	0000	11
+		_EEPROM_Load_Last_Trigger		CODE           	0602	0000	148
+		_EEPROM_Save_Last_Trigger		CODE           	04FE	0000	72
+		_Is_Hour_Window_Enabled		CODE           	03D6	0000	41
+		_Timer0_Init_For_Delay		CODE           	028C	0000	9
+		_Trigger_Checksum		CODE           	027C	0000	8
+		_I2C_Start     		CODE           	026C	0000	8
+		_Already_Triggered_This_Minute		CODE           	0457	0000	54
+		_Is_Scheduled_Relay_Time		CODE           	048D	0000	55
+		_Relay_On      		CODE           	0247	0000	3
+		_Relay_Off     		CODE           	0244	0000	3
+		_Init_Device   		CODE           	02E8	0000	25
+		_SCL_Low       		CODE           	0256	0000	5
+		_SDA_Read      		CODE           	024A	0000	4
 
-EAS_ITank_RTC_Interface_40min_Updated.c estimated size: 1356
+I-Tank_Auto-Flush_RTC_40mins-30secs.c estimated size: 1356
 

@@ -1,4 +1,4 @@
-# 1 "EAS_ITank_RTC_Interface_40min_Updated.c"
+# 1 "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "EAS_ITank_RTC_Interface_40min_Updated.c" 2
-# 11 "EAS_ITank_RTC_Interface_40min_Updated.c"
+# 1 "I-Tank_Auto-Flush_RTC_40mins-30secs.c" 2
+# 23 "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
 #pragma config FOSC = INTOSCIO
 #pragma config WDTE = OFF
 #pragma config PWRTE = ON
@@ -1383,14 +1383,14 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 2 3
-# 19 "EAS_ITank_RTC_Interface_40min_Updated.c" 2
+# 31 "I-Tank_Auto-Flush_RTC_40mins-30secs.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "EAS_ITank_RTC_Interface_40min_Updated.c" 2
+# 32 "I-Tank_Auto-Flush_RTC_40mins-30secs.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdbool.h" 1 3
-# 21 "EAS_ITank_RTC_Interface_40min_Updated.c" 2
-# 137 "EAS_ITank_RTC_Interface_40min_Updated.c"
+# 33 "I-Tank_Auto-Flush_RTC_40mins-30secs.c" 2
+# 149 "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
 typedef struct
 {
     uint8_t second;
@@ -1840,7 +1840,7 @@ static uint8_t BCD_To_Dec(uint8_t bcd)
 
     return (uint8_t)((tens * 10) + ones);
 }
-# 603 "EAS_ITank_RTC_Interface_40min_Updated.c"
+# 615 "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
 static uint8_t EEPROM_ReadByte(uint8_t address)
 {
     while (EECON1bits.WR != 0)
@@ -2140,7 +2140,7 @@ static _Bool DS3231_ReadTime_With_Retry(RTC_Time *time)
 
     return 0;
 }
-# 974 "EAS_ITank_RTC_Interface_40min_Updated.c"
+# 986 "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
 static _Bool Is_Sunday_Enabled(void)
 {
     return (GPIObits.GP4 == 1);
@@ -2313,7 +2313,7 @@ void main(void)
                                    &last_trigger_date,
                                    &last_trigger_month,
                                    &last_trigger_year);
-# 1169 "EAS_ITank_RTC_Interface_40min_Updated.c"
+# 1181 "I-Tank_Auto-Flush_RTC_40mins-30secs.c"
     Delay_Seconds(1);
 
     while (!DS3231_ReadTime_With_Retry(&now))

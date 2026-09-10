@@ -306,8 +306,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;EAS_ITank_RTC_Interface_40min_Updated.c: 240:     Relay_On();
 [e ( _Relay_On ..  ]
 "241
-[; ;EAS_ITank_RTC_Interface_40min_Updated.c: 241:     Delay_Seconds(10);
-[e ( _Delay_Seconds (1 -> -> 10 `i `uc ]
+[; ;EAS_ITank_RTC_Interface_40min_Updated.c: 241:     Delay_Seconds(30);
+[e ( _Delay_Seconds (1 -> -> 30 `i `uc ]
 "242
 [; ;EAS_ITank_RTC_Interface_40min_Updated.c: 242:     Relay_Off();
 [e ( _Relay_Off ..  ]

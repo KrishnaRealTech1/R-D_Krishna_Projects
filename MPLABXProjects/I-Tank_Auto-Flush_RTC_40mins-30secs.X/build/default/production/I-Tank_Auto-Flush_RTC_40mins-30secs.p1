@@ -1,0 +1,2612 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"172 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 172:     struct {
+[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S6 . GP0 GP1 GP2 GP3 GP4 GP5 ]
+"171
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 171: typedef union {
+[u S5 `S6 1 ]
+[n S5 . . ]
+"181
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 181: extern volatile GPIObits_t GPIObits __attribute__((address(0x005)));
+[v _GPIObits `VS5 ~T0 @X0 0 e@5 ]
+"166 I-Tank_Auto-Flush_RTC_40mins-30secs.c
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 166: static void Delay_Seconds(uint8_t seconds);
+[v _Delay_Seconds `(v ~T0 @X0 0 sf1`uc ]
+"225
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 225: static _Bool Is_Test_Mode_Enabled(void);
+[v _Is_Test_Mode_Enabled `(a ~T0 @X0 0 sf ]
+"163
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 163: static void Delay_Approx_65ms(void);
+[v _Delay_Approx_65ms `(v ~T0 @X0 0 sf ]
+"164
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 164: static void Delay_Approx_250ms(void);
+[v _Delay_Approx_250ms `(v ~T0 @X0 0 sf ]
+"887 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 887:     struct {
+[s S38 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . PS PSA T0SE T0CS INTEDG nGPPU ]
+"895
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 895:     struct {
+[s S39 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S39 . PS0 PS1 PS2 ]
+"886
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 886: typedef union {
+[u S37 `S38 1 `S39 1 ]
+[n S37 . . . ]
+"901
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 901: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x081)));
+[v _OPTION_REGbits `VS37 ~T0 @X0 0 e@129 ]
+"242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 242:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . GPIF INTF T0IF GPIE INTE T0IE PEIE GIE ]
+"252
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 252:     struct {
+[s S11 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S11 . . TMR0IF . TMR0IE ]
+"241
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 241: typedef union {
+[u S9 `S10 1 `S11 1 ]
+[n S9 . . . ]
+"259
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 259: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS9 ~T0 @X0 0 e@11 ]
+"59
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"185 I-Tank_Auto-Flush_RTC_40mins-30secs.c
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 185: static void I2C_Init(void);
+[v _I2C_Init `(v ~T0 @X0 0 sf ]
+"957 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 957:     struct {
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . TRISIO0 TRISIO1 TRISIO2 TRISIO3 TRISIO4 TRISIO5 ]
+"956
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 956: typedef union {
+[u S40 `S41 1 ]
+[n S40 . . ]
+"966
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 966: extern volatile TRISIObits_t TRISIObits __attribute__((address(0x085)));
+[v _TRISIObits `VS40 ~T0 @X0 0 e@133 ]
+"1674
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1674:     struct {
+[s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S73 . RD WR WREN WRERR ]
+"1673
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1673: typedef union {
+[u S72 `S73 1 ]
+[n S72 . . ]
+"1681
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1681: extern volatile EECON1bits_t EECON1bits __attribute__((address(0x09C)));
+[v _EECON1bits `VS72 ~T0 @X0 0 e@156 ]
+"1661
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1661: extern volatile unsigned char EEADR __attribute__((address(0x09B)));
+[v _EEADR `Vuc ~T0 @X0 0 e@155 ]
+"1623
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1623: extern volatile unsigned char EEDAT __attribute__((address(0x09A)));
+[v _EEDAT `Vuc ~T0 @X0 0 e@154 ]
+"1706
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1706: extern volatile unsigned char EECON2 __attribute__((address(0x09D)));
+[v _EECON2 `Vuc ~T0 @X0 0 e@157 ]
+"150 I-Tank_Auto-Flush_RTC_40mins-30secs.c
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 150: {
+[s S77 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S77 . second minute hour day_of_week date month year ]
+"1720 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1720: extern volatile unsigned char ANSEL __attribute__((address(0x09F)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@159 ]
+"791
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 791: extern volatile unsigned char ADCON0 __attribute__((address(0x01F)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+"699
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 699: extern volatile unsigned char CMCON0 __attribute__((address(0x019)));
+[v _CMCON0 `Vuc ~T0 @X0 0 e@25 ]
+"1117
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1117:     struct {
+[s S48 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S48 . SCS LTS HTS OSTS IRCF ]
+"1124
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1124:     struct {
+[s S49 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S49 . . IRCF0 IRCF1 IRCF2 ]
+"1116
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1116: typedef union {
+[u S47 `S48 1 `S49 1 ]
+[n S47 . . . ]
+"1131
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1131: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
+[v _OSCCONbits `VS47 ~T0 @X0 0 e@143 ]
+"166
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 166: extern volatile unsigned char GPIO __attribute__((address(0x005)));
+[v _GPIO `Vuc ~T0 @X0 0 e@5 ]
+[p mainexit ]
+"23 I-Tank_Auto-Flush_RTC_40mins-30secs.c
+[p x FOSC    =  INTOSCIO   ]
+"24
+[p x WDTE    =  OFF        ]
+"25
+[p x PWRTE  =  ON         ]
+"26
+[p x MCLRE  =  OFF        ]
+"27
+[p x CP        =  OFF        ]
+"28
+[p x CPD      =  OFF        ]
+"29
+[p x BOREN  =  ON         ]
+"54 C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 168: __asm("GPIO equ 05h");
+[; <" GPIO equ 05h ;# ">
+"218
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 218: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"238
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 238: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"316
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 316: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"387
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 387: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"394
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 394: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"401
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 401: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"408
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 408: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"485
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 485: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"492
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 492: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"563
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 563: __asm("CCPR1 equ 013h");
+[; <" CCPR1 equ 013h ;# ">
+"570
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 570: __asm("CCPR1L equ 013h");
+[; <" CCPR1L equ 013h ;# ">
+"577
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 577: __asm("CCPR1H equ 014h");
+[; <" CCPR1H equ 014h ;# ">
+"584
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 584: __asm("CCP1CON equ 015h");
+[; <" CCP1CON equ 015h ;# ">
+"648
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 648: __asm("WDTCON equ 018h");
+[; <" WDTCON equ 018h ;# ">
+"701
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 701: __asm("CMCON0 equ 019h");
+[; <" CMCON0 equ 019h ;# ">
+"760
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 760: __asm("CMCON1 equ 01Ah");
+[; <" CMCON1 equ 01Ah ;# ">
+"786
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 786: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"793
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 793: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"883
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 883: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"953
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 953: __asm("TRISIO equ 085h");
+[; <" TRISIO equ 085h ;# ">
+"1003
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1003: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1074
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1074: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1113
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1113: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1178
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1178: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1230
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1230: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1237
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1237: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"1242
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1242: __asm("WPUA equ 095h");
+[; <" WPUA equ 095h ;# ">
+"1391
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1391: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"1396
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1396: __asm("IOCA equ 096h");
+[; <" IOCA equ 096h ;# ">
+"1565
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1565: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1625
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1625: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1630
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1630: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1663
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1663: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1670
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1670: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1708
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1708: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+"1715
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1715: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"1722
+[; ;C:/Users/RealTech/.mchp_packs/Microchip/PIC10-12Fxxx_DFP/1.7.178/xc8\pic\include\proc\pic12f683.h: 1722: __asm("ANSEL equ 09Fh");
+[; <" ANSEL equ 09Fh ;# ">
+"240 I-Tank_Auto-Flush_RTC_40mins-30secs.c
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 240: static void Relay_On(void)
+[v _Relay_On `(v ~T0 @X0 1 sf ]
+"241
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 241: {
+{
+[e :U _Relay_On ]
+[f ]
+"242
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 242:     GPIObits.GP0 = 1;
+[e = . . _GPIObits 0 0 -> -> 1 `i `uc ]
+"243
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 243: }
+[e :UE 78 ]
+}
+"245
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 245: static void Relay_Off(void)
+[v _Relay_Off `(v ~T0 @X0 1 sf ]
+"246
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 246: {
+{
+[e :U _Relay_Off ]
+[f ]
+"247
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 247:     GPIObits.GP0 = 0;
+[e = . . _GPIObits 0 0 -> -> 0 `i `uc ]
+"248
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 248: }
+[e :UE 79 ]
+}
+"250
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 250: static void Relay_Reset_Pulse(void)
+[v _Relay_Reset_Pulse `(v ~T0 @X0 1 sf ]
+"251
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 251: {
+{
+[e :U _Relay_Reset_Pulse ]
+[f ]
+"252
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 252:     Relay_On();
+[e ( _Relay_On ..  ]
+"253
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 253:     Delay_Seconds(30);
+[e ( _Delay_Seconds (1 -> -> 30 `i `uc ]
+"254
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 254:     Relay_Off();
+[e ( _Relay_Off ..  ]
+"255
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 255: }
+[e :UE 80 ]
+}
+"263
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 263: static _Bool Test_Delay_Seconds_Abortable(uint8_t seconds)
+[v _Test_Delay_Seconds_Abortable `(a ~T0 @X0 1 sf1`uc ]
+"264
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 264: {
+{
+[e :U _Test_Delay_Seconds_Abortable ]
+"263
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 263: static _Bool Test_Delay_Seconds_Abortable(uint8_t seconds)
+[v _seconds `uc ~T0 @X0 1 r1 ]
+"264
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 264: {
+[f ]
+"265
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 265:     uint8_t sec;
+[v _sec `uc ~T0 @X0 1 a ]
+"266
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 266:     uint8_t slice;
+[v _slice `uc ~T0 @X0 1 a ]
+"268
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 268:     for (sec = 0; sec < seconds; sec++)
+{
+[e = _sec -> -> 0 `i `uc ]
+[e $U 85  ]
+[e :U 82 ]
+"269
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 269:     {
+{
+"272
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 272:         for (slice = 0; slice < 16; slice++)
+{
+[e = _slice -> -> 0 `i `uc ]
+[e $ < -> _slice `i -> 16 `i 86  ]
+[e $U 87  ]
+[e :U 86 ]
+"273
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 273:         {
+{
+"274
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 274:             if (!Is_Test_Mode_Enabled())
+[e $ ! ! != -> ( _Is_Test_Mode_Enabled ..  `i -> 0 `i 89  ]
+"275
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 275:             {
+{
+"276
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 276:                 Relay_Off();
+[e ( _Relay_Off ..  ]
+"277
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 277:                 return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 81  ]
+"278
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 278:             }
+}
+[e :U 89 ]
+"280
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 280:             Delay_Approx_65ms();
+[e ( _Delay_Approx_65ms ..  ]
+"281
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 281:         }
+}
+[e ++ _slice -> -> 1 `i `uc ]
+[e $ < -> _slice `i -> 16 `i 86  ]
+[e :U 87 ]
+}
+"282
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 282:     }
+}
+[e ++ _sec -> -> 1 `i `uc ]
+[e :U 85 ]
+[e $ < -> _sec `i -> _seconds `i 82  ]
+[e :U 83 ]
+}
+"284
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 284:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 81  ]
+"285
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 285: }
+[e :UE 81 ]
+}
+"287
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 287: static void Relay_Test_Cycle(void)
+[v _Relay_Test_Cycle `(v ~T0 @X0 1 sf ]
+"288
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 288: {
+{
+[e :U _Relay_Test_Cycle ]
+[f ]
+"289
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 289:     _Bool dip1_on;
+[v _dip1_on `a ~T0 @X0 1 a ]
+"290
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 290:     _Bool dip2_on;
+[v _dip2_on `a ~T0 @X0 1 a ]
+"291
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 291:     uint8_t off_seconds;
+[v _off_seconds `uc ~T0 @X0 1 a ]
+"292
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 292:     uint8_t on_seconds;
+[v _on_seconds `uc ~T0 @X0 1 a ]
+"295
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 295:     if (!Is_Test_Mode_Enabled())
+[e $ ! ! != -> ( _Is_Test_Mode_Enabled ..  `i -> 0 `i 91  ]
+"296
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 296:     {
+{
+"297
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 297:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"298
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 298:         return;
+[e $UE 90  ]
+"299
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 299:     }
+}
+[e :U 91 ]
+"301
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 301:     dip1_on = (GPIObits.GP4 == 1);
+[e = _dip1_on -> -> == -> . . _GPIObits 0 4 `i -> 1 `i `i `a ]
+"302
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 302:     dip2_on = (GPIObits.GP5 == 1);
+[e = _dip2_on -> -> == -> . . _GPIObits 0 5 `i -> 1 `i `i `a ]
+"305
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 305:     off_seconds = 0;
+[e = _off_seconds -> -> 0 `i `uc ]
+"306
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 306:     on_seconds = 0;
+[e = _on_seconds -> -> 0 `i `uc ]
+"308
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 308:     if ((!dip1_on) && (!dip2_on))
+[e $ ! && ! != -> _dip1_on `i -> 0 `i ! != -> _dip2_on `i -> 0 `i 92  ]
+"309
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 309:     {
+{
+"310
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 310:         off_seconds = 30;
+[e = _off_seconds -> -> 30 `i `uc ]
+"311
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 311:         on_seconds = 10;
+[e = _on_seconds -> -> 10 `i `uc ]
+"312
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 312:     }
+}
+[e $U 93  ]
+"313
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 313:     else if ((!dip1_on) && dip2_on)
+[e :U 92 ]
+[e $ ! && ! != -> _dip1_on `i -> 0 `i != -> _dip2_on `i -> 0 `i 94  ]
+"314
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 314:     {
+{
+"315
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 315:         off_seconds = 10;
+[e = _off_seconds -> -> 10 `i `uc ]
+"316
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 316:         on_seconds = 5;
+[e = _on_seconds -> -> 5 `i `uc ]
+"317
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 317:     }
+}
+[e $U 95  ]
+"318
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 318:     else if (dip1_on && (!dip2_on))
+[e :U 94 ]
+[e $ ! && != -> _dip1_on `i -> 0 `i ! != -> _dip2_on `i -> 0 `i 96  ]
+"319
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 319:     {
+{
+"320
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 320:         off_seconds = 60;
+[e = _off_seconds -> -> 60 `i `uc ]
+"321
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 321:         on_seconds = 15;
+[e = _on_seconds -> -> 15 `i `uc ]
+"322
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 322:     }
+}
+[e $U 97  ]
+"323
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 323:     else
+[e :U 96 ]
+"324
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 324:     {
+{
+"326
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 326:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"327
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 327:         Delay_Approx_250ms();
+[e ( _Delay_Approx_250ms ..  ]
+"328
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 328:         return;
+[e $UE 90  ]
+"329
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 329:     }
+}
+[e :U 97 ]
+[e :U 95 ]
+[e :U 93 ]
+"332
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 332:     Relay_Off();
+[e ( _Relay_Off ..  ]
+"333
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 333:     if (!Test_Delay_Seconds_Abortable(off_seconds))
+[e $ ! ! != -> ( _Test_Delay_Seconds_Abortable (1 _off_seconds `i -> 0 `i 98  ]
+"334
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 334:     {
+{
+"335
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 335:         return;
+[e $UE 90  ]
+"336
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 336:     }
+}
+[e :U 98 ]
+"339
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 339:     Relay_On();
+[e ( _Relay_On ..  ]
+"340
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 340:     if (!Test_Delay_Seconds_Abortable(on_seconds))
+[e $ ! ! != -> ( _Test_Delay_Seconds_Abortable (1 _on_seconds `i -> 0 `i 99  ]
+"341
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 341:     {
+{
+"342
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 342:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"343
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 343:         return;
+[e $UE 90  ]
+"344
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 344:     }
+}
+[e :U 99 ]
+"346
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 346:     Relay_Off();
+[e ( _Relay_Off ..  ]
+"347
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 347: }
+[e :UE 90 ]
+}
+"352
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 352: static void Timer0_Init_For_Delay(void)
+[v _Timer0_Init_For_Delay `(v ~T0 @X0 1 sf ]
+"353
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 353: {
+{
+[e :U _Timer0_Init_For_Delay ]
+[f ]
+"354
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 354:     OPTION_REGbits.T0CS = 0;
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+"355
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 355:     OPTION_REGbits.PSA = 0;
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+"357
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 357:     OPTION_REGbits.PS2 = 1;
+[e = . . _OPTION_REGbits 1 2 -> -> 1 `i `uc ]
+"358
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 358:     OPTION_REGbits.PS1 = 1;
+[e = . . _OPTION_REGbits 1 1 -> -> 1 `i `uc ]
+"359
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 359:     OPTION_REGbits.PS0 = 1;
+[e = . . _OPTION_REGbits 1 0 -> -> 1 `i `uc ]
+"361
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 361:     INTCONbits.T0IE = 0;
+[e = . . _INTCONbits 0 5 -> -> 0 `i `uc ]
+"362
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 362:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"363
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 363: }
+[e :UE 100 ]
+}
+"365
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 365: static void Delay_Approx_65ms(void)
+[v _Delay_Approx_65ms `(v ~T0 @X0 1 sf ]
+"366
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 366: {
+{
+[e :U _Delay_Approx_65ms ]
+[f ]
+"367
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 367:     TMR0 = 0;
+[e = _TMR0 -> -> 0 `i `uc ]
+"368
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 368:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"370
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 370:     while (INTCONbits.T0IF == 0)
+[e $U 102  ]
+[e :U 103 ]
+"371
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 371:     {
+{
+"373
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 373:     }
+}
+[e :U 102 ]
+"370
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 370:     while (INTCONbits.T0IF == 0)
+[e $ == -> . . _INTCONbits 0 2 `i -> 0 `i 103  ]
+[e :U 104 ]
+"374
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 374: }
+[e :UE 101 ]
+}
+"376
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 376: static void Delay_Approx_250ms(void)
+[v _Delay_Approx_250ms `(v ~T0 @X0 1 sf ]
+"377
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 377: {
+{
+[e :U _Delay_Approx_250ms ]
+[f ]
+"378
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 378:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"380
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 380:     for (i = 0; i < 4; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 4 `i 106  ]
+[e $U 107  ]
+[e :U 106 ]
+"381
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 381:     {
+{
+"382
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 382:         Delay_Approx_65ms();
+[e ( _Delay_Approx_65ms ..  ]
+"383
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 383:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 106  ]
+[e :U 107 ]
+}
+"384
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 384: }
+[e :UE 105 ]
+}
+"386
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 386: static void Delay_Approx_1s(void)
+[v _Delay_Approx_1s `(v ~T0 @X0 1 sf ]
+"387
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 387: {
+{
+[e :U _Delay_Approx_1s ]
+[f ]
+"388
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 388:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"390
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 390:     for (i = 0; i < 16; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 16 `i 110  ]
+[e $U 111  ]
+[e :U 110 ]
+"391
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 391:     {
+{
+"392
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 392:         Delay_Approx_65ms();
+[e ( _Delay_Approx_65ms ..  ]
+"393
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 393:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 16 `i 110  ]
+[e :U 111 ]
+}
+"394
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 394: }
+[e :UE 109 ]
+}
+"396
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 396: static void Delay_Seconds(uint8_t seconds)
+[v _Delay_Seconds `(v ~T0 @X0 1 sf1`uc ]
+"397
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 397: {
+{
+[e :U _Delay_Seconds ]
+"396
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 396: static void Delay_Seconds(uint8_t seconds)
+[v _seconds `uc ~T0 @X0 1 r1 ]
+"397
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 397: {
+[f ]
+"398
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 398:     while (seconds > 0)
+[e $U 114  ]
+[e :U 115 ]
+"399
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 399:     {
+{
+"400
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 400:         Delay_Approx_1s();
+[e ( _Delay_Approx_1s ..  ]
+"401
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 401:         seconds--;
+[e -- _seconds -> -> 1 `i `uc ]
+"402
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 402:     }
+}
+[e :U 114 ]
+"398
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 398:     while (seconds > 0)
+[e $ > -> _seconds `i -> 0 `i 115  ]
+[e :U 116 ]
+"403
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 403: }
+[e :UE 113 ]
+}
+"408
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 408: static void Safe_Fault_Idle_Forever(void)
+[v _Safe_Fault_Idle_Forever `(v ~T0 @X0 1 sf ]
+"409
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 409: {
+{
+[e :U _Safe_Fault_Idle_Forever ]
+[f ]
+"410
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 410:     while (1)
+[e :U 119 ]
+"411
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 411:     {
+{
+"412
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 412:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"413
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 413:         I2C_Init();
+[e ( _I2C_Init ..  ]
+"414
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 414:         Delay_Seconds(1);
+[e ( _Delay_Seconds (1 -> -> 1 `i `uc ]
+"415
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 415:     }
+}
+[e :U 118 ]
+[e $U 119  ]
+[e :U 120 ]
+"416
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 416: }
+[e :UE 117 ]
+}
+"421
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 421: static void I2C_Delay(void)
+[v _I2C_Delay `(v ~T0 @X0 1 sf ]
+"422
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 422: {
+{
+[e :U _I2C_Delay ]
+[f ]
+"423
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 423:     volatile uint8_t i;
+[v _i `Vuc ~T0 @X0 1 a ]
+"425
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 425:     for (i = 0; i < 50; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 50 `i 122  ]
+[e $U 123  ]
+[e :U 122 ]
+"426
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 426:     {
+{
+"428
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 428:     }
+}
+[e ++ _i -> -> 1 `i `Vuc ]
+[e $ < -> _i `i -> 50 `i 122  ]
+[e :U 123 ]
+}
+"429
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 429: }
+[e :UE 121 ]
+}
+"434
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 434: static void SDA_Low(void)
+[v _SDA_Low `(v ~T0 @X0 1 sf ]
+"435
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 435: {
+{
+[e :U _SDA_Low ]
+[f ]
+"436
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 436:     GPIObits.GP1 = 0;
+[e = . . _GPIObits 0 1 -> -> 0 `i `uc ]
+"437
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 437:     TRISIObits.TRISIO1 = 0;
+[e = . . _TRISIObits 0 1 -> -> 0 `i `uc ]
+"438
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 438: }
+[e :UE 125 ]
+}
+"440
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 440: static void SDA_Release(void)
+[v _SDA_Release `(v ~T0 @X0 1 sf ]
+"441
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 441: {
+{
+[e :U _SDA_Release ]
+[f ]
+"442
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 442:     TRISIObits.TRISIO1 = 1;
+[e = . . _TRISIObits 0 1 -> -> 1 `i `uc ]
+"443
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 443: }
+[e :UE 126 ]
+}
+"445
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 445: static void SCL_Low(void)
+[v _SCL_Low `(v ~T0 @X0 1 sf ]
+"446
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 446: {
+{
+[e :U _SCL_Low ]
+[f ]
+"447
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 447:     GPIObits.GP2 = 0;
+[e = . . _GPIObits 0 2 -> -> 0 `i `uc ]
+"448
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 448:     TRISIObits.TRISIO2 = 0;
+[e = . . _TRISIObits 0 2 -> -> 0 `i `uc ]
+"449
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 449: }
+[e :UE 127 ]
+}
+"451
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 451: static void SCL_Release(void)
+[v _SCL_Release `(v ~T0 @X0 1 sf ]
+"452
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 452: {
+{
+[e :U _SCL_Release ]
+[f ]
+"453
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 453:     TRISIObits.TRISIO2 = 1;
+[e = . . _TRISIObits 0 2 -> -> 1 `i `uc ]
+"454
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 454: }
+[e :UE 128 ]
+}
+"456
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 456: static uint8_t SDA_Read(void)
+[v _SDA_Read `(uc ~T0 @X0 1 sf ]
+"457
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 457: {
+{
+[e :U _SDA_Read ]
+[f ]
+"458
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 458:     return GPIObits.GP1;
+[e ) . . _GPIObits 0 1 ]
+[e $UE 129  ]
+"459
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 459: }
+[e :UE 129 ]
+}
+"467
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 467: static void I2C_Init(void)
+[v _I2C_Init `(v ~T0 @X0 1 sf ]
+"468
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 468: {
+{
+[e :U _I2C_Init ]
+[f ]
+"469
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 469:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"470
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 470:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"471
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 471:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"472
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 472: }
+[e :UE 130 ]
+}
+"474
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 474: static void I2C_Start(void)
+[v _I2C_Start `(v ~T0 @X0 1 sf ]
+"475
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 475: {
+{
+[e :U _I2C_Start ]
+[f ]
+"476
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 476:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"477
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 477:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"478
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 478:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"480
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 480:     SDA_Low();
+[e ( _SDA_Low ..  ]
+"481
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 481:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"483
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 483:     SCL_Low();
+[e ( _SCL_Low ..  ]
+"484
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 484:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"485
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 485: }
+[e :UE 131 ]
+}
+"487
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 487: static void I2C_Stop(void)
+[v _I2C_Stop `(v ~T0 @X0 1 sf ]
+"488
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 488: {
+{
+[e :U _I2C_Stop ]
+[f ]
+"489
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 489:     SDA_Low();
+[e ( _SDA_Low ..  ]
+"490
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 490:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"492
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 492:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"493
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 493:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"495
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 495:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"496
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 496:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"497
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 497: }
+[e :UE 132 ]
+}
+"499
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 499: static _Bool I2C_WriteByte(uint8_t data)
+[v _I2C_WriteByte `(a ~T0 @X0 1 sf1`uc ]
+"500
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 500: {
+{
+[e :U _I2C_WriteByte ]
+"499
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 499: static _Bool I2C_WriteByte(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"500
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 500: {
+[f ]
+"501
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 501:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"502
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 502:     _Bool ack;
+[v _ack `a ~T0 @X0 1 a ]
+"504
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 504:     for (i = 0; i < 8; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 134  ]
+[e $U 135  ]
+[e :U 134 ]
+"505
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 505:     {
+{
+"506
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 506:         if ((data & 0x80) != 0)
+[e $ ! != & -> _data `i -> 128 `i -> 0 `i 137  ]
+"507
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 507:         {
+{
+"508
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 508:             SDA_Release();
+[e ( _SDA_Release ..  ]
+"509
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 509:         }
+}
+[e $U 138  ]
+"510
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 510:         else
+[e :U 137 ]
+"511
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 511:         {
+{
+"512
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 512:             SDA_Low();
+[e ( _SDA_Low ..  ]
+"513
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 513:         }
+}
+[e :U 138 ]
+"515
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 515:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"517
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 517:         SCL_Release();
+[e ( _SCL_Release ..  ]
+"518
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 518:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"520
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 520:         SCL_Low();
+[e ( _SCL_Low ..  ]
+"521
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 521:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"523
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 523:         data <<= 1;
+[e =<< _data -> -> 1 `i `uc ]
+"524
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 524:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 134  ]
+[e :U 135 ]
+}
+"526
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 526:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"527
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 527:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"529
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 529:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"530
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 530:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"532
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 532:     ack = (SDA_Read() == 0);
+[e = _ack -> -> == -> ( _SDA_Read ..  `i -> 0 `i `i `a ]
+"534
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 534:     SCL_Low();
+[e ( _SCL_Low ..  ]
+"535
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 535:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"537
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 537:     return ack;
+[e ) _ack ]
+[e $UE 133  ]
+"538
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 538: }
+[e :UE 133 ]
+}
+"540
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 540: static uint8_t I2C_ReadByte(_Bool send_ack)
+[v _I2C_ReadByte `(uc ~T0 @X0 1 sf1`a ]
+"541
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 541: {
+{
+[e :U _I2C_ReadByte ]
+"540
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 540: static uint8_t I2C_ReadByte(_Bool send_ack)
+[v _send_ack `a ~T0 @X0 1 r1 ]
+"541
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 541: {
+[f ]
+"542
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 542:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"543
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 543:     uint8_t data = 0;
+[v _data `uc ~T0 @X0 1 a ]
+[e = _data -> -> 0 `i `uc ]
+"545
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 545:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"547
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 547:     for (i = 0; i < 8; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 140  ]
+[e $U 141  ]
+[e :U 140 ]
+"548
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 548:     {
+{
+"549
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 549:         data <<= 1;
+[e =<< _data -> -> 1 `i `uc ]
+"551
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 551:         SCL_Release();
+[e ( _SCL_Release ..  ]
+"552
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 552:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"554
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 554:         if (SDA_Read() != 0)
+[e $ ! != -> ( _SDA_Read ..  `i -> 0 `i 143  ]
+"555
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 555:         {
+{
+"556
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 556:             data |= 1;
+[e =| _data -> -> 1 `i `uc ]
+"557
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 557:         }
+}
+[e :U 143 ]
+"559
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 559:         SCL_Low();
+[e ( _SCL_Low ..  ]
+"560
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 560:         I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"561
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 561:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 140  ]
+[e :U 141 ]
+}
+"563
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 563:     if (send_ack)
+[e $ ! != -> _send_ack `i -> 0 `i 144  ]
+"564
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 564:     {
+{
+"565
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 565:         SDA_Low();
+[e ( _SDA_Low ..  ]
+"566
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 566:     }
+}
+[e $U 145  ]
+"567
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 567:     else
+[e :U 144 ]
+"568
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 568:     {
+{
+"569
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 569:         SDA_Release();
+[e ( _SDA_Release ..  ]
+"570
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 570:     }
+}
+[e :U 145 ]
+"572
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 572:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"574
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 574:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"575
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 575:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"577
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 577:     SCL_Low();
+[e ( _SCL_Low ..  ]
+"578
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 578:     I2C_Delay();
+[e ( _I2C_Delay ..  ]
+"580
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 580:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"582
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 582:     return data;
+[e ) _data ]
+[e $UE 139  ]
+"583
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 583: }
+[e :UE 139 ]
+}
+"588
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 588: static uint8_t BCD_To_Dec(uint8_t bcd)
+[v _BCD_To_Dec `(uc ~T0 @X0 1 sf1`uc ]
+"589
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 589: {
+{
+[e :U _BCD_To_Dec ]
+"588
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 588: static uint8_t BCD_To_Dec(uint8_t bcd)
+[v _bcd `uc ~T0 @X0 1 r1 ]
+"589
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 589: {
+[f ]
+"590
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 590:     uint8_t tens;
+[v _tens `uc ~T0 @X0 1 a ]
+"591
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 591:     uint8_t ones;
+[v _ones `uc ~T0 @X0 1 a ]
+"593
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 593:     tens = (uint8_t)((bcd >> 4) & 0x0F);
+[e = _tens -> & >> -> _bcd `i -> 4 `i -> 15 `i `uc ]
+"594
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 594:     ones = (uint8_t)(bcd & 0x0F);
+[e = _ones -> & -> _bcd `i -> 15 `i `uc ]
+"596
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 596:     return (uint8_t)((tens * 10) + ones);
+[e ) -> + * -> _tens `i -> 10 `i -> _ones `i `uc ]
+[e $UE 146  ]
+"597
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 597: }
+[e :UE 146 ]
+}
+"615
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 615: static uint8_t EEPROM_ReadByte(uint8_t address)
+[v _EEPROM_ReadByte `(uc ~T0 @X0 1 sf1`uc ]
+"616
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 616: {
+{
+[e :U _EEPROM_ReadByte ]
+"615
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 615: static uint8_t EEPROM_ReadByte(uint8_t address)
+[v _address `uc ~T0 @X0 1 r1 ]
+"616
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 616: {
+[f ]
+"617
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 617:     while (EECON1bits.WR != 0)
+[e $U 148  ]
+[e :U 149 ]
+"618
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 618:     {
+{
+"620
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 620:     }
+}
+[e :U 148 ]
+"617
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 617:     while (EECON1bits.WR != 0)
+[e $ != -> . . _EECON1bits 0 1 `i -> 0 `i 149  ]
+[e :U 150 ]
+"622
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 622:     EEADR = address;
+[e = _EEADR _address ]
+"623
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 623:     EECON1bits.RD = 1;
+[e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
+"625
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 625:     return EEDAT;
+[e ) _EEDAT ]
+[e $UE 147  ]
+"626
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 626: }
+[e :UE 147 ]
+}
+"628
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 628: static void EEPROM_WriteByte(uint8_t address, uint8_t value)
+[v _EEPROM_WriteByte `(v ~T0 @X0 1 sf2`uc`uc ]
+"629
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 629: {
+{
+[e :U _EEPROM_WriteByte ]
+"628
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 628: static void EEPROM_WriteByte(uint8_t address, uint8_t value)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _value `uc ~T0 @X0 1 r2 ]
+"629
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 629: {
+[f ]
+"630
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 630:     _Bool gie_was_enabled;
+[v _gie_was_enabled `a ~T0 @X0 1 a ]
+"632
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 632:     if (EEPROM_ReadByte(address) == value)
+[e $ ! == -> ( _EEPROM_ReadByte (1 _address `i -> _value `i 152  ]
+"633
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 633:     {
+{
+"634
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 634:         return;
+[e $UE 151  ]
+"635
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 635:     }
+}
+[e :U 152 ]
+"637
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 637:     while (EECON1bits.WR != 0)
+[e $U 153  ]
+[e :U 154 ]
+"638
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 638:     {
+{
+"640
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 640:     }
+}
+[e :U 153 ]
+"637
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 637:     while (EECON1bits.WR != 0)
+[e $ != -> . . _EECON1bits 0 1 `i -> 0 `i 154  ]
+[e :U 155 ]
+"642
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 642:     EEADR = address;
+[e = _EEADR _address ]
+"643
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 643:     EEDAT = value;
+[e = _EEDAT _value ]
+"645
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 645:     EECON1bits.WREN = 1;
+[e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
+"647
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 647:     gie_was_enabled = (INTCONbits.GIE != 0);
+[e = _gie_was_enabled -> -> != -> . . _INTCONbits 0 7 `i -> 0 `i `i `a ]
+"648
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 648:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"650
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 650:     EECON2 = 0x55;
+[e = _EECON2 -> -> 85 `i `uc ]
+"651
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 651:     EECON2 = 0xAA;
+[e = _EECON2 -> -> 170 `i `uc ]
+"652
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 652:     EECON1bits.WR = 1;
+[e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
+"654
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 654:     while (EECON1bits.WR != 0)
+[e $U 156  ]
+[e :U 157 ]
+"655
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 655:     {
+{
+"657
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 657:     }
+}
+[e :U 156 ]
+"654
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 654:     while (EECON1bits.WR != 0)
+[e $ != -> . . _EECON1bits 0 1 `i -> 0 `i 157  ]
+[e :U 158 ]
+"659
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 659:     EECON1bits.WREN = 0;
+[e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
+"661
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 661:     if (gie_was_enabled)
+[e $ ! != -> _gie_was_enabled `i -> 0 `i 159  ]
+"662
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 662:     {
+{
+"663
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 663:         INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"664
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 664:     }
+}
+[e :U 159 ]
+"665
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 665: }
+[e :UE 151 ]
+}
+"667
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 667: static uint8_t Trigger_Checksum(uint8_t hour,
+[v _Trigger_Checksum `(uc ~T0 @X0 1 sf5`uc`uc`uc`uc`uc ]
+"672
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 672: {
+{
+[e :U _Trigger_Checksum ]
+"667
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 667: static uint8_t Trigger_Checksum(uint8_t hour,
+[v _hour `uc ~T0 @X0 1 r1 ]
+"668
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 668:                                 uint8_t minute,
+[v _minute `uc ~T0 @X0 1 r2 ]
+"669
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 669:                                 uint8_t date,
+[v _date `uc ~T0 @X0 1 r3 ]
+"670
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 670:                                 uint8_t month,
+[v _month `uc ~T0 @X0 1 r4 ]
+"671
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 671:                                 uint8_t year)
+[v _year `uc ~T0 @X0 1 r5 ]
+"672
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 672: {
+[f ]
+"673
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 673:     return (uint8_t)(hour ^ minute ^ date ^ month ^ year ^ 0x5A);
+[e ) -> ^ ^ ^ ^ ^ -> _hour `i -> _minute `i -> _date `i -> _month `i -> _year `i -> 90 `i `uc ]
+[e $UE 160  ]
+"674
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 674: }
+[e :UE 160 ]
+}
+"676
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 676: static _Bool EEPROM_Load_Last_Trigger(uint8_t *last_hour,
+[v _EEPROM_Load_Last_Trigger `(a ~T0 @X0 1 sf5`*uc`*uc`*uc`*uc`*uc ]
+"681
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 681: {
+{
+[e :U _EEPROM_Load_Last_Trigger ]
+"676
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 676: static _Bool EEPROM_Load_Last_Trigger(uint8_t *last_hour,
+[v _last_hour `*uc ~T0 @X0 1 r1 ]
+"677
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 677:                                       uint8_t *last_minute,
+[v _last_minute `*uc ~T0 @X0 1 r2 ]
+"678
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 678:                                       uint8_t *last_date,
+[v _last_date `*uc ~T0 @X0 1 r3 ]
+"679
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 679:                                       uint8_t *last_month,
+[v _last_month `*uc ~T0 @X0 1 r4 ]
+"680
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 680:                                       uint8_t *last_year)
+[v _last_year `*uc ~T0 @X0 1 r5 ]
+"681
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 681: {
+[f ]
+"682
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 682:     uint8_t hour;
+[v _hour `uc ~T0 @X0 1 a ]
+"683
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 683:     uint8_t minute;
+[v _minute `uc ~T0 @X0 1 a ]
+"684
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 684:     uint8_t date;
+[v _date `uc ~T0 @X0 1 a ]
+"685
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 685:     uint8_t month;
+[v _month `uc ~T0 @X0 1 a ]
+"686
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 686:     uint8_t year;
+[v _year `uc ~T0 @X0 1 a ]
+"687
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 687:     uint8_t checksum;
+[v _checksum `uc ~T0 @X0 1 a ]
+"689
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 689:     if (EEPROM_ReadByte(0) != 0xA5)
+[e $ ! != -> ( _EEPROM_ReadByte (1 -> -> 0 `i `uc `i -> 165 `i 162  ]
+"690
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 690:     {
+{
+"691
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 691:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"692
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 692:     }
+}
+[e :U 162 ]
+"694
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 694:     hour = EEPROM_ReadByte(1);
+[e = _hour ( _EEPROM_ReadByte (1 -> -> 1 `i `uc ]
+"695
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 695:     minute = EEPROM_ReadByte(2);
+[e = _minute ( _EEPROM_ReadByte (1 -> -> 2 `i `uc ]
+"696
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 696:     date = EEPROM_ReadByte(3);
+[e = _date ( _EEPROM_ReadByte (1 -> -> 3 `i `uc ]
+"697
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 697:     month = EEPROM_ReadByte(4);
+[e = _month ( _EEPROM_ReadByte (1 -> -> 4 `i `uc ]
+"698
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 698:     year = EEPROM_ReadByte(5);
+[e = _year ( _EEPROM_ReadByte (1 -> -> 5 `i `uc ]
+"699
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 699:     checksum = EEPROM_ReadByte(6);
+[e = _checksum ( _EEPROM_ReadByte (1 -> -> 6 `i `uc ]
+"701
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 701:     if (checksum != Trigger_Checksum(hour, minute, date, month, year))
+[e $ ! != -> _checksum `i -> ( _Trigger_Checksum (4 , , , , _hour _minute _date _month _year `i 163  ]
+"702
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 702:     {
+{
+"703
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 703:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"704
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 704:     }
+}
+[e :U 163 ]
+"706
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 706:     if (hour > 23)
+[e $ ! > -> _hour `i -> 23 `i 164  ]
+"707
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 707:     {
+{
+"708
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 708:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"709
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 709:     }
+}
+[e :U 164 ]
+"711
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 711:     if (minute > 59)
+[e $ ! > -> _minute `i -> 59 `i 165  ]
+"712
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 712:     {
+{
+"713
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 713:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"714
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 714:     }
+}
+[e :U 165 ]
+"716
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 716:     if ((date < 1) || (date > 31))
+[e $ ! || < -> _date `i -> 1 `i > -> _date `i -> 31 `i 166  ]
+"717
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 717:     {
+{
+"718
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 718:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"719
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 719:     }
+}
+[e :U 166 ]
+"721
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 721:     if ((month < 1) || (month > 12))
+[e $ ! || < -> _month `i -> 1 `i > -> _month `i -> 12 `i 167  ]
+"722
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 722:     {
+{
+"723
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 723:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"724
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 724:     }
+}
+[e :U 167 ]
+"726
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 726:     if (year > 99)
+[e $ ! > -> _year `i -> 99 `i 168  ]
+"727
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 727:     {
+{
+"728
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 728:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 161  ]
+"729
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 729:     }
+}
+[e :U 168 ]
+"731
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 731:     *last_hour = hour;
+[e = *U _last_hour _hour ]
+"732
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 732:     *last_minute = minute;
+[e = *U _last_minute _minute ]
+"733
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 733:     *last_date = date;
+[e = *U _last_date _date ]
+"734
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 734:     *last_month = month;
+[e = *U _last_month _month ]
+"735
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 735:     *last_year = year;
+[e = *U _last_year _year ]
+"737
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 737:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 161  ]
+"738
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 738: }
+[e :UE 161 ]
+}
+"740
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 740: static void EEPROM_Save_Last_Trigger(uint8_t hour,
+[v _EEPROM_Save_Last_Trigger `(v ~T0 @X0 1 sf5`uc`uc`uc`uc`uc ]
+"745
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 745: {
+{
+[e :U _EEPROM_Save_Last_Trigger ]
+"740
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 740: static void EEPROM_Save_Last_Trigger(uint8_t hour,
+[v _hour `uc ~T0 @X0 1 r1 ]
+"741
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 741:                                       uint8_t minute,
+[v _minute `uc ~T0 @X0 1 r2 ]
+"742
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 742:                                       uint8_t date,
+[v _date `uc ~T0 @X0 1 r3 ]
+"743
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 743:                                       uint8_t month,
+[v _month `uc ~T0 @X0 1 r4 ]
+"744
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 744:                                       uint8_t year)
+[v _year `uc ~T0 @X0 1 r5 ]
+"745
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 745: {
+[f ]
+"746
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 746:     uint8_t checksum;
+[v _checksum `uc ~T0 @X0 1 a ]
+"748
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 748:     checksum = Trigger_Checksum(hour, minute, date, month, year);
+[e = _checksum ( _Trigger_Checksum (4 , , , , _hour _minute _date _month _year ]
+"752
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 752:     EEPROM_WriteByte(0, 0x00);
+[e ( _EEPROM_WriteByte (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"754
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 754:     EEPROM_WriteByte(1, hour);
+[e ( _EEPROM_WriteByte (2 , -> -> 1 `i `uc _hour ]
+"755
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 755:     EEPROM_WriteByte(2, minute);
+[e ( _EEPROM_WriteByte (2 , -> -> 2 `i `uc _minute ]
+"756
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 756:     EEPROM_WriteByte(3, date);
+[e ( _EEPROM_WriteByte (2 , -> -> 3 `i `uc _date ]
+"757
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 757:     EEPROM_WriteByte(4, month);
+[e ( _EEPROM_WriteByte (2 , -> -> 4 `i `uc _month ]
+"758
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 758:     EEPROM_WriteByte(5, year);
+[e ( _EEPROM_WriteByte (2 , -> -> 5 `i `uc _year ]
+"759
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 759:     EEPROM_WriteByte(6, checksum);
+[e ( _EEPROM_WriteByte (2 , -> -> 6 `i `uc _checksum ]
+"762
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 762:     EEPROM_WriteByte(0, 0xA5);
+[e ( _EEPROM_WriteByte (2 , -> -> 0 `i `uc -> -> 165 `i `uc ]
+"763
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 763: }
+[e :UE 169 ]
+}
+"768
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 768: static _Bool DS3231_ReadTime(RTC_Time *time)
+[v _DS3231_ReadTime `(a ~T0 @X0 1 sf1`*S77 ]
+"769
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 769: {
+{
+[e :U _DS3231_ReadTime ]
+"768
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 768: static _Bool DS3231_ReadTime(RTC_Time *time)
+[v _time `*S77 ~T0 @X0 1 r1 ]
+"769
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 769: {
+[f ]
+"770
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 770:     uint8_t raw_second;
+[v _raw_second `uc ~T0 @X0 1 a ]
+"771
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 771:     uint8_t raw_minute;
+[v _raw_minute `uc ~T0 @X0 1 a ]
+"772
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 772:     uint8_t raw_hour;
+[v _raw_hour `uc ~T0 @X0 1 a ]
+"773
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 773:     uint8_t raw_day;
+[v _raw_day `uc ~T0 @X0 1 a ]
+"774
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 774:     uint8_t raw_date;
+[v _raw_date `uc ~T0 @X0 1 a ]
+"775
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 775:     uint8_t raw_month;
+[v _raw_month `uc ~T0 @X0 1 a ]
+"776
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 776:     uint8_t raw_year;
+[v _raw_year `uc ~T0 @X0 1 a ]
+"778
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 778:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"780
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 780:     if (!I2C_WriteByte(((0x68 << 1) | 0)))
+[e $ ! ! != -> ( _I2C_WriteByte (1 -> | << -> 104 `i -> 1 `i -> 0 `i `uc `i -> 0 `i 171  ]
+"781
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 781:     {
+{
+"782
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 782:         I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"783
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 783:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 170  ]
+"784
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 784:     }
+}
+[e :U 171 ]
+"786
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 786:     if (!I2C_WriteByte(0x00))
+[e $ ! ! != -> ( _I2C_WriteByte (1 -> -> 0 `i `uc `i -> 0 `i 172  ]
+"787
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 787:     {
+{
+"788
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 788:         I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"789
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 789:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 170  ]
+"790
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 790:     }
+}
+[e :U 172 ]
+"792
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 792:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"794
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 794:     if (!I2C_WriteByte(((0x68 << 1) | 1)))
+[e $ ! ! != -> ( _I2C_WriteByte (1 -> | << -> 104 `i -> 1 `i -> 1 `i `uc `i -> 0 `i 173  ]
+"795
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 795:     {
+{
+"796
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 796:         I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"797
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 797:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 170  ]
+"798
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 798:     }
+}
+[e :U 173 ]
+"800
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 800:     raw_second = I2C_ReadByte(1);
+[e = _raw_second ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"801
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 801:     raw_minute = I2C_ReadByte(1);
+[e = _raw_minute ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"802
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 802:     raw_hour = I2C_ReadByte(1);
+[e = _raw_hour ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"803
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 803:     raw_day = I2C_ReadByte(1);
+[e = _raw_day ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"804
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 804:     raw_date = I2C_ReadByte(1);
+[e = _raw_date ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"805
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 805:     raw_month = I2C_ReadByte(1);
+[e = _raw_month ( _I2C_ReadByte (1 -> -> 1 `i `a ]
+"806
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 806:     raw_year = I2C_ReadByte(0);
+[e = _raw_year ( _I2C_ReadByte (1 -> -> 0 `i `a ]
+"808
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 808:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"810
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 810:     time->second = BCD_To_Dec((uint8_t)(raw_second & 0x7F));
+[e = . *U _time 0 ( _BCD_To_Dec (1 -> & -> _raw_second `i -> 127 `i `uc ]
+"811
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 811:     time->minute = BCD_To_Dec((uint8_t)(raw_minute & 0x7F));
+[e = . *U _time 1 ( _BCD_To_Dec (1 -> & -> _raw_minute `i -> 127 `i `uc ]
+"813
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 813:     if ((raw_hour & 0x40) != 0)
+[e $ ! != & -> _raw_hour `i -> 64 `i -> 0 `i 174  ]
+"814
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 814:     {
+{
+"815
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 815:         uint8_t hour_12;
+[v _hour_12 `uc ~T0 @X0 1 a ]
+"816
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 816:         _Bool is_pm;
+[v _is_pm `a ~T0 @X0 1 a ]
+"818
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 818:         hour_12 = BCD_To_Dec((uint8_t)(raw_hour & 0x1F));
+[e = _hour_12 ( _BCD_To_Dec (1 -> & -> _raw_hour `i -> 31 `i `uc ]
+"819
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 819:         is_pm = ((raw_hour & 0x20) != 0);
+[e = _is_pm -> -> != & -> _raw_hour `i -> 32 `i -> 0 `i `i `a ]
+"821
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 821:         if (is_pm)
+[e $ ! != -> _is_pm `i -> 0 `i 175  ]
+"822
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 822:         {
+{
+"823
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 823:             if (hour_12 != 12)
+[e $ ! != -> _hour_12 `i -> 12 `i 176  ]
+"824
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 824:             {
+{
+"825
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 825:                 hour_12 = (uint8_t)(hour_12 + 12);
+[e = _hour_12 -> + -> _hour_12 `i -> 12 `i `uc ]
+"826
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 826:             }
+}
+[e :U 176 ]
+"827
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 827:         }
+}
+[e $U 177  ]
+"828
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 828:         else
+[e :U 175 ]
+"829
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 829:         {
+{
+"830
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 830:             if (hour_12 == 12)
+[e $ ! == -> _hour_12 `i -> 12 `i 178  ]
+"831
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 831:             {
+{
+"832
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 832:                 hour_12 = 0;
+[e = _hour_12 -> -> 0 `i `uc ]
+"833
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 833:             }
+}
+[e :U 178 ]
+"834
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 834:         }
+}
+[e :U 177 ]
+"836
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 836:         time->hour = hour_12;
+[e = . *U _time 2 _hour_12 ]
+"837
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 837:     }
+}
+[e $U 179  ]
+"838
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 838:     else
+[e :U 174 ]
+"839
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 839:     {
+{
+"840
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 840:         time->hour = BCD_To_Dec((uint8_t)(raw_hour & 0x3F));
+[e = . *U _time 2 ( _BCD_To_Dec (1 -> & -> _raw_hour `i -> 63 `i `uc ]
+"841
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 841:     }
+}
+[e :U 179 ]
+"843
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 843:     time->day_of_week = BCD_To_Dec((uint8_t)(raw_day & 0x07));
+[e = . *U _time 3 ( _BCD_To_Dec (1 -> & -> _raw_day `i -> 7 `i `uc ]
+"844
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 844:     time->date = BCD_To_Dec((uint8_t)(raw_date & 0x3F));
+[e = . *U _time 4 ( _BCD_To_Dec (1 -> & -> _raw_date `i -> 63 `i `uc ]
+"845
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 845:     time->month = BCD_To_Dec((uint8_t)(raw_month & 0x1F));
+[e = . *U _time 5 ( _BCD_To_Dec (1 -> & -> _raw_month `i -> 31 `i `uc ]
+"846
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 846:     time->year = BCD_To_Dec(raw_year);
+[e = . *U _time 6 ( _BCD_To_Dec (1 _raw_year ]
+"848
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 848:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 170  ]
+"849
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 849: }
+[e :UE 170 ]
+}
+"851
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 851: static _Bool RTC_Time_Is_Valid(const RTC_Time *time)
+[v _RTC_Time_Is_Valid `(a ~T0 @X0 1 sf1`*CS77 ]
+"852
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 852: {
+{
+[e :U _RTC_Time_Is_Valid ]
+"851
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 851: static _Bool RTC_Time_Is_Valid(const RTC_Time *time)
+[v _time `*CS77 ~T0 @X0 1 r1 ]
+"852
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 852: {
+[f ]
+"853
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 853:     if (time->second > 59)
+[e $ ! > -> . *U _time 0 `i -> 59 `i 181  ]
+"854
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 854:     {
+{
+"855
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 855:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 180  ]
+"856
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 856:     }
+}
+[e :U 181 ]
+"858
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 858:     if (time->minute > 59)
+[e $ ! > -> . *U _time 1 `i -> 59 `i 182  ]
+"859
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 859:     {
+{
+"860
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 860:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 180  ]
+"861
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 861:     }
+}
+[e :U 182 ]
+"863
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 863:     if (time->hour > 23)
+[e $ ! > -> . *U _time 2 `i -> 23 `i 183  ]
+"864
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 864:     {
+{
+"865
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 865:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 180  ]
+"866
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 866:     }
+}
+[e :U 183 ]
+"868
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 868:     if ((time->day_of_week < 1) || (time->day_of_week > 7))
+[e $ ! || < -> . *U _time 3 `i -> 1 `i > -> . *U _time 3 `i -> 7 `i 184  ]
+"869
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 869:     {
+{
+"870
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 870:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 180  ]
+"871
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 871:     }
+}
+[e :U 184 ]
+"873
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 873:     if ((time->date < 1) || (time->date > 31))
+[e $ ! || < -> . *U _time 4 `i -> 1 `i > -> . *U _time 4 `i -> 31 `i 185  ]
+"874
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 874:     {
+{
+"875
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 875:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 180  ]
+"876
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 876:     }
+}
+[e :U 185 ]
+"878
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 878:     if ((time->month < 1) || (time->month > 12))
+[e $ ! || < -> . *U _time 5 `i -> 1 `i > -> . *U _time 5 `i -> 12 `i 186  ]
+"879
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 879:     {
+{
+"880
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 880:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 180  ]
+"881
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 881:     }
+}
+[e :U 186 ]
+"883
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 883:     if (time->year > 99)
+[e $ ! > -> . *U _time 6 `i -> 99 `i 187  ]
+"884
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 884:     {
+{
+"885
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 885:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 180  ]
+"886
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 886:     }
+}
+[e :U 187 ]
+"888
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 888:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 180  ]
+"889
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 889: }
+[e :UE 180 ]
+}
+"891
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 891: static _Bool DS3231_ReadTime_With_Retry(RTC_Time *time)
+[v _DS3231_ReadTime_With_Retry `(a ~T0 @X0 1 sf1`*S77 ]
+"892
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 892: {
+{
+[e :U _DS3231_ReadTime_With_Retry ]
+"891
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 891: static _Bool DS3231_ReadTime_With_Retry(RTC_Time *time)
+[v _time `*S77 ~T0 @X0 1 r1 ]
+"892
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 892: {
+[f ]
+"893
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 893:     uint8_t attempt;
+[v _attempt `uc ~T0 @X0 1 a ]
+"895
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 895:     for (attempt = 0; attempt < 3; attempt++)
+{
+[e = _attempt -> -> 0 `i `uc ]
+[e $ < -> _attempt `i -> 3 `i 189  ]
+[e $U 190  ]
+[e :U 189 ]
+"896
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 896:     {
+{
+"897
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 897:         I2C_Init();
+[e ( _I2C_Init ..  ]
+"899
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 899:         if (DS3231_ReadTime(time))
+[e $ ! != -> ( _DS3231_ReadTime (1 _time `i -> 0 `i 192  ]
+"900
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 900:         {
+{
+"901
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 901:             if (RTC_Time_Is_Valid(time))
+[e $ ! != -> ( _RTC_Time_Is_Valid (1 -> _time `*CS77 `i -> 0 `i 193  ]
+"902
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 902:             {
+{
+"903
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 903:                 return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 188  ]
+"904
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 904:             }
+}
+[e :U 193 ]
+"905
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 905:         }
+}
+[e :U 192 ]
+"907
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 907:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"908
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 908:         I2C_Init();
+[e ( _I2C_Init ..  ]
+"909
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 909:         Delay_Approx_250ms();
+[e ( _Delay_Approx_250ms ..  ]
+"910
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 910:     }
+}
+[e ++ _attempt -> -> 1 `i `uc ]
+[e $ < -> _attempt `i -> 3 `i 189  ]
+[e :U 190 ]
+}
+"912
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 912:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 188  ]
+"913
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 913: }
+[e :UE 188 ]
+}
+"986
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 986: static _Bool Is_Sunday_Enabled(void)
+[v _Is_Sunday_Enabled `(a ~T0 @X0 1 sf ]
+"987
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 987: {
+{
+[e :U _Is_Sunday_Enabled ]
+[f ]
+"988
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 988:     return (GPIObits.GP4 == 1);
+[e ) -> -> == -> . . _GPIObits 0 4 `i -> 1 `i `i `a ]
+[e $UE 194  ]
+"989
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 989: }
+[e :UE 194 ]
+}
+"991
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 991: static _Bool Is_Hour_Window_Enabled(uint8_t hour, uint8_t minute)
+[v _Is_Hour_Window_Enabled `(a ~T0 @X0 1 sf2`uc`uc ]
+"992
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 992: {
+{
+[e :U _Is_Hour_Window_Enabled ]
+"991
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 991: static _Bool Is_Hour_Window_Enabled(uint8_t hour, uint8_t minute)
+[v _hour `uc ~T0 @X0 1 r1 ]
+[v _minute `uc ~T0 @X0 1 r2 ]
+"992
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 992: {
+[f ]
+"993
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 993:     _Bool dip2_enabled;
+[v _dip2_enabled `a ~T0 @X0 1 a ]
+"995
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 995:     dip2_enabled = (GPIObits.GP5 == 1);
+[e = _dip2_enabled -> -> == -> . . _GPIObits 0 5 `i -> 1 `i `i `a ]
+"998
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 998:     if (!dip2_enabled)
+[e $ ! ! != -> _dip2_enabled `i -> 0 `i 196  ]
+"999
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 999:     {
+{
+"1000
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1000:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 195  ]
+"1001
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1001:     }
+}
+[e :U 196 ]
+"1006
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1006:     if (hour < 8)
+[e $ ! < -> _hour `i -> 8 `i 197  ]
+"1007
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1007:     {
+{
+"1008
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1008:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 195  ]
+"1009
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1009:     }
+}
+[e :U 197 ]
+"1011
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1011:     if (hour < 18)
+[e $ ! < -> _hour `i -> 18 `i 198  ]
+"1012
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1012:     {
+{
+"1013
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1013:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 195  ]
+"1014
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1014:     }
+}
+[e :U 198 ]
+"1016
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1016:     if ((hour == 18) && (minute == 0U))
+[e $ ! && == -> _hour `i -> 18 `i == -> _minute `ui -> 0 `ui 199  ]
+"1017
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1017:     {
+{
+"1018
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1018:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 195  ]
+"1019
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1019:     }
+}
+[e :U 199 ]
+"1021
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1021:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 195  ]
+"1022
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1022: }
+[e :UE 195 ]
+}
+"1024
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1024: static _Bool Is_Test_Mode_Enabled(void)
+[v _Is_Test_Mode_Enabled `(a ~T0 @X0 1 sf ]
+"1025
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1025: {
+{
+[e :U _Is_Test_Mode_Enabled ]
+[f ]
+"1026
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1026:     return (GPIObits.GP3 == 0);
+[e ) -> -> == -> . . _GPIObits 0 3 `i -> 0 `i `i `a ]
+[e $UE 200  ]
+"1027
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1027: }
+[e :UE 200 ]
+}
+"1029
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1029: static _Bool Is_Allowed_Day_And_Hour(const RTC_Time *now)
+[v _Is_Allowed_Day_And_Hour `(a ~T0 @X0 1 sf1`*CS77 ]
+"1030
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1030: {
+{
+[e :U _Is_Allowed_Day_And_Hour ]
+"1029
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1029: static _Bool Is_Allowed_Day_And_Hour(const RTC_Time *now)
+[v _now `*CS77 ~T0 @X0 1 r1 ]
+"1030
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1030: {
+[f ]
+"1032
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1032:     if ((now->day_of_week == 1) && !Is_Sunday_Enabled())
+[e $ ! && == -> . *U _now 3 `i -> 1 `i ! != -> ( _Is_Sunday_Enabled ..  `i -> 0 `i 202  ]
+"1033
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1033:     {
+{
+"1034
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1034:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 201  ]
+"1035
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1035:     }
+}
+[e :U 202 ]
+"1038
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1038:     if (!Is_Hour_Window_Enabled(now->hour, now->minute))
+[e $ ! ! != -> ( _Is_Hour_Window_Enabled (2 , . *U _now 2 . *U _now 1 `i -> 0 `i 203  ]
+"1039
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1039:     {
+{
+"1040
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1040:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 201  ]
+"1041
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1041:     }
+}
+[e :U 203 ]
+"1043
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1043:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 201  ]
+"1044
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1044: }
+[e :UE 201 ]
+}
+"1046
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1046: static _Bool Is_Scheduled_Relay_Time(const RTC_Time *now)
+[v _Is_Scheduled_Relay_Time `(a ~T0 @X0 1 sf1`*CS77 ]
+"1047
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1047: {
+{
+[e :U _Is_Scheduled_Relay_Time ]
+"1046
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1046: static _Bool Is_Scheduled_Relay_Time(const RTC_Time *now)
+[v _now `*CS77 ~T0 @X0 1 r1 ]
+"1047
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1047: {
+[f ]
+"1048
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1048:     uint16_t minutes_from_midnight;
+[v _minutes_from_midnight `ui ~T0 @X0 1 a ]
+"1050
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1050:     if (!Is_Allowed_Day_And_Hour(now))
+[e $ ! ! != -> ( _Is_Allowed_Day_And_Hour (1 _now `i -> 0 `i 205  ]
+"1051
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1051:     {
+{
+"1052
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1052:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 204  ]
+"1053
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1053:     }
+}
+[e :U 205 ]
+"1058
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1058:     minutes_from_midnight =
+[e = _minutes_from_midnight + * -> . *U _now 2 `ui -> 60 `ui -> . *U _now 1 `ui ]
+"1062
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1062:     return ((minutes_from_midnight % 40) == 0U);
+[e ) -> -> == % _minutes_from_midnight -> -> 40 `i `ui -> 0 `ui `i `a ]
+[e $UE 204  ]
+"1063
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1063: }
+[e :UE 204 ]
+}
+"1065
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1065: static _Bool Already_Triggered_This_Minute(const RTC_Time *now,
+[v _Already_Triggered_This_Minute `(a ~T0 @X0 1 sf6`*CS77`uc`uc`uc`uc`uc ]
+"1071
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1071: {
+{
+[e :U _Already_Triggered_This_Minute ]
+"1065
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1065: static _Bool Already_Triggered_This_Minute(const RTC_Time *now,
+[v _now `*CS77 ~T0 @X0 1 r1 ]
+"1066
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1066:                                           uint8_t last_hour,
+[v _last_hour `uc ~T0 @X0 1 r2 ]
+"1067
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1067:                                           uint8_t last_minute,
+[v _last_minute `uc ~T0 @X0 1 r3 ]
+"1068
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1068:                                           uint8_t last_date,
+[v _last_date `uc ~T0 @X0 1 r4 ]
+"1069
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1069:                                           uint8_t last_month,
+[v _last_month `uc ~T0 @X0 1 r5 ]
+"1070
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1070:                                           uint8_t last_year)
+[v _last_year `uc ~T0 @X0 1 r6 ]
+"1071
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1071: {
+[f ]
+"1072
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1072:     if (now->hour != last_hour)
+[e $ ! != -> . *U _now 2 `i -> _last_hour `i 207  ]
+"1073
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1073:     {
+{
+"1074
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1074:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 206  ]
+"1075
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1075:     }
+}
+[e :U 207 ]
+"1077
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1077:     if (now->minute != last_minute)
+[e $ ! != -> . *U _now 1 `i -> _last_minute `i 208  ]
+"1078
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1078:     {
+{
+"1079
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1079:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 206  ]
+"1080
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1080:     }
+}
+[e :U 208 ]
+"1082
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1082:     if (now->date != last_date)
+[e $ ! != -> . *U _now 4 `i -> _last_date `i 209  ]
+"1083
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1083:     {
+{
+"1084
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1084:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 206  ]
+"1085
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1085:     }
+}
+[e :U 209 ]
+"1087
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1087:     if (now->month != last_month)
+[e $ ! != -> . *U _now 5 `i -> _last_month `i 210  ]
+"1088
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1088:     {
+{
+"1089
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1089:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 206  ]
+"1090
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1090:     }
+}
+[e :U 210 ]
+"1092
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1092:     if (now->year != last_year)
+[e $ ! != -> . *U _now 6 `i -> _last_year `i 211  ]
+"1093
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1093:     {
+{
+"1094
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1094:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 206  ]
+"1095
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1095:     }
+}
+[e :U 211 ]
+"1097
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1097:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 206  ]
+"1098
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1098: }
+[e :UE 206 ]
+}
+"1103
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1103: static void Init_Device(void)
+[v _Init_Device `(v ~T0 @X0 1 sf ]
+"1104
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1104: {
+{
+[e :U _Init_Device ]
+[f ]
+"1105
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1105:     ANSEL = 0x00;
+[e = _ANSEL -> -> 0 `i `uc ]
+"1106
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1106:     ADCON0 = 0x00;
+[e = _ADCON0 -> -> 0 `i `uc ]
+"1107
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1107:     CMCON0 = 0x07;
+[e = _CMCON0 -> -> 7 `i `uc ]
+"1109
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1109:     OSCCONbits.IRCF = 0b110;
+[e = . . _OSCCONbits 0 4 -> -> 6 `i `uc ]
+"1110
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1110:     OSCCONbits.SCS = 1;
+[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
+"1112
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1112:     GPIO = 0x00;
+[e = _GPIO -> -> 0 `i `uc ]
+"1115
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1115:     TRISIObits.TRISIO0 = 0;
+[e = . . _TRISIObits 0 0 -> -> 0 `i `uc ]
+"1116
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1116:     Relay_Off();
+[e ( _Relay_Off ..  ]
+"1119
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1119:     SDA_Release();
+[e ( _SDA_Release ..  ]
+"1122
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1122:     SCL_Release();
+[e ( _SCL_Release ..  ]
+"1125
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1125:     TRISIObits.TRISIO3 = 1;
+[e = . . _TRISIObits 0 3 -> -> 1 `i `uc ]
+"1128
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1128:     TRISIObits.TRISIO4 = 1;
+[e = . . _TRISIObits 0 4 -> -> 1 `i `uc ]
+"1131
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1131:     TRISIObits.TRISIO5 = 1;
+[e = . . _TRISIObits 0 5 -> -> 1 `i `uc ]
+"1133
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1133:     Timer0_Init_For_Delay();
+[e ( _Timer0_Init_For_Delay ..  ]
+"1134
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1134: }
+[e :UE 212 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"1139
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1139: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"1140
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1140: {
+{
+[e :U _main ]
+[f ]
+"1141
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1141:     RTC_Time now;
+[v _now `S77 ~T0 @X0 1 a ]
+"1143
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1143:     uint8_t last_trigger_hour = 0xFF;
+[v _last_trigger_hour `uc ~T0 @X0 1 a ]
+[e = _last_trigger_hour -> -> 255 `i `uc ]
+"1144
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1144:     uint8_t last_trigger_minute = 0xFF;
+[v _last_trigger_minute `uc ~T0 @X0 1 a ]
+[e = _last_trigger_minute -> -> 255 `i `uc ]
+"1145
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1145:     uint8_t last_trigger_date = 0xFF;
+[v _last_trigger_date `uc ~T0 @X0 1 a ]
+[e = _last_trigger_date -> -> 255 `i `uc ]
+"1146
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1146:     uint8_t last_trigger_month = 0xFF;
+[v _last_trigger_month `uc ~T0 @X0 1 a ]
+[e = _last_trigger_month -> -> 255 `i `uc ]
+"1147
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1147:     uint8_t last_trigger_year = 0xFF;
+[v _last_trigger_year `uc ~T0 @X0 1 a ]
+[e = _last_trigger_year -> -> 255 `i `uc ]
+"1149
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1149:     Init_Device();
+[e ( _Init_Device ..  ]
+"1150
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1150:     I2C_Init();
+[e ( _I2C_Init ..  ]
+"1153
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1153:     (void)EEPROM_Load_Last_Trigger(&last_trigger_hour,
+[e ( _EEPROM_Load_Last_Trigger (4 , , , , &U _last_trigger_hour &U _last_trigger_minute &U _last_trigger_date &U _last_trigger_month &U _last_trigger_year ]
+"1181
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1181:     Delay_Seconds(1);
+[e ( _Delay_Seconds (1 -> -> 1 `i `uc ]
+"1183
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1183:     while (!DS3231_ReadTime_With_Retry(&now))
+[e $U 214  ]
+[e :U 215 ]
+"1184
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1184:     {
+{
+"1185
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1185:         Relay_Off();
+[e ( _Relay_Off ..  ]
+"1186
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1186:         I2C_Init();
+[e ( _I2C_Init ..  ]
+"1187
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1187:         Delay_Seconds(1);
+[e ( _Delay_Seconds (1 -> -> 1 `i `uc ]
+"1188
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1188:     }
+}
+[e :U 214 ]
+"1183
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1183:     while (!DS3231_ReadTime_With_Retry(&now))
+[e $ ! != -> ( _DS3231_ReadTime_With_Retry (1 &U _now `i -> 0 `i 215  ]
+[e :U 216 ]
+"1190
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1190:     while (1)
+[e :U 218 ]
+"1191
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1191:     {
+{
+"1195
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1195:         if (Is_Test_Mode_Enabled())
+[e $ ! != -> ( _Is_Test_Mode_Enabled ..  `i -> 0 `i 220  ]
+"1196
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1196:         {
+{
+"1197
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1197:             Relay_Test_Cycle();
+[e ( _Relay_Test_Cycle ..  ]
+"1198
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1198:             continue;
+[e $U 217  ]
+"1199
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1199:         }
+}
+[e :U 220 ]
+"1202
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1202:         if (DS3231_ReadTime_With_Retry(&now))
+[e $ ! != -> ( _DS3231_ReadTime_With_Retry (1 &U _now `i -> 0 `i 221  ]
+"1203
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1203:         {
+{
+"1204
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1204:             if (Is_Scheduled_Relay_Time(&now))
+[e $ ! != -> ( _Is_Scheduled_Relay_Time (1 -> &U _now `*CS77 `i -> 0 `i 222  ]
+"1205
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1205:             {
+{
+"1206
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1206:                 _Bool already_triggered;
+[v _already_triggered `a ~T0 @X0 1 a ]
+"1208
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1208:                 already_triggered = Already_Triggered_This_Minute(&now,
+[e = _already_triggered ( _Already_Triggered_This_Minute (4 , , , , , -> &U _now `*CS77 _last_trigger_hour _last_trigger_minute _last_trigger_date _last_trigger_month _last_trigger_year ]
+"1215
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1215:                 if (!already_triggered)
+[e $ ! ! != -> _already_triggered `i -> 0 `i 223  ]
+"1216
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1216:                 {
+{
+"1219
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1219:                     EEPROM_Save_Last_Trigger(now.hour,
+[e ( _EEPROM_Save_Last_Trigger (4 , , , , . _now 2 . _now 1 . _now 4 . _now 5 . _now 6 ]
+"1225
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1225:                     last_trigger_hour = now.hour;
+[e = _last_trigger_hour . _now 2 ]
+"1226
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1226:                     last_trigger_minute = now.minute;
+[e = _last_trigger_minute . _now 1 ]
+"1227
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1227:                     last_trigger_date = now.date;
+[e = _last_trigger_date . _now 4 ]
+"1228
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1228:                     last_trigger_month = now.month;
+[e = _last_trigger_month . _now 5 ]
+"1229
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1229:                     last_trigger_year = now.year;
+[e = _last_trigger_year . _now 6 ]
+"1231
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1231:                     Relay_Reset_Pulse();
+[e ( _Relay_Reset_Pulse ..  ]
+"1232
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1232:                 }
+}
+[e :U 223 ]
+"1233
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1233:             }
+}
+[e :U 222 ]
+"1234
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1234:         }
+}
+[e $U 224  ]
+"1235
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1235:         else
+[e :U 221 ]
+"1236
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1236:         {
+{
+"1237
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1237:             Relay_Off();
+[e ( _Relay_Off ..  ]
+"1238
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1238:             I2C_Init();
+[e ( _I2C_Init ..  ]
+"1239
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1239:             Delay_Approx_1s();
+[e ( _Delay_Approx_1s ..  ]
+"1240
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1240:         }
+}
+[e :U 224 ]
+"1242
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1242:         Delay_Approx_250ms();
+[e ( _Delay_Approx_250ms ..  ]
+"1243
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1243:     }
+}
+[e :U 217 ]
+[e $U 218  ]
+[e :U 219 ]
+"1244
+[; ;I-Tank_Auto-Flush_RTC_40mins-30secs.c: 1244: }
+[e :UE 213 ]
+}

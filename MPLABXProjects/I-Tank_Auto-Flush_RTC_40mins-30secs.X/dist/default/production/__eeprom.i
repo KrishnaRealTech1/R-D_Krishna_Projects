@@ -1,4 +1,4 @@
-# 1 "EAS_ITank_RTC_Interface_40min_Updated.c"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\pic\\__eeprom.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,17 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "EAS_ITank_RTC_Interface_40min_Updated.c" 2
-# 11 "EAS_ITank_RTC_Interface_40min_Updated.c"
-#pragma config FOSC = INTOSCIO
-#pragma config WDTE = OFF
-#pragma config PWRTE = ON
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = ON
-
-
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\pic\\__eeprom.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1383,998 +1373,176 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\xc.h" 2 3
-# 19 "EAS_ITank_RTC_Interface_40min_Updated.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\pic\\__eeprom.c" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "EAS_ITank_RTC_Interface_40min_Updated.c" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdbool.h" 1 3
-# 21 "EAS_ITank_RTC_Interface_40min_Updated.c" 2
-# 137 "EAS_ITank_RTC_Interface_40min_Updated.c"
-typedef struct
+
+
+void
+__eecpymem(volatile unsigned char *to, __eeprom unsigned char * from, unsigned char size)
 {
-    uint8_t second;
-    uint8_t minute;
-    uint8_t hour;
-    uint8_t day_of_week;
-    uint8_t date;
-    uint8_t month;
-    uint8_t year;
-} RTC_Time;
+ volatile unsigned char *cp = to;
 
+ while (EECON1bits.WR) continue;
+ EEADR = (unsigned char)from;
+ while(size--) {
+  while (EECON1bits.WR) continue;
 
+  EECON1 &= 0x7F;
 
-
-static void Delay_Approx_65ms(void);
-static void Delay_Approx_250ms(void);
-static void Delay_Approx_1s(void);
-static void Delay_Seconds(uint8_t seconds);
-
-static void Relay_On(void);
-static void Relay_Off(void);
-static void Relay_Reset_Pulse(void);
-static void Relay_Test_Cycle(void);
-static _Bool Test_Delay_Seconds_Abortable(uint8_t seconds);
-
-static void Timer0_Init_For_Delay(void);
-
-static void Safe_Fault_Idle_Forever(void);
-
-static void I2C_Delay(void);
-static void SDA_Low(void);
-static void SDA_Release(void);
-static void SCL_Low(void);
-static void SCL_Release(void);
-static uint8_t SDA_Read(void);
-
-static void I2C_Init(void);
-static void I2C_Start(void);
-static void I2C_Stop(void);
-static _Bool I2C_WriteByte(uint8_t data);
-static uint8_t I2C_ReadByte(_Bool send_ack);
-
-static uint8_t BCD_To_Dec(uint8_t bcd);
-
-
-
-
-
-static uint8_t EEPROM_ReadByte(uint8_t address);
-static void EEPROM_WriteByte(uint8_t address, uint8_t value);
-static uint8_t Trigger_Checksum(uint8_t hour,
-                                uint8_t minute,
-                                uint8_t date,
-                                uint8_t month,
-                                uint8_t year);
-static _Bool EEPROM_Load_Last_Trigger(uint8_t *last_hour,
-                                      uint8_t *last_minute,
-                                      uint8_t *last_date,
-                                      uint8_t *last_month,
-                                      uint8_t *last_year);
-static void EEPROM_Save_Last_Trigger(uint8_t hour,
-                                      uint8_t minute,
-                                      uint8_t date,
-                                      uint8_t month,
-                                      uint8_t year);
-
-static _Bool DS3231_ReadTime(RTC_Time *time);
-static _Bool RTC_Time_Is_Valid(const RTC_Time *time);
-static _Bool DS3231_ReadTime_With_Retry(RTC_Time *time);
-
-
-
-
-
-static _Bool Is_Sunday_Enabled(void);
-static _Bool Is_Hour_Window_Enabled(uint8_t hour, uint8_t minute);
-static _Bool Is_Test_Mode_Enabled(void);
-static _Bool Is_Allowed_Day_And_Hour(const RTC_Time *now);
-static _Bool Is_Scheduled_Relay_Time(const RTC_Time *now);
-static _Bool Already_Triggered_This_Minute(const RTC_Time *now,
-                                          uint8_t last_hour,
-                                          uint8_t last_minute,
-                                          uint8_t last_date,
-                                          uint8_t last_month,
-                                          uint8_t last_year);
-
-static void Init_Device(void);
-
-
-
-
-static void Relay_On(void)
-{
-    GPIObits.GP0 = 1;
+  EECON1bits.RD = 1;
+  *cp++ = EEDATA;
+  ++EEADR;
+ }
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\pic\\__eeprom.c"
 }
 
-static void Relay_Off(void)
+void
+__memcpyee(__eeprom unsigned char * to, const unsigned char *from, unsigned char size)
 {
-    GPIObits.GP0 = 0;
+ const unsigned char *ptr =from;
+
+ while (EECON1bits.WR) continue;
+ EEADR = (unsigned char)to - 1U;
+
+ EECON1 &= 0x7F;
+
+ while(size--) {
+  while (EECON1bits.WR) {
+   continue;
+  }
+  EEDATA = *ptr++;
+  ++EEADR;
+  STATUSbits.CARRY = 0;
+  if (INTCONbits.GIE) {
+   STATUSbits.CARRY = 1;
+  }
+  INTCONbits.GIE = 0;
+  EECON1bits.WREN = 1;
+  EECON2 = 0x55;
+  EECON2 = 0xAA;
+  EECON1bits.WR = 1;
+  EECON1bits.WREN = 0;
+  if (STATUSbits.CARRY) {
+   INTCONbits.GIE = 1;
+  }
+ }
+# 101 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\pic\\__eeprom.c"
 }
 
-static void Relay_Reset_Pulse(void)
+unsigned char
+__eetoc(__eeprom void *addr)
 {
-    Relay_On();
-    Delay_Seconds(30);
-    Relay_Off();
+ unsigned char data;
+ __eecpymem((unsigned char *) &data,addr,1);
+ return data;
 }
 
-
-
-
-
-
-
-static _Bool Test_Delay_Seconds_Abortable(uint8_t seconds)
+unsigned int
+__eetoi(__eeprom void *addr)
 {
-    uint8_t sec;
-    uint8_t slice;
-
-    for (sec = 0; sec < seconds; sec++)
-    {
-
-
-        for (slice = 0; slice < 16; slice++)
-        {
-            if (!Is_Test_Mode_Enabled())
-            {
-                Relay_Off();
-                return 0;
-            }
-
-            Delay_Approx_65ms();
-        }
-    }
-
-    return 1;
+ unsigned int data;
+ __eecpymem((unsigned char *) &data,addr,2);
+ return data;
 }
 
-static void Relay_Test_Cycle(void)
+#pragma warning push
+#pragma warning disable 2040
+__uint24
+__eetom(__eeprom void *addr)
 {
-    _Bool dip1_on;
-    _Bool dip2_on;
-    uint8_t off_seconds;
-    uint8_t on_seconds;
+ __uint24 data;
+ __eecpymem((unsigned char *) &data,addr,3);
+ return data;
+}
+#pragma warning pop
 
-
-    if (!Is_Test_Mode_Enabled())
-    {
-        Relay_Off();
-        return;
-    }
-
-    dip1_on = (GPIObits.GP4 == 1);
-    dip2_on = (GPIObits.GP5 == 1);
-
-
-    off_seconds = 0;
-    on_seconds = 0;
-
-    if ((!dip1_on) && (!dip2_on))
-    {
-        off_seconds = 30;
-        on_seconds = 10;
-    }
-    else if ((!dip1_on) && dip2_on)
-    {
-        off_seconds = 10;
-        on_seconds = 5;
-    }
-    else if (dip1_on && (!dip2_on))
-    {
-        off_seconds = 60;
-        on_seconds = 15;
-    }
-    else
-    {
-
-        Relay_Off();
-        Delay_Approx_250ms();
-        return;
-    }
-
-
-    Relay_Off();
-    if (!Test_Delay_Seconds_Abortable(off_seconds))
-    {
-        return;
-    }
-
-
-    Relay_On();
-    if (!Test_Delay_Seconds_Abortable(on_seconds))
-    {
-        Relay_Off();
-        return;
-    }
-
-    Relay_Off();
+unsigned long
+__eetol(__eeprom void *addr)
+{
+ unsigned long data;
+ __eecpymem((unsigned char *) &data,addr,4);
+ return data;
 }
 
-
-
-
-static void Timer0_Init_For_Delay(void)
+#pragma warning push
+#pragma warning disable 1516
+unsigned long long
+__eetoo(__eeprom void *addr)
 {
-    OPTION_REGbits.T0CS = 0;
-    OPTION_REGbits.PSA = 0;
+ unsigned long long data;
+ __eecpymem((unsigned char *) &data,addr,8);
+ return data;
+}
+#pragma warning pop
 
-    OPTION_REGbits.PS2 = 1;
-    OPTION_REGbits.PS1 = 1;
-    OPTION_REGbits.PS0 = 1;
-
-    INTCONbits.T0IE = 0;
-    INTCONbits.T0IF = 0;
+unsigned char
+__ctoee(__eeprom void *addr, unsigned char data)
+{
+ __memcpyee(addr,(unsigned char *) &data,1);
+ return data;
 }
 
-static void Delay_Approx_65ms(void)
+unsigned int
+__itoee(__eeprom void *addr, unsigned int data)
 {
-    TMR0 = 0;
-    INTCONbits.T0IF = 0;
-
-    while (INTCONbits.T0IF == 0)
-    {
-
-    }
+ __memcpyee(addr,(unsigned char *) &data,2);
+ return data;
 }
 
-static void Delay_Approx_250ms(void)
+#pragma warning push
+#pragma warning disable 2040
+__uint24
+__mtoee(__eeprom void *addr, __uint24 data)
 {
-    uint8_t i;
+ __memcpyee(addr,(unsigned char *) &data,3);
+ return data;
+}
+#pragma warning pop
 
-    for (i = 0; i < 4; i++)
-    {
-        Delay_Approx_65ms();
-    }
+unsigned long
+__ltoee(__eeprom void *addr, unsigned long data)
+{
+ __memcpyee(addr,(unsigned char *) &data,4);
+ return data;
 }
 
-static void Delay_Approx_1s(void)
+#pragma warning push
+#pragma warning disable 1516
+unsigned long long
+__otoee(__eeprom void *addr, unsigned long long data)
 {
-    uint8_t i;
+ __memcpyee(addr,(unsigned char *) &data,8);
+ return data;
+}
+#pragma warning pop
 
-    for (i = 0; i < 16; i++)
-    {
-        Delay_Approx_65ms();
-    }
+float
+__eetoft(__eeprom void *addr)
+{
+ float data;
+ __eecpymem((unsigned char *) &data,addr,3);
+ return data;
 }
 
-static void Delay_Seconds(uint8_t seconds)
+double
+__eetofl(__eeprom void *addr)
 {
-    while (seconds > 0)
-    {
-        Delay_Approx_1s();
-        seconds--;
-    }
+ double data;
+ __eecpymem((unsigned char *) &data,addr,4);
+ return data;
 }
 
-
-
-
-static void Safe_Fault_Idle_Forever(void)
+float
+__fttoee(__eeprom void *addr, float data)
 {
-    while (1)
-    {
-        Relay_Off();
-        I2C_Init();
-        Delay_Seconds(1);
-    }
+ __memcpyee(addr,(unsigned char *) &data,3);
+ return data;
 }
 
-
-
-
-static void I2C_Delay(void)
+double
+__fltoee(__eeprom void *addr, double data)
 {
-    volatile uint8_t i;
-
-    for (i = 0; i < 50; i++)
-    {
-
-    }
-}
-
-
-
-
-static void SDA_Low(void)
-{
-    GPIObits.GP1 = 0;
-    TRISIObits.TRISIO1 = 0;
-}
-
-static void SDA_Release(void)
-{
-    TRISIObits.TRISIO1 = 1;
-}
-
-static void SCL_Low(void)
-{
-    GPIObits.GP2 = 0;
-    TRISIObits.TRISIO2 = 0;
-}
-
-static void SCL_Release(void)
-{
-    TRISIObits.TRISIO2 = 1;
-}
-
-static uint8_t SDA_Read(void)
-{
-    return GPIObits.GP1;
-}
-
-
-
-
-
-
-
-static void I2C_Init(void)
-{
-    SDA_Release();
-    SCL_Release();
-    I2C_Delay();
-}
-
-static void I2C_Start(void)
-{
-    SDA_Release();
-    SCL_Release();
-    I2C_Delay();
-
-    SDA_Low();
-    I2C_Delay();
-
-    SCL_Low();
-    I2C_Delay();
-}
-
-static void I2C_Stop(void)
-{
-    SDA_Low();
-    I2C_Delay();
-
-    SCL_Release();
-    I2C_Delay();
-
-    SDA_Release();
-    I2C_Delay();
-}
-
-static _Bool I2C_WriteByte(uint8_t data)
-{
-    uint8_t i;
-    _Bool ack;
-
-    for (i = 0; i < 8; i++)
-    {
-        if ((data & 0x80) != 0)
-        {
-            SDA_Release();
-        }
-        else
-        {
-            SDA_Low();
-        }
-
-        I2C_Delay();
-
-        SCL_Release();
-        I2C_Delay();
-
-        SCL_Low();
-        I2C_Delay();
-
-        data <<= 1;
-    }
-
-    SDA_Release();
-    I2C_Delay();
-
-    SCL_Release();
-    I2C_Delay();
-
-    ack = (SDA_Read() == 0);
-
-    SCL_Low();
-    I2C_Delay();
-
-    return ack;
-}
-
-static uint8_t I2C_ReadByte(_Bool send_ack)
-{
-    uint8_t i;
-    uint8_t data = 0;
-
-    SDA_Release();
-
-    for (i = 0; i < 8; i++)
-    {
-        data <<= 1;
-
-        SCL_Release();
-        I2C_Delay();
-
-        if (SDA_Read() != 0)
-        {
-            data |= 1;
-        }
-
-        SCL_Low();
-        I2C_Delay();
-    }
-
-    if (send_ack)
-    {
-        SDA_Low();
-    }
-    else
-    {
-        SDA_Release();
-    }
-
-    I2C_Delay();
-
-    SCL_Release();
-    I2C_Delay();
-
-    SCL_Low();
-    I2C_Delay();
-
-    SDA_Release();
-
-    return data;
-}
-
-
-
-
-static uint8_t BCD_To_Dec(uint8_t bcd)
-{
-    uint8_t tens;
-    uint8_t ones;
-
-    tens = (uint8_t)((bcd >> 4) & 0x0F);
-    ones = (uint8_t)(bcd & 0x0F);
-
-    return (uint8_t)((tens * 10) + ones);
-}
-# 603 "EAS_ITank_RTC_Interface_40min_Updated.c"
-static uint8_t EEPROM_ReadByte(uint8_t address)
-{
-    while (EECON1bits.WR != 0)
-    {
-
-    }
-
-    EEADR = address;
-    EECON1bits.RD = 1;
-
-    return EEDAT;
-}
-
-static void EEPROM_WriteByte(uint8_t address, uint8_t value)
-{
-    _Bool gie_was_enabled;
-
-    if (EEPROM_ReadByte(address) == value)
-    {
-        return;
-    }
-
-    while (EECON1bits.WR != 0)
-    {
-
-    }
-
-    EEADR = address;
-    EEDAT = value;
-
-    EECON1bits.WREN = 1;
-
-    gie_was_enabled = (INTCONbits.GIE != 0);
-    INTCONbits.GIE = 0;
-
-    EECON2 = 0x55;
-    EECON2 = 0xAA;
-    EECON1bits.WR = 1;
-
-    while (EECON1bits.WR != 0)
-    {
-
-    }
-
-    EECON1bits.WREN = 0;
-
-    if (gie_was_enabled)
-    {
-        INTCONbits.GIE = 1;
-    }
-}
-
-static uint8_t Trigger_Checksum(uint8_t hour,
-                                uint8_t minute,
-                                uint8_t date,
-                                uint8_t month,
-                                uint8_t year)
-{
-    return (uint8_t)(hour ^ minute ^ date ^ month ^ year ^ 0x5A);
-}
-
-static _Bool EEPROM_Load_Last_Trigger(uint8_t *last_hour,
-                                      uint8_t *last_minute,
-                                      uint8_t *last_date,
-                                      uint8_t *last_month,
-                                      uint8_t *last_year)
-{
-    uint8_t hour;
-    uint8_t minute;
-    uint8_t date;
-    uint8_t month;
-    uint8_t year;
-    uint8_t checksum;
-
-    if (EEPROM_ReadByte(0) != 0xA5)
-    {
-        return 0;
-    }
-
-    hour = EEPROM_ReadByte(1);
-    minute = EEPROM_ReadByte(2);
-    date = EEPROM_ReadByte(3);
-    month = EEPROM_ReadByte(4);
-    year = EEPROM_ReadByte(5);
-    checksum = EEPROM_ReadByte(6);
-
-    if (checksum != Trigger_Checksum(hour, minute, date, month, year))
-    {
-        return 0;
-    }
-
-    if (hour > 23)
-    {
-        return 0;
-    }
-
-    if (minute > 59)
-    {
-        return 0;
-    }
-
-    if ((date < 1) || (date > 31))
-    {
-        return 0;
-    }
-
-    if ((month < 1) || (month > 12))
-    {
-        return 0;
-    }
-
-    if (year > 99)
-    {
-        return 0;
-    }
-
-    *last_hour = hour;
-    *last_minute = minute;
-    *last_date = date;
-    *last_month = month;
-    *last_year = year;
-
-    return 1;
-}
-
-static void EEPROM_Save_Last_Trigger(uint8_t hour,
-                                      uint8_t minute,
-                                      uint8_t date,
-                                      uint8_t month,
-                                      uint8_t year)
-{
-    uint8_t checksum;
-
-    checksum = Trigger_Checksum(hour, minute, date, month, year);
-
-
-
-    EEPROM_WriteByte(0, 0x00);
-
-    EEPROM_WriteByte(1, hour);
-    EEPROM_WriteByte(2, minute);
-    EEPROM_WriteByte(3, date);
-    EEPROM_WriteByte(4, month);
-    EEPROM_WriteByte(5, year);
-    EEPROM_WriteByte(6, checksum);
-
-
-    EEPROM_WriteByte(0, 0xA5);
-}
-
-
-
-
-static _Bool DS3231_ReadTime(RTC_Time *time)
-{
-    uint8_t raw_second;
-    uint8_t raw_minute;
-    uint8_t raw_hour;
-    uint8_t raw_day;
-    uint8_t raw_date;
-    uint8_t raw_month;
-    uint8_t raw_year;
-
-    I2C_Start();
-
-    if (!I2C_WriteByte(((0x68 << 1) | 0)))
-    {
-        I2C_Stop();
-        return 0;
-    }
-
-    if (!I2C_WriteByte(0x00))
-    {
-        I2C_Stop();
-        return 0;
-    }
-
-    I2C_Start();
-
-    if (!I2C_WriteByte(((0x68 << 1) | 1)))
-    {
-        I2C_Stop();
-        return 0;
-    }
-
-    raw_second = I2C_ReadByte(1);
-    raw_minute = I2C_ReadByte(1);
-    raw_hour = I2C_ReadByte(1);
-    raw_day = I2C_ReadByte(1);
-    raw_date = I2C_ReadByte(1);
-    raw_month = I2C_ReadByte(1);
-    raw_year = I2C_ReadByte(0);
-
-    I2C_Stop();
-
-    time->second = BCD_To_Dec((uint8_t)(raw_second & 0x7F));
-    time->minute = BCD_To_Dec((uint8_t)(raw_minute & 0x7F));
-
-    if ((raw_hour & 0x40) != 0)
-    {
-        uint8_t hour_12;
-        _Bool is_pm;
-
-        hour_12 = BCD_To_Dec((uint8_t)(raw_hour & 0x1F));
-        is_pm = ((raw_hour & 0x20) != 0);
-
-        if (is_pm)
-        {
-            if (hour_12 != 12)
-            {
-                hour_12 = (uint8_t)(hour_12 + 12);
-            }
-        }
-        else
-        {
-            if (hour_12 == 12)
-            {
-                hour_12 = 0;
-            }
-        }
-
-        time->hour = hour_12;
-    }
-    else
-    {
-        time->hour = BCD_To_Dec((uint8_t)(raw_hour & 0x3F));
-    }
-
-    time->day_of_week = BCD_To_Dec((uint8_t)(raw_day & 0x07));
-    time->date = BCD_To_Dec((uint8_t)(raw_date & 0x3F));
-    time->month = BCD_To_Dec((uint8_t)(raw_month & 0x1F));
-    time->year = BCD_To_Dec(raw_year);
-
-    return 1;
-}
-
-static _Bool RTC_Time_Is_Valid(const RTC_Time *time)
-{
-    if (time->second > 59)
-    {
-        return 0;
-    }
-
-    if (time->minute > 59)
-    {
-        return 0;
-    }
-
-    if (time->hour > 23)
-    {
-        return 0;
-    }
-
-    if ((time->day_of_week < 1) || (time->day_of_week > 7))
-    {
-        return 0;
-    }
-
-    if ((time->date < 1) || (time->date > 31))
-    {
-        return 0;
-    }
-
-    if ((time->month < 1) || (time->month > 12))
-    {
-        return 0;
-    }
-
-    if (time->year > 99)
-    {
-        return 0;
-    }
-
-    return 1;
-}
-
-static _Bool DS3231_ReadTime_With_Retry(RTC_Time *time)
-{
-    uint8_t attempt;
-
-    for (attempt = 0; attempt < 3; attempt++)
-    {
-        I2C_Init();
-
-        if (DS3231_ReadTime(time))
-        {
-            if (RTC_Time_Is_Valid(time))
-            {
-                return 1;
-            }
-        }
-
-        Relay_Off();
-        I2C_Init();
-        Delay_Approx_250ms();
-    }
-
-    return 0;
-}
-# 974 "EAS_ITank_RTC_Interface_40min_Updated.c"
-static _Bool Is_Sunday_Enabled(void)
-{
-    return (GPIObits.GP4 == 1);
-}
-
-static _Bool Is_Hour_Window_Enabled(uint8_t hour, uint8_t minute)
-{
-    _Bool dip2_enabled;
-
-    dip2_enabled = (GPIObits.GP5 == 1);
-
-
-    if (!dip2_enabled)
-    {
-        return 1;
-    }
-
-
-
-
-    if (hour < 8)
-    {
-        return 0;
-    }
-
-    if (hour < 18)
-    {
-        return 1;
-    }
-
-    if ((hour == 18) && (minute == 0U))
-    {
-        return 1;
-    }
-
-    return 0;
-}
-
-static _Bool Is_Test_Mode_Enabled(void)
-{
-    return (GPIObits.GP3 == 0);
-}
-
-static _Bool Is_Allowed_Day_And_Hour(const RTC_Time *now)
-{
-
-    if ((now->day_of_week == 1) && !Is_Sunday_Enabled())
-    {
-        return 0;
-    }
-
-
-    if (!Is_Hour_Window_Enabled(now->hour, now->minute))
-    {
-        return 0;
-    }
-
-    return 1;
-}
-
-static _Bool Is_Scheduled_Relay_Time(const RTC_Time *now)
-{
-    uint16_t minutes_from_midnight;
-
-    if (!Is_Allowed_Day_And_Hour(now))
-    {
-        return 0;
-    }
-
-
-
-
-    minutes_from_midnight =
-        ((uint16_t)now->hour * 60U) + (uint16_t)now->minute;
-
-
-    return ((minutes_from_midnight % 40) == 0U);
-}
-
-static _Bool Already_Triggered_This_Minute(const RTC_Time *now,
-                                          uint8_t last_hour,
-                                          uint8_t last_minute,
-                                          uint8_t last_date,
-                                          uint8_t last_month,
-                                          uint8_t last_year)
-{
-    if (now->hour != last_hour)
-    {
-        return 0;
-    }
-
-    if (now->minute != last_minute)
-    {
-        return 0;
-    }
-
-    if (now->date != last_date)
-    {
-        return 0;
-    }
-
-    if (now->month != last_month)
-    {
-        return 0;
-    }
-
-    if (now->year != last_year)
-    {
-        return 0;
-    }
-
-    return 1;
-}
-
-
-
-
-static void Init_Device(void)
-{
-    ANSEL = 0x00;
-    ADCON0 = 0x00;
-    CMCON0 = 0x07;
-
-    OSCCONbits.IRCF = 0b110;
-    OSCCONbits.SCS = 1;
-
-    GPIO = 0x00;
-
-
-    TRISIObits.TRISIO0 = 0;
-    Relay_Off();
-
-
-    SDA_Release();
-
-
-    SCL_Release();
-
-
-    TRISIObits.TRISIO3 = 1;
-
-
-    TRISIObits.TRISIO4 = 1;
-
-
-    TRISIObits.TRISIO5 = 1;
-
-    Timer0_Init_For_Delay();
-}
-
-
-
-
-void main(void)
-{
-    RTC_Time now;
-
-    uint8_t last_trigger_hour = 0xFF;
-    uint8_t last_trigger_minute = 0xFF;
-    uint8_t last_trigger_date = 0xFF;
-    uint8_t last_trigger_month = 0xFF;
-    uint8_t last_trigger_year = 0xFF;
-
-    Init_Device();
-    I2C_Init();
-
-
-    (void)EEPROM_Load_Last_Trigger(&last_trigger_hour,
-                                   &last_trigger_minute,
-                                   &last_trigger_date,
-                                   &last_trigger_month,
-                                   &last_trigger_year);
-# 1169 "EAS_ITank_RTC_Interface_40min_Updated.c"
-    Delay_Seconds(1);
-
-    while (!DS3231_ReadTime_With_Retry(&now))
-    {
-        Relay_Off();
-        I2C_Init();
-        Delay_Seconds(1);
-    }
-
-    while (1)
-    {
-
-
-
-        if (Is_Test_Mode_Enabled())
-        {
-            Relay_Test_Cycle();
-            continue;
-        }
-
-
-        if (DS3231_ReadTime_With_Retry(&now))
-        {
-            if (Is_Scheduled_Relay_Time(&now))
-            {
-                _Bool already_triggered;
-
-                already_triggered = Already_Triggered_This_Minute(&now,
-                                                                   last_trigger_hour,
-                                                                   last_trigger_minute,
-                                                                   last_trigger_date,
-                                                                   last_trigger_month,
-                                                                   last_trigger_year);
-
-                if (!already_triggered)
-                {
-
-
-                    EEPROM_Save_Last_Trigger(now.hour,
-                                             now.minute,
-                                             now.date,
-                                             now.month,
-                                             now.year);
-
-                    last_trigger_hour = now.hour;
-                    last_trigger_minute = now.minute;
-                    last_trigger_date = now.date;
-                    last_trigger_month = now.month;
-                    last_trigger_year = now.year;
-
-                    Relay_Reset_Pulse();
-                }
-            }
-        }
-        else
-        {
-            Relay_Off();
-            I2C_Init();
-            Delay_Approx_1s();
-        }
-
-        Delay_Approx_250ms();
-    }
+ __memcpyee(addr,(unsigned char *) &data,4);
+ return data;
 }
