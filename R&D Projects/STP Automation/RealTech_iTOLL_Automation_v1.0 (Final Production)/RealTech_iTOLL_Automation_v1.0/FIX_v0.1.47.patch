@@ -1,8 +1,0 @@
---- a/src/RfidVehicleAccess.App/Services/VehicleApiImportService.cs
-+++ b/src/RfidVehicleAccess.App/Services/VehicleApiImportService.cs
-@@
- using System.IO.Compression;
- using System.Net;
-+using System.Net.Http;
- using System.Net.Http.Headers;
- using System.Net.Http.Json;

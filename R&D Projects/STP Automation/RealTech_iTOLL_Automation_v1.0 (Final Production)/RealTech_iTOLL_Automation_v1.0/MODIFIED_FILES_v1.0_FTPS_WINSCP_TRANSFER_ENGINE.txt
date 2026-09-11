@@ -1,5 +1,0 @@
-src/RfidVehicleAccess.App/RfidVehicleAccess.App.csproj
-src/RfidVehicleAccess.App/Services/ImageUploadService.cs
-CHANGES_v1.0_FTPS_WINSCP_TRANSFER_ENGINE.md
-TESTING_v1.0_FTPS_WINSCP_TRANSFER_ENGINE.md
-MODIFIED_FILES_v1.0_FTPS_WINSCP_TRANSFER_ENGINE.txt
