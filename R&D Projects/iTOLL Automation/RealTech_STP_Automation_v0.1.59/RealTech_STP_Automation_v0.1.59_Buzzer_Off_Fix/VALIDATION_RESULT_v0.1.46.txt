@@ -1,0 +1,31 @@
+# RealTech STP Automation v0.1.46 Validation Result
+
+Static validation completed successfully: 42/42 checks passed.
+
+PASS: appsettings.json parses successfully.
+PASS: API endpoint, username and 30-second default timeout are present.
+PASS: All WPF XAML files and the project XML parse successfully.
+PASS: Application, assembly and file versions are 0.1.46.
+PASS: Payment Configuration authentication text no longer displays or hints at password 7799.
+PASS: The password entry remains a masked WPF PasswordBox.
+PASS: Data menu contains Sync Registered Vehicles from API.
+PASS: VehicleApiImportService is registered with dependency injection.
+PASS: MainViewModel receives the API service and exposes an asynchronous API import command.
+PASS: Server Panel loads, edits, validates and saves API endpoint, username and timeout settings.
+PASS: API integration uses HTTP POST with an application/json username payload.
+PASS: Direct CSV, plain URL, JSON link and relative-link response handling is present.
+PASS: API download size is limited to 50 MB.
+PASS: Downloaded CSV header validation requires RFID and vehicle-number columns.
+PASS: Existing VehicleImportService rules are reused for category, balance, access type, duplicates and record updates.
+PASS: Temporary API download files are removed after success or failure.
+PASS: Modified C# files passed lexical delimiter/string/comment balance checks.
+PASS: v0.1.46 change, test and modified-file documentation exists.
+
+Build limitation:
+- A full dotnet build could not be executed because the validation environment does not contain the .NET SDK, csc, MSBuild or Mono compiler.
+- Run the following on a Windows computer with the .NET 8 SDK:
+  dotnet build src\RfidVehicleAccess.App\RfidVehicleAccess.App.csproj -c Release
+
+API test limitation:
+- The external API could not be live-tested from this sandbox because the host was not reachable for a POST request from the execution environment.
+- The client therefore accepts several common response formats and provides detailed HTTP/response errors for on-site testing.
