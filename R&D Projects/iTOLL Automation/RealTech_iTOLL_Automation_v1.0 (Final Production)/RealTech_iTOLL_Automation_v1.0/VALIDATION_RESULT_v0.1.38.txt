@@ -1,0 +1,9 @@
+RealTech iTOLL Automation v0.1.38 validation result
+================================================
+PASS - appsettings.json parsed successfully.
+PASS - all C# files passed lexical delimiter/string/comment balance checks.
+PASS - all XAML and csproj files parsed as XML.
+PASS - v0.1.37-style SQLite trips schema migrated with all v0.1.38 columns.
+PASS - pending retry eligibility excludes future retries and includes due/new records.
+PASS - image-upload state, retry state, and final synced state updates were exercised.
+NOTE - A Windows/.NET build was not executed because this environment does not contain the .NET SDK.

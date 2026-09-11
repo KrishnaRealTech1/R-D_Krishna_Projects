@@ -1,0 +1,39 @@
+# RealTech iTOLL Automation v0.1.45 Validation Result
+
+Checks passed: 25/25
+
+- PASS: JSON configuration parses
+- PASS: Auto-delete enabled by default
+- PASS: Image retention defaults to 30
+- PASS: Log retention defaults to 30
+- PASS: Application version is 0.1.45
+- PASS: XAML and project XML parse
+- PASS: C# files have balanced lexical structure
+- PASS: Server Panel loaded settings all have editors
+- PASS: Server Panel read settings all have editors
+- PASS: Server Panel contains Storage.AutoDeleteEnabled
+- PASS: Server Panel contains Storage.ImageRetentionDays
+- PASS: Server Panel contains Storage.LogRetentionDays
+- PASS: Cleanup worker registered as singleton
+- PASS: Cleanup worker registered as hosted service
+- PASS: Save & Apply requests immediate cleanup
+- PASS: Cleanup runs every 24 hours
+- PASS: Cleanup only evaluates date folders
+- PASS: Database path is not passed to cleanup
+- PASS: CSV sample has expected headers
+- PASS: CSV sample includes 10000 Liter Capacity
+- PASS: CSV sample includes 6000 Liter Capacity
+- PASS: CSV sample includes paid rows
+- PASS: CHANGES_v0.1.45.md exists
+- PASS: TESTING_v0.1.45_STORAGE_RETENTION.md exists
+- PASS: MODIFIED_FILES_v0.1.45.txt exists
+
+## Build status
+
+- The container does not include the .NET SDK, so a full `dotnet build` could not be executed here.
+- Required Windows/SDK validation command:
+
+```powershell
+dotnet restore RfidVehicleAccess.sln
+dotnet build RfidVehicleAccess.sln -c Release
+```
