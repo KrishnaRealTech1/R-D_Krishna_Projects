@@ -1,0 +1,2186 @@
+Archive member included because of file (symbol)
+
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+                              ./custom/main.o (Ql_ADC_Register)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+                              ./custom/main.o (Ql_EINT_RegisterFast)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+                              ./custom/fota/src/fota_main.o (Ql_FOTA_Init)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+                              ./custom/main.o (Ql_GPIO_Init)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+                              ./custom/fota/src/fota_main.o (Ql_GPRS_GetPDPContextId)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+                              ./custom/main.o (Ql_IIC_Init)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                              ./ril/src/ril_sms.o (LIB_SMS_IsValidHexStr)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+                              ./ril/src/ril_bluetooth.o (Ql_MEM_Alloc)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+                              G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o) (api_notsup)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+                              ./ril/src/ril_bluetooth.o (Ql_Debug_Trace)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_aux.o)
+                              ./custom/config/sys_config.o (proc_reserved2)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+                              ./custom/config/sys_config.o (proc_reserved1)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+                              ./custom/fota/src/fota_http.o (Ql_SOC_CreateEx)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+                              ./custom/main.o (Ql_SPI_Init)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                              ./ril/src/Ril_dtmf.o (Ql_atof)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+                              ./ril/src/ril_ftp.o (Ql_Sleep)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                              ./custom/main.o (Ql_OS_GetMessage)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+                              ./custom/main.o (Ql_SetLocalTime)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+                              ./custom/fota/src/fota_http.o (Ql_Timer_Register)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+                              ./custom/main.o (Ql_UART_Register)
+G:\IHOME_V1.0\libs\gcc\libapp_start.a(ocpu_init.o)
+                              G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o) (_OCPU_InitUserMem)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memcpy.o)
+                              G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o) (memcpy)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memset.o)
+                              ./ril/src/ril_alarm.o (memset)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-strncasecmp.o)
+                              ./custom/main.o (strncasecmp)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-ctype_.o)
+                              C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-strncasecmp.o) (__ctype_ptr__)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_udivsi3.o)
+                              ./custom/fota/src/fota_http.o (__aeabi_uidiv)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_divsi3.o)
+                              ./custom/main.o (__aeabi_idiv)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_dvmd_tls.o)
+                              C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_addsubdf3.o)
+                              ./custom/main.o (__aeabi_ui2d)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivdf3.o)
+                              ./custom/main.o (__aeabi_dmul)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixdfsi.o)
+                              ./ril/src/Ril_dtmf.o (__aeabi_d2iz)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixunsdfsi.o)
+                              ./custom/main.o (__aeabi_d2uiz)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_truncdfsf2.o)
+                              ./ril/src/ril_location.o (__aeabi_d2f)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivsf3.o)
+                              ./custom/main.o (__aeabi_fmul)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_cmpsf2.o)
+                              ./custom/main.o (__aeabi_fcmple)
+C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixsfsi.o)
+                              ./custom/main.o (__aeabi_f2iz)
+
+Allocating common symbols
+Common symbol       size              file
+
+_backlightval       0x1               ./custom/main.o
+id_read             0x14              ./custom/main.o
+Ql_snprintf         0x4               G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+Ql_sprintf          0x4               G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+Ql_Debug_Trace      0x4               G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+SecureDataStringLen
+                    0x4               ./ril/src/ril_system.o
+u4OverflowPkt       0x4               ./example/nema_pro.o
+Ql_vsprintf         0x4               G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+Ql_sscanf           0x4               G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+datalen             0x1               ./custom/main.o
+rx_state            0x1               ./example/nema_pro.o
+g_comingCall        0x124             ./ril/src/ril_telephony.o
+_addr               0x1               ./custom/main.o
+Fota_gprsCfg        0xb0              ./custom/fota/src/fota_main.o
+_displaycontrol     0x1               ./custom/main.o
+msgbuf              0x64              ./custom/main.o
+_charsize           0x1               ./custom/main.o
+command             0xc8              ./custom/main.o
+okflag              0x1               ./custom/main.o
+temp_mem            0x44c             ./custom/main.o
+_displaymode        0x1               ./custom/main.o
+z                   0x5               ./custom/main.o
+FotaConfig          0x10              ./custom/fota/src/fota_main.o
+_displayfunction    0x1               ./custom/main.o
+RSSI                0x4               ./custom/main.o
+id_que              0x600             ./example/nema_pro.o
+_cols               0x1               ./custom/main.o
+mobilenum           0xf               ./custom/main.o
+u4PktInQueue        0x4               ./example/nema_pro.o
+data                0x3d              ./custom/main.o
+gsm_msg             0xc8              ./custom/main.o
+time                0x1c              ./custom/main.o
+_mode               0x1               ./custom/main.o
+id_que_tail         0x2               ./example/nema_pro.o
+id_que_head         0x2               ./example/nema_pro.o
+httpMainContext     0x234             ./custom/fota/src/fota_http.o
+totalSeconds        0x8               ./custom/main.o
+devicename          0x14              ./custom/main.o
+rx_que              0x8000            ./example/nema_pro.o
+smsbuf              0xa               ./custom/main.o
+rd_buf              0x100             ./example/nema_pro.o
+_rows               0x1               ./custom/main.o
+rx_que_head         0x2               ./example/nema_pro.o
+u4SyncPkt           0x4               ./example/nema_pro.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 ./ril/src/Ril_dtmf.o
+ .text          0x00000000      0x534 ./ril/src/ril_alarm.o
+ .data          0x00000000        0x0 ./ril/src/ril_alarm.o
+ .bss           0x00000000        0x0 ./ril/src/ril_alarm.o
+ .rodata        0x00000000       0x50 ./ril/src/ril_alarm.o
+ .rodata.str1.4
+                0x00000000       0x90 ./ril/src/ril_alarm.o
+ .comment       0x00000000       0x31 ./ril/src/ril_alarm.o
+ .ARM.attributes
+                0x00000000       0x2b ./ril/src/ril_alarm.o
+ .data          0x00000000        0x0 ./ril/src/ril_atResponse.o
+ .text          0x00000000      0xae4 ./ril/src/ril_audio.o
+ .data          0x00000000        0x1 ./ril/src/ril_audio.o
+ .rodata.str1.4
+                0x00000000      0x198 ./ril/src/ril_audio.o
+ .data          0x00000000        0x0 ./ril/src/ril_ble.o
+ .data          0x00000000        0x0 ./ril/src/ril_custom.o
+ .text          0x00000000      0xfcc ./ril/src/ril_ftp.o
+ .data          0x00000000        0x0 ./ril/src/ril_ftp.o
+ .bss           0x00000000        0x0 ./ril/src/ril_ftp.o
+ .rodata.str1.4
+                0x00000000      0x2c0 ./ril/src/ril_ftp.o
+ .comment       0x00000000       0x31 ./ril/src/ril_ftp.o
+ .ARM.attributes
+                0x00000000       0x2b ./ril/src/ril_ftp.o
+ .data          0x00000000        0x0 ./ril/src/ril_gps.o
+ .text          0x00000000      0x494 ./ril/src/ril_http.o
+ .data          0x00000000        0x0 ./ril/src/ril_http.o
+ .rodata        0x00000000       0x68 ./ril/src/ril_http.o
+ .rodata.str1.4
+                0x00000000       0x34 ./ril/src/ril_http.o
+ .bss           0x00000000        0x0 ./ril/src/ril_init.o
+ .data          0x00000000        0x0 ./ril/src/ril_location.o
+ .data          0x00000000        0x0 ./ril/src/ril_network.o
+ .bss           0x00000000        0x0 ./ril/src/ril_network.o
+ .data          0x00000000        0x0 ./ril/src/ril_ntp.o
+ .data          0x00000000        0x0 ./ril/src/ril_sim.o
+ .bss           0x00000000        0x0 ./ril/src/ril_sim.o
+ .data          0x00000000        0x0 ./ril/src/ril_sms.o
+ .text          0x00000000      0x90c ./ril/src/ril_system.o
+ .data          0x00000000        0x0 ./ril/src/ril_system.o
+ .bss           0x00000000        0x1 ./ril/src/ril_system.o
+ .rodata        0x00000000        0x8 ./ril/src/ril_system.o
+ .rodata.str1.4
+                0x00000000       0x90 ./ril/src/ril_system.o
+ .comment       0x00000000       0x31 ./ril/src/ril_system.o
+ .ARM.attributes
+                0x00000000       0x2b ./ril/src/ril_system.o
+ COMMON         0x00000000        0x4 ./ril/src/ril_system.o
+ .data          0x00000000        0x0 ./ril/src/ril_telephony.o
+ .bss           0x00000000        0x0 ./ril/src/ril_telephony.o
+ .data          0x00000000        0x0 ./ril/src/ril_urc.o
+ .data          0x00000000        0x0 ./ril/src/ril_util.o
+ .bss           0x00000000        0x0 ./ril/src/ril_util.o
+ .text          0x00000000        0x0 ./example/Example_gps_iic.o
+ .data          0x00000000        0x0 ./example/Example_gps_iic.o
+ .bss           0x00000000        0x0 ./example/Example_gps_iic.o
+ .comment       0x00000000       0x31 ./example/Example_gps_iic.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/Example_gps_iic.o
+ .text          0x00000000        0x0 ./example/example_adc.o
+ .data          0x00000000        0x0 ./example/example_adc.o
+ .bss           0x00000000        0x0 ./example/example_adc.o
+ .comment       0x00000000       0x31 ./example/example_adc.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_adc.o
+ .text          0x00000000        0x0 ./example/example_alarm.o
+ .data          0x00000000        0x0 ./example/example_alarm.o
+ .bss           0x00000000        0x0 ./example/example_alarm.o
+ .comment       0x00000000       0x31 ./example/example_alarm.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_alarm.o
+ .text          0x00000000        0x0 ./example/example_audio.o
+ .data          0x00000000        0x0 ./example/example_audio.o
+ .bss           0x00000000        0x0 ./example/example_audio.o
+ .comment       0x00000000       0x31 ./example/example_audio.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_audio.o
+ .text          0x00000000        0x0 ./example/example_ble.o
+ .data          0x00000000        0x0 ./example/example_ble.o
+ .bss           0x00000000        0x0 ./example/example_ble.o
+ .comment       0x00000000       0x31 ./example/example_ble.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_ble.o
+ .text          0x00000000        0x0 ./example/example_bluetooth.o
+ .data          0x00000000        0x0 ./example/example_bluetooth.o
+ .bss           0x00000000        0x0 ./example/example_bluetooth.o
+ .comment       0x00000000       0x31 ./example/example_bluetooth.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_bluetooth.o
+ .text          0x00000000        0x0 ./example/example_call.o
+ .data          0x00000000        0x0 ./example/example_call.o
+ .bss           0x00000000        0x0 ./example/example_call.o
+ .comment       0x00000000       0x31 ./example/example_call.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_call.o
+ .text          0x00000000        0x0 ./example/example_clk.o
+ .data          0x00000000        0x0 ./example/example_clk.o
+ .bss           0x00000000        0x0 ./example/example_clk.o
+ .comment       0x00000000       0x31 ./example/example_clk.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_clk.o
+ .text          0x00000000        0x0 ./example/example_csd.o
+ .data          0x00000000        0x0 ./example/example_csd.o
+ .bss           0x00000000        0x0 ./example/example_csd.o
+ .comment       0x00000000       0x31 ./example/example_csd.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_csd.o
+ .text          0x00000000        0x0 ./example/example_download_epo.o
+ .data          0x00000000        0x0 ./example/example_download_epo.o
+ .bss           0x00000000        0x0 ./example/example_download_epo.o
+ .comment       0x00000000       0x31 ./example/example_download_epo.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_download_epo.o
+ .text          0x00000000        0x0 ./example/example_dtmf.o
+ .data          0x00000000        0x0 ./example/example_dtmf.o
+ .bss           0x00000000        0x0 ./example/example_dtmf.o
+ .comment       0x00000000       0x31 ./example/example_dtmf.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_dtmf.o
+ .text          0x00000000        0x0 ./example/example_eint.o
+ .data          0x00000000        0x0 ./example/example_eint.o
+ .bss           0x00000000        0x0 ./example/example_eint.o
+ .comment       0x00000000       0x31 ./example/example_eint.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_eint.o
+ .text          0x00000000        0x0 ./example/example_file.o
+ .data          0x00000000        0x0 ./example/example_file.o
+ .bss           0x00000000        0x0 ./example/example_file.o
+ .comment       0x00000000       0x31 ./example/example_file.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_file.o
+ .text          0x00000000        0x0 ./example/example_float_math.o
+ .data          0x00000000        0x0 ./example/example_float_math.o
+ .bss           0x00000000        0x0 ./example/example_float_math.o
+ .comment       0x00000000       0x31 ./example/example_float_math.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_float_math.o
+ .text          0x00000000        0x0 ./example/example_fota_ftp.o
+ .data          0x00000000        0x0 ./example/example_fota_ftp.o
+ .bss           0x00000000        0x0 ./example/example_fota_ftp.o
+ .comment       0x00000000       0x31 ./example/example_fota_ftp.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_fota_ftp.o
+ .text          0x00000000        0x0 ./example/example_fota_http.o
+ .data          0x00000000        0x0 ./example/example_fota_http.o
+ .bss           0x00000000        0x0 ./example/example_fota_http.o
+ .comment       0x00000000       0x31 ./example/example_fota_http.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_fota_http.o
+ .text          0x00000000        0x0 ./example/example_ftp.o
+ .data          0x00000000        0x0 ./example/example_ftp.o
+ .bss           0x00000000        0x0 ./example/example_ftp.o
+ .comment       0x00000000       0x31 ./example/example_ftp.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_ftp.o
+ .text          0x00000000        0x0 ./example/example_gpio.o
+ .data          0x00000000        0x0 ./example/example_gpio.o
+ .bss           0x00000000        0x0 ./example/example_gpio.o
+ .comment       0x00000000       0x31 ./example/example_gpio.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_gpio.o
+ .text          0x00000000        0x0 ./example/example_gps.o
+ .data          0x00000000        0x0 ./example/example_gps.o
+ .bss           0x00000000        0x0 ./example/example_gps.o
+ .comment       0x00000000       0x31 ./example/example_gps.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_gps.o
+ .text          0x00000000        0x0 ./example/example_http.o
+ .data          0x00000000        0x0 ./example/example_http.o
+ .bss           0x00000000        0x0 ./example/example_http.o
+ .comment       0x00000000       0x31 ./example/example_http.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_http.o
+ .text          0x00000000        0x0 ./example/example_iic.o
+ .data          0x00000000        0x0 ./example/example_iic.o
+ .bss           0x00000000        0x0 ./example/example_iic.o
+ .comment       0x00000000       0x31 ./example/example_iic.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_iic.o
+ .text          0x00000000        0x0 ./example/example_location.o
+ .data          0x00000000        0x0 ./example/example_location.o
+ .bss           0x00000000        0x0 ./example/example_location.o
+ .comment       0x00000000       0x31 ./example/example_location.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_location.o
+ .text          0x00000000        0x0 ./example/example_memory.o
+ .data          0x00000000        0x0 ./example/example_memory.o
+ .bss           0x00000000        0x0 ./example/example_memory.o
+ .comment       0x00000000       0x31 ./example/example_memory.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_memory.o
+ .text          0x00000000        0x0 ./example/example_multitask.o
+ .data          0x00000000        0x0 ./example/example_multitask.o
+ .bss           0x00000000        0x0 ./example/example_multitask.o
+ .comment       0x00000000       0x31 ./example/example_multitask.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_multitask.o
+ .text          0x00000000        0x0 ./example/example_multitask_port.o
+ .data          0x00000000        0x0 ./example/example_multitask_port.o
+ .bss           0x00000000        0x0 ./example/example_multitask_port.o
+ .comment       0x00000000       0x31 ./example/example_multitask_port.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_multitask_port.o
+ .text          0x00000000        0x0 ./example/example_pwm.o
+ .data          0x00000000        0x0 ./example/example_pwm.o
+ .bss           0x00000000        0x0 ./example/example_pwm.o
+ .comment       0x00000000       0x31 ./example/example_pwm.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_pwm.o
+ .text          0x00000000        0x0 ./example/example_sms.o
+ .data          0x00000000        0x0 ./example/example_sms.o
+ .bss           0x00000000        0x0 ./example/example_sms.o
+ .comment       0x00000000       0x31 ./example/example_sms.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_sms.o
+ .text          0x00000000        0x0 ./example/example_spi.o
+ .data          0x00000000        0x0 ./example/example_spi.o
+ .bss           0x00000000        0x0 ./example/example_spi.o
+ .comment       0x00000000       0x31 ./example/example_spi.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_spi.o
+ .text          0x00000000        0x0 ./example/example_system.o
+ .data          0x00000000        0x0 ./example/example_system.o
+ .bss           0x00000000        0x0 ./example/example_system.o
+ .comment       0x00000000       0x31 ./example/example_system.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_system.o
+ .text          0x00000000        0x0 ./example/example_tcp_demo.o
+ .data          0x00000000        0x0 ./example/example_tcp_demo.o
+ .bss           0x00000000        0x0 ./example/example_tcp_demo.o
+ .comment       0x00000000       0x31 ./example/example_tcp_demo.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_tcp_demo.o
+ .text          0x00000000        0x0 ./example/example_tcpclient.o
+ .data          0x00000000        0x0 ./example/example_tcpclient.o
+ .bss           0x00000000        0x0 ./example/example_tcpclient.o
+ .comment       0x00000000       0x31 ./example/example_tcpclient.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_tcpclient.o
+ .text          0x00000000        0x0 ./example/example_tcpserver.o
+ .data          0x00000000        0x0 ./example/example_tcpserver.o
+ .bss           0x00000000        0x0 ./example/example_tcpserver.o
+ .comment       0x00000000       0x31 ./example/example_tcpserver.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_tcpserver.o
+ .text          0x00000000        0x0 ./example/example_time.o
+ .data          0x00000000        0x0 ./example/example_time.o
+ .bss           0x00000000        0x0 ./example/example_time.o
+ .comment       0x00000000       0x31 ./example/example_time.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_time.o
+ .text          0x00000000        0x0 ./example/example_timer.o
+ .data          0x00000000        0x0 ./example/example_timer.o
+ .bss           0x00000000        0x0 ./example/example_timer.o
+ .comment       0x00000000       0x31 ./example/example_timer.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_timer.o
+ .text          0x00000000        0x0 ./example/example_transpass.o
+ .data          0x00000000        0x0 ./example/example_transpass.o
+ .bss           0x00000000        0x0 ./example/example_transpass.o
+ .comment       0x00000000       0x31 ./example/example_transpass.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_transpass.o
+ .text          0x00000000        0x0 ./example/example_udpclient.o
+ .data          0x00000000        0x0 ./example/example_udpclient.o
+ .bss           0x00000000        0x0 ./example/example_udpclient.o
+ .comment       0x00000000       0x31 ./example/example_udpclient.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_udpclient.o
+ .text          0x00000000        0x0 ./example/example_udpserver.o
+ .data          0x00000000        0x0 ./example/example_udpserver.o
+ .bss           0x00000000        0x0 ./example/example_udpserver.o
+ .comment       0x00000000       0x31 ./example/example_udpserver.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_udpserver.o
+ .text          0x00000000        0x0 ./example/example_watchdog.o
+ .data          0x00000000        0x0 ./example/example_watchdog.o
+ .bss           0x00000000        0x0 ./example/example_watchdog.o
+ .comment       0x00000000       0x31 ./example/example_watchdog.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/example_watchdog.o
+ .text          0x00000000      0xa08 ./example/nema_pro.o
+ .data          0x00000000        0x0 ./example/nema_pro.o
+ .bss           0x00000000      0xa08 ./example/nema_pro.o
+ .rodata.str1.4
+                0x00000000      0x1ac ./example/nema_pro.o
+ .comment       0x00000000       0x31 ./example/nema_pro.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/nema_pro.o
+ COMMON         0x00000000     0x8718 ./example/nema_pro.o
+ .text          0x00000000      0x188 ./example/utility.o
+ .data          0x00000000        0x0 ./example/utility.o
+ .bss           0x00000000        0x0 ./example/utility.o
+ .rodata.str1.4
+                0x00000000       0x10 ./example/utility.o
+ .comment       0x00000000       0x31 ./example/utility.o
+ .ARM.attributes
+                0x00000000       0x2b ./example/utility.o
+ .text          0x00000000        0x0 ./custom/fota/src/fota_ftp.o
+ .data          0x00000000        0x0 ./custom/fota/src/fota_ftp.o
+ .bss           0x00000000        0x0 ./custom/fota/src/fota_ftp.o
+ .comment       0x00000000       0x31 ./custom/fota/src/fota_ftp.o
+ .ARM.attributes
+                0x00000000       0x2b ./custom/fota/src/fota_ftp.o
+ .bss           0x00000000        0x0 ./custom/fota/src/fota_http.o
+ .data          0x00000000        0x0 ./custom/config/custom_sys_cfg.o
+ .bss           0x00000000        0x0 ./custom/config/custom_sys_cfg.o
+ .text          0x00000000        0x0 ./custom/config/sys_config.o
+ .data          0x00000000        0x0 ./custom/config/sys_config.o
+ .bss           0x00000000        0x0 ./custom/config/sys_config.o
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+ .text.Ql_EINT_Register
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+ .text.Ql_EINT_Uninit
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+ .text.Ql_FOTA_ReadData
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .text.Ql_GPIO_SetDirection
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .text.Ql_GPIO_GetDirection
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .text.Ql_GPIO_SetPullSelection
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .text.Ql_GPIO_GetPullSelection
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .text.Ql_GPIO_Uninit
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .text.Ql_GPRS_Activate
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .text.Ql_GPRS_Deactivate
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .text.Ql_GPRS_DeactivateEx
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .text.Ql_GPRS_GetLocalIPAddress
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .text.Ql_GPRS_GetDNSAddress
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .text.Ql_GPRS_SetDNSAddress
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+ .text.Ql_IIC_Read
+                0x00000000       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+ .text.Ql_IIC_Uninit
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+ .bss           0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .text.Ql_StartPlayAudioStream
+                0x00000000       0x7c G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .text.Ql_StopPlayAudioStream
+                0x00000000       0x4c G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .text.Ql_GetRelativeTime_Counter
+                0x00000000       0x40 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .text.Ql_SecondToTicks
+                0x00000000       0x48 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .text.Ql_MillisecondToTicks
+                0x00000000       0x48 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .text.Ql_CalendarTime2LocalTime
+                0x00000000       0x58 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .text.Ql_osChangeTaskPriority
+                0x00000000       0x50 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .rodata.str1.1
+                0x00000000       0xa3 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_aux.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+ .text.get_ril_init_status
+                0x00000000       0x10 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_Register
+                0x00000000       0x84 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_Create
+                0x00000000       0x64 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_Connect
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_GetAckNumber
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_SendTo
+                0x00000000       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_RecvFrom
+                0x00000000       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_Bind
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_Listen
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_Accept
+                0x00000000       0x6c G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_IpHelper_GetIPByHostNameEx
+                0x00000000       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_SetOption
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text.Ql_SOC_SSL_InjectCertification
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+ .text.Ql_SPI_Read
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+ .text.Ql_SPI_Uninit
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .text.Ql_create_api_hash
+                0x00000000       0x28 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .text.Ql_ui64toa
+                0x00000000       0xac G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .text.Ql_itoa  0x00000000       0x9c G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .text.Ql_strcat
+                0x00000000       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .text.Ql_memmove
+                0x00000000       0x88 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .text.Ql_strchr
+                0x00000000       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .text.Ql_isdigit
+                0x00000000       0x14 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .text.Ql_Reset
+                0x00000000       0x74 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .text.Ql_GetUID
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .text.Ql_GetMsSincePwrOn
+                0x00000000       0x84 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .text.Ql_GetCoreVer
+                0x00000000       0x6c G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .text.Ql_OS_CreateSemaphore
+                0x00000000       0x5c G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .text.Ql_OS_TakeSemaphore
+                0x00000000       0x5c G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .text.Ql_OS_GiveSemaphore
+                0x00000000       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .text.Ql_SetLastErrorCode
+                0x00000000       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .text.Ql_GetLastErrorCode
+                0x00000000       0x58 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .text.Ql_OS_GetCurrentTaskPriority
+                0x00000000       0x4c G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .text.Ql_OS_GetCurrenTaskLeftStackSize
+                0x00000000       0x4c G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+ .text.Ql_Mktime
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+ .text.Ql_MKTime2CalendarTime
+                0x00000000       0x64 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+ .text          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_OpenEx
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_RX_Enable
+                0x00000000       0x5c G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_RX_Disable
+                0x00000000       0x5c G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_SetDCBConfig
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_GetDCBConfig
+                0x00000000       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_ClrRxBuffer
+                0x00000000       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_ClrTxBuffer
+                0x00000000       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_GetOption
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_SetOption
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_SetPinStatus
+                0x00000000       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .text.Ql_UART_Close
+                0x00000000       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .data          0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ocpu_init.o)
+ .bss           0x00000000        0x0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ocpu_init.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-strncasecmp.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-strncasecmp.o)
+ .text          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-ctype_.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-ctype_.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixdfsi.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixunsdfsi.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_truncdfsf2.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_truncdfsf2.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_cmpsf2.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_cmpsf2.o)
+ .data          0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixsfsi.o)
+ .bss           0x00000000        0x0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixsfsi.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x102db040         0x00050000         xr
+RAM              0xf03d2000         0x00019000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./ril/src/Ril_dtmf.o
+LOAD ./ril/src/ril_alarm.o
+LOAD ./ril/src/ril_atResponse.o
+LOAD ./ril/src/ril_audio.o
+LOAD ./ril/src/ril_ble.o
+LOAD ./ril/src/ril_bluetooth.o
+LOAD ./ril/src/ril_custom.o
+LOAD ./ril/src/ril_ftp.o
+LOAD ./ril/src/ril_gps.o
+LOAD ./ril/src/ril_http.o
+LOAD ./ril/src/ril_init.o
+LOAD ./ril/src/ril_location.o
+LOAD ./ril/src/ril_network.o
+LOAD ./ril/src/ril_ntp.o
+LOAD ./ril/src/ril_sim.o
+LOAD ./ril/src/ril_sms.o
+LOAD ./ril/src/ril_system.o
+LOAD ./ril/src/ril_telephony.o
+LOAD ./ril/src/ril_urc.o
+LOAD ./ril/src/ril_util.o
+LOAD ./example/Example_gps_iic.o
+LOAD ./example/example_adc.o
+LOAD ./example/example_alarm.o
+LOAD ./example/example_audio.o
+LOAD ./example/example_ble.o
+LOAD ./example/example_bluetooth.o
+LOAD ./example/example_call.o
+LOAD ./example/example_clk.o
+LOAD ./example/example_csd.o
+LOAD ./example/example_download_epo.o
+LOAD ./example/example_dtmf.o
+LOAD ./example/example_eint.o
+LOAD ./example/example_file.o
+LOAD ./example/example_float_math.o
+LOAD ./example/example_fota_ftp.o
+LOAD ./example/example_fota_http.o
+LOAD ./example/example_ftp.o
+LOAD ./example/example_gpio.o
+LOAD ./example/example_gps.o
+LOAD ./example/example_http.o
+LOAD ./example/example_iic.o
+LOAD ./example/example_location.o
+LOAD ./example/example_memory.o
+LOAD ./example/example_multitask.o
+LOAD ./example/example_multitask_port.o
+LOAD ./example/example_pwm.o
+LOAD ./example/example_sms.o
+LOAD ./example/example_spi.o
+LOAD ./example/example_system.o
+LOAD ./example/example_tcp_demo.o
+LOAD ./example/example_tcpclient.o
+LOAD ./example/example_tcpserver.o
+LOAD ./example/example_time.o
+LOAD ./example/example_timer.o
+LOAD ./example/example_transpass.o
+LOAD ./example/example_udpclient.o
+LOAD ./example/example_udpserver.o
+LOAD ./example/example_watchdog.o
+LOAD ./example/nema_pro.o
+LOAD ./example/utility.o
+LOAD ./custom/fota/src/fota_ftp.o
+LOAD ./custom/fota/src/fota_http.o
+LOAD ./custom/fota/src/fota_http_code.o
+LOAD ./custom/fota/src/fota_main.o
+LOAD ./custom/config/custom_sys_cfg.o
+LOAD ./custom/config/sys_config.o
+LOAD ./custom/main.o
+LOAD G:\IHOME_V1.0\libs\gcc\libapp_start.a
+LOAD C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libm.a
+LOAD C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a
+LOAD C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libcs3.a
+LOAD C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a
+START GROUP
+LOAD C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a
+LOAD C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a
+END GROUP
+                0x102db040                . = 0x102db040
+
+.initdata       0x102db040       0x2c
+ *(.initdata)
+ .initdata      0x102db040       0x2c G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+                0x102db040                GADLENTRY
+
+text            0x102db070    0x22108
+ *(.text)
+ .text          0x102db070      0x5b8 ./ril/src/Ril_dtmf.o
+                0x102db16c                RIL_ToneDet_Open
+                0x102db1f0                RIL_ToneDet_Close
+                0x102db268                RIL_ToneDet_Set
+                0x102db314                RIL_ToneDet_Get
+                0x102db3d4                OnURCHandler_QToneDet
+                0x102db4c8                RIL_WDTMF_Send
+                0x102db584                OnURCHandler_QWDTMF
+ .text          0x102db628       0xfc ./ril/src/ril_atResponse.o
+                0x102db628                Ql_RIL_AT_GetErrCode
+                0x102db638                Ql_RIL_AT_SetErrCode
+                0x102db64c                Default_atRsp_callback
+ .text          0x102db724     0x1988 ./ril/src/ril_ble.o
+                0x102dbf78                RIL_BLE_Initialize
+                0x102dbf94                RIL_BT_Gatsreg
+                0x102dc03c                RIL_BT_Gatss
+                0x102dc1c8                RIL_BT_Gatsc
+                0x102dc2e0                RIL_BT_Gatsd
+                0x102dc418                RIL_BT_Gatsst
+                0x102dc578                RIL_BT_Gatsind
+                0x102dc628                RIL_BT_Gatsrsp
+                0x102dc6e0                RIL_BT_Gatsl
+                0x102dc788                RIL_BT_SetLeTxPwr
+                0x102dc81c                RIL_BT_QBTFMPsreg
+                0x102dc8a4                RIL_BT_QBTPXPsreg
+                0x102dc92c                RIL_BT_QBTGatadv
+                0x102dc9b0                RIL_BT_QGatSetadv
+                0x102dca60                RIL_BT_Gatcpu
+                0x102dcafc                RIL_BT_QGatsdisc
+                0x102dcb78                OnURCHandler_BTGatscon
+                0x102dccac                RIL_BT_GetLeLocalAddr
+                0x102dcdac                OnURCHandler_BTGatwreq
+                0x102dcea0                OnURCHandler_BTGatrreq
+                0x102dcf64                OnURCHandler_BTpxpscon
+                0x102dd00c                OnURCHandler_BTfmpscon
+ .text          0x102dd0ac     0x3080 ./ril/src/ril_bluetooth.o
+                0x102ddc38                BT_DevMngmt_GetDeviceId
+                0x102ddc80                BT_DevMngmt_GetPairedId
+                0x102ddcc8                BT_DevMngmt_GetConnId
+                0x102ddd10                BT_DevMngmt_GetProfileId
+                0x102ddd58                BT_DevMngmt_GetDevName
+                0x102ddda0                BT_DevMngmt_GetDevAddr
+                0x102ddde8                RIL_BT_Switch
+                0x102dde70                RIL_BT_GetPwrState
+                0x102ddee0                RIL_BT_SetName
+                0x102ddf7c                RIL_BT_GetName
+                0x102de0b8                RIL_BT_GetLocalAddr
+                0x102de1b0                RIL_BT_SetVisble
+                0x102de264                OnURCHandler_BTVisible
+                0x102de358                RIL_BT_GetVisble
+                0x102de3cc                OnURCHandler_BTScan
+                0x102de690                RIL_BT_GetDevListInfo
+                0x102de708                RIL_BT_GetDevListPointer
+                0x102de714                RIL_BT_StopScan
+                0x102de76c                RIL_BT_QueryState
+                0x102de7d0                RIL_BT_StartScan
+                0x102de890                RIL_BT_Initialize
+                0x102de8c4                RIL_BT_PairReq
+                0x102de96c                OnURCHandler_BTPair
+                0x102deb78                RIL_BT_PairConfirm
+                0x102dec2c                OnURCHandler_BTPairCnf
+                0x102dee68                RIL_BT_Unpair
+                0x102defcc                RIL_BT_GetSupportedProfile
+                0x102df108                RIL_BT_ConnReq
+                0x102df1d0                OnURCHandler_BTConn
+                0x102df464                RIL_BT_SPP_DirectConn
+                0x102df4ec                RIL_BT_ConnAccept
+                0x102df574                OnURCHandler_BTConnCnf
+                0x102df8c8                RIL_BT_Disconnect
+                0x102df978                OnURCHandler_BTDisconn
+                0x102dfba0                RIL_BT_SPP_Send
+                0x102dfc78                RIL_BT_SPP_Read
+                0x102dfd54                OnURCHandler_BTIndication
+ .text          0x102e012c       0x20 ./ril/src/ril_custom.o
+                0x102e012c                Ql_RIL_RcvDataFrmCore
+ .text          0x102e014c      0xac0 ./ril/src/ril_gps.o
+                0x102e060c                RIL_GPS_Open
+                0x102e06b0                RIL_GPS_Read
+                0x102e07e8                RIL_GPS_Read_TimeSync_Status
+                0x102e0890                OnURCHandler_GPSCMD
+                0x102e08fc                RIL_GPS_CMD_Send
+                0x102e09b0                RIL_GPS_EPO_Enable
+                0x102e0a64                RIL_GPS_EPO_Aid
+                0x102e0b04                RIL_GPS_EPO_Config_APN
+ .text          0x102e0c0c       0x10 ./ril/src/ril_init.o
+                0x102e0c0c                RIL_GetInitCmdCnt
+                0x102e0c14                RIL_GetLimitedCmdCnt
+ .text          0x102e0c1c      0x29c ./ril/src/ril_location.o
+                0x102e0c1c                RIL_GetLocation
+                0x102e0cf0                RIL_GetLocationByCell
+                0x102e0de0                OnURCHandler_QCELLLocation
+ .text          0x102e0eb8      0xb70 ./ril/src/ril_network.o
+                0x102e1298                RIL_NW_GetGSMState
+                0x102e130c                RIL_NW_GetGPRSState
+                0x102e1388                RIL_NW_GetSignalQuality
+                0x102e1418                RIL_NW_SetGPRSContext
+                0x102e1494                RIL_NW_SetAPN
+                0x102e15a4                RIL_NW_GetIpStatusByName
+                0x102e1854                RIL_NW_GetIPStatus
+                0x102e189c                RIL_NW_OpenPDPContext
+                0x102e194c                RIL_NW_ClosePDPContext
+                0x102e19b4                RIL_NW_GetOperator
+ .text          0x102e1a28      0x10c ./ril/src/ril_ntp.o
+                0x102e1a28                OnURCHandler_NTPCMD
+                0x102e1a94                RIL_NTP_START
+ .text          0x102e1b34      0x5a4 ./ril/src/ril_sim.o
+                0x102e1c94                RIL_SIM_GetSimStateByName
+                0x102e1f7c                RIL_SIM_GetSimState
+                0x102e1ff0                RIL_SIM_GetIMSI
+                0x102e2064                RIL_SIM_GetCCID
+ .text          0x102e20d8     0x1730 ./ril/src/ril_sms.o
+                0x102e2bb8                RIL_SMS_GetStorage
+                0x102e2bbc                RIL_SMS_SetStorage
+                0x102e2cd0                RIL_SMS_ReadSMS_PDU
+                0x102e2da8                RIL_SMS_ReadSMS_Text
+                0x102e30c4                RIL_SMS_SendSMS_PDU
+                0x102e317c                RIL_SMS_SendSMS_Text
+                0x102e33fc                RIL_SMS_SendSMS_Text_Ext
+                0x102e36f8                RIL_SMS_DeleteSMS
+ .text          0x102e3808      0x2cc ./ril/src/ril_telephony.o
+                0x102e39d0                RIL_Telephony_Dial
+                0x102e3a64                RIL_Telephony_Answer
+                0x102e3aa0                RIL_Telephony_Hangup
+ .text          0x102e3ad4      0xca8 ./ril/src/ril_urc.o
+                0x102e461c                OnURCHandler
+                0x102e46f4                Ql_RIL_IsURCStr
+ .text          0x102e477c      0x4a0 ./ril/src/ril_util.o
+                0x102e477c                Ql_StrPrefixMatch
+                0x102e47cc                Ql_StrToUpper
+                0x102e4828                Ql_HexStrToInt
+                0x102e48bc                Ql_RIL_FindString
+                0x102e4948                Ql_RIL_FindLine
+                0x102e4bc8                Ql_GenHash
+ .text          0x102e4c1c     0x14bc ./custom/fota/src/fota_http.o
+                0x102e4c1c                HttpCallBack_GPRS_Deactived
+                0x102e4c20                Httpcallback_socket_connect
+                0x102e4c24                Httpcallback_socket_close
+                0x102e4c28                Httpcallback_socket_accept
+                0x102e4c2c                Httpcallback_socket_write
+                0x102e4c30                http_TimerCallback
+                0x102e4cc8                HTTP_IsHttpServer
+                0x102e4d20                http_initialize
+                0x102e4dec                http_SendHttpGetHead
+                0x102e5294                http_GetImagefilefromServer
+                0x102e5444                Callback_GetIpByHostName
+                0x102e54b0                HTTP_FotaMain
+                0x102e58a8                http_RecvHttpChunkedBody
+                0x102e5900                http_RecvHttpBody
+                0x102e5cdc                http_RecvHttpHead
+                0x102e5fcc                Httpcallback_socket_read
+                0x102e60d4                HttpCallback_GPRS_Actived
+ .text          0x102e60d8      0x8f4 ./custom/fota/src/fota_http_code.o
+                0x102e60d8                quectel_stricmp_bylength
+                0x102e6148                http_ip_check
+                0x102e619c                http_DecodeURL
+                0x102e6670                find_linesymbol
+                0x102e66f0                http_DecodeHeader
+ .text          0x102e69cc      0x3ac ./custom/fota/src/fota_main.o
+                0x102e6bd0                Ql_FOTA_StartUpgrade
+                0x102e6d70                Ql_FOTA_StopUpgrade
+ .text          0x102e6d78        0xc ./custom/config/custom_sys_cfg.o
+                0x102e6d78                Ql_WTD_GetWDIPinCfg
+ .text          0x102e6d84    0x150ac ./custom/main.o
+                0x102e7bdc                map
+                0x102e7c0c                constrain
+                0x102e7c40                buzz
+                0x102e7cc8                LiquidCrystal_I2C
+                0x102e7d0c                LiquidCrystal_I2C_getBacklight
+                0x102e7d28                LiquidCrystal_I2C_expanderWrite
+                0x102e7e14                LiquidCrystal_I2C_backlight
+                0x102e7e2c                LiquidCrystal_I2C_noBacklight
+                0x102e7e44                LiquidCrystal_I2C_pulseEnable
+                0x102e7e78                LiquidCrystal_I2C_write4bits
+                0x102e7e90                LiquidCrystal_I2C_send
+                0x102e7eb8                LiquidCrystal_I2C_write
+                0x102e7ecc                LiquidCrystal_I2C_command
+                0x102e7ed4                LiquidCrystal_I2C_createChar
+                0x102e7f08                LiquidCrystal_I2C_noAutoscroll
+                0x102e7f24                LiquidCrystal_I2C_autoscroll
+                0x102e7f40                LiquidCrystal_I2C_rightToLeft
+                0x102e7f5c                LiquidCrystal_I2C_leftToRight
+                0x102e7f78                LiquidCrystal_I2C_scrollDisplayRight
+                0x102e7f80                LiquidCrystal_I2C_scrollDisplayLeft
+                0x102e7f88                LiquidCrystal_I2C_blink
+                0x102e7fa4                LiquidCrystal_I2C_blink_on
+                0x102e7fa8                LiquidCrystal_I2C_noBlink
+                0x102e7fc4                LiquidCrystal_I2C_blink_off
+                0x102e7fc8                LiquidCrystal_I2C_cursor
+                0x102e7fe4                LiquidCrystal_I2C_cursor_on
+                0x102e7fe8                LiquidCrystal_I2C_noCursor
+                0x102e8004                LiquidCrystal_I2C_cursor_off
+                0x102e8008                LiquidCrystal_I2C_display
+                0x102e8024                LiquidCrystal_I2C_noDisplay
+                0x102e8040                LiquidCrystal_I2C_setCursor
+                0x102e80a0                LiquidCrystal_I2C_home
+                0x102e80c0                LiquidCrystal_I2C_clear
+                0x102e80e0                LiquidCrystal_I2C_begin
+                0x102e81d4                LiquidCrystal_I2C_printstr
+                0x102e829c                LiquidCrystal_I2C_printchar
+                0x102e82a0                LiquidCrystal_I2C_printnstr
+                0x102e82cc                spi_flash_cs
+                0x102e8304                writereg
+                0x102e8384                readreg
+                0x102e8400                sethigh_powerregs
+                0x102e843c                set_mode
+                0x102e8540                initialise_rfm
+                0x102e8814                setpowerlevel
+                0x102e8844                cansend
+                0x102e8888                ackrequested
+                0x102e88ac                sendframe
+                0x102e8a88                receivebegin
+                0x102e8b04                receivedone
+                0x102e8b4c                sendack
+                0x102e8bd4                ackreceived
+                0x102e8c1c                _send
+                0x102e8ca0                readrssi
+                0x102e8ce0                interrupthandler
+                0x102e8fb0                touch_to_int
+                0x102e9494                get_number
+                0x102e9850                get_id
+                0x102e9988                eeprom_write
+                0x102e9a68                eeprom_read
+                0x102e9b5c                wait_ok
+                0x102ea7a8                del_msg
+                0x102ea814                sms_text
+                0x102ea880                gsm_init
+                0x102eab98                QSDK_Get_Str
+                0x102eae48                RIL_MQTT_QMTOPEN
+                0x102eb040                RIL_MQTT_QMTCONN
+                0x102eb270                RIL_MQTT_QMTPUB
+                0x102eb3dc                RIL_MQTT_QMTSUB
+                0x102eb5b4                RIL_MQTT_QMTCLOSE
+                0x102eb690                RIL_MQTT_QMTCFG_Ali
+                0x102eb770                gprs_init
+                0x102ebc68                bt_init
+                0x102ebe20                get_time
+                0x102ec0fc                read_msg
+                0x102ec194                device_add
+                0x102ec3f8                device_delete
+                0x102ec568                device_enable
+                0x102ec6cc                device_disable
+                0x102ec830                door_status
+                0x102ecb00                light_status1
+                0x102ecc04                proc_main_task
+                0x102edfe4                proc_subtask1
+                0x102f2718                proc_subtask2
+                0x102f39f0                proc_subtask3
+                0x102f50bc                proc_subtask4
+                0x102fa094                proc_subtask5
+ .text          0x102fbe30       0x4c G:\IHOME_V1.0\libs\gcc\libapp_start.a(ocpu_init.o)
+                0x102fbe30                _OCPU_InitUserMem
+ .text          0x102fbe7c      0x10c C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memcpy.o)
+                0x102fbe7c                memcpy
+ .text          0x102fbf88       0x9c C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memset.o)
+                0x102fbf88                memset
+ .text          0x102fc024       0x60 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-strncasecmp.o)
+                0x102fc024                strncasecmp
+ .text          0x102fc084      0x11c C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_udivsi3.o)
+                0x102fc084                __aeabi_uidiv
+                0x102fc084                __udivsi3
+                0x102fc180                __aeabi_uidivmod
+ .text          0x102fc1a0      0x150 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_divsi3.o)
+                0x102fc1a0                __divsi3
+                0x102fc1a0                __aeabi_idiv
+                0x102fc2d0                __aeabi_idivmod
+ .text          0x102fc2f0        0x4 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_dvmd_tls.o)
+                0x102fc2f0                __aeabi_idiv0
+                0x102fc2f0                __aeabi_ldiv0
+ .text          0x102fc2f4      0x41c C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_addsubdf3.o)
+                0x102fc2f4                __aeabi_drsub
+                0x102fc2fc                __aeabi_dsub
+                0x102fc2fc                __subdf3
+                0x102fc300                __aeabi_dadd
+                0x102fc300                __adddf3
+                0x102fc610                __floatunsidf
+                0x102fc610                __aeabi_ui2d
+                0x102fc634                __floatsidf
+                0x102fc634                __aeabi_i2d
+                0x102fc65c                __aeabi_f2d
+                0x102fc65c                __extendsfdf2
+                0x102fc69c                __floatundidf
+                0x102fc69c                __aeabi_ul2d
+                0x102fc6b0                __floatdidf
+                0x102fc6b0                __aeabi_l2d
+ .text          0x102fc710      0x49c C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivdf3.o)
+                0x102fc710                __aeabi_dmul
+                0x102fc710                __muldf3
+                0x102fc9a0                __divdf3
+                0x102fc9a0                __aeabi_ddiv
+ .text          0x102fcbac       0x5c C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixdfsi.o)
+                0x102fcbac                __aeabi_d2iz
+                0x102fcbac                __fixdfsi
+ .text          0x102fcc08       0x54 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixunsdfsi.o)
+                0x102fcc08                __aeabi_d2uiz
+                0x102fcc08                __fixunsdfsi
+ .text          0x102fcc5c       0xa0 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_truncdfsf2.o)
+                0x102fcc5c                __truncdfsf2
+                0x102fcc5c                __aeabi_d2f
+ .text          0x102fccfc      0x2f8 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivsf3.o)
+                0x102fccfc                __mulsf3
+                0x102fccfc                __aeabi_fmul
+                0x102fce94                __aeabi_fdiv
+                0x102fce94                __divsf3
+ .text          0x102fcff4      0x114 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_cmpsf2.o)
+                0x102fcff4                __gesf2
+                0x102fcff4                __gtsf2
+                0x102fcffc                __lesf2
+                0x102fcffc                __ltsf2
+                0x102fd004                __nesf2
+                0x102fd004                __eqsf2
+                0x102fd004                __cmpsf2
+                0x102fd068                __aeabi_cfrcmple
+                0x102fd078                __aeabi_cfcmpeq
+                0x102fd078                __aeabi_cfcmple
+                0x102fd090                __aeabi_fcmpeq
+                0x102fd0a8                __aeabi_fcmplt
+                0x102fd0c0                __aeabi_fcmple
+                0x102fd0d8                __aeabi_fcmpge
+                0x102fd0f0                __aeabi_fcmpgt
+ .text          0x102fd108       0x5c C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixsfsi.o)
+                0x102fd108                __aeabi_f2iz
+                0x102fd108                __fixsfsi
+ *fill*         0x102fd164        0x4 
+ .text.__stub   0x102fd168        0xc linker stubs
+
+.glue_7         0x102fd178        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x102fd178        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x102fd178        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x102fd178        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x102fd178        0x0
+ .iplt          0x00000000        0x0 ./ril/src/Ril_dtmf.o
+
+.text.Ql_ADC_Register
+                0x102fd178       0x70
+ .text.Ql_ADC_Register
+                0x102fd178       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+                0x102fd178                Ql_ADC_Register
+
+.text.Ql_ADC_Init
+                0x102fd1e8       0x70
+ .text.Ql_ADC_Init
+                0x102fd1e8       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+                0x102fd1e8                Ql_ADC_Init
+
+.text.Ql_ADC_Sampling
+                0x102fd258       0x68
+ .text.Ql_ADC_Sampling
+                0x102fd258       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+                0x102fd258                Ql_ADC_Sampling
+
+.text.Ql_EINT_RegisterFast
+                0x102fd2c0       0x70
+ .text.Ql_EINT_RegisterFast
+                0x102fd2c0       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+                0x102fd2c0                Ql_EINT_RegisterFast
+
+.text.Ql_EINT_Init
+                0x102fd330       0x80
+ .text.Ql_EINT_Init
+                0x102fd330       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+                0x102fd330                Ql_EINT_Init
+
+.text.Ql_EINT_GetLevel
+                0x102fd3b0       0x60
+ .text.Ql_EINT_GetLevel
+                0x102fd3b0       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+                0x102fd3b0                Ql_EINT_GetLevel
+
+.text.Ql_EINT_Mask
+                0x102fd410       0x54
+ .text.Ql_EINT_Mask
+                0x102fd410       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+                0x102fd410                Ql_EINT_Mask
+
+.text.Ql_EINT_Unmask
+                0x102fd464       0x54
+ .text.Ql_EINT_Unmask
+                0x102fd464       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+                0x102fd464                Ql_EINT_Unmask
+
+.text.Ql_FOTA_Init
+                0x102fd4b8       0x60
+ .text.Ql_FOTA_Init
+                0x102fd4b8       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+                0x102fd4b8                Ql_FOTA_Init
+
+.text.Ql_FOTA_WriteData
+                0x102fd518       0x68
+ .text.Ql_FOTA_WriteData
+                0x102fd518       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+                0x102fd518                Ql_FOTA_WriteData
+
+.text.Ql_FOTA_Finish
+                0x102fd580       0x58
+ .text.Ql_FOTA_Finish
+                0x102fd580       0x58 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+                0x102fd580                Ql_FOTA_Finish
+
+.text.Ql_FOTA_Update
+                0x102fd5d8       0x58
+ .text.Ql_FOTA_Update
+                0x102fd5d8       0x58 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+                0x102fd5d8                Ql_FOTA_Update
+
+.text.Ql_GPIO_Init
+                0x102fd630       0x78
+ .text.Ql_GPIO_Init
+                0x102fd630       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+                0x102fd630                Ql_GPIO_Init
+
+.text.Ql_GPIO_SetLevel
+                0x102fd6a8       0x68
+ .text.Ql_GPIO_SetLevel
+                0x102fd6a8       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+                0x102fd6a8                Ql_GPIO_SetLevel
+
+.text.Ql_GPIO_GetLevel
+                0x102fd710       0x60
+ .text.Ql_GPIO_GetLevel
+                0x102fd710       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+                0x102fd710                Ql_GPIO_GetLevel
+
+.text.Ql_GPRS_GetPDPCntxtState
+                0x102fd770       0x60
+ .text.Ql_GPRS_GetPDPCntxtState
+                0x102fd770       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+                0x102fd770                Ql_GPRS_GetPDPCntxtState
+
+.text.Ql_GPRS_GetPDPContextId
+                0x102fd7d0       0x60
+ .text.Ql_GPRS_GetPDPContextId
+                0x102fd7d0       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+                0x102fd7d0                Ql_GPRS_GetPDPContextId
+
+.text.Ql_GPRS_Config
+                0x102fd830       0x68
+ .text.Ql_GPRS_Config
+                0x102fd830       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+                0x102fd830                Ql_GPRS_Config
+
+.text.Ql_GPRS_Register
+                0x102fd898       0x70
+ .text.Ql_GPRS_Register
+                0x102fd898       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+                0x102fd898                Ql_GPRS_Register
+
+.text.Ql_GPRS_ActivateEx
+                0x102fd908       0x68
+ .text.Ql_GPRS_ActivateEx
+                0x102fd908       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+                0x102fd908                Ql_GPRS_ActivateEx
+
+.text.Ql_IIC_Init
+                0x102fd970       0x78
+ .text.Ql_IIC_Init
+                0x102fd970       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+                0x102fd970                Ql_IIC_Init
+
+.text.Ql_IIC_Config
+                0x102fd9e8       0x78
+ .text.Ql_IIC_Config
+                0x102fd9e8       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+                0x102fd9e8                Ql_IIC_Config
+
+.text.Ql_IIC_Write
+                0x102fda60       0x78
+ .text.Ql_IIC_Write
+                0x102fda60       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+                0x102fda60                Ql_IIC_Write
+
+.text.Ql_IIC_Write_Read
+                0x102fdad8       0x88
+ .text.Ql_IIC_Write_Read
+                0x102fdad8       0x88 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+                0x102fdad8                Ql_IIC_Write_Read
+
+.text.EncodeAddress
+                0x102fdb60      0x228
+ .text.EncodeAddress
+                0x102fdb60      0x228 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+
+.text.DecodeUserDataHeader
+                0x102fdd88       0xb8
+ .text.DecodeUserDataHeader
+                0x102fdd88       0xb8 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+
+.text.EncodeGSM7Bit.part.2
+                0x102fde40       0xd4
+ .text.EncodeGSM7Bit.part.2
+                0x102fde40       0xd4 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+
+.text.DecodeGSM7Bit
+                0x102fdf14      0x148
+ .text.DecodeGSM7Bit
+                0x102fdf14      0x148 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+
+.text.DecodeAddress
+                0x102fe05c      0x218
+ .text.DecodeAddress
+                0x102fe05c      0x218 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+
+.text.DecordUserDataBody.part.5
+                0x102fe274      0x180
+ .text.DecordUserDataBody.part.5
+                0x102fe274      0x180 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+
+.text.DecodeTimeStamp.constprop.8
+                0x102fe3f4       0xfc
+ .text.DecodeTimeStamp.constprop.8
+                0x102fe3f4       0xfc G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+
+.text.LIB_SMS_IsValidHexStr
+                0x102fe4f0       0x54
+ .text.LIB_SMS_IsValidHexStr
+                0x102fe4f0       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                0x102fe4f0                LIB_SMS_IsValidHexStr
+
+.text.LIB_SMS_ConvHexOctToHexStr
+                0x102fe544       0xa8
+ .text.LIB_SMS_ConvHexOctToHexStr
+                0x102fe544       0xa8 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                0x102fe544                LIB_SMS_ConvHexOctToHexStr
+
+.text.LIB_SMS_ConvHexStrToHexOct
+                0x102fe5ec       0xe8
+ .text.LIB_SMS_ConvHexStrToHexOct
+                0x102fe5ec       0xe8 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                0x102fe5ec                LIB_SMS_ConvHexStrToHexOct
+
+.text.LIB_SMS_DecodeDCS
+                0x102fe6d4      0x164
+ .text.LIB_SMS_DecodeDCS
+                0x102fe6d4      0x164 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                0x102fe6d4                LIB_SMS_DecodeDCS
+
+.text.LIB_SMS_ConvAlphaToCharSet
+                0x102fe838      0x43c
+ .text.LIB_SMS_ConvAlphaToCharSet
+                0x102fe838      0x43c G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                0x102fe838                LIB_SMS_ConvAlphaToCharSet
+
+.text.LIB_SMS_ConvCharSetToAlpha
+                0x102fec74      0x7b4
+ .text.LIB_SMS_ConvCharSetToAlpha
+                0x102fec74      0x7b4 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                0x102fec74                LIB_SMS_ConvCharSetToAlpha
+
+.text.LIB_SMS_DecodePDUStr
+                0x102ff428      0x500
+ .text.LIB_SMS_DecodePDUStr
+                0x102ff428      0x500 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                0x102ff428                LIB_SMS_DecodePDUStr
+
+.text.LIB_SMS_EncodeSubmitPDU
+                0x102ff928      0x730
+ .text.LIB_SMS_EncodeSubmitPDU
+                0x102ff928      0x730 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+                0x102ff928                LIB_SMS_EncodeSubmitPDU
+
+.text.Ql_MEM_Alloc
+                0x10300058       0x78
+ .text.Ql_MEM_Alloc
+                0x10300058       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+                0x10300058                Ql_MEM_Alloc
+
+.text.Ql_MEM_Free
+                0x103000d0       0x74
+ .text.Ql_MEM_Free
+                0x103000d0       0x74 G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+                0x103000d0                Ql_MEM_Free
+
+.text.ql_InitVFunc
+                0x10300144      0x104
+ .text.ql_InitVFunc
+                0x10300144      0x104 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+                0x10300144                ql_InitVFunc
+
+.text.ocpu_main
+                0x10300248       0xf0
+ .text.ocpu_main
+                0x10300248       0xf0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+                0x10300248                ocpu_main
+
+.text.proc_reserved2
+                0x10300338       0x70
+ .text.proc_reserved2
+                0x10300338       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_aux.o)
+                0x10300338                proc_reserved2
+
+.text.ril_StopATTimer
+                0x103003a8       0x34
+ .text.ril_StopATTimer
+                0x103003a8       0x34 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+
+.text.Callback_OnATTimer
+                0x103003dc       0x4c
+ .text.Callback_OnATTimer
+                0x103003dc       0x4c G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+
+.text.CallBack_SerialPort_Hdlr
+                0x10300428      0x384
+ .text.CallBack_SerialPort_Hdlr
+                0x10300428      0x384 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+
+.text.proc_reserved1
+                0x103007ac      0x200
+ .text.proc_reserved1
+                0x103007ac      0x200 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+                0x103007ac                proc_reserved1
+
+.text.Ql_RIL_Initialize
+                0x103009ac       0xd4
+ .text.Ql_RIL_Initialize
+                0x103009ac       0xd4 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+                0x103009ac                Ql_RIL_Initialize
+
+.text.Ql_RIL_SendATCmd
+                0x10300a80      0x260
+ .text.Ql_RIL_SendATCmd
+                0x10300a80      0x260 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+                0x10300a80                Ql_RIL_SendATCmd
+
+.text.Ql_RIL_WriteDataToCore
+                0x10300ce0       0x24
+ .text.Ql_RIL_WriteDataToCore
+                0x10300ce0       0x24 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+                0x10300ce0                Ql_RIL_WriteDataToCore
+
+.text.Ql_SOC_CreateEx
+                0x10300d04       0x94
+ .text.Ql_SOC_CreateEx
+                0x10300d04       0x94 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+                0x10300d04                Ql_SOC_CreateEx
+
+.text.Ql_SOC_Close
+                0x10300d98       0x60
+ .text.Ql_SOC_Close
+                0x10300d98       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+                0x10300d98                Ql_SOC_Close
+
+.text.Ql_SOC_ConnectEx
+                0x10300df8       0x78
+ .text.Ql_SOC_ConnectEx
+                0x10300df8       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+                0x10300df8                Ql_SOC_ConnectEx
+
+.text.Ql_SOC_Send
+                0x10300e70       0x70
+ .text.Ql_SOC_Send
+                0x10300e70       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+                0x10300e70                Ql_SOC_Send
+
+.text.Ql_SOC_Recv
+                0x10300ee0       0x70
+ .text.Ql_SOC_Recv
+                0x10300ee0       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+                0x10300ee0                Ql_SOC_Recv
+
+.text.Ql_IpHelper_GetIPByHostName
+                0x10300f50       0x78
+ .text.Ql_IpHelper_GetIPByHostName
+                0x10300f50       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+                0x10300f50                Ql_IpHelper_GetIPByHostName
+
+.text.Ql_IpHelper_ConvertIpAddr
+                0x10300fc8       0x68
+ .text.Ql_IpHelper_ConvertIpAddr
+                0x10300fc8       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+                0x10300fc8                Ql_IpHelper_ConvertIpAddr
+
+.text.Ql_SPI_Init
+                0x10301030       0x88
+ .text.Ql_SPI_Init
+                0x10301030       0x88 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+                0x10301030                Ql_SPI_Init
+
+.text.Ql_SPI_Config
+                0x103010b8       0x80
+ .text.Ql_SPI_Config
+                0x103010b8       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+                0x103010b8                Ql_SPI_Config
+
+.text.Ql_SPI_Write
+                0x10301138       0x70
+ .text.Ql_SPI_Write
+                0x10301138       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+                0x10301138                Ql_SPI_Write
+
+.text.Ql_SPI_WriteRead
+                0x103011a8       0x80
+ .text.Ql_SPI_WriteRead
+                0x103011a8       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+                0x103011a8                Ql_SPI_WriteRead
+
+.text.Ql_atof   0x10301228       0x98
+ .text.Ql_atof  0x10301228       0x98 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x10301228                Ql_atof
+
+.text.Ql_strcpy
+                0x103012c0       0xa0
+ .text.Ql_strcpy
+                0x103012c0       0xa0 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x103012c0                Ql_strcpy
+
+.text.Ql_strncpy
+                0x10301360       0x88
+ .text.Ql_strncpy
+                0x10301360       0x88 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x10301360                Ql_strncpy
+
+.text.Ql_strncat
+                0x103013e8       0x88
+ .text.Ql_strncat
+                0x103013e8       0x88 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x103013e8                Ql_strncat
+
+.text.Ql_strlen
+                0x10301470       0x78
+ .text.Ql_strlen
+                0x10301470       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x10301470                Ql_strlen
+
+.text.Ql_strcmp
+                0x103014e8       0x68
+ .text.Ql_strcmp
+                0x103014e8       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x103014e8                Ql_strcmp
+
+.text.Ql_strncmp
+                0x10301550       0x70
+ .text.Ql_strncmp
+                0x10301550       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x10301550                Ql_strncmp
+
+.text.Ql_memset
+                0x103015c0       0x88
+ .text.Ql_memset
+                0x103015c0       0x88 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x103015c0                Ql_memset
+
+.text.Ql_memcpy
+                0x10301648       0x88
+ .text.Ql_memcpy
+                0x10301648       0x88 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x10301648                Ql_memcpy
+
+.text.Ql_memcmp
+                0x103016d0       0x70
+ .text.Ql_memcmp
+                0x103016d0       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x103016d0                Ql_memcmp
+
+.text.Ql_strstr
+                0x10301740       0x80
+ .text.Ql_strstr
+                0x10301740       0x80 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x10301740                Ql_strstr
+
+.text.Ql_toupper
+                0x103017c0        0x8
+ .text.Ql_toupper
+                0x103017c0        0x8 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x103017c0                Ql_toupper
+
+.text.Ql_tolower
+                0x103017c8        0x8
+ .text.Ql_tolower
+                0x103017c8        0x8 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x103017c8                Ql_tolower
+
+.text.Ql_atoi   0x103017d0       0x84
+ .text.Ql_atoi  0x103017d0       0x84 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+                0x103017d0                Ql_atoi
+
+.text.Ql_Sleep  0x10301854       0x74
+ .text.Ql_Sleep
+                0x10301854       0x74 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+                0x10301854                Ql_Sleep
+
+.text.Ql_GetSDKVer
+                0x103018c8       0x64
+ .text.Ql_GetSDKVer
+                0x103018c8       0x64 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+                0x103018c8                Ql_GetSDKVer
+
+.text.Ql_OS_GetMessage
+                0x1030192c       0x60
+ .text.Ql_OS_GetMessage
+                0x1030192c       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x1030192c                Ql_OS_GetMessage
+
+.text.Ql_OS_SendMessage
+                0x1030198c       0x78
+ .text.Ql_OS_SendMessage
+                0x1030198c       0x78 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x1030198c                Ql_OS_SendMessage
+
+.text.Ql_OS_CreateMutex
+                0x10301a04       0x54
+ .text.Ql_OS_CreateMutex
+                0x10301a04       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x10301a04                Ql_OS_CreateMutex
+
+.text.Ql_OS_TakeMutex
+                0x10301a58       0x54
+ .text.Ql_OS_TakeMutex
+                0x10301a58       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x10301a58                Ql_OS_TakeMutex
+
+.text.Ql_OS_GiveMutex
+                0x10301aac       0x54
+ .text.Ql_OS_GiveMutex
+                0x10301aac       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x10301aac                Ql_OS_GiveMutex
+
+.text.Ql_OS_CreateEvent
+                0x10301b00       0x54
+ .text.Ql_OS_CreateEvent
+                0x10301b00       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x10301b00                Ql_OS_CreateEvent
+
+.text.Ql_OS_WaitEvent
+                0x10301b54       0x68
+ .text.Ql_OS_WaitEvent
+                0x10301b54       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x10301b54                Ql_OS_WaitEvent
+
+.text.Ql_OS_SetEvent
+                0x10301bbc       0x68
+ .text.Ql_OS_SetEvent
+                0x10301bbc       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x10301bbc                Ql_OS_SetEvent
+
+.text.Ql_OS_GetActiveTaskId
+                0x10301c24       0x58
+ .text.Ql_OS_GetActiveTaskId
+                0x10301c24       0x58 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+                0x10301c24                Ql_OS_GetActiveTaskId
+
+.text.Ql_SetLocalTime
+                0x10301c7c       0x60
+ .text.Ql_SetLocalTime
+                0x10301c7c       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+                0x10301c7c                Ql_SetLocalTime
+
+.text.Ql_GetLocalTime
+                0x10301cdc       0x54
+ .text.Ql_GetLocalTime
+                0x10301cdc       0x54 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+                0x10301cdc                Ql_GetLocalTime
+
+.text.Ql_Timer_Register
+                0x10301d30       0x70
+ .text.Ql_Timer_Register
+                0x10301d30       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+                0x10301d30                Ql_Timer_Register
+
+.text.Ql_Timer_RegisterFast
+                0x10301da0       0x70
+ .text.Ql_Timer_RegisterFast
+                0x10301da0       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+                0x10301da0                Ql_Timer_RegisterFast
+
+.text.Ql_Timer_Start
+                0x10301e10       0x70
+ .text.Ql_Timer_Start
+                0x10301e10       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+                0x10301e10                Ql_Timer_Start
+
+.text.Ql_Timer_Stop
+                0x10301e80       0x60
+ .text.Ql_Timer_Stop
+                0x10301e80       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+                0x10301e80                Ql_Timer_Stop
+
+.text.Ql_UART_Register
+                0x10301ee0       0x70
+ .text.Ql_UART_Register
+                0x10301ee0       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+                0x10301ee0                Ql_UART_Register
+
+.text.Ql_UART_Open
+                0x10301f50       0x70
+ .text.Ql_UART_Open
+                0x10301f50       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+                0x10301f50                Ql_UART_Open
+
+.text.Ql_UART_Write
+                0x10301fc0       0x70
+ .text.Ql_UART_Write
+                0x10301fc0       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+                0x10301fc0                Ql_UART_Write
+
+.text.Ql_UART_Read
+                0x10302030       0x70
+ .text.Ql_UART_Read
+                0x10302030       0x70 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+                0x10302030                Ql_UART_Read
+
+.text.Ql_UART_GetPinStatus
+                0x103020a0       0x68
+ .text.Ql_UART_GetPinStatus
+                0x103020a0       0x68 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+                0x103020a0                Ql_UART_GetPinStatus
+
+.text.Ql_UART_SendEscap
+                0x10302108       0x60
+ .text.Ql_UART_SendEscap
+                0x10302108       0x60 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+                0x10302108                Ql_UART_SendEscap
+
+.rodata         0x10302168     0x12b4
+ *(.rodata)
+ .rodata        0x10302168       0x1c ./ril/src/Ril_dtmf.o
+ .rodata        0x10302184       0x10 ./ril/src/ril_ble.o
+ .rodata        0x10302194      0x11c ./ril/src/ril_bluetooth.o
+ .rodata        0x103022b0       0x44 ./ril/src/ril_gps.o
+ .rodata        0x103022f4       0x10 ./ril/src/ril_location.o
+ .rodata        0x10302304       0x68 ./ril/src/ril_network.o
+ .rodata        0x1030236c        0xc ./ril/src/ril_ntp.o
+ .rodata        0x10302378       0x48 ./ril/src/ril_sim.o
+ .rodata        0x103023c0      0xa48 ./ril/src/ril_urc.o
+ .rodata        0x10302e08       0x4c ./custom/config/custom_sys_cfg.o
+                0x10302e0c                SystemCfg
+ .rodata        0x10302e54       0xb8 ./custom/config/sys_config.o
+                0x10302e54                GpioConfigTbl
+                0x10302e58                TaskConfig
+ .rodata        0x10302f0c       0x20 ./custom/main.o
+ .rodata        0x10302f2c      0x3bc G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+ .rodata        0x103032e8       0x16 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+ .rodata        0x103032fe        0x4 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+ .rodata        0x10303302       0x16 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .rodata        0x10303318      0x104 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-ctype_.o)
+                0x10303318                _ctype_
+
+.rodata.str1.4  0x1030341c     0x34dc
+ .rodata.str1.4
+                0x1030341c       0xd7 ./ril/src/Ril_dtmf.o
+                                 0xdc (size before relaxing)
+ *fill*         0x103034f3        0x1 
+ .rodata.str1.4
+                0x103034f4       0x19 ./ril/src/ril_atResponse.o
+                                 0x34 (size before relaxing)
+ *fill*         0x1030350d        0x3 
+ .rodata.str1.4
+                0x10303510      0x4e4 ./ril/src/ril_ble.o
+                                0x528 (size before relaxing)
+ .rodata.str1.4
+                0x103039f4      0x4d0 ./ril/src/ril_bluetooth.o
+                                0x544 (size before relaxing)
+ .rodata.str1.4
+                0x10303ec4      0x11b ./ril/src/ril_gps.o
+                                0x13c (size before relaxing)
+ *fill*         0x10303fdf        0x1 
+ .rodata.str1.4
+                0x10303fe0       0x57 ./ril/src/ril_init.o
+                                 0x58 (size before relaxing)
+ *fill*         0x10304037        0x1 
+ .rodata.str1.4
+                0x10304038       0x49 ./ril/src/ril_location.o
+                                 0x6c (size before relaxing)
+ *fill*         0x10304081        0x3 
+ .rodata.str1.4
+                0x10304084      0x11c ./ril/src/ril_network.o
+                                0x13c (size before relaxing)
+ .rodata.str1.4
+                0x103041a0       0x12 ./ril/src/ril_ntp.o
+                                 0x14 (size before relaxing)
+ *fill*         0x103041b2        0x2 
+ .rodata.str1.4
+                0x103041b4       0xa4 ./ril/src/ril_sim.o
+                                 0xc8 (size before relaxing)
+ .rodata.str1.4
+                0x10304258       0xbe ./ril/src/ril_sms.o
+                                 0xec (size before relaxing)
+ *fill*         0x10304316        0x2 
+ .rodata.str1.4
+                0x10304318       0x28 ./ril/src/ril_telephony.o
+                                 0x48 (size before relaxing)
+ .rodata.str1.4
+                0x10304340      0x1a8 ./ril/src/ril_urc.o
+                                0x1b4 (size before relaxing)
+ .rodata.str1.4
+                0x103044e8       0x15 ./ril/src/ril_util.o
+                                 0x20 (size before relaxing)
+ *fill*         0x103044fd        0x3 
+ .rodata.str1.4
+                0x10304500      0x519 ./custom/fota/src/fota_http.o
+                                0x528 (size before relaxing)
+ *fill*         0x10304a19        0x3 
+ .rodata.str1.4
+                0x10304a1c       0xf2 ./custom/fota/src/fota_http_code.o
+                                0x104 (size before relaxing)
+ *fill*         0x10304b0e        0x2 
+ .rodata.str1.4
+                0x10304b10      0x215 ./custom/fota/src/fota_main.o
+                                0x218 (size before relaxing)
+ *fill*         0x10304d25        0x3 
+ .rodata.str1.4
+                0x10304d28     0x1bd0 ./custom/main.o
+                               0x1c28 (size before relaxing)
+
+.rodata.str1.1  0x103068f8      0x87d
+ .rodata.str1.1
+                0x103068f8       0x2c G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+ .rodata.str1.1
+                0x10306924       0x6f G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+ .rodata.str1.1
+                0x10306993       0x4e G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+ .rodata.str1.1
+                0x103069e1       0x9a G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .rodata.str1.1
+                0x10306a7b       0xcb G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .rodata.str1.1
+                0x10306b46       0x53 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+ .rodata.str1.1
+                0x10306b99       0x19 G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+ .rodata.str1.1
+                0x10306bb2       0x56 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+ .rodata.str1.1
+                0x10306c08       0x1e G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+                                 0x25 (size before relaxing)
+ .rodata.str1.1
+                0x10306c26      0x151 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .rodata.str1.1
+                0x10306d77       0x52 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+ .rodata.str1.1
+                0x10306dc9       0xa1 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .rodata.str1.1
+                0x10306e6a       0x3d G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .rodata.str1.1
+                0x10306ea7      0x140 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .rodata.str1.1
+                0x10306fe7       0x41 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+ .rodata.str1.1
+                0x10307028       0x45 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+ .rodata.str1.1
+                0x1030706d      0x108 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+
+.rel.dyn        0x10307178        0x0
+ .rel.iplt      0x00000000        0x0 ./ril/src/Ril_dtmf.o
+
+.data           0xf03d2000      0x758 load address 0x10307178
+                0x10307178                PROVIDE (__data_load, LOADADDR (.data))
+                0xf03d2000                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0xf03d2000        0x1 ./ril/src/ril_bluetooth.o
+ *fill*         0xf03d2001        0x3 
+ .data          0xf03d2004       0x20 ./ril/src/ril_init.o
+                0xf03d2004                g_LimitedCmds
+                0xf03d200c                g_InitCmds
+ .data          0xf03d2024       0x34 ./custom/fota/src/fota_http.o
+                0xf03d2024                HttpGetHead
+                0xf03d203c                Httpcallback_gprs_func
+                0xf03d2044                Httpcallback_SOC_func
+ .data          0xf03d2058        0x4 ./custom/fota/src/fota_http_code.o
+ .data          0xf03d205c       0x68 ./custom/fota/src/fota_main.o
+                0xf03d205c                Fota_apn
+                0xf03d20c0                g_FOTA_State
+ .data          0xf03d20c4      0x664 ./custom/main.o
+                0xf03d20c4                apn_id
+                0xf03d20c5                pinname
+                0xf03d26a4                spi_usr_type
+                0xf03d26a5                networkid
+                0xf03d26a6                nodeid
+                0xf03d2720                version
+ .data          0xf03d2728       0x18 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+                0xf03d2728                api_notsup
+ .data          0xf03d2740        0x4 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_aux.o)
+                0xf03d2740                g_ril_auxTaskId
+ .data          0xf03d2744       0x10 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+ .data          0xf03d2754        0x4 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-ctype_.o)
+                0xf03d2754                __ctype_ptr__
+                0xf03d2758                . = ALIGN (0x8)
+                0xf03d2758                PROVIDE (_edata, .)
+
+.igot.plt       0xf03d2758        0x0 load address 0x103078d0
+ .igot.plt      0x00000000        0x0 ./ril/src/Ril_dtmf.o
+
+.bss            0xf03d2758     0x2cec load address 0x103078d0
+                0xf03d2758                PROVIDE (__bss_start__, .)
+ *(.bss)
+ .bss           0xf03d2758       0x10 ./ril/src/Ril_dtmf.o
+ .bss           0xf03d2768        0x4 ./ril/src/ril_atResponse.o
+ .bss           0xf03d276c        0x4 ./ril/src/ril_audio.o
+                0xf03d276c                cb_aud_play
+ .bss           0xf03d2770        0x4 ./ril/src/ril_ble.o
+ .bss           0xf03d2774       0x98 ./ril/src/ril_bluetooth.o
+ .bss           0xf03d280c        0x4 ./ril/src/ril_custom.o
+                0xf03d280c                cb_rcvCoreData
+ .bss           0xf03d2810        0x4 ./ril/src/ril_gps.o
+ .bss           0xf03d2814       0x18 ./ril/src/ril_http.o
+                0xf03d2818                http_url_addr
+                0xf03d281c                http_url_addr_len
+                0xf03d2820                http_post_msg
+                0xf03d2824                http_post_msg_len
+                0xf03d2828                callback_http_dwnld
+ .bss           0xf03d282c        0x4 ./ril/src/ril_location.o
+ .bss           0xf03d2830        0x4 ./ril/src/ril_ntp.o
+ .bss           0xf03d2834        0x1 ./ril/src/ril_sms.o
+ *fill*         0xf03d2835        0x3 
+ .bss           0xf03d2838        0x8 ./ril/src/ril_urc.o
+                0xf03d2838                FtpGet_IND_CB
+                0xf03d283c                FtpPut_IND_CB
+ .bss           0xf03d2840        0x8 ./custom/fota/src/fota_http_code.o
+                0xf03d2840                dbg_httpresponse
+                0xf03d2844                dbg_ContentLength
+ .bss           0xf03d2848       0x44 ./custom/fota/src/fota_main.o
+                0xf03d2848                Fota_UpgardeState
+                0xf03d284c                Fota_passwd
+                0xf03d286c                Fota_userid
+ .bss           0xf03d288c     0x1218 ./custom/main.o
+                0xf03d288c                bat_per
+                0xf03d2890                TIME_TEST
+                0xf03d2894                time1
+                0xf03d2895                time2
+                0xf03d2896                time3
+                0xf03d2a98                mutex_id_serial
+                0xf03d2a9c                sms_readflag
+                0xf03d2a9d                net_reg
+                0xf03d2aa0                d_t
+                0xf03d2ac8                sigstr
+                0xf03d2ac9                atflag
+                0xf03d2ae0                rf_int
+                0xf03d32e4                touch_flag
+                0xf03d32e8                mutex_id_spi
+                0xf03d32ec                _address
+                0xf03d32ed                payloadlen
+                0xf03d32ee                ack_requested
+                0xf03d32ef                targetid
+                0xf03d32f0                senderid
+                0xf03d32f1                ack_received
+                0xf03d32f4                mutex_id_lcd
+                0xf03d32f8                mutex_id_eeprom
+                0xf03d32fc                waitcount
+                0xf03d3368                btconflag
+                0xf03d37b8                btrcvflag
+                0xf03d37b9                gsm_initflag
+                0xf03d386a                gprs_ok
+                0xf03d386b                entry_flag
+                0xf03d386c                last_power
+                0xf03d3878                mqtt_rec_flag
+                0xf03d39a8                gprsflag
+                0xf03d39ac                sms_flag
+                0xf03d39ee                lcd_disp
+                0xf03d3a5c                msg_success
+                0xf03d3a60                send_data
+                0xf03d3a6f                locflag
+                0xf03d3a70                rf_change2
+                0xf03d3a71                security_flag
+                0xf03d3a72                pir_flag
+                0xf03d3a73                light_flag
+                0xf03d3a74                bat_low
+                0xf03d3a75                rf_change
+                0xf03d3a76                bat_flag
+                0xf03d3a77                display
+                0xf03d3a96                light_status
+                0xf03d3a98                promiscuousmode
+                0xf03d3a9c                tonodeid
+                0xf03d3aa0                pTime
+ .bss           0xf03d3aa4        0xc G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+                0xf03d3aa4                m_ADC_Register
+                0xf03d3aa8                m_ADC_Init
+                0xf03d3aac                m_ADC_Sampling
+ .bss           0xf03d3ab0       0x1c G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+                0xf03d3ab0                m_EINT_Register
+                0xf03d3ab4                m_EINT_RegisterFast
+                0xf03d3ab8                m_EINT_Init
+                0xf03d3abc                m_EINT_Uninit
+                0xf03d3ac0                m_EINT_GetLevel
+                0xf03d3ac4                m_EINT_Mask
+                0xf03d3ac8                m_EINT_Unmask
+ .bss           0xf03d3acc       0x14 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+ .bss           0xf03d3ae0       0x20 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+                0xf03d3ae0                m_GPIO_Init
+                0xf03d3ae4                m_GPIO_SetLevel
+                0xf03d3ae8                m_GPIO_GetLevel
+                0xf03d3aec                m_GPIO_SetDirection
+                0xf03d3af0                m_GPIO_GetDirection
+                0xf03d3af4                m_GPIO_SetPullSelection
+                0xf03d3af8                m_GPIO_GetPullSelection
+                0xf03d3afc                m_GPIO_Uninit
+ .bss           0xf03d3b00       0x28 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .bss           0xf03d3b28       0x18 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+                0xf03d3b28                m_IIC_Init
+                0xf03d3b2c                m_IIC_Config
+                0xf03d3b30                m_IIC_Write
+                0xf03d3b34                m_IIC_Read
+                0xf03d3b38                m_IIC_Write_Read
+                0xf03d3b3c                m_IIC_Uninit
+ .bss           0xf03d3b40        0x8 G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+ .bss           0xf03d3b48       0x24 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+                0xf03d3b48                m_StartPlayAudioStream
+                0xf03d3b4c                m_get_api_ptr
+                0xf03d3b50                m_StopPlayAudioStream
+                0xf03d3b54                m_GetRelativeTime_Counter
+                0xf03d3b58                m_SecondToTicks
+                0xf03d3b5c                m_MillisecondToTicks
+                0xf03d3b60                m_CalendarTime2LocalTime
+                0xf03d3b64                m_osChangeTaskPriority
+                0xf03d3b68                m_create_api_hash
+ .bss           0xf03d3b6c       0x10 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+                0xf03d3b70                runinfo
+ .bss           0xf03d3b7c        0x1 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_aux.o)
+                0xf03d3b7c                g_ril_auxTaskReady
+ *fill*         0xf03d3b7d        0x3 
+ .bss           0xf03d3b80      0xc34 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+ .bss           0xf03d47b4       0x4c G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .bss           0xf03d4800       0x18 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+                0xf03d4800                m_SPI_Init
+                0xf03d4804                m_SPI_Config
+                0xf03d4808                m_SPI_Write
+                0xf03d480c                m_SPI_Read
+                0xf03d4810                m_SPI_WriteRead
+                0xf03d4814                m_SPI_Uninit
+ .bss           0xf03d4818       0x40 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .bss           0xf03d4858       0x14 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .bss           0xf03d486c       0x40 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .bss           0xf03d48ac       0x10 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+ .bss           0xf03d48bc       0x10 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+ .bss           0xf03d48cc       0x3c G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+                0xf03d4908                . = ALIGN (0x8)
+                0xf03d4908                PROVIDE (__bss_end__, .)
+ COMMON         0xf03d4908      0x124 ./ril/src/ril_telephony.o
+                0xf03d4908                g_comingCall
+ COMMON         0xf03d4a2c      0x234 ./custom/fota/src/fota_http.o
+                0xf03d4a2c                httpMainContext
+ COMMON         0xf03d4c60       0xc0 ./custom/fota/src/fota_main.o
+                0xf03d4c60                Fota_gprsCfg
+                0xf03d4d10                FotaConfig
+ COMMON         0xf03d4d20      0x70f ./custom/main.o
+                0xf03d4d20                _backlightval
+                0xf03d4d24                id_read
+                0xf03d4d38                datalen
+                0xf03d4d39                _addr
+                0xf03d4d3a                _displaycontrol
+                0xf03d4d3c                msgbuf
+                0xf03d4da0                _charsize
+                0xf03d4da4                command
+                0xf03d4e6c                okflag
+                0xf03d4e70                temp_mem
+                0xf03d52bc                _displaymode
+                0xf03d52c0                z
+                0xf03d52c5                _displayfunction
+                0xf03d52c8                RSSI
+                0xf03d52cc                _cols
+                0xf03d52d0                mobilenum
+                0xf03d52e0                data
+                0xf03d5320                gsm_msg
+                0xf03d53e8                time
+                0xf03d5404                _mode
+                0xf03d5408                totalSeconds
+                0xf03d5410                devicename
+                0xf03d5424                smsbuf
+                0xf03d542e                _rows
+ *fill*         0xf03d542f        0x1 
+ COMMON         0xf03d5430       0x14 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+                0xf03d5430                Ql_snprintf
+                0xf03d5434                Ql_sprintf
+                0xf03d5438                Ql_Debug_Trace
+                0xf03d543c                Ql_vsprintf
+                0xf03d5440                Ql_sscanf
+OUTPUT(APPGS3MDM32A01.elf elf32-littlearm)
+
+.comment        0x00000000       0x30
+ .comment       0x00000000       0x30 ./ril/src/Ril_dtmf.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000000       0x31 ./ril/src/ril_atResponse.o
+ .comment       0x00000000       0x31 ./ril/src/ril_audio.o
+ .comment       0x00000000       0x31 ./ril/src/ril_ble.o
+ .comment       0x00000000       0x31 ./ril/src/ril_bluetooth.o
+ .comment       0x00000000       0x31 ./ril/src/ril_custom.o
+ .comment       0x00000000       0x31 ./ril/src/ril_gps.o
+ .comment       0x00000000       0x31 ./ril/src/ril_http.o
+ .comment       0x00000000       0x31 ./ril/src/ril_init.o
+ .comment       0x00000000       0x31 ./ril/src/ril_location.o
+ .comment       0x00000000       0x31 ./ril/src/ril_network.o
+ .comment       0x00000000       0x31 ./ril/src/ril_ntp.o
+ .comment       0x00000000       0x31 ./ril/src/ril_sim.o
+ .comment       0x00000000       0x31 ./ril/src/ril_sms.o
+ .comment       0x00000000       0x31 ./ril/src/ril_telephony.o
+ .comment       0x00000000       0x31 ./ril/src/ril_urc.o
+ .comment       0x00000000       0x31 ./ril/src/ril_util.o
+ .comment       0x00000000       0x31 ./custom/fota/src/fota_http.o
+ .comment       0x00000000       0x31 ./custom/fota/src/fota_http_code.o
+ .comment       0x00000000       0x31 ./custom/fota/src/fota_main.o
+ .comment       0x00000000       0x31 ./custom/config/custom_sys_cfg.o
+ .comment       0x00000000       0x31 ./custom/config/sys_config.o
+ .comment       0x00000000       0x31 ./custom/main.o
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_aux.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+ .comment       0x00000000       0x31 G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+
+.ARM.attributes
+                0x00000000       0x2b
+ .ARM.attributes
+                0x00000000       0x2b ./ril/src/Ril_dtmf.o
+ .ARM.attributes
+                0x0000002b       0x2b ./ril/src/ril_atResponse.o
+ .ARM.attributes
+                0x00000056       0x2b ./ril/src/ril_audio.o
+ .ARM.attributes
+                0x00000081       0x2b ./ril/src/ril_ble.o
+ .ARM.attributes
+                0x000000ac       0x2b ./ril/src/ril_bluetooth.o
+ .ARM.attributes
+                0x000000d7       0x2b ./ril/src/ril_custom.o
+ .ARM.attributes
+                0x00000102       0x2b ./ril/src/ril_gps.o
+ .ARM.attributes
+                0x0000012d       0x2b ./ril/src/ril_http.o
+ .ARM.attributes
+                0x00000158       0x2b ./ril/src/ril_init.o
+ .ARM.attributes
+                0x00000183       0x2b ./ril/src/ril_location.o
+ .ARM.attributes
+                0x000001ae       0x2b ./ril/src/ril_network.o
+ .ARM.attributes
+                0x000001d9       0x2b ./ril/src/ril_ntp.o
+ .ARM.attributes
+                0x00000204       0x2b ./ril/src/ril_sim.o
+ .ARM.attributes
+                0x0000022f       0x2b ./ril/src/ril_sms.o
+ .ARM.attributes
+                0x0000025a       0x2b ./ril/src/ril_telephony.o
+ .ARM.attributes
+                0x00000285       0x2b ./ril/src/ril_urc.o
+ .ARM.attributes
+                0x000002b0       0x2b ./ril/src/ril_util.o
+ .ARM.attributes
+                0x000002db       0x2b ./custom/fota/src/fota_http.o
+ .ARM.attributes
+                0x00000306       0x2b ./custom/fota/src/fota_http_code.o
+ .ARM.attributes
+                0x00000331       0x2b ./custom/fota/src/fota_main.o
+ .ARM.attributes
+                0x0000035c       0x2b ./custom/config/custom_sys_cfg.o
+ .ARM.attributes
+                0x00000387       0x2b ./custom/config/sys_config.o
+ .ARM.attributes
+                0x000003b2       0x2b ./custom/main.o
+ .ARM.attributes
+                0x000003dd       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(adc.o)
+ .ARM.attributes
+                0x00000408       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(eint.o)
+ .ARM.attributes
+                0x00000433       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(fota.o)
+ .ARM.attributes
+                0x0000045e       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(gpio.o)
+ .ARM.attributes
+                0x00000489       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(gprs.o)
+ .ARM.attributes
+                0x000004b4       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(iic.o)
+ .ARM.attributes
+                0x000004df       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(lib_ril_sms.o)
+ .ARM.attributes
+                0x0000050a       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(memory.o)
+ .ARM.attributes
+                0x00000535       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_func.o)
+ .ARM.attributes
+                0x00000560       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(ql_main.o)
+ .ARM.attributes
+                0x0000058b       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_aux.o)
+ .ARM.attributes
+                0x000005b6       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(ril_main.o)
+ .ARM.attributes
+                0x000005e1       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(socket.o)
+ .ARM.attributes
+                0x0000060c       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(spi.o)
+ .ARM.attributes
+                0x00000637       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(stdlib_func.o)
+ .ARM.attributes
+                0x00000662       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(system.o)
+ .ARM.attributes
+                0x0000068d       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(taskMngt.o)
+ .ARM.attributes
+                0x000006b8       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(time.o)
+ .ARM.attributes
+                0x000006e3       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(timer.o)
+ .ARM.attributes
+                0x0000070e       0x2b G:\IHOME_V1.0\libs\gcc\libapp_start.a(uart.o)
+ .ARM.attributes
+                0x00000739       0x1d G:\IHOME_V1.0\libs\gcc\libapp_start.a(ocpu_init.o)
+ .ARM.attributes
+                0x00000756       0x30 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000786       0x30 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000007b6       0x30 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-strncasecmp.o)
+ .ARM.attributes
+                0x000007e6       0x30 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-ctype_.o)
+ .ARM.attributes
+                0x00000816       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000082e       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x00000846       0x16 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000085c       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000874       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x0000088c       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x000008a4       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x000008bc       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x000008d4       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x000008ec       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_cmpsf2.o)
+ .ARM.attributes
+                0x00000904       0x18 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_arm_fixsfsi.o)
+
+.debug_frame    0x00000000       0xd4
+ .debug_frame   0x00000000       0x38 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00000038       0x2c C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000064       0x30 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\lib\thumb\libc.a(lib_a-strncasecmp.o)
+ .debug_frame   0x00000094       0x20 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_udivsi3.o)
+ .debug_frame   0x000000b4       0x20 C:\Program Files\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\lib\gcc\arm-none-eabi\4.7.2\thumb\libgcc.a(_divsi3.o)
