@@ -1,0 +1,20 @@
+﻿iAWS
+2.2.0.0
+
+winexe
+C#
+.cs
+D:\R&D Projects\iAWS Development\iAWS Mega Mini\iAWS_Automatic_Weighing_System_v2.2_ITOLL_MENU_FUNCTIONS\iAWS_Automatic_Weighing_System_v2.2_ITOLL_MENU_FUNCTIONS\src\RfidVehicleAccess.App\obj\Release\net8.0-windows\win-x64\
+RfidVehicleAccess
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
+D:\R&D Projects\iAWS Development\iAWS Mega Mini\iAWS_Automatic_Weighing_System_v2.2_ITOLL_MENU_FUNCTIONS\iAWS_Automatic_Weighing_System_v2.2_ITOLL_MENU_FUNCTIONS\src\RfidVehicleAccess.App\App.xaml
+91571820345
+12631713780794
+71-420962689
+242-1259909186
+AdminControlsWindow.xaml;AdminPasswordWindow.xaml;ExceptionalApprovalWindow.xaml;HardwareSettingsWindow.xaml;IawsSettingsWindow.xaml;MainWindow.xaml;PaymentConfigurationWindow.xaml;ServerPanelWindow.xaml;StartupLoadingWindow.xaml;
+
+False
+
