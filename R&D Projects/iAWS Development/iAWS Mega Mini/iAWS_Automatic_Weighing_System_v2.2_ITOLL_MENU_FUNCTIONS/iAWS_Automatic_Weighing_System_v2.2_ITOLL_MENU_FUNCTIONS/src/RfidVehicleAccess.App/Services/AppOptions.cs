@@ -1,0 +1,317 @@
+namespace RfidVehicleAccess.Services;
+
+public sealed class AppOptions
+{
+    public DeviceOptions Device { get; set; } = new();
+    public IawsOptions Iaws { get; set; } = new();
+    public ProcessingOptions Processing { get; set; } = new();
+    public PaymentOptions Payment { get; set; } = null!;
+    public HardwareOptions Hardware { get; set; } = new();
+    public CameraOptions Cameras { get; set; } = new();
+    public ServerOptions Server { get; set; } = new();
+    public ConnectivityOptions Connectivity { get; set; } = new();
+    public ImportOptions Import { get; set; } = new();
+    public StorageOptions Storage { get; set; } = new();
+    public ExceptionalApprovalOptions ExceptionalApproval { get; set; } = new();
+    public AutoApprovalOptions AutoApproval { get; set; } = new();
+    public FrontendIndicatorOptions FrontendIndicators { get; set; } = new();
+    public SecurityOptions Security { get; set; } = new();
+}
+
+public sealed class ExceptionalApprovalOptions
+{
+    public bool InEnabled { get; set; } = true;
+    public bool OutEnabled { get; set; } = true;
+}
+
+public sealed class AutoApprovalOptions
+{
+    public bool InEnabled { get; set; }
+    public bool OutEnabled { get; set; }
+}
+
+public sealed class FrontendIndicatorOptions
+{
+    public bool RedEnabled { get; set; } = true;
+    public bool GreenEnabled { get; set; } = true;
+    public bool OrangeEnabled { get; set; } = true;
+    public bool BuzzerEnabled { get; set; } = true;
+}
+
+public sealed class SecurityOptions
+{
+    public string AdminControlsPassword { get; set; } = "7799";
+    public string PaymentConfigurationPassword { get; set; } = "7799";
+    public string ServerPanelPassword { get; set; } = "rts123!@#";
+}
+
+public sealed class PaymentOptions
+{
+    public string DefaultCategory { get; set; } = "Default";
+    public List<VehiclePaymentCategoryOptions> Categories { get; set; } = [];
+}
+
+public sealed class VehiclePaymentCategoryOptions
+{
+    public string Name { get; set; } = string.Empty;
+    public decimal Price { get; set; }
+}
+
+public sealed class DeviceOptions
+{
+    public string SiteId { get; set; } = "SITE-001";
+    public string DeviceId { get; set; } = "GATE-PC-001";
+    public string LaneId { get; set; } = "MAIN-GATE";
+    public string DeviceName { get; set; } = "RealTech iAWS - Automatic Weighing System";
+}
+
+public sealed class ProcessingOptions
+{
+    public decimal EntryFee { get; set; } = 50m;
+    public int ProcessWaitSeconds { get; set; } = 3;
+    public int BarrierAndGreenDelaySeconds { get; set; } = 5;
+    public int DuplicateReadSeconds { get; set; } = 10;
+    public int SensorValiditySeconds { get; set; } = 30;
+    public int VehicleDisplayResetSeconds { get; set; } = 20;
+    public List<string> AllowedRfidPrefixes { get; set; } = ["E2"];
+    public bool RfidPrefixValidationEnabled { get; set; } = true;
+    public bool CaseSensitivePrefixes { get; set; }
+    // OFFLINE_ONLY or ONLINE_OFFLINE
+    public string ProcessingMode { get; set; } = "OFFLINE_ONLY";
+    // BOTH, RFID or CONTRACTOR. BOTH uses contractor balance for contractor-linked vehicles and legacy RFID balance otherwise.
+    public string OfflineBalanceMode { get; set; } = "BOTH";
+    public int OnlineAuthorizationTimeoutSeconds { get; set; } = 8;
+}
+
+public sealed class HardwareOptions
+{
+    public bool SimulationEnabled { get; set; } = true;
+    // iAWS weighbridge workflow hardware. Kept alongside the iTOLL IN/OUT hardware.
+    public SerialPortOptions RfidReader { get; set; } = new()
+    {
+        PortName = "COM3",
+        BaudRate = 115200,
+        ReadMode = "UhfCfFrame"
+    };
+    public WeightBridgeOptions WeightBridge { get; set; } = new();
+    public string LineTerminator { get; set; } = "\\r\\n";
+    public int ReconnectSeconds { get; set; } = 5;
+    public SerialPortOptions InRfid { get; set; } = new()
+    {
+        ReadMode = "UhfCfFrame"
+    };
+
+    public SerialPortOptions OutRfid { get; set; } = new()
+    {
+        ReadMode = "UhfCfFrame"
+    };
+
+    public SerialPortOptions Control { get; set; } = new()
+    {
+        ReadMode = "LineText"
+    };
+
+    // Backup IND link. Windows Bluetooth SPP devices appear as a normal COM port.
+    // The primary wired Control port is always preferred; this port is used only
+    // when the wired control link is unavailable.
+    public bool BluetoothControlEnabled { get; set; } = true;
+    public SerialPortOptions BluetoothControl { get; set; } = new()
+    {
+        PortName = "COM11",
+        ReadMode = "LineText",
+        BaudRate = 9600
+    };
+
+    // Third-level IND failover over a Wi-Fi serial terminal (raw TCP/Telnet-style socket).
+    // Priority is always: Wired COM -> Bluetooth COM -> Wi-Fi TCP.
+    public bool WifiControlEnabled { get; set; } = true;
+    public WifiControlOptions WifiControl { get; set; } = new();
+
+    public SensorMessageOptions SensorMessages { get; set; } = new();
+}
+
+public sealed class WifiControlOptions
+{
+    public string Host { get; set; } = "192.168.22.102";
+    public int Port { get; set; } = 23;
+    public int ConnectTimeoutMilliseconds { get; set; } = 1500;
+}
+
+public sealed class SensorMessageOptions
+{
+    public string InHigh { get; set; } = "IN Detected";
+    public string InReleased { get; set; } = "IN Realeased";
+    public string OutHigh { get; set; } = "OUT Detected";
+    public string OutReleased { get; set; } = "OUT Realeased";
+}
+
+public sealed class SerialPortOptions
+{
+    public string PortName { get; set; } = "COM1";
+    public string ReadMode { get; set; } = string.Empty;
+    public int BaudRate { get; set; } = 9600;
+    public int DataBits { get; set; } = 8;
+    public string Parity { get; set; } = "None";
+    public string StopBits { get; set; } = "One";
+}
+
+public sealed class CameraOptions
+{
+    public CameraLaneOptions In { get; set; } = new();
+    public CameraLaneOptions Out { get; set; } = new();
+    // iAWS four-camera weighing views.
+    public CameraLaneOptions Front { get; set; } = new();
+    public CameraLaneOptions Back { get; set; } = new();
+    public CameraLaneOptions Left { get; set; } = new();
+    public CameraLaneOptions Right { get; set; } = new();
+    public string LocalImageFolder { get; set; } = "%REALTECH_SYSTEMS%\\Images";
+    public string ImageFilePrefix { get; set; } = "Vehicle Capture";
+    public string ImageTimestampFormat { get; set; } = "yyyy-MM-dd_HH-mm-ss-fff";
+}
+
+public sealed class CameraLaneOptions
+{
+    public bool Enabled { get; set; }
+    public string RtspUrl { get; set; } = string.Empty;
+    public int SnapshotWidth { get; set; } = 1920;
+    public int SnapshotHeight { get; set; } = 1080;
+    public int NetworkCachingMilliseconds { get; set; } = 1200;
+    public int ReconnectSeconds { get; set; } = 5;
+    public int StreamWatchdogSeconds { get; set; } = 12;
+    public bool UseTcp { get; set; } = true;
+    public bool EnableHardwareDecoding { get; set; }
+}
+
+public sealed class ServerOptions
+{
+    public bool Enabled { get; set; }
+    public int SyncIntervalSeconds { get; set; } = 15;
+    public int MaxBatchSize { get; set; } = 25;
+    public int InitialRetryDelaySeconds { get; set; } = 15;
+    public int MaxRetryDelaySeconds { get; set; } = 300;
+    public MqttOptions Mqtt { get; set; } = new();
+    public ImageUploadOptions ImageUpload { get; set; } = new();
+}
+
+public sealed class MqttOptions
+{
+    public string BrokerHost { get; set; } = string.Empty;
+    public int Port { get; set; } = 8883;
+    public bool UseTls { get; set; } = true;
+    public string Username { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public string ClientId { get; set; } = string.Empty;
+    public string BaseTopic { get; set; } = "IWS_STP-001/Device_Response";
+    public string PublishTopic { get; set; } = "IWS_STP-001/Device_Response";
+    public int QualityOfService { get; set; } = 1;
+    public bool Retain { get; set; }
+    public int KeepAliveSeconds { get; set; } = 30;
+    public int ConnectTimeoutSeconds { get; set; } = 10;
+    public int PublishTimeoutSeconds { get; set; } = 10;
+    public bool RechargeSyncEnabled { get; set; }
+    public string RechargeSubscribeTopic { get; set; } = string.Empty;
+    public string RechargeAckTopic { get; set; } = string.Empty;
+    public string RechargeSubscriberClientId { get; set; } = string.Empty;
+    public int RechargeReconnectSeconds { get; set; } = 5;
+    public string TripAuthorizationRequestTopic { get; set; } = string.Empty;
+    public string TripAuthorizationResponseTopic { get; set; } = string.Empty;
+}
+
+
+public sealed class ImageUploadOptions
+{
+    // Disabled, Sftp, or Ftp. Legacy Enable/Enabled values continue to mean Sftp.
+    public string Mode { get; set; } = "Disabled";
+    // For FTP mode, true enables explicit TLS/SSL (AUTH TLS / FTPS) on the normal FTP port.
+    public bool UseTls { get; set; }
+    // Optional SHA-256 certificate fingerprint used to securely pin an FTPS server certificate.
+    // When this matches, name/chain validation errors are accepted for that exact certificate.
+    public string TlsCertificateSha256Fingerprint { get; set; } = string.Empty;
+    // Emergency compatibility option for legacy FTPS servers. Keep false whenever possible.
+    public bool AllowInvalidTlsCertificate { get; set; }
+    public string Host { get; set; } = string.Empty;
+    public int Port { get; set; } = 22;
+    public string Username { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public string RemoteDirectory { get; set; } = "/vehicle-images";
+    public int ConnectionTimeoutSeconds { get; set; } = 10;
+    public int OperationTimeoutSeconds { get; set; } = 60;
+    public int TotalTimeoutSeconds { get; set; } = 75;
+}
+
+public sealed class ConnectivityOptions
+{
+    public int CheckIntervalSeconds { get; set; } = 15;
+    public int RequestTimeoutSeconds { get; set; } = 4;
+    public List<string> CheckEndpoints { get; set; } =
+    [
+        "https://www.msftconnecttest.com/connecttest.txt",
+        "https://connectivitycheck.gstatic.com/generate_204"
+    ];
+}
+
+public sealed class ImportOptions
+{
+    public string DefaultAccessType { get; set; } = "Free";
+    public decimal DefaultOpeningBalance { get; set; }
+    public bool UpdateExistingRecords { get; set; } = true;
+    public bool EnforceRfidPrefixValidation { get; set; }
+    public bool SkipInvalidRows { get; set; } = true;
+
+    public bool ApiAutoSyncEnabled { get; set; } = true;
+    public int ApiAutoSyncIntervalSeconds { get; set; } = 30;
+    public List<VehicleApiSourceOptions> ApiSources { get; set; } = [];
+
+    // Legacy single-source settings are retained for backward compatibility.
+    // New configuration is stored in ApiSources.
+    public string ApiEndpoint { get; set; } =
+        "https://gov.igps.io/aws_admin/Server/csv_link.php";
+    public string ApiUsername { get; set; } = "tambaram";
+    public int ApiRequestTimeoutSeconds { get; set; } = 30;
+}
+
+public sealed class VehicleApiSourceOptions
+{
+    public string Name { get; set; } = "Vehicle CSV API";
+    public bool Enabled { get; set; } = true;
+    public int Priority { get; set; } = 1;
+    public string Endpoint { get; set; } = string.Empty;
+    public string Username { get; set; } = string.Empty;
+    public int RequestTimeoutSeconds { get; set; } = 30;
+}
+
+public sealed class StorageOptions
+{
+    public string DatabaseFile { get; set; } = "Data\\vehicle-access.db";
+    // Dedicated iAWS REST/API log; iTOLL server log remains available.
+    public string ApiLogFile { get; set; } = "%IAWS_SYSTEM%\\Logs\\Api\\api.log";
+    public string StatusLogFile { get; set; } = "%REALTECH_SYSTEMS%\\Logs\\Status\\status.log";
+    public string ServerLogFile { get; set; } = "%REALTECH_SYSTEMS%\\Logs\\Server\\server.log";
+    public bool AutoDeleteEnabled { get; set; } = true;
+    public int ImageRetentionDays { get; set; } = 30;
+    public int LogRetentionDays { get; set; } = 30;
+}
+
+
+// iAWS-specific automatic weighing settings. These coexist with the iTOLL production options.
+public sealed class IawsOptions
+{
+    public string ApiEndpoint { get; set; } = "https://YOUR-SERVER/iaws_raw/mega/insert";
+    public int ApiTimeoutSeconds { get; set; } = 30;
+    public decimal TriggerWeightKg { get; set; } = 500m;
+    public decimal ResetWeightKg { get; set; } = 100m;
+    public int RfidFreshnessSeconds { get; set; } = 30;
+    public string SitePrefix { get; set; } = "AMMAN_KOIL_THAMBARAM";
+    public string MaterialType { get; set; } = string.Empty;
+    public bool RequireAllCameras { get; set; } = true;
+}
+
+public sealed class WeightBridgeOptions
+{
+    public string PortName { get; set; } = "COM12";
+    public int BaudRate { get; set; } = 9600;
+    public int DataBits { get; set; } = 8;
+    public string Parity { get; set; } = "None";
+    public string StopBits { get; set; } = "One";
+    public string WeightPattern { get; set; } = @"[-+]?\d+(?:\.\d+)?";
+}
