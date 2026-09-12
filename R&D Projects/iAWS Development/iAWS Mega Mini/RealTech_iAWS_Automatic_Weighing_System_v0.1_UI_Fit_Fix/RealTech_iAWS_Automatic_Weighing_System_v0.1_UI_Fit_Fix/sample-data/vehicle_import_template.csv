@@ -1,3 +1,0 @@
-sno,username,vehicle_no,rf_id,vehicle_category,empty_weight,rfid_type,balance,active
-1,SITE-001,TN 20 DB 8930,E28069952000400662D3666E,Default,3480,FREE,0,YES
-2,SITE-001,TN 12 AB 1234,E28069952000400662D72E6F,Default,7310,PAID,500,YES
