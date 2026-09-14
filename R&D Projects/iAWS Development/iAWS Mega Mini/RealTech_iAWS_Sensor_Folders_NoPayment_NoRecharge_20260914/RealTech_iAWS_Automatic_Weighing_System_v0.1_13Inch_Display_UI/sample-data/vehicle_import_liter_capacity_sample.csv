@@ -1,0 +1,4 @@
+sno,username,vehicle_no,rf_id,vehicle_category,empty_weight,rfid_type,balance,active
+1,RealTech Systems,TN 56 R 1899,E2801191A5040076A582E96B,10000 Liter Capacity,1000,PAID,10000,YES
+2,RealTech Systems,TN 01 AB 6000,E2801191A5040076A582E96C,6000 Liter Capacity,850,PAID,5000,YES
+3,RealTech Systems,TN 02 CD 1000,E2801191A5040076A582E96D,10000 Liter Capacity,1100,FREE,0,YES
